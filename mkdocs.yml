@@ -6,7 +6,7 @@ copyright: Copyright &copy; 2025 Ximuku67
 nav:
   - 简介:
     - 简介: index/index.md
-    - 修饰代码: index/codes.md
+    - 修饰代码: index/_codes.md
     - 生物知识网站: index/website.md
 
   - 生物化学:
