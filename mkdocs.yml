@@ -1,0 +1,147 @@
+site_name: HanaBio Archive
+copyright: Copyright &copy; 2025 Ximuku67
+#repo_url: https://github.com/Jiaxi1223/CCLab_General_Bioinfo._Exp./
+
+# Contents
+nav:
+  - 简介:
+    - 简介: index/index.md
+    - 修饰代码: index/codes.md
+    - 生物知识网站: index/website.md
+
+  - 生物化学:
+    - 生物化学: biochem/index.md
+    - 氨基酸: biochem/amino_acid.md
+
+  - 细胞: 
+    - 细胞生物学: cell/index.md 
+
+  - 分子:
+    - 分子生物学: molecular/index.md
+
+  - 遗传学: 
+    - 遗传学: genetics/index.md
+
+  - 生理学:
+    - 生理学: physiology/index.md
+
+  - 微生物:
+    - 微生物学: micro/index.md
+
+  - 植物学: 
+    - 植物学: botany/index.md
+
+  - 动物学: 
+    - 动物学: zoology/index.md
+
+  - 生态学:
+    - 生态学: ecology/index.md 
+
+  - 进化:
+    - 进化生物学: evolution/index.md
+
+  - 生物信息: 
+    - 生物信息学: bioinfo/index.md 
+
+  - 生物统计:
+    - 生物统计学: biostat/index.md 
+
+  - 实验技术:
+    - 生物实验技术: exptech/index.md 
+
+  - 跨学科交叉:
+    - 跨学科交叉: inter/index.md
+
+
+
+# Theme
+theme:
+  name: material
+
+  palette:
+    primary: white
+
+  icon:
+    logo: material/library
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest #搜索补全
+    - search.highlight #搜索后高亮
+    - header.autohide
+    - content.footnote.tooltips #脚注工具提示
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+plugins:
+  - meta
+  - search
+  - glightbox
+
+extra:
+  social:
+    - icon: fontawesome/brands/bilibili 
+      link: https://space.bilibili.com/30710225
+    - icon: simple/zhihu
+      link: https://www.zhihu.com/people/jia-jia-77-45-25
+
+extra_javascript:
+  - _javascripts/mathjax.js #数学公式
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js #数学公式
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js #表格排序
+  - _javascripts/tablesort.js #表格排序
+
+# markdown扩展
+markdown_extensions:  
+  - abbr #缩写
+  - attr_list #属性列表
+  - admonition 
+  - def_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences: #任意嵌套
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets: #片段
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.smartsymbols:
+      fractions: False
+      ordinal_numbers: False
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+      line_spans: __span
+      auto_title: true
+      #linenums: true
+
+
+watch:
+  - includes
