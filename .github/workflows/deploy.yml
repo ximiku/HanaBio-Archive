@@ -1,0 +1,39 @@
+name: Deploy MkDocs
+
+on:
+  push:
+    branches: [main]          # 只要 main 有新提交就触发
+  workflow_dispatch:          # 也允许手动点按钮重新部署
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取源码
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # 2. 装 Python 并启用缓存（加速依赖安装）
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      # 3. 安装 MkDocs 及插件（写在 requirements.txt 里更可控）
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material mkdocs-git-revision-date-localized
+
+      # 4. 构建到 ./site
+      - name: Build site
+        run: mkdocs build --strict
+
+      # 5. 发布到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4          # 专门部署静态文件的官方动作
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 内置 token，足够推分支
+          publish_dir: ./site                       # 要上传的目录
+          publish_branch: gh-pages                  # 目标分支
