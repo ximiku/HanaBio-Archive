@@ -5,6 +5,9 @@ on:
     branches: [main]          # 只要 main 有新提交就触发
   workflow_dispatch:          # 也允许手动点按钮重新部署
 
+permissions:
+  contents: write 
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
