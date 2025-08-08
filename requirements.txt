@@ -1,0 +1,10 @@
+# ——— 基础 ———
+mkdocs>=1.5          # MkDocs 主程序
+mkdocs-material>=9.5 # 主题，已自带 meta、search 等插件
+
+# ——— 你在 mkdocs.yml 里显式启用的第三方插件 ———
+mkdocs-git-revision-date-localized>=1.2  # 显示最后修改日期
+mkdocs-glightbox>=0.3                    # 图片灯箱
+
+# ——— Markdown 扩展（pymdownx.*）———
+pymdown-extensions>=10.0                 # 你启用的 caret、tabbed、superfences… 都在这里
