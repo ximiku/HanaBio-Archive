@@ -24,7 +24,7 @@ jobs:
       # 3. 安装 MkDocs 及插件（写在 requirements.txt 里更可控）
       - name: Install dependencies
         run: |
-          pip install mkdocs-material mkdocs-git-revision-date-localized
+          pip install -r requirements.txt
 
       # 4. 构建到 ./site
       - name: Build site
