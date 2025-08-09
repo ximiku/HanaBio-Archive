@@ -1,10 +1,13 @@
 site_name: HanaBio Archive
+site_url: https://jiaxi1223.github.io/HanaBio-Archive-test/
 copyright: Copyright &copy; 2025 Ximuku67
+repo_url: https://github.com/Jiaxi1223/HanaBio-Archive-test
+repo_name: HanaBio-Archive-test
 
 # Contents
 nav:
   - 简介:
-    - 简介: index/index.md
+    - 简介: index.md
     - 修饰代码: index/_codes.md
     - 生物知识网站: index/website.md
 
@@ -81,6 +84,8 @@ plugins:
   - meta
   - search
   - glightbox
+  - git-revision-date-localized: #显示日期
+      enable_creation_date: true
 
 extra:
   social:
