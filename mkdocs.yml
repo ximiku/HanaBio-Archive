@@ -64,13 +64,16 @@ theme:
     primary: white
 
   icon:
-    logo: material/library
+    logo: material/archive-edit
 
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.path
+    #- navigation.expand #展开导航页
     - navigation.indexes
+    - navigation.instant #即时加载
+    - navigation.top #返回顶部按钮
     - navigation.footer
     - search.suggest #搜索补全
     - search.highlight #搜索后高亮
@@ -88,6 +91,7 @@ plugins:
       enable_creation_date: true
 
 extra:
+  homepage: https://jiaxi1223.github.io/HanaBio-Archive-test/
   social:
     - icon: fontawesome/brands/bilibili 
       link: https://space.bilibili.com/30710225
