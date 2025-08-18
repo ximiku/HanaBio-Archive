@@ -1,5 +1,7 @@
 site_name: HanaBio Archive
 site_url: https://jiaxi1223.github.io/HanaBio-Archive-test/
+site_description: 花火生物档案：一个高质量的生物学知识库与学习笔记
+site_author: Ximuku67
 copyright: Copyright &copy; 2025 Ximuku67
 repo_url: https://github.com/Jiaxi1223/HanaBio-Archive-test
 repo_name: HanaBio-Archive-test
@@ -9,7 +11,7 @@ nav:
   - 简介:
     - 简介: index.md
     - 修饰代码: index/_codes.md
-    - 生物知识网站: index/website.md
+    - 网站资源: index/website.md
 
   - 生物化学:
     - 生物化学: biochem/index.md
@@ -53,8 +55,10 @@ nav:
 
   - 跨学科交叉:
     - 跨学科交叉: inter/index.md
-
-
+  
+  - Blog:
+    - blog/index.md
+    
 
 # Theme
 theme:
@@ -87,6 +91,8 @@ plugins:
   - meta
   - search
   - glightbox
+  - blog:
+      archive_date_format: MMMM yyyy
   - git-revision-date-localized: #显示日期
       enable_creation_date: true
 
@@ -97,6 +103,7 @@ extra:
       link: https://space.bilibili.com/30710225
     - icon: simple/zhihu
       link: https://www.zhihu.com/people/jia-jia-77-45-25
+  update_log_items: 7   # 首页保留最近 7 条
 
 extra_javascript:
   - _javascripts/mathjax.js #数学公式
