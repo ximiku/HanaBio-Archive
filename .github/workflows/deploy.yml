@@ -16,6 +16,8 @@ jobs:
       # 1. 拉取源码
       - name: Checkout source
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 关键：完整历史，插件才能查到每个文件的提交
 
       # 2. 装 Python 并启用缓存（加速依赖安装）
       - name: Setup Python
