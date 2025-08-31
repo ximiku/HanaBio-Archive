@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# 不让搜索引擎索引站内搜索结果页（价值低、重复多）
+# Disallow: /search/
+
+# 以后如果有草稿或私密目录，按需解注释
+# Disallow: /drafts/
+
+# 告诉爬虫站点地图位置（便于快速、完整收录）
+Sitemap: https://jiaxi1223.github.io/HanaBio-Archive-test/sitemap.xml
