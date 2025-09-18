@@ -59,6 +59,10 @@ nav:
   - Blog:
     - blog/index.md
     
+  - PKUSKY课程资料:
+    - PKUSKY课程资料: pkusky_course/index.md
+    - 01139630 生物化学: pkusky_course/biochemistryEN.md
+    - 生理学: pkusky_course/physiology.md
 
 # Theme
 theme:
