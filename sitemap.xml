@@ -2,102 +2,198 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/biochem/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/aa_synthesis/</loc>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/biochem/amino_acid/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/bioenergetics/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/carbohydrate/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/emp/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/enzyme/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/enzyme_dynamics/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/glycogen/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/gng/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/lipid/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/lipid_catabolism/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/lipid_synthesis/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/metabolism/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/na_catabolism/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/na_synthesis/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/nucleic_acid/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/other_glc_pathway/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/oxp/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/ppp/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/pr_aa_catabolism/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/protein_function/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/protein_structure/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/tca_cycle/</loc>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/biochem/vitamin_and_coenzyme/</loc>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/bioinfo/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/biostat/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/blog/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/blog/2025/08/18/%E7%AC%AC%E4%B8%80%E6%9D%A1%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/botany/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/cell/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/ecology/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/evolution/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/exptech/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/genetics/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/index/_codes/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
+    </url>
+    <url>
+         <loc>https://ximiku.github.io/HanaBio-Archive/index/best/</loc>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/index/website/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/inter/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/micro/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/molecular/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/physiology/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/pkusky_course/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/pkusky_course/biochemistryEN/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/pkusky_course/physiology/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/zoology/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/blog/archive/2025/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
     <url>
          <loc>https://ximiku.github.io/HanaBio-Archive/blog/category/%E6%9B%B4%E6%96%B0/</loc>
-         <lastmod>2025-09-18</lastmod>
+         <lastmod>2025-10-01</lastmod>
     </url>
 </urlset>
