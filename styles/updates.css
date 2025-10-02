@@ -1,0 +1,48 @@
+.update-panel {
+  margin-top: 1.2rem;
+  padding: .6rem .7rem;
+  font-size: .70rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .6rem;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+.update-title {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 .4rem 0;
+  color: var(--md-default-fg-color);
+}
+
+.update-list { list-style: none; margin: 0; padding-left: 0; font-size: .60rem;}
+.update-item + .update-item { margin-top: .35rem; }
+
+/* 日期加粗 */
+.update-date {
+  font-weight: 700;
+  margin-right: .4rem;
+}
+
+/* 链接样式：默认蓝色，悬停粉色 */
+.update-link {
+  color: #4050B5;              /* Google 蓝 / 普通蓝 */
+  font-weight: 500;
+  text-decoration: none;
+}
+.update-link:hover {
+  color: var(--md-accent-fg-color);
+  text-decoration: none;
+}
+
+/* 灰化非最新 */
+.update-item:not(.is-latest) {
+  color: var(--md-default-fg-color--light);
+}
+.update-item:not(.is-latest) .update-link {
+  color: var(--md-default-fg-color--light);
+}
+.update-item:not(.is-latest) .update-link:hover {
+  color: var(--md-accent-fg-color);   /* 悬停时仍然粉色 */
+}
+
