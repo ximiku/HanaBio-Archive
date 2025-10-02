@@ -102,6 +102,7 @@ theme:
 
   palette:
     primary: white
+    accent: pink
 
   favicon: material/archive-edit
 
