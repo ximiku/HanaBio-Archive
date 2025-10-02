@@ -145,10 +145,15 @@ extra:
   update_log_items: 7   # 首页保留最近 7 条
 
 extra_javascript:
-  - _javascripts/mathjax.js #数学公式
+  - js/mathjax.js #数学公式
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js #数学公式
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js #表格排序
-  - _javascripts/tablesort.js #表格排序
+  - js/tablesort.js #表格排序
+  - js/updates.js
+
+extra_css:
+  - styles/active-tab.css
+  - styles/updates.css
 
 # markdown扩展
 markdown_extensions:  
