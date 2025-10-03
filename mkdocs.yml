@@ -134,6 +134,8 @@ plugins:
       archive_date_format: MMMM yyyy
   - git-revision-date-localized: #显示日期
       enable_creation_date: true
+  - minify:
+      minify_html: true
 
 extra:
   homepage: https://jiaxi1223.github.io/HanaBio-Archive-test/

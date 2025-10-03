@@ -1,3 +1,8 @@
+---
+title: 简介
+description: 花火生物档案——从基础到前沿的生物学知识库与学习手记
+---
+
 
 # Welcome to 花火生物档案！
 
@@ -62,6 +67,26 @@
 
 本站的内容完全开源免费，如果有侵权之处，请联系删除；本站由博主编写的内容遵循 **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)** 和 **[SATA](https://github.com/zTrix/sata-license)** 协议，其余部分遵循原作者规定的许可。
 
+<!--初音未来开始-->
+<style>
+.cywl {
+    position: fixed!important;
+    position: absolute;
+    width: 70px;
+    height: 75px;
+    z-index: 9;
+    right: 0;
+    bottom: 0;
+    top: expression(offsetParent.scrollTop+offsetParent.clientHeight-150);
+    cursor: pointer;
+}
+</style>
+<div id="audio" class="cywl">
+<img src="https://external-30160.picsz.qpic.cn/39ff4096c204652d7c7b56418fb37631" width="65px" height="65px" id="d" onclick="c();">
+</div>
+<!--初音未来结束-->
+
+
 
 <!--侧栏更新通知-->
 <div id="updates-box" hidden>
@@ -69,7 +94,7 @@
 **Update Notification**
 
 <ul>
-  <li data-date="2025-10-03"><a href="./biochem/index.md">生物化学部分初稿完成</a></li>
+  <li data-date="2025-10-03"><a href="./biochem/amino_acid">生物化学部分初稿完成</a></li>
 
 </ul>
 

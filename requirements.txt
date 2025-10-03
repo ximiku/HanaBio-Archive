@@ -6,6 +6,6 @@ mkdocs-material>=9.5 # 主题，已自带 meta、search 等插件
 mkdocs-git-revision-date-localized-plugin>=1.2   # 显示最近修改日期
 mkdocs-glightbox>=0.3                    # 图片灯箱
 mkdocs-rss-plugin>=1.17.0
-
+mkdocs-minify-plugin>=0.8.0
 # ——— Markdown 扩展（pymdownx.*）———
 pymdown-extensions>=10.0                 # 你启用的 caret、tabbed、superfences… 都在这里
