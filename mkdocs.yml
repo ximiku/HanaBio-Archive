@@ -49,6 +49,55 @@ nav:
       - 核苷酸合成: biochem/na_synthesis.md
 
 
+
+  - 生理学:
+    - 生理学: physiology/index.md
+    - 内环境与稳态: physiology/internal_env.md
+    - 动物组织: physiology/animal_tissue.md
+    - 细胞膜动力学: physiology/membrane_dynamics.md
+    - 细胞的电活动: physiology/electrical_activity.md
+    - 肌细胞生理: physiology/muscle.md
+    - 血液与循环生理:
+      - physiology/blood/index.md
+      - 血细胞生理: physiology/blood/blood_cell.md
+      - 生理性止血: physiology/blood/blood_hemostasis.md
+      - 心脏的泵血功能: physiology/blood/blood_heart_pump.md
+      - 心脏电生理: physiology/blood/blood_heart_electical.md
+      - 血管生理: physiology/blood/blood_vessel.md
+      - 心血管活动调节: physiology/blood/blood_regulation.md
+      - 器官循环: physiology/blood/blood_organ.md
+    - 呼吸生理: physiology/respiratory.md
+    - 消化生理: physiology/digestive.md
+    - 能量代谢与体温: physiology/energy.md
+    - 泌尿生理: physiology/urinary.md
+    - 生殖生理: physiology/reproductive.md
+    - 内分泌生理: 
+      - physiology/endo/index.md
+      - 下丘脑-垂体内分泌: physiology/endo/endo_hp.md
+      - 甲状腺内分泌: physiology/endo/endo_thyroid.md
+      - 钙磷调节: physiology/endo/endo_capi.md
+      - 胰岛内分泌: physiology/endo/endo_islet.md
+      - 肾上腺皮质内分泌: physiology/endo/endo_ad_cortax.md
+      - 肾上腺髓质内分泌: physiology/endo/endo_ad_medulla.md
+      - 其他激素内分泌: physiology/endo/endo_other.md
+    - 神经生物学: 
+      - physiology/neuro/index.md
+      - 神经系统解剖学总论: physiology/neuro/neuro_anatomy.md
+      - 周围神经系统: physiology/neuro/neuro_pns.md
+      - 中枢神经系统: physiology/neuro/neuro_cns.md
+      - 神经系统传导通路: physiology/neuro/neuro_pathway.md
+      - 突触传递: physiology/neuro/neuro_synapse.md
+      - 反射活动: physiology/neuro/neuro_reflex.md
+      - 神经递质与受体: physiology/neuro/neuro_transmitter_receptor.md
+      - 感觉与感官: physiology/neuro/neuro_sentation.md
+      - 躯体运动调控: physiology/neuro/neuro_movement.md
+      - 内脏活动调控: physiology/neuro/neuro_autonomic.md
+      - 脑的高级功能: physiology/neuro/neuro_high.md
+      - 神经系统疾病: physiology/neuro/neuro_disease.md
+
+    - 免疫学: physiology/immunology.md
+
+
   - 细胞: 
     - 细胞生物学: cell/index.md 
 
@@ -57,9 +106,6 @@ nav:
 
   - 遗传学: 
     - 遗传学: genetics/index.md
-
-  - 生理学:
-    - 生理学: physiology/index.md
 
   - 微生物:
     - 微生物学: micro/index.md
