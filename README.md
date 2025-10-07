@@ -7,4 +7,4 @@
 
 该站现在还在初始搭建阶段，如果你有一切关于本站的问题或建议，非常欢迎提出 [issue](https://github.com/ximiku/HanaBio-Archive/issues) 进行讨论；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系博主的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。
 
-如果你认为本站对你有帮助，可以给仓库点个 star，或者分享一个你正在听的歌或看的番哦~
+如果你认为本站对你有帮助，可以给仓库点个 star，或者在 [Discusstions](https://github.com/ximiku/HanaBio-Archive/discussions/2) 分享一个你正在听的歌或看的番哦~

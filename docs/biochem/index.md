@@ -9,3 +9,5 @@
 2. 生物化学. 北京大学出版社.
 3. Lehningger Principles of Biochemistry. the 6th/7th/8th version
 4. the slides of **Biochemistry course (01139630)** in Peking University
+
+
