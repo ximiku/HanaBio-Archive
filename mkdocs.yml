@@ -10,6 +10,7 @@ repo_name: HanaBio-Archive
 nav:
   - 简介:
     - 简介: index.md
+    - 如何使用本站: index/intro.md
     - 修饰代码: index/_codes.md
     - 网站资源: index/website.md
     - 小专题:
@@ -95,7 +96,9 @@ nav:
       - 脑的高级功能: physiology/neuro/neuro_high.md
       - 神经系统疾病: physiology/neuro/neuro_disease.md
 
-    - 免疫学: physiology/immunology.md
+    - 免疫学: 
+      - physiology/immuno/index.md
+      - 抗原的T细胞呈递及MHC功能: physiology/immuno/immuno_apc_mhc.md
 
 
   - 细胞: 
@@ -123,7 +126,8 @@ nav:
     - 进化生物学: evolution/index.md
 
   - 生物信息: 
-    - 生物信息学: bioinfo/index.md 
+    - 生物信息学: bioinfo/index.md
+    - 测序: bioinfo/seq.md
 
   - 生物统计:
     - 生物统计学: biostat/index.md 
@@ -159,9 +163,12 @@ theme:
     - navigation.tabs
     #- navigation.sections
     - navigation.path
+    - navigation.prune
     #- navigation.expand #展开导航页
     - navigation.indexes
     - navigation.instant #即时加载
+   # - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.top #返回顶部按钮
     - navigation.footer
     - search.suggest #搜索补全
@@ -202,6 +209,7 @@ extra_javascript:
 extra_css:
   - styles/active-tab.css
   - styles/updates.css
+  - styles/extra.css
 
 # markdown扩展
 markdown_extensions:  
