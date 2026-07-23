@@ -44,7 +44,7 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 因此，这份笔记的构建大致分为几个阶段：
 
-1. 以李yy笔记为基底，构建大致的知识框架；
+1. 以常用的经典教材为基底，构建大致的知识框架；
 2. 将我竞赛期间的20多本手写笔记浓缩进网站；
 3. 融入北大课程的课堂与实验笔记，补充专业英语内容；
 4. 整理讲座和阅读文献的摘录，尝试链接科研前沿。
@@ -53,7 +53,7 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 ## 关于 HanaBio Archive
 
-**HanaBio Archive** | 花火生物档案，**Hanabi** 是日语“花火”的罗马音，后加 o 构成 **Bio**，**Archive** 则参考了*蔚蓝档案*的名字（~~Bio Archive也是BA~~）。
+**HanaBio Archive** | 花火生物档案，**Hanabi** 是日语“花火”的罗马音，后加 o 构成 **Bio**，**Archive** 则参考了*蔚蓝档案*的名字（~~Bio Archive也是BA~~）。本站也可简称**花生档案**～
 
 本站现在还在初始搭建阶段，如果你有一切关于本站的问题或建议，非常欢迎提出 [issue](https://github.com/ximiku/HanaBio-Archive/issues) 进行讨论；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系博主的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。（不久后可能会上线 giscus 评论系统，敬请期待喵～）
 
