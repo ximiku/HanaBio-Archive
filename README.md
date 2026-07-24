@@ -8,3 +8,32 @@
 该站现在还在初始搭建阶段，如果你有一切关于本站的问题或建议，非常欢迎提出 [issue](https://github.com/ximiku/HanaBio-Archive/issues) 进行讨论；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系博主的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。
 
 如果你认为本站对你有帮助，可以给仓库点个 star，或者在 [Discusstions](https://github.com/ximiku/HanaBio-Archive/discussions/2) 分享一个你正在听的歌或看的番哦~
+
+## 本地预览
+
+生产站点继续使用 MkDocs 和 Material for MkDocs 构建。首次在本地预览时：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade -r requirements.txt
+mkdocs serve
+```
+
+Zensical 作为旁路构建器，直接复用 `mkdocs.yml`，并使用默认的 modern 主题。首次启动：
+
+```bash
+python3 -m venv .venv-zensical
+source .venv-zensical/bin/activate
+python -m pip install --upgrade -r requirements-zensical.txt
+zensical --version
+zensical serve --config-file mkdocs.yml --dev-addr 127.0.0.1:8001
+```
+
+浏览器访问 <http://127.0.0.1:8001/>。以后跟进 Zensical 最新版本时：
+
+```bash
+source .venv-zensical/bin/activate
+python -m pip install --upgrade zensical
+zensical --version
+```

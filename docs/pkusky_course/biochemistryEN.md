@@ -1,3 +1,5 @@
+# 01139630 生物化学
+
 说在前面：全英文的生物化学难点在有很多专业名词的生词，且许多酶和反应的名字非常易混，不好记忆。可以先用中文记忆逻辑关系，再记英文词汇（逃
 
 我这里的章节不会按照老师的ppt进行，而是按照知识的自然顺序。
@@ -143,5 +145,4 @@ Certain uncommon amino acids are biosynthesized in proteins through reversible p
 - At physiological pH (~7.4), amino acids predominantly exist as zwitterions
 - Both the α-carboxyl and the α-amino groups become more acidic due to the effects of neighboring chemical groups
 - characteristic isoelectric point (pI)
-
 

@@ -1,4 +1,5 @@
 /.venv/
+/.venv-zensical/
 site/
 __pycache__/
 .DS_Store
