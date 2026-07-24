@@ -2,7 +2,7 @@ site_name: HanaBio Archive
 site_url: https://ximiku.github.io/HanaBio-Archive/
 site_description: 花火生物档案：一个高质量的生物学知识库与学习笔记
 site_author: Ximuku67
-copyright: Copyright &copy; 2025 Ximuku67
+copyright: Copyright &copy; 2025-2026 by Ximuku67
 repo_url: https://github.com/ximiku/HanaBio-Archive
 repo_name: HanaBio-Archive
 
@@ -127,7 +127,6 @@ nav:
 
   - 生物信息: 
     - 生物信息学: bioinfo/index.md
-    - 测序: bioinfo/seq.md
 
   - 生物统计:
     - 生物统计学: biostat/index.md 
@@ -139,7 +138,8 @@ nav:
     - 跨学科交叉: inter/index.md
   
   - Blog:
-    - blog/index.md
+    - Blog: blog/index.md
+    - 第一条博客测试: blog/posts/hello-world.md
     
   - PKUSKY课程资料:
     - PKUSKY课程资料: pkusky_course/index.md
@@ -183,8 +183,6 @@ plugins:
   - meta
   - search
   - glightbox
-  - blog:
-      archive_date_format: MMMM yyyy
   - git-revision-date-localized: #显示日期
       enable_creation_date: true
   - minify:

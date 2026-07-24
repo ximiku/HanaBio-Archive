@@ -1,0 +1,2 @@
+# Zensical 旁路始终跟进安装时的最新版本；生产部署仍使用 requirements.txt。
+zensical
