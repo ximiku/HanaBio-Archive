@@ -11,16 +11,7 @@
 
 ## 本地预览
 
-生产站点继续使用 MkDocs 和 Material for MkDocs 构建。首次在本地预览时：
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade -r requirements.txt
-mkdocs serve
-```
-
-Zensical 作为旁路构建器，直接复用 `mkdocs.yml`，并使用默认的 modern 主题。首次启动：
+生产站点使用 Zensical 构建，直接复用 `mkdocs.yml`，并采用默认的 modern 主题。首次启动本地预览：
 
 ```bash
 python3 -m venv .venv-zensical
@@ -36,4 +27,13 @@ zensical serve --config-file mkdocs.yml --dev-addr 127.0.0.1:8001
 source .venv-zensical/bin/activate
 python -m pip install --upgrade zensical
 zensical --version
+```
+
+MkDocs 和 Material for MkDocs 仅保留为兼容性检查与应急回退方案：
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+mkdocs serve
 ```

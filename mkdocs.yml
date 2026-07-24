@@ -16,7 +16,7 @@ nav:
     - 小专题:
       - 生物之最: index/best.md
 
-  - 生物化学:
+  - 生化:
     - 生物化学: biochem/index.md
     - 蛋白质:
       - 氨基酸: biochem/amino_acid.md
@@ -51,7 +51,7 @@ nav:
 
 
 
-  - 生理学:
+  - 生理:
     - 生理学: physiology/index.md
     - 内环境与稳态: physiology/internal_env.md
     - 动物组织: physiology/animal_tissue.md
@@ -107,41 +107,41 @@ nav:
   - 分子:
     - 分子生物学: molecular/index.md
 
-  - 遗传学: 
+  - 遗传:
     - 遗传学: genetics/index.md
 
   - 微生物:
     - 微生物学: micro/index.md
 
-  - 植物学: 
+  - 植物:
     - 植物学: botany/index.md
 
-  - 动物学: 
+  - 动物:
     - 动物学: zoology/index.md
 
-  - 生态学:
+  - 生态:
     - 生态学: ecology/index.md 
 
   - 进化:
     - 进化生物学: evolution/index.md
 
-  - 生物信息: 
+  - 生信:
     - 生物信息学: bioinfo/index.md
 
-  - 生物统计:
+  - 统计:
     - 生物统计学: biostat/index.md 
 
-  - 实验技术:
+  - 技术:
     - 生物实验技术: exptech/index.md 
 
-  - 跨学科交叉:
+  - 跨学科:
     - 跨学科交叉: inter/index.md
   
   - Blog:
     - Blog: blog/index.md
     - 第一条博客测试: blog/posts/hello-world.md
     
-  - PKUSKY课程资料:
+  - 课程资料:
     - PKUSKY课程资料: pkusky_course/index.md
     - 01139630 生物化学: pkusky_course/biochemistryEN.md
     - 生理学: pkusky_course/physiology.md
