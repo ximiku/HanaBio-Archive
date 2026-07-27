@@ -18,36 +18,40 @@ nav:
 
   - 生化:
     - 生物化学: biochem/index.md
-    - 蛋白质:
+    - 生物分子的结构与功能:
+      - 糖类: biochem/carbohydrate.md
+      - 脂质: biochem/lipid.md
       - 氨基酸: biochem/amino_acid.md
-      - 蛋白质结构: biochem/protein_structure.md
-      - 蛋白质功能: biochem/protein_function.md
-    - 核酸与核苷酸: biochem/nucleic_acid.md
-    - 糖类: biochem/carbohydrate.md
-    - 脂质: biochem/lipid.md
-    - 酶学:
+      - 蛋白质:
+        - 蛋白质结构: biochem/protein_structure.md
+        - 蛋白质功能: biochem/protein_function.md
+        - 蛋白质研究方法: biochem/protein_methods.md
+      - 核酸与核苷酸: biochem/nucleic_acid.md
+    - 酶与辅酶:
       - 酶通论: biochem/enzyme.md
       - 酶动力学: biochem/enzyme_dynamics.md
+      - 酶的催化机制与调控: biochem/enzyme_mechanism_regulation.md
       - 维生素与辅酶: biochem/vitamin_and_coenzyme.md
-    - 代谢总论: biochem/metabolism.md
-    - 生物动力学: biochem/bioenergetics.md
-    - 氧化磷酸化: biochem/oxp.md
+    - 代谢与生物能学:
+      - 代谢总论: biochem/metabolism.md
+      - 生物能学: biochem/bioenergetics.md
+      - 电子传递与氧化磷酸化: biochem/oxp.md
     - 糖代谢:
       - 糖酵解: biochem/emp.md
       - 三羧酸循环: biochem/tca_cycle.md
       - 磷酸戊糖途径: biochem/ppp.md
       - 糖异生: biochem/gng.md
       - 糖原合成与分解: biochem/glycogen.md
-      - 其他糖代谢途径: biochem/other_glc_pathway.md
+      - 乙醛酸循环与寡糖代谢: biochem/other_glc_pathway.md
     - 脂代谢:
-      - 脂分解: biochem/lipid_catabolism.md
-      - 脂合成: biochem/lipid_synthesis.md
+      - 脂肪酸分解代谢: biochem/lipid_catabolism.md
+      - 脂质生物合成: biochem/lipid_synthesis.md
     - 氨基酸代谢:
-      - 蛋白质与氨基酸分解: biochem/pr_aa_catabolism.md
-      - 氨基酸合成: biochem/aa_synthesis.md
+      - 蛋白质降解与氨基酸分解代谢: biochem/pr_aa_catabolism.md
+      - 氨基酸及其衍生物的合成: biochem/aa_synthesis.md
     - 核苷酸代谢:
-      - 核苷酸分解: biochem/na_catabolism.md
-      - 核苷酸合成: biochem/na_synthesis.md
+      - 核酸降解与核苷酸分解代谢: biochem/na_catabolism.md
+      - 核苷酸生物合成: biochem/na_synthesis.md
 
   - 生理:
     - 生理学: physiology/index.md
