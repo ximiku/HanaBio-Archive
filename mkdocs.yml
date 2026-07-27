@@ -49,8 +49,6 @@ nav:
       - 核苷酸分解: biochem/na_catabolism.md
       - 核苷酸合成: biochem/na_synthesis.md
 
-
-
   - 生理:
     - 生理学: physiology/index.md
     - 内环境与稳态: physiology/internal_env.md
@@ -61,6 +59,7 @@ nav:
     - 血液与循环生理:
       - physiology/blood/index.md
       - 血细胞生理: physiology/blood/blood_cell.md
+      - 血型与输血: physiology/blood/blood_types.md
       - 生理性止血: physiology/blood/blood_hemostasis.md
       - 心脏的泵血功能: physiology/blood/blood_heart_pump.md
       - 心脏电生理: physiology/blood/blood_heart_electical.md
@@ -72,7 +71,8 @@ nav:
     - 能量代谢与体温: physiology/energy.md
     - 泌尿生理: physiology/urinary.md
     - 生殖生理: physiology/reproductive.md
-    - 内分泌生理: 
+    - 生长与发育: physiology/growth_development.md
+    - 内分泌生理:
       - physiology/endo/index.md
       - 下丘脑-垂体内分泌: physiology/endo/endo_hp.md
       - 甲状腺内分泌: physiology/endo/endo_thyroid.md
@@ -81,66 +81,249 @@ nav:
       - 肾上腺皮质内分泌: physiology/endo/endo_ad_cortax.md
       - 肾上腺髓质内分泌: physiology/endo/endo_ad_medulla.md
       - 其他激素内分泌: physiology/endo/endo_other.md
-    - 神经生物学: 
-      - physiology/neuro/index.md
-      - 神经系统解剖学总论: physiology/neuro/neuro_anatomy.md
-      - 周围神经系统: physiology/neuro/neuro_pns.md
-      - 中枢神经系统: physiology/neuro/neuro_cns.md
-      - 神经系统传导通路: physiology/neuro/neuro_pathway.md
-      - 突触传递: physiology/neuro/neuro_synapse.md
-      - 反射活动: physiology/neuro/neuro_reflex.md
-      - 神经递质与受体: physiology/neuro/neuro_transmitter_receptor.md
-      - 感觉与感官: physiology/neuro/neuro_sentation.md
-      - 躯体运动调控: physiology/neuro/neuro_movement.md
-      - 内脏活动调控: physiology/neuro/neuro_autonomic.md
-      - 脑的高级功能: physiology/neuro/neuro_high.md
-      - 神经系统疾病: physiology/neuro/neuro_disease.md
+    - 病理生理学:
+      - physiology/pathophysiology/index.md
+      - 水与电解质代谢紊乱: physiology/pathophysiology/water_electrolyte.md
+      - 酸碱平衡紊乱: physiology/pathophysiology/acid_base.md
+      - 糖与能量代谢紊乱: physiology/pathophysiology/metabolic_disorders.md
+      - 缺氧、发热与应激: physiology/pathophysiology/hypoxia_fever_stress.md
+      - 细胞损伤与缺血再灌注: physiology/pathophysiology/cell_injury.md
+      - 器官功能不全: physiology/pathophysiology/organ_failure.md
 
-    - 免疫学: 
-      - physiology/immuno/index.md
-      - 抗原的T细胞呈递及MHC功能: physiology/immuno/immuno_apc_mhc.md
-
-
-  - 细胞: 
-    - 细胞生物学: cell/index.md 
+  - 细胞:
+    - 细胞生物学: cell/index.md
+    - 细胞膜与跨膜运输: cell/membrane_transport.md
+    - 细胞器与能量转换: cell/organelles.md
+    - 内膜系统、蛋白质分选与囊泡运输: cell/endomembrane.md
+    - 细胞骨架与细胞运动: cell/cytoskeleton.md
+    - 细胞核、染色质与核糖体: cell/nucleus_chromatin.md
+    - 细胞外基质、黏附与连接: cell/cell_interactions.md
+    - 细胞信号转导: cell/cell_signaling.md
+    - 细胞周期、增殖、分化、死亡与衰老: cell/cell_life_cycle.md
 
   - 分子:
     - 分子生物学: molecular/index.md
+    - 遗传物质、基因与基因组: molecular/genetic_material.md
+    - DNA复制: molecular/dna_replication.md
+    - DNA损伤、修复与突变: molecular/dna_repair.md
+    - DNA重组: molecular/dna_recombination.md
+    - 转录与RNA生物合成: molecular/transcription.md
+    - RNA转录后加工: molecular/rna_processing.md
+    - 翻译与蛋白质生物合成: molecular/translation.md
+    - 蛋白质翻译后加工: molecular/protein_processing.md
+    - 原核与真核基因表达调控: molecular/gene_regulation.md
 
   - 遗传:
     - 遗传学: genetics/index.md
+    - 孟德尔遗传及其扩展: genetics/mendelian_genetics.md
+    - 连锁、交换与遗传作图: genetics/linkage_mapping.md
+    - 性别决定、伴性遗传与细胞质遗传: genetics/sex_cytoplasmic.md
+    - 突变与染色体变异: genetics/chromosome_variation.md
+    - 数量遗传学: genetics/quantitative_genetics.md
+    - 细菌与病毒遗传学: genetics/microbial_genetics.md
+    - 遗传重组、基因组学与表观遗传学: genetics/genomics_epigenetics.md
+    - 群体遗传学: genetics/population_genetics.md
+    - 发育遗传学与人类遗传学: genetics/developmental_human.md
 
   - 微生物:
     - 微生物学: micro/index.md
+    - 原核微生物: micro/prokaryotes.md
+    - 真核微生物: micro/eukaryotic_microbes.md
+    - 病毒与亚病毒因子: micro/viruses.md
+    - 微生物营养与代谢: micro/nutrition_metabolism.md
+    - 微生物生长及其控制: micro/growth_control.md
+    - 微生物遗传与育种: micro/microbial_genetics.md
+    - 微生物感染与宿主免疫: micro/infection_immunity.md
+    - 微生物生态与应用微生物学: micro/ecology_applications.md
+
+  - 神经:
+    - 神经生物学: neuro/index.md
+    - 突触传递: neuro/neuro_synapse.md
+    - 反射活动: neuro/neuro_reflex.md
+    - 神经递质与受体: neuro/neuro_transmitter_receptor.md
+    - 感觉与感官: neuro/neuro_sentation.md
+    - 躯体运动调控: neuro/neuro_movement.md
+    - 内脏活动调控: neuro/neuro_autonomic.md
+    - 脑的高级功能: neuro/neuro_high.md
+    - 神经系统疾病: neuro/neuro_disease.md
+
+  - 免疫:
+    - 免疫学: immunology/index.md
+    - 抗原的T细胞呈递及MHC功能: immunology/immuno_apc_mhc.md
+
+  - 发育:
+    - 发育生物学: development/index.md
+    - 细胞命运决定与模式生物: development/cell_fate_models.md
+    - 配子发生: development/gametogenesis.md
+    - 受精与卵的激活: development/fertilization.md
+    - 卵裂与原肠形成: development/cleavage_gastrulation.md
+    - 胚轴建立与模式形成: development/axis_patterning.md
+    - 形态发生与器官发生: development/morphogenesis.md
+    - 干细胞与再生: development/stem_cells_regeneration.md
+    - 环境、进化与发育: development/environmental_evo_devo.md
 
   - 植物:
     - 植物学: botany/index.md
+    - 植物形态与解剖:
+      - botany/morphology/index.md
+      - 植物细胞与组织: botany/morphology/plant_cells_tissues.md
+      - 根、茎与叶: botany/morphology/vegetative_organs.md
+      - 次生生长与维管形成层: botany/morphology/secondary_growth.md
+      - 植物生殖器官: botany/morphology/reproductive_organs.md
+      - 花、传粉、受精、种子与果实: botany/morphology/flowers_seeds_fruits.md
+    - 植物分类学:
+      - botany/classification/index.md
+      - 植物分类原理: botany/classification/classification_principles.md
+      - 传统植物学中的藻类、真菌与地衣: botany/classification/algae_fungi_lichens.md
+      - 苔藓植物与蕨类植物: botany/classification/bryophytes_ferns.md
+      - 裸子植物: botany/classification/gymnosperms.md
+      - 被子植物: botany/classification/angiosperms.md
+    - 植物生理学:
+      - botany/physiology/index.md
+      - 植物水分关系与矿质营养: botany/physiology/water_minerals.md
+      - 光合作用与呼吸作用: botany/physiology/photosynthesis_respiration.md
+      - 同化物运输与次生代谢: botany/physiology/transport_metabolism.md
+      - 植物激素、生长与发育: botany/physiology/hormones_growth.md
+      - 生殖、成熟、衰老与逆境生理: botany/physiology/reproduction_stress.md
 
   - 动物:
     - 动物学: zoology/index.md
+    - 无脊椎动物:
+      - zoology/invertebrates/index.md
+      - 动物体制、多细胞起源与动物地理: zoology/invertebrates/body_plans.md
+      - 动物学中的原生生物、多孔动物与刺胞动物: zoology/invertebrates/early_animals.md
+      - 扁形动物与假体腔动物: zoology/invertebrates/worms.md
+      - 环节动物与软体动物: zoology/invertebrates/annelids_mollusks.md
+      - 节肢动物: zoology/invertebrates/arthropods.md
+      - 触手冠动物、棘皮动物与半索动物: zoology/invertebrates/deuterostomes.md
+    - 脊椎动物分类:
+      - zoology/vertebrates/index.md
+      - 脊索动物、圆口类与鱼类: zoology/vertebrates/chordates_fishes.md
+      - 两栖类与爬行类: zoology/vertebrates/amphibians_reptiles.md
+      - 鸟类: zoology/vertebrates/birds.md
+      - 哺乳类: zoology/vertebrates/mammals.md
+    - 脊椎动物比较解剖:
+      - zoology/comparative_anatomy/index.md
+      - 脊椎动物胚胎与皮肤系统: zoology/comparative_anatomy/embryology_integument.md
+      - 骨骼与肌肉系统: zoology/comparative_anatomy/skeleton_muscle.md
+      - 消化与呼吸系统: zoology/comparative_anatomy/digestive_respiratory.md
+      - 排泄、生殖与循环系统: zoology/comparative_anatomy/urinary_reproductive_circulatory.md
+      - 神经、感觉与内分泌系统: zoology/comparative_anatomy/nervous_endocrine_sensory.md
+    - 动物行为学:
+      - zoology/behavior/index.md
+      - 行为学基础与行为机制: zoology/behavior/foundations_mechanisms.md
+      - 学习、发育与行为演化: zoology/behavior/learning_development.md
+      - 取食行为: zoology/behavior/foraging.md
+      - 生殖行为: zoology/behavior/reproductive_behavior.md
+      - 社会、通讯与时空行为: zoology/behavior/social_communication.md
 
   - 生态:
-    - 生态学: ecology/index.md 
+    - 生态学: ecology/index.md
+    - 生物与环境: ecology/organism_environment.md
+    - 种群生态学: ecology/population_ecology.md
+    - 生活史生态学: ecology/life_history.md
+    - 种间关系: ecology/species_interactions.md
+    - 群落生态学: ecology/community_ecology.md
+    - 生态系统生态学: ecology/ecosystem_ecology.md
+    - 生物群系与全球变化: ecology/biomes_global_change.md
+    - 保护与恢复生态学: ecology/conservation_ecology.md
+    - 行为生态学:
+      - ecology/behavioral_ecology/index.md
+      - 最优化理论与取食生态: ecology/behavioral_ecology/foraging_optimality.md
+      - 栖息地、领域与捕食关系: ecology/behavioral_ecology/habitat_predation.md
+      - 性选择与繁殖策略: ecology/behavioral_ecology/sexual_selection.md
+      - 社会生活、合作与利他: ecology/behavioral_ecology/social_cooperation.md
+      - 冲突、博弈与通讯: ecology/behavioral_ecology/conflict_communication.md
 
   - 进化:
     - 进化生物学: evolution/index.md
+    - 生命起源与进化历史: evolution/origin_history.md
+    - 系统发育与生物分类: evolution/phylogenetics.md
+    - 遗传变异与群体进化过程: evolution/variation_population.md
+    - 自然选择、适应与约束: evolution/selection_adaptation.md
+    - 数量性状与表型进化: evolution/quantitative_evolution.md
+    - 生活史与有性生殖的进化: evolution/life_history_sex.md
+    - 合作、冲突与社会性进化: evolution/cooperation_conflict.md
+    - 物种概念与物种形成: evolution/speciation.md
+    - 协同进化: evolution/coevolution.md
+    - 分子、基因组与宏观进化: evolution/molecular_macroevolution.md
 
   - 生信:
     - 生物信息学: bioinfo/index.md
+    - 生物数据与数据库: bioinfo/data_databases.md
+    - 测序技术与数据产生: bioinfo/sequencing.md
+    - 序列比对与序列特征分析: bioinfo/sequence_analysis.md
+    - 基因组分析: bioinfo/genome_analysis.md
+    - 转录组与基因表达分析: bioinfo/transcriptomics.md
+    - 蛋白质组学: bioinfo/proteomics.md
+    - 结构生物信息学: bioinfo/structural_bioinformatics.md
+    - 功能注释与功能预测: bioinfo/functional_annotation.md
+    - 系统发育与生物网络: bioinfo/phylogenetics_networks.md
+    - 工作流、版本控制与可重复分析: bioinfo/workflows.md
 
   - 统计:
-    - 生物统计学: biostat/index.md 
+    - 生物统计学: biostat/index.md
+    - 生物数据整理与描述统计: biostat/data_description.md
+    - 概率与概率分布: biostat/probability.md
+    - 抽样、参数估计与置信区间: biostat/sampling_estimation.md
+    - 假设检验: biostat/hypothesis_testing.md
+    - 分类资料与非参数检验: biostat/categorical_nonparametric.md
+    - 方差分析、相关与回归: biostat/anova_regression.md
+    - 广义模型与多元统计: biostat/multivariate_models.md
+    - 实验设计、效能与可重复统计: biostat/experimental_design.md
 
-  - 技术:
-    - 生物实验技术: exptech/index.md 
+  - 实验:
+    - 生物实验技术: exptech/index.md
+    - 实验基础:
+      - exptech/foundations/index.md
+      - 实验安全、测量与溶液配制: exptech/foundations/safety_measurement.md
+      - 显微观察与标本制备: exptech/foundations/microscopy_specimens.md
+      - 实验设计、记录与数据质量: exptech/foundations/design_data.md
+    - 生化与分子生物学实验:
+      - exptech/biochem_molecular/index.md
+      - 光谱测定与生化定量: exptech/biochem_molecular/spectroscopy_assays.md
+      - 分离技术与蛋白质分析: exptech/biochem_molecular/separation_protein.md
+      - 核酸提取、扩增与分子操作: exptech/biochem_molecular/nucleic_acid.md
+    - 细胞生物学实验:
+      - exptech/cell/index.md
+      - 组织学染色与细胞成像: exptech/cell/histology_imaging.md
+      - 细胞培养、分级与活性检测: exptech/cell/culture_fractionation.md
+    - 微生物学实验:
+      - exptech/microbiology/index.md
+      - 培养、染色与鉴定: exptech/microbiology/culture_identification.md
+      - 微生物计数与环境检测: exptech/microbiology/counting_environment.md
+    - 植物学实验:
+      - exptech/botany/index.md
+      - 植物形态、解剖与分类实验: exptech/botany/morphology_classification.md
+      - 植物生理实验: exptech/botany/plant_physiology.md
+    - 动物学实验:
+      - exptech/zoology/index.md
+      - 无脊椎动物观察与解剖: exptech/zoology/invertebrate.md
+      - 脊椎动物解剖与比较观察: exptech/zoology/vertebrate.md
+    - 生态与行为实验:
+      - exptech/ecology_behavior/index.md
+      - 野外调查、生态测定与行为观察: exptech/ecology_behavior/field_behavior.md
 
   - 跨学科:
     - 跨学科交叉: inter/index.md
-  
+    - 系统解剖学:
+      - inter/anatomy/index.md
+      - 人体解剖学概论与运动系统: inter/anatomy/human_anatomy.md
+      - 消化系统、呼吸系统与腹膜: inter/anatomy/viscera.md
+      - 泌尿系统: inter/anatomy/urinary_system.md
+      - 心血管与淋巴系统: inter/anatomy/circulatory_lymphatic.md
+      - 神经系统解剖学总论: neuro/neuro_anatomy.md
+      - 周围神经系统: neuro/neuro_pns.md
+      - 中枢神经系统: neuro/neuro_cns.md
+      - 神经系统传导通路: neuro/neuro_pathway.md
+    - 系统生物学: inter/systems_biology.md
+    - 生物物理学: inter/biophysics.md
+    - 化学生物学与合成生物学: inter/chemical_synthetic_biology.md
+
   - Blog:
     - Blog: blog/index.md
     - 第一条博客测试: blog/posts/hello-world.md
-    
+
   - 课程资料:
     - PKUSKY课程资料: pkusky_course/index.md
     - 01139630 生物化学: pkusky_course/biochemistryEN.md
