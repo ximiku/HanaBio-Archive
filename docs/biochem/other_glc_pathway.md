@@ -1,1 +1,172 @@
 # 乙醛酸循环与寡糖代谢
+
+乙醛酸循环和寡糖代谢看似属于两条相距很远的支线，实际都在回答“碳怎样从常见中间物进入新的化学用途”。前者把乙酰-CoA的两个碳保存为可供合成的四碳骨架，使植物、真菌和部分细菌能够利用脂肪酸或乙酸建立细胞物质；后者则把单糖活化为核苷酸糖，由糖基转移酶选择受体和连接方式，形成乳糖、蔗糖以及更复杂的糖链。两类过程都不是孤立的小循环，而是中央碳代谢、细胞区室和生物体生活史之间的接口。
+
+## 乙醛酸循环绕过两次氧化脱羧 { #glyoxylate-bypass }
+
+[三羧酸循环](tca_cycle.md#acetyl-to-succinyl-coa)中的异柠檬酸通常经异柠檬酸脱氢酶和 $\alpha$-酮戊二酸脱氢酶复合体连续失去两个 CO$_2$。这适合把乙酰基充分氧化，却不能从乙酰-CoA净积累循环中间物。乙醛酸循环保留柠檬酸合酶和顺乌头酸酶形成异柠檬酸的共同上游，随后以两种特征酶跨过这两个脱羧步骤：
+
+$$
+\mathrm{isocitrate\rightarrow succinate+glyoxylate}
+$$
+
+$$
+\begin{aligned}
+&\mathrm{glyoxylate+acetyl\text{-}CoA+H_2O}\\
+&\qquad\rightarrow\mathrm{malate+CoA\text{-}SH+H^+}.
+\end{aligned}
+$$
+
+第一步由异柠檬酸裂合酶（isocitrate lyase, ICL）催化，第二步由苹果酸合酶（malate synthase, MS）催化。苹果酸再经苹果酸脱氢酶氧化为草酰乙酸，草酰乙酸与新的乙酰-CoA缩合，因而作为催化性中间物再生；琥珀酸则是可离开旁路的四碳净产物。Rhea和经审校的 *Escherichia coli* UniProt条目分别给出了两项特征反应与对应的 AceA、AceB蛋白。[^glyoxylate-reactions]
+
+这条旁路的意义不在于比三羧酸循环“多产能”，而在于保存碳。每轮有两分子乙酰-CoA进入，一分子用于形成异柠檬酸，另一分子在苹果酸合酶反应中与乙醛酸缩合；原本会在两次脱羧中逸出的碳由此保留在琥珀酸和再生的草酰乙酸池中。
+
+## 净反应把碳保存与能量回收分开 { #stoichiometry-and-carbon }
+
+把柠檬酸合酶、顺乌头酸酶、ICL、MS和苹果酸脱氢酶的反应相加，常用的离子化净式可写为：
+
+$$
+\begin{aligned}
+&2\,\mathrm{acetyl\text{-}CoA}+\mathrm{NAD^+}+2\,\mathrm{H_2O}\\
+&\qquad\rightarrow\mathrm{succinate}+2\,\mathrm{CoA\text{-}SH}\\
+&\qquad\phantom{\rightarrow{}}+\mathrm{NADH}+\mathrm{H^+}.
+\end{aligned}
+$$
+
+不同数据库对水和质子的配平写法可略有差异，但三点不会改变：草酰乙酸在循环内再生，不是净产物；旁路不经过琥珀酸脱氢酶，所以不直接生成 FADH$_2$或泛醇；一轮只在苹果酸脱氢酶处形成一份 NADH。琥珀酸还需经三羧酸循环其余反应转成苹果酸或草酰乙酸，再接入[糖异生](gng.md#precursor-entry)，因此乙醛酸循环本身并不直接合成葡萄糖。它提供的是“从两个乙酰单位得到一个可输出四碳骨架”的碳守恒条件。
+
+若碳源是乙酸，乙酸还须先被活化。许多生物使用 AMP形成型乙酰-CoA合成酶：
+
+$$
+\begin{aligned}
+&\mathrm{acetate+CoA\text{-}SH+ATP}\\
+&\qquad\rightarrow\mathrm{acetyl\text{-}CoA+AMP+PP_i},\\
+&\mathrm{PP_i+H_2O\rightarrow 2\,P_i}.
+\end{aligned}
+$$
+
+反应经乙酰腺苷酸中间体进行；ATP裂解到 AMP，再加上焦磷酸水解，相当于消耗两个高能磷酸键当量，而不是 ATP只变成 ADP。某些细菌还能用乙酸激酶—磷酸转乙酰酶路线处理乙酸，说明“乙酸进入乙酰-CoA”本身也有物种和浓度依赖的实现方式。[^acetate-activation]
+
+## 植物把储藏脂质的碳送向幼苗生长 { #plant-compartments }
+
+萌发中的油料种子先在过氧化物酶体内以 $\beta$-氧化把脂肪酸拆成乙酰-CoA，ICL和MS也主要位于这类特化过氧化物酶体，即乙醛酸循环体（glyoxysome）。琥珀酸、苹果酸或相关四碳中间物在过氧化物酶体、线粒体和胞质之间交换，随后由线粒体反应和胞质糖异生共同把储藏脂质的碳送向蔗糖及其他合成出口。乙醛酸循环体因此不是线粒体的别名，也不能把整条路线压成单一细胞器中的线性反应。[^plant-glyoxysome]
+
+拟南芥缺失 ICL的幼苗在强光和外源碳充足的实验条件下仍可萌发，说明光合作用和其他碳流能够部分补偿；但在黑暗、短光周期或长时间缺碳时，其下胚轴伸长和恢复明显受损。这个结果把经典命题修正得更精确：乙醛酸循环并非种子萌发这一事件在所有条件下的绝对开关，却是油脂碳净转入糖并支持异养阶段生长的重要通路。[^arabidopsis-icl]
+
+## 微生物在异柠檬酸分支处分配通量 { #microbial-regulation }
+
+在以乙酸为碳源的 *E. coli* 中，异柠檬酸同时面对异柠檬酸脱氢酶（IDH）和ICL。若全部碳流进入氧化支路，乙酰碳会以 CO$_2$丢失；若全部进入乙醛酸旁路，能量和还原力回收又受限。细胞因而在这个分支处分配通量，而不是给整条环路指定一个跨物种通用的“限速酶”。
+
+*E. coli* 的双功能 AceK可磷酸化IDH并降低其活性，也可去磷酸化使其恢复；碳源及代谢物信号由此改变IDH与ICL的竞争。AceK—IDH开关是研究最清楚的细菌方案之一，却不应推广成植物、真菌和所有细菌的共同调节方式。[^acek-regulation]
+
+这条旁路在病原生物中的作用同样依环境而变。结核分枝杆菌的ICL还参与甲基柠檬酸循环，MS缺失不仅阻断乙酰碳同化，还会造成乙醛酸积累；在小鼠感染模型中耗竭MS会降低细菌存活。通路在哺乳动物细胞中缺少经典ICL—MS组合，因此具有药物靶点吸引力，但“宿主没有旁路”并不自动保证抑制剂有效或安全，酶的多功能性、宿主体内碳源和代偿路线都须实验检验。[^pathogen-glyoxylate]
+
+## 核苷酸糖把单糖变成定向糖基供体 { #nucleotide-sugar-donors }
+
+游离单糖的异头羟基不是多数生物合成型糖基转移酶直接使用的供体。细胞先把单糖转成核苷酸糖，使糖基连接到便于识别和离去的核苷酸部分，再由特定糖基转移酶选择受体、受体羟基的位置以及新键的立体化学。供体名称只能说明“送来哪一种糖”，不能独自决定产物形成 $\alpha$还是 $\beta$连接。[^glycosyltransferases]
+
+| 供体家族 | 代表性活化糖 | 常见去向示例 |
+| --- | --- | --- |
+| UDP-糖 | UDP-Glc、UDP-Gal、UDP-GlcNAc、UDP-GalNAc、UDP-GlcA、UDP-Xyl | 二糖、糖蛋白、糖脂、蛋白聚糖与细胞外多糖 |
+| GDP-糖 | GDP-Man、GDP-Fuc | 甘露糖基化、岩藻糖基化及多种微生物／植物多糖 |
+| CMP-糖 | CMP-Neu5Ac及其他 CMP-唾液酸 | 动物和部分微生物糖链末端的唾液酸化 |
+| 细菌特有的重要供体 | UDP-MurNAc等 | 肽聚糖及细胞包被结构的装配 |
+
+唾液酸是显著例外：其常见供体是胞苷**单**磷酸形式 CMP-Neu5Ac，而不是 CDP-唾液酸。不同供体家族也不是生物界中的封闭分类，例如细菌和植物拥有更丰富的核苷酸糖谱，同一种单糖在不同通路中也可能采用不同活化形式。[^nucleotide-sugar-spectrum]
+
+在真核细胞中，许多核苷酸糖在胞质或细胞核生成，而大量糖蛋白、糖脂和蛋白聚糖的延伸发生在内质网或高尔基体腔面。带电供体不能自由穿膜，需要特异核苷酸糖转运体输入，并常与腔内生成的核苷一磷酸反向交换。供体合成、跨膜运输、转移酶表达和受体到达顺序共同决定最后的糖链，糖链因而不是由一张独立模板逐字复制的产物。[^nucleotide-sugar-transport]
+
+## 乳糖合成来自转移酶受体特异性的改变 { #lactose-synthesis }
+
+乳糖是 Gal$\beta(1\rightarrow4)$Glc，结构与还原性见[糖类](carbohydrate.md#common-disaccharides)。在多数非乳腺细胞中，$\beta$-1,4-半乳糖基转移酶1（B4GALT1）偏好以末端 GlcNAc为受体，用 UDP-Gal延长糖缀合物并形成 Gal$\beta(1\rightarrow4)$GlcNAc，即N-乙酰乳糖胺（LacNAc）单元。
+
+泌乳乳腺上皮细胞表达并分泌大量 $\alpha$-乳白蛋白（LALBA）。它与高尔基体腔面的B4GALT1结合后改变受体结合环境，使葡萄糖成为有效受体；两个蛋白组成乳糖合酶复合体：
+
+$$
+\mathrm{UDP\text{-}Gal+glucose
+\rightarrow lactose+UDP}.
+$$
+
+LALBA不是另一个独立催化乳糖形成的糖苷酶，而是改变B4GALT1受体特异性的调节亚基。人B4GALT1结构研究与经审校的B4GALT1、LALBA条目共同支持这一分工。[^lactose-synthase]
+
+乳糖在高尔基体腔内形成并进入分泌囊泡；它的积累参与乳汁渗透压和水分泌，因此乳糖合成既是糖基转移反应，也是乳腺分泌生理的一部分。这里的生化主线止于供体、酶复合体与产物，乳汁生成的激素调节和整体生理将在相应生理页面展开。
+
+## 乳糖水解、乳糖酶持续性与别乳糖属于不同语境 { #lactose-breakdown }
+
+膳食乳糖在小肠刷状缘由乳糖酶-根皮苷水解酶（lactase-phlorizin hydrolase, LPH；基因 *LCT*）水解为半乳糖和葡萄糖，随后由上皮细胞吸收；半乳糖可经[糖酵解页所述Leloir途径](emp.md#other-hexoses)转成可进入中央代谢的糖磷酸。LPH是一种膜结合糖苷酶，与乳腺中合成乳糖的B4GALT1—LALBA复合体没有“正反向同一种酶”的关系。[^intestinal-lactase]
+
+许多人的 *LCT*表达在断乳后随发育降低，称乳糖酶非持续性；另一些人因 *MCM6*内含子中的顺式调控变异及相应染色质状态，在成年仍保持较高乳糖酶活性。这里的差异是调控表型，不是“青年以后小肠乳糖酶必然完全消失”。即使乳糖吸收不良已经发生，是否出现腹胀、腹泻等乳糖不耐受症状仍受摄入剂量、食物基质、肠道转运和微生物发酵影响；乳糖吸收不良与有症状的不耐受不能直接画等号。[^lactase-persistence]
+
+别乳糖（allolactose）则主要属于细菌调控语境。*E. coli* 的 LacZ $\beta$-半乳糖苷酶除水解乳糖外，还能把半乳糖基转移给葡萄糖，形成 Gal$\beta(1\rightarrow6)$Glc；别乳糖结合LacI并解除对乳糖操纵子的阻遏。它不是人类小肠水解乳糖时必须经过的主中间物，也不应与乳糖合酶产生的 Gal$\beta(1\rightarrow4)$Glc混同。[^allolactose]
+
+## 蔗糖合成由磷酸化中间体定向推动 { #sucrose-synthesis }
+
+蔗糖把葡萄糖和果糖两个异头碳以 Glc$\alpha1\leftrightarrow2\beta$Fru连接，因而没有游离还原端。在植物胞质中，主要合成路线先由蔗糖磷酸合酶（sucrose-phosphate synthase, SPS）把 UDP-Glc的葡糖基转移给果糖-6-磷酸，再由蔗糖-6-磷酸磷酸酶（SPP）水解磷酸酯：
+
+$$
+\begin{aligned}
+&\mathrm{UDP\text{-}Glc+fructose\text{-}6\text{-}P}\\
+&\qquad\rightarrow\mathrm{sucrose\text{-}6\text{-}P+UDP},\\
+&\mathrm{sucrose\text{-}6\text{-}P+H_2O}\\
+&\qquad\rightarrow\mathrm{sucrose+P_i}.
+\end{aligned}
+$$
+
+第二步移走蔗糖-6-磷酸，帮助第一步在细胞中保持合成方向。拟南芥有多个SPS和SPP同工型，表达位置、催化能力以及对葡萄糖-6-磷酸、无机磷酸和磷酸化的响应并不完全相同；因而光照、昼夜节律、组织身份和碳状态通过多个层次改变蔗糖合成，不能把某一SPS同工型的调节规则写成所有植物的统一开关。[^sps-spp]
+
+叶片生成的蔗糖可装载入韧皮部并运往根、茎尖、果实和种子等库组织，成为远距离分配光合碳的主要形式之一。转运、卸载和库强度怎样塑造整株碳分配，属于[同化物运输与次生代谢](../botany/physiology/transport_metabolism.md)的层次；本页关注的是蔗糖两端的反应化学。
+
+## 蔗糖裂解有水解与糖基转移两种入口 { #sucrose-cleavage }
+
+蔗糖合酶（sucrose synthase, SuSy）催化可逆反应：
+
+$$
+\mathrm{sucrose+UDP
+\rightleftharpoons UDP\text{-}Glc+fructose}.
+$$
+
+酶名来自可逆反应的历史命名，但在许多植物组织的体内条件下，SuSy主要沿蔗糖裂解方向运行，把UDP-Glc直接送往纤维素、胼胝质、淀粉或其他合成过程；它不宜再称为比SPS—SPP“更慢的蔗糖合成路线”。拟南芥SuSy1的底物复合物结构同时捕捉到 UDP-Glc和 UDP＋果糖状态，清楚显示反应的可逆化学基础。[^susy-reversible]
+
+转化酶（invertase）则以水水解蔗糖，直接产生葡萄糖和果糖。两条入口的产物和能量账本不同：转化酶产物若进入糖酵解，通常还需分别磷酸化；SuSy产生的UDP-Glc已是活化糖，可接入细胞壁和储藏多糖合成，但其利用方向仍受UDP、果糖和下游反应牵引。拟南芥多突变体实验还表明，某些组织的正常生长依赖胞质转化酶而非SuSy，提醒我们不能从酶名或体外可逆性推定所有组织中的净通量。[^invertase-versus-susy]
+
+## 寡糖的去向由糖苷键、区室与生物种类共同决定 { #oligosaccharide-fates }
+
+寡糖不是由一种“寡糖酶”统一合成或分解的底物类。乳糖与蔗糖在小肠刷状缘分别需要LPH和蔗糖酶-异麦芽糖酶复合体；棉子糖、水苏糖含有 $\alpha$-半乳糖苷键，人类消化道缺少相应内源 $\alpha$-半乳糖苷酶，因而较多到达结肠并被微生物发酵。糖蛋白和糖脂的糖链周转又常发生在内体—溶酶体系统，需要按末端残基和连接方式依次工作的外切糖苷酶。详细消化吸收、生物膜发酵与溶酶体病理分别属于[消化生理](../physiology/digestive.md)、微生物学和细胞生物学页面。
+
+| 问题层次 | 决定因素 | 典型结果 |
+| --- | --- | --- |
+| 合成 | 核苷酸糖、转移酶、受体和区室共定位 | 决定糖基组成、连接位置与异头构型 |
+| 食物消化 | 刷状缘糖苷酶能否识别特定连接 | 单糖被吸收，或未消化寡糖进入结肠 |
+| 胞内周转 | 囊泡运输与有序外切糖苷酶 | 糖缀合物逐步拆解并回收单糖 |
+| 微生物利用 | 物种所具转运体、糖苷酶和调控回路 | 同一种寡糖可成为碳源、信号或不可利用底物 |
+
+因此，判断一种寡糖怎样代谢，至少要同时写清糖苷键、供体或水解酶、反应方向和发生区室。只列“UDP、GDP、CMP对应哪些糖”，或只写“水解成单糖”，都不足以解释这些分子在不同细胞中的真实去向。
+
+## 参考资料与延伸阅读
+
+- Rhea, [isocitrate lyase reaction](https://www.rhea-db.org/rhea/13245) 与 [malate synthase reaction](https://www.rhea-db.org/rhea/18181)。
+- Eastmond, P. J. et al., [Postgerminative growth and lipid catabolism in oilseeds lacking the glyoxylate cycle](https://pmc.ncbi.nlm.nih.gov/articles/PMC25886/). *Proceedings of the National Academy of Sciences*, 2000。
+- Yates, S. P. et al., [Structural basis of the substrate specificity of bifunctional isocitrate dehydrogenase kinase/phosphatase](https://pmc.ncbi.nlm.nih.gov/articles/PMC3354702/). *Biochemistry*, 2011。
+- Puckett, S. et al., [Glyoxylate detoxification is an essential function of malate synthase required for carbon assimilation in *Mycobacterium tuberculosis*](https://pmc.ncbi.nlm.nih.gov/articles/PMC5358392/). *Proceedings of the National Academy of Sciences*, 2017。
+- *Essentials of Glycobiology*, 4th ed., [Glycosylation Precursors](https://www.ncbi.nlm.nih.gov/books/NBK579932/) 与 [Glycosyltransferases and Glycan-Processing Enzymes](https://www.ncbi.nlm.nih.gov/books/NBK579908/)。
+- Harrus, D. et al., [The dimeric structure of wild-type human glycosyltransferase B4GalT1](https://pmc.ncbi.nlm.nih.gov/articles/PMC6198961/). *PLoS ONE*, 2018。
+- Labrie, V. et al., [Lactase nonpersistence is directed by DNA-variation-dependent epigenetic aging](https://www.nature.com/articles/nsmb.3227). *Nature Structural & Molecular Biology*, 2016。
+- Volkert, K. et al., [Loss of the two major leaf isoforms of sucrose-phosphate synthase in *Arabidopsis thaliana*](https://pmc.ncbi.nlm.nih.gov/articles/PMC4400537/). *Journal of Experimental Botany*, 2014。
+- Zheng, Y. et al., [The structure of sucrose synthase-1 from *Arabidopsis thaliana* and its functional implications](https://pmc.ncbi.nlm.nih.gov/articles/PMC3195635/). *Journal of Biological Chemistry*, 2011。
+
+[^glyoxylate-reactions]: 两项特征反应据 Rhea [isocitrate lyase reaction（RHEA:13245）](https://www.rhea-db.org/rhea/13245)与[malate synthase reaction（RHEA:18181）](https://www.rhea-db.org/rhea/18181)；*E. coli* K-12经审校蛋白条目见 UniProt [AceA（P0A9G6）](https://www.uniprot.org/uniprotkb/P0A9G6/entry)和[AceB（P08997）](https://www.uniprot.org/uniprotkb/P08997/entry)。
+[^acetate-activation]: AMP形成型乙酰-CoA合成酶反应及乙酰腺苷酸中间体见 UniProt [*E. coli* Acs（P27550）](https://www.uniprot.org/uniprotkb/P27550/entry)和 NC-IUBMB [EC 6.2.1.1](https://iubmb.qmul.ac.uk/enzyme/EC6/2/1/1.html)；Rhea [RHEA:23177](https://www.rhea-db.org/rhea/23177)给出净方向反应。
+[^plant-glyoxysome]: 油料种子萌发时过氧化物酶体 $\beta$-氧化、ICL／MS及跨细胞器碳流，见 [Postgerminative growth and lipid catabolism in oilseeds lacking the glyoxylate cycle](https://pmc.ncbi.nlm.nih.gov/articles/PMC25886/)；过氧化物酶体蛋白导入缺陷对储藏脂质利用的影响见 [Identification and Functional Characterization of Arabidopsis PEROXIN4 and the Interacting Protein PEROXIN22](https://pmc.ncbi.nlm.nih.gov/articles/PMC1315379/)。
+[^arabidopsis-icl]: 拟南芥 *icl*突变体在光照、黑暗和外源糖条件下的表型及脂质仍可呼吸利用的结论，见 [Postgerminative growth and lipid catabolism in oilseeds lacking the glyoxylate cycle](https://pmc.ncbi.nlm.nih.gov/articles/PMC25886/)。
+[^acek-regulation]: *E. coli* AceK对IDH的可逆磷酸化及旁路分流功能见 UniProt [AceK（P11071）](https://www.uniprot.org/uniprotkb/P11071/entry)和 [The complex of isocitrate dehydrogenase kinase/phosphatase with isocitrate dehydrogenase](https://pmc.ncbi.nlm.nih.gov/articles/PMC3354702/)。
+[^pathogen-glyoxylate]: 结核分枝杆菌MS的乙醛酸解毒、脂肪酸利用和感染模型结果，见 [Glyoxylate detoxification is an essential function of malate synthase](https://pmc.ncbi.nlm.nih.gov/articles/PMC5358392/)；ICL的多通路作用及衣康酸共价抑制结构见 [Itaconate is a covalent inhibitor of the *Mycobacterium tuberculosis* isocitrate lyase](https://pmc.ncbi.nlm.nih.gov/articles/PMC8130629/)。
+[^glycosyltransferases]: 糖基供体、受体特异性、键位和立体化学由糖基转移酶共同决定，见 *Essentials of Glycobiology*, 4th ed., [Glycosyltransferases and Glycan-Processing Enzymes](https://www.ncbi.nlm.nih.gov/books/NBK579908/)。
+[^nucleotide-sugar-spectrum]: UDP、GDP和CMP核苷酸糖的合成、互变及CMP-Neu5Ac例外见 *Essentials of Glycobiology*, 4th ed., [Glycosylation Precursors](https://www.ncbi.nlm.nih.gov/books/NBK579932/)及[Sialic Acids and Other Nonulosonic Acids](https://www.ncbi.nlm.nih.gov/books/NBK579976/)。
+[^nucleotide-sugar-transport]: 核苷酸糖合成区室、ER／Golgi反向转运和转运体底物谱见 *Essentials of Glycobiology*, 4th ed., [Glycosylation Precursors](https://www.ncbi.nlm.nih.gov/books/NBK579932/)与[Cellular Organization of Glycosylation](https://www.ncbi.nlm.nih.gov/books/NBK579926/)。
+[^lactose-synthase]: B4GALT1与LALBA形成乳糖合酶并改变受体特异性，见 [The dimeric structure of wild-type human glycosyltransferase B4GalT1](https://pmc.ncbi.nlm.nih.gov/articles/PMC6198961/)及 UniProt [B4GALT1（P15291）](https://www.uniprot.org/uniprotkb/P15291/entry)、[LALBA（P00709）](https://www.uniprot.org/uniprotkb/P00709/entry)。
+[^intestinal-lactase]: 人乳糖酶-根皮苷水解酶的刷状缘定位、成熟加工和底物功能见 UniProt [LPH（P09848）](https://www.uniprot.org/uniprotkb/P09848/entry)。
+[^lactase-persistence]: *LCT*调控区变异、年龄相关表观遗传变化与乳糖酶持续／非持续表型见 [Lactase nonpersistence is directed by DNA-variation-dependent epigenetic aging](https://www.nature.com/articles/nsmb.3227)；乳糖吸收不良与有症状不耐受的区别见 NIDDK [Definition & Facts for Lactose Intolerance](https://www.niddk.nih.gov/health-information/digestive-diseases/lactose-intolerance/definition-facts)。
+[^allolactose]: LacZ通过转半乳糖基作用形成 Gal$\beta(1\rightarrow6)$Glc并使其成为乳糖操纵子天然诱导物的结构基础，见 [Structural Explanation for Allolactose Synthesis by lacZ $\beta$-Galactosidase](https://pmc.ncbi.nlm.nih.gov/articles/PMC3642343/)。
+[^sps-spp]: SPS—SPP两步反应、拟南芥同工型分工及调节差异见 [Loss of the two major leaf isoforms of sucrose-phosphate synthase in *Arabidopsis thaliana*](https://pmc.ncbi.nlm.nih.gov/articles/PMC4400537/)和 [Characterization of the Sucrose Phosphate Phosphatase Isoforms from *Arabidopsis thaliana*](https://pmc.ncbi.nlm.nih.gov/articles/PMC5113954/)；经审校SPSA1条目见 UniProt [Q94BT0](https://www.uniprot.org/uniprotkb/Q94BT0/entry)。
+[^susy-reversible]: SuSy1的UDP-Glc与UDP＋果糖复合物及反应可逆性见 [The Structure of Sucrose Synthase-1 from *Arabidopsis thaliana*](https://pmc.ncbi.nlm.nih.gov/articles/PMC3195635/)；经审校蛋白条目见 UniProt [SUS1（P49040）](https://www.uniprot.org/uniprotkb/P49040/entry)。
+[^invertase-versus-susy]: 转化酶与SuSy作为两类生理蔗糖裂解入口，以及拟南芥多突变体对二者组织作用的区分，见 [Normal growth of Arabidopsis requires cytosolic invertase but not sucrose synthase](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722301/)。
