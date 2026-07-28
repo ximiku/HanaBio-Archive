@@ -282,5 +282,5 @@ DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 41
 [^dietary-amino-acids]: National Academies. [Dietary Reference Intakes: The Essential Guide to Nutrient Requirements, Part II, p. 147, Table 2](https://nap.nationalacademies.org/skim.php?chap=144-155&record_id=11537)。
 [^osm-amino-acid-reactions]: 本节对经典反应的组织参考并实质性改编自 osm.bio [《氨基酸的化学反应》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E7%9A%84%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BA%94&oldid=16272)，并按官能团反应边界重新核对、改写。
 [^formol-titration]: Eurasian Economic Union Pharmacopoeia, [Formol titration method](https://www.consultant.ru/document/cons_doc_LAW_359911/2658e69a5f901438e40b32f622896064e8192289/)；该方法用于测定游离或端基氨基所代表的氨基氮，并明确提示铵离子等干扰。
-[^ellman-thiol-assay]: Ellman, G. L. [Tissue sulfhydryl groups](https://doi.org/10.1016/0003-9861(59)90090-6). *Archives of Biochemistry and Biophysics* 82, 70–77 (1959)。
+[^ellman-thiol-assay]: Ellman, G. L. [Tissue sulfhydryl groups](https://doi.org/10.1016/0003-9861%2859%2990090-6). *Archives of Biochemistry and Biophysics* 82, 70–77 (1959)。
 [^hilic-amino-acid-analysis]: Kambhampati, S. et al. [Accurate and efficient amino acid analysis for protein quantification using hydrophilic interaction chromatography coupled tandem mass spectrometry](https://pmc.ncbi.nlm.nih.gov/articles/PMC6511150/). *Plant Methods* 15, 46 (2019)。

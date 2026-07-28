@@ -6,7 +6,7 @@
 
 ## 内膜把电子流与质子动力势连接起来 { #respiratory-chain-architecture }
 
-线粒体外膜对许多小分子相对通透，内膜却对 H$^+$ 和多数离子高度不通透，并以嵴扩大反应表面。复合物 I、III、IV 把基质侧（N 侧）的质子移向膜间隙侧（P 侧），由此形成两项相加的驱动力：P 侧相对更正的膜电势差 $Delta\psi$，以及基质相对更碱的 $\Delta\mathrm{pH}$。常用质子动力势表示为
+线粒体外膜对许多小分子相对通透，内膜却对 H$^+$ 和多数离子高度不通透，并以嵴扩大反应表面。复合物 I、III、IV 把基质侧（N 侧）的质子移向膜间隙侧（P 侧），由此形成两项相加的驱动力：P 侧相对更正的膜电势差 $\Delta\psi$，以及基质相对更碱的 $\Delta\mathrm{pH}$。常用质子动力势表示为
 
 $$
 \Delta p=\Delta\psi-\frac{2.303RT}{F}\Delta\mathrm{pH},
@@ -133,7 +133,7 @@ Chance 与 Williams 的经典离体线粒体术语把不同底物、ADP 与氧�
 [^supercomplex-pool]: Blaza et al., [Kinetic evidence against partitioning of the ubiquinone pool and the catalytic relevance of respiratory-chain supercomplexes](https://pubmed.ncbi.nlm.nih.gov/25331896/) 以动力学实验反对必需的 CoQ 分池与通道化；Jeon et al., [A Dynamic Substrate Pool Revealed by cryo-EM of a Lipid-Preserved Respiratory Supercomplex](https://pubmed.ncbi.nlm.nih.gov/34913730/) 则显示脂质保存条件下复合物间空间具有动态性。
 [^mitchell-chemiosmosis]: Mitchell, [Coupling of Phosphorylation to Electron and Hydrogen Transfer by a Chemi-Osmotic Type of Mechanism](https://www.nature.com/articles/191144a0)。该文提出以跨膜质子梯度连接电子传递与 ATP 合成。
 [^acid-base-atp]: Jagendorf & Uribe, [ATP Formation Caused by Acid-Base Transition of Spinach Chloroplasts](https://pubmed.ncbi.nlm.nih.gov/5220864/)。酸—碱跃迁在黑暗中驱动 ATP 形成，直接检验了外加 $\Delta\mathrm{pH}$ 的充分性。
-[^reconstituted-atp]: Racker & Stoeckenius, [Reconstitution of Purple Membrane Vesicles Catalyzing Light-Driven Proton Uptake and Adenosine Triphosphate Formation](https://doi.org/10.1016/S0021-9258(19)43080-9)。该重构体系把 bacteriorhodopsin 的光驱动质子泵与 ATP 合酶连接起来。
+[^reconstituted-atp]: Racker & Stoeckenius, [Reconstitution of Purple Membrane Vesicles Catalyzing Light-Driven Proton Uptake and Adenosine Triphosphate Formation](https://doi.org/10.1016/S0021-9258%2819%2943080-9)。该重构体系把 bacteriorhodopsin 的光驱动质子泵与 ATP 合酶连接起来。
 [^atp-synthase-rotation]: Noji et al., [Direct Observation of the Rotation of F$_1$-ATPase](https://pubmed.ncbi.nlm.nih.gov/9069291/) 以连接在 $\gamma$ 亚基上的荧光肌动蛋白丝直接观察旋转；Reactome 的 [ATP synthase](https://reactome.org/content/detail/R-HSA-164832) 汇集结合改变与旋转催化的反应和文献背景。
 [^c-ring-stoichiometry]: Watt et al., [Bioenergetic Cost of Making an Adenosine Triphosphate Molecule in Animal Mitochondria](https://pmc.ncbi.nlm.nih.gov/articles/PMC2947889/) 解析哺乳动物 c$_8$ 环，并把 F$_o$ 内部的 $8/3$ H$^+$/ATP 与磷酸输入等额外成本分开。
 [^adenine-nucleotide-transport]: Ruprecht et al., [The Molecular Mechanism of Transport by the Mitochondrial ADP/ATP Carrier](https://pmc.ncbi.nlm.nih.gov/articles/PMC6349463/) 说明载体以交替开放机制交换 ADP 与 ATP；[The Mitochondrion](https://www.ncbi.nlm.nih.gov/books/NBK26894/) 说明交换利用膜电势，并与磷酸输入共同计入胞质 ATP 的成本。
@@ -141,4 +141,4 @@ Chance 与 Williams 的经典离体线粒体术语把不同底物、ADP 与氧�
 [^ucp1]: Jones et al., [Structural basis of purine nucleotide inhibition of human uncoupling protein 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC10413660/) 结合重构质子转运与冷冻电镜结构说明脂肪酸依赖的质子漏及嘌呤核苷酸抑制；精细转运模型仍需与其他功能研究共同解释。
 [^if1]: Carroll et al., [The inhibitor protein IF$_1$ from mammalian mitochondria inhibits ATP hydrolysis but not ATP synthesis by the ATP synthase complex](https://pmc.ncbi.nlm.nih.gov/articles/PMC10906535/) 直接比较人和牛 IF$_1$ 对水解与合成方向的影响。
 [^nadh-shuttles]: Cantó et al., [NAD(H) and NADP(H) Redox Couples and Cellular Energy Metabolism](https://pubmed.ncbi.nlm.nih.gov/28648096/) 逐一给出苹果酸—天冬氨酸穿梭的转氨酶与两种交换载体，以及甘油-3-磷酸穿梭向 CoQ 交电子的步骤；具体 ATP 约值按正文的 P/O 条件计算。
-[^respiratory-states]: Chance et al., [Respiratory Enzymes in Oxidative Phosphorylation. V. A Mechanism for Oxidative Phosphorylation](https://doi.org/10.1016/S0021-9258(19)57193-9) 建立经典离体线粒体状态与受体控制框架；现代实验中需把这些历史状态与具体底物、ADP、氧和漏呼吸条件一起报告。
+[^respiratory-states]: Chance et al., [Respiratory Enzymes in Oxidative Phosphorylation. V. A Mechanism for Oxidative Phosphorylation](https://doi.org/10.1016/S0021-9258%2819%2957193-9) 建立经典离体线粒体状态与受体控制框架；现代实验中需把这些历史状态与具体底物、ADP、氧和漏呼吸条件一起报告。

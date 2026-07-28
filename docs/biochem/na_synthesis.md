@@ -2,7 +2,7 @@
 
 核苷酸池并不只为核酸复制服务。ATP、GTP参与能量转换和信号，UTP、CTP活化糖与脂质前体，腺苷酸结构还嵌入 NAD、FAD和辅酶 A。细胞必须同时调节碱基种类、核糖与脱氧核糖形式以及磷酸化层级；总量不足会限制 RNA、DNA和辅酶合成，比例失衡则会提高聚合酶错配和基因组损伤的风险。
 
-这些分子来自两套互补路线：从氨基酸、一碳单位、HCO$_3^-$和核糖-5-磷酸逐步装配的**从头合成**，以及重新利用碱基或核苷的**回收合成**。二者与[核酸和核苷酸分解](na_catabolism.md#catabolism-salvage-balance)共享底物，并由 PRPP、终产物反馈、细胞周期、区室转运和核苷酸降解共同塑造实际通量。[^nucleotide-biosynthesis-overview]
+这些分子来自两套互补路线：从氨基酸、一碳单位、HCO$_3^-$和核糖-5-磷酸逐步装配的**从头合成**，以及重新利用碱基或核苷的**回收合成**。二者与[核酸降解及核苷酸分解](na_catabolism.md#catabolism-salvage-balance)共享底物，并由 PRPP、终产物反馈、细胞周期、区室转运和核苷酸降解共同塑造实际通量。[^nucleotide-biosynthesis-overview]
 
 ## PRPP 把五碳糖送入多条合成路线 { #prpp-junction }
 
