@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">左心室压力—容积环示意图</title>
+  <desc id="desc">横轴为心室容积，纵轴为心室压力。环从左下角开始，依次经历充盈、等容收缩、射血和等容舒张，并标出舒张末期容积与收缩末期容积。</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .axis { stroke: #334155; stroke-width: 2.5; fill: none; }
+      .grid { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 5 7; }
+      .loop { stroke: #2563eb; stroke-width: 5; fill: #dbeafe; fill-opacity: .58; }
+      .phase { stroke: #2563eb; stroke-width: 5; fill: none; marker-end: url(#arrow-blue); }
+      .edpvr { stroke: #0f766e; stroke-width: 3; fill: none; stroke-dasharray: 9 7; }
+      .espvr { stroke: #be123c; stroke-width: 3; fill: none; stroke-dasharray: 9 7; }
+      .label { fill: #0f172a; font: 20px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", sans-serif; }
+      .small { fill: #334155; font: 17px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", sans-serif; }
+      .phase-label { fill: #1d4ed8; font: 600 19px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", sans-serif; }
+      .point { fill: #ffffff; stroke: #1e3a8a; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" rx="18" fill="#f8fafc"/>
+  <text x="450" y="42" text-anchor="middle" class="label" font-weight="700">左心室压力—容积环</text>
+
+  <line x1="120" y1="475" x2="820" y2="475" class="axis"/>
+  <line x1="120" y1="475" x2="120" y2="70" class="axis"/>
+  <path d="M 810 468 L 824 475 L 810 482" class="axis"/>
+  <path d="M 113 82 L 120 68 L 127 82" class="axis"/>
+  <text x="470" y="532" text-anchor="middle" class="label">心室容积</text>
+  <text x="35" y="272" text-anchor="middle" class="label" transform="rotate(-90 35 272)">心室压力</text>
+
+  <line x1="310" y1="475" x2="310" y2="95" class="grid"/>
+  <line x1="700" y1="475" x2="700" y2="95" class="grid"/>
+  <text x="310" y="503" text-anchor="middle" class="small">ESV</text>
+  <text x="700" y="503" text-anchor="middle" class="small">EDV</text>
+
+  <path d="M 245 438 C 380 436, 535 428, 700 390 C 748 378, 785 352, 805 315" class="edpvr"/>
+  <path d="M 270 430 L 505 88" class="espvr"/>
+  <text x="728" y="348" class="small" fill="#0f766e">舒张末期关系</text>
+  <text x="430" y="104" class="small" fill="#be123c">收缩末期关系</text>
+
+  <path d="M 310 430 C 420 430, 565 420, 700 390 L 700 150 C 610 105, 440 120, 340 210 L 310 430 Z" class="loop"/>
+  <path d="M 310 430 C 420 430, 565 420, 700 390" class="phase"/>
+  <path d="M 700 390 L 700 150" class="phase"/>
+  <path d="M 700 150 C 610 105, 440 120, 340 210" class="phase"/>
+  <path d="M 340 210 L 310 430" class="phase"/>
+
+  <circle cx="310" cy="430" r="7" class="point"/>
+  <circle cx="700" cy="390" r="7" class="point"/>
+  <circle cx="700" cy="150" r="7" class="point"/>
+  <circle cx="340" cy="210" r="7" class="point"/>
+
+  <text x="460" y="455" text-anchor="middle" class="phase-label">充盈</text>
+  <text x="724" y="280" class="phase-label">等容收缩</text>
+  <text x="525" y="148" text-anchor="middle" class="phase-label">射血</text>
+  <text x="214" y="318" class="phase-label">等容舒张</text>
+
+  <text x="292" y="454" text-anchor="end" class="small">房室瓣开放</text>
+  <text x="716" y="413" class="small">房室瓣关闭</text>
+  <text x="716" y="145" class="small">动脉瓣开放</text>
+  <text x="323" y="198" text-anchor="end" class="small">动脉瓣关闭</text>
+
+  <text x="438" y="301" text-anchor="middle" class="small">环内面积 = 每搏外功</text>
+</svg>
