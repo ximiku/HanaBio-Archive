@@ -147,7 +147,7 @@ $$
 [^clearance-definition]: 清除率的质量守恒定义、稳态取样和测量边界参见 Sandilands 等的[肾功能测量综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3791974/)。
 [^gfr-markers]: 菊粉、肌酐、胱抑素 C 的滤过、分泌／代谢边界参见 Thompson 与 Joy 的[内源性肾功能标志物综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9910221/)及 Sandilands 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3791974/)。
 [^pah-clearance]: PAH 提取不完全、eRPF 与真实 RPF 的区别参见 Villa 等的[肾灌注测量综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC7210220/)及 Thompson 与 Joy 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9910221/)。
-[^free-water-clearance]: 渗透清除率与自由水清除率的定义和适用边界参见 Hall 与 Hall、Boron 与 Boulpaep 的生理学教材。
+[^free-water-clearance]: 渗透清除率与自由水清除率的定义和适用边界参见 Hall 与 Hall 的[生理学教材](https://evolve.elsevier.com/cs/product/9780443111013?role=student)以及 Boron 与 Boulpaep 的[医学生理学教材](https://evolve.elsevier.com/cs/product/9781455743773?role=faculty)。
 [^bladder-compliance]: 膀胱、输尿管、尿道的储存与排空力学参见 Hill 的[尿路引流与排尿综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4348679/)。
 [^micturition-control]: 盆神经、腹下神经、阴部神经及脊髓—PAG—脑桥—前脑网络的储尿／排尿转换参见 Fowler、Griffiths 与 de Groat 的[排尿神经控制综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC2897743/)。
 [^neurogenic-bladder]: 不同神经层级损伤后的急性无反射、后期过度活动和逼尿肌—括约肌协同失调边界参见 Fowler 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC2897743/)。

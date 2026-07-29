@@ -94,7 +94,7 @@ D-二聚体来自纤溶酶对 XIIIa 交联纤维蛋白的降解，而不是普�
 
 机制性药物同样要按靶点区分。阿司匹林降低血小板 TXA$_2$ 生成，P2Y$_{12}$ 抑制剂（如氯吡格雷）削弱 ADP 放大，$\alpha_{\mathrm{IIb}}\beta_3$ 抑制剂（如替罗非班）直接阻断聚集的末端跨接；肝素类增强抗凝血酶，直接凝血酶抑制剂作用于凝血酶，维生素 K 拮抗剂则减少多种 Gla 蛋白的成熟。前一组主要是抗血小板药，后一组主要是抗凝药，二者都不同于促进纤维蛋白降解的溶栓药。这里的分类用于显示网络节点，不构成用药建议。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - Reactome, [Hemostasis](https://reactome.org/content/detail/R-HSA-109582)、[Platelet activation, signaling and aggregation](https://reactome.org/content/detail/R-HSA-76002)、[Coagulation pathway](https://reactome.org/content/detail/R-HSA-9769740) 与 [Dissolution of Fibrin Clot](https://reactome.org/content/detail/R-HSA-75205)。
 - Hoffman, M. & Monroe, D. M., [A cell-based model of hemostasis](https://pubmed.ncbi.nlm.nih.gov/11434702/). *Thrombosis and Haemostasis*, 2001。

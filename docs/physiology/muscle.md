@@ -136,7 +136,7 @@ $$
 - Hall JE, Hall ME. [Guyton and Hall Textbook of Medical Physiology, 15th ed.](https://evolve.elsevier.com/cs/product/9780443111013?role=student). Elsevier, 2025.
 - Boron WF, Boulpaep EL. [Medical Physiology, 3rd ed.](https://evolve.elsevier.com/cs/product/9781455743773?role=faculty). Elsevier, 2016.
 
-[^muscle-textbooks]: 三类肌组织的共同机制、细胞结构和控制差异以 Guyton and Hall *Textbook of Medical Physiology*, 15th ed. 与 Boron and Boulpaep *Medical Physiology*, 3rd ed. 的骨骼肌、平滑肌和心肌章节为主线交叉核验，出版信息见本页参考资料。
+[^muscle-textbooks]: 三类肌组织的共同机制、细胞结构和控制差异以 Guyton and Hall [*Textbook of Medical Physiology*, 15th ed.](https://evolve.elsevier.com/cs/product/9780443111013?role=student) 与 Boron and Boulpaep [*Medical Physiology*, 3rd ed.](https://evolve.elsevier.com/cs/product/9781455743773?role=faculty) 的骨骼肌、平滑肌和心肌章节为主线交叉核验。
 [^neuromuscular-junction]: 神经末梢 Ca$^{2+}$ 依赖释放、成人肌型烟碱受体、终板褶皱和接头周围动作电位触发参见 NCBI Bookshelf [Physiology, Neuromuscular Junction](https://www.ncbi.nlm.nih.gov/books/NBK470413/)。
 [^quantal-safety-factor]: 微终板电位、量子释放、终板电位和传递安全系数参见 [Synaptic Transmission](https://www.ncbi.nlm.nih.gov/books/NBK27911/)；安全系数依物种、肌肉和活动条件而变，本页不采用一个固定倍数。
 [^neuromuscular-disorders]: 突触前释放、突触后受体／聚集装置与乙酰胆碱酯酶三个故障层次参见 [Physiology, Neuromuscular Junction](https://www.ncbi.nlm.nih.gov/books/NBK470413/)；表格只作机制定位，不提供诊断或治疗方案。

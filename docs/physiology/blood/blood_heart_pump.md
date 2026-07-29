@@ -128,7 +128,7 @@ CO=\frac{\dot V_{O_2}}{C_{aO_2}-C_{vO_2}}
 
 因此，“泵血功能”没有一个脱离情境的单一金标准。EF 描述容积分数，CO 描述流量，压力—容积环描述负荷下的逐搏力学，心指数用于体型校正，储备则需要受控应激。把这些指标与症状、节律、瓣膜状态、血压、回流和组织灌注放在一起，才不会把某个正常数值误当作整个循环正常。[^measurement-boundaries]
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - OpenStax, [Cardiac Cycle](https://openstax.org/books/anatomy-and-physiology-2e/pages/19-3-cardiac-cycle) 与 [Cardiac Physiology](https://openstax.org/books/anatomy-and-physiology-2e/pages/19-4-cardiac-physiology)。
 - Solaro, R. J., [Regulation of Cardiac Contractility](https://www.ncbi.nlm.nih.gov/books/NBK54078/) 及 [Pressure Volume Loops Provide a Quantification of Contractility](https://www.ncbi.nlm.nih.gov/books/NBK54080/?report=reader). NCBI Bookshelf, 2011。

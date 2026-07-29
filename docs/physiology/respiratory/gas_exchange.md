@@ -139,7 +139,7 @@ $$
 [^respiratory-gas-laws]: NCBI Bookshelf, [The Respiratory System and Oxygen Transport](https://www.ncbi.nlm.nih.gov/books/NBK54114/)。该章从气体定律、湿化到菲克扩散关系建立肺内气体交换的物理基础。
 [^alveolar-gas-equation]: NCBI Bookshelf, [Alveolar Gas Equation](https://www.ncbi.nlm.nih.gov/books/NBK482268/)。完整方程在高吸入氧等条件下还包含校正项，正文使用的是教学中常见的近似式。
 [^mechanisms-hypoxemia]: Sarkar, M. et al. [Mechanisms of hypoxemia](https://pmc.ncbi.nlm.nih.gov/articles/PMC5234199/). *Lung India* 34, 47–60 (2017)。综述比较低吸入氧、低通气、弥散限制、V/Q 不均和分流，并说明低 V/Q 与真性分流对补充氧的不同反应。
-[^dlco-standard]: Graham, B. L. et al. [2017 ERS/ATS standards for single-breath carbon monoxide uptake in the lung](https://publications.ersnet.org/content/erj/49/1/1600016). *European Respiratory Journal* 49, 1600016 (2017)。标准同时说明 $D_{LCO}$ 的测量假设、单位、动作质量和影响因素。
+[^dlco-standard]: Graham, B. L. et al. [2017 ERS/ATS standards for single-breath carbon monoxide uptake in the lung](https://pubmed.ncbi.nlm.nih.gov/28049168/). *European Respiratory Journal* 49, 1600016 (2017)。标准同时说明 $D_{LCO}$ 的测量假设、单位、动作质量和影响因素。
 [^vq-relationships]: Petersson, J. & Glenny, R. W. [Gas exchange and ventilation-perfusion relationships in the lung](https://pubmed.ncbi.nlm.nih.gov/25063240/). *European Respiratory Journal* 44, 1023–1041 (2014)。作者指出高 V/Q 所致浪费通气常表现为分钟通气和呼吸功增加，而非必然高碳酸血症。
 [^oxygen-content]: Sarkar, M. et al. [Mechanisms of hypoxemia](https://pmc.ncbi.nlm.nih.gov/articles/PMC5234199/)。文中给出 $C_{a\mathrm O_2}=1.34[\mathrm{Hb}]S_{a\mathrm O_2}+0.0031P_{a\mathrm O_2}$ 的近似，并区分低氧血症与组织缺氧。
 [^oxygen-transport]: Pittman, R. N. [Oxygen Transport](https://www.ncbi.nlm.nih.gov/books/NBK54103/)。该章系统讨论气体扩散、血红蛋白协同性、$P_{50}$、Bohr 效应、2,3-BPG 与 CO。

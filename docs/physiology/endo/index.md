@@ -78,7 +78,7 @@
 
 | 子页 | 主要控制问题 | 进入该页的关键接口 |
 | --- | --- | --- |
-| [下丘脑-垂体内分泌](endo_hp.md#hypothalamic-pituitary-routes) | 神经信息如何经门脉或轴突转成垂体输出 | 促激素轴、GH—IGF、PRL、AVP 与催产素 |
+| [下丘脑—垂体内分泌](endo_hp.md#hypothalamic-pituitary-routes) | 神经信息如何经门脉或轴突转成垂体输出 | 促激素轴、GH—IGF、PRL、AVP 与催产素 |
 | [甲状腺内分泌](endo_thyroid.md#thyroid-follicle) | 如何以碘化 Tg 库存和组织内脱碘匹配发育与代谢需求 | 滤泡极性、T$_4$/T$_3$ 运输、核受体与 HPT 反馈 |
 | [钙磷调节](endo_capi.md#concentration-balance) | 如何在血浆浓度与全身矿物收支之间取舍 | PTH、钙三醇、FGF23、降钙素及肠—肾—骨通量 |
 | [胰岛内分泌](endo_islet.md#islet-microorgan) | 如何在进餐与空腹之间切换燃料通量 | 胰岛素、胰高血糖素、肠促胰素、自主神经与局部细胞网络 |

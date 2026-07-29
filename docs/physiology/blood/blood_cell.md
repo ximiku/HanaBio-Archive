@@ -150,7 +150,7 @@ TPO 是最重要的巨核—血小板生成调节因子，主要由肝细胞产�
 
 外周血涂片补充了自动计数器容易丢失的形态信息，例如红细胞大小与中央淡染区、白细胞成熟度、血小板大小及细胞聚集。ESR、渗透脆性、凝血和血小板功能实验则询问另外的问题，不能因都使用血样就把它们当作 CBC 的同义测量。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - Alberts, B. et al., [Renewal by Multipotent Stem Cells: Blood Cell Formation](https://www.ncbi.nlm.nih.gov/books/NBK26919/). *Molecular Biology of the Cell*, 4th ed.
 - Cheng, H. et al., [New paradigms on hematopoietic stem cell differentiation](https://pmc.ncbi.nlm.nih.gov/articles/PMC6949320/). *Protein & Cell*, 2020。

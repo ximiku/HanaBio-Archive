@@ -107,7 +107,7 @@ ST–T 改变可以由缺血引起，也可见于传导顺序改变、心室肥�
 [^regional-action-potentials]: 心房、心室、结区与 His–Purkinje 系统动作电位的区域差异见 Rahm 等 [Role of ion channels in heart failure and channelopathies](https://pubmed.ncbi.nlm.nih.gov/30019205/)；快／慢反应是对上升支电流与速度的概括，不等同于工作／自律细胞的互斥分类。
 [^ventricular-ion-currents]: 心室动作电位中 $I_{Na}$、$I_{to}$、$I_{Ca,L}$、$I_{Kr}$、$I_{Ks}$ 与 $I_{K1}$ 的时相关系及区域性重塑见 Rahm 等[综述](https://pubmed.ncbi.nlm.nih.gov/30019205/)；本页只给出概念主导电流，不把任一时相写成单一通道独占。
 [^sinoatrial-coupled-clock]: 窦房结细胞的质膜电流、局部 Ca$^{2+}$ 释放、Na$^+$/Ca$^{2+}$ 交换及组织异质性共同形成耦合时钟，见 Donald 与 Lakatta [What makes the sinoatrial node tick?](https://pubmed.ncbi.nlm.nih.gov/37122227/)。
-[^fig-cardiac-action-potentials]: 本站依据 Rahm 等的区域动作电位综述与 Donald、Lakatta 的窦房结耦合时钟综述重绘；曲线为机制示意，不表示固定膜电位、时程或电流大小。
+[^fig-cardiac-action-potentials]: 本站依据 Rahm 等的[区域动作电位综述](https://pubmed.ncbi.nlm.nih.gov/30019205/)与 Donald、Lakatta 的[窦房结耦合时钟综述](https://pubmed.ncbi.nlm.nih.gov/37122227/)重绘；曲线为机制示意，不表示固定膜电位、时程或电流大小。
 [^conduction-system]: 窦房结、房室结、His 束、束支与 Purkinje 网的结构和功能见 Kennedy 等 [The Cardiac Conduction System](https://pubmed.ncbi.nlm.nih.gov/27484656/)。
 [^conduction-velocity]: 传导速度受快速 Na$^+$ 电流、膜电容、轴向电阻、细胞几何、缝隙连接和组织各向异性共同决定，见 King 等 [Determinants of myocardial conduction velocity](https://pubmed.ncbi.nlm.nih.gov/23825462/)。
 [^pacemaker-hierarchy-source]: 窦房结主导、潜在起搏点受抢先占领和超速驱动抑制的层级，以 Donald、Lakatta 的[窦房结综述](https://pubmed.ncbi.nlm.nih.gov/37122227/)和 Kennedy 等的[传导系统综述](https://pubmed.ncbi.nlm.nih.gov/27484656/)交叉核验；固定频率只作近似范围而不进入正文。

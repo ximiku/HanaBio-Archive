@@ -88,7 +88,7 @@ ABO 不相容的红细胞可被既有抗体迅速结合并激活补体，造成�
 
 另一些重要反应并不以血型抗原为起点。输血相关循环超负荷（TACO）主要是输入容量超过心血管系统可承受范围造成静水压性肺水肿；输血相关急性肺损伤（TRALI）则以肺毛细血管通透性升高和炎症性损伤为核心。细菌污染、成分温度或渗透条件异常等也可伤害受者。因而，发生在输血期间或之后的发热、呼吸困难、低血压、黄疸等表现只是调查起点；时间关系、血型复核、直接抗人球蛋白试验、溶血指标、影像和容量状态共同用于区分机制。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - International Society of Blood Transfusion, [Red Cell Immunogenetics and Blood Group Terminology](https://www.isbtweb.org/isbt-working-parties/rcibgt.html)。
 - Dean, L., [The ABO blood group](https://www.ncbi.nlm.nih.gov/books/NBK2267/)、[The Hh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2268/) 与 [The Rh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2269/). *Blood Groups and Red Cell Antigens*。
