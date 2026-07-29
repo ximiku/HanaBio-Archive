@@ -107,14 +107,19 @@ nav:
 
   - 细胞:
     - 细胞生物学: cell/index.md
-    - 细胞膜与跨膜运输: cell/membrane_transport.md
-    - 细胞器与能量转换: cell/organelles.md
-    - 内膜系统、蛋白质分选与囊泡运输: cell/endomembrane.md
-    - 细胞骨架与细胞运动: cell/cytoskeleton.md
-    - 细胞核、染色质与核糖体: cell/nucleus_chromatin.md
-    - 细胞外基质、黏附与连接: cell/cell_interactions.md
-    - 细胞信号转导: cell/cell_signaling.md
-    - 细胞周期、增殖、分化、死亡与衰老: cell/cell_life_cycle.md
+    - 细胞的边界与区室:
+      - 细胞膜与跨膜运输: cell/membrane_transport.md
+      - 细胞器与能量转换: cell/organelles.md
+      - 内膜系统、蛋白质分选与囊泡运输: cell/endomembrane.md
+    - 细胞的空间组织:
+      - 细胞骨架与细胞运动: cell/cytoskeleton.md
+      - 细胞核、染色质与核糖体: cell/nucleus_chromatin.md
+    - 细胞的社会联系与信息传递:
+      - 细胞外基质、黏附与连接: cell/cell_interactions.md
+      - 细胞信号转导: cell/cell_signaling.md
+    - 细胞的生命历程:
+      - 细胞周期与细胞分裂: cell/cell_cycle.md
+      - 细胞增殖、分化、死亡与衰老: cell/cell_life_cycle.md
 
   - 分子:
     - 分子生物学: molecular/index.md
