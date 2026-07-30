@@ -102,7 +102,7 @@ kinesin 共有的马达结构域把 ATP 循环耦联到微管结合。许多 N �
 
 ### 细胞类型特异网络与连接界面 { #intermediate-filament-networks }
 
-角蛋白异聚体为上皮细胞提供跨细胞抗剪切网络，并通过 desmosome 和 hemidesmosome 把力传给邻细胞或基底膜；vimentin 常见于间充质细胞，desmin 对齐肌细胞的收缩装置，GFAP 是胶质细胞的重要组分，neurofilament 参与维持轴突结构和口径。核 lamin 属于中间丝超家族，在内核膜下形成核纤层，但其装配、核膜连接和分裂期重构将在[细胞核、染色质与核糖体](nucleus_chromatin.md)中展开。
+角蛋白异聚体为上皮细胞提供跨细胞抗剪切网络，并通过桥粒（desmosome）和半桥粒（hemidesmosome）把力传给邻细胞或基底膜；vimentin 常见于间充质细胞，desmin 对齐肌细胞的收缩装置，GFAP 是胶质细胞的重要组分，neurofilament 参与维持轴突结构和口径。两类承载连接的完整结构见[细胞—细胞与细胞—基质界面](cell_interactions.md#load-bearing-adhesions)。核 lamin 属于中间丝超家族，在内核膜下形成核纤层，其装配、核膜连接和分裂期重构见[细胞核、染色质与核糖体](nucleus_chromatin.md#nuclear-envelope)。
 
 plectin 等 plakin 家族蛋白把中间丝与 actin、微管、黏附复合物和核周结构相连。角蛋白、desmin 或 lamin 基因的突变可分别导致表皮脆弱、肌病或多系统 laminopathy，说明组织表型取决于哪类细胞承受何种负荷，而不是“中间丝越多越坚固”的简单剂量关系。黏附连接如何把骨架力跨膜传递留给[细胞外基质、黏附与连接](cell_interactions.md)。
 

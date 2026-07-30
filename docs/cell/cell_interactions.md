@@ -96,7 +96,7 @@ laminin 是 $\alpha$、$\beta$、$\gamma$ 链组成的异三聚体，不同链�
 
 ECM 的状态由合成、交联、纤维组装、蛋白水解和内吞回收共同决定。fibroblast 是许多结缔组织的重要基质来源，但 epithelial cell、endothelial cell、muscle cell、adipocyte 和 immune cell 也能产生或改造各自微环境。matrix metalloproteinase、ADAMTS 等蛋白酶可开放迁移通道或释放被基质束缚的信号；其抑制剂、局部活化和底物可及性共同限制降解范围。
 
-细胞通过 integrin—talin—actin 轴向基质施力，并读取基质刚度、黏弹性、纤维取向和配体间距。培养基质弹性可显著改变间充质干细胞的形态、张力和分化倾向，是机械微环境影响细胞状态的经典实验；这一结果描述特定培养系统中的偏向，而不是“一个刚度数值决定一种命运”的普遍定律。[^matrix-elasticity]
+细胞通过 integrin—talin—actin 轴向基质施力，并读取基质刚度、黏弹性、纤维取向和配体间距。整联蛋白怎样经 FAK／Src、Rho 和其他效应器把受力状态接入生化网络，见[整联蛋白信号](cell_signaling.md#integrin-signaling)。培养基质弹性可显著改变间充质干细胞的形态、张力和分化倾向，是机械微环境影响细胞状态的经典实验；这一结果描述特定培养系统中的偏向，而不是“一个刚度数值决定一种命运”的普遍定律。[^matrix-elasticity]
 
 机械转导也存在反馈。张力可促进黏着斑成熟和 fibronectin 展开，细胞随后分泌、交联或降解更多 ECM，新的材料性质再改变细胞行为。组织中的应力还由邻细胞连接、液体压力和几何约束分担，所以只在二维硬基底上测得的铺展面积或黏着斑大小，不能直接替代体内机械状态。
 

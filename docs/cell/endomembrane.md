@@ -12,7 +12,7 @@
 | --- | --- | --- | --- |
 | 内质网 | 正在合成的分泌蛋白与膜蛋白；新合成膜脂 | 跨膜转位、膜拓扑建立、N-糖基化、二硫键与折叠质量控制 | COPII 载体至 ERGIC／高尔基体；驻留蛋白回收 |
 | 顺面至反面高尔基体 | 来自内质网的蛋白质和脂质 | N-聚糖修整、O-糖基化、蛋白聚糖和糖脂合成、蛋白水解加工 | TGN 分往质膜、分泌颗粒或内体 |
-| 早期与回收内体 | 内吞货物及来自 TGN 的部分载体 | 受体—配体解离、膜与腔内容物分离、回收和转胞吞 | 质膜、TGN或晚期内体 |
+| 早期与回收内体 | 内吞货物及来自 TGN 的部分载体 | 受体—配体解离、膜与腔内容物分离、回收和转胞吞 | 质膜、TGN 或晚期内体 |
 | 晚期内体／多泡体 | 未回收的内吞货物、自噬与吞噬通路输入 | 腔内小泡形成、持续酸化、获得溶酶体组分 | 内溶酶体及成熟溶酶体 |
 | 溶酶体 | 内吞、吞噬、自噬和生物合成通路 | 酸性水解、单体输出、营养感知与膜修复 | 小分子回到胞质；部分细胞发生溶酶体胞吐 |
 
@@ -82,7 +82,7 @@ TGN 是合成物流的重要分岔口。多数细胞持续把膜脂、质膜蛋�
 
 ### 早期内体与回收路线 { #early-recycling-endosomes }
 
-由质膜进入的内吞囊泡脱去包被后与早期内体融合。早期内体常由含较大腔体的区段和细长小管组成；Rab5、PI3P及其效应蛋白 EEA1 等共同定义膜身份和融合能力。V 型 H$^+$-ATPase 使腔内逐渐酸化，许多受体—配体因此解离。膜蛋白容易进入表面积大、腔体积小的回收小管，留在腔内的可溶性配体则更倾向沿降解方向前进。[^endosome-maturation]
+由质膜进入的内吞囊泡脱去包被后与早期内体融合。早期内体常由含较大腔体的区段和细长小管组成；Rab5、PI3P 及其效应蛋白 EEA1 等共同定义膜身份和融合能力。V 型 H$^+$-ATPase 使腔内逐渐酸化，许多受体—配体因此解离。膜蛋白容易进入表面积大、腔体积小的回收小管，留在腔内的可溶性配体则更倾向沿降解方向前进。[^endosome-maturation]
 
 回收可以从早期内体较快返回质膜，也可经 Rab11 等参与的回收内体缓慢返回或暂时储存。LDL 与 LDL 受体在酸性内体中解离，受体返回质膜，LDL 留在降解路线；含 GLUT4 的专门回收区室则可在胰岛素信号下向质膜动员。极性上皮还可把货物从一侧内吞、经内体分选后从另一侧外排，形成转胞吞。内吞入口的包被、吞噬和大胞饮见[内吞形成的大宗运输入口](membrane_transport.md#endocytosis-entry)。
 
@@ -128,7 +128,7 @@ Rab 小 GTPase 的活性循环给膜提供时空身份。GEF 促进 Rab 结合 G
 
 传统的 v-SNARE／t-SNARE 命名强调载体与靶膜位置，更一般的结构分类则把组成融合复合体的 SNARE 分为一条 R-SNARE 和三条 Q-SNARE。SNARE 配对提供重要选择性，但靶向准确性还依赖 Rab、系链因子、磷酸肌醇、SM 蛋白、空间位置和调控信号。融合后，$\alpha$-SNAP 招募 NSF，NSF 水解 ATP 拆解顺式 SNARE 复合体以供再用；ATP 主要用于复合体重置，驱动两膜融合的直接能量来自 trans-SNARE 拉链式装配及其与膜脂的耦联。
 
-载体的长距离移动常借微管或肌动蛋白马达，皮层骨架也能限制、捕获或开放分泌位点。这里的包被和融合装置回答“装什么、认哪层膜、怎样融合”，轨道极性、马达步进和细胞形态如何组织运输将在[细胞骨架、马达与细胞运动](cytoskeleton.md)中展开。
+载体的长距离移动常借微管或肌动蛋白马达，皮层骨架也能限制、捕获或开放分泌位点。这里的包被和融合装置回答“装什么、认哪层膜、怎样融合”，轨道极性、马达步进和细胞形态如何组织运输见[微管马达与细胞内物流](cytoskeleton.md#microtubule-motors)。
 
 ## 内膜系统以外的蛋白质分选 { #nonvesicular-targeting }
 
@@ -161,7 +161,7 @@ Rab 小 GTPase 的活性循环给膜提供时空身份。GEF 促进 Rab 结合 G
 
 [^endomembrane-overview]: 内质网、高尔基体、溶酶体与蛋白质分选的教材总框架见 Cooper 的[蛋白质分选与运输章节](https://www.ncbi.nlm.nih.gov/books/NBK9897/)。
 [^secretory-topology]: 内质网腔与细胞外侧的拓扑等价、膜蛋白朝向在膜泡运输中的保持，见 Cooper 的[内质网章节](https://www.ncbi.nlm.nih.gov/books/NBK9889/)。
-[^osm-endomembrane]: 本节及后文关于双向膜流、货物选择、内体—溶酶体和自噬的组织实质性改编自 osm.bio [《第十三章 内膜系统运输》固定版本](https://osm.bio/index.php?title=%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0_%E5%86%85%E8%86%9C%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%BE%93&oldid=2369)，并用 Alberts、Cooper 教材及本页所列论文交叉核验；原页面个别机翻术语与绝对化表述未沿用。
+[^osm-endomembrane]: 本节及后文关于双向膜流、货物选择、内体—溶酶体和自噬的组织实质性改编自 osm.bio [《第十三章 内膜系统运输》固定版本](https://osm.bio/index.php?title=%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0_%E5%86%85%E8%86%9C%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%BE%93&oldid=2369)，固定版本贡献者为长河，原文按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 许可；HanaBio 对内容作了重组与校正，并用 Alberts、Cooper 教材及本页所列论文交叉核验，原页面个别机翻术语与绝对化表述未沿用。
 [^er-entry]: SRP、Sec61、可溶蛋白转位与膜蛋白插入的经典框架见 Alberts 等的[内质网章节](https://www.ncbi.nlm.nih.gov/books/NBK26841/)；翻译后转位与质量控制接口见 Fewell 与 Brodsky 的[内质网进入综述](https://www.ncbi.nlm.nih.gov/books/NBK6210/)。
 [^er-quality-control]: BiP、PDI、糖蛋白折叠检查及异常构象保留的证据框架见 Ellgaard 与 Helenius 的[内质网质量控制综述](https://pubmed.ncbi.nlm.nih.gov/12612637/)。
 [^erad]: ERAD 的识别、逆向移位/抽提和胞质蛋白酶体降解机制，见 Lemberg 与 Strisovsky 的[细胞器蛋白稳态综述](https://pubmed.ncbi.nlm.nih.gov/34107306/)。

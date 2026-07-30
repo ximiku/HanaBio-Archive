@@ -149,6 +149,6 @@ ABC 转运体以两个核苷酸结合结构域的 ATP 结合与水解驱动跨�
 [^hop-diffusion]: 肌动蛋白膜骨架依赖的分区和脂质跨区“跳跃扩散”，见 Fujiwara 等的[单分子追踪研究](https://pubmed.ncbi.nlm.nih.gov/12058021/)。
 [^detergent-resistant-membranes]: 低温 Triton X-100 分离产生的囊泡与多层结构已相对原红细胞膜明显重排，见 Koumanov 等的[去垢剂抗性组分研究](https://pubmed.ncbi.nlm.nih.gov/15629118/)；因此去垢剂抗性是分离定义，不直接等同于活细胞膜域。
 [^caveolae-tension]: 膜窖在机械应力下快速展平、缓冲质膜张力的实验依据，见 Sinha 等的[细胞力学研究](https://pubmed.ncbi.nlm.nih.gov/21295700/)。
-[^osm-carriers-channels]: 本段实质性改编自 osm.bio [《载体蛋白和通道蛋白》固定版本](https://osm.bio/index.php?title=%E8%BD%BD%E4%BD%93%E8%9B%8B%E7%99%BD%E5%92%8C%E9%80%9A%E9%81%93%E8%9B%8B%E7%99%BD&oldid=14634)，并用 Alberts 等的[载体与主动运输章节](https://www.ncbi.nlm.nih.gov/books/NBK26896/)交叉核验。
+[^osm-carriers-channels]: 本段实质性改编自 osm.bio [《载体蛋白和通道蛋白》固定版本](https://osm.bio/index.php?title=%E8%BD%BD%E4%BD%93%E8%9B%8B%E7%99%BD%E5%92%8C%E9%80%9A%E9%81%93%E8%9B%8B%E7%99%BD&oldid=14634)，固定版本贡献者为寸烛盈夜，原文按 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 许可；HanaBio 对内容作了重组与校正，并用 Alberts 等的[载体与主动运输章节](https://www.ncbi.nlm.nih.gov/books/NBK26896/)交叉核验。
 [^cftr-uniprot]: CFTR 的 ATP 依赖门控、Cl$^-$／HCO$_3^-$ 通道功能及 ABC 家族归属，见 UniProt 审校条目 [P13569](https://www.uniprot.org/uniprotkb/P13569/entry)。
 [^endocytosis]: 吞噬、受体介导内吞、clathrin 包被与早期内体入口的教材框架，见 Cooper 的[内吞章节](https://www.ncbi.nlm.nih.gov/books/NBK9831/)。
