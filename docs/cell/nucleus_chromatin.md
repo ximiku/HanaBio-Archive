@@ -30,7 +30,7 @@ RNA 输出使用多条路线。tRNA、部分小 RNA 和前核糖体亚基可借�
 
 组蛋白变体赋予局部核小体不同性质：例如 CENP-A 参与建立许多真核生物的着丝粒染色质，H2A.Z 与 H3.3 常见于周转活跃的区域，macroH2A 可富集于某些沉默结构。组蛋白尾部及核心表面的乙酰化、甲基化、磷酸化、泛素化等修饰，为结合蛋白提供组合性环境；修饰的意义取决于位点、修饰程度、相邻标记和细胞背景，并非一个标记永久对应一种基因状态。
 
-新合成的 DNA 以及经历转录或修复的 DNA 都需要重新安排核小体。CAF-1、ASF1、NAP 家族等组蛋白伴侣控制组蛋白的递送和交换，ATP 依赖染色质重塑复合体则可滑动、移除或重构核小体。它们改变 DNA 对转录因子、聚合酶和修复机器的可及性，却不替代这些机器本身。DNA 与 RNA 的化学结构见[核酸与核苷酸](../biochem/nucleic_acid.md#nucleic-acid-protein-complexes)，复制、损伤修复和转录过程分别留给[DNA复制](../molecular/dna_replication.md)、[DNA损伤、修复与突变](../molecular/dna_repair.md)和[转录与RNA生物合成](../molecular/transcription.md)。
+新合成的 DNA 以及经历转录或修复的 DNA 都需要重新安排核小体。CAF-1、ASF1、NAP 家族等组蛋白伴侣控制组蛋白的递送和交换，ATP 依赖染色质重塑复合体则可滑动、移除或重构核小体。它们改变 DNA 对转录因子、聚合酶和修复机器的可及性，却不替代这些机器本身。DNA 与 RNA 的化学结构见[核酸与核苷酸](../biochem/nucleic_acid.md#nucleic-acid-protein-complexes)，复制、损伤修复和转录过程分别留给[DNA复制与逆转录](../molecular/dna_replication.md)、[DNA损伤、修复与突变](../molecular/dna_repair.md)和[转录与RNA生物合成](../molecular/transcription.md)。
 
 ## 三维基因组由接触概率与动态约束共同形成 { #three-dimensional-genome }
 

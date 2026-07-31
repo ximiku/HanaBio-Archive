@@ -123,15 +123,18 @@ nav:
 
   - 分子:
     - 分子生物学: molecular/index.md
-    - 遗传物质、基因与基因组: molecular/genetic_material.md
-    - DNA复制: molecular/dna_replication.md
-    - DNA损伤、修复与突变: molecular/dna_repair.md
-    - DNA重组: molecular/dna_recombination.md
-    - 转录与RNA生物合成: molecular/transcription.md
-    - RNA转录后加工: molecular/rna_processing.md
-    - 翻译与蛋白质生物合成: molecular/translation.md
-    - 蛋白质翻译后加工: molecular/protein_processing.md
-    - 原核与真核基因表达调控: molecular/gene_regulation.md
+    - 遗传信息的存储与变化:
+      - 遗传物质、基因与基因组: molecular/genetic_material.md
+      - DNA复制与逆转录: molecular/dna_replication.md
+      - DNA损伤、修复与突变: molecular/dna_repair.md
+      - DNA重组与转座: molecular/dna_recombination.md
+    - 遗传信息的表达:
+      - 转录与RNA生物合成: molecular/transcription.md
+      - RNA转录后加工: molecular/rna_processing.md
+      - 翻译与蛋白质生物合成: molecular/translation.md
+      - 蛋白质成熟、定位与质量控制: molecular/protein_processing.md
+    - 基因表达调控:
+      - 原核与真核基因表达调控: molecular/gene_regulation.md
 
   - 遗传:
     - 遗传学: genetics/index.md
