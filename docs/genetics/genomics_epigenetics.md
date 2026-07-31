@@ -74,9 +74,9 @@ ATP-dependent chromatin remodelers 通过滑动、移除、重组或交换核小
 
 基因组印记使一小部分座位呈亲本来源特异的等位表达。关键标记在雌、雄配子发生中分别建立，受精后在相应体细胞谱系中维持，而进入下一代原始生殖细胞后又被擦除，并按该个体形成卵或精子的方向重新设定。这个循环解释了为什么来自祖母的染色体经父亲传递时可以获得父源状态；印记不是整条父源或母源染色体永久沉默，也不同于母体在卵中预装产物造成的母体效应。[^imprinting-cycle]
 
-许多哺乳动物印记区由 imprinting control region（ICR）或 germline differentially methylated region（gDMR）协调一组编码基因和非编码 RNA。以 *H19–IGF2* 区为例，未甲基化的母源 ICR 可结合 CTCF 并限制共享增强子接触 *IGF2*，父源 ICR 甲基化后失去这一绝缘状态，使调控关系改写；其他印记簇则更多借助长非编码 RNA 和染色质沉默，不能把这一例外推为统一机制。印记表达还可随组织、发育时期和转录本改变，“只检测到单等位表达”也须排除随机单等位表达、顺式变异和测序比对偏倚。[^imprinting-mechanisms]
+许多哺乳动物印记区由 imprinting control region（ICR）或 germline differentially methylated region（gDMR）协调一组编码基因和非编码 RNA。以 *H19*–*IGF2* 区为例，未甲基化的母源 ICR 可结合 CTCF 并限制共享增强子接触 *IGF2*，父源 ICR 甲基化后失去这一绝缘状态，使调控关系改写；其他印记簇则更多借助长非编码 RNA 和染色质沉默，不能把这一例外推为统一机制。印记表达还可随组织、发育时期和转录本改变，“只检测到单等位表达”也须排除随机单等位表达、顺式变异和测序比对偏倚。[^imprinting-mechanisms]
 
-亲本来源、拷贝数和表观状态必须联合解释。Prader–Willi 与 Angelman 综合征都涉及 15q11–q13 区，但缺失、单亲二体、印记中心异常或特定基因变异可通过不同路径造成相应父源或母源功能缺失；具体检测与临床证据留给[人类遗传学](developmental_human.md)。X 染色体失活同样形成可维持的等位状态，却由染色体剂量和 XIST 网络建立，不按每个座位的父母来源统一决定，详见[剂量补偿](sex_cytoplasmic.md#dosage-compensation)。
+亲本来源、拷贝数和表观状态必须联合解释。Prader–Willi 与 Angelman 综合征都涉及 15q11–q13 区，但缺失、单亲二体、印记中心异常或特定基因变异可通过不同路径造成相应父源或母源功能缺失；具体检测与临床证据留给[人类遗传学](developmental_human.md)。X 染色体失活同样形成可维持的等位状态，却由染色体剂量和 *XIST* RNA 网络建立，不按每个座位的父母来源统一决定，详见[剂量补偿](sex_cytoplasmic.md#dosage-compensation)。
 
 ## 程序化基因组改变与表观遗传的边界 { #programmed-genome-change }
 
