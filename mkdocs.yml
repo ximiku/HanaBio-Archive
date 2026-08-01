@@ -209,14 +209,22 @@ nav:
 
   - 发育:
     - 发育生物学: development/index.md
-    - 细胞命运决定与模式生物: development/cell_fate_models.md
-    - 配子发生: development/gametogenesis.md
-    - 受精与卵的激活: development/fertilization.md
-    - 卵裂与原肠形成: development/cleavage_gastrulation.md
-    - 胚轴建立与模式形成: development/axis_patterning.md
-    - 形态发生与器官发生: development/morphogenesis.md
-    - 干细胞与再生: development/stem_cells_regeneration.md
-    - 环境、进化与发育: development/environmental_evo_devo.md
+    - 发育原理与研究方法:
+      - 模式生物与发育研究方法: development/models_methods.md
+      - 细胞命运决定与胚胎诱导: development/cell_fate_models.md
+      - 发育信号与基因调控: development/developmental_signaling.md
+    - 生殖与早期胚胎:
+      - 生殖系建立与配子发生: development/gametogenesis.md
+      - 受精与卵的激活: development/fertilization.md
+      - 卵裂、母合子转换与胚泡形成: development/cleavage_gastrulation.md
+      - 原肠形成与胚层建立: development/gastrulation_germ_layers.md
+    - 图式、形态与器官发生:
+      - 胚轴、分节与位置身份: development/axis_patterning.md
+      - 形态发生与器官发生: development/morphogenesis.md
+    - 发育的延续、环境与演化:
+      - 干细胞、重编程与再生: development/stem_cells_regeneration.md
+      - 发育时序、性别决定与环境可塑性: development/environmental_evo_devo.md
+      - 演化发育生物学: development/evo_devo.md
 
   - 植物:
     - 植物学: botany/index.md
