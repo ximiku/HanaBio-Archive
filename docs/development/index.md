@@ -38,26 +38,26 @@
 
 ## 本栏目的阅读路径 { #reading-path }
 
-### 发育原理与研究方法
+### 发育原理与研究方法 { #principles-and-methods }
 
 可先从[模式生物与发育研究方法](models_methods.md)建立观察、追踪和扰动的证据框架，再用[细胞命运决定与胚胎诱导](cell_fate_models.md)理解指定、决定、分化与感受态，最后由[发育信号与基因调控](developmental_signaling.md)进入少数信号通路、增强子和基因调控网络如何编码位置与时间。
 
-### 生殖与早期胚胎
+### 生殖与早期胚胎 { #reproduction-and-early-embryo }
 
 [生殖系建立与配子发生](gametogenesis.md)从世代连续性讲到两类配子的形成，[受精与卵的激活](fertilization.md)解释配子如何转入胚胎状态。[卵裂、母合子转换与胚泡形成](cleavage_gastrulation.md)关注早期细胞周期、基因组接管和哺乳动物最初的谱系分离，[原肠形成与胚层建立](gastrulation_germ_layers.md)则比较不同动物如何通过细胞运动重建胚体。
 
-### 图式、形态与器官发生
+### 图式、形态与器官发生 { #pattern-morphogenesis-organogenesis }
 
 [胚轴、分节与位置身份](axis_patterning.md)说明坐标、重复单位和区域身份怎样建立，[形态发生与器官发生](morphogenesis.md)进一步追踪这些图式如何通过细胞行为和组织力学变成神经管、体节、肢体、分支器官与母胎界面。
 
-### 发育的延续、环境与演化
+### 发育的延续、环境与演化 { #continuity-environment-evolution }
 
 [干细胞、重编程与再生](stem_cells_regeneration.md)把发育原理延伸到组织稳态、损伤修复与体外模型，[发育时序、性别决定与环境可塑性](environmental_evo_devo.md)讨论生活史计时和环境输入，[演化发育生物学](evo_devo.md)则解释发育系统的遗传改变如何产生可供演化筛选的表型变异。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 [^developmental-scope]: Barresi, M. J. F. & Gilbert, S. F. [*Developmental Biology*, 13th ed.](https://www.oupjapan.co.jp/en/products/detail/64284) Oxford University Press, 2023；Gilbert, S. F. [*Developmental Biology*, 6th ed.](https://www.ncbi.nlm.nih.gov/books/NBK9983/?depth=10) Sinauer Associates, 2000。两版目录共同呈现了从细胞命运、胚胎建成到环境与演化的多尺度学科范围；旧版用于概念史与经典实验脉络，不作为当前分子机制的唯一依据。
 
 [^developmental-evidence]: Society for Developmental Biology. [SDB CoRe: Concepts and Resources](https://www.sdbonline.org/sdb_core)。该同行评议资源按模式生物、研究技术、早期胚胎、图式形成、形态发生、信号、基因调控、干细胞与再生等主题组织实验材料。
 
-[^developmental-history]: Gilbert, S. F. [The Questions of Developmental Biology](https://www.ncbi.nlm.nih.gov/books/NBK10052/). In: *Developmental Biology*, 6th ed.；Barresi, M. J. F. & Gilbert, S. F. [*Developmental Biology*, 13th ed.](https://www.oupjapan.co.jp/en/products/detail/64284)。
+[^developmental-history]: Gilbert, S. F. [The Questions of Developmental Biology](https://www.ncbi.nlm.nih.gov/books/NBK10077/). In: *Developmental Biology*, 6th ed.；Barresi, M. J. F. & Gilbert, S. F. [*Developmental Biology*, 13th ed.](https://www.oupjapan.co.jp/en/products/detail/64284)。

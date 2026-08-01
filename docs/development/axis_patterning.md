@@ -6,7 +6,7 @@
 
 ## 胚轴由已有极性和细胞相互作用逐步建立 { #axis-establishment }
 
-卵母细胞形成时已经可以沿动物—植物轴不均一地布置卵黄、RNA、蛋白质和细胞器。这个轴常影响卵裂和内中胚层的位置，却不自动等同于成年动物的前后轴或背腹轴。海胆植物侧核内 β-catenin 启动内中胚层调控网络，动物侧则形成不同命运域；这比“动物极化物质”和“植物极化物质”两种假想梯度的平衡更接近可检验机制。植物侧产生的 Nodal、Delta 等局部信号继续把最初差异传给邻区，轴向图式因而由细胞内部状态与细胞间诱导共同完成。[^initial-polarity]
+卵母细胞形成时已经可以沿动物—植物轴不均一地布置卵黄、RNA、蛋白质和细胞器。这个轴常影响卵裂和内中胚层的位置，却不自动等同于成年动物的前后轴或背腹轴。海胆植物侧核内 β-catenin 启动内中胚层调控网络，动物侧则形成不同命运域；这比“动物极化物质”和“植物极化物质”两种假想梯度的平衡更接近可检验机制。植物侧产生的 Wnt8、Delta 等局部信号继续维持内中胚层状态并把最初差异传给邻区，轴向图式因而由细胞内部状态与细胞间诱导共同完成。[^initial-polarity]
 
 非洲爪蟾受精后，卵皮层相对内部细胞质发生旋转，把一组背侧决定活动移向通常与精子进入点相对的一侧。该区域的 β-catenin 得到稳定并进入细胞核，与植物侧的母源调控状态共同建立背侧植物信号中心，即 Nieuwkoop 中心。它仍主要贡献内胚层，却通过 Nodal 相关信号诱导上方边缘带形成 Spemann 组织者。母源不对称、诱导中心和组织者是依次相接的层次，不能把核内 β-catenin、Nieuwkoop 中心和背侧原口唇当作同一个结构。[^xenopus-axis]
 
@@ -85,7 +85,7 @@ PSM 后部较高的 FGF／Wnt 活动随轴延长后移，前部成熟环境则�
 - Hubaud A, Pourquié O. [Signalling dynamics in vertebrate segmentation](https://pubmed.ncbi.nlm.nih.gov/25335437/). *Nature Reviews Molecular Cell Biology*. 2014;15:709–721.
 - Matsuda M, et al. [Recapitulating the human segmentation clock with pluripotent stem cells](https://pubmed.ncbi.nlm.nih.gov/32238941/). *Nature*. 2020;580:124–129.
 
-[^initial-polarity]: 海胆动物—植物轴分离实验、植物侧 β-catenin 和后续内中胚层信号网络见[细胞命运决定与胚胎诱导](cell_fate_models.md#conditional-specification)及其中引用的原始研究；旧式两种对立“极化物质”是历史模型，不是两种已鉴定分子。
+[^initial-polarity]: 海胆动物—植物轴分离实验、植物侧 β-catenin 和后续内中胚层信号网络见[细胞命运决定与胚胎诱导](cell_fate_models.md#conditional-specification)及其中引用的原始研究；β-catenin 依赖的植物侧 Wnt8 及其对原肠形成和内中胚层分化的作用见[原始研究](https://pubmed.ncbi.nlm.nih.gov/15282746/)。旧式两种对立“极化物质”是历史模型，不是两种已鉴定分子；Nodal 主要参与另一条口—反口轴的外胚层图式，不应作为植物侧内中胚层信号列入此处。
 [^xenopus-axis]: 皮层旋转、背侧 β-catenin、Nieuwkoop 中心和组织者之间的诱导层级见 Gilbert 的[两栖类轴形成章节](https://www.ncbi.nlm.nih.gov/books/NBK10101/)；具体分子搬运模型仍随物种和实验更新，本文只采用有遗传与胚胎操作支持的层级关系。
 [^amniote-axis]: 小鼠 DVE／AVE 迁移、Nodal／Wnt 拮抗和原条定位见 Stower 与 Srinivas 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4216468/)及[AVE 功能研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC3060820/)；AVE 对前部的作用同时包括限制后部信号与支持前部图式，不能简化为单一“头诱导物”。
 [^organizer-transplantation]: Spemann—Mangold 移植中供体轴中胚层与宿主神经组织的不同贡献见[模式生物与发育研究方法](models_methods.md#from-form-to-causality)及 Gilbert 的[组织者章节](https://www.ncbi.nlm.nih.gov/books/NBK10101/)。
