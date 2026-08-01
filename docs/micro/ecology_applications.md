@@ -89,7 +89,7 @@
 ## 参考资料与延伸阅读
 
 [^community-assembly]: 选择、扩散、漂变和多样化如何共同决定微生物群落，以及尺度与历史依赖对推断的影响，见 Nemergut 等的[群落组装综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3811611/)。
-[^host-microbiota]: 宿主过滤、群落结构—功能与宿主相关微生物群的生态框架见 Robinson、Bohannan 与 Young 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC2937523/)；定植抗性的直接与间接机制见 Buffie 与 Pamer 的[综述](https://pubmed.ncbi.nlm.nih.gov/28856737/)。
+[^host-microbiota]: 宿主过滤、群落结构—功能与宿主相关微生物群的生态框架见 Robinson、Bohannan 与 Young 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC2937523/)；定植抗性的直接与间接机制见 Kim、Covington 与 Pamer 的[综述](https://pubmed.ncbi.nlm.nih.gov/28856737/)。
 [^rhizosphere]: 植物对根际群落的筛选及根际微生物与植物健康的条件性联系见 Berendsen、Pieterse 与 Bakker 的[综述](https://pubmed.ncbi.nlm.nih.gov/22564542/)。
 [^stable-isotope-probing]: 稳定同位素探针怎样把底物同化与复杂群落中的活跃成员关联，以及交叉营养和实验设计边界，见 Berry 与 Loy 的[功能微生物组综述](https://pubmed.ncbi.nlm.nih.gov/30001854/)和 Kim 等的[污染物降解 SIP 综述](https://pubmed.ncbi.nlm.nih.gov/37671037/)。
 [^methanogenesis]: 氢营养型产甲烷的反应路线及 F₄₂₀／F₄₃₀ 分工见 Shima、Huang、Wagner 与 Ermler 的[结构机制综述](https://pubmed.ncbi.nlm.nih.gov/32692612/)；F₄₃₀ 是甲基辅酶 M 还原酶所需含镍四吡咯，见 Zheng 等的[生物合成研究](https://pubmed.ncbi.nlm.nih.gov/27846569/)。
