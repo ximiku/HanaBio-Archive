@@ -168,14 +168,24 @@ nav:
 
   - 神经:
     - 神经生物学: neuro/index.md
-    - 突触传递: neuro/neuro_synapse.md
-    - 反射活动: neuro/neuro_reflex.md
-    - 神经递质与受体: neuro/neuro_transmitter_receptor.md
-    - 感觉与感官: neuro/neuro_sentation.md
-    - 躯体运动调控: neuro/neuro_movement.md
-    - 内脏活动调控: neuro/neuro_autonomic.md
-    - 脑的高级功能: neuro/neuro_high.md
-    - 神经系统疾病: neuro/neuro_disease.md
+    - 神经组织与信息传递:
+      - 神经元、胶质与神经组织: neuro/neuro_anatomy.md
+      - 突触传递: neuro/neuro_synapse.md
+      - 神经递质与受体: neuro/neuro_transmitter_receptor.md
+      - 反射与神经回路: neuro/neuro_reflex.md
+    - 神经系统的结构与通路:
+      - 中枢神经系统: neuro/neuro_cns.md
+      - 周围神经系统: neuro/neuro_pns.md
+      - 神经系统传导通路: neuro/neuro_pathway.md
+    - 感觉与运动系统:
+      - 感觉编码与躯体感觉: neuro/neuro_sensation.md
+      - 视觉系统: neuro/neuro_vision.md
+      - 听觉、前庭与化学感觉: neuro/neuro_auditory_vestibular.md
+      - 躯体运动调控: neuro/neuro_movement.md
+    - 内稳态、高级功能与疾病:
+      - 自主神经与内脏调控: neuro/neuro_autonomic.md
+      - 脑状态与高级功能: neuro/neuro_high.md
+      - 神经系统疾病: neuro/neuro_disease.md
 
   - 免疫:
     - 免疫学: immunology/index.md
@@ -342,10 +352,6 @@ nav:
       - 消化系统、呼吸系统与腹膜: inter/anatomy/viscera.md
       - 泌尿系统: inter/anatomy/urinary_system.md
       - 心血管与淋巴系统: inter/anatomy/circulatory_lymphatic.md
-      - 神经系统解剖学总论: neuro/neuro_anatomy.md
-      - 周围神经系统: neuro/neuro_pns.md
-      - 中枢神经系统: neuro/neuro_cns.md
-      - 神经系统传导通路: neuro/neuro_pathway.md
     - 系统生物学: inter/systems_biology.md
     - 生物物理学: inter/biophysics.md
     - 化学生物学与合成生物学: inter/chemical_synthetic_biology.md
