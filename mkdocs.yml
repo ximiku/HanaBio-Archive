@@ -245,7 +245,13 @@ nav:
       - 苔藓植物: botany/classification/bryophytes.md
       - 石松类与蕨类植物: botany/classification/bryophytes_ferns.md
       - 裸子植物: botany/classification/gymnosperms.md
-      - 被子植物的系统与多样性: botany/classification/angiosperms.md
+      - 被子植物的系统与多样性:
+        - botany/classification/angiosperms.md
+        - 早期分支与木兰类: botany/classification/angiosperms/early_magnoliids.md
+        - 核心真双子叶植物: botany/classification/angiosperms/core_eudicots.md
+        - 单子叶植物: botany/classification/angiosperms/monocots.md
+        - 超蔷薇类: botany/classification/angiosperms/superrosids.md
+        - 超菊类: botany/classification/angiosperms/superasterids.md
     - 植物的资源获取与物质代谢:
       - botany/physiology/index.md
       - 植物水分关系与木质部运输: botany/physiology/water_minerals.md
