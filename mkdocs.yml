@@ -189,7 +189,23 @@ nav:
 
   - 免疫:
     - 免疫学: immunology/index.md
-    - 抗原的T细胞呈递及MHC功能: immunology/immuno_apc_mhc.md
+    - 免疫系统的组织与固有防御:
+      - 免疫细胞、组织与迁移: immunology/immune_cells_tissues.md
+      - 固有免疫识别与炎症: immunology/innate_recognition_inflammation.md
+      - 补体系统: immunology/complement.md
+      - 屏障与黏膜免疫: immunology/mucosal_immunity.md
+    - 抗原识别与适应性免疫:
+      - 抗原加工、呈递与 MHC: immunology/immuno_apc_mhc.md
+      - 淋巴细胞发育与受体多样性: immunology/lymphocyte_development_repertoire.md
+      - T 细胞激活与效应: immunology/t_cell_immunity.md
+      - B 细胞与抗体应答: immunology/b_cell_antibody.md
+      - 免疫记忆与疫苗: immunology/memory_vaccines.md
+    - 免疫稳态、疾病与干预:
+      - 免疫耐受与自身免疫: immunology/tolerance_autoimmunity.md
+      - 超敏反应与过敏: immunology/hypersensitivity_allergy.md
+      - 免疫缺陷: immunology/immunodeficiency.md
+      - 移植免疫与肿瘤免疫: immunology/transplant_tumor_immunity.md
+      - 免疫检测与免疫干预: immunology/immunological_methods_therapy.md
 
   - 发育:
     - 发育生物学: development/index.md
