@@ -228,27 +228,38 @@ nav:
 
   - 植物:
     - 植物学: botany/index.md
-    - 植物形态与解剖:
+    - 植物体的结构与发育:
       - botany/morphology/index.md
       - 植物细胞与组织: botany/morphology/plant_cells_tissues.md
-      - 根、茎与叶: botany/morphology/vegetative_organs.md
+      - 根的结构、发育与共生界面: botany/morphology/roots.md
+      - 茎、叶与营养器官: botany/morphology/vegetative_organs.md
       - 次生生长与维管形成层: botany/morphology/secondary_growth.md
-      - 植物生殖器官: botany/morphology/reproductive_organs.md
-      - 花、传粉、受精、种子与果实: botany/morphology/flowers_seeds_fruits.md
-    - 植物分类学:
+      - 花与生殖器官: botany/morphology/reproductive_organs.md
+      - 孢子、配子体与胚囊: botany/morphology/gametophytes.md
+      - 传粉、花粉萌发与受精: botany/morphology/pollination_fertilization.md
+      - 种子、果实与无性繁殖: botany/morphology/flowers_seeds_fruits.md
+    - 植物多样性与系统演化:
       - botany/classification/index.md
-      - 植物分类原理: botany/classification/classification_principles.md
+      - 分类、命名与系统发育: botany/classification/classification_principles.md
       - 传统植物学中的藻类、真菌与地衣: botany/classification/algae_fungi_lichens.md
-      - 苔藓植物与蕨类植物: botany/classification/bryophytes_ferns.md
+      - 苔藓植物: botany/classification/bryophytes.md
+      - 石松类与蕨类植物: botany/classification/bryophytes_ferns.md
       - 裸子植物: botany/classification/gymnosperms.md
-      - 被子植物: botany/classification/angiosperms.md
-    - 植物生理学:
+      - 被子植物的系统与多样性: botany/classification/angiosperms.md
+    - 植物的资源获取与物质代谢:
       - botany/physiology/index.md
-      - 植物水分关系与矿质营养: botany/physiology/water_minerals.md
+      - 植物水分关系与木质部运输: botany/physiology/water_minerals.md
+      - 矿质营养、氮同化与根际互作: botany/physiology/mineral_nutrition.md
       - 光合作用与呼吸作用: botany/physiology/photosynthesis_respiration.md
-      - 同化物运输与次生代谢: botany/physiology/transport_metabolism.md
-      - 植物激素、生长与发育: botany/physiology/hormones_growth.md
-      - 生殖、成熟、衰老与逆境生理: botany/physiology/reproduction_stress.md
+      - 韧皮部运输与源—库关系: botany/physiology/transport_metabolism.md
+      - 次生代谢与化学生态: botany/physiology/secondary_metabolism.md
+    - 植物的信号、发育与环境响应:
+      - botany/regulation/index.md
+      - 植物激素与信号网络: botany/regulation/hormones_growth.md
+      - 光形态建成、生物钟与运动: botany/regulation/light_clock_movement.md
+      - 种子休眠、萌发与幼苗建成: botany/regulation/germination_dormancy.md
+      - 开花、成熟、衰老与脱落: botany/regulation/reproduction_stress.md
+      - 逆境响应与植物免疫: botany/regulation/stress_immunity.md
 
   - 动物:
     - 动物学: zoology/index.md
