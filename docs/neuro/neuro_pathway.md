@@ -36,7 +36,7 @@
 
 特殊感觉通路同样保留拓扑，却通常在抵达皮层前就分流。视网膜神经节细胞轴突在视交叉处仅部分交叉，使同一侧视野的信息汇入对侧大脑半球；主通路经外侧膝状体到达视觉皮层，侧支还参与瞳孔对光反射、昼夜节律和定向反应。蜗核接受同侧耳输入后，很快通过多级核团和多次交叉建立双侧投射，再经外侧丘系、下丘和内侧膝状体抵达听觉皮层；因此蜗核以上的单侧中枢损伤通常不会造成同侧耳的完全耳聋，却可损害声源定位和复杂听觉加工。前庭核的输出则分往眼球运动核、脊髓、小脑、丘脑—皮层及自主网络，把凝视稳定、姿势和平衡知觉协调起来。[^special-sensory]
 
-这些共同原则不能替代各系统的换能和回路细节。视野映射与瞳孔通路见[视觉系统](neuro_vision.md)，听觉的频率分析及前庭反射见[听觉与前庭系统](neuro_auditory_vestibular.md)。
+这些共同原则不能替代各系统的换能和回路细节。视野映射与瞳孔通路见[视觉系统](neuro_vision.md)，听觉的频率分析、前庭反射和化学感觉见[听觉、前庭与化学感觉](neuro_auditory_vestibular.md)。
 
 ## 皮质脊髓束与皮质脑干束组织随意运动输出 { #corticospinal-corticobulbar }
 
@@ -89,7 +89,7 @@
 [^anterolateral]: 前外侧系统的节段内走行、脊髓交叉及丘脑与脑干并行靶点，参见 Purves 等 [Central Pain Pathways: The Spinothalamic Tract](https://www.ncbi.nlm.nih.gov/books/NBK10967/)；正文不沿用前、外侧束与单一感觉模态严格一一对应的旧模型。
 [^trigeminal]: 三叉神经脑桥核、脊束核和中脑核的输入模态及 VPM 投射，参见 NCBI Bookshelf [Neuroanatomy, Trigeminal Nucleus](https://www.ncbi.nlm.nih.gov/books/NBK539823/) 与 [Trigeminal Pathways](https://www.ncbi.nlm.nih.gov/books/NBK384/)。
 [^spinocerebellar]: 后／前脊髓小脑束、楔小脑束的来源、交叉和小脑脚走行，参见 NCBI Bookshelf [Neuroanatomy, Spinocerebellar Dorsal and Ventral Tracts](https://www.ncbi.nlm.nih.gov/books/NBK556013/)。
-[^special-sensory]: 视觉、听觉和前庭中继的并行组织，参见 NCBI Bookshelf [The Central Visual Pathways](https://www.ncbi.nlm.nih.gov/books/NBK11519/)、[The Auditory Pathway](https://www.ncbi.nlm.nih.gov/books/NBK10792/) 与 [The Vestibular System](https://www.ncbi.nlm.nih.gov/books/NBK10819/)；本页只保留共同束路原则，换能和感知计算移交相应专页。
+[^special-sensory]: 视觉、听觉和前庭中继的并行组织，参见 NCBI Bookshelf [The Central Visual Pathways](https://www.ncbi.nlm.nih.gov/books/NBK11519/)、[Neuroanatomy, Auditory Pathway](https://www.ncbi.nlm.nih.gov/books/NBK532311/) 与 [The Vestibular System](https://www.ncbi.nlm.nih.gov/books/NBK10819/)；本页只保留共同束路原则，换能和感知计算移交相应专页。
 [^corticospinal]: 皮质脊髓束的多皮层来源、内囊—锥体走行、主要交叉及对局部回路的作用，参见 Purves 等 [The Primary Motor Cortex](https://www.ncbi.nlm.nih.gov/books/NBK10962/) 与 NCBI Bookshelf [Neuroanatomy, Pyramidal Tract](https://www.ncbi.nlm.nih.gov/books/NBK545314/)。
 [^corticobulbar]: 皮质脑干束经内囊膝部下行、多数运动核双侧输入以及下半面和颏舌肌的对侧偏重，参见 NCBI Bookshelf [Neuroanatomy, Corticobulbar Tract](https://www.ncbi.nlm.nih.gov/books/NBK555891/) 与 [Neuroanatomy, Upper Motor Neuron Lesion](https://www.ncbi.nlm.nih.gov/books/NBK537305/)。
 [^brainstem-descending]: 前庭、网状、顶盖和红核脊髓系统的来源与运动作用，参见 Purves 等 [Descending Control of Spinal Cord Circuitry](https://www.ncbi.nlm.nih.gov/books/NBK10805/) 及 NCBI Bookshelf [Neuroanatomy, Vestibulospinal Tract](https://www.ncbi.nlm.nih.gov/books/NBK557380/)；“锥体外系”仅作为历史总称保留。
