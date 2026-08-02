@@ -2,6 +2,8 @@
 
 单子叶植物是被子植物中稳定的单系大支。胚通常只有一枚子叶，叶脉常平行，初生茎维管束常散生，根系常由不定根组成，花部常为三数；这些都是频率很高的组合而不是没有例外的定义。单子叶植物内部从最早分出的菖蒲目，到水生泽泻目，再到棕榈类、鸭跖草类、百合类和兰科，已经产生木本、藤本、水生、附生和菌异养等多种生活型。[^monocot-framework]
 
+旧材料的“鸭跖草亚科”实际承接传统系统中的鸭跖草亚纲（Commelinidae），是高于目的历史类群名称，并不是科内的亚科。现代 APG 系统不沿用这一亚纲边界，而把禾本目、鸭跖草目、姜目和棕榈目等放在单子叶植物的鸭跖草类支中；因此，原条目下的莎草科与禾本科知识继续保留，但层级名称须从“亚科”校正为“类群”或历史上的“亚纲”。
+
 ## 菖蒲目与泽泻目 { #acorales-alismatales }
 
 石菖蒲所在的菖蒲科构成菖蒲目，是其余现生单子叶植物的姐妹支。植株具芳香根状茎和剑形叶，细小花密集成肉穗花序，但没有天南星科典型的佛焰苞。旧材料把石菖蒲列入天南星科，现代系统必须单列；“肉穗花序”是趋同或较广分布的花序结构，不能独自界定亲缘。
@@ -29,6 +31,8 @@
 禾本科小穗通常由一对颖片及一至多朵小花组成；每朵小花外有外稃、内稃，花被缩减为浆片，雄蕊常三枚，稻属通常六枚，子房一室而有一枚胚珠，柱头多羽毛状。成熟果实多为果皮与种皮紧密贴合的颖果。外稃、内稃和颖片是花序苞片系统的一部分，不能统称为萼片；小麦“三雄蕊”和水稻“六雄蕊”是不同支系的常见式，并非同一花的变动范围。
 
 针茅、燕麦、高粱、玉米、粟（小米）、黍、甘蔗、薏苡、芦苇、稻、小麦和大麦覆盖旱生草原、湿地与主要作物。小麦小穗在穗轴每节一个，大麦每节有三枚小穗，六棱与二棱类型取决于侧生小穗结实；青稞是颖果与稃片易分离的裸粒大麦。稻的圆锥花序常下垂，稃片是否具芒依品种而异。玉米雄穗顶生、雌穗腋生，果穗的“须”是伸长的花柱—柱头。鼠尾粟、穇等少数禾草的果皮与种皮结合方式不同于典型颖果，果实术语需按具体属核对。菰茎被菰黑粉菌侵染后膨大形成茭白，这一食用器官是宿主茎与真菌互作的产物。
+
+旧材料又把竹类以外的草本禾草统称为“禾亚科”。现代禾亚科（Pooideae）只是禾本科十二个亚科之一，燕麦、小麦和大麦属于其中，而稻属于稻亚科，玉米、高粱、甘蔗、薏苡和黍类属于黍亚科等其他支系。原来的营养叶与秆箨比较仍可用于区分普通禾草和竹类生活型，却不能据此建立“禾亚科—竹亚科”的二分分类。[^grass-subfamilies]
 
 竹类属于禾本科竹亚科。竹秆木质化而节间常中空，秆箨由箨鞘、箨耳和箨叶等组成，形态与普通营养叶不同；普通叶常有明显叶柄样结构并在叶鞘连接处形成关节，容易脱落。竹、凤尾竹等通过地下根状茎形成克隆，开花周期、同步程度和开花后是否死亡在物种间差异很大。
 
@@ -69,3 +73,5 @@
 [^lily-circumscription]: Royal Botanic Gardens, Kew, [Liliaceae](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000259-2/general-information) 与 [Asparagaceae](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30275682-2/general-information), *Plants of the World Online*。Kew 的科级说明明确列出传统广义百合科成员在 APG IV 下的拆分。
 
 [^orchid-biology]: Royal Botanic Gardens, Kew, [Orchidaceae in Plants of the World Online](https://powo.science.kew.org/results?q=Orchidaceae)；Arditti, J. & Ghani, A. K. A. [*Tansley Review No. 110: numerical and physical properties of orchid seeds and their biological implications*](https://doi.org/10.1046/j.1469-8137.2000.00587.x). *New Phytologist* 145: 367–421, 2000。
+
+[^grass-subfamilies]: Grass Phylogeny Working Group II. [*New grass phylogeny resolves deep evolutionary relationships and discovers C4 origins*](https://nph.onlinelibrary.wiley.com/doi/10.1111/j.1469-8137.2011.03972.x). *New Phytologist* 193: 304–312, 2012。现代禾本科框架承认十二个亚科，旧材料把非竹类禾草统作“禾亚科”的范围与此不一致。

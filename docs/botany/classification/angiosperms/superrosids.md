@@ -1,6 +1,10 @@
 # 超蔷薇类
 
-超蔷薇类包括虎耳草目和广义蔷薇类，后者又包含葡萄目、豆类支和锦葵类支等主要谱系。传统分类把柔荑花序木本、离瓣花类和若干“蔷薇亚纲”成员放在不同亚纲，现代系统显示花被退化、雄蕊多数、离生心皮或柔荑花序都曾在远缘支系中多次演化。本页按目与科组织，同时保留这些性状在野外鉴定中的价值。[^rosid-framework]
+超蔷薇类包括虎耳草目和广义蔷薇类，后者又包含葡萄目、豆类支和锦葵类支等主要谱系。五桠果目位于核心真正双子叶植物的另一条分支，在本页与超蔷薇类相邻介绍，以便澄清旧材料留下的名称混淆。传统分类把柔荑花序木本、离瓣花类和若干“蔷薇亚纲”成员放在不同亚纲，现代系统显示花被退化、雄蕊多数、离生心皮或柔荑花序都曾在远缘支系中多次演化。本页按目与科组织，同时保留这些性状在野外鉴定中的价值。[^rosid-framework]
+
+## 五桠果目 { #dilleniales }
+
+五桠果科多为乔木、灌木或木质藤本，少数为草本；叶通常单叶、互生而无托叶，叶脉常明显并有平行的次级侧脉。花多为两性、辐射对称，通常具四至五枚常宿存的萼片、三至五枚花瓣和多数雄蕊；心皮可离生或不同程度合生，子房上位，成熟后形成蓇葖果、浆果状果或其他肉质果，种子常有假种皮。五桠果属和锡叶藤属体现了本科直立木本与攀援生活型的差别。五桠果科属于五桠果目，不是白花菜科的异名，也不属于十字花目。[^cleomaceae-dilleniaceae]
 
 ## 虎耳草目 { #saxifragales }
 
@@ -80,7 +84,9 @@
 
 十字花科多为草本，叶互生而无托叶，花通常有四枚萼片、四枚十字形花瓣和六枚四强雄蕊。两心皮子房由侧膜胎座向内形成假隔膜，成熟为长角果或短角果；果瓣脱落后常留下具种子的胎座框。科内硫代葡萄糖苷—芥子酶系统产生辛辣或防御性水解产物。
 
-芸薹属包括油菜、甘蓝、花椰菜、白菜、青菜或小白菜、芥蓝、芜菁、芥菜、芥菜疙瘩（大头菜）和榨菜等；不同作物分别选择叶、茎、腋芽、花序、根或膨大茎。萝卜属包括萝卜，拟南芥属是发育和遗传模式植物，紫罗兰属、菘蓝属分别包括紫罗兰与板蓝根来源植物。玛咖属于独行菜属。山柑科花也常四数，却常有长花丝和具柄子房，果实不形成十字花科典型假隔膜；二者是十字花目近缘科而非同一科。
+芸薹属包括油菜、甘蓝、花椰菜、白菜、青菜或小白菜、芥蓝、芜菁、芥菜、芥菜疙瘩（大头菜）和榨菜等；不同作物分别选择叶、茎、腋芽、花序、根或膨大茎。萝卜属包括萝卜，拟南芥属是发育和遗传模式植物，紫罗兰属、菘蓝属分别包括紫罗兰与板蓝根来源植物。玛咖属于独行菜属。
+
+白花菜科多为草本或亚灌木，植株常具腺毛，叶可为掌状复叶；花四数，常略呈两侧对称，雄蕊一至多数而六枚常见，子房上位，成熟多为两瓣开裂的蒴果。白花菜和醉蝶花类属于这一科。山柑科则以灌木、乔木或藤本为主，花也常四数，却常有多数长雄蕊和明显的雌蕊柄，果实不形成十字花科典型假隔膜。白花菜科、山柑科和十字花科都是十字花目的独立科；旧材料写作“白花菜科（五桠果科）”混合了现代系统中的两个不同科，而其中所举山柑应归山柑科。[^cleomaceae-dilleniaceae]
 
 ### 芸香科 { #rutaceae }
 
@@ -95,3 +101,5 @@
 [^rosid-framework]: Angiosperm Phylogeny Group, [APG IV 正式分类](https://academic.oup.com/botlinnean/article/181/1/1/2416499)，2016；Royal Botanic Gardens, Kew, [Plants of the World Online](https://powo.science.kew.org/)。
 
 [^legume-subfamilies]: Legume Phylogeny Working Group. [*A new subfamily classification of the Leguminosae based on a taxonomically comprehensive phylogeny*](https://onlinelibrary.wiley.com/doi/10.12705/661.3). *Taxon* 66: 44–77, 2017。该分类承认紫荆亚科、甘豆亚科、摘亚木亚科、苏木亚科、山姜豆亚科和蝶形花亚科六个单系亚科，并把含羞草类置于苏木亚科内部。
+
+[^cleomaceae-dilleniaceae]: Australian Biological Resources Study, [*Flora of Australia*: Cleomaceae](https://profiles.ala.org.au/opus/foa/profile/Cleomaceae)；Royal Botanic Gardens, Kew, [Plants of the World Online: Dilleniaceae](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77126565-1)；World Flora Online, [Dilleniaceae](https://www.worldfloraonline.org/taxon/wfo-7000000190)。这些资料分别用于核对白花菜科与五桠果科的接受地位、系统位置和形态范围。
