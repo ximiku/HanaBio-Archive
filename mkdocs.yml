@@ -270,34 +270,60 @@ nav:
 
   - 动物:
     - 动物学: zoology/index.md
-    - 无脊椎动物:
+    - 动物多样性与无脊椎动物:
       - zoology/invertebrates/index.md
-      - 动物体制、多细胞起源与动物地理: zoology/invertebrates/body_plans.md
-      - 动物学中的原生生物、多孔动物与刺胞动物: zoology/invertebrates/early_animals.md
-      - 扁形动物与假体腔动物: zoology/invertebrates/worms.md
-      - 环节动物与软体动物: zoology/invertebrates/annelids_mollusks.md
-      - 节肢动物: zoology/invertebrates/arthropods.md
-      - 触手冠动物、棘皮动物与半索动物: zoology/invertebrates/deuterostomes.md
-    - 脊椎动物分类:
+      - 动物起源、体制与系统发育: zoology/invertebrates/body_plans.md
+      - 动物地理区系: zoology/invertebrates/animal_biogeography.md
+      - 动物学史中的原生生物: zoology/invertebrates/protists_boundary.md
+      - 多孔动物、扁盘动物与早期动物演化: zoology/invertebrates/early_animals.md
+      - 刺胞动物与栉水母动物: zoology/invertebrates/cnidarians_ctenophores.md
+      - 扁形动物、纽形动物与寄生性蠕虫: zoology/invertebrates/flatworms_parasites.md
+      - 轮虫及其他小型螺旋动物: zoology/invertebrates/gnathiferans_spiralians.md
+      - 环节动物: zoology/invertebrates/annelids.md
+      - 软体动物: zoology/invertebrates/mollusks.md
+      - 触手冠动物与其他冠轮动物: zoology/invertebrates/lophophorates.md
+      - 线虫及其他蜕皮动物: zoology/invertebrates/nematodes_ecdysozoans.md
+      - 节肢动物体制、螯肢动物与多足动物: zoology/invertebrates/arthropods.md
+      - 甲壳动物: zoology/invertebrates/crustaceans.md
+      - 六足动物与昆虫: zoology/invertebrates/insects.md
+      - 棘皮动物与半索动物: zoology/invertebrates/echinoderms_hemichordates.md
+    - 脊索动物与脊椎动物多样性:
       - zoology/vertebrates/index.md
-      - 脊索动物、圆口类与鱼类: zoology/vertebrates/chordates_fishes.md
-      - 两栖类与爬行类: zoology/vertebrates/amphibians_reptiles.md
+      - 脊索动物起源与无脊椎脊索动物: zoology/vertebrates/chordates.md
+      - 圆口类与有颌脊椎动物起源: zoology/vertebrates/cyclostomes_gnathostomes.md
+      - 软骨鱼类: zoology/vertebrates/cartilaginous_fishes.md
+      - 硬骨鱼类: zoology/vertebrates/bony_fishes.md
+      - 两栖类: zoology/vertebrates/amphibians.md
+      - 爬行类与羊膜动物演化: zoology/vertebrates/reptiles_amniotes.md
       - 鸟类: zoology/vertebrates/birds.md
       - 哺乳类: zoology/vertebrates/mammals.md
-    - 脊椎动物比较解剖:
+    - 脊椎动物比较形态与解剖:
       - zoology/comparative_anatomy/index.md
-      - 脊椎动物胚胎与皮肤系统: zoology/comparative_anatomy/embryology_integument.md
-      - 骨骼与肌肉系统: zoology/comparative_anatomy/skeleton_muscle.md
-      - 消化与呼吸系统: zoology/comparative_anatomy/digestive_respiratory.md
-      - 排泄、生殖与循环系统: zoology/comparative_anatomy/urinary_reproductive_circulatory.md
-      - 神经、感觉与内分泌系统: zoology/comparative_anatomy/nervous_endocrine_sensory.md
+      - 脊椎动物胚胎发生与基本组织: zoology/comparative_anatomy/embryology_tissues.md
+      - 皮肤与皮肤衍生物: zoology/comparative_anatomy/integument.md
+      - 中轴骨骼、肋骨与胸廓: zoology/comparative_anatomy/axial_skeleton.md
+      - 头骨、带骨与附肢: zoology/comparative_anatomy/skull_appendages.md
+      - 肌肉系统: zoology/comparative_anatomy/musculature.md
+      - 体腔、系膜与消化系统: zoology/comparative_anatomy/body_cavity_digestive.md
+      - 鳃、鳔、肺与呼吸系统: zoology/comparative_anatomy/respiratory.md
+      - 排泄与渗透调节系统: zoology/comparative_anatomy/urinary_osmoregulation.md
+      - 生殖系统: zoology/comparative_anatomy/reproductive.md
+      - 心血管与淋巴系统: zoology/comparative_anatomy/circulatory_lymphatic.md
+      - 神经系统: zoology/comparative_anatomy/nervous.md
+      - 感觉器官: zoology/comparative_anatomy/sensory.md
+      - 内分泌系统: zoology/comparative_anatomy/endocrine.md
     - 动物行为学:
       - zoology/behavior/index.md
-      - 行为学基础与行为机制: zoology/behavior/foundations_mechanisms.md
-      - 学习、发育与行为演化: zoology/behavior/learning_development.md
-      - 取食行为: zoology/behavior/foraging.md
-      - 生殖行为: zoology/behavior/reproductive_behavior.md
-      - 社会、通讯与时空行为: zoology/behavior/social_communication.md
+      - 行为研究方法与解释框架: zoology/behavior/methods_framework.md
+      - 定向、先天行为与动机: zoology/behavior/orientation_innate_motivation.md
+      - 学习、认知与文化: zoology/behavior/learning_cognition.md
+      - 行为的遗传、生理与发育: zoology/behavior/genes_physiology_development.md
+      - 行为演化与比较行为学: zoology/behavior/behavior_evolution.md
+      - 取食、防御与争斗行为: zoology/behavior/foraging_defense.md
+      - 求偶、婚配与亲代抚育: zoology/behavior/reproduction_parental.md
+      - 社会组织与群体生活: zoology/behavior/social_organization.md
+      - 动物通讯: zoology/behavior/communication.md
+      - 生物节律、迁移与导航: zoology/behavior/rhythms_migration_navigation.md
 
   - 生态:
     - 生态学: ecology/index.md
