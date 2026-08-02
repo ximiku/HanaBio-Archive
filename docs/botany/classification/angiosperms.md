@@ -12,6 +12,7 @@
 
 本页面组按系统位置展开具体科：
 
+- [科级特征索引](angiosperms/family_index.md)逐项列出本地分类学素材的全部被子植物科，并补入现代科界调整后必须分辨的科；每一行都链接到下列详细正文；
 - [早期分支与木兰类](angiosperms/early_magnoliids.md)讨论无油樟目、睡莲目、木兰藤目以及木兰类中的木兰科、樟科等；
 - [核心真双子叶植物](angiosperms/core_eudicots.md)承接毛茛科、芍药科、罂粟科、莲科以及石竹目各代表科；
 - [单子叶植物](angiosperms/monocots.md)从菖蒲目、泽泻目写到棕榈目、禾本目、姜目、百合目和天门冬目；
