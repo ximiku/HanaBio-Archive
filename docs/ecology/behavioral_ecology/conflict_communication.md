@@ -130,7 +130,7 @@ $$
 
 模型的价值在于暴露需要测量的量，而不是替自然史省略细节。角和螯决定伤害方式，声道与鸣器限制可发出的频率，腺体和介质决定气味场，感觉器官决定接收者可分辨什么；这些形态解剖事实与长期行为记录共同构成 $V$、代价、RHP、可靠性和阈值的实证基础。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 [^maynard-smith-price]: Maynard Smith, J., & Price, G. R. (1973). The logic of animal conflict. *Nature*, 246, 15–18. [https://doi.org/10.1038/246015a0](https://doi.org/10.1038/246015a0)
 

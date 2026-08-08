@@ -132,7 +132,7 @@ $$
 
 实验或观察若只改变“光”“温度”这类标签，常把多个机制同时带入。遮阴会同时降低辐射加热，增温装置可能改变湿度和湍流，防风会改变蒸散，火后清除植被也改变土温与水分。因子设计、微环境连续记录和跨季节追踪能够把这些路径拆开。这样的测量并不会淘汰光补偿点、有效积温、贝格曼规律或火类型等经典知识，而是使它们从背诵条目变成可比较、可检验的生态学工具。
 
-## 参考资料与延伸阅读 {#references}
+## 参考资料与延伸阅读 { #references }
 
 - Begon, M. & Townsend, C. R. *Ecology: From Individuals to Ecosystems*. 5th ed. Wiley, 2021.
 - Angilletta, M. J. *Thermal Adaptation: A Theoretical and Empirical Synthesis*. Oxford University Press, 2009.
