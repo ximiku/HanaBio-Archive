@@ -204,7 +204,7 @@
 
 亲缘树为形态提供了新的解释。无节幼体的三对头肢显示甲壳动物头部逐步形成的发育次序；大颚把甲壳动物、六足动物和多足动物联系为有颚动物；复眼小眼的晶锥结构又支持泛甲壳动物关系。与此同时，藤壶的蔓足、蟹奴的根状内体、舌形动物的口钩和昆虫的翅都需要沿各自支系解释。现代分类的作用是让这些传统结构进入可检验的共同历史，而不是把细致解剖压缩成几个分子支系名称。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 [^chinese-prawn-morphology]: 农业部水产试验所标本典藏：[中华明对虾 *Fenneropenaeus chinensis*](https://www.tfrin.gov.tw/theme_data.php?id=3314&sub_theme=offshore&theme=collection)。
 

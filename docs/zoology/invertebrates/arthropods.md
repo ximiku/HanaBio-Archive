@@ -197,7 +197,7 @@
 
 学习上的稳妥顺序仍是先看得见的结构：确定体区和体节，辨认每对附肢的着生位置，追踪口器、呼吸器和排泄孔，再把性状放进系统树检验。现代系统发育改变的是对性状来源的解释，不会使鲎的书鳃、蜘蛛的纺器、蜈蚣的颚足或马陆的重体节失去解剖学价值。下一页将沿着有颚动物的另一条主线，讨论[甲壳动物](crustaceans.md)的头部附肢、鳃、幼体与主要类群。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 [^limb-branches]: Wolff C, Scholtz G. [The clonal composition of biramous and uniramous arthropod limbs](https://pmc.ncbi.nlm.nih.gov/articles/PMC2600901/). *Proceedings of the Royal Society B*, 2008；Liu Y et al. [Exites in Cambrian arthropods and homology of arthropod limb branches](https://pmc.ncbi.nlm.nih.gov/articles/PMC8324779/). *Nature Communications*, 2021。
 

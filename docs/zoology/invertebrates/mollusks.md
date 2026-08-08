@@ -205,7 +205,7 @@
 
 下一页将沿相同方法进入[节肢动物](arthropods.md)：保留附肢、体区、口器、呼吸器官和发育型的传统比较路径，再用现代系统发育解释甲壳类、六足类、多足类和螯肢类之间的关系。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - Ponder, W. F., Lindberg, D. R., & Ponder, J. M. *Biology and Evolution of the Mollusca*. CRC Press, 2019.
 - Ruppert, E. E., Fox, R. S., & Barnes, R. D. *Invertebrate Zoology*, 7th ed. Brooks/Cole, 2004.

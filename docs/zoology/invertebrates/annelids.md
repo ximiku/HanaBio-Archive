@@ -163,7 +163,7 @@
 
 环节动物与下一页的[软体动物](mollusks.md)同属螺旋动物，许多海产成员共享螺旋卵裂和担轮样幼体等发育特征；二者成体的运动结构和身体组织方式却明显不同。环节动物以分节躯干、刚毛及液压骨骼为主线，软体动物则围绕外套膜、肌肉质足、内脏团和齿舌等结构展开。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - Rouse, G. W., & Pleijel, F. *Polychaetes*. Oxford University Press, 2001.
 - Brusca, R. C., Moore, W., & Shuster, S. M. *Invertebrates*, 3rd ed. Sinauer Associates, 2016.
