@@ -119,7 +119,7 @@ INSDC 公开档案要求公开数据可自由访问，因此不接收必须受�
 
 阅读一条记录时，可以依次检查其身份、对象、来源和结论：登录号及版本指向什么；它代表样本、序列、模型还是断言；字段来自提交、计算还是审校；引用和证据代码支持到哪一层；与其他记录的交叉引用是一一对应、近似映射还是仅为相关链接。只有把这些问题回答清楚，数据库结果才从“搜索命中”转化为可用于分析和论证的证据。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - INSDC. [About the International Nucleotide Sequence Database Collaboration](https://www.insdc.org/about-insdc/).
 - NCBI. [The NCBI Handbook](https://www.ncbi.nlm.nih.gov/books/NBK143764/)；[Sequence Identifiers](https://www.ncbi.nlm.nih.gov/genbank/sequenceids/).

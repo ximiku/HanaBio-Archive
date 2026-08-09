@@ -129,7 +129,7 @@ FAIR 要求数字对象可发现、可访问、可互操作和可复用，不等
 
 工作流能够减少遗漏、记录失败并让规模化计算更可靠，却不会替代实验设计、统计假设和生物学解释。一个管线在容器中完整重跑，只证明既定输入经过既定实现得到相容输出；若样本混淆、参考版本不适合、评价数据泄漏或模型假设错误，自动化会稳定地重复同一个问题。[算法、统计与计算基础](computational_foundations.md)给出算法与评估层面的判断框架，后续的[测序技术、读段与质量控制](sequencing.md)及各组学页面将把本页的工作流原则应用到具体数据链。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 - Software Carpentry. [The Unix Shell](https://swcarpentry.github.io/shell-novice/).
 - Wilson G, et al. [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510). *PLOS Computational Biology*. 2017;13(6):e1005510.

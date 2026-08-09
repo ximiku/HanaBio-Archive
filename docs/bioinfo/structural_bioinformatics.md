@@ -170,7 +170,7 @@ RMSD 描述相对参考结构的整体偏离，RMSF 描述原子或残基的波�
 
 最终表述应与证据层级相配。实验密度或约束支持的是“在这些样品和条件下，数据与该模型相容”；高置信预测支持的是“该序列很可能采用这一局部折叠”；对接和动力学支持的是“在给定模型与近似下，这一姿态或路径值得检验”。当结构、序列、进化、生化和细胞证据在独立来源中汇合，三维模型才由漂亮坐标转化为可检验、可修正的机制解释。
 
-## 参考资料与延伸阅读
+## 参考资料与延伸阅读 { #references }
 
 [^wwpdb-mmcif]: wwPDB, [PDBx/mmCIF General FAQ](https://mmcif.wwpdb.org/docs/faqs/pdbx-mmcif-faq-general.html)；PDBx/mmCIF 数据类别和关系见 [User Guide](https://mmcif.wwpdb.org/docs/user-guide/guide.html)。
 
