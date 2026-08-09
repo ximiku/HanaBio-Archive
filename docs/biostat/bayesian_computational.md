@@ -166,7 +166,7 @@ p(\theta\mid y)\,\mathrm d\theta.
 
 \[
 y_{ij}\mid\theta_j,\sigma
-\sim N(\theta_j,sigma^2),
+\sim N(\theta_j,\sigma^2),
 \]
 
 \[
@@ -207,7 +207,7 @@ E\{g(\theta)\mid y\}
 MCMC 构造一个以目标后验为平稳分布的 Markov 链。平稳分布正确还不够，链必须能够到达目标分布的所有相关区域，并具有适当的遍历性质，时间平均才会收敛到后验期望。Metropolis–Hastings 算法从当前位置 \(\theta\) 按提议分布 \(q(\theta'\mid\theta)\) 产生候选 \(\theta'\)，并以概率
 
 \[
-\alpha=min\left\{1,
+\alpha=\min\left\{1,
 \frac{p(\theta'\mid y)q(\theta\mid\theta')}
 {p(\theta\mid y)q(\theta'\mid\theta)}
 \right\}
@@ -242,7 +242,7 @@ Laplace 近似在后验众数附近用二阶曲率构造 Gaussian 近似，适�
 变分推断选择一个易处理的分布族 \(q(\theta)\)，通过优化使它接近目标后验。常用目标是最大化证据下界（ELBO），等价于最小化
 
 \[
-\operatorname{KL}\{q(\theta)\,\|,p(\theta\mid y)\}.
+\operatorname{KL}\{q(\theta)\,\|\,p(\theta\mid y)\}.
 \]
 
 Mean-field 近似把参数相关性全部断开，full-rank Gaussian 可保留线性相关但仍无法表达任意偏斜和多峰。ADVI 用自动微分与随机梯度优化 ELBO，速度通常快于完整 MCMC；其目标倾向避免把质量放到后验低密度处，因而可能漏掉模式或低估尾部不确定性。[^advi-2017]
