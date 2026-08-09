@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">原表与候选修订产生的两棵单连接树</title>
+  <desc id="desc">左图使用与原距离矩阵一致的 c3 等于 1，右图使用原始丰度表中 c3 等于 7；两者产生不同的合并顺序。</desc>
+  <rect width="900" height="520" fill="#ffffff"/>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #1f2937; }
+    .title { font-size: 20px; font-weight: 650; }
+    .subtitle { font-size: 14px; fill: #4b5563; }
+    .axis { stroke: #6b7280; stroke-width: 1.2; }
+    .grid { stroke: #e5e7eb; stroke-width: 1; }
+    .tick { font-size: 12px; fill: #6b7280; }
+    .leaf { font-size: 13px; font-weight: 600; }
+    .left-tree { fill: none; stroke: #2563eb; stroke-width: 2.5; stroke-linejoin: round; }
+    .right-tree { fill: none; stroke: #dc2626; stroke-width: 2.5; stroke-linejoin: round; }
+    .note { font-size: 12px; fill: #4b5563; }
+  </style>
+
+  <text class="title" x="240" y="34" text-anchor="middle">候选修订：x₃c = 1</text>
+  <text class="subtitle" x="240" y="57" text-anchor="middle">全部复现素材所列欧氏距离</text>
+  <text class="title" x="680" y="34" text-anchor="middle">原表记录：x₃c = 7</text>
+  <text class="subtitle" x="680" y="57" text-anchor="middle">从丰度表重新计算距离</text>
+
+  <line class="axis" x1="60" y1="90" x2="60" y2="430"/>
+  <line class="axis" x1="60" y1="430" x2="420" y2="430"/>
+  <line class="grid" x1="60" y1="330" x2="420" y2="330"/>
+  <line class="grid" x1="60" y1="230" x2="420" y2="230"/>
+  <line class="grid" x1="60" y1="130" x2="420" y2="130"/>
+  <text class="tick" x="50" y="434" text-anchor="end">0</text>
+  <text class="tick" x="50" y="334" text-anchor="end">1</text>
+  <text class="tick" x="50" y="234" text-anchor="end">2</text>
+  <text class="tick" x="50" y="134" text-anchor="end">3</text>
+  <text class="tick" transform="translate(19 260) rotate(-90)" text-anchor="middle">欧氏距离</text>
+
+  <path class="left-tree" d="M85 430V130 M85 130H262.5 M262.5 130V185.1"/>
+  <path class="left-tree" d="M145 430V185.1 M205 430V185.1 M145 185.1H205 M175 185.1H350"/>
+  <path class="left-tree" d="M275 430V256.8 M335 430V256.8 M275 256.8H335 M305 256.8V206.4"/>
+  <path class="left-tree" d="M395 430V206.4 M305 206.4H395 M350 206.4V185.1"/>
+  <text class="leaf" x="85" y="452" text-anchor="middle">2</text>
+  <text class="leaf" x="145" y="452" text-anchor="middle">1</text>
+  <text class="leaf" x="205" y="452" text-anchor="middle">6</text>
+  <text class="leaf" x="275" y="452" text-anchor="middle">3</text>
+  <text class="leaf" x="335" y="452" text-anchor="middle">4</text>
+  <text class="leaf" x="395" y="452" text-anchor="middle">5</text>
+  <text class="note" x="240" y="482" text-anchor="middle">树高 2.449 处存在并列最短连接</text>
+
+  <line class="axis" x1="480" y1="90" x2="480" y2="430"/>
+  <line class="axis" x1="480" y1="430" x2="850" y2="430"/>
+  <line class="grid" x1="480" y1="370" x2="850" y2="370"/>
+  <line class="grid" x1="480" y1="310" x2="850" y2="310"/>
+  <line class="grid" x1="480" y1="250" x2="850" y2="250"/>
+  <line class="grid" x1="480" y1="190" x2="850" y2="190"/>
+  <line class="grid" x1="480" y1="130" x2="850" y2="130"/>
+  <text class="tick" x="470" y="434" text-anchor="end">0</text>
+  <text class="tick" x="470" y="374" text-anchor="end">1</text>
+  <text class="tick" x="470" y="314" text-anchor="end">2</text>
+  <text class="tick" x="470" y="254" text-anchor="end">3</text>
+  <text class="tick" x="470" y="194" text-anchor="end">4</text>
+  <text class="tick" x="470" y="134" text-anchor="end">5</text>
+
+  <path class="right-tree" d="M505 430V118.2 M505 118.2H720 M720 118.2V250"/>
+  <path class="right-tree" d="M565 430V250 M565 250H785"/>
+  <path class="right-tree" d="M625 430V283.1 M685 430V283.1 M625 283.1H685 M655 283.1V250"/>
+  <path class="right-tree" d="M755 430V295.8 M815 430V295.8 M755 295.8H815 M785 295.8V250"/>
+  <text class="leaf" x="505" y="452" text-anchor="middle">3</text>
+  <text class="leaf" x="565" y="452" text-anchor="middle">2</text>
+  <text class="leaf" x="625" y="452" text-anchor="middle">1</text>
+  <text class="leaf" x="685" y="452" text-anchor="middle">6</text>
+  <text class="leaf" x="755" y="452" text-anchor="middle">4</text>
+  <text class="leaf" x="815" y="452" text-anchor="middle">5</text>
+  <text class="note" x="680" y="482" text-anchor="middle">样方 3 在距离 5.196 时最后接入</text>
+
+  <text class="subtitle" x="450" y="510" text-anchor="middle">样方编号</text>
+</svg>
