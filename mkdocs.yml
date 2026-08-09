@@ -476,10 +476,13 @@ nav:
       - 人体解剖学概论与运动系统: inter/anatomy/human_anatomy.md
       - 消化系统、呼吸系统与腹膜: inter/anatomy/viscera.md
       - 泌尿系统: inter/anatomy/urinary_system.md
+      - 生殖系统、会阴与乳房: inter/anatomy/reproductive_system.md
       - 心血管与淋巴系统: inter/anatomy/circulatory_lymphatic.md
+      - 内分泌器官: inter/anatomy/endocrine_organs.md
     - 系统生物学: inter/systems_biology.md
     - 生物物理学: inter/biophysics.md
-    - 化学生物学与合成生物学: inter/chemical_synthetic_biology.md
+    - 化学生物学: inter/chemical_synthetic_biology.md
+    - 合成生物学: inter/synthetic_biology.md
 
   - Blog:
     - Blog: blog/index.md
