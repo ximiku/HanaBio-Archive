@@ -419,33 +419,55 @@ nav:
     - 生物实验技术: exptech/index.md
     - 实验基础:
       - exptech/foundations/index.md
-      - 实验安全、测量与溶液配制: exptech/foundations/safety_measurement.md
+      - 实验安全、伦理与风险管理: exptech/foundations/safety_ethics.md
+      - 测量、溶液配制与仪器校准: exptech/foundations/safety_measurement.md
       - 显微观察与标本制备: exptech/foundations/microscopy_specimens.md
       - 实验设计、记录与数据质量: exptech/foundations/design_data.md
     - 生化与分子生物学实验:
       - exptech/biochem_molecular/index.md
       - 光谱测定与生化定量: exptech/biochem_molecular/spectroscopy_assays.md
-      - 分离技术与蛋白质分析: exptech/biochem_molecular/separation_protein.md
-      - 核酸提取、扩增与分子操作: exptech/biochem_molecular/nucleic_acid.md
+      - 酶活性测定与动力学: exptech/biochem_molecular/enzyme_kinetics.md
+      - 分离、层析与蛋白质制备: exptech/biochem_molecular/separation_protein.md
+      - 蛋白质电泳、印迹与免疫检测: exptech/biochem_molecular/protein_detection.md
+      - 核酸提取、质量与电泳: exptech/biochem_molecular/nucleic_acid.md
+      - 核酸杂交、探针与分子互作检测: exptech/biochem_molecular/molecular_probes.md
+      - 扩增、克隆与基因编辑: exptech/biochem_molecular/amplification_cloning.md
     - 细胞生物学实验:
       - exptech/cell/index.md
       - 组织学染色与细胞成像: exptech/cell/histology_imaging.md
-      - 细胞培养、分级与活性检测: exptech/cell/culture_fractionation.md
+      - 细胞器分级、纯化与鉴定: exptech/cell/organelle_fractionation.md
+      - 细胞培养、计数与活性检测: exptech/cell/culture_fractionation.md
+      - 细胞死亡、融合与功能扰动: exptech/cell/cell_death_fusion.md
     - 微生物学实验:
       - exptech/microbiology/index.md
-      - 培养、染色与鉴定: exptech/microbiology/culture_identification.md
+      - 无菌操作、培养与灭菌验证: exptech/microbiology/aseptic_culture.md
+      - 染色、生化鉴定与表型筛选: exptech/microbiology/culture_identification.md
       - 微生物计数与环境检测: exptech/microbiology/counting_environment.md
+      - 微生物遗传实验与菌种保藏: exptech/microbiology/genetics_preservation.md
     - 植物学实验:
       - exptech/botany/index.md
       - 植物形态、解剖与分类实验: exptech/botany/morphology_classification.md
-      - 植物生理实验: exptech/botany/plant_physiology.md
+      - 植物水分关系与气孔运动实验: exptech/botany/plant_physiology.md
+      - 色素、光合作用与呼吸实验: exptech/botany/pigments_photosynthesis_respiration.md
+      - 植物生活力与逆境生理测定: exptech/botany/stress_viability.md
     - 动物学实验:
       - exptech/zoology/index.md
-      - 无脊椎动物观察与解剖: exptech/zoology/invertebrate.md
-      - 脊椎动物解剖与比较观察: exptech/zoology/vertebrate.md
+      - 无脊椎动物观察与解剖方法: exptech/zoology/invertebrate.md
+      - 原生生物与蠕虫观察: exptech/zoology/protists_helminths.md
+      - 环节动物观察与解剖: exptech/zoology/annelids.md
+      - 软体动物观察与解剖: exptech/zoology/molluscs.md
+      - 甲壳动物观察与解剖: exptech/zoology/crustaceans.md
+      - 昆虫观察与解剖: exptech/zoology/insects.md
+      - 节肢动物比较观察: exptech/zoology/arthropod_comparison.md
+      - 鱼类观察与解剖: exptech/zoology/vertebrate.md
+      - 两栖类与哺乳类比较解剖: exptech/zoology/tetrapods.md
     - 生态与行为实验:
       - exptech/ecology_behavior/index.md
-      - 野外调查、生态测定与行为观察: exptech/ecology_behavior/field_behavior.md
+      - 环境梯度与生态生理实验: exptech/ecology_behavior/ecophysiology.md
+      - 种群抽样、标记重捕与空间格局: exptech/ecology_behavior/population_sampling.md
+      - 种群增长与种间竞争实验: exptech/ecology_behavior/population_dynamics.md
+      - 群落多样性与分类分析: exptech/ecology_behavior/community_analysis.md
+      - 动物行为观察与实验设计: exptech/ecology_behavior/field_behavior.md
 
   - 跨学科:
     - 跨学科交叉: inter/index.md

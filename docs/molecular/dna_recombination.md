@@ -34,7 +34,7 @@ tyrosine recombinase 以活性位点 Tyr 形成 3′-phosphotyrosine 键并释�
 
 serine recombinase 则以 Ser 形成 5′-phosphoserine 键，协同切断四条链后通过亚基相对旋转交换末端，再重新连接。Hin 类 invertase 可翻转启动子区域并改变细菌表面结构表达，Tn3 resolvase 负责拆分复制型转座产生的 cointegrate，大型 serine integrase 如 φC31、Bxb1 则能在不同 att 位点间高效整合。tyrosine 与 serine 两大家族的催化折叠和中间体不同，不能因都使用短识别位点而视为同一种酶。
 
-天然系统常以辅助蛋白建立方向性。λ integrase 在 attP 与 attB 间整合后产生 attL 和 attR；integration host factor、DNA 弯曲和臂位点帮助组装整合复合物，Xis 等则使解整合采用另一套核蛋白结构。Cre–loxP 在简化实验系统中所需辅助因子较少，因此成为条件性删除、倒位和谱系追踪工具；实验设计及脱靶、嵌合与等位基因验证归入[核酸提取、扩增与分子操作](../exptech/biochem_molecular/nucleic_acid.md)。
+天然系统常以辅助蛋白建立方向性。λ integrase 在 attP 与 attB 间整合后产生 attL 和 attR；integration host factor、DNA 弯曲和臂位点帮助组装整合复合物，Xis 等则使解整合采用另一套核蛋白结构。Cre–loxP 在简化实验系统中所需辅助因子较少，因此成为条件性删除、倒位和谱系追踪工具；实验设计及脱靶、嵌合与等位基因验证归入[扩增、克隆与基因编辑](../exptech/biochem_molecular/amplification_cloning.md)。
 
 ## DNA 转座把元件末端接入新的靶 DNA { #dna-transposition }
 

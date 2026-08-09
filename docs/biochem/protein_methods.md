@@ -213,7 +213,7 @@ Merrifield 在 1963 年报道的固相肽合成（SPPS）把首个氨基酸的 C
 
 纯化得到的蛋白能催化反应，证明规定条件下的分子活性；Western blot 在细胞中出现目标大小条带，证明相应表位存在于某个迁移物种；冷冻电镜密度支持某种构象，却不自动给出细胞内的占据比例。把这些证据连起来时，应保留蛋白来源、缓冲液、温度、配体、修饰、浓度和时间尺度。方法的价值不在于给结论增添仪器名称，而在于用彼此不同的误差结构共同排除替代解释。
 
-更具体的上样、层析柱操作、凝胶配制和仪器质控将在[分离技术与蛋白质分析](../exptech/biochem_molecular/separation_protein.md)与[光谱测定与生化定量](../exptech/biochem_molecular/spectroscopy_assays.md)中展开；蛋白质组数据处理、肽谱匹配和错误发现率则见[蛋白质组学](../bioinfo/proteomics.md)。阅读实验结果时，还应把这里的方法条件与[蛋白质结构](protein_structure.md)和[蛋白质功能](protein_function.md)中讨论的构象、装配和活性边界对应起来。
+更具体的上样、层析柱操作、凝胶配制和仪器质控将在[分离、层析与蛋白质制备](../exptech/biochem_molecular/separation_protein.md)与[光谱测定与生化定量](../exptech/biochem_molecular/spectroscopy_assays.md)中展开；蛋白质组数据处理、肽谱匹配和错误发现率则见[蛋白质组学](../bioinfo/proteomics.md)。阅读实验结果时，还应把这里的方法条件与[蛋白质结构](protein_structure.md)和[蛋白质功能](protein_function.md)中讨论的构象、装配和活性边界对应起来。
 
 ## 参考资料与延伸阅读
 

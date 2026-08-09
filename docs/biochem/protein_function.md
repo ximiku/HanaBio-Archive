@@ -137,7 +137,7 @@ HbS 说明一个界面突变可以创造异常聚合，地中海贫血则说明�
 | IgD | 主要作为初始 B 细胞表面的抗原受体 | 与 IgM 共享抗原特异性而具有不同重链恒定区 |
 | IgE | 分泌浓度低，Fc 高亲和结合肥大细胞和嗜碱性粒细胞受体 | 参与寄生虫防御和速发型超敏反应 |
 
-抗原是可被抗体或免疫受体特异识别的分子；能否单独诱导免疫应答还取决于分子大小、复杂性、呈递和宿主环境。半抗原可以与已有抗体结合，却通常需连接较大载体才具有充分免疫原性。MHC 对肽的呈递、T 细胞选择以及 CD4／CD8 的作用属于免疫系统层面的识别过程，统一迁往[抗原加工、呈递与 MHC](../immunology/immuno_apc_mhc.md)，不在此处压缩为几条蛋白质分类口诀。多克隆／单克隆抗体制备、ELISA 和 Western blot 则属于[蛋白质研究方法](protein_methods.md)及[分离技术与蛋白质分析](../exptech/biochem_molecular/separation_protein.md)。
+抗原是可被抗体或免疫受体特异识别的分子；能否单独诱导免疫应答还取决于分子大小、复杂性、呈递和宿主环境。半抗原可以与已有抗体结合，却通常需连接较大载体才具有充分免疫原性。MHC 对肽的呈递、T 细胞选择以及 CD4／CD8 的作用属于免疫系统层面的识别过程，统一迁往[抗原加工、呈递与 MHC](../immunology/immuno_apc_mhc.md)，不在此处压缩为几条蛋白质分类口诀。多克隆／单克隆抗体制备、ELISA 和 Western blot 则属于[蛋白质研究方法](protein_methods.md)及[蛋白质电泳、印迹与免疫检测](../exptech/biochem_molecular/protein_detection.md)。
 
 ## 膜环境、无序区与功能空间 { #membranes-disordered-regions }
 

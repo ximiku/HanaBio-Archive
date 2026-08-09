@@ -90,7 +90,7 @@ RNA-dependent RNA polymerase（RdRP）以 RNA 为模板按 5′→3′ 方向合
 
 ## 转录机制由互补证据而非单一信号重建 { #transcription-evidence }
 
-启动子和转录单位可由 5′ end mapping、nascent RNA sequencing、polymerase occupancy、promoter mutagenesis 和体外重构共同界定。EMSA 或 DNase footprinting 能显示蛋白结合及受保护 DNA，却不能单独证明该位点在细胞内产生正确方向、正确起点的 RNA；steady-state RNA abundance 还混合了合成、加工与降解。相关实验操作和定量设计归入[核酸提取、扩增与分子操作](../exptech/biochem_molecular/nucleic_acid.md)。
+启动子和转录单位可由 5′ end mapping、nascent RNA sequencing、polymerase occupancy、promoter mutagenesis 和体外重构共同界定。EMSA 或 DNase footprinting 能显示蛋白结合及受保护 DNA，却不能单独证明该位点在细胞内产生正确方向、正确起点的 RNA；steady-state RNA abundance 还混合了合成、加工与降解。相关实验操作和定量设计归入[核酸杂交、探针与分子互作检测](../exptech/biochem_molecular/molecular_probes.md)。
 
 rifamycin 与细菌 RNA 聚合酶的结合、α-amanitin 对真核 Pol II 易位的抑制，以及 actinomycin D 插入 DNA 后对核酸合成的阻碍，都曾帮助定位机制。它们的敏感性受酶、物种、剂量、摄取和处理时间影响；cordycepin 还会进入腺苷代谢并扰动 RNA 3′ 端形成。药物导致 RNA 减少不能自动判定受影响的是起始、延伸、加工还是稳定性，也不宜把体外选择性改写成跨系统的固定强弱表。
 
