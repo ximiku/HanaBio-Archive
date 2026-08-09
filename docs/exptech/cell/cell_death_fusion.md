@@ -1,1 +1,107 @@
 # 细胞死亡、融合与功能扰动
+
+细胞数量减少、代谢读数降低和细胞死亡不是同一个观察。细胞可能停止增殖、脱落、进入衰老、暂时降低代谢，也可能跨过不可逆的死亡边界；已经死亡的细胞又会在培养液、收集和洗涤中选择性丢失。因此，死亡实验先要保全样品和时间信息，再把形态、膜完整性、生化执行步骤与可干预性连接起来。培养身份、计数和一般活性读出见[细胞培养、计数与活性检测](culture_fractionation.md#assay-design)，各种死亡机制的生物学背景见[细胞增殖、分化、死亡与衰老](../../cell/cell_life_cycle.md#cell-death-framework)。
+
+## 死亡判定与取样设计 { #death-assay-design }
+
+在实验操作层面，细胞死亡以质膜不可逆通透或细胞完全碎裂为终点；regulated cell death 的具体名称还要求相应执行机制对结局具有因果作用。细胞缩小、肿胀、染色质凝集、膜起泡和碎片化仍是重要形态证据，却不能单独区分凋亡、坏死性凋亡、焦亡、铁死亡或其他死亡方式。现代命名补充了机制层，但并不取消经典形态观察的价值。[^nccd-death]
+
+实验应预先规定刺激、剂量、取样时刻和主要结局，并同时收集贴壁细胞、漂浮细胞与培养上清中的相关信号。只消化仍附着的细胞会系统性漏掉已经脱落的群体，过强消化和离心又可能制造膜损伤。死亡从启动、执行、清除到继发膜破裂具有时间顺序；单一末端比例容易把短暂事件、早期信号与终末损伤混在一起，时间序列至少应覆盖处理前、预期早期变化和最终结局。
+
+阳性对照证明检测链能响应，未处理和载体对照给出基线，处理物无细胞孔用于发现荧光、吸收或发光干扰。若要给死亡方式命名，还需有不同原理的独立证据以及对执行模块的遗传或药理干预。细胞保护剂只有在浓度、暴露和自身毒性受控时才具有“救援”意义；它也可能只是延迟死亡或干扰检测反应。
+
+## Giemsa 与 DAPI 的经典形态观察 { #classic-morphology }
+
+Giemsa 法保留了从整体细胞到细胞核判读的传统路径。原教学记录把细胞用 PBS 调至 $1\times10^6\ \mathrm{cells/mL}$，取一滴涂片或使用细胞飞片，室温晾干，以甲醛固定 3–5 min；随后用 Giemsa 工作液染色 10–15 min，流水短洗、干燥、封片并镜检。正常细胞核多呈较均匀的蓝或蓝紫色；疑似凋亡细胞可见染色质固缩、周边化、深染，细胞轮廓收缩并伴膜褶皱或起泡。一个细胞可能形成多个凋亡小体，计数时必须先规定观察单位是细胞、细胞核还是小体。
+
+这些体积、时间和染液浓度属于原版本记录，应按细胞类型、涂片厚度、固定液和商品工作液验证，不能直接提升为通用 SOP。分裂期染色体凝集、机械损伤、坏死晚期与制片收缩也可能产生深染或核碎裂；盲法判读、预设形态标准、足够视野和第二种终点可降低主观偏差。
+
+DAPI 法的原记录先观察培养物，再弃培养基并用 PBS 轻晃洗 1–2 次，以 $-20\ ^\circ\mathrm{C}$ 预冷甲醇在 $-20\ ^\circ\mathrm{C}$ 固定 10 min；PBS 再洗 1–2 次，在覆有 Parafilm 的载玻片上滴 $70\ \mathrm{\mu L}$ DAPI 染液，将盖玻片细胞面向下置于液滴，避光染色 5–10 min，PBS 洗 3 次后制片镜检。DAPI 显示 DNA 分布，适合辨认核固缩与核碎裂，本身并不是凋亡专一探针；甲醇固定后的样品也不能再提供同一细胞的活体膜状态。
+
+吖啶橙可依据核酸结合状态产生不同颜色，Hoechst／DAPI 可显示核凝集，Giemsa 保留整体形态，这些染色都要结合成像条件和细胞周期解释。原材料中的“细胞内颗粒物增多”只可作为初筛观察，不是凋亡定义。自动图像分析应保存分割规则、阈值和原图，并防止把碎片、多核细胞或相邻细胞误分为单细胞。
+
+## 流式细胞术与膜状态 { #flow-cytometry }
+
+流式细胞术逐个记录散射和荧光，可快速分析大分子含量、细胞周期、死亡标记并分选仍能培养的细胞；其分子特异性来自所用探针和对照，悬液检测通常会丢失组织位置与完整形态。前向散射通常与细胞大小相关，侧向散射受内部结构和折射率影响；经典凋亡群体常出现前向散射降低、侧向散射改变，但材料、仪器和处理都会移动这些分布，不能用固定象限跨实验判定。
+
+Annexin V 在 Ca$^{2+}$ 存在时结合外露的 phosphatidylserine（PS），再配合 PI、7-AAD 或其他膜不透性染料区分取样时的膜通透状态。常见四象限可作描述：双阴性、Annexin V 单阳性、双阳性和膜染料单阳性；这些是操作性群体，不应自动贴成“活、早期凋亡、晚期凋亡、坏死”。PS 也可在血小板活化和若干非凋亡情境中外露，膜通透又会随时间推进，结论需结合形态、执行者和时序。[^death-assay-guidelines]
+
+面板建立要用未染、单染补偿或光谱解混对照、适当的 fluorescence-minus-one 对照和明确阳性材料。分析顺序记录时间稳定段、细胞范围、双联体排除和各生物学门；不得通过过窄的散射门预先删掉正在收缩、肿胀或碎裂的目标群体。把所有原始事件与门控层级保留下来，并报告仪器、激光与滤光片、补偿／解混矩阵、阈值、事件数和门的依据。[^flow-guidelines]
+
+## DNA、caspase 与细胞器读出 { #death-readout-panel }
+
+核小体间切割可形成约 180–200 bp 及其倍数的 DNA ladder；TUNEL 用末端转移酶标记可接近的 DNA 断端；彗星实验显示单细胞 DNA 迁移；固定细胞的 DNA 含量直方图可出现 sub-G$_1$ 群体。四种方法都读取 DNA 断裂或丢失的不同侧面。梯带缺失不排除凋亡，TUNEL 也可标记修复、坏死和制片产生的断端，sub-G$_1$ 对早期及未大量丢失 DNA 的细胞不敏感，彗尾还受电泳条件和细胞裂解影响。
+
+caspase 底物、活性探针、cleaved caspase 或 PARP 片段能够读取蛋白酶执行步骤，但底物可能交叉、切割可能短暂，某些死亡又不依赖经典执行者。线粒体膜电位染料（如 rhodamine 123、TMRM 或 JC-1）响应染料分布、浓度、细胞大小和线粒体量；荧光下降可提示去极化，不能单独证明线粒体凋亡。cytochrome c 释放、BAX／BAK 依赖与 MOMP 提供更接近机制的证据，但仍须同死亡终点相接。
+
+GSH 与氧化还原探针、Ca$^{2+}$、转谷氨酰胺酶和细胞贴壁变化曾被用于补充观察；它们的方向和幅度依细胞背景而变。端粒酶活性不是公认的通用凋亡标记。检测液相 LDH、HMGB1 或炎症因子时还要校正自发释放、总可释放量、培养液降解和细胞数，避免把“膜漏”直接等同某一死亡机制。
+
+## 死亡方式的因果证据 { #death-mode-causality }
+
+凋亡可由核凝集与膜起泡、PS 外露、caspase 执行、MOMP 或特异遗传依赖共同支持。坏死性凋亡需显示 RIPK3—MLKL 执行而非只测 RIPK3 丰度；焦亡需把炎症 caspase、gasdermin 切割／成孔、膜裂解和细胞因子成熟连接；铁死亡需结合脂质过氧化、铁与 GPX4／system x$_c^-$ 相关扰动及相应救援。膜破裂或细胞肿胀只是共同末端，不能替代这些因果链。
+
+自噬体增多也不等于“自噬性死亡”。LC3-II、p62、溶酶体阻断前后的通量、双荧光 LC3 报告器和 ATG 遗传扰动先判断自噬是否增强及是否为死亡所必需。植物和酵母可以出现受调控死亡以及动物“凋亡样”形态，但细胞壁、液泡和谱系特有执行机制不同；实验应保留其传统观察名称，并用物种适用的分子证据限定解释。
+
+## 细胞融合的产物与证据 { #cell-fusion-products }
+
+细胞融合先使质膜连续、胞质混合，两个或多个细胞核可暂时共存。相同遗传背景细胞形成同核体（homokaryon），不同背景细胞形成异核体（heterokaryon）；之后核融合可产生 synkaryon，能够增殖并稳定传代的产物才进一步称为杂种细胞或杂种细胞系。只把一个去核胞质体同有核细胞组合可形成 cybrid。双核或多核形态还可能来自胞质分裂失败，两个细胞相贴也会造成假双阳性，所以“看到两个核”或“双荧光”都不是充分证据。
+
+经典融合诱导包括灭活仙台病毒、polyethylene glycol（PEG）和电融合。仙台病毒包膜融合蛋白曾使不同物种的体细胞形成异核体；PEG 方法简便，但分子量、浓度、残液、温度、pH、细胞密度、暴露和洗脱共同决定融合与毒性；电融合先排列或使细胞接触，再以脉冲造成可逆膜失稳，场强、脉宽、脉冲数和缓冲液电导率影响产率与存活。三种方法都应同时报告融合率、死亡率、非融合双联体和多细胞融合。[^fusion-history]
+
+融合证据可以沿四层建立：膜染料或表面标志显示两类膜成分共存；可扩散胞质标记显示内容物混合；物种特异核标记、FISH 或基因型区分亲本细胞核；单细胞克隆、核型与功能表型证明稳定杂种。双标记实验需要单亲本、未诱导混合、单色和补偿对照；显微图像要以三维或连续焦层排除上下叠放，流式则严格排除双联体但保留真正的大型融合细胞。
+
+## 鸡红细胞—PEG 经典实验 { #peg-erythrocyte-fusion }
+
+原教学方案先以无菌注射器取 Alsever 液 1 mL 和鸡血 1 mL 注入无菌离心管，再加 Alsever 液 2 mL，于 4 ℃保存。实验时离心去除 Alsever 液，以生理盐水配成 5%–10% 鸡红细胞悬液。鸡血必须来自合规来源，采集、运输、锐器、离心和废物处置进入机构批准的动物与生物安全流程；保存时间和材料放行标准也应在方案中明确。
+
+取细胞悬液 1 mL，加入 Hank’s 液 5 mL 混匀，原记录为 `1,000 r，5 min`，随后用移液器小心去上清而不直接倾倒，并用指弹使细胞充分分散。由于 `r` 没有说明 rpm、RCF、转子或半径，这一数值只能作为待校正的原始记录，不能据此执行。离心应以经验证的 $\times g$、时间、温度、转子和制动方式重新定义。
+
+原方案再把 50% PEG 1 mL 在 1 min 内加入红细胞，边加边轻摇混匀，于 37 ℃处理 2–5 min；随后贴管壁缓慢滴加 Hank’s 液 5 mL 终止，37 ℃静置 5 min。再按原记载 `1,000 r，3 min` 离心，去上清、滴片镜检。这里“迅速加入 PEG”指在限定的一分钟内完成均匀接触，而终止液要逐步稀释 PEG；残液过多、细胞团未散、局部 PEG 过高、暴露过久和终止过快都会同时影响融合与渗透损伤。50% PEG 及 2–5 min 只保留为该教学版本，正式实验须按 PEG 分子量、细胞和用途做浓度—时间矩阵。
+
+Hank’s 液是维持离子和渗透条件的平衡盐溶液，D-Hank’s 不含 Ca$^{2+}$、Mg$^{2+}$；PBS 以磷酸盐缓冲体系为主，不能因名称相近而任意互换。Alsever 液中的 NaCl 提供主要渗透贡献，sodium citrate 络合 Ca$^{2+}$ 以抗凝，glucose 提供代谢底物；实际 pH、渗透压、无菌性和配方版本均应记录。镜下应分别计数单细胞、二细胞融合、多细胞融合和破裂细胞，而不是只展示一个“融合成功”视野。
+
+## 融合、拆合与经典功能分析 { #fusion-functional-analysis }
+
+体细胞融合曾用于判断细胞表型的显性与隐性、定位人类染色体上的基因、制备杂交瘤和研究核重编程。人—鼠杂种细胞在传代中常选择性丢失部分人染色体，经典作图据“某人染色体是否保留”与“某表型是否存在”的共分离关系定位基因；现代 FISH、基因分型和测序提高分辨率，但不替代这条细胞遗传推理链。把间期细胞同 M 期细胞融合还可诱导 premature chromosome condensation，从 G$_1$ 单线样、S 期粉末样和 G$_2$ 双线样形态比较周期状态。
+
+经典细胞拆合把有核细胞与胞质体分开后重新组合。细胞松弛素 B 可配合离心产生胞质体，早期资料也记载超声或短波光去核或使核失活；这些处理会损伤细胞骨架、膜和细胞器，必须以核染色、基因组 DNA、活性和胞质标志确认组分。显微操作与微量注射可把细胞核、细胞器、蛋白或核酸直接送入单细胞，注射体积、位置、机械损伤和操作员选择都是实验变量。
+
+融合后的表型不能只同一个亲本比较。应包括两亲本、未诱导混合物、诱导但未融合群体、融合产物和适当选择对照，并明确异核体的短期读出与稳定杂种克隆的长期读出。亲本标志是否互补、染色体是否保留、目标表达是否恢复以及表型是否可传代，分别回答不同层次的问题。
+
+## 功能扰动的时间尺度与对照 { #functional-perturbation }
+
+功能扰动可以来自配体、抑制剂、温度、缺氧和营养变化，也可以来自过表达、显性负效应、RNAi、CRISPR knockout／CRISPRi／CRISPRa、条件重组或诱导性蛋白降解。急性药理处理适合捕捉分钟至小时尺度的活动，却可能有剂量相关脱靶；稳定 knockout 会触发克隆选择和长期补偿；RNAi 常为不完全 knockdown，并受 seed-mediated off-target 和递送反应影响。方法选择应由问题所需的时间尺度、剂量关系、细胞耐受和因果层级决定，不把“新工具”当作旧方法的自动替代。
+
+基线设计包括未处理、vehicle、delivery-only、non-targeting reagent 和已知阳性扰动。RNAi 至少使用多个独立序列，测量目标 mRNA 与蛋白并以不被 siRNA 识别的功能性构建做救援；基因编辑用多个 guide 或独立克隆，验证目标位点、等位基因、表达、蛋白和表型，并以野生型回补或精确回复增强因果性。过表达和显性负构建要测表达量、定位与复合物计量。编辑构建和大片段／脱靶验证详见[扩增、克隆与基因编辑](../biochem_molecular/amplification_cloning.md#editing-outcomes-validation)。[^perturbation-validation]
+
+小分子实验还应测 target engagement 或紧邻目标的生化步骤，建立完整浓度—时间关系，并用结构不同、作用于同一目标的第二化合物或耐药突变作补充。单纯“处理后报告信号下降”不能区分目标抑制、细胞数减少、普遍转录／翻译抑制和检测干扰。
+
+## 报告系统、筛选与结果交付 { #reporters-screens }
+
+荧光蛋白、luciferase、酶底物、转录反应元件、定位转移和 FRET biosensor 把细胞事件转成可测信号。报告构建要说明 promoter／response element、最小启动子、reporter、降解标签、整合方式和克隆；启动子活性、mRNA、reporter 蛋白成熟与信号寿命之间存在时间滞后。双报告归一化能减少部分加样或转染差异，却可能因两个 reporter 共享转录资源、底物或处理敏感性而共同偏移。
+
+化合物可自发荧光、淬灭、吸收激发／发射光，或直接抑制并稳定 firefly luciferase；因此要使用无 reporter 亲本、constitutive reporter、无细胞检测反应和不同读出原理的 counterscreen。正交报告器在相同生物学控制下采用不同检测化学，能帮助识别技术特异假象，但阳性一致仍须 target engagement 和功能救援证明机制。[^reporter-interference]
+
+arrayed screen 让每孔对应一个扰动，便于形态和多参数读出；pooled screen 把扰动身份编码在 guide／barcode 中，通过阳性选择、负选择或分选后测序比较输入与终点丰度。无论 RNAi、CRISPR 还是化合物库，都要维持文库覆盖、记录感染复数或递送效率、设置必需基因与非靶向对照、监测板位／批次效应并预定 hit 规则。初筛命中只生成候选，后续应以独立试剂、剂量—时间、靶点验证、正交表型和救援逐个确认。[^screen-validation]
+
+最终报告把细胞身份与批次、扰动实体及序列、递送和选择、时间剂量、样品回收、仪器与分析、全部对照、独立培养重复和未成功条件连在一起。死亡比例、融合率和报告信号都要保留分母与原始事件定义，使读者能判断结果来自生物学变化、样品选择还是检测系统。
+
+## 参考资料与延伸阅读 { #references }
+
+- Galluzzi, L. et al. [Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018](https://doi.org/10.1038/s41418-017-0012-4). *Cell Death & Differentiation* 25, 486–541 (2018).
+- Galluzzi, L. et al. [Guidelines for the use and interpretation of assays for monitoring cell death in higher eukaryotes](https://doi.org/10.1038/cdd.2009.44). *Cell Death & Differentiation* 16, 1093–1107 (2009).
+- Cossarizza, A. et al. [Guidelines for the use of flow cytometry and cell sorting in immunological studies, third edition](https://doi.org/10.1002/eji.202170126). *European Journal of Immunology* 51, 2708–3145 (2021).
+- Harris, H. & Watkins, J. F. [Hybrid Cells Derived from Mouse and Man](https://doi.org/10.1038/205640a0). *Nature* 205, 640–646 (1965).
+- Davidson, R. L. & Gerald, P. S. [Improved techniques for the induction of mammalian cell hybridization by polyethylene glycol](https://doi.org/10.1007/BF01542629). *Somatic Cell Genetics* 2, 165–176 (1976).
+- Zimmermann, U. & Vienken, J. [Electric field-induced cell-to-cell fusion](https://doi.org/10.1007/BF01868659). *Journal of Membrane Biology* 67, 165–182 (1982).
+- Cullen, B. R. [Enhancing and confirming the specificity of RNAi experiments](https://doi.org/10.1038/nmeth913). *Nature Methods* 3, 677–681 (2006).
+- Auld, D. S. & Inglese, J. [Interferences with Luciferase Reporter Enzymes](https://www.ncbi.nlm.nih.gov/books/NBK374281/). *Assay Guidance Manual* (2016; updated 2018).
+- Costa, J. R. et al. [Genome Editing Using Engineered Nucleases and Their Use in Genomic Screening](https://www.ncbi.nlm.nih.gov/books/NBK464635/). *Assay Guidance Manual* (2017).
+
+[^nccd-death]: NCCD 2018 以形态、生化、功能和必需分子机制共同组织死亡命名，并把不可逆质膜通透或完全碎裂作为死亡终点的操作性依据。
+[^death-assay-guidelines]: Galluzzi 等的死亡检测指南比较膜通透、PS 外露、DNA 断裂、线粒体、caspase 与形态读出，强调单个 assay 不能充分判定死亡机制。
+[^flow-guidelines]: Cossarizza 等的流式指南系统说明样品制备、仪器质控、单色补偿、FMO、dead-cell handling、门控、分选和结果报告。
+[^fusion-history]: Harris 与 Watkins 用灭活仙台病毒建立跨物种人工异核体；Davidson 与 Gerald 系统优化 PEG 的分子量、浓度、细胞密度、温度、暴露和洗脱；Zimmermann 与 Vienken 建立电场诱导融合的膜物理框架。
+[^perturbation-validation]: Cullen 讨论 RNAi 序列依赖的脱靶与特异性确认；本站基因编辑页及 Assay Guidance Manual 的 genome-editing chapter 共同支持多试剂、位点验证、独立克隆和救援链。
+[^reporter-interference]: Auld 与 Inglese 说明 luciferase 抑制、稳定化和化合物光学干扰可制造 reporter 假象，并建议 counterscreen 与不同检测化学的正交报告系统。
+[^screen-validation]: Costa 等的 genome-editing screen 指南要求细胞模型、文库代表性、阳性／阴性选择、输入—终点测序和命中后的基因型与表型验证。
