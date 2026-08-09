@@ -476,13 +476,31 @@ nav:
       - 人体解剖学概论与运动系统: inter/anatomy/human_anatomy.md
       - 消化系统、呼吸系统与腹膜: inter/anatomy/viscera.md
       - 泌尿系统: inter/anatomy/urinary_system.md
-      - 生殖系统、会阴与乳房: inter/anatomy/reproductive_system.md
       - 心血管与淋巴系统: inter/anatomy/circulatory_lymphatic.md
       - 内分泌器官: inter/anatomy/endocrine_organs.md
-    - 系统生物学: inter/systems_biology.md
-    - 生物物理学: inter/biophysics.md
-    - 化学生物学: inter/chemical_synthetic_biology.md
-    - 合成生物学: inter/synthetic_biology.md
+    - 系统生物学:
+      - inter/systems_biology.md
+      - 生物网络结构与网络模体: inter/systems_networks.md
+      - 反馈、开关与振荡: inter/systems_dynamics.md
+      - 随机动力学、空间模式与群体系统: inter/systems_stochastic_spatial.md
+      - 系统建模、参数推断与实验检验: inter/systems_modeling_inference.md
+    - 生物物理学:
+      - inter/biophysics.md
+      - 统计热力学与分子相互作用: inter/biophysics_thermodynamics.md
+      - 随机运动、扩散与膜输运: inter/biophysics_transport.md
+      - 大分子物理、膜与分子机器: inter/biophysics_macromolecular.md
+      - 细胞与组织力学及生物流动: inter/biophysics_mechanics_flows.md
+    - 化学生物学:
+      - inter/chemical_synthetic_biology.md
+      - 化学探针与化学遗传学: inter/chemical_probes.md
+      - 生物正交化学、标记与成像: inter/chemical_bioorthogonal.md
+      - 共价工具、化学蛋白质组学与靶点鉴定: inter/chemical_proteomics.md
+    - 合成生物学:
+      - inter/synthetic_biology.md
+      - 生物元件与合成基因线路: inter/synthetic_circuits.md
+      - 基因组设计、代谢工程与生物制造: inter/synthetic_genome_metabolic.md
+      - 无细胞系统、最小细胞与人工细胞: inter/synthetic_cell_free.md
+      - 多细胞合成系统与空间模式: inter/synthetic_multicellular.md
 
   - Blog:
     - Blog: blog/index.md
