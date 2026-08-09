@@ -398,14 +398,22 @@ nav:
 
   - 统计:
     - 生物统计学: biostat/index.md
-    - 生物数据整理与描述统计: biostat/data_description.md
-    - 概率与概率分布: biostat/probability.md
-    - 抽样、参数估计与置信区间: biostat/sampling_estimation.md
-    - 假设检验: biostat/hypothesis_testing.md
-    - 分类资料与非参数检验: biostat/categorical_nonparametric.md
-    - 方差分析、相关与回归: biostat/anova_regression.md
-    - 广义模型与多元统计: biostat/multivariate_models.md
-    - 实验设计、效能与可重复统计: biostat/experimental_design.md
+    - 数据、概率与统计推断:
+      - 生物数据整理与描述统计: biostat/data_description.md
+      - 概率与概率分布: biostat/probability.md
+      - 抽样、参数估计与置信区间: biostat/sampling_estimation.md
+      - 假设检验、效应量与多重比较: biostat/hypothesis_testing.md
+    - 比较、回归与多元方法:
+      - 分类资料与非参数检验: biostat/categorical_nonparametric.md
+      - 方差分析与线性模型: biostat/anova_regression.md
+      - 相关、回归与模型诊断: biostat/correlation_regression.md
+      - 广义线性模型与混合效应模型: biostat/generalized_mixed_models.md
+      - 多元统计、降维与分类: biostat/multivariate_models.md
+    - 研究设计与专题推断:
+      - 实验设计、效能与可重复统计: biostat/experimental_design.md
+      - 生存分析与纵向数据: biostat/survival_longitudinal.md
+      - 贝叶斯推断与计算统计: biostat/bayesian_computational.md
+      - 因果推断与荟萃分析: biostat/causal_meta_analysis.md
 
   - 实验:
     - 生物实验技术: exptech/index.md
