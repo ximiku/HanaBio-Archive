@@ -39,7 +39,7 @@
 
 ## 膜杂交与文库筛选 { #membrane-hybridization }
 
-### Southern 与 Northern blot { #southern-northern }
+### Southern 与 Northern 核酸印迹 { #southern-northern }
 
 Southern blot 先用限制性内切酶切割 DNA，经琼脂糖凝胶按长度分离，再在胶内使 DNA 变性，将片段转移到硝酸纤维素或尼龙膜并固定。探针杂交、严紧洗涤和显影之后，膜上的信号仍保留原凝胶的迁移坐标，因此能把“序列是否互补”与“互补序列位于多大片段”结合起来。Southern 1975 年的原始工作以放射性 RNA 探针检测转移到硝酸纤维素膜的限制片段，奠定了这一思路。[^southern-original]
 

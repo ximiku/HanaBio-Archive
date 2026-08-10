@@ -66,7 +66,7 @@ integrin 由 $\alpha$ 与 $\beta$ 亚基组成，既接受胞内 talin／kindlin
 
 ## 动物细胞外基质的材料组成 { #animal-ecm }
 
-### collagen 与 elastin { #collagen-elastin }
+### 胶原与弹性蛋白 { #collagen-elastin }
 
 collagen 家族为 ECM 提供抗拉骨架。单条 $\alpha$ 链采用左手 polyproline II 样构象，三条链再缠绕为右手三股螺旋；Gly-X-Y 重复使每第三位的 glycine 能容纳于螺旋中心，proline 和 hydroxyproline 则有助于稳定构象。高分辨率模型肽结构确立了这一几何，而“collagen 本身是一条左手螺旋”遗漏了链与三聚体两个层级。[^collagen-structure]
 
@@ -74,13 +74,13 @@ collagen 家族为 ECM 提供抗拉骨架。单条 $\alpha$ 链采用左手 poly
 
 elastin 赋予大动脉、肺和弹性组织可逆伸展能力。细胞把 tropoelastin 沉积到 fibrillin 微原纤维支架上，lysyl oxidase 促成 desmosine 等交联；疏水区在拉伸后趋向回缩，使网络反复储存和释放机械能。elastin、fibrillin 与 collagen 的比例、交联和空间组织共同决定组织曲线，弹性不能只由某一种纤维的含量推断。[^ecm-textbook]
 
-### GAG 与 proteoglycan 的水合相 { #gag-proteoglycan }
+### 糖胺聚糖与蛋白聚糖的水合相 { #gag-proteoglycan }
 
 glycosaminoglycan（GAG）由重复二糖组成，密集羧基和硫酸基吸引反离子与水，形成占据较大体积的水合相。多数 GAG 含 amino sugar 与 uronic acid，keratan sulfate 是重要例外；多数 sulfated GAG 在 Golgi 装配到 core protein 上，常经 xylose—serine 连接区起始，但 keratan sulfate 的连接方式又不完全相同。hyaluronan 不硫酸化，不共价连接 core protein，并由质膜上的 hyaluronan synthase 直接向细胞外合成。
 
 core protein 与 GAG 链构成 proteoglycan。aggrecan 等可借 hyaluronan 形成巨大聚集体，使软骨抵抗压缩；perlecan 是基底膜的重要组分；细胞表面的 syndecan 还能与生长因子、黏附分子和骨架相接。水合、孔隙和配体结合三种性质使 proteoglycan 同时参与承载、过滤和信号呈递，而不是只作“黏液状填充物”。
 
-### fibronectin 与 laminin 的装配 { #fibronectin-laminin }
+### 纤维连接蛋白与层粘连蛋白的装配 { #fibronectin-laminin }
 
 fibronectin 是由二硫键连接的二聚体，具有 integrin、collagen、heparan sulfate 等结合模块。可溶 fibronectin 与 integrin 结合后，细胞张力拉开部分模块并暴露自结合位点，促使其逐步装配为不溶纤维；Rho 驱动的 actomyosin 收缩可调节这一过程。[^fibronectin-assembly] ECM 纤维因此不是先由细胞外自行搭好再供细胞附着，而是在细胞施力、分泌和降解中持续生成。
 

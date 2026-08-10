@@ -103,7 +103,7 @@ $3_{10}$ 螺旋以 $i\rightarrow i+3$ 氢键形成 10 元环，π-螺旋以 $i\r
 | 折叠或拓扑 | 结构域中二级结构元件的总体排列与连接方式 | 相似折叠不必然表示功能相同，也不单凭某个序列相似度阈值判定同源 |
 | 家族／超家族 | 依据序列、结构、功能证据推断的不同层级进化关系 | 数据库定义与阈值不同；“30% 相同”不是普适家族界线 |
 
-CATH 把结构域按 Class、Architecture、Topology 和 Homologous superfamily 分层，SCOPe 则使用 class、fold、superfamily、family 等层级；两者都把“结构相似”和“共同祖先的证据”分开处理。InterPro 还区分同源超家族、家族、结构域、重复和位点等条目类型。数据库体系不同，正说明模体、结构域、折叠、家族不能互作同义词。[^domain-classification]
+CATH 把结构域按 Class、Architecture、Topology 和 Homologous superfamily 分层，SCOPe 则使用 class、fold、superfamily、family 等层级；两者都把“结构相似”和“共同祖先的证据”分开处理。InterPro 还区分同源超家族、家族、结构域、重复和位点等条目类型。数据库体系不同，正说明模体、结构域、折叠、家族不能彼此视为同义词。[^domain-classification]
 
 ### 球状、纤维状、膜蛋白与无序区 { #protein-shape-environment }
 

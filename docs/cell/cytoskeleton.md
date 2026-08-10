@@ -74,7 +74,7 @@ $\gamma$-tubulin 环复合物（$\gamma$-TuRC）提供与微管几何相容的�
 
 kinesin 共有的马达结构域把 ATP 循环耦联到微管结合。许多 N 端马达型 kinesin 向正端运动，kinesin-1 的二聚体常以两个头交替步行，每消耗约一个 ATP 前进一个约 8 nm 的微管二聚体重复距离。这个数值描述经典单分子条件，不是所有 kinesin 的统一步距。kinesin-2、-3 等参与不同货物运输，kinesin-5 可交联并滑动反向平行微管，C 端马达型 kinesin-14 多向负端运动，kinesin-13 主要作为末端解聚酶而非搬运马达。家族编号因而不能被压缩成“1—13 都向正端、14 向负端”的绝对方向表。
 
-### dynein—dynactin—适配体机器 { #dynein-motors }
+### 动力蛋白—动力蛋白激活复合物—适配体机器 { #dynein-motors }
 
 胞质 dynein-1 是向微管负端运动的大型 AAA$^+$ 马达。游离 dynein 并不会自动高效搬运所有货物；dynactin 和 coiled-coil 激活适配体把马达置于过程性构象，并用不同尾部复合物连接内体、Golgi 载体、RNA、蛋白复合物或有丝分裂结构。Rab、膜脂和货物受体进一步限定何时招募。dynein-2 则专门参与纤毛内逆向运输，不能与胞质 dynein-1 的一般货物路线混为一谈。[^dynein-transport]
 
