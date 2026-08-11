@@ -32,7 +32,7 @@ Maxam–Gilbert 法在同一时期通过碱基选择性的化学修饰与链断�
 
 ## 大规模并行短读长测序 { #massively-parallel-short-reads }
 
-Illumina sequencing by synthesis（SBS）把带接头的单链文库固定在流动槽表面，经桥式扩增形成由同一模板衍生的 cluster。每个循环同时加入四种带荧光标记的可逆终止核苷酸；成像记录每个 cluster 本轮的颜色，去除荧光和阻断基团后进入下一轮。index read 用同一循环化学读取样本标识，paired-end 流程则在一端读完后重建模板方向并读取另一端。[^illumina-sbs]
+Illumina sequencing by synthesis（SBS）先把带接头的单链文库固定在流动槽表面，再按平台采用的流动槽结构成簇。非图案化流动槽上的模板反复弯折、延伸和变性，以桥式扩增形成由同一模板衍生的 cluster；图案化流动槽则把模板限制在有序纳米孔中，以排他性扩增（exclusion amplification，ExAmp）近乎同时完成分子落位与扩增，降低多个文库分子共同形成一个 cluster 的机会。每个循环随后加入带荧光标记的可逆终止核苷酸；成像记录每个 cluster 本轮的颜色，去除荧光和阻断基团后进入下一轮。index read 用同一循环化学读取样本标识，paired-end 流程则在一端读完后重建模板方向并读取另一端。[^illumina-sbs]
 
 一个 cluster 中的分子理想上同步延伸。部分分子提前或滞后会造成 phasing／prephasing，多个循环后信号混合，末端碱基质量常随之下降。低多样性文库在早期循环中呈现近乎相同的碱基组成，也会妨碍颜色矩阵和 cluster 定位；过密 cluster、成像异常、接头二聚体以及 index 误分配则产生不同层次的问题。Illumina 的主要原始错误通常表现为碱基替换，但具体错误谱随仪器、试剂、运行与碱基判读软件而变，不能用一个跨平台固定错误率概括。
 
@@ -168,7 +168,7 @@ RNA-seq 的读段数和“覆盖”还受到表达量、转录本长度、RNA �
 [^sanger-chain-termination]: Sanger、Nicklen 与 Coulson 的[原始论文](https://doi.org/10.1073/pnas.74.12.5463)说明 2′,3′-双脱氧核苷酸和相关类似物如何作为 DNA 聚合酶的特异链终止抑制剂。
 [^maxam-gilbert]: Maxam 与 Gilbert 的[化学裂解测序论文](https://doi.org/10.1073/pnas.74.2.560)描述末端标记 DNA 的碱基选择性修饰、断裂与凝胶分离。
 [^homochromatography-history]: Sanger 等 1973 年以引物延伸测定噬菌体 f1 DNA 片段时，明确使用二维 [homochromatography 分离聚合产物](https://pmc.ncbi.nlm.nih.gov/articles/PMC433459/)；早期 RNA 序列工作也以 DEAE-纤维素薄层和寡核苷酸混合物完成长片段分离。
-[^illumina-sbs]: Illumina 的 [SBS 技术说明](https://www.illumina.com/science/technology/next-generation-sequencing/sequencing-technology.html)描述四种荧光可逆终止核苷酸逐循环成像及 single-read／paired-end 路线；其[术语表](https://www.illumina.com/science/technology/next-generation-sequencing/beginners/tutorials/glossary.html)说明带互补接头的文库、桥式扩增、cluster 与 paired-end 的关系。
+[^illumina-sbs]: Illumina 的 [SBS 技术说明](https://www.illumina.com/science/technology/next-generation-sequencing/sequencing-technology.html)描述可逆终止核苷酸逐循环成像及 single-read／paired-end 路线；其[术语表](https://www.illumina.com/science/technology/next-generation-sequencing/beginners/tutorials/glossary.html)说明模板弯折、延伸与变性构成的桥式扩增。[图案化流动槽说明](https://www.illumina.com/science/technology/next-generation-sequencing/sequencing-technology/patterned-flow-cells.html)与 [ExAmp 课程讲稿](https://jp.illumina.com/content/dam/illumina-support/courses/examp-cluster-workflow/story_content/external_files/ExAmp_Transcript.pdf)则说明纳米孔、同时落位—扩增和排他性成簇。
 [^ion-torrent]: Rothberg 等的[半导体测序原始论文](https://doi.org/10.1038/nature10242)说明芯片直接感知模板指导的聚合反应所释放的离子，因而属于非光学 sequencing by synthesis。
 [^pacbio-hifi]: PacBio 的 [HiFi 原理页](https://www.pacb.com/technology/hifi-sequencing/how-it-works/)说明 ZMW 中锚定聚合酶、带标记核苷酸和环形模板的重复读取；平台可提供的修饰信息以 native 分子、具体化学和模型为前提。
 [^ccs-hifi]: Wenger 等通过优化 [circular consensus sequencing](https://doi.org/10.1038/s41587-019-0217-9)，把同一 SMRTbell 分子的多次 subread 合成为高准确度长 read；CCS 质量来自重复观察形成的分子内共识。
