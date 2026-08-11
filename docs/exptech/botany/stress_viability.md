@@ -56,7 +56,7 @@ BTB 琼脂法把约 30 粒吸胀种子胚部向下、间隔至少 1 cm 插入指
 
 脯氨酸在多种渗透和盐胁迫下可积累，并参与渗透调节、蛋白保护、碳氮代谢和氧化还原过程；其含量也受器官、发育和恢复阶段影响。含量升高可能伴随有效驯化，也可能反映严重失水或代谢受阻，不能单独作为“耐旱性更强”的证据。跨研究综述同样指出，脯氨酸与耐受性的方向会随物种、组织和胁迫而改变，应与生长、含水状态、恢复和膜损伤等终点并用。[^proline-boundary]
 
-经典 Bates 法在酸性条件下使脯氨酸与茚三酮形成可进入有机相的红色产物，并在约 520 nm 测定。原流程称取正常供水与干旱处理的蚕豆或小麦鲜叶 0.2—0.5 g，加入 5 mL 3%（m/V）磺基水杨酸和少量石英砂研磨，具塞后在沸水浴浸提 15 min，再过滤。每个反应取 0.5 mL 滤液，加入 1.5 mL 水、2 mL 冰醋酸和 2 mL 经验证的酸性茚三酮试剂，沸水浴 30 min 后冷却；加入 5 mL 甲苯充分混合，避光静置至分层，原素材规定 2 h，再取甲苯层测 $A_{520}$。[^proline-bates]
+经典 Bates 法在酸性条件下使脯氨酸与茚三酮形成可进入有机相的红色产物，并在约 520 nm 测定。原流程称取正常供水与干旱处理的蚕豆或小麦鲜叶 0.2—0.5 g，加入 5 mL 3%（m/V）磺基水杨酸和少量石英砂研磨，转入与酸性水相及沸水浴相容的反应容器，按机构 SOP 设置防溅和压力释放后浸提 15 min，再过滤。每个反应取 0.5 mL 滤液，加入 1.5 mL 水、2 mL 冰醋酸和 2 mL 经验证的酸性茚三酮试剂，在沸水浴中显色 30 min，并按 SOP 冷却到安全温度；随后才加入 5 mL 甲苯充分混合，避光静置至分层，原素材规定 2 h，再取甲苯层测 $A_{520}$。[^proline-bates]
 
 同批脯氨酸标准必须经历显色、加热、萃取和静置全流程，另设不含叶片的试剂空白与基质质控；只把标准直接溶于甲苯测量，不能校正反应和分配损失。若标准曲线给出甲苯相浓度 $c$（$\mathrm{\mu g\,mL^{-1}}$），游离脯氨酸按实际体积作质量平衡：
 
@@ -66,7 +66,9 @@ n_{\mathrm{Pro}}=
 \frac{V_{\mathrm{ext}}}{V_{\mathrm{aliquot}}},
 $$
 
-其中 $V_{\mathrm{tol}}$ 是甲苯相体积，$V_{\mathrm{ext}}$ 是总提取液体积，$V_{\mathrm{aliquot}}$ 是进入反应的提取液体积，$M_{\mathrm{Pro}}=115.13\ \mathrm{\mu g\,\mu mol^{-1}}$；再除以取样鲜质量得到 $\mathrm{\mu mol\,g^{-1}\,FW}$。干旱会改变组织含水量，只按鲜质量归一化可能放大“浓缩效应”，宜同步报告干质量或相对含水量。甲苯、冰醋酸和酸性茚三酮体系只能在经批准的通风、加热和危废程序下使用，水浴管必须密闭且与热源相容。
+其中 $V_{\mathrm{tol}}$ 是甲苯相体积，$V_{\mathrm{ext}}$ 是总提取液体积，$V_{\mathrm{aliquot}}$ 是进入反应的提取液体积，$M_{\mathrm{Pro}}=115.13\ \mathrm{\mu g\,\mu mol^{-1}}$；再除以取样鲜质量得到 $\mathrm{\mu mol\,g^{-1}\,FW}$。干旱会改变组织含水量，只按鲜质量归一化可能放大“浓缩效应”，宜同步报告干质量或相对含水量。
+
+酸性浸提、冰醋酸—茚三酮显色加热与甲苯萃取属于不同的安全阶段。前两种加热所用容器和装置须经机构 SOP 确认与试剂、水浴相容，并同时满足防挥发和压力释放；不得把普通反应管密闭后放入水浴。只有显色加热结束并冷却到 SOP 规定的安全温度后才加入甲苯，含甲苯的混合、分层和取样在合格通风橱内进行且不再加热。[^proline-heating-safety] 全流程产生的酸性有机废液进入相应危险废物路线。
 
 ## 相对电导率显示冻融后的膜渗漏 { #electrolyte-leakage }
 
@@ -125,6 +127,7 @@ $q_{\mathrm{TBARS}}$ 的单位为 $\mathrm{\mu mol\,g^{-1}\,FW}$。结果应标�
 [^ista-tetrazolium]: International Seed Testing Association. [Handbook on Tetrazolium Testing, 3rd ed.](https://www.seedtest.org/en/handbooks/handbook-on-tetrazolium-testing-3rd-edition-2025-product-1072.html). 2025. 手册把种子准备、解剖结构和活／死染色图谱纳入物种特异的拓扑判读。
 [^proline-boundary]: Sousa BFP, Rodrigues MA, Coelho B, et al. Accumulation of Proline in Plants under Contaminated Soils—Are We on the Same Page? *Antioxidants*. 2023;12:666. [doi:10.3390/antiox12030666](https://doi.org/10.3390/antiox12030666).
 [^proline-bates]: Bates LS, Waldren RP, Teare ID. Rapid Determination of Free Proline for Water-Stress Studies. *Plant and Soil*. 1973;39:205–207. [doi:10.1007/BF00018060](https://doi.org/10.1007/BF00018060).
+[^proline-heating-safety]: American Chemical Society Committee on Chemical Safety. [*Chemical Safety Manual for Small Businesses*, 3rd ed.](https://www.acs.org/content/dam/acsorg/about/governance/committees/chemicalsafety/publications/chemical-safety-manual-for-small-businesses.pdf)；CDC/NIOSH. [Toluene](https://www.cdc.gov/niosh/npg/npgd0619.html)；[Acetic acid](https://www.cdc.gov/niosh/npg/npgd0002.html). ACS 手册要求加热装置保持通气且不得加热封闭容器；NIOSH 将甲苯列为 Class IB 易燃液体，并列出冰醋酸的可燃、腐蚀与蒸气暴露风险。用于区分显色加热与甲苯萃取阶段，具体实施仍以机构风险评估、SOP 和试剂 SDS 为准。
 [^electrolyte-leakage]: Prášil I, Zámečník J. The Use of a Conductivity Measurement Method for Assessing Freezing Injury. I. Influence of Leakage Time, Segment Number, Size and Shape in a Sample on Evaluation of the Degree of Injury. *Environmental and Experimental Botany*. 1998;40:1–10. [doi:10.1016/S0098-8472(98)00010-0](https://doi.org/10.1016/S0098-8472(98)00010-0).
 [^heath-packer]: Heath RL, Packer L. Photoperoxidation in Isolated Chloroplasts. I. Kinetics and Stoichiometry of Fatty Acid Peroxidation. *Archives of Biochemistry and Biophysics*. 1968;125:189–198. [doi:10.1016/0003-9861(68)90654-1](https://doi.org/10.1016/0003-9861(68)90654-1).
 [^tbars-interference]: Hodges DM, DeLong JM, Forney CF, Prange RK. Improving the Thiobarbituric Acid-Reactive-Substances Assay for Estimating Lipid Peroxidation in Plant Tissues Containing Anthocyanin and Other Interfering Compounds. *Planta*. 1999;207:604–611. [doi:10.1007/s004250050524](https://doi.org/10.1007/s004250050524).
