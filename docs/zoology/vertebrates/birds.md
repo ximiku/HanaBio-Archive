@@ -168,7 +168,7 @@
 
 平胸总目把鸵鸟、鸸鹋、鹤鸵、几维鸟、美洲鸵和已灭绝的恐鸟、象鸟等放在一起，依据平胸骨、翼退化和奔跑生活；企鹅总目依据鳍状翼和潜水；其余绝大多数鸟归突胸总目。现代树显示，能飞的䳍类嵌在古颚类不同失飞支系之间，传统“平胸鸟”若排除䳍类不是天然单系，平胸和巨大体型经历了多次改变。企鹅则深嵌新鸟类，和信天翁、鸊鷉、鹭、鹰、雀一样都是新颚类中的一支，不能与全部“突胸鸟”对列。基因组与化石证据在此重排性状出现次数，并未取消胸骨、翼和足的观察价值。[^ratite-evolution]
 
-现生鸟的高层框架首先分古颚类和新颚类。古颚类包括鸵鸟、美洲鸵、几维鸟、鹤鸵、鸸鹋和䳍；新颚类中，鸡形目与雁形目组成鸡雁类，其他绝大多数现生目组成新鸟类。新鸟类在白垩纪末前后的快速辐射使若干目间关系仍会随数据与方法调整。现行世界鸟类名录约采用四十余个目，远多于旧教材常列的二十多个目；下面保留传统代表并注明关键拆分，重点是把标本放回可核验的形态组合，而非死记一个永不变化的目数。[^ioc-list]
+现生鸟的高层框架首先分古颚类和新颚类。古颚类包括鸵鸟、美洲鸵、几维鸟、鹤鸵、鸸鹋和䳍；新颚类中，鸡形目与雁形目组成鸡雁类，其他绝大多数现生目组成新鸟类。新鸟类在白垩纪末前后的快速辐射使若干目间关系仍会随数据与方法调整。IOC World Bird List v15.2 收录 44 个目，远多于旧教材常列的二十多个目；下面保留传统代表并注明关键拆分，重点是把标本放回可核验的形态组合，而非死记一个永不变化的目数。[^ioc-list]
 
 ### 古颚类、企鹅与主要生活型
 
@@ -232,7 +232,7 @@
 - B. K. McNab. *The Physiological Ecology of Vertebrates: A View from Energetics*. Cornell University Press, 2002.
 - K. V. Kardong. *Vertebrates: Comparative Anatomy, Function, Evolution*, 8th ed. McGraw-Hill Education, 2019.
 - M. J. Benton. *Vertebrate Palaeontology*, 4th ed. Wiley Blackwell, 2015.
-- Gill F, Donsker D, Rasmussen P (eds.). [IOC World Bird List v15.2](https://www.worldbirdnames.org/). 2026。动态更新的世界鸟类分类与名录。
+- Gill F, Donsker D, Rasmussen P (eds.). [IOC World Bird List v15.2](https://www.worldbirdnames.org/new/). 2026。IOC 名录的最终版本；官网说明后续工作已转向 AviList。
 
 [^avian-molt]: Kuenzel WJ. [Neurobiology of molt in avian species](https://doi.org/10.1093/ps/82.6.981). *Poultry Science*. 2003;82:981–991。
 [^bursa]: Ratcliffe MJH. [The ontogeny and cloning of B cells in the bursa of Fabricius](https://doi.org/10.1016/0167-5699(85)90039-8). *Immunology Today*. 1985;6:223–227；Nagy N, Oláh I. [Experimental evidence for the ectodermal origin of the epithelial anlage of the chicken bursa of Fabricius](https://doi.org/10.1242/dev.055194). *Development*. 2010;137:3019–3023。
@@ -244,4 +244,4 @@
 [^feathered-dinosaurs]: Xu X, Zhou Z, Prum RO. [Branched integumental structures in Sinornithosaurus and the origin of feathers](https://doi.org/10.1038/35065589). *Nature*. 2001;410:200–204；Xu X, et al. [An integrative approach to understanding bird origins](https://doi.org/10.1126/science.1253293). *Science*. 2014;346:1253293。
 [^avian-phylogenomics]: Jarvis ED, et al. [Whole-genome analyses resolve early branches in the tree of life of modern birds](https://doi.org/10.1126/science.1253451). *Science*. 2014;346:1320–1331；Stiller J, et al. [Complexity of avian evolution revealed by family-level genomes](https://doi.org/10.1038/s41586-024-07323-1). *Nature*. 2024;629:851–860。
 [^ratite-evolution]: Harshman J, et al. [Phylogenomic evidence for multiple losses of flight in ratite birds](https://doi.org/10.1073/pnas.0803242105). *Proceedings of the National Academy of Sciences*. 2008;105:13462–13467；Sackton TB, et al. [Convergent regulatory evolution and loss of flight in paleognathous birds](https://doi.org/10.1126/science.aat7244). *Science*. 2019;364:74–78。
-[^ioc-list]: Gill F, Donsker D, Rasmussen P (eds.). [IOC World Bird List v15.2: Orders and families](https://www.worldbirdnames.org/new/classification/orders-of-birds-draft/). 2026。不同世界名录在少数目、科界限上仍可能采用不同处理。
+[^ioc-list]: Gill F, Donsker D, Rasmussen P (eds.). [IOC World Bird List v15.2](https://www.worldbirdnames.org/new/). 2026。2026-08-12 核验：官网列出 44 目、251 科和 2,389 属，并说明 v15.2 为 IOC 名录的最终版本；不同世界名录在少数目、科界限上仍可能采用不同处理。
