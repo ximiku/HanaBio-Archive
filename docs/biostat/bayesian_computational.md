@@ -129,7 +129,9 @@ p(y)=\int p(y\mid\theta)p(\theta)\,\mathrm d\theta.
 
 ## 后验概括与可信区间 { #posterior-summaries }
 
-后验均值、后验中位数和后验众数分别对应平方损失、绝对损失和局部最高密度等不同概括。对对称单峰分布它们可能接近；偏斜、多峰或边界后验中，一个中心数值会隐藏重要结构。报告应优先保留后验分布、分位数和科学尺度上的派生量，而不是把每个参数压缩为“估计值±标准误”。
+后验均值与后验中位数分别对应平方损失和绝对损失下的 Bayes 估计。最大后验估计（maximum a posteriori estimate, MAP）则是在指定参数化下使后验密度达到全局最大值的位置。连续参数单点的后验概率通常为零，MAP 比较的是密度高度；非线性重参数化会通过 Jacobian 改变密度及其众数。多峰后验可能含有多个局部众数或并列的全局众数，单次局部优化收敛也不证明找到了全局 MAP。Stan 参考手册同样区分了受约束参数空间与含 Jacobian 的无约束空间中的众数。[^stan-map-optimization]
+
+对对称单峰分布，后验均值、中位数和众数可能接近；偏斜、多峰或边界后验中，一个中心数值会隐藏重要结构。报告应优先保留后验分布、分位数和科学尺度上的派生量，而不是把每个参数压缩为“估计值±标准误”。
 
 后验概率可以直接表达模型内的命题，例如
 
@@ -299,6 +301,7 @@ Simulation-based calibration（SBC）进一步从先验抽取参数并生成数�
 [^stan-conjugacy]: Stan Development Team. [Exploiting conjugacy](https://mc-stan.org/docs/2_28/stan-users-guide/exploiting-conjugacy.html). *Stan User’s Guide*.
 [^prior-likelihood-context]: Gelman, A., Simpson, D. & Betancourt, M. (2017). [The Prior Can Often Only Be Understood in the Context of the Likelihood](https://doi.org/10.3390/e19100555). *Entropy*, 19, 555.
 [^stan-predictive-checks]: Stan Development Team. [Posterior and Prior Predictive Checks](https://mc-stan.org/docs/stan-users-guide/posterior-predictive-checks.html). *Stan User’s Guide*.
+[^stan-map-optimization]: Stan Development Team. [Optimization](https://mc-stan.org/docs/reference-manual/optimization.html). *Stan Reference Manual*.
 [^stan-posterior-predictive]: Stan Development Team. [Posterior Predictive Sampling](https://mc-stan.org/docs/stan-users-guide/posterior-prediction.html). *Stan User’s Guide*.
 [^gabry-visualization]: Gabry, J., Simpson, D., Vehtari, A., Betancourt, M. & Gelman, A. (2019). [Visualization in Bayesian workflow](https://doi.org/10.1111/rssa.12378). *Journal of the Royal Statistical Society: Series A*, 182, 389–402.
 [^stan-partial-pooling]: Stan Development Team. [Hierarchical logistic regression](https://mc-stan.org/docs/2_26/stan-users-guide/hierarchical-logistic-regression.html). *Stan User’s Guide*.
