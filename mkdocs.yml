@@ -328,27 +328,27 @@ nav:
 
   - 生态:
     - 生态学: ecology/index.md
-    - 个体与环境:
+    - 个体生态学:
       - 生态因子、耐受与适应: ecology/organism_environment.md
       - 光、温度、风与火: ecology/energy_environment.md
       - 水、土壤、气候与营养: ecology/water_soil_climate.md
-    - 种群与生活史:
+    - 种群生态学:
       - 种群数量、取样与统计: ecology/population_ecology.md
       - 种群增长、调节与空间动态: ecology/population_dynamics.md
       - 生活史生态学: ecology/life_history.md
-    - 种间关系与群落:
+    - 群落生态学:
       - 竞争、生态位与共存: ecology/species_interactions.md
       - 捕食、寄生与互利: ecology/consumer_resource_interactions.md
       - 群落组成、结构与多样性: ecology/community_ecology.md
       - 群落动态、演替与分类: ecology/community_dynamics.md
-    - 生态系统与全球生态:
+    - 生态系统与全球变化:
       - 生态系统结构与食物网: ecology/ecosystem_ecology.md
       - 生产力、分解与能量流: ecology/production_decomposition.md
       - 生物地球化学循环: ecology/biogeochemical_cycles.md
       - 生物群系与全球变化: ecology/biomes_global_change.md
       - 保护与恢复生态学: ecology/conservation_ecology.md
     - 行为生态学:
-      - ecology/behavioral_ecology/index.md
+      - 行为生态学: ecology/behavioral_ecology/index.md
       - 最优化理论与取食生态: ecology/behavioral_ecology/foraging_optimality.md
       - 栖息地、领域与捕食关系: ecology/behavioral_ecology/habitat_predation.md
       - 性选择与繁殖策略: ecology/behavioral_ecology/sexual_selection.md
