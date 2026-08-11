@@ -392,7 +392,8 @@ nav:
     - 分子组学:
       - 转录组、单细胞与空间组学: bioinfo/transcriptomics.md
       - 蛋白质组与质谱数据分析: bioinfo/proteomics.md
-      - 代谢组学与多组学整合: bioinfo/multiomics_metabolomics.md
+      - 代谢组学: bioinfo/multiomics_metabolomics.md
+      - 多组学整合: bioinfo/multiomics_integration.md
     - 结构生物信息学: bioinfo/structural_bioinformatics.md
     - 功能注释、富集与功能预测: bioinfo/functional_annotation.md
     - 分子进化与系统发育分析: bioinfo/phylogenetics.md
