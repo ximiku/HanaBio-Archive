@@ -150,17 +150,16 @@ nav:
 
   - 微生物:
     - 微生物学: micro/index.md
-    - 微生物与无细胞因子的多样性:
+    - 多样性:
       - 细菌与古菌: micro/prokaryotes.md
       - 真菌与其他真核微生物: micro/eukaryotic_microbes.md
       - 病毒与亚病毒因子: micro/viruses.md
-    - 微生物生理、遗传与控制:
+    - 生长与代谢:
       - 微生物营养与代谢: micro/nutrition_metabolism.md
       - 微生物生长与控制: micro/growth_control.md
-      - 微生物遗传与菌种改良: micro/microbial_genetics.md
-    - 微生物群落、宿主与应用:
-      - 微生物生态与应用: micro/ecology_applications.md
-      - 微生物感染与宿主防御: micro/infection_immunity.md
+    - 微生物遗传与菌种改良: micro/microbial_genetics.md
+    - 微生物生态与应用: micro/ecology_applications.md
+    - 微生物感染与宿主防御: micro/infection_immunity.md
 
   - 神经:
     - 神经生物学: neuro/index.md
