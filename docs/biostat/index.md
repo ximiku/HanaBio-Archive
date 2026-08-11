@@ -86,12 +86,12 @@
 
 第一次系统学习时，宜按以下顺序建立共同语言：
 
-1. 从[生物数据整理与描述统计](data_description.md)辨认总体、单位、变量、数据表和分布；
-2. 由[概率与概率分布](probability.md)理解随机机制和条件信息；
-3. 进入[抽样、参数估计与置信区间](sampling_estimation.md)，建立统计量、标准误与覆盖率；
-4. 再学习[假设检验、效应量与多重比较](hypothesis_testing.md)，把检验放回估计和设计之中。
+1. 先从[实验设计、效能与可重复统计](experimental_design.md)辨认研究单位、处理分派、重复、偏倚控制和待估量；
+2. 再由[生物数据整理与描述统计](data_description.md)与[概率与概率分布](probability.md)建立变量、分布、随机机制和条件信息的共同语言；
+3. 进入[抽样、参数估计与置信区间](sampling_estimation.md)，理解统计量、标准误与覆盖率；
+4. 随后学习[假设检验、效应量与多重比较](hypothesis_testing.md)与[分类资料与非参数检验](categorical_nonparametric.md)，把检验放回估计、设计和数据结构之中。
 
-以实验比较为主时，可继续阅读[实验设计、效能与可重复统计](experimental_design.md)、[方差分析与线性模型](anova_regression.md)和[分类资料与非参数检验](categorical_nonparametric.md)。以变量关系和预测为主时，从[相关、回归与模型诊断](correlation_regression.md)进入[广义线性模型与混合效应模型](generalized_mixed_models.md)，再按数据结构选择[多元统计、降维与分类](multivariate_models.md)或[生存分析与纵向数据](survival_longitudinal.md)。
+完成基础检验后，可由[方差分析与线性模型](anova_regression.md)进入[相关、回归与模型诊断](correlation_regression.md)和[广义线性模型与混合效应模型](generalized_mixed_models.md)，再按数据结构选择[多元统计、降维与分类](multivariate_models.md)。[生存分析与纵向数据](survival_longitudinal.md)针对事件时间与重复轨迹，作为平级专题单独展开。
 
 已经掌握基本估计和模型诊断后，可用[贝叶斯推断与计算统计](bayesian_computational.md)扩展不确定性表达与计算工具，并以[因果推断与荟萃分析](causal_meta_analysis.md)学习从单项研究的关联跨向干预效应和多研究证据。阅读任何路径都应反复回到同一组问题：研究单位是什么，数据怎样产生，目标量是什么，哪些条件使估计成立，不确定性怎样表达，结论能够推广到哪里。
 
