@@ -14,7 +14,7 @@
 
 ### 芍药科 { #paeoniaceae }
 
-芍药科仅含牡丹属，属于虎耳草目。植株为宿根草本或木本灌木，叶互生而深裂，花大、单生，萼片和花瓣数可变，雄蕊多数；数枚离生心皮由明显花盘围绕，成熟为一组蓇葖。牡丹类地上木质枝越冬，芍药类地上茎每年枯死，这一生活型差别比花大小和花期更稳定。旧材料把牡丹列入毛茛科，是因为两科共享雄蕊多数和离生心皮等形态，而现代系统证据支持其独立科与虎耳草目位置。
+芍药科仅含芍药属（*Paeonia*），属于虎耳草目；牡丹所在的木本类群也在芍药属内，并不是另一个属。[^paeoniaceae] 植株为宿根草本或木本灌木，叶互生而深裂，花大、单生，萼片和花瓣数可变，雄蕊多数；数枚离生心皮由明显花盘围绕，成熟为一组蓇葖。牡丹类地上木质枝越冬，芍药类地上茎每年枯死，这一生活型差别比花大小和花期更稳定。旧材料把牡丹列入毛茛科，是因为两科共享雄蕊多数和离生心皮等形态，而现代系统证据支持其独立科与虎耳草目位置。
 
 ## 蔷薇目与壳斗目 { #rosales-fagales }
 
@@ -99,6 +99,8 @@
 ## 参考资料与延伸阅读 { #references }
 
 [^rosid-framework]: Angiosperm Phylogeny Group, [APG IV 正式分类](https://academic.oup.com/botlinnean/article/181/1/1/2416499)，2016；Royal Botanic Gardens, Kew, [Plants of the World Online](https://powo.science.kew.org/)。
+
+[^paeoniaceae]: Kew 的 [Plants of the World Online：Paeoniaceae](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77126564-1)将芍药科列为仅含一个接受属 *Paeonia*；植物智的[牡丹记录](https://www.iplant.cn/info/%E7%89%A1%E4%B8%B9?t=z)将牡丹置于“芍药科—芍药属”。
 
 [^legume-subfamilies]: Legume Phylogeny Working Group. [*A new subfamily classification of the Leguminosae based on a taxonomically comprehensive phylogeny*](https://onlinelibrary.wiley.com/doi/10.12705/661.3). *Taxon* 66: 44–77, 2017。该分类承认紫荆亚科、甘豆亚科、摘亚木亚科、苏木亚科、山姜豆亚科和蝶形花亚科六个单系亚科，并把含羞草类置于苏木亚科内部。
 
