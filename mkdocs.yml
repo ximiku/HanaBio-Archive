@@ -378,25 +378,25 @@ nav:
 
   - 生信:
     - 生物信息学: bioinfo/index.md
-    - 基础、资源与工作方式:
+    - 数据、计算与工作流:
       - 生物数据、格式与数据库: bioinfo/data_databases.md
       - 算法、统计与计算基础: bioinfo/computational_foundations.md
       - 命令行、工作流与可重复研究: bioinfo/workflows.md
-    - 序列与基因组:
+    - 测序与序列:
       - 测序技术、读段与质量控制: bioinfo/sequencing.md
       - 序列比对与数据库搜索: bioinfo/sequence_analysis.md
       - 序列特征、基因识别与功能位点: bioinfo/sequence_features.md
+    - 基因组:
       - 基因组组装、变异与比较分析: bioinfo/genome_analysis.md
       - 表观基因组与三维基因组分析: bioinfo/epigenome_3d.md
-    - 表达、蛋白质与结构:
+    - 分子组学:
       - 转录组、单细胞与空间组学: bioinfo/transcriptomics.md
       - 蛋白质组与质谱数据分析: bioinfo/proteomics.md
-      - 结构生物信息学: bioinfo/structural_bioinformatics.md
       - 代谢组学与多组学整合: bioinfo/multiomics_metabolomics.md
-    - 功能、演化与系统:
-      - 功能注释、富集与功能预测: bioinfo/functional_annotation.md
-      - 分子进化与系统发育分析: bioinfo/phylogenetics.md
-      - 生物网络与系统生物学: bioinfo/phylogenetics_networks.md
+    - 结构生物信息学: bioinfo/structural_bioinformatics.md
+    - 功能注释、富集与功能预测: bioinfo/functional_annotation.md
+    - 分子进化与系统发育分析: bioinfo/phylogenetics.md
+    - 生物网络与系统生物学: bioinfo/phylogenetics_networks.md
 
   - 统计:
     - 生物统计学: biostat/index.md
