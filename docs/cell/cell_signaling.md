@@ -114,7 +114,7 @@ NF-$\kappa$B family protein 形成多种 dimer。canonical pathway 中，静息�
 
 nuclear receptor 通常含变化较大的 N-terminal activation domain、保守的 C4 zinc-finger DNA-binding domain、hinge 和 C-terminal ligand-binding domain。glucocorticoid receptor 等 steroid receptor 可在无配体时与 Hsp90-containing complex 结合，配体使其重排并入核；thyroid hormone receptor 和 retinoic acid receptor 则常在无配体时已经结合 DNA 与 corepressor。把所有 nuclear receptor 都写成“胞质 Hsp90 复合物释放后进入核”会把家族中的两种主要静息策略混在一起。核受体识别 DNA 后仍须与其他转录因子及染色质调节器协作，所以相同受体在不同细胞中控制的基因集合并不相同。[^signaling-overview]
 
-nitric oxide synthase（NOS）从 arginine 生成 NO，NO 不经囊泡储存，而是在受调节的合成后短距离扩散。靶细胞内 soluble guanylyl cyclase 的 heme 感受 NO 并生成 cGMP，随后由 PKG、cyclic nucleotide-gated channel 或 PDE 等读取和终止。NO 的短寿命把作用限制在局部；“可以穿膜”并不等于没有合成控制或空间边界。血管舒缩等组织效应留给生理栏目，此处只说明膜内 enzyme receptor 也能成为外来信号的第一读取器。
+nitric oxide synthase（NOS）从 arginine 生成 NO，NO 不经囊泡储存，而是在受调节的合成后短距离扩散。靶细胞胞质中的可溶性鸟苷酸环化酶（soluble guanylyl cyclase，sGC）以 heme 感受 NO 并生成 cGMP，随后由 PKG、cyclic nucleotide-gated channel 或 PDE 等读取和终止。NO 的短寿命把作用限制在局部；“可以穿膜”并不等于没有合成控制或空间边界。血管舒缩等组织效应留给生理栏目，此处只说明胞质可溶性酶本身也能作为可扩散气体的受体和第一读取器。[^no-sgc]
 
 ## 整联蛋白把力学状态接入生化网络 { #integrin-signaling }
 
@@ -169,4 +169,5 @@ phosphorylation blot、reporter gene 或终点 RNA-seq 能说明通路某处发�
 [^hedgehog-cilium]: 小鼠 IFT172、IFT88 与 KIF3A 遗传扰动把 intraflagellar transport 定位在 PTCH1 下游、GLI 上游，见 Huangfu 等的[Hedgehog–IFT 原始研究](https://pubmed.ncbi.nlm.nih.gov/14603322/)。
 [^notch-force]: Notch negative regulatory region 的 force-dependent S2 exposure 与 proteolysis 见 Gordon 等的[Notch mechanical allostery 研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC4481192/)。
 [^nfkb-dynamics]: I$\kappa$B isoform feedback 怎样控制 nuclear NF-$\kappa$B temporal profile 与 selective gene activation，见 Hoffmann 等的[NF-$\kappa$B 模块研究](https://pubmed.ncbi.nlm.nih.gov/12424381/)。
+[^no-sgc]: sGC 是胞质异二聚体并作为 NO 的生理受体；它与单跨膜颗粒型鸟苷酸环化酶的定位和结构差异见 NCBI Bookshelf 的[cGMP 生物化学章节](https://www.ncbi.nlm.nih.gov/books/NBK542234/)。NO 穿过质膜后直接激活胞内鸟苷酸环化酶的细胞信号框架见 Alberts 等的[细胞通信一般原理](https://www.ncbi.nlm.nih.gov/books/NBK26813/)。
 [^arrestin-endocytosis]: $\beta$-arrestin 结合 activated $\beta_2$ receptor 与 clathrin 并促进 receptor internalization 的证据见 Goodman 等的[arrestin adaptor 研究](https://pubmed.ncbi.nlm.nih.gov/8837779/)。
