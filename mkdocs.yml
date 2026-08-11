@@ -554,7 +554,7 @@ plugins:
       minify_html: true
 
 extra:
-  homepage: https://jiaxi1223.github.io/HanaBio-Archive-test/
+  homepage: https://ximiku.github.io/HanaBio-Archive/
   social:
     - icon: fontawesome/brands/bilibili 
       link: https://space.bilibili.com/30710225
@@ -600,9 +600,7 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.snippets: #片段
-      auto_append:
-        - includes/abbreviations.md
+  - pymdownx.snippets #片段
   - pymdownx.smartsymbols:
       fractions: False
       ordinal_numbers: False
