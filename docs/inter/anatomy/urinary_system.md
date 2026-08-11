@@ -52,7 +52,7 @@
 
 肾段动脉继续分为叶间动脉，沿肾柱走向皮髓交界；弓状动脉在锥体底部弯行，皮质放射动脉由此进入皮质并发出入球小动脉。血液经肾小球毛细血管后由出球小动脉离开，再形成管周毛细血管或直小血管。静脉大致由皮质放射静脉、弓状静脉和叶间静脉汇入肾静脉，但不必为每条动脉强配一条完全同名、同级的静脉。肾叶以锥体和相邻皮质为界，肾段以段动脉供区为界，两套分区可能交错。
 
-肾淋巴主要沿肾血管流向腰淋巴结。肾丛围绕肾动脉进入肾门，含交感、少量副交感及内脏传入纤维；输尿管上段神经也与肾丛连续。肾血管阻力、肾素释放和痛觉传入的生理效应由泌尿与循环生理页面展开。
+肾淋巴主要沿肾血管流向腰淋巴结。肾丛围绕肾动脉进入肾门。肾传出神经以交感纤维最明确，分布于肾血管、肾小管和球旁装置；内脏传入纤维在肾盂区域较为集中，参与扩张和伤害性刺激的传递。人肾副交感支配的存在与范围仍有争议：近年解剖研究在肾动脉、肾盂和肾丛提示胆碱能或迷走相关通路，但其中直接追踪证据主要来自动物，尚不能据此认定肾实质具有明确而广泛的副交感支配。[^renal-innervation] 输尿管上段神经也与肾丛连续。肾血管阻力、肾素释放和痛觉传入的生理效应由泌尿与循环生理页面展开。
 
 ## 输尿管 { #ureter }
 
@@ -129,6 +129,7 @@
 [^kidney-gross]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Kidneys](https://www.ncbi.nlm.nih.gov/books/NBK482385/)。用于核对肾的腹膜后位置、外形、毗邻、被膜、肾门肾窦及常见变异。
 [^openstax-kidney]: OpenStax. [Gross Anatomy of the Kidney](https://openstax.org/books/anatomy-and-physiology-2e/pages/25-3-gross-anatomy-of-the-kidney). *Anatomy and Physiology 2e*；并以 NCBI Bookshelf 的[肾解剖](https://www.ncbi.nlm.nih.gov/books/NBK482385/)校正肾柱、肾叶和集合系统关系。
 [^renal-arteries]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Renal Artery](https://www.ncbi.nlm.nih.gov/books/NBK459158/)；[Renal Veins](https://www.ncbi.nlm.nih.gov/books/NBK538298/)。用于核对肾门血管、肾段动脉、肾内分支和左右肾静脉关系。
+[^renal-innervation]: Kopp UC. [Neuroanatomy: efferent renal nerves](https://www.ncbi.nlm.nih.gov/books/NBK57242/)；[Neuroanatomy: afferent renal nerves](https://www.ncbi.nlm.nih.gov/books/NBK57249/). In: *Neural Control of Renal Function*；Cheng X, et al. [Anatomical Evidence for Parasympathetic Innervation of the Renal Vasculature and Pelvis](https://pmc.ncbi.nlm.nih.gov/articles/PMC9731635/). *J Am Soc Nephrol*. 2022;33:2194–2210。用于核对交感传出与感觉传入的分布，并限定副交感证据的物种和解剖范围。
 [^ureter-anatomy]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Ureter](https://www.ncbi.nlm.nih.gov/books/NBK532980/)。用于核对输尿管腹膜后行程、盆腔毗邻、管壁、分段血供、壁内段和狭窄定位。
 [^bladder-anatomy]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Bladder](https://www.ncbi.nlm.nih.gov/books/NBK531465/)；OpenStax. [Gross Anatomy of Urine Transport](https://openstax.org/books/anatomy-and-physiology-2e/pages/25-2-gross-anatomy-of-urine-transport)。用于核对膀胱分部、腹膜覆盖、三角、逼尿肌和盆腔关系。
 [^urethral-sphincter]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Sphincter Urethrae](https://www.ncbi.nlm.nih.gov/books/NBK482438/)。用于核对膀胱颈平滑肌、尿道外括约肌及女性尿道括约肌复合体。
