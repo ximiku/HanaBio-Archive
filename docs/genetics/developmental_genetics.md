@@ -36,7 +36,7 @@
 
 果蝇早期胚胎的多核合胞体使母体产物可在尚未细胞化的共同胞质中形成坐标。前端的 Bicoid 既激活部分前部合子靶基因，也抑制 *caudal* mRNA 的翻译；后端的 Nanos 抑制母源 *hunchback* mRNA 的翻译。末端的 Torso 通路以及背腹轴上的 Toll–Dorsal 系统提供另外两套位置输入。它们共同调节相互重叠、随时间变化的 gap 基因表达域，而不是由单一梯度给每个细胞贴上固定标签。[^maternal-gradients]
 
-gap 基因缺陷通常删除连续的一大片节区；pair-rule 基因把较宽的位置信息转成周期性条纹，经典胚胎中常见七条初级条纹；segment-polarity 基因在细胞化前后建立并维持十四个重复单元内部的极性。*even-skipped* 等基因的不同条纹可由不同增强子读取各自的激活物与抑制物组合，网络随后又通过交叉调控变得动态。并非每个 pair-rule 基因都可简单归为“只控制奇数节”或“只控制偶数节”，这套层级也包含反馈和跨层连接。[^segmentation-network]
+gap 基因缺陷通常删除连续的一大片节区；pair-rule 基因把较宽的位置信息细化为十四个副体节（parasegment）的周期格局，经典初级表达常见七条条纹；segment-polarity 基因则在细胞化前后建立并维持副体节边界及其内部极性。副体节是早期图式形成的重复单位，不等同于幼虫或成体可见的解剖节段：每个副体节由前一节段的后部与后一节段的前部构成，所以两套边界彼此错开。[^drosophila-parasegments] *even-skipped* 等基因的不同条纹可由不同增强子读取各自的激活物与抑制物组合，网络随后又通过交叉调控变得动态。并非每个 pair-rule 基因都可简单归为“只控制奇数节”或“只控制偶数节”，这套层级也包含反馈和跨层连接。[^segmentation-network]
 
 Hox 基因在已经获得轴向位置的组织中指定区域身份。Hox 失常可造成同源异形转变，即一个结构呈现另一区域结构的身份；这不表示 Hox 基因负责先制造出所有体节。许多动物的 Hox 基因在染色体上的排列与前后表达顺序具有共线性，但基因簇可发生分裂、重复和次级重排，时空共线性的严格程度也随谱系而变。保守的是一类深层调控逻辑，不是所有物种都保存完全相同的基因数、顺序和功能。[^hox-patterning]
 
@@ -71,6 +71,7 @@ Hox 基因在已经获得轴向位置的组织中指定区域身份。Hox 失常
 [^drosophila-screen]: 诺贝尔奖官方[科学背景说明](https://www.nobelprize.org/prizes/medicine/1995/press-release/)概述了随机诱变、胚胎表型分类和母体效应筛选的推断路线；最初的合子突变筛选见 Nüsslein-Volhard 与 Wieschaus 的[原始论文](https://www.nature.com/articles/287795a0)。
 [^mosaic-analysis]: 果蝇遗传镶嵌的历史、FLP/FRT 原理、细胞自主性、谱系与区室证据及方法限制见 Germani、Bergantinos 与 Johnston 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC5788516/)。
 [^maternal-gradients]: Bicoid、Nanos、Hunchback 与 Caudal 的前后轴调控及翻译抑制关系见 [Heads and tails: the segmentation of Drosophila](https://pmc.ncbi.nlm.nih.gov/articles/PMC2700975/)；母体输入与合子网络的分界随胚胎时间推进。
+[^drosophila-parasegments]: 果蝇分节基因把胚胎划分为 14 个副体节；副体节由前一解剖节段的后部与后一解剖节段的前部组成，是建立幼虫和成体节段的早期构造单位，见 NCBI Bookshelf 的[果蝇前后轴与分节章节](https://www.ncbi.nlm.nih.gov/books/NBK10039/)。
 [^segmentation-network]: gap、pair-rule、segment-polarity 与 homeotic 网络的层级及交叉调控见 [Transcriptional control in the segmentation gene network of Drosophila](https://pmc.ncbi.nlm.nih.gov/articles/PMC514885/)和 Jaeger 的 [gap gene network 综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3016493/)。
 [^hox-patterning]: Hox 基因的区域身份、同源异形转变、基因簇演化和共线性边界见 Hubert 与 Wellik 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC10216783/)及[基因簇染色质调控综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3682730/)。
 [^dna-elimination]: *Ascaris* 在 4–16 细胞期的体细胞前体中发生断裂、端粒新生和特异序列丢失；基因组比例、基因数和机制未决问题见 Estrem 与 Wang 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9894435/)。跨动物谱系的分布与功能假说见 Wang 与 Davis 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4125452/)。
