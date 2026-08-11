@@ -182,7 +182,7 @@
 - R. W. McDiarmid, R. Altig, eds. *Tadpoles: The Biology of Anuran Larvae*. University of Chicago Press, 1999.
 
 [^amphibian-phylogenomics]: Hime PM, et al. [Phylogenomics Reveals Ancient Gene Tree Discordance in the Amphibian Tree of Life](https://doi.org/10.1093/sysbio/syaa034). *Systematic Biology*. 2021;70:49–66。研究以 220 个核位点覆盖 94% 的现生两栖动物科，强力支持现生两栖类单系和蛙螈类关系，同时记录深层基因树冲突。
-[^amphibian-taxonomy]: Frost DR. [*Amphibian Species of the World: an Online Reference*, version 6.2](https://amphibiansoftheworld.amnh.org/). American Museum of Natural History；2026-08 快照列出 9,087 种，其中无尾目 8,009 种、有尾目 844 种、蚓螈目 234 种。该名录持续更新，数字只表示访问时点。
+[^amphibian-taxonomy]: Frost DR. [*Amphibian Species of the World: an Online Reference*, version 6.2](https://amphibiansoftheworld.amnh.org/). American Museum of Natural History；2026-08-12 访问快照列出 9,092 种，其中无尾目 8,013 种、有尾目 845 种、蚓螈目 234 种。该名录持续更新，数字只表示访问时点。
 [^amphibian-skin-glands]: Toledo RC, Jared C. [Cutaneous granular glands and amphibian venoms](https://doi.org/10.1016/0300-9629(95)98515-I). *Comparative Biochemistry and Physiology Part A*. 1995;111:1–29；Daly JW. [The chemistry of poisons in amphibian skin](https://doi.org/10.1073/pnas.92.1.9). *PNAS*. 1995;92:9–13。
 [^amphibian-aquaporins]: Suzuki M, Tanaka S. [Amphibian aquaporins and adaptation to terrestrial environments: a review](https://doi.org/10.1016/j.cbpa.2006.12.021). *Comparative Biochemistry and Physiology Part A*. 2007;148:72–81。
 [^amphibian-cardiovascular-shunts]: Burggren W, Filogonio R, Wang T. [Cardiovascular shunting in vertebrates: a practical integration of competing hypotheses](https://doi.org/10.1111/brv.12572). *Biological Reviews*. 2020;95:449–471。
