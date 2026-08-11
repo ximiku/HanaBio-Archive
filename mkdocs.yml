@@ -357,23 +357,24 @@ nav:
 
   - 进化:
     - 进化生物学: evolution/index.md
-    - 证据、起源与生命史:
+    - 证据与深时:
       - 进化思想、证据与研究方法: evolution/history_evidence.md
       - 生命起源与早期演化: evolution/origin_history.md
       - 化石记录、生命史与宏观进化: evolution/deep_time_macroevolution.md
-      - 人类演化: evolution/human_evolution.md
-    - 系统发育与群体过程:
-      - 系统发育与生物分类: evolution/phylogenetics.md
+    - 群体过程与选择:
       - 遗传变异与群体进化过程: evolution/variation_population.md
       - 自然选择、适应与约束: evolution/selection_adaptation.md
-    - 表型与基因组进化:
+    - 系统发育与物种形成:
+      - 系统发育与生物分类: evolution/phylogenetics.md
+      - 物种概念与物种形成: evolution/speciation.md
+    - 表型、发育与基因组进化:
       - 表型、发育与数量性状进化: evolution/quantitative_evolution.md
       - 分子、基因与基因组进化: evolution/molecular_genome_evolution.md
-    - 生活史、社会与物种形成:
+    - 生活史与社会进化:
       - 生活史与有性生殖的进化: evolution/life_history_sex.md
       - 合作、冲突与社会性进化: evolution/cooperation_conflict.md
-      - 物种概念与物种形成: evolution/speciation.md
-      - 协同进化与生态—演化反馈: evolution/coevolution.md
+    - 人类演化: evolution/human_evolution.md
+    - 协同进化与生态—演化反馈: evolution/coevolution.md
 
   - 生信:
     - 生物信息学: bioinfo/index.md
