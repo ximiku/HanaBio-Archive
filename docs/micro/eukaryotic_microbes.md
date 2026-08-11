@@ -42,7 +42,7 @@
 
 这些细胞把真核结构组合成差异很大的生活方式。变形虫以肌动蛋白驱动伪足运动和吞噬，纤毛虫以成排纤毛产生水流并将颗粒送入细胞口，许多鞭毛生物兼用游泳、附着和摄食。淡水细胞可由伸缩泡排出渗入的水。休眠包囊帮助部分物种跨越干燥、温度变化或宿主外传播阶段，但滋养体—包囊并不是所有原生生物都具有的固定二阶段生活史。
 
-黏菌和卵菌尤其能说明外形与亲缘的错位。细胞性黏菌可由独立变形虫聚集成具有分工的多细胞结构，质体黏菌则形成多核原生质团；它们都不是因形成孢子结构就成为真菌。卵菌可形成菌丝并从外界吸收营养，却属于不等鞭毛生物，细胞壁和生活史与真菌不同。植物病原卵菌的吸器与真菌病原的吸器体现趋同的宿主营养策略，不支持“假菌由藻类失去叶绿体而直接产生”的线性故事。
+黏菌和卵菌尤其能说明外形与亲缘的错位。细胞性黏菌可由独立变形虫聚集成具有分工的多细胞结构，原质团黏菌则在营养期形成裸露的多核原质团；它们都不是因形成孢子结构就成为真菌。卵菌可形成菌丝并从外界吸收营养，却属于不等鞭毛生物，细胞壁和生活史与真菌不同。植物病原卵菌的吸器与真菌病原的吸器体现趋同的宿主营养策略，不支持“假菌由藻类失去叶绿体而直接产生”的线性故事。[^plasmodial-slime-molds]
 
 ## 微藻、质体与混合营养 { #microalgae-plastids }
 
@@ -65,5 +65,6 @@
 [^hyphal-growth]: 细胞骨架、膜泡运输、Spitzenkörper、壁沉积和横隔形成如何协同极性生长，见 NCBI Bookshelf 的[真菌生物学与菌丝生长概述](https://www.ncbi.nlm.nih.gov/books/NBK8099/)。
 [^fungal-dimorphism]: 温度、营养、pH、气体与宿主信号调节酵母—菌丝状态转换的比较见 Nava-Ramírez 等的[真菌二态性综述](https://www.mdpi.com/2076-0817/14/4/350)。
 [^fungal-taxonomy]: 基因组尺度系统树、双核菌共同特征及接合菌旧类群拆分见 Li 等的[真菌界基因组尺度系统发育研究](https://jlsteenwyk.com/publication_pdfs/2021_Li_etal_Current_Biology.pdf)。
+[^plasmodial-slime-molds]: NCBI Taxonomy 将 Myxogastria 置于 Amoebozoa，并使用 `plasmodial slime molds` 作为常用名，见 [Myxogastria 记录](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=33680&mode=Info)；规范中文主称采用《[中国大百科全书·黏菌](https://www.zgbk.com/ecph/words?ID=120104&SiteID=1&SubID=238538&Type=bkzyb)》所列“原质团黏菌”。
 [^plastid-evolution]: 初级、二级及更复杂内共生与质体基因转移的证据见 Keeling 的[质体起源与多样化综述](https://doi.org/10.1098/rstb.2009.0103)。
 [^protist-mixotrophy]: 浮游原生生物的吞噬型混合营养及其对食物网和生物地球化学解释的影响，见 Millette 等的[混合营养研究议程综述](https://repository.library.noaa.gov/view/noaa/54104/noaa_54104_DS1.pdf)。
