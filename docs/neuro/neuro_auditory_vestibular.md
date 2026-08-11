@@ -67,10 +67,12 @@
 | 味质 | 代表性外周换能 | 向传入神经输出 |
 | --- | --- | --- |
 | 甜 | type II 细胞的 T1R2／T1R3 GPCR，经 PLCβ2—IP$_3$—Ca$^{2+}$—TRPM5 通路去极化 | 动作电位开启 CALHM1／CALHM3 channel synapse，非囊泡释放 ATP |
-| 鲜 | type II 细胞的 T1R1／T1R3 检测 glutamate 等 L-amino acid 线索，共用 PLCβ2—TRPM5 级联 | 主要以 CALHM1／CALHM3 释放 ATP；核苷酸可增强部分鲜味响应 |
+| 鲜 | type II 细胞的 T1R1／T1R3 检测 L-氨基酸配体，配体范围随物种而异；共用 PLCβ2—TRPM5 级联 | 主要以 CALHM1／CALHM3 释放 ATP；核苷酸可增强部分鲜味响应 |
 | 苦 | 多种 T2R GPCR 分别响应结构多样的化合物，共用 type II 细胞下游级联 | 主要以 CALHM1／CALHM3 释放 ATP；“苦”提示潜在风险但不等于所有苦味物都有毒 |
 | 酸 | type III 细胞的 OTOP1 导入 H$^+$，胞内酸化和 K$^+$ 电导变化进一步促进去极化 | 电压门控 Ca$^{2+}$ 通道与经典囊泡突触参与递质释放 |
 | 咸 | 低浓度 Na$^+$ 可经 ENaC 等通路进入感受细胞；高盐还募集 amiloride 不敏感及伤害／三叉通路 | 人体 ENaC 贡献存在个体差异，咸味换能尚不能压缩为唯一通道 |
+
+鲜味受体的配体选择性有明确物种差异。异源表达测定中，人类 T1R1／T1R3 主要响应 L-谷氨酸（L-glutamate，L-Glu）；小鼠同源受体对多种 L-氨基酸呈更广谱的响应，其中若干氨基酸引起的响应强于 L-Glu。[^t1r1-species]
 
 甜、苦和鲜共享下游级联，却由不同受体和细胞群起始；酸味细胞具有经典突触，type II 细胞则通过可通透 ATP 的 channel synapse 激活感觉神经末梢。咸味尤其需要保留物种和浓度边界：啮齿类低盐 ENaC 证据很强，人类对 amiloride 的心理物理响应却不一致，高盐还会激活厌恶性味觉和一般化学感觉。味质因而是受体—细胞—神经群体的编码结果，不是某一种化合物与一个通道的永久一一映射。[^taste-molecular]
 
@@ -123,6 +125,7 @@ mitral 和 tufted cell 轴突经 lateral olfactory tract 投向 anterior olfacto
 [^otolith-canals]: 半规管、耳石器的惯性结构和重力—线加速度联合编码，参见 NCBI Bookshelf [Physiology, Vestibular System](https://www.ncbi.nlm.nih.gov/books/NBK532978/)；椭圆囊偏水平、球囊偏垂直是总体取向而非排他方向。
 [^vestibular-responses]: 前庭—眼、前庭—脊髓反射和多感觉整合参见 NCBI Bookshelf [Neuroanatomy, Vestibulo-ocular Reflex](https://www.ncbi.nlm.nih.gov/books/NBK545297/)；晕动症的感觉冲突／内部模型解释参见 CDC Yellow Book [Motion Sickness](https://www.ncbi.nlm.nih.gov/books/NBK620959/)。
 [^taste-buds]: 味蕾分布、五种基本味质和舌面味质区域分隔误区，参见 NIDCD [Taste Disorders](https://www.nidcd.nih.gov/health/taste-disorders/) 与 NCBI Bookshelf [Anatomy, Head and Neck, Tongue Taste Buds](https://www.ncbi.nlm.nih.gov/books/NBK539696/)。
+[^t1r1-species]: Toda 等以异源表达的人、小鼠及嵌合／点突变 T1R1／T1R3 测定氨基酸配体特异性，显示人源受体主要响应 L-Glu，而小鼠受体对多种 L-氨基酸的响应较广，见 [Two Distinct Determinants of Ligand Specificity in T1R1/T1R3](https://pubmed.ncbi.nlm.nih.gov/24214976/)。
 [^taste-molecular]: T1R／T2R—PLCβ2—TRPM5、CALHM1／3 channel synapse、OTOP1 酸味换能及盐味证据边界，参见 Taruno 等 [Taste Transduction and Channel Synapses in Taste Buds](https://pubmed.ncbi.nlm.nih.gov/32936320/)、Taruno 等 [CALHM1 Ion Channel Mediates Purinergic Neurotransmission](https://pubmed.ncbi.nlm.nih.gov/23467090/) 和 Zhang 等 [Cellular and Neural Responses to Sour Stimuli Require Otop1](https://pubmed.ncbi.nlm.nih.gov/31543453/)；人类 ENaC 结果的差异参见 [Does ENaC Work as Sodium Taste Receptor in Humans?](https://pubmed.ncbi.nlm.nih.gov/32344597/)。
 [^taste-pathway]: VII、IX、X 味觉传入、孤束核—VPM—前岛叶／额叶岛盖通路及摄食网络分支，参见 NCBI Bookshelf [The Organization of the Taste System](https://www.ncbi.nlm.nih.gov/books/NBK11018/) 和 [Neuroanatomy, Neural Taste Pathway](https://www.ncbi.nlm.nih.gov/books/NBK545236/)。
 [^olfactory-epithelium]: 嗅上皮的感受神经元、支持细胞、基底细胞及纤毛换能环境，参见 NCBI Bookshelf [Signal Transduction in Vertebrate Olfactory Cilia](https://www.ncbi.nlm.nih.gov/books/NBK55986/)。
