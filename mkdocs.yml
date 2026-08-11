@@ -135,19 +135,18 @@ nav:
 
   - 遗传:
     - 遗传学: genetics/index.md
-    - 遗传规律与染色体:
+    - 经典遗传与染色体:
       - 孟德尔遗传及其扩展: genetics/mendelian_genetics.md
       - 连锁、交换与遗传作图: genetics/linkage_mapping.md
       - 性别决定、伴性遗传与细胞质遗传: genetics/sex_cytoplasmic.md
       - 突变与染色体变异: genetics/chromosome_variation.md
-    - 数量性状与群体:
+    - 数量与群体:
       - 数量遗传学: genetics/quantitative_genetics.md
       - 群体遗传学: genetics/population_genetics.md
-    - 基因组与遗传分析:
-      - 细菌与噬菌体遗传分析: genetics/microbial_genetics.md
-      - 基因组学与表观遗传学: genetics/genomics_epigenetics.md
-      - 发育遗传学: genetics/developmental_genetics.md
-      - 人类遗传学: genetics/developmental_human.md
+    - 细菌与噬菌体遗传分析: genetics/microbial_genetics.md
+    - 基因组学与表观遗传学: genetics/genomics_epigenetics.md
+    - 发育遗传学: genetics/developmental_genetics.md
+    - 人类遗传学: genetics/developmental_human.md
 
   - 微生物:
     - 微生物学: micro/index.md
