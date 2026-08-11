@@ -30,7 +30,7 @@ $$
 
 皂化实验沿用原教学比例：在观察过荧光的提取液中加入约 2 mL 20% 甲醇 KOH，充分混匀约 5 min，再沿管壁依次加入约 3 mL 乙醚和 4 mL 水，轻柔混合后等待分层。碱可水解叶绿素的植醇酯键，使较极性的叶绿素衍生物与许多未皂化类胡萝卜素表现不同相分配；某些类胡萝卜素酯和其他脂质也会被皂化，所以相层颜色只是化学性质证据。甲醇 KOH 兼具腐蚀性与可燃溶剂风险，乙醚高度易燃并可形成危险过氧化物，所有取用、混合、储存和废弃均须在合格通风橱内按试剂批次和机构 SOP 执行。[^ether-safety]
 
-中心金属实验把两管各约 2 mL 提取液并置，一管作未处理对照，另一管加入数滴 5% HCl。酸使叶绿素失去中心 Mg$^{2+}$，形成偏橄榄褐色的脱镁叶绿素。旧流程随后加入少量醋酸铜并微热，使 Cu$^{2+}$ 进入四吡咯环而恢复绿色；这说明绿色衍生物可由人工金属配位产生，并不表示天然叶绿素已经复原。酸、铜盐、易燃提取剂和加热同处一管时风险显著，课程实施应采用机构验证的小尺度封闭版本，避免敞口直接加热，含铜有机废液单独收集。
+中心金属实验把两管各约 2 mL 提取液并置，一管作未处理对照，另一管加入数滴 5% HCl。酸使叶绿素失去中心 Mg$^{2+}$，形成偏橄榄褐色的脱镁叶绿素。旧流程随后加入少量醋酸铜并微热，使 Cu$^{2+}$ 进入四吡咯环而恢复绿色；这说明绿色衍生物可由人工金属配位产生，并不表示天然叶绿素已经复原。酸、铜盐、易燃提取剂和加热同处一管时风险显著。本科教学应删除在普通试管中微热这一步，也不得把试管封闭后加热来控制挥发；若保留金属取代示范，须另行采用经机构风险评估的专门方案，明确通风、温度控制和压力释放，不由学生把当前混合液临时封管加热。[^flammable-heating] 含铜有机废液单独收集。
 
 ## 叶绿素与类胡萝卜素的吸收定量 { #pigment-spectrophotometry }
 
@@ -115,6 +115,7 @@ Ba(OH)$_2$ 是强碱，且可溶性钡具有急性毒性；草酸也具有腐蚀
 ## 参考资料与延伸阅读
 
 [^ether-safety]: CDC/NIOSH. [Ethyl ether: NIOSH Pocket Guide to Chemical Hazards](https://www.cdc.gov/niosh/npg/npgd0277.html). 该资料列出乙醚的高挥发性、Class IA 易燃性和空气／光照下形成过氧化物的反应风险。
+[^flammable-heating]: American Chemical Society Committee on Chemical Safety. [*Chemical Safety Manual for Small Businesses*, 3rd ed.](https://www.acs.org/content/dam/acsorg/about/governance/committees/chemicalsafety/publications/chemical-safety-manual-for-small-businesses.pdf)。手册要求加热装置保持通气、不得加热封闭容器，并要求在产生易燃蒸气的操作中使用化学通风橱；用于删除普通封闭试管内加热的建议，具体实施仍服从机构风险评估与 SOP。
 [^wellburn-pigments]: Wellburn AR. The Spectral Determination of Chlorophylls *a* and *b*, as well as Total Carotenoids, Using Various Solvents with Spectrophotometers of Different Resolution. *Journal of Plant Physiology*. 1994;144:307–313. [doi:10.1016/S0176-1617(11)81192-2](https://doi.org/10.1016/S0176-1617(11)81192-2).
 [^lichtenthaler-pigments]: Lichtenthaler HK. Chlorophylls and Carotenoids: Pigments of Photosynthetic Biomembranes. *Methods in Enzymology*. 1987;148:350–382. [doi:10.1016/0076-6879(87)48036-1](https://doi.org/10.1016/0076-6879(87)48036-1).
 [^hill-1937]: Hill R. Oxygen Evolved by Isolated Chloroplasts. *Nature*. 1937;139:881–882. [doi:10.1038/139881a0](https://doi.org/10.1038/139881a0).
