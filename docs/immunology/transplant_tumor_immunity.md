@@ -24,6 +24,10 @@
 
 实体器官排斥主要是受者免疫系统攻击移植物；移植物抗宿主病（GVHD）的方向相反，是移植物中的免疫活性供者 T 细胞识别并攻击受者组织。异基因造血干细胞移植需要让供者造血与免疫系统在受者体内重建，因而既可能发生 GVHD，也可能产生清除残留恶性血液细胞的移植物抗白血病效应。供受者相容性、预处理造成的组织损伤、供者 T 细胞组成和移植后免疫调节共同影响两种效应的平衡。[^gvhd]
 
+急性 GVHD 的典型表现集中于红斑或斑丘疹、胃肠道症状和胆汁淤积性肝病。慢性 GVHD 则是涉及炎症、细胞与体液免疫及纤维化的多器官综合征，可出现皮肤苔藓样或硬化性改变、口腔和眼部病变、筋膜与关节活动受限以及闭塞性细支气管炎综合征等；部分患者还会同时保留急性 GVHD 表现，形成重叠型慢性 GVHD。
+
+现行 NIH 分类以临床特征和诊断证据区分急、慢性 GVHD，而不是只看移植后的天数。移植后 100 天以内、且没有慢性 GVHD 特征的典型表现称为经典急性 GVHD；相同的急性表现若持续、复发或在第 100 天后才出现，仍可归入持续性、复发性或晚发急性 GVHD。慢性 GVHD 需要相应诊断性表现，或由活检、实验室与专科检查支持的特征性表现，发生时间本身不构成诊断。[^gvhd-classification]
+
 输血相关 GVHD（TA-GVHD）来自血液制品中的活供者 T 细胞在受者体内存活、扩增并攻击皮肤、肠道、肝脏和骨髓。免疫功能低下者难以排斥这些细胞；供者对某个 HLA 单倍型纯合、受者同时携带该单倍型和另一单倍型时，还会形成单向匹配：受者可能难以识别供者细胞，供者 T 细胞却能识别受者没有共享的 HLA。因此，亲属供血或某些 HLA 高度匹配情境尤其危险。它并非由受者“细胞因子风暴”把供者 T 细胞普遍激活所致。对有指征的细胞性血液成分进行辐照，可阻断供者淋巴细胞增殖；白细胞去除能减少淋巴细胞数量，却不能可靠替代辐照。[^ta-gvhd]
 
 ## 肿瘤抗原的形成与呈递 { #tumor-antigens }
@@ -59,6 +63,7 @@
 - Colvin RB, Smith RN. Antibody-mediated organ-allograft rejection. *Nature Reviews Immunology*. 2005;5:807–817.
 - Demetris AJ, Bellamy C, Hübscher SG, et al. 2016 comprehensive update of the Banff Working Group on liver allograft pathology. *American Journal of Transplantation*. 2016;16:2816–2835.
 - Zeiser R, Blazar BR. Acute graft-versus-host disease — biologic process, prevention, and therapy. *New England Journal of Medicine*. 2017;377:2167–2179.
+- Jagasia MH, Greinix HT, Arora M, et al. National Institutes of Health Consensus Development Project on Criteria for Clinical Trials in Chronic Graft-versus-Host Disease: I. The 2014 Diagnosis and Staging Working Group report. *Biology of Blood and Marrow Transplantation*. 2015;21:389–401.e1.
 - O'Donnell JS, Teng MWL, Smyth MJ. Cancer immunoediting and resistance to T cell-based immunotherapy. *Nature Reviews Clinical Oncology*. 2019;16:151–167.
 - Jhunjhunwala S, Hammer C, Delamarre L. Antigen presentation in cancer: insights into tumour immunogenicity and immune evasion. *Nature Reviews Cancer*. 2021;21:298–312.
 - Wei SC, Duffy CR, Allison JP. Fundamental mechanisms of immune checkpoint blockade therapy. *Cancer Discovery*. 2018;8:1069–1086.
@@ -67,6 +72,7 @@
 [^rejection-classification]: T 细胞介导与抗体介导排斥可以在急性和慢性损伤中交叠；抗体、内皮和补体机制参见 Colvin、Smith [Antibody-mediated organ-allograft rejection](https://www.nature.com/articles/nri1702)，现代活检分类的证据组合参见 [Banff 2022 Kidney Meeting Report](https://pmc.ncbi.nlm.nih.gov/articles/PMC11135910/)。本页据此纠正 S02 lines 970–972 把急性固定为细胞免疫、慢性与超急性固定为体液免疫的旧二分。
 [^transplant-tolerance]: 调节性免疫细胞、嵌合与供者特异性低反应的研究框架，参见 Wood、Sakaguchi [Regulatory T cells in transplantation tolerance](https://www.nature.com/articles/nri3227)。
 [^gvhd]: 异基因造血干细胞移植后组织损伤、供者 T 细胞启动、效应与调节的连续过程，参见 Zeiser、Blazar [Acute graft-versus-host disease](https://pubmed.ncbi.nlm.nih.gov/29171820/)。
+[^gvhd-classification]: NIH 2014 诊断与分期共识明确以临床特征而非移植后时间区分急、慢性 GVHD，并规定慢性 GVHD 的诊断性表现与辅助证据要求；第 100 天后的持续、复发或晚发急性表现仍属于急性类别，见 Jagasia 等[工作组报告](https://pubmed.ncbi.nlm.nih.gov/25529383/)。
 [^ta-gvhd]: TA-GVHD 的供者淋巴细胞来源、HLA 共享风险和预防证据，参见 Kopolovic 等 [A systematic review of transfusion-associated graft-versus-host disease](https://ashpublications.org/blood/article/126/3/406/34566/A-systematic-review-of-transfusion-associated)及 British Society for Haematology [Guidelines on the use of irradiated blood components](https://onlinelibrary.wiley.com/doi/10.1111/bjh.17015)。本页据此纠正 S02 line 964 将受者细胞因子风暴作为启动原因的表述。
 [^tumor-antigen-presentation]: 肿瘤抗原来源、加工呈递与抗原逃逸，参见 Jhunjhunwala、Hammer 和 Delamarre [Antigen presentation in cancer](https://www.nature.com/articles/s41568-021-00339-z)。
 [^cancer-immunoediting]: 清除、平衡与逃逸的免疫编辑框架，参见 O'Donnell、Teng 和 Smyth [Cancer immunoediting and resistance to T cell-based immunotherapy](https://www.nature.com/articles/s41571-018-0142-8)；肿瘤内异质性与选择的更新综述见 Roerden、Spranger [Cancer immune evasion, immunoediting and intratumour heterogeneity](https://www.nature.com/articles/s41577-024-01111-8)。
