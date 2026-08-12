@@ -1,8 +1,8 @@
 # 生物能学
 
-活细胞不创造能量，而是在不同形式之间转换能量。营养物氧化、光吸收或无机物氧化提供驱动力；细胞再把其中一部分保存为 ATP 等核苷三磷酸、还原型电子载体、可转移的化学基团和跨膜电化学梯度，用于合成、运输、运动与信息处理。其余能量以热等形式散入环境。生物能学研究的正是这些转换在热力学上能否发生、能够提供多大驱动力，以及细胞怎样把有利过程与不利过程耦联起来。
+活细胞不创造能量，而是在不同形式之间转换能量。营养物氧化、光吸收或无机物氧化提供驱动力；细胞再把其中一部分保存为三磷酸腺苷（adenosine triphosphate，ATP）等核苷三磷酸、还原型电子载体、可转移的化学基团和跨膜电化学梯度，用于合成、运输、运动与信息处理。其余能量以热等形式散入环境。生物能学研究的正是这些转换在热力学上能否发生、能够提供多大驱动力，以及细胞怎样把有利过程与不利过程耦联起来。
 
-本页建立阅读具体产能通路所需的定量语言。代谢物池、稳态与通量控制见[代谢总论](metabolism.md)，NAD、FAD、辅酶 A 等载体的反应化学见[维生素与辅酶](vitamin_and_coenzyme.md)，呼吸链怎样把氧化还原自由能转成质子梯度并驱动 ATP 合成，见[电子传递与氧化磷酸化](oxp.md)。
+具体产能通路需要用统一的热力学语言记账。代谢物池、稳态与通量控制见[代谢总论](metabolism.md)；烟酰胺腺嘌呤二核苷酸（nicotinamide adenine dinucleotide，NAD）、黄素腺嘌呤二核苷酸（flavin adenine dinucleotide，FAD）和辅酶 A（coenzyme A，CoA）等载体的反应化学见[维生素与辅酶](vitamin_and_coenzyme.md)；呼吸链怎样把氧化还原自由能转成质子梯度并驱动 ATP 合成，见[电子传递与氧化磷酸化](oxp.md)。
 
 ## 热力学基础 { #thermodynamic-foundations }
 
@@ -34,9 +34,9 @@ $$
 Q=\prod_i a_i^{\nu_i}.
 $$
 
-$a_i$ 是无量纲活度，稀溶液中常用浓度近似；$\nu_i$ 对产物取正、反应物取负。带撇号的 $\Delta_rG^{\circ\prime}$ 是生化标准转化 Gibbs 能：在指定温度、压力、pH，必要时还包括 pMg 和离子强度的条件下，把同一生化反应物的不同质子化或金属结合形式合并处理。它不同于把所有化学物种都置于 1 mol·L$^{-1}$、包括 H$^+$ 也为 1 mol·L$^{-1}$ 的普通化学标准态。[^biochemical-thermodynamics]
+$a_i$ 是无量纲活度，稀溶液中常用浓度近似；$\nu_i$ 对产物取正、反应物取负，$R$ 为气体常数。带撇号的 $\Delta_rG^{\circ\prime}$ 是生化标准转化 Gibbs 能：在指定温度、压力、pH，必要时还包括游离 Mg$^{2+}$ 活度负对数 pMg 和离子强度的条件下，把同一生化反应物的不同质子化或金属结合形式合并处理。它不同于把所有化学物种都置于 1 mol·L$^{-1}$、包括 H$^+$ 也为 1 mol·L$^{-1}$ 的普通化学标准态。[^biochemical-thermodynamics]
 
-生化标准转化状态提供统一参照，细胞内的 ATP、ADP、P$_i$ 和 Mg$^{2+}$ 浓度则远离统一的 1 mol·L$^{-1}$，pH、温度和离子强度也因区室与状态而异。因此，标准值适合比较反应，判断细胞内方向则须把实际反应商代回公式。两个区室之间若缺少自由交换，计算还须分别采用局部活度，而不能用整细胞平均浓度代替。
+生化标准转化状态提供统一参照，细胞内的 ATP、二磷酸腺苷（adenosine diphosphate，ADP）、无机磷酸（P$_i$）和 Mg$^{2+}$ 浓度则远离统一的 1 mol·L$^{-1}$，pH、温度和离子强度也因区室与状态而异。因此，标准值适合比较反应，判断细胞内方向则须把实际反应商代回公式。两个区室之间若缺少自由交换，计算还须分别采用局部活度，而不能用整细胞平均浓度代替。
 
 达到平衡时 $\Delta_rG=0$、$Q=K'$，于是
 
@@ -62,7 +62,7 @@ $$
 
 其 $\Delta_rG^{\circ\prime}$ 约为 $-16.7$ kJ·mol$^{-1}$。酶通过把 ATP 的磷酰基直接转移给葡萄糖，使两个反应共享同一条化学路径；自由能因而沿反应中间物传递，而不会先以热的形式散失再用于另一反应。[^cellular-coupling]
 
-葡萄糖彻底氧化的标准自由能与假定 ATP 数量相乘所得数值直接比较，会混合不同层次的条件。例如“每摩尔葡萄糖释放 2870 kJ，其中 977 kJ 进入 ATP”是用某个 ATP 产量假设乘以 $30.5$ kJ·mol$^{-1}$ 的标准水解值；实际 ATP 产量会受穿梭、质子漏、转运和 P/O 比影响，细胞内 ATP 水解的 $\Delta_rG$ 又常比标准值更负。能量保存效率必须针对明确的反应计量、区室和实际状态计算，不能作为跨细胞的固定百分比。[^glucose-energy-accounting]
+葡萄糖彻底氧化的标准自由能与假定 ATP 数量相乘所得数值直接比较，会混合不同层次的条件。例如“每摩尔葡萄糖释放 2870 kJ，其中 977 kJ 进入 ATP”是用某个 ATP 产量假设乘以 $30.5$ kJ·mol$^{-1}$ 的标准水解值；实际 ATP 产量会受穿梭、质子漏、转运和磷氧比（phosphate/oxygen ratio，P/O ratio）影响，细胞内 ATP 水解的 $\Delta_rG$ 又常比标准值更负。能量保存效率必须针对明确的反应计量、区室和实际状态计算，不能作为跨细胞的固定百分比。[^glucose-energy-accounting]
 
 ### ATP 水解自由能的来源 { #atp-hydrolysis }
 
@@ -78,7 +78,7 @@ $$
 
     波浪号曾用于标记水解或基团转移具有较大负 $\Delta_rG^{\circ\prime}$ 的连接。这个符号概括完整反应的基团转移势；供体能否驱动另一反应，须比较同一条件下反应物与产物的整体自由能，而非孤立考察待断裂键。
 
-ATP 的“末端”与“近端”磷酸键只有放在完整反应及其产物中才具有热力学意义。ATP→ADP＋P$_i$ 是末端磷酰基转移；ATP→AMP＋PP$_i$ 则移走焦磷酰基，标准转化 Gibbs 能约为 $-45.6$ kJ·mol$^{-1}$，若 PP$_i$ 随后水解，总驱动力还会增加。两条路线的差值来自完整反应和产物稳定性的差异。
+ATP 的“末端”与“近端”磷酸键只有放在完整反应及其产物中才具有热力学意义。ATP→ADP＋P$_i$ 是末端磷酰基转移；ATP→一磷酸腺苷（adenosine monophosphate，AMP）＋无机焦磷酸（PP$_i$）则移走焦磷酰基，标准转化 Gibbs 能约为 $-45.6$ kJ·mol$^{-1}$，若 PP$_i$ 随后水解，总驱动力还会增加。两条路线的差值来自完整反应和产物稳定性的差异。
 
 ### 磷酰基转移势 { #phosphoryl-transfer-potential }
 
@@ -86,7 +86,7 @@ ATP 的“末端”与“近端”磷酸键只有放在完整反应及其产物�
 
 | 磷酸化合物 | 水解 $\Delta_rG^{\circ\prime}$ 约值 | 与 ATP 的关系和结构依据 |
 | --- | ---: | --- |
-| 磷酸烯醇式丙酮酸（PEP） | $-61.9$ kJ·mol$^{-1}$ | 产物烯醇式丙酮酸可互变为更稳定的酮式；可把磷酰基转给 ADP |
+| 磷酸烯醇式丙酮酸（phosphoenolpyruvate，PEP） | $-61.9$ kJ·mol$^{-1}$ | 产物烯醇式丙酮酸可互变为更稳定的酮式；可把磷酰基转给 ADP |
 | 1,3-二磷酸甘油酸 | $-49.4$ kJ·mol$^{-1}$ | C1 为酰基磷酸，可在糖酵解中向 ADP 转移磷酰基并生成 ATP |
 | 乙酰磷酸、磷酸肌酸 | 各约 $-43.1$ kJ·mol$^{-1}$ | 均高于 ATP，可在相应激酶反应中向 ADP 供磷酰基 |
 | ATP→ADP＋P$_i$ | $-30.5$ kJ·mol$^{-1}$ | 位于常见供体层级中部，既能被更高转移势供体再生，也能给低势受体磷酸化 |
@@ -94,11 +94,11 @@ ATP 的“末端”与“近端”磷酸键只有放在完整反应及其产物�
 
 ATP 位于层级中部具有重要意义。PEP、1,3-二磷酸甘油酸和某些酰基磷酸可通过底物水平磷酸化生成 ATP；ATP 又能磷酸化葡萄糖、甘油和蛋白质等较低转移势受体。若 ATP 处在最高端，它很难由代谢中间物再生；若过低，又难以驱动广泛的磷酸化反应。
 
-氨甲酰磷酸、酰基腺苷酸等也属于被 ATP 预先活化的中间物，但其意义须按实际转移基团判断。氨甲酰磷酸参与氨甲酰基转移，氨酰-tRNA 合成中的氨酰-AMP 则把氨基酸羧基活化后转给 tRNA；结构中的磷酸基须结合完整反应判断其转移对象和热力学作用。
+氨甲酰磷酸、酰基腺苷酸等也属于被 ATP 预先活化的中间物，但其意义须按实际转移基团判断。氨甲酰磷酸参与氨甲酰基转移；氨酰-tRNA 合成酶则先形成氨酰腺苷酸（aminoacyl adenylate，aminoacyl-AMP），再把氨基酸转给转运核糖核酸（transfer RNA，tRNA）。结构中的磷酸基须结合完整反应判断其转移对象和热力学作用。
 
 ### 核苷三磷酸的功能分工 { #nucleoside-triphosphates }
 
-GTP、UTP 和 CTP 的磷酸酐化学与 ATP 相近，细胞通过酶的底物选择把它们分配给不同任务：GTP 常参与翻译和分子开关，UTP 常用于糖核苷酸形成，CTP 常用于磷脂前体活化。核苷二磷酸激酶等反应又能在不同 NTP 池之间转移末端磷酰基。“ATP 是能量货币”强调其网络中心性和高周转；其他 NTP 仍具有相近的水解驱动力和各自的反应接口。
+三磷酸鸟苷（guanosine triphosphate，GTP）、三磷酸尿苷（uridine triphosphate，UTP）和三磷酸胞苷（cytidine triphosphate，CTP）的磷酸酐化学与 ATP 相近，细胞通过酶的底物选择把它们分配给不同任务：GTP 常参与翻译和分子开关，UTP 常用于糖核苷酸形成，CTP 常用于磷脂前体活化。核苷二磷酸激酶等反应又能在不同核苷三磷酸（nucleoside triphosphate，NTP）池之间转移末端磷酰基。“ATP 是能量货币”强调其网络中心性和高周转；其他 NTP 仍具有相近的水解驱动力和各自的反应接口。
 
 ATP→ADP 通常发生磷酰基转移，适合激酶、马达蛋白与离子泵等循环；ATP→AMP＋PP$_i$ 相当于消耗两个磷酸酐当量，常见于核酸连接、脂肪酸活化和氨酰-tRNA 合成。生成的 PP$_i$ 被无机焦磷酸酶水解，可把总体反应进一步拉向产物侧。把两条路线都简写为“消耗一个 ATP”会低估其能量与计量成本。
 
@@ -109,9 +109,9 @@ ATP→ADP 通常发生磷酰基转移，适合激酶、马达蛋白与离子泵�
 | 活化载体 | 主要转移对象 | 化学与分类边界 |
 | --- | --- | --- |
 | 乙酰 CoA 等酰基 CoA | 乙酰基或其他酰基 | 酰基与 CoA 硫原子形成硫酯；水解或酰基转移有利 |
-| S-腺苷甲硫氨酸（SAM） | 甲基及某些自由基／氨丙基单元 | 正电锍中心使相邻取代基易于转移，功能核心是基团活化与转移 |
-| UDP-葡萄糖等核苷酸糖 | 糖基 | 离去基团和酶识别共同支持糖苷键合成；不同糖基常配不同核苷酸载体 |
-| 3′-磷酸腺苷-5′-磷酰硫酸（PAPS） | 硫酸基 | 以磷酸酐形式活化硫酸基，化学类型区别于乙酰 CoA 的硫酯 |
+| S-腺苷甲硫氨酸（S-adenosylmethionine，SAM） | 甲基及某些自由基／氨丙基单元 | 正电锍中心使相邻取代基易于转移，功能核心是基团活化与转移 |
+| 尿苷二磷酸葡萄糖（uridine diphosphate glucose，UDP-葡萄糖）等核苷酸糖 | 糖基 | 离去基团和酶识别共同支持糖苷键合成；不同糖基常配不同核苷酸载体 |
+| 3′-磷酸腺苷-5′-磷酰硫酸（3′-phosphoadenosine-5′-phosphosulfate，PAPS） | 硫酸基 | 以磷酸酐形式活化硫酸基，化学类型区别于乙酰 CoA 的硫酯 |
 
 这些载体把“能量传递”与“物质转移”合在同一个分子事件中。乙酰 CoA 把指定酰基带到受体，SAM 和 PAPS 则分别携带甲基与硫酸基；基团转移势因而比笼统的“高能化合物”更能说明它们在代谢中的作用。
 
@@ -137,9 +137,9 @@ $$
 \Delta_rG=-nF\Delta E,
 $$
 
-其中 $F$ 为法拉第常数。$\Delta E>0$ 因而对应电子转移的 $\Delta_rG<0$。标准转化还原电势 $E^{\circ\prime}$ 同样固定 pH 等条件，实际电势须用 Nernst 方程依据氧化态与还原态活度修正。[^redox-potential]
+其中 $n$ 为转移电子数，$F$ 为法拉第常数。$\Delta E>0$ 因而对应电子转移的 $\Delta_rG<0$。标准转化还原电势 $E^{\circ\prime}$ 同样固定 pH 等条件，实际电势须用 Nernst 方程依据氧化态与还原态活度修正。[^redox-potential]
 
-以标准转化值为参照，NAD$^+$/NADH 约为 $-0.32$ V，O$_2$/H$_2$O 约为 $+0.82$ V；两个电子从 NADH 流向氧时，$\Delta E^{\circ\prime}$ 约为 $1.14$ V，对应约 $-220$ kJ·mol$^{-1}$ 的自由能变化。呼吸链通过多个中间载体分段传递电子，把部分自由能保存为跨膜质子梯度，其余以热等形式耗散。具体电子载体、复合体和化学计量由[电子传递与氧化磷酸化](oxp.md)展开。
+以标准转化值为参照，NAD$^+$/NADH 约为 $-0.32$ V，O$_2$/H$_2$O 约为 $+0.82$ V；两个电子从 NADH 流向氧时，$\Delta E^{\circ\prime}$ 约为 $1.14$ V，对应约 $-220$ kJ·mol$^{-1}$ 的自由能变化。呼吸链通过多个中间载体分段传递电子，把部分自由能保存为跨膜质子梯度，其余以热等形式耗散；具体电子载体、复合体和化学计量见[电子传递与氧化磷酸化](oxp.md)。
 
 ### 跨膜电化学梯度 { #electrochemical-gradients }
 
@@ -169,7 +169,7 @@ $$
 
 在 ATP 消耗突然增加时迅速再生 ATP，并在产能位置与用能位置之间传递磷酰基；固定 pH 的生化方程中省略了随反应方向交换的 H$^+$。许多无脊椎动物和部分其他生物使用精氨酸激酶—磷酸精氨酸系统，生物界还存在其他磷酸原；各系统的分布须按具体类群判断。它们主要承担短时和局部的 ATP 缓冲，糖原或三酰甘油则负责较长期储能。[^phosphagen-systems]
 
-无机多聚磷酸由数个至数百个磷酸残基以磷酸酐连接，广布于细菌、古菌和真核生物。微生物的多聚磷酸激酶可在核苷酸与 polyP 之间转移磷酰基，某些体系可据此再生 NTP；polyP 还参与磷酸与金属离子稳态、应激、蛋白质稳态和细胞结构。它是一类跨生命域的多功能聚合物，合成本身常消耗 ATP，主要生理意义随物种和状态而变。[^polyphosphate]
+无机多聚磷酸（inorganic polyphosphate，polyP）由数个至数百个磷酸残基以磷酸酐连接，广布于细菌、古菌和真核生物。微生物的多聚磷酸激酶可在核苷酸与 polyP 之间转移磷酰基，某些体系可据此再生 NTP；polyP 还参与磷酸与金属离子稳态、应激、蛋白质稳态和细胞结构。它是一类跨生命域的多功能聚合物，合成本身常消耗 ATP，主要生理意义随物种和状态而变。[^polyphosphate]
 
 ### 生物能学的定量原则 { #thermodynamic-accounting }
 
@@ -186,7 +186,7 @@ $$
 - [Quantitative analysis of mitochondrial ATP synthesis](https://pmc.ncbi.nlm.nih.gov/articles/PMC8434986/)。
 - Alberts, B. et al., [Electron-Transport Chains and Their Proton Pumps](https://www.ncbi.nlm.nih.gov/books/NBK26904/). *Molecular Biology of the Cell*。
 
-[^gibbs-definition]: IUPAC Gold Book, [Gibbs energy](https://goldbook.iupac.org/terms/view/G02629)。Gibbs 能定义为焓减去热力学温度与熵的乘积；正文用反应前后的差值 $\Delta_rG$ 讨论方向。
+[^gibbs-definition]: IUPAC Gold Book, [Gibbs energy](https://goldbook.iupac.org/terms/view/G02629)。Gibbs 能定义为焓减去热力学温度与熵的乘积；反应前后的差值 $\Delta_rG$ 给出指定组成下的方向判据。
 [^thermodynamics-kinetics]: [Metabolic Energy](https://www.ncbi.nlm.nih.gov/books/NBK9903/) 与 [Catalysis and the Use of Energy by Cells](https://www.ncbi.nlm.nih.gov/books/NBK26838/) 分别说明热力学方向、活化势垒与酶催化的分工。
 [^biochemical-thermodynamics]: IUBMB, [Recommendations for Terminology and Databases for Biochemical Thermodynamics](https://iubmb.qmul.ac.uk/thermod2/)。该建议区分具体离子物种的化学反应与固定 pH、pMg 等条件下的生化反应，并规范 $\Delta_rG^{\circ\prime}$ 与 $K'$。
 [^cellular-coupling]: [Catalysis and the Use of Energy by Cells](https://www.ncbi.nlm.nih.gov/books/NBK26838/)。该教材以磷酰基转移说明酶如何把 ATP 水解与不利反应连接成共同化学路径。

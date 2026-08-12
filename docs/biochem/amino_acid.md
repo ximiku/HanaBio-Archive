@@ -14,11 +14,11 @@
 
 !!! info "两性离子与等电点"
 
-    两性离子要求同一分子同时具有正、负形式电荷；等电点则是某一给定体系中分子群平均净电荷为零的 pH。一个含带电侧链的氨基酸可以具有两性离子结构而仍带非零净电荷；达到 pI 时，分子群中仍可同时存在多种微观质子化状态。
+    两性离子要求同一分子同时具有正、负形式电荷；等电点（isoelectric point，pI）则是某一给定体系中分子群平均净电荷为零的 pH。一个含带电侧链的氨基酸可以具有两性离子结构而仍带非零净电荷；达到 pI 时，分子群中仍可同时存在多种微观质子化状态。
 
 ### D/L 构型、R/S 命名与旋光性 { #amino-acid-stereochemistry }
 
-除甘氨酸外，二十种标准氨基酸的 α-碳均为手性中心。D/L 标记依据 Fischer 投影中氨基酸与甘油醛的相对构型关系；核糖体合成蛋白质所用的普通氨基酸通常属于 L 系列。R/S 则按 Cahn–Ingold–Prelog 优先顺序描述手性中心的绝对构型。多数 L-氨基酸的 α-碳是 $S$ 构型，但 L-Cys 因硫原子的优先级较高而是 $R$ 构型，不能用一个体系推断另一个体系。IUPAC–IUBMB 的 3AA-14 至 3AA-16 建议还规定了肽和蛋白质语境中的构型表示方式。[^iupac-amino-acid-nomenclature]
+除甘氨酸外，二十种标准氨基酸的 α-碳均为手性中心。D/L 标记依据 Fischer 投影中氨基酸与甘油醛的相对构型关系；核糖体合成蛋白质所用的普通氨基酸通常属于 L 系列。R/S 则按 Cahn–Ingold–Prelog 优先顺序描述手性中心的绝对构型。多数 L-氨基酸的 α-碳是 $S$ 构型，但 L-Cys 因硫原子的优先级较高而是 $R$ 构型，不能用一个体系推断另一个体系。国际纯粹与应用化学联合会—国际生物化学与分子生物学联合会（IUPAC–IUBMB）的 3AA-3 至 3AA-5 规定构型与旋光命名，3AA-14 至 3AA-16 则规定三字母符号和残基书写方式。[^iupac-amino-acid-nomenclature]
 
 D/L 也不表示旋光方向。右旋或左旋由实验条件下测得的比旋光度符号表示，同为 L 系列的氨基酸并不必然具有相同旋光方向；溶剂、pH、温度和测量波长还会改变观测值。苏氨酸和异亮氨酸的侧链另含一个手性中心，因此仅给出 α-碳的 D/L 或 R/S 信息仍不足以描述全部立体化学。
 
@@ -61,7 +61,7 @@ Pro 的侧链回接 α-氨基氮，游离 Pro 含仲胺，“亚氨基酸”是�
 | 精氨酸（Arg，R） | 胍基；通常 $+1$ | 正电荷离域，可形成多重、定向的氢键和离子相互作用 |
 | 组氨酸（His，H） | 咪唑；pH 7 时部分质子化 | 侧链 pKa 常在 6 附近，适合在生理范围参与质子转移和金属配位 |
 
-三字母与单字母符号是序列表示规范的一部分。B 表示不能区分 Asp 与 Asn 的 Asx，Z 表示不能区分 Glu 与 Gln 的 Glx，X 表示未知或未指定残基；遗传编码的 Sec 与 Pyl 分别使用 Sec／U 和 Pyl／O。[^amino-acid-codes]
+三字母与单字母符号是序列表示规范的一部分。B 表示不能区分 Asp 与 Asn 的 Asx，Z 表示不能区分 Glu 与 Gln 的 Glx，X 表示未知或未指定残基；遗传编码的硒代半胱氨酸（selenocysteine，Sec）与吡咯赖氨酸（pyrrolysine，Pyl）分别使用 Sec／U 和 Pyl／O。[^amino-acid-codes]
 
 ### 非极性与芳香族侧链 { #nonpolar-aromatic-side-chains }
 
@@ -97,7 +97,7 @@ Asp、Glu 的羧酸盐通常提供负电荷，Lys、Arg 的侧链通常提供正
 
 ### 支链、含硫及其他交叉分类 { #side-chain-cross-classification }
 
-Val、Leu 和 Ile 合称支链氨基酸（branched-chain amino acids, BCAA），这一名称描述三者的碳骨架分支方式；它们在蛋白质中的具体作用仍由所在结构环境决定。Cys 与 Met 都含硫，但 Cys 的巯基能够解离、参与亲核反应和二硫键交换，Met 的硫醚在通常条件下不带电，反应性与 Cys 明显不同。Phe、Tyr、Trp 都含芳香环，Tyr 同时属于极性残基，Trp 的吲哚也能提供氢键。分类的意义在于提示可比较的官能团，具体判断仍须回到分子结构。
+Val、Leu 和 Ile 合称支链氨基酸（branched-chain amino acids，BCAA），这一名称描述三者的碳骨架分支方式；它们在蛋白质中的具体作用仍由所在结构环境决定。Cys 与 Met 都含硫，但 Cys 的巯基能够解离、参与亲核反应和二硫键交换，Met 的硫醚在通常条件下不带电，反应性与 Cys 明显不同。Phe、Tyr、Trp 都含芳香环，Tyr 同时属于极性残基，Trp 的吲哚也能提供氢键。分类的意义在于提示可比较的官能团，具体判断仍须回到分子结构。
 
 两个 Cys 残基的巯基氧化后形成二硫键，为同一条或不同多肽链增加共价约束；还原则恢复两个巯基。由两个 L-Cys 形成的天然 L,L-cystine 仍是手性化合物，并非内消旋体；D,L-cystine 才是相应的 meso 立体异构体。蛋白质中二硫键的形成位置和交换速率还受到折叠状态与细胞氧化还原环境控制。
 
@@ -172,7 +172,7 @@ Lys 在低 pH 时两个氨基都质子化，连同未解离羧基时净电荷为
 
 ### 紫外吸收与核磁共振表征 { #uv-nmr-information }
 
-核磁共振记录特定原子核在局部电子环境中的化学位移、峰形、耦合和弛豫。对纯氨基酸，这些信息可用于确认官能团、质子化和构象；对肽或蛋白质，同位素标记与多维谱可进一步提供残基归属、空间邻近和运动信息。化学位移会随 pH 改变，因而 NMR 也能用来追踪某些基团的滴定过程，但复杂混合物中的峰重叠和灵敏度仍限制解析方式。
+核磁共振（nuclear magnetic resonance，NMR）记录特定原子核在局部电子环境中的化学位移、峰形、耦合和弛豫。对纯氨基酸，这些信息可用于确认官能团、质子化和构象；对肽或蛋白质，同位素标记与多维谱可进一步提供残基归属、空间邻近和运动信息。化学位移会随 pH 改变，因而 NMR 也能用来追踪某些基团的滴定过程，但复杂混合物中的峰重叠和灵敏度仍限制解析方式。
 
 Phe、Tyr 和 Trp 的芳香侧链具有近紫外吸收，其中蛋白质在 280 nm 的常用估算主要由 Trp 和 Tyr 决定，cystine／二硫键还有较小贡献。ExPASy ProtParam 使用下式估算水中消光系数：
 
@@ -191,7 +191,7 @@ Phe、Tyr 和 Trp 的芳香侧链具有近紫外吸收，其中蛋白质在 280 
 
 ### 硒代半胱氨酸和吡咯赖氨酸 { #sec-pyl }
 
-“二十种标准氨基酸”概括通用遗传密码的主体，Sec 和 Pyl 则由专门的翻译系统直接插入正在延伸的多肽，单字母代码分别为 U 和 O。两者各有专用 tRNA，但采用不同的装载与递送机制：Sec 的插入需要把特定 UGA 重新编码，并依赖 SECIS 等 RNA 元件及 SelB／eEFSec 一类专门延伸因子；Pyl 由 PylRS 直接装载到 $\mathrm{tRNA^{Pyl}}$，读取特定 UAG 时通常由常规延伸因子 EF-Tu 或相应古菌／真核同源因子递送。[^sec-pyl-mechanisms]
+“二十种标准氨基酸”概括通用遗传密码的主体，Sec 和 Pyl 则由专门的翻译系统直接插入正在延伸的多肽，单字母代码分别为 U 和 O。两者各有专用转运 RNA（transfer RNA，tRNA），但采用不同的装载与递送机制：Sec 的插入需要把特定 UGA 重新编码，并依赖硒代半胱氨酸插入序列（selenocysteine insertion sequence，SECIS）等 RNA 元件及 SelB／eEFSec 一类专门延伸因子；Pyl 由吡咯赖氨酰-tRNA 合成酶（PylRS）直接装载到 $\mathrm{tRNA^{Pyl}}$，读取特定 UAG 时通常由延伸因子 Tu（EF-Tu）或相应古菌／真核同源因子递送。[^sec-pyl-mechanisms]
 
 这些系统只分布于部分生物和基因，终止密码子的重新解释也依赖局部序列与配套因子。因此“第 21、22 种氨基酸”说明遗传编码范围可以扩展，并不表示所有细胞在所有 UGA、UAG 位置都会插入 Sec 或 Pyl。
 
@@ -221,12 +221,12 @@ Phe、Tyr 和 Trp 的芳香侧链具有近紫外吸收，其中蛋白质在 280 
 | --- | --- | --- | --- |
 | 茚三酮 | 多数游离伯氨基；Pro、羟脯氨酸等仲胺也可反应 | 多数氨基酸形成蓝紫色 Ruhemann 紫，仲胺常呈黄色 | 可用于显色和氨基氮检测，但并非 α-氨基酸绝对专一试剂 |
 | 甲醛滴定 | 游离氨基酸或肽端的氨基 | 甲醛掩蔽氨基的碱性，改变后续碱滴定量 | 可估计游离氨基酸或氨基氮；铵盐、其他胺和样品基质会干扰，Pro 等仲胺响应不同 |
-| Schiff 碱形成 | 具有伯 α-氨基的氨基酸与醛 | 可逆亚胺；PLP 酶中可形成外醛亚胺中间体 | 说明氨基参与羰基化学；Pro、羟脯氨酸的仲胺不按普通伯胺路径处理 |
+| Schiff 碱形成 | 具有伯 α-氨基的氨基酸与醛 | 可逆亚胺；磷酸吡哆醛（pyridoxal phosphate，PLP）酶中可形成外醛亚胺中间体 | 说明氨基参与羰基化学；Pro、羟脯氨酸的仲胺不按普通伯胺路径处理 |
 | Van Slyke 亚硝酸反应 | 具有伯 α-氨基的氨基酸 | 脱氨并释放氮气 | 可用于经典氨基氮测定，但选择性和样品适用性有限，Pro、羟脯氨酸是例外 |
-| FDNB、丹磺酰氯或 PITC 标记 | 可接近的游离 N 端氨基，也可能反应于 Lys ε-氨基 | 稳定显色、荧光或可逐步释放的衍生物 | 支持端基鉴定或测序；需要可接近且未封闭的 N 端，并须区分侧链氨基反应 |
+| 1-氟-2,4-二硝基苯（1-fluoro-2,4-dinitrobenzene，FDNB）、丹磺酰氯或异硫氰酸苯酯（phenyl isothiocyanate，PITC）标记 | 可接近的游离 N 端氨基，也可能反应于 Lys ε-氨基 | 稳定显色、荧光或可逐步释放的衍生物 | 支持端基鉴定或测序；需要可接近且未封闭的 N 端，并须区分侧链氨基反应 |
 | 羧基酯化或活化 | 游离 α-羧基、C 端及 Asp／Glu 侧链羧基 | 酯、活化酰基或酰胺 | 可用于衍生化和肽键形成，产物位置取决于保护基与反应条件 |
 
-茚三酮反应之所以适合氨基酸检测，是因为许多氨基酸都有可参与反应的游离氨基，并生成吸收强的有色产物；同一理由也决定了它不能证明样品中的反应物一定是 α-氨基酸。胺、氨以及某些肽端同样可能响应，Pro 和羟脯氨酸还因仲胺结构产生不同颜色。经典反应的机理与用途在本地素材基础上重新组织，并以其他来源核对其选择性边界。[^osm-amino-acid-reactions]
+茚三酮反应之所以适合氨基酸检测，是因为许多氨基酸都有可参与反应的游离氨基，并生成吸收强的有色产物；同一理由也决定了它不能证明样品中的反应物一定是 α-氨基酸。胺、氨以及某些肽端同样可能响应，Pro 和羟脯氨酸还因仲胺结构产生不同颜色。经典反应的机理与用途须按反应基团、样品组成和测定条件解释。[^osm-amino-acid-reactions]
 
 甲醛滴定不是把羧基当作唯一待测对象。甲醛与游离氨基反应后降低其碱性，使样品的碱耗量能够用于估计游离氨基酸或氨基氮；反应不完全、铵离子、其他胺类和终点选择都会影响结果。[^formol-titration] N 端标记也利用同一“游离氨基仍可反应”的差异，但详细的水解条件、Sanger 端基分析、Edman 逐步降解及自动测序史属于[蛋白质研究方法](protein_methods.md)，不在本页展开。
 
@@ -238,11 +238,11 @@ Phe、Tyr 和 Trp 的芳香侧链具有近紫外吸收，其中蛋白质在 280 
 | Millon 反应 | Tyr 的酚基 | 加热后出现红色产物或沉淀 | 提示酚结构而非对 Tyr 绝对专一，强酸和含汞试剂限制实际使用 |
 | Hopkins–Cole 反应 | Trp 的吲哚环 | 界面形成紫色环 | 可检出 Trp，但强酸条件和其他吲哚化合物影响专一性 |
 | Sakaguchi 反应 | Arg 的胍基 | 氧化偶联形成红色产物 | 可估计胍基，颜色受试剂条件与样品背景影响 |
-| DTNB（Ellman 试剂） | 可接近的游离巯基，代表残基为 Cys | 巯基—二硫键交换释放黄色 TNB | 可定量可接近巯基；被埋藏或已成二硫键的 Cys 不会直接给出同等响应 |
+| 5,5′-二硫代双(2-硝基苯甲酸)（DTNB，Ellman 试剂） | 可接近的游离巯基，代表残基为 Cys | 巯基—二硫键交换释放黄色 2-硝基-5-硫代苯甲酸（TNB） | 可定量可接近巯基；被埋藏或已成二硫键的 Cys 不会直接给出同等响应 |
 
 显色反应把侧链官能团转化为可见信号，适合展示结构与反应性的联系，但复杂样品中的阳性结果通常只支持“存在可反应基团”，不能单独完成残基鉴定。黄蛋白反应对 Tyr、Trp 较明显而 Phe 很弱，正说明同属芳香族不等于反应程度相同；Millon、Hopkins–Cole 和 Sakaguchi 反应也分别受其他酚、吲哚或胍类化合物干扰。
 
-DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 412 nm 有强吸收的 TNB，因而可用于巯基定量。[^ellman-thiol-assay] 已形成二硫键的两个 Cys 残基不直接等同于两个可检测巯基；若先用 β-巯基乙醇、DTT 或 TCEP 还原，再比较处理前后信号，才可能估计二硫键贡献。三种还原剂的机制、有效 pH、稳定性及对后续测定的兼容性不同，不存在脱离实验条件的统一强弱排名。
+DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 412 nm 有强吸收的 TNB，因而可用于巯基定量。[^ellman-thiol-assay] 已形成二硫键的两个 Cys 残基不直接等同于两个可检测巯基；若先用 β-巯基乙醇、二硫苏糖醇（dithiothreitol，DTT）或三(2-羧乙基)膦（tris(2-carboxyethyl)phosphine，TCEP）还原，再比较处理前后信号，才可能估计二硫键贡献。三种还原剂的机制、有效 pH、稳定性及对后续测定的兼容性不同，不存在脱离实验条件的统一强弱排名。
 
 !!! warning "显色反应提供的是有条件的化学证据"
 
@@ -252,9 +252,9 @@ DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 41
 
 酸碱平衡使不同氨基酸在给定 pH 下具有不同净电荷，可用于电泳和离子交换分离；侧链极性与疏水表面改变其在固定相和流动相之间的相互作用，可用于分配、反相或亲水作用色谱；氨基和巯基反应则可把难检测的分子转化为有色、荧光或更易保留的衍生物。分析方法由此把结构差异分别转化为迁移、保留或响应差异，完整鉴定通常需要多项性质相互印证。
 
-现代氨基酸分析常将色谱分离与串联质谱结合。保留时间、前体离子的 $m/z$ 和碎片离子共同提高鉴定选择性，稳定同位素内标可校正部分回收与离子化差异；但响应因子、基质效应和同分异构体仍须用方法学验证。HILIC–MS/MS 的具体研究展示了极性氨基酸如何在不依赖单一显色反应的情况下分离和定量，而不能替代全部经典反应、色谱和水解条件的依据。[^hilic-amino-acid-analysis]
+现代氨基酸分析常将色谱分离与串联质谱（tandem mass spectrometry，MS/MS）结合。保留时间、前体离子的质荷比 $m/z$ 和碎片离子共同提高鉴定选择性，稳定同位素内标可校正部分回收与离子化差异；但响应因子、基质效应和同分异构体仍须用方法学验证。亲水相互作用色谱—串联质谱（HILIC–MS/MS）的具体研究展示了极性氨基酸如何在不依赖单一显色反应的情况下分离和定量；经典反应、其他色谱机制和水解条件仍各自提供与研究问题相应的证据。[^hilic-amino-acid-analysis]
 
-测定蛋白质氨基酸组成还必须先释放残基。酸、碱或酶水解对 Trp、Cys、Met、Ser、Thr、Asn 和 Gln 的保存程度不同，完全水解只留下各残基的组成信息，不保留原有序列。详细水解条件、组成分析流程、离子交换与 HPLC 操作以及端基测序见[蛋白质研究方法](protein_methods.md)；本页只保留理解这些方法所需的官能团、电荷和光谱基础。
+测定蛋白质氨基酸组成还必须先释放残基。酸、碱或酶水解对 Trp、Cys、Met、Ser、Thr、Asn 和 Gln 的保存程度不同，完全水解只留下各残基的组成信息，不保留原有序列。详细水解条件、组成分析流程、离子交换与高效液相色谱（high-performance liquid chromatography，HPLC）操作以及端基测序见[蛋白质研究方法](protein_methods.md)；本页只保留理解这些方法所需的官能团、电荷和光谱基础。
 
 游离氨基酸形成肽键后，主链官能团的自由状态和构象空间随之改变，侧链则把本页讨论的电荷、氢键、疏水作用与反应性带入多肽。下一页的[蛋白质结构](protein_structure.md)将由肽键平面性和主链二面角出发，说明这些局部性质如何共同形成可折叠的三维结构。
 
@@ -269,7 +269,7 @@ DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 41
 - osm.bio. [《氨基酸性质整理》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E6%80%A7%E8%B4%A8%E6%95%B4%E7%90%86&oldid=15292)；[《氨基酸的化学反应》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E7%9A%84%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BA%94&oldid=16272).
 
 [^zwitterion-structure]: IUPAC Gold Book, [zwitterionic compounds／zwitterions](https://goldbook.iupac.org/terms/view/Z06752)；OpenStax, [Structures of Amino Acids](https://openstax.org/books/organic-chemistry/pages/26-1-structures-of-amino-acids)。
-[^iupac-amino-acid-nomenclature]: IUPAC–IUBMB, [3AA-14 to 3AA-16: stereochemical representation, configuration and symbols](https://iupac.qmul.ac.uk/AminoAcid/A1416.html)。
+[^iupac-amino-acid-nomenclature]: IUPAC–IUBMB, [3AA-3 to 3AA-5: configuration and optical rotation](https://iupac.qmul.ac.uk/AminoAcid/AA3t5.html) 与 [3AA-14 to 3AA-16: three-letter symbols and amino-acid residues](https://iupac.qmul.ac.uk/AminoAcid/A1416.html)。
 [^osm-sidechain-classification]: 本节对分类的组织参考并实质性改编自 osm.bio [《氨基酸性质整理》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E6%80%A7%E8%B4%A8%E6%95%B4%E7%90%86&oldid=15292)，并以 OpenStax 的结构与 pKa 表交叉核对。
 [^amino-acid-codes]: IUPAC–IUBMB, [3AA-20 and 3AA-21: symbols for amino-acid residues](https://iupac.qmul.ac.uk/AminoAcid/A2021.html) 给出 B、Z、X 与 Sec／U；NCBI [Biological Sequences](https://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/BIOSEQ.HTML) 的扩展编码表列出 Sec／U 和 Pyl／O；RCSB PDB-101 [Primary Sequences](https://pdb101-east.rcsb.org/learn/guide-to-understanding-pdb-data/primary-sequences)列出 SEC、PYL 三字母代码。
 [^fig-amino-acid-ionization]: 本站依据 Borkovec, M., Koper, G. J. M. & Spiess, B. [The intrinsic view of ionization equilibria of polyprotic molecules](https://doi.org/10.1039/C4NJ00655K) 和 OpenStax [Amino Acids and the Henderson–Hasselbalch Equation: Isoelectric Points](https://openstax.org/books/organic-chemistry/pages/26-2-amino-acids-and-the-henderson-hasselbalch-equation-isoelectric-points)绘制；图中仅表示无可电离侧链氨基酸的主要形式。

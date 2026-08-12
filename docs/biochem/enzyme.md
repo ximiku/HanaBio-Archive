@@ -2,7 +2,7 @@
 
 细胞中的许多反应在热力学上可以发生，却不会在生命活动所需的时间尺度内自行完成。酶为这些反应提供更快的分子路径，并把底物识别、化学转化和细胞调控连接起来。一个酶分子通常经历多次结合与释放循环；它在每轮反应后回到可继续工作的状态，但循环中的构象、质子化状态或共价连接可以暂时改变。
 
-催化体系以蛋白质酶为主，也包括催化 RNA，并常依赖金属、有机辅因子和多亚基装配。专一性和活力都需要在规定条件下描述；反应名称、EC 编号和显色读数也应还原为可检验的催化过程。
+催化体系以蛋白质酶为主，也包括具有催化能力的核糖核酸（ribonucleic acid，RNA），并常依赖金属、有机辅因子和多亚基装配。专一性和活力都需要在规定条件下描述；反应名称、酶委员会编号（Enzyme Commission number，EC number）和显色读数也应还原为可检验的催化过程。
 
 本页讨论酶的共同性质、物质组成、命名分类、底物识别、活力测定和工程化。米氏方程及抑制动力学见[酶动力学](enzyme_dynamics.md)，活性位点的化学机制、别构调节、酶原和同工酶见[酶的催化机制与调控](enzyme_mechanism_regulation.md)，各类维生素衍生辅酶的反应化学见[维生素与辅酶](vitamin_and_coenzyme.md)。
 
@@ -18,7 +18,7 @@ $$
 
 “酶不被消耗”指它不是反应方程中的净计量消耗物，不表示反应过程中始终保持同一结构。底物结合、酸碱基团的得失质子、暂时共价中间体、金属氧化态变化和亚基运动都可能是催化循环的一部分。酶也会被不可逆抑制、氧化、蛋白水解或热变性；此时失去的活力不会因为方程两侧都写着 $E$ 而自动恢复。
 
-酶降低反应的动力学能垒；热力学上不利的过程则通过 ATP 水解、离子梯度或氧化还原反应等耦联获得有利的总自由能变化。细胞还通过底物供给、区室化和酶量改变净通量。给定反应的平衡与开放系统中的代谢方向属于两个相互衔接的层次。
+酶降低反应的动力学能垒；热力学上不利的过程则通过三磷酸腺苷（adenosine triphosphate，ATP）水解、离子梯度或氧化还原反应等耦联获得有利的总自由能变化。细胞还通过底物供给、区室化和酶量改变净通量。给定反应的平衡与开放系统中的代谢方向属于两个相互衔接的层次。
 
 ## 催化分子的物质组成 { #molecular-composition }
 
@@ -26,19 +26,19 @@ $$
 
 绝大多数已知细胞酶由蛋白质构成。折叠把一级序列上相隔很远的残基带到同一三维区域，使结合、酸碱催化、共价催化和金属配位能够协同发生。催化所需的完整单位可以是一条多肽，也可以由多个相同或不同亚基装配而成；“单体”或“寡聚体”只描述装配，不预先决定酶是否受调控。
 
-RNA 也能承担真正的催化循环。1983 年的重构实验显示，细菌 RNase P 的 RNA 组分在适当 Mg$^{2+}$ 和多胺条件下可多轮切割前体 tRNA，证明催化能力并非蛋白质专有。细胞内 RNase P 的蛋白质依赖程度随类群不同，核糖体肽基转移中心则是另一类 RNA 主导的催化环境。[^ribozyme-evidence]
+RNA 也能承担真正的催化循环。1983 年的重构实验显示，细菌核糖核酸酶 P（ribonuclease P，RNase P）的 RNA 组分在适当 Mg$^{2+}$ 和多胺条件下可多轮切割前体转运 RNA（transfer RNA，tRNA），证明催化能力并非蛋白质专有。细胞内 RNase P 的蛋白质依赖程度随类群不同，核糖体肽基转移中心则是另一类 RNA 主导的催化环境。[^ribozyme-evidence]
 
-实验室还可通过体外选择获得脱氧核酶（deoxyribozyme）。最早的代表之一能催化 RNA 磷酸二酯键断裂，但这是从随机 DNA 序列群体中筛选出的人工催化剂，不能据此把细胞中的 DNA 聚合酶、限制酶等称为“DNA 酶”：后者是作用于 DNA 的蛋白质酶。[^deoxyribozyme]
+实验室还可通过体外选择获得脱氧核酶（deoxyribozyme）。最早的代表之一能催化 RNA 磷酸二酯键断裂，但这是从随机脱氧核糖核酸（deoxyribonucleic acid，DNA）序列群体中筛选出的人工催化剂，不能据此把细胞中的 DNA 聚合酶、限制酶等称为“DNA 酶”：后者是作用于 DNA 的蛋白质酶。[^deoxyribozyme]
 
 ### 辅因子与催化化学 { #cofactors }
 
 不少蛋白质单靠氨基酸侧链不足以完成电子转移、基团转移或强极化反应，需要非蛋白组分参与。辅因子（cofactor）是这一层次的总称，可为金属离子，也可为有机分子。缺少必需辅因子的蛋白质部分常称脱辅酶（apoenzyme），与辅因子组成的催化活性整体称全酶（holoenzyme）。[^cofactor-terms]
 
-有机辅因子常称辅酶。NAD$^+$、辅酶 A 等可像共底物一样与多种酶短暂结合，在一次反应中发生化学变化，再由网络中的另一反应再生；血红素、FAD 或生物素也可能作为辅基长期留在同一蛋白质上。辅基可以由共价键固定，也可以靠紧密的非共价作用结合，因此不能用“辅酶一定松、辅基一定共价”作硬边界。金属结合同样形成连续谱：有的金属稳定地嵌入成熟酶，有的在测定体系中可逆结合底物或蛋白质。精确叙述应给出具体分子、结合状态和实验条件，而不是只贴“简单酶／结合酶”的标签。
+有机辅因子常称辅酶。烟酰胺腺嘌呤二核苷酸（nicotinamide adenine dinucleotide，NAD$^+$）、辅酶 A（coenzyme A，CoA）等可像共底物一样与多种酶短暂结合，在一次反应中发生化学变化，再由网络中的另一反应再生；血红素、黄素腺嘌呤二核苷酸（flavin adenine dinucleotide，FAD）或生物素也可能作为辅基长期留在同一蛋白质上。辅基可以由共价键固定，也可以靠紧密的非共价作用结合，因此不能用“辅酶一定松、辅基一定共价”作硬边界。金属结合同样形成连续谱：有的金属稳定地嵌入成熟酶，有的在测定体系中可逆结合底物或蛋白质。精确叙述应给出具体分子、结合状态和实验条件，而不是只贴“简单酶／结合酶”的标签。
 
 ### 催化实体的装配方式 { #enzyme-assemblies }
 
-多功能酶可在同一多肽的不同催化结构域完成多个反应；多酶复合体则由不同类型的催化多肽共同组成。丙酮酸脱氢酶复合体把连续反应、摆动辅基和亚基装配组织在一起，但其各项催化活动仍可分别具有 EC 编号。NC-IUBMB 因而区分“单个催化实体”“多功能酶”和由多个酶构成的 enzyme system，避免给整个模糊生理过程随意添加一个 *-ase* 名称。[^multienzyme-nomenclature]
+多功能酶可在同一多肽的不同催化结构域完成多个反应；多酶复合体则由不同类型的催化多肽共同组成。丙酮酸脱氢酶复合体把连续反应、摆动辅基和亚基装配组织在一起，但其各项催化活动仍可分别具有 EC 编号。国际生物化学与分子生物学联合会命名委员会（Nomenclature Committee of the International Union of Biochemistry and Molecular Biology，NC-IUBMB）因而区分“单个催化实体”“多功能酶”和由多个酶构成的酶系统（enzyme system），避免给整个模糊生理过程随意添加一个 *-ase* 名称。[^multienzyme-nomenclature]
 
 空间邻近可以缩短中间物扩散距离，保护不稳定中间体，或使底物在相邻活性位点间直接传递。共定位或蛋白质相互作用提供空间邻近证据；底物通道化还需要动力学、同位素、结构或重构实验显示中间物未充分进入体相。细胞器、膜表面和可逆支架也能提高局部有效浓度，相关酶可以采用瞬时而非永久装配。
 
@@ -55,7 +55,7 @@ RNA 也能承担真正的催化循环。1983 年的重构实验显示，细菌 R
 | EC 3 水解酶 | 以水解方式断键 | 胰蛋白酶 |
 | EC 4 裂合酶 | 非水解、非氧化地断键，或向双键加成 | 延胡索酸水合酶 |
 | EC 5 异构酶 | 分子内部重排 | 磷酸丙糖异构酶 |
-| EC 6 连接酶 | 以 NTP 水解等供能形成新键 | ATP 依赖的 DNA 连接酶 |
+| EC 6 连接酶 | 以核苷三磷酸（nucleoside triphosphate，NTP）水解等供能形成新键 | ATP 依赖的 DNA 连接酶 |
 | EC 7 转位酶 | 以化学反应驱动物质跨膜或在膜内分离 | Na$^+$/K$^+$ 交换 ATP 酶 |
 
 “合酶”“合成酶”“激酶”或“ATP 酶”可以提供名称线索，反应方程和 EC 条目则给出正式分类依据。例如旧分类曾把多种离子泵放在 ATP 水解酶下，现行 EC 7 以转位这一主要结果分类；同名酶若底物、电子受体或整体化学计量不同，也可能分属不同条目。阅读数据库注释时应同时核对反应式、物种来源、亚细胞位置和证据类型。
@@ -80,7 +80,7 @@ RNA 也能承担真正的催化循环。1983 年的重构实验显示，细菌 R
 
 底物与酶形成许多弱相互作用时释放的结合自由能，可以用来抵偿去溶剂化、限制平移与转动、改变构象以及组织催化基团所需的代价。若相互作用主要稳定基态复合物，$ES$ 的自由能井会加深并增加到达过渡态所需的势垒；高效酶通常让相互作用在接近过渡态的几何与电荷分布中得到更充分的满足。
 
-稳定的过渡态类似物因此常比底物结合得更紧，可用于探测活性位点或设计抑制剂。不过类似物只近似某些几何和电荷特征，不是寿命极短的真实过渡态本身。酸碱催化、共价催化、金属离子催化、临近定向和活性位点微环境如何共同塑造这条路径，将在[酶的催化机制与调控](enzyme_mechanism_regulation.md)中结合具体酶展开。
+稳定的过渡态类似物因此常比底物结合得更紧，可用于探测活性位点或设计抑制剂。不过类似物只近似某些几何和电荷特征，不是寿命极短的真实过渡态本身。酸碱催化、共价催化、金属离子催化、临近定向和活性位点微环境共同塑造催化路径，具体的催化化学见[酶的催化机制与调控](enzyme_mechanism_regulation.md)。
 
 ## 催化活力的实验定义 { #enzyme-activity }
 
@@ -88,8 +88,8 @@ RNA 也能承担真正的催化循环。1983 年的重构实验显示，细菌 R
 
 | 量 | 定义与常用单位 | 主要用途与边界 |
 | --- | --- | --- |
-| 催化活力 | 指定体系中的物质转化速率；SI 单位为 kat | $1\ \mathrm{kat}=1\ \mathrm{mol\,s^{-1}}$，必须连同反应与测定条件报告 |
-| 酶单位 U | 每分钟转化 $1\ \mu\mathrm{mol}$ 的活力 | $1\ \mathrm{U}=16.667\ \mathrm{nkat}$；仍常用，但不是相干 SI 单位 |
+| 催化活力 | 指定体系中的物质转化速率；国际单位制（International System of Units，SI）单位为开特（katal，kat） | $1\ \mathrm{kat}=1\ \mathrm{mol\,s^{-1}}$，必须连同反应与测定条件报告 |
+| 酶单位（enzyme unit，U） | 每分钟转化 $1\ \mu\mathrm{mol}$ 的活力 | $1\ \mathrm{U}=16.667\ \mathrm{nkat}$；仍常用，但不是相干 SI 单位 |
 | 总活力 | 样品体积或全部级分所含的活力 | 用于计算纯化回收率，会受抑制剂、失活和测定条件影响 |
 | 比活力 | 活力除以总蛋白质量，常写作 U/mg | 同一纯化流程中可追踪富集；单独不能证明化学均一 |
 
@@ -113,7 +113,7 @@ pH 同时改变酶侧链、底物、辅因子和缓冲组分的质子化状态�
 
 细胞通过区室化、膜、多酶复合体、瞬时酶簇和支架组织酶、底物及辅因子的局部相遇，并可把化学反应与跨膜电化学梯度耦联。底物通道化则需要中间物直接传递的证据。[^cellular-enzyme-organization]
 
-反应通量可在多个时间尺度上调节：改变底物和产物浓度、可逆结合别构效应物、共价修饰已有酶、有限蛋白水解激活酶原、改变亚基装配，或通过转录、翻译和降解改变酶量。同工酶催化相同总反应，却可具有不同动力学、调控、组织分布或细胞定位。酶分子处于由底物、效应物、共价修饰、装配、表达和降解共同构成的细胞调控网络中；后续页面将分别讨论这些机制。
+反应通量可在多个时间尺度上调节：改变底物和产物浓度、可逆结合别构效应物、共价修饰已有酶、有限蛋白水解激活酶原、改变亚基装配，或通过转录、翻译和降解改变酶量。同工酶催化相同总反应，却可具有不同动力学、调控、组织分布或细胞定位。酶分子处于由底物、效应物、共价修饰、装配、表达和降解共同构成的细胞调控网络中；动力学定量见[酶动力学](enzyme_dynamics.md)，别构调节、共价修饰、酶原和同工酶见[酶的催化机制与调控](enzyme_mechanism_regulation.md)。
 
 ## 天然酶与工程化催化剂 { #enzyme-engineering }
 
@@ -138,9 +138,9 @@ pH 同时改变酶侧链、底物、辅因子和缓冲组分的质子化状态�
 - Nobel Prize Outreach. [The Nobel Prize in Chemistry 2018: Popular Information](https://www.nobelprize.org/prizes/chemistry/2018/popular-information/).
 
 [^enzyme-catalysis]: Cooper, G. M., [The Central Role of Enzymes as Biological Catalysts](https://www.ncbi.nlm.nih.gov/books/NBK9921/)。该教材页区分活化能垒与反应自由能，并说明催化同时加快正、逆方向而不改变平衡。
-[^ribozyme-evidence]: Guerrier-Takada, C. et al., [The RNA moiety of ribonuclease P is the catalytic subunit of the enzyme](https://pubmed.ncbi.nlm.nih.gov/6197186/). *Cell* 35, 849–857 (1983)。实验条件决定 RNA 单独催化或 RNA—蛋白复合物共同工作的状态，正文不把一种体外条件外推为所有生物 RNase P 的组成。
+[^ribozyme-evidence]: Guerrier-Takada, C. et al., [The RNA moiety of ribonuclease P is the catalytic subunit of the enzyme](https://pubmed.ncbi.nlm.nih.gov/6197186/). *Cell* 35, 849–857 (1983)。实验条件决定 RNA 单独催化或 RNA—蛋白复合物共同工作的状态，一种体外条件所得结论不能外推为所有生物 RNase P 的组成。
 [^deoxyribozyme]: Breaker, R. R. & Joyce, G. F., [A DNA enzyme that cleaves RNA](https://pubmed.ncbi.nlm.nih.gov/9383394/). *Chemistry & Biology* 1, 223–229 (1994)。该催化 DNA 由体外选择获得，区别于天然细胞中以 DNA 为底物的蛋白质酶。
-[^cofactor-terms]: IUPAC Gold Book, [Cofactors](https://goldbook.iupac.org/terms/view/C01128)。IUPAC 把必需的有机分子或离子纳入辅因子，并允许其与蛋白质松散或紧密结合；具体辅酶化学见后续页面。
+[^cofactor-terms]: IUPAC Gold Book, [Cofactors](https://goldbook.iupac.org/terms/view/C01128)。IUPAC 把必需的有机分子或离子纳入辅因子，并允许其与蛋白质松散或紧密结合；具体辅酶化学见[维生素与辅酶](vitamin_and_coenzyme.md)。
 [^multienzyme-nomenclature]: NC-IUBMB, [Nomenclature for multienzymes](https://iubmb.qmul.ac.uk/misc/menz.html)及 [Classification and Nomenclature of Enzymes](https://iubmb.qmul.ac.uk/enzyme/rules.html)。前者区分多功能多肽与多酶复合体，后者要求把多个酶组成的整体称为 system，而不把总过程误作单酶。
 [^ec-classification]: NC-IUBMB, [Classification and Nomenclature of Enzymes by the Reactions they Catalyse](https://iubmb.qmul.ac.uk/enzyme/rules.html)与[命名申请指南](https://iubmb.qmul.ac.uk/enzyme/advice.html)。EC 编号以总反应而非蛋白质结构或中间机制分类，完整编号含四级数字。
 [^ec7-translocases]: NC-IUBMB, [Translocases (EC 7): A new EC Class](https://iubmb.qmul.ac.uk/newsletter/2018.html#translocases)及 [EC 7](https://iubmb.qmul.ac.uk/enzyme/EC7/)。转位酶按跨膜移动的物质及驱动反应继续细分；Na$^+$/K$^+$ 交换 ATP 酶现列为 [EC 7.2.2.13](https://iubmb.qmul.ac.uk/enzyme/EC7/2/2/13.html)。

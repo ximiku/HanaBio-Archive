@@ -1,16 +1,16 @@
 # 代谢总论
 
-代谢是生物体内彼此连接的化学转化总和。营养物进入细胞后，在酶、转运体和膜结构共同组织的网络中被拆解、重排和重新合成。这个网络既要供给 ATP、还原当量和大分子前体，也要维持离子、氧化还原状态与代谢物浓度，使细胞能够在不断交换物质的同时保持可工作的内部环境。[^metabolism-network]
+代谢是生物体内彼此连接的化学转化总和。营养物进入细胞后，在酶、转运体和膜结构共同组织的网络中被拆解、重排和重新合成。这个网络既要供给三磷酸腺苷（adenosine triphosphate，ATP）、还原当量和大分子前体，也要维持离子、氧化还原状态与代谢物浓度，使细胞能够在不断交换物质的同时保持可工作的内部环境。[^metabolism-network]
 
-教科书把网络划成糖酵解、三羧酸循环、脂肪酸氧化等“通路”，用于显示一组反应的共同功能和调节逻辑。细胞内各通路通过共享节点彼此连通：葡萄糖-6-磷酸可流向糖酵解、磷酸戊糖途径或糖原，乙酰 CoA 可被氧化也可用于合成，氨基酸碳骨架还会进入糖和脂质代谢。理解代谢需要同时追踪物质来源、去向、反应区室以及通量在当前条件下的分配。
+教科书把网络划成糖酵解、三羧酸循环、脂肪酸氧化等“通路”，用于显示一组反应的共同功能和调节逻辑。细胞内各通路通过共享节点彼此连通：葡萄糖-6-磷酸可流向糖酵解、磷酸戊糖途径或糖原，辅酶 A（coenzyme A，CoA）的乙酰化形式乙酰 CoA（acetyl-CoA）可被氧化也可用于合成，氨基酸碳骨架还会进入糖和脂质代谢。理解代谢需要同时追踪物质来源、去向、反应区室以及通量在当前条件下的分配。
 
-本页建立阅读具体通路所需的网络、稳态、热力学与控制框架。ATP 和氧化还原反应的定量基础见[生物能学](bioenergetics.md)，辅酶怎样携带电子和基团见[维生素与辅酶](vitamin_and_coenzyme.md)，具体调节酶的别构、修饰和装配机制见[酶的催化机制与调控](enzyme_mechanism_regulation.md)。
+具体通路的阅读需要把网络、稳态、热力学与控制联系起来。ATP 和氧化还原反应的定量基础见[生物能学](bioenergetics.md)，辅酶怎样携带电子和基团见[维生素与辅酶](vitamin_and_coenzyme.md)，具体调节酶的别构、修饰和装配机制见[酶的催化机制与调控](enzyme_mechanism_regulation.md)。
 
 ## 代谢网络及其基本量 { #metabolic-network-and-quantities }
 
 ### 分解代谢、合成代谢与网络节点 { #metabolic-network }
 
-分解代谢把较复杂的分子转化为较小的产物，并把一部分自由能保存为 ATP、还原型电子载体或跨膜电化学梯度。合成代谢以小分子前体建造氨基酸、核苷酸、脂质和多糖，通常需要 ATP 及 NADPH 等还原力。两类反应通过共同中间物相连：同一个中间物可接收分解通量，也可离开主干进入合成；同一条通路兼有分解和合成用途时，常称两用代谢途径（amphibolic pathway）。三羧酸循环既氧化乙酰基，又提供草酰乙酸、$\alpha$-酮戊二酸、琥珀酰 CoA 等合成前体，是典型的两用途径。
+分解代谢把较复杂的分子转化为较小的产物，并把一部分自由能保存为 ATP、还原型电子载体或跨膜电化学梯度。合成代谢以小分子前体建造氨基酸、核苷酸、脂质和多糖，通常需要 ATP 及还原型烟酰胺腺嘌呤二核苷酸磷酸（reduced nicotinamide adenine dinucleotide phosphate，NADPH）等还原力。两类反应通过共同中间物相连：同一个中间物可接收分解通量，也可离开主干进入合成；同一条通路兼有分解和合成用途时，常称两用代谢途径（amphibolic pathway）。三羧酸循环既氧化乙酰基，又提供草酰乙酸、$\alpha$-酮戊二酸、琥珀酰 CoA 等合成前体，是典型的两用途径。
 
 | 组织方式 | 物质变化与代表性联系 | 需要保留的边界 |
 | --- | --- | --- |
@@ -19,7 +19,7 @@
 | 两用代谢 | 同一反应网络兼顾氧化供能和前体供应；如三羧酸循环 | 中间物被抽走后须由补充反应恢复，才能维持循环通量 |
 | 中心代谢节点 | 汇合多种来源并分配到多种去路；如葡萄糖-6-磷酸、丙酮酸和乙酰 CoA | “中心性”由物种、组织和营养状态下的连接数与通量共同决定 |
 
-生物氧化描述电子从某个物质转移出去，不要求该步直接使用 O$_2$。乳酸脱氢酶可把乳酸的电子转给 NAD$^+$，脂酰 CoA 脱氢酶先把电子交给 FAD，直到呼吸链末端才可能由氧接受电子；厌氧生物还可使用硝酸盐、硫酸盐或有机分子作末端受体。因此，把生物氧化概括成“碳、氢与氧分离”既不能给出电子去向，也不能区分脱氢、加氧和水解。[^biological-oxidation]
+生物氧化描述电子从某个物质转移出去，不要求该步直接使用 O$_2$。乳酸脱氢酶可把乳酸的电子转给氧化型烟酰胺腺嘌呤二核苷酸（nicotinamide adenine dinucleotide，NAD$^+$），脂酰 CoA 脱氢酶先把电子交给黄素腺嘌呤二核苷酸（flavin adenine dinucleotide，FAD），直到呼吸链末端才可能由氧接受电子；厌氧生物还可使用硝酸盐、硫酸盐或有机分子作末端受体。因此，把生物氧化概括成“碳、氢与氧分离”既不能给出电子去向，也不能区分脱氢、加氧和水解。[^biological-oxidation]
 
 ### 反应计量、通量与代谢物池 { #flux-and-pools }
 
@@ -50,7 +50,7 @@ $$
 \Delta_rG=\Delta_rG^{\circ\prime}+RT\ln Q.
 $$
 
-$Q$ 由反应物和产物活度按化学计量数组成。达到平衡时 $Q=K$、$\Delta_rG=0$，正逆通量相等而净通量为零；$\Delta_rG<0$ 时正向在热力学上有利，$\Delta_rG>0$ 时则逆向有利。细胞通过维持底物和产物浓度、移走产物以及把不利反应与 ATP 水解、焦磷酸水解或离子梯度耗散耦联，改变总反应的方向边界。[^thermodynamic-flux]
+$Q$ 是由反应物和产物活度按化学计量数组成的反应商，$R$ 为气体常数，$T$ 为绝对温度。达到平衡时 $Q=K$（$K$ 为平衡常数）、$\Delta_rG=0$，正逆通量相等而净通量为零；$\Delta_rG<0$ 时正向在热力学上有利，$\Delta_rG>0$ 时则逆向有利。细胞通过维持底物和产物浓度、移走产物以及把不利反应与 ATP 水解、焦磷酸水解或离子梯度耗散耦联，改变总反应的方向边界。[^thermodynamic-flux]
 
 接近平衡的反应对底物／产物比很敏感，外部通量改变时常可迅速反向；远离平衡的反应在当前条件下具有较大的单向驱动力，通常需要另一条反应绕行才能完成相反的净转化。“远离平衡”“生理上不可逆”“受调节”和“控制通量”描述的是不同性质：一个步骤的 $\Delta_rG$ 很负，只说明当前浓度下逆向净流动困难；它对全通路通量有多大控制，还取决于其他反应、转运、分支和需求。接近平衡的步骤若受到容量或底物限制，也可能贡献显著控制。
 
@@ -64,13 +64,13 @@ $Q$ 由反应物和产物活度按化学计量数组成。达到平衡时 $Q=K$�
 
 区室化可以把相互冲突的反应分开、限制活泼或有毒中间物扩散，并让转运本身成为控制点。多酶复合体和短距离底物传递还可能建立微区，但只有动力学、结构或示踪证据支持时，才应称为代谢通道；从两种酶相邻或能共沉淀，不能直接推出中间物从不进入体相。
 
-能在可溶态和膜结合态之间转换的酶称为可逆膜结合的 amphitropic enzyme。以磷脂酰胆碱合成中的 CTP:磷酸胆碱胞苷酰转移酶为例，膜脂环境是调节配体，膜结合会解除自抑制并提高催化活性。这种空间开关见于具有相应膜结合机制的蛋白；双功能酶则指一条多肽催化两种反应。[^amphitropic-enzyme]
+能在可溶态和膜结合态之间转换的酶称为可逆膜结合的 amphitropic enzyme。以磷脂酰胆碱合成中的胞苷三磷酸:磷酸胆碱胞苷酰转移酶（CTP:phosphocholine cytidylyltransferase，CCT）为例，膜脂环境是调节配体，膜结合会解除自抑制并提高催化活性。这种空间开关见于具有相应膜结合机制的蛋白；双功能酶则指一条多肽催化两种反应。[^amphitropic-enzyme]
 
 ### 能量与还原状态的耦联 { #energy-redox-coupling }
 
 ATP/ADP、NADH/NAD$^+$、NADPH/NADP$^+$ 和泛醌等载体把相隔较远的反应连接起来。分解代谢常把燃料电子交给 NAD$^+$ 或 FAD，并通过底物水平磷酸化或膜上能量转换形成 ATP；合成代谢常消耗 ATP 和 NADPH。这里的“常”很重要：NADH 也参与合成反应，NADPH 也用于抗氧化和某些分解过程，实际方向由酶专一性、区室与载体池状态共同决定。
 
-Atkinson 提出的腺苷酸能荷把 ATP、ADP、AMP 池压缩为一个介于 0 与 1 的无量纲指标：
+Atkinson 提出的腺苷酸能荷（adenylate energy charge，AEC）把 ATP、二磷酸腺苷（adenosine diphosphate，ADP）和一磷酸腺苷（adenosine monophosphate，AMP）池压缩为一个介于 0 与 1 的无量纲指标：
 
 $$
 \mathrm{AEC}=\frac{[\mathrm{ATP}]+\tfrac12[\mathrm{ADP}]}
@@ -79,7 +79,7 @@ $$
 
 全部为 AMP 时 AEC 为 0，全部为 ATP 时为 1，全部为 ADP 时为 0.5。许多生长或稳态细胞的测值接近 0.8–0.95，但物种、组织、缺氧、营养状态和取样淬灭都会改变结果，因此 0.85–0.95 只是常见观察范围。能荷综合 ATP、ADP、AMP 的比例，而 ATP 浓度还受总腺苷酸池大小影响，二者应分别报告。[^adenylate-energy-charge]
 
-能量和还原状态通过多种酶与信号网络被读取。AMP 或 ADP 升高可以直接调节某些酶，也可在动物细胞中影响 AMPK；NADH/NAD$^+$ 比值影响可逆脱氢反应的方向；NADPH 供应又限制还原性生物合成和过氧化物清除。这些比值具有明显区室性，整细胞提取所得平均值不能自动代表线粒体或胞质的局部状态。
+能量和还原状态通过多种酶与信号网络被读取。AMP 或 ADP 升高可以直接调节某些酶，也可在动物细胞中影响 AMP 活化蛋白激酶（AMP-activated protein kinase，AMPK）；NADH/NAD$^+$ 比值影响可逆脱氢反应的方向；NADPH 供应又限制还原性生物合成和过氧化物清除。这些比值具有明显区室性，整细胞提取所得平均值不能自动代表线粒体或胞质的局部状态。
 
 ## 代谢调节与系统控制 { #metabolic-regulation-and-control }
 
@@ -116,7 +116,7 @@ $$
 
 ### 代谢控制分析 { #metabolic-control-analysis }
 
-代谢控制分析（metabolic control analysis, MCA）由 Kacser 与 Burns、Heinrich 与 Rapoport 在 20 世纪 70 年代分别建立。它不先指定一个“限速步骤”，而是在某个稳态附近对系统作小扰动，量化每个反应对通量和中间物浓度的局部影响。[^mca-history]
+代谢控制分析（metabolic control analysis，MCA）由 Kacser 与 Burns、Heinrich 与 Rapoport 在 20 世纪 70 年代分别建立。它不先指定一个“限速步骤”，而是在某个稳态附近对系统作小扰动，量化每个反应对通量和中间物浓度的局部影响。[^mca-history]
 
 对通量 $J$，反应 $i$ 的活性参数记为 $E_i$，通量控制系数定义为
 
@@ -167,23 +167,23 @@ $$
 
 ### 通路缺陷与代谢网络 { #pathway-defects }
 
-遗传性代谢病通常同时产生上游底物积累、下游产物缺乏和旁路产物增加。苯丙氨酸先由四氢生物蝶呤依赖的苯丙氨酸羟化酶生成酪氨酸；酪氨酸依次形成 4-羟苯丙酮酸和尿黑酸。尿黑酸即 2,5-二羟基苯乙酸；其后续分解经过马来酰乙酰乙酸和延胡索酰乙酰乙酸，最终形成延胡索酸与乙酰乙酸，分别连接生糖与生酮去路。[^phenylalanine-tyrosine-pathway]
+遗传性代谢病通常同时产生上游底物积累、下游产物缺乏和旁路产物增加。苯丙氨酸先由四氢生物蝶呤（tetrahydrobiopterin，BH$_4$）依赖的苯丙氨酸羟化酶（phenylalanine hydroxylase，PAH）生成酪氨酸。酪氨酸氨基转移酶（tyrosine aminotransferase，TAT）使酪氨酸形成 4-羟苯丙酮酸，4-羟苯丙酮酸双加氧酶（4-hydroxyphenylpyruvate dioxygenase，HPD）再生成尿黑酸。尿黑酸即 2,5-二羟基苯乙酸；尿黑酸 1,2-双加氧酶（homogentisate 1,2-dioxygenase，HGD）打开芳环，产物经马来酰乙酰乙酸和延胡索酰乙酰乙酸，最终由延胡索酰乙酰乙酸水解酶（fumarylacetoacetate hydrolase，FAH）生成延胡索酸与乙酰乙酸，分别连接生糖与生酮去路。[^phenylalanine-tyrosine-pathway]
 
 | 受阻步骤 | 代表性疾病或状态 | 代谢解释 |
 | --- | --- | --- |
 | 苯丙氨酸 $\rightarrow$ 酪氨酸 | 苯丙氨酸羟化酶缺乏症（经典表型称苯丙酮尿症） | 苯丙氨酸及旁路产物积累，酪氨酸成为条件性必需；BH$_4$ 合成或再生缺陷也可形成高苯丙氨酸血症 |
-| 尿黑酸 $\rightarrow$ 马来酰乙酰乙酸 | 尿黑酸症 | HGD 活性缺失使尿黑酸积累；酶名宜写尿黑酸 1,2-双加氧酶，不笼统写“尿黑酸氧化酶” |
+| 尿黑酸 $\rightarrow$ 马来酰乙酰乙酸 | 尿黑酸症 | HGD 活性缺失使尿黑酸积累；规范酶名是尿黑酸 1,2-双加氧酶 |
 | 4-羟苯丙酮酸 $\rightarrow$ 尿黑酸 | Ⅲ型酪氨酸血症 | HPD 缺乏对应其中一型；Ⅰ型和Ⅱ型分别涉及更下游的 FAH 和更上游的 TAT，高酪氨酸血症可由多个节点异常形成 |
 
-这个例子在总论中用于显示网络扰动；疾病分型、氮代谢、碳骨架去路与治疗靶点将在[蛋白质降解与氨基酸分解代谢](pr_aa_catabolism.md)中完整承接。
+这个例子显示了网络中一个节点受阻后的多向影响；疾病分型、氮代谢、碳骨架去路与治疗靶点详见[蛋白质降解与氨基酸分解代谢](pr_aa_catabolism.md)。
 
 ### 代谢池与通量的实验区分 { #measuring-metabolism }
 
 测量代谢要先说明所问的是池量、交换、净通量还是整个系统的气体和热量。代谢组学可同时记录许多代谢物的相对或绝对丰度，却给出的是取样瞬间的池量；转录组和蛋白质组提示潜在容量；酶测定揭示离体条件下的催化性质。它们都不能单独恢复细胞内每条箭头的实际流速。[^metabolomics-flux]
 
-稳定同位素示踪把 $^{13}$C、$^{15}$N 或 $^2$H 标记的底物送入系统，随后用质谱或 NMR 追踪标记进入哪些位置。结合摄取与分泌速率、池量、原子映射和动力学模型，可以估计分支比例、交换通量或绝对通量。标记比例升高仍不自动等于通量升高：池大小、天然未标记来源、同位素稳态和区室混合都会影响结果。
+稳定同位素示踪把 $^{13}$C、$^{15}$N 或 $^2$H 标记的底物送入系统，随后用质谱或核磁共振（nuclear magnetic resonance，NMR）追踪标记进入哪些位置。结合摄取与分泌速率、池量、原子映射和动力学模型，可以估计分支比例、交换通量或绝对通量。标记比例升高仍不自动等于通量升高：池大小、天然未标记来源、同位素稳态和区室混合都会影响结果。
 
-瓦氏呼吸器是早期整体代谢测量的代表。样品与底物置于恒温密闭反应瓶，中心池的碱液吸收 CO$_2$，与反应瓶相连的压力计记录气相压力变化；经过空白、温度、气液体积和气体溶解校正后，压力下降可用于估算 O$_2$ 消耗。若不吸收 CO$_2$ 或改变缓冲体系，还可设计 CO$_2$ 释放测量。它测得的是整个样品的气体交换，不能直接指出氧由哪条通路消耗；装置、现代氧电极与呼吸通量分析的细节迁往[光谱测定与生化定量](../exptech/biochem_molecular/spectroscopy_assays.md)。[^warburg-respirometry]
+瓦氏呼吸器是早期整体代谢测量的代表。样品与底物置于恒温密闭反应瓶，中心池的碱液吸收 CO$_2$，与反应瓶相连的压力计记录气相压力变化；经过空白、温度、气液体积和气体溶解校正后，压力下降可用于估算 O$_2$ 消耗。若不吸收 CO$_2$ 或改变缓冲体系，还可设计 CO$_2$ 释放测量。它测得的是整个样品的气体交换，不能直接指出氧由哪条通路消耗；装置校正、现代氧电极与呼吸通量分析见[光谱测定与生化定量](../exptech/biochem_molecular/spectroscopy_assays.md)。[^warburg-respirometry]
 
 ## 参考资料与延伸阅读
 
@@ -209,4 +209,4 @@ $$
 [^mca-boundaries]: van Dam, K. et al., [The sum of the control coefficients of all enzymes on the flux through a group-transfer pathway can be as high as two](https://pubmed.ncbi.nlm.nih.gov/8462550/)。该文说明经典“酶浓度控制系数和为 1”在基团转移体系需要重新界定系统参数；无论采用何种扩展，都必须先声明系统边界和可独立扰动的活动。
 [^phenylalanine-tyrosine-pathway]: Reactome, [Tyrosine catabolism](https://reactome.org/content/detail/R-HSA-8963684)；GeneReviews, [Phenylalanine Hydroxylase Deficiency](https://www.ncbi.nlm.nih.gov/books/NBK1504/) 与 [Alkaptonuria](https://www.ncbi.nlm.nih.gov/books/NBK1454/)；NCBI Genetic Testing Registry, [Tyrosinemia type III](https://www.ncbi.nlm.nih.gov/gtr/conditions/C0268623/)。这些来源共同核对苯丙氨酸—酪氨酸降解顺序、终产物以及 PAH、HGD、HPD 缺陷的疾病边界。
 [^metabolomics-flux]: Jang, C., Chen, L. & Rabinowitz, J. D., [Metabolomics and isotope tracing](https://pmc.ncbi.nlm.nih.gov/articles/PMC6034115/)。该综述明确区分代谢物浓度与通量，并说明稳定同位素标记结合池量和模型后才能提供动态信息。
-[^warburg-respirometry]: [The Warburg effect reinterpreted 100 years on](https://journals.physiology.org/doi/10.1093/function/zqae008)；Koppenol, W. H. et al., [Warburg effect(s)—a biographical sketch](https://pmc.ncbi.nlm.nih.gov/articles/PMC4784299/)。两者回顾 Warburg 用压力计测量组织切片的 O$_2$ 消耗与 CO$_2$ 生成；正文只保留总论所需的测量逻辑，具体校正与现代仪器留给实验页。
+[^warburg-respirometry]: [The Warburg effect reinterpreted 100 years on](https://journals.physiology.org/doi/10.1093/function/zqae008)；Koppenol, W. H. et al., [Warburg effect(s)—a biographical sketch](https://pmc.ncbi.nlm.nih.gov/articles/PMC4784299/)。两者回顾 Warburg 用压力计测量组织切片的 O$_2$ 消耗与 CO$_2$ 生成；该方法给出整体气体交换，通路归因还需要额外干预或示踪证据。

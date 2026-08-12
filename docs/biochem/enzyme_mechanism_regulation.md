@@ -32,7 +32,7 @@
 
 酸碱催化把质子转移嵌入成键和断键过程。一般酸催化由水合氢离子以外的供体给予质子，一般碱催化由氢氧根以外的受体夺取质子；酶中的 Asp、Glu、His、Lys、Cys、Tyr 及末端基团都可能在合适微环境中承担这些角色。专一酸或专一碱催化则分别只随水合氢离子或氢氧根活度改变。缓冲液浓度依赖可提示一般酸碱催化，却还须排除离子强度、金属络合和底物质子化变化。
 
-一个基团在循环中可以先作碱、后作酸。其水溶液 $pK_a$ 只能作为起点；邻近电荷、氢键、溶剂可及性和配体结合都能移动活性位点中的质子化平衡。因而速率—pH 曲线提供的是可检验的离子化线索，不是残基身份证。NC-IUBMB 特别指出，动力学 $pK_a$ 与具体分子基团的对应必须由独立证据支持。[^ph-rate-profile]
+一个基团在循环中可以先作碱、后作酸。其水溶液 $pK_a$ 只能作为起点；邻近电荷、氢键、溶剂可及性和配体结合都能移动活性位点中的质子化平衡。因而速率—pH 曲线提供的是可检验的离子化线索，不是残基身份证。国际生物化学与分子生物学联合会命名委员会（Nomenclature Committee of the International Union of Biochemistry and Molecular Biology，NC-IUBMB）特别指出，动力学 $pK_a$ 与具体分子基团的对应必须由独立证据支持。[^ph-rate-profile]
 
 #### 共价催化 { #covalent-catalysis }
 
@@ -44,7 +44,7 @@
 
 金属离子可作为 Lewis 酸吸引电子密度、稳定负电荷、给底物定向，并降低配位水失去质子的代价；Fe、Cu、Mn 等还能改变氧化态，参与电子转移。人碳酸酐酶 II 的 Zn$^{2+}$ 由三个 His 和水或氢氧根近四面体配位。锌结合的氢氧根进攻 CO$_2$ 生成碳酸氢根，随后 His64 与有序水网络把质子送往体相并再生亲核体。完整机制同时包含金属配位、酸碱催化、静电稳定和水网络中的质子转移。[^carbonic-anhydrase]
 
-激酶体系又显示另一种边界：常见的反应底物是 MgATP 络合物，Mg$^{2+}$ 同时屏蔽磷酸基负电荷并帮助定位。此时把镁列为脱离 ATP 浓度和络合平衡的“激活剂”，会把反应物种与调节效应混在一起。
+激酶体系又显示另一种边界：常见的反应底物是镁离子与三磷酸腺苷（adenosine triphosphate，ATP）形成的 MgATP 络合物，Mg$^{2+}$ 同时屏蔽磷酸基负电荷并帮助定位。此时把镁列为脱离 ATP 浓度和络合平衡的“激活剂”，会把反应物种与调节效应混在一起。
 
 ### 丝氨酸蛋白酶中的协同催化 { #serine-protease-mechanism }
 
@@ -64,7 +64,7 @@
 - 前稳态动力学分辨快速结合、化学爆发、构象变化和产物释放；
 - pH—速率关系、溶剂与原子同位素效应追踪质子转移和键变化；
 - 快速淬灭、光谱、质谱或共价捕获寻找中间体；
-- X 射线、NMR、冷冻电镜和计算模型提供可检验的几何与能量假说。
+- X 射线、核磁共振（nuclear magnetic resonance，NMR）、冷冻电镜和计算模型提供可检验的几何与能量假说。
 
 任何单一结果都可能与多个微观机制相容。NC-IUBMB 因此把动力学的作用表述为排除不相容机制，并以更多独立实验继续检验仍然可行的最简方案。[^mechanism-inference]
 
@@ -84,7 +84,7 @@ $n_H>1$ 表示所考察浓度区间内的正 Hill 协同，$n_H<1$ 表示负 Hil
 
 ### MWC 与 KNF 限制模型 { #allosteric-models }
 
-经典模型把复杂构象集合压缩为可计算的理想情形。
+Monod–Wyman–Changeux（MWC）协同模型和 Koshland–Némethy–Filmer（KNF）序变模型把复杂构象集合压缩为可计算的理想情形。
 
 | 模型 | 对无配体状态与构象转换的假设 | 能解释的核心现象 | 主要边界 |
 | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ $n_H>1$ 表示所考察浓度区间内的正 Hill 协同，$n_H<1$ 表示负 Hil
 
 MWC 模型由 Monod、Wyman 与 Changeux 在 1965 年系统提出；Koshland、Némethy 与 Filmer 随后用序变框架比较多位点结合数据。二者仍是理解协同的有力极限模型，但一条 S 形曲线不能在它们之间作唯一选择，很多酶还需要加入不对称性、中间态、动力学分支或亚基间不同耦合。[^classic-allostery-models]
 
-大肠杆菌天冬氨酸氨甲酰转移酶（ATCase）展示了催化与异促调控的结构连接。完整酶含六条催化链和六条调节链；CTP 结合调节链抑制嘧啶合成通路，而底物及双底物类似物 PALA 偏向稳定活性较高的 R 状态。PALA 复合物结构显示，活性位点还接收相邻催化链环区的相互作用，因此调节链与催化链的相对移动可以同时改变多个活性位点。它是 MWC 思想的经典例子；其他别构酶可具有不同的亚基数、装配形式和调控逻辑。[^atcase-structure]
+大肠杆菌天冬氨酸氨甲酰转移酶（aspartate transcarbamoylase，ATCase）展示了催化与异促调控的结构连接。完整酶含六条催化链和六条调节链；三磷酸胞苷（cytidine triphosphate，CTP）结合调节链抑制嘧啶合成通路，而底物及双底物类似物 N-膦乙酰基-L-天冬氨酸（N-phosphonacetyl-L-aspartate，PALA）偏向稳定活性较高的 R 状态。PALA 复合物结构显示，活性位点还接收相邻催化链环区的相互作用，因此调节链与催化链的相对移动可以同时改变多个活性位点。它是 MWC 思想的经典例子；其他别构酶可具有不同的亚基数、装配形式和调控逻辑。[^atcase-structure]
 
 ## 酶活性的细胞调控 { #cellular-enzyme-regulation }
 
@@ -101,9 +101,9 @@ MWC 模型由 Monod、Wyman 与 Changeux 在 1965 年系统提出；Koshland、N
 
 蛋白质磷酸化由蛋白激酶把 ATP 的磷酰基转移给受体残基，去磷酸化则由蛋白磷酸酶水解磷酸酯。加入磷酸基会改变局部电荷、氢键和蛋白质相互作用，可能稳定活性态，也可能稳定低活性态；同一蛋白的不同位点还可产生相反或条件依赖的结果。磷酸酶与激酶共同决定修饰占有率、持续时间和空间分布。[^protein-phosphorylation]
 
-糖原磷酸化酶是经典实例：磷酸化促进其活性态，同时 AMP、ATP、葡萄糖等代谢物还可按组织和同工形式施加别构影响。共价修饰与别构调节可在同一体系中叠加。乙酰化、腺苷酰化、ADP-核糖基化和氧化还原修饰也能改变酶活性，每类修饰各有特定的供体及写入、识别和去除反应。
+糖原磷酸化酶是经典实例：磷酸化促进其活性态，同时一磷酸腺苷（adenosine monophosphate，AMP）、ATP、葡萄糖等代谢物还可按组织和同工形式施加别构影响。共价修饰与别构调节可在同一体系中叠加。乙酰化、腺苷酰化、二磷酸腺苷（adenosine diphosphate，ADP）-核糖基化和氧化还原修饰也能改变酶活性，每类修饰各有特定的供体及写入、识别和去除反应。
 
-调节蛋白还可直接遮挡活性位点、稳定特定构象、招募底物或改变亚细胞定位。cAMP 结合蛋白激酶 A 的调节亚基后释放催化亚基，就是配体结合、亚基装配和酶活性相连的例子。聚合与解聚本身没有固定方向：有的酶组装后活化，有的解聚后活化，还有的只改变稳定性或定位，必须针对具体装配体测量。[^regulatory-proteins]
+调节蛋白还可直接遮挡活性位点、稳定特定构象、招募底物或改变亚细胞定位。环磷酸腺苷（cyclic adenosine monophosphate，cAMP）结合蛋白激酶 A 的调节亚基后释放催化亚基，就是配体结合、亚基装配和酶活性相连的例子。聚合与解聚本身没有固定方向：有的酶组装后活化，有的解聚后活化，还有的只改变稳定性或定位，必须针对具体装配体测量。[^regulatory-proteins]
 
 !!! warning "活性读数的解释边界"
 
@@ -142,7 +142,7 @@ MWC 模型由 Monod、Wyman 与 Changeux 在 1965 年系统提出；Koshland、N
 [^binding-energy]: Gao, J. et al., [Mechanisms and free energies of enzymatic reactions](https://pmc.ncbi.nlm.nih.gov/articles/PMC4477011/). *Chemical Reviews* 106, 3188–3209 (2006)。该综述比较静电稳定、去溶剂化、反应物态效应与构象变化，强调不同酶可采用不同能量组合。
 [^ph-rate-profile]: NC-IUBMB, [pH effects in enzyme kinetics](https://iubmb.qmul.ac.uk/kinetics/ek7.html)。动力学 $pK_a$ 与具体残基的对应并不直接，需由独立证据支持；最适 pH 和曲线还随所测参数及条件改变。
 [^carbonic-anhydrase]: RCSB PDB, [1CA2：Refined structure of human carbonic anhydrase II](https://www.rcsb.org/structure/1CA2)；Fisher, Z. et al., [Structure and catalysis by carbonic anhydrase II](https://pmc.ncbi.nlm.nih.gov/articles/PMC3223279/). *Biochemistry* 50, 9421–9428 (2011)。结构显示 Zn$^{2+}$ 的三个 His 与水配位，机制研究把锌结合溶剂和 His64 质子转移分为相连步骤。
-[^chymotrypsin]: Cooper, G. M., [Catalytic mechanism of chymotrypsin](https://www.ncbi.nlm.nih.gov/books/NBK9921/)；RCSB PDB, [1GCT](https://www.rcsb.org/structure/1GCT)。1GCT 的精修支持低 pH 晶体中可能存在四肽酰基—酶加合物，正文据此只把它作为共价中间体结构背景，不把单一晶体状态当作全部溶液机制。
+[^chymotrypsin]: Cooper, G. M., [Catalytic mechanism of chymotrypsin](https://www.ncbi.nlm.nih.gov/books/NBK9921/)；RCSB PDB, [1GCT](https://www.rcsb.org/structure/1GCT)。1GCT 的精修支持低 pH 晶体中可能存在四肽酰基—酶加合物，可作为共价中间体的结构背景；单一晶体状态不足以确定全部溶液机制。
 [^lysozyme-intermediate]: Vocadlo, D. J. et al., [Catalysis by hen egg-white lysozyme proceeds via a covalent intermediate](https://pubmed.ncbi.nlm.nih.gov/11518970/). *Nature* 412, 835–838 (2001)；RCSB PDB, [1HEW](https://www.rcsb.org/structure/1HEW)。研究以质谱、结构与动力学能力共同支持共价糖基—酶中间体。
 [^mechanism-inference]: NC-IUBMB, [Types of mechanism for enzymic catalysis](https://iubmb.qmul.ac.uk/kinetics/ek7.html)。该建议明确指出动力学可以否定机制，却不能把一个与数据相容的机制证明为唯一真相。
 [^allosteric-ensemble]: Motlagh, H. N. et al., [The ensemble nature of allostery](https://pubmed.ncbi.nlm.nih.gov/24740064/). *Nature* 508, 331–339 (2014)。该综述把别构扩展到构象集合、动力学与内在无序参与的信息传递，不要求可见的大幅刚性结构变化。
@@ -152,6 +152,6 @@ MWC 模型由 Monod、Wyman 与 Changeux 在 1965 年系统提出；Koshland、N
 [^atcase-structure]: Cooper, G. M., [Regulation of Protein Function](https://www.ncbi.nlm.nih.gov/books/NBK9923/)；Jin, L. et al., [RCSB PDB 1D09](https://www.rcsb.org/structure/1D09). *Proteins* 37, 729–742 (1999)。PALA 复合物结构解析了催化链、调节链及跨亚基活性位点接触。
 [^protein-phosphorylation]: Cooper, G. M., [Protein phosphorylation](https://www.ncbi.nlm.nih.gov/books/NBK9923/)；Cohen, P., [The origins of protein phosphorylation](https://pubmed.ncbi.nlm.nih.gov/11988757/). *Nature Cell Biology* 4, E127–E130 (2002)。激酶和磷酸酶共同构成可逆循环，磷酸化结果可为激活或抑制。
 [^regulatory-proteins]: Cooper, G. M., [Protein–protein interactions in regulation](https://www.ncbi.nlm.nih.gov/books/NBK9923/)。该教材以 cAMP 依赖性蛋白激酶说明配体结合如何改变调节亚基与催化亚基装配。
-[^zymogen-regulation]: Cooper, G. M., [Regulation of Protein Function](https://www.ncbi.nlm.nih.gov/books/NBK9923/)。该教材区分不可逆的蛋白水解激活与可逆磷酸化；正文进一步把抑制剂、区室化和清除作为控制活性蛋白酶的生理层次。
+[^zymogen-regulation]: Cooper, G. M., [Regulation of Protein Function](https://www.ncbi.nlm.nih.gov/books/NBK9923/)。该教材区分不可逆的蛋白水解激活与可逆磷酸化；抑制剂、区室化和清除构成控制活性蛋白酶的生理层次。
 [^isoenzyme-definition]: IUPAC Gold Book, [Isoenzyme](https://goldbook.iupac.org/terms/view/I03279)。同工酶以同一生物中催化相同反应而可被区分的酶形式为核心，不以固定亚基数定义。
 [^pseudoenzyme-functions]: Goldberg, T. & Sreelatha, A., [Emerging functions of pseudoenzymes](https://pmc.ncbi.nlm.nih.gov/articles/PMC10211241/). *Biochemical Journal* 480, 715–728 (2023)；Zaru, R., Magrane, M., Orchard, S. & UniProt Consortium, [Challenges in the annotation of pseudoenzymes in databases](https://pmc.ncbi.nlm.nih.gov/articles/PMC7160037/). *FEBS Journal* 287, 4114–4127 (2020)。两篇综述分别概括非催化功能，并说明仅凭序列预测催化缺失的证据边界。

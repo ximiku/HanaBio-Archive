@@ -4,7 +4,7 @@
 
 维生素与酶反应之间存在多种对应关系。许多 B 族维生素会转化为携带电子、酰基或一碳单元的辅酶；维生素 K 的还原态参与谷氨酸侧链羧化；维生素 C 为若干金属依赖加氧酶维持还原环境。维生素 A、D 更多通过视黄醛或核受体配体发挥作用，维生素 E 则主要在脂质相中截断自由基链反应。“维生素”描述营养需要，“辅酶”描述反应角色。
 
-本页承接[酶通论](enzyme.md)中的辅因子概念和[酶的催化机制与调控](enzyme_mechanism_regulation.md)中的化学机制。辅酶怎样把不同代谢反应接成网络，将在[代谢总论](metabolism.md)及各条代谢通路中继续展开。
+本页承接[酶通论](enzyme.md)中的辅因子概念和[酶的催化机制与调控](enzyme_mechanism_regulation.md)中的化学机制。辅酶如何把不同反应接成网络，见[代谢总论](metabolism.md)及各条具体代谢通路。
 
 ## 维生素与辅因子分类 { #vitamin-classification }
 
@@ -15,15 +15,15 @@
 | 术语 | 说明的层面 | 代表性例子 | 需要避免的误解 |
 | --- | --- | --- | --- |
 | 维生素 | 某生物的微量有机营养需要 | 视黄醇、硫胺素、叶酸 | 不保证本身就是辅酶，也不保证所有生物都必须外源摄取 |
-| 辅酶／有机辅因子 | 酶反应中的非蛋白质有机参与者 | NAD$^+$、辅酶 A、四氢叶酸 | 在反应步骤中被改变不等于被永久消耗；须由其他反应再生 |
-| 辅基 | 与蛋白质紧密结合的非蛋白质成分 | FAD、血红素、共价结合的生物素或硫辛酰基 | “紧密”是结合和周转方式，不代表它不参与化学变化 |
+| 辅酶／有机辅因子 | 酶反应中的非蛋白质有机参与者 | 烟酰胺腺嘌呤二核苷酸（nicotinamide adenine dinucleotide，NAD$^+$）、辅酶 A（coenzyme A，CoA）、四氢叶酸（tetrahydrofolate，THF） | 在反应步骤中被改变不等于被永久消耗；须由其他反应再生 |
+| 辅基 | 与蛋白质紧密结合的非蛋白质成分 | 黄素腺嘌呤二核苷酸（flavin adenine dinucleotide，FAD）、血红素、共价结合的生物素或硫辛酰基 | “紧密”是结合和周转方式，不代表它不参与化学变化 |
 | 金属辅因子 | 以配位、Lewis 酸或氧化还原中心参与反应的离子 | Mg$^{2+}$、Zn$^{2+}$、Fe、Cu | 金属不是辅酶；游离离子浓度也不等于酶占据的金属种类 |
 
-脱辅基酶蛋白与所需辅因子组装后形成有活性的全酶。实际辅因子体系可以先与底物形成 MgATP，也可以共价连接到蛋白质，或由金属与有机配体共同组成复合中心；其装载还会受到转运、伴侣蛋白和细胞区室控制。
+脱辅基酶蛋白（apoenzyme）与所需辅因子组装后形成有活性的全酶（holoenzyme）。实际辅因子体系可以先与底物形成镁离子—三磷酸腺苷（adenosine triphosphate，ATP）络合物 MgATP，也可以共价连接到蛋白质，或由金属与有机配体共同组成复合中心；其装载还会受到转运、伴侣蛋白和细胞区室控制。
 
 !!! warning "维生素并非剂量越高越有益"
 
-    营养需要意味着缺乏会破坏生理功能，不意味着超过需要量后仍线性获益。脂溶性维生素可随脂质吸收并在组织中积累，水溶性维生素也并非都能无限量安全排出；例如高剂量维生素 B$_6$ 可致感觉神经病变，烟酸、维生素 C、D、E 和 K 还可能产生毒性或药物相互作用。具体补充应结合膳食、疾病、药物和实验室指标判断。
+    营养需要意味着缺乏会破坏生理功能，不意味着超过需要量后仍线性获益。脂溶性维生素可随脂质吸收并在组织中积累，水溶性维生素也并非都能无限量安全排出。高剂量维生素 B$_6$ 可致感觉神经病变，过量烟酸以及维生素 C、D、E 也各有特定不良反应；维生素 K 的已知风险主要是与华法林等药物的严重相互作用，并不能与前述维生素的高剂量毒性混为一谈。具体补充应结合膳食、疾病、药物和实验室指标判断。[^vitamin-supplement-safety]
 
 ### 脂溶性维生素的主要作用 { #fat-soluble-vitamins }
 
@@ -38,13 +38,13 @@
 
 #### 维生素 A：视黄醛与视黄酸 { #vitamin-a-retinoids }
 
-膳食维生素 A 既来自预形成的视黄醇和视黄酯，也来自可转化的维生素 A 原类胡萝卜素；$\beta$-胡萝卜素是重要来源，却不是唯一来源。视循环中，11-*cis*-视黄醛与视蛋白形成感光色素，吸收光子后异构为全反式构型，触发视觉信号并经酶促步骤再生。另一方面，全反式视黄酸结合 RAR/RXR 类核受体，改变靶基因转录，从而参与胚胎发育、上皮分化和免疫稳态。视黄酸不能替代视黄醛完成视觉循环。[^vitamin-a]
+膳食维生素 A 既来自预形成的视黄醇和视黄酯，也来自可转化的维生素 A 原类胡萝卜素；$\beta$-胡萝卜素是重要来源，却不是唯一来源。视循环中，11-*cis*-视黄醛与视蛋白形成感光色素，吸收光子后异构为全反式构型，触发视觉信号并经酶促步骤再生。另一方面，全反式视黄酸结合视黄酸受体（retinoic acid receptor，RAR）和视黄类 X 受体（retinoid X receptor，RXR），改变靶基因转录，从而参与胚胎发育、上皮分化和免疫稳态。视黄酸不能替代视黄醛完成视觉循环。[^vitamin-a]
 
 “维生素 A$_1$”通常指以视黄醇为核心的人体主要维生素 A 系列；3,4-脱氢视黄醇又称维生素 A$_2$，在一些鱼类和其他脊椎动物中更重要。A$_1$/A$_2$ 分类描述骨架差异，而视黄醇骨架的氧化状态进一步决定其进入感光或转录调节过程。
 
 #### 维生素 D 的活化与内分泌作用 { #vitamin-d-activation }
 
-紫外 B 可使皮肤中的 7-脱氢胆固醇形成维生素 D$_3$；真菌麦角固醇经光化学反应形成维生素 D$_2$。两者先在肝脏形成 25-羟维生素 D，再主要于肾脏生成具有高受体活性的 1,25-二羟代谢物。活性维生素 D 与核内维生素 D 受体结合，通过肠道钙磷吸收、肾脏处理和骨重塑的协同调节维持钙磷稳态。[^vitamin-d]
+紫外线 B 波段（ultraviolet B，UVB）可使皮肤中的 7-脱氢胆固醇形成维生素 D$_3$；真菌麦角固醇经光化学反应形成维生素 D$_2$。两者先在肝脏形成 25-羟维生素 D，再主要于肾脏生成具有高受体活性的 1,25-二羟代谢物。活性维生素 D 与核内维生素 D 受体结合，通过肠道钙磷吸收、肾脏处理和骨重塑的协同调节维持钙磷稳态。[^vitamin-d]
 
 维生素 C 不是维生素 D 发挥作用的必需辅因子。钙磷稳态还受甲状旁腺激素、成纤维细胞生长因子 23、肾功能和矿物质供给共同控制；把抽筋作为维生素 D 缺乏的特异诊断同样不可靠。
 
@@ -56,9 +56,9 @@
 
 #### 维生素 K 循环与谷氨酸羧化 { #vitamin-k-cycle }
 
-维生素 K$_1$（叶绿醌）主要来自绿色植物，维生素 K$_2$ 是一组侧链长度不同的甲萘醌。内质网中的 $\gamma$-谷氨酰羧化酶利用还原型维生素 K、CO$_2$ 和 O$_2$，把特定蛋白质的 Glu 侧链转为 $\gamma$-羧基谷氨酸（Gla）；新增的羧基使凝血因子 II、VII、IX、X 以及蛋白 C、S、Z 等能够结合 Ca$^{2+}$ 与膜表面，也参与骨与软组织中的 Gla 蛋白成熟。反应同时把维生素 K 氧化为环氧化物。[^vitamin-k]
+维生素 K$_1$（叶绿醌）主要来自绿色植物，维生素 K$_2$ 是一组侧链长度不同的甲萘醌。内质网中的 $\gamma$-谷氨酰羧化酶利用还原型维生素 K、CO$_2$ 和 O$_2$，把特定蛋白质的 Glu 侧链转为 $\gamma$-羧基谷氨酸（$\gamma$-carboxyglutamate，Gla）；新增的羧基使凝血因子 II、VII、IX、X 以及蛋白 C、S、Z 等能够结合 Ca$^{2+}$ 与膜表面，也参与骨与软组织中的 Gla 蛋白成熟。反应同时把维生素 K 氧化为环氧化物。[^vitamin-k]
 
-维生素 K 环氧化物还原酶复合体 1（VKORC1）把环氧化物循环还原，恢复可供羧化酶使用的形式。华法林类抗凝药通过干扰这一循环降低新生维生素 K 依赖蛋白的充分羧化；DTT 仅在部分实验体系中充当还原剂，体内循环使用生理还原系统。细菌则可把甲萘醌用作呼吸电子载体，这一能量代谢角色与人体凝血中的维生素 K 循环分属不同反应网络。
+维生素 K 环氧化物还原酶复合体亚基 1（vitamin K epoxide reductase complex subunit 1，VKORC1）把环氧化物循环还原，恢复可供羧化酶使用的形式。华法林类抗凝药通过干扰这一循环降低新生维生素 K 依赖蛋白的充分羧化；二硫苏糖醇（dithiothreitol，DTT）仅在部分实验体系中充当还原剂，体内循环使用生理还原系统。细菌则可把甲萘醌用作呼吸电子载体，这一能量代谢角色与人体凝血中的维生素 K 循环分属不同反应网络。
 
 ### 水溶性维生素与辅酶载体 { #water-soluble-vitamin-coenzymes }
 
@@ -66,17 +66,17 @@
 
 | 维生素 | 主要辅酶形式 | 携带或稳定的化学对象 | 代表性缺乏线索 |
 | --- | --- | --- | --- |
-| B$_1$ 硫胺素 | 硫胺素二磷酸（ThDP/TPP） | 羰基邻位碳负离子，参与脱羧与二碳单元转移 | 脚气病；严重缺乏可见 Wernicke 脑病 |
-| B$_2$ 核黄素 | FMN、FAD | 一电子或二电子氧化还原 | 口角炎、舌炎等黏膜皮肤改变，常与其他缺乏并存 |
-| B$_3$ 烟酸 | NAD$^+$/NADH、NADP$^+$/NADPH | 氢负离子与电子；NAD$^+$ 还可作为反应底物 | 癞皮病，典型涉及皮炎、腹泻与神经精神改变 |
+| B$_1$ 硫胺素 | 硫胺素二磷酸（thiamine diphosphate，ThDP；传统缩写 TPP） | 羰基邻位碳负离子，参与脱羧与二碳单元转移 | 脚气病；严重缺乏可见 Wernicke 脑病 |
+| B$_2$ 核黄素 | 黄素单核苷酸（flavin mononucleotide，FMN）、FAD | 一电子或二电子氧化还原 | 口角炎、舌炎等黏膜皮肤改变，常与其他缺乏并存 |
+| B$_3$ 烟酸 | NAD$^+$/NADH、烟酰胺腺嘌呤二核苷酸磷酸（nicotinamide adenine dinucleotide phosphate，NADP$^+$）/NADPH | 氢负离子与电子；NAD$^+$ 还可作为反应底物 | 癞皮病，典型涉及皮炎、腹泻与神经精神改变 |
 | B$_5$ 泛酸 | 辅酶 A、酰基载体蛋白的 4′-磷酸泛酰巯基乙胺 | 酰基硫酯 | 单独缺乏少见，广泛代谢受扰 |
-| B$_6$ | PLP、PMP | 氨基酸 $\alpha$-碳负离子与氨基 | 皮炎、贫血、神经症状；过量补充也可伤害感觉神经 |
+| B$_6$ | 磷酸吡哆醛（pyridoxal 5′-phosphate，PLP）、磷酸吡哆胺（pyridoxamine 5′-phosphate，PMP） | 氨基酸 $\alpha$-碳负离子与氨基 | 皮炎、贫血、神经症状；过量补充也可伤害感觉神经 |
 | B$_7$ 生物素 | 酶蛋白赖氨酸上共价结合的生物素 | ATP 驱动形成的羧基，转移 CO$_2$ | 皮炎、脱发和神经症状；天然缺乏少见 |
 | B$_9$ 叶酸 | 四氢叶酸及其一碳取代物 | 不同氧化态的一碳单元 | 巨幼细胞性贫血；妊娠早期不足增加神经管缺陷风险 |
 | B$_{12}$ 钴胺素 | 甲基钴胺素、5′-脱氧腺苷钴胺素 | 甲基转移与自由基重排 | 巨幼细胞性贫血并可伴不可逆神经损害 |
 | C 抗坏血酸 | 抗坏血酸／脱氢抗坏血酸氧化还原对 | 电子，维持若干金属中心的还原态 | 坏血病、伤口愈合不良和毛细血管脆性 |
 
-这些表现只能帮助连接生化环节，不能单凭症状诊断一种维生素缺乏。NIH ODS 对各维生素的膳食来源、吸收、缺乏、过量和药物相互作用有持续更新的专业资料。[^water-soluble-ods]
+这些表现只能帮助连接生化环节，不能单凭症状诊断一种维生素缺乏。美国国立卫生研究院膳食补充剂办公室（NIH Office of Dietary Supplements，NIH ODS）对各维生素的膳食来源、吸收、缺乏、过量和药物相互作用有持续更新的专业资料。[^water-soluble-ods]
 
 ## 有机辅酶的反应化学 { #coenzyme-chemistry }
 
@@ -140,10 +140,10 @@ PMP 是转氨循环中携带氨基的还原胺形式。PLP 也参与血红素前
 
 | 元素或中心 | 常见化学角色 | 代表性酶或蛋白质 | 边界 |
 | --- | --- | --- | --- |
-| Mg$^{2+}$／Mn$^{2+}$ | 屏蔽磷酸负电荷、定位底物；Mn 也可参与氧化还原 | 激酶、聚合酶；精氨酸酶、Mn-SOD | 常以底物—金属络合物进入反应，加入越多不一定越快 |
+| Mg$^{2+}$／Mn$^{2+}$ | 屏蔽磷酸负电荷、定位底物；Mn 也可参与氧化还原 | 激酶、聚合酶；精氨酸酶、含锰超氧化物歧化酶（Mn-SOD） | 常以底物—金属络合物进入反应，加入越多不一定越快 |
 | Zn$^{2+}$ | Lewis 酸、活化水、稳定结构 | 碳酸酐酶、醇脱氢酶、金属蛋白酶 | 氧化还原惰性，但配位几何和局部 $pK_a$ 很关键 |
-| Fe 与 Fe–S／血红素 | 单电子转移、氧结合与活化、自由基化学 | 细胞色素、过氧化氢酶、铁氧还蛋白 | 游离铁会促进非特异氧化，装载和隔离受到严格控制 |
-| Cu | 氧化还原与氧活化 | 细胞色素 *c* 氧化酶、赖氨酰氧化酶、Cu/Zn-SOD | 铜和锌在 Cu/Zn-SOD 中分别主要承担催化与结构角色 |
+| Fe 与铁硫（Fe–S）中心／血红素 | 单电子转移、氧结合与活化、自由基化学 | 细胞色素、过氧化氢酶、铁氧还蛋白 | 游离铁会促进非特异氧化，装载和隔离受到严格控制 |
+| Cu | 氧化还原与氧活化 | 细胞色素 *c* 氧化酶、赖氨酰氧化酶、含铜/锌超氧化物歧化酶（Cu/Zn-SOD） | 铜和锌在 Cu/Zn-SOD 中分别主要承担催化与结构角色 |
 | Mo 辅因子 | 多步氧原子转移与氧化还原 | 黄嘌呤氧化还原酶、亚硫酸氧化酶、多数硝酸还原酶 | Mo 通常嵌在有机蝶呤辅因子中，不是裸离子单独作用 |
 | Ni | Lewis 酸、气体与氧化还原化学 | 脲酶、部分氢化酶 | 在不同生物中的分布高度不均，常需专门装配蛋白 |
 | Co | 嵌入咕啉环后形成 C—Co 化学 | 钴胺素依赖酶 | 人体利用的是完整钴胺素，不以游离 Co$^{2+}$ 替代 |
@@ -156,7 +156,7 @@ PMP 是转氨循环中携带氨基的还原胺形式。PLP 也参与血红素前
 
 肠道微生物能合成核黄素、叶酸、生物素、维生素 K 和钴胺素等分子，但合成位置、化学形式、宿主吸收部位和菌群生态共同决定可利用量。例如人体 B$_{12}$—内因子复合物主要在回肠吸收，结肠微生物产生的钴胺素不能被视为可靠膳食来源；长链甲萘醌在结肠虽丰富，其对人体维生素 K 需要量的贡献仍有不确定性。
 
-NADH 在 340 nm 的吸收、黄素的可见吸收与荧光、硫胺素氧化产物的荧光都可用于追踪反应，但峰位和强度会受结合状态、pH、光程和其他吸收物影响。表面等离子共振测量表面附近折射率变化，属于通用的无标记结合方法；其检测原理与定量边界将在[光谱测定与生化定量](../exptech/biochem_molecular/spectroscopy_assays.md)中承接。
+NADH 在 340 nm 的吸收、黄素的可见吸收与荧光、硫胺素氧化产物的荧光都可用于追踪反应，但峰位和强度会受结合状态、pH、光程和其他吸收物影响。表面等离子共振（surface plasmon resonance，SPR）测量表面附近折射率变化，属于通用的无标记结合方法；检测原理与定量边界见[光谱测定与生化定量](../exptech/biochem_molecular/spectroscopy_assays.md)。
 
 ## 参考资料与延伸阅读
 
@@ -171,7 +171,8 @@ NADH 在 340 nm 的吸收、黄素的可见吸收与荧光、硫胺素氧化产�
 - Andreini, C. et al. [Metal ions in biological catalysis: from enzyme databases to general principles](https://pubmed.ncbi.nlm.nih.gov/18604568/). *Journal of Biological Inorganic Chemistry* 13, 1205–1218 (2008).
 
 [^vitamin-context]: NIH Office of Dietary Supplements, [Vitamin and Mineral Fact Sheets](https://ods.od.nih.gov/factsheets/list-all/)。维生素需要量和风险按具体分子、生命阶段及生理状态定义；维生素 D 的皮肤合成和烟酸的色氨酸来源说明“必须全部来自食物”不是普适表述。
-[^cofactor-terms]: IUPAC Gold Book, [cofactors](https://goldbook.iupac.org/terms/view/C01128) 与 [coenzyme](https://goldbook.iupac.org/terms/view/C01126)；Cooper, G. M., [Coenzymes](https://www.ncbi.nlm.nih.gov/books/NBK9921/)。这些来源共同支持辅因子、辅酶、辅基与全酶的层级关系；正文同时保留现代文献对紧密结合有机辅因子的较宽用法。
+[^cofactor-terms]: IUPAC Gold Book, [cofactors](https://goldbook.iupac.org/terms/view/C01128) 与 [coenzyme](https://goldbook.iupac.org/terms/view/C01126)；Cooper, G. M., [Coenzymes](https://www.ncbi.nlm.nih.gov/books/NBK9921/)。这些来源共同支持辅因子、辅酶、辅基与全酶的层级关系；现代文献也常把紧密结合的有机辅因子纳入广义辅酶。
+[^vitamin-supplement-safety]: NIH ODS 专业资料分别见 [Vitamin B6](https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/)、[Niacin](https://ods.od.nih.gov/factsheets/Niacin-HealthProfessional/)、[Vitamin C](https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/)、[Vitamin D](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/)、[Vitamin E](https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/) 与 [Vitamin K](https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/)。这些资料分别说明各维生素的可耐受最高摄入量、已知不良反应和药物相互作用；维生素 K 因毒性潜力低未设最高摄入量，但与华法林等抗凝药的相互作用可很严重。
 [^vitamin-a]: NIH ODS, [Vitamin A and Carotenoids](https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/)。该资料区分预形成维生素 A 与维生素 A 原类胡萝卜素，并概括视觉、分化、发育和免疫功能。
 [^vitamin-d]: NIH ODS, [Vitamin D](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/)。维生素 D$_2$/D$_3$ 的来源、25-羟化状态评估及钙磷和骨健康作用均据此核对；该权威资料不支持“维生素 C 是维生素 D 的必要条件”。
 [^vitamin-e]: NIH ODS, [Vitamin E](https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/)；Niki, E. & Traber, M. G., [A history of vitamin E](https://pubmed.ncbi.nlm.nih.gov/23183290/)。人体选择性保留 $\alpha$-生育酚主要由肝脏 $\alpha$-生育酚转移蛋白与代谢共同决定，不能按体外抗氧化强弱为维生素活性排序。
@@ -186,7 +187,7 @@ NADH 在 340 nm 的吸收、黄素的可见吸收与荧光、硫胺素氧化产�
 [^folate-one-carbon]: NIH ODS, [Folate](https://ods.od.nih.gov/factsheets/Folate-HealthProfessional/)。食物叶酸多谷氨酸、合成叶酸、THF 一碳转移与核酸合成的关系据此核对。
 [^cobalamin-human]: NIH ODS, [Vitamin B12](https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/)。人体的两种已确立辅酶反应是甲硫氨酸合酶与 L-甲基丙二酰 CoA 变位酶，吸收还依赖内因子和回肠受体。
 [^plp-chemistry]: Hayashi, H., [Pyridoxal enzymes: mechanistic diversity and uniformity](https://pubmed.ncbi.nlm.nih.gov/8690703/). *Journal of Biochemistry* 118, 463–473 (1995)；NIH ODS, [Vitamin B6](https://ods.od.nih.gov/factsheets/VitaminB6-HealthProfessional/)。赖氨酰氧化酶的铜依赖性另据 National Academies, [Copper](https://www.ncbi.nlm.nih.gov/books/NBK222312/) 核对。
-[^vitamin-c]: NIH ODS, [Vitamin C](https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/)。来源支持人体不能合成、胶原与肉碱等合成、抗氧化和非血红素铁吸收作用；正文不把宽泛免疫关联改写成治疗结论。
+[^vitamin-c]: NIH ODS, [Vitamin C](https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/)。来源支持人体不能合成、胶原与肉碱等合成、抗氧化和非血红素铁吸收作用；宽泛免疫关联不足以支持具体治疗结论。
 [^pdh-coenzymes]: Quinlan, C. L. et al., [The 2-oxoacid dehydrogenase complexes in mitochondria](https://pmc.ncbi.nlm.nih.gov/articles/PMC3961658/). *Redox Biology* 2, 449–457 (2014)。该文明确列出 E1 的 ThDP、E2 的硫辛酰臂与 CoA，以及 E3 的 FAD 和 NAD$^+$。
 [^metal-catalysis]: IUPAC Gold Book, [Metalloenzyme](https://goldbook.iupac.org/terms/view/MT06765)；Andreini, C. et al., [Metal ions in biological catalysis](https://pubmed.ncbi.nlm.nih.gov/18604568/). *Journal of Biological Inorganic Chemistry* 13, 1205–1218 (2008)。
 [^selenium-vanadium]: NIH ODS, [Selenium](https://ods.od.nih.gov/factsheets/Selenium-HealthProfessional/)；Winter, J. M. & Moore, B. S., [Vanadium-dependent haloperoxidases](https://pmc.ncbi.nlm.nih.gov/articles/PMC2707250/). *Journal of Biological Chemistry* 284, 18577–18581 (2009)。后者将经验证的钒酶概括为钒氮化酶和钒依赖卤过氧化物酶。

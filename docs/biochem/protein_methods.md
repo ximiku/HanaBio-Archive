@@ -15,17 +15,17 @@
 
 组织或细胞被破碎后，原本分隔的蛋白酶、氧化还原体系和底物进入同一溶液，稀释又会削弱亚基、配体和辅因子之间的可逆结合。提取缓冲液要围绕目标蛋白设计：pH 应落在蛋白稳定且满足后续分离的范围，离子强度既要抑制非特异聚集，也要保留必要的静电相互作用；温度、金属离子、甘油或特定配体则按已知稳定条件选择。低温能够减慢多种降解与变性过程，快速操作和针对性抑制剂则提供额外保护。
 
-蛋白质的等电点（pI）是在规定溶液条件下平均净电荷为零的 pH，不表示每个可电离基团都不带电，也不表示溶液中只有一种微观质子化状态。严格说来，“等离子点”（isoionic point）指只含蛋白质及其平衡反离子时的零净电荷条件；实验中的盐种、离子强度、配体和修饰会使测得 pI 改变。许多生化流程把两词混用，因此报告 IEF 或电荷滴定结果时应同时给出测量条件，而不是把 pI 当作与环境无关的序列常数。
+蛋白质的等电点（isoelectric point，pI）是在规定溶液条件下平均净电荷为零的 pH，不表示每个可电离基团都不带电，也不表示溶液中只有一种微观质子化状态。严格说来，“等离子点”（isoionic point）指只含蛋白质及其平衡反离子时的零净电荷条件；实验中的盐种、离子强度、配体和修饰会使测得 pI 改变。许多生化流程把两词混用，因此报告等电聚焦（isoelectric focusing，IEF）或电荷滴定结果时应同时给出测量条件，而不是把 pI 当作与环境无关的序列常数。
 
-蛋白酶抑制剂必须按酶类覆盖。苯甲基磺酰氟（PMSF）主要不可逆抑制丝氨酸蛋白酶，在水溶液中又会水解，不能把一次加入 PMSF 理解为“抑制所有蛋白酶”。金属蛋白酶、半胱氨酸蛋白酶和酸性蛋白酶需要不同抑制策略；EDTA 能螯合金属，却也会夺走目标金属蛋白所需的辅因子，并妨碍固定化金属亲和层析。抑制剂组合应与目标活性和下一步操作一起决定。[^protease-inhibitors]
+蛋白酶抑制剂必须按酶类覆盖。苯甲基磺酰氟（phenylmethylsulfonyl fluoride，PMSF）主要不可逆抑制丝氨酸蛋白酶，在水溶液中又会水解，不能把一次加入 PMSF 理解为“抑制所有蛋白酶”。金属蛋白酶、半胱氨酸蛋白酶和酸性蛋白酶需要不同抑制策略；乙二胺四乙酸（ethylenediaminetetraacetic acid，EDTA）能螯合金属，却也会夺走目标金属蛋白所需的辅因子，并妨碍固定化金属亲和层析。抑制剂组合应与目标活性和下一步操作一起决定。[^protease-inhibitors]
 
 二硫键是否应被还原同样取决于研究对象。分析由二硫键连接的亚基时，可以并行比较还原与非还原条件；纯化依赖游离巯基的酶时，则常需抑制氧化。常见还原剂没有脱离条件的绝对“强弱排名”。
 
 | 还原剂 | 主要化学特征 | 实验取舍 |
 | --- | --- | --- |
-| β-巯基乙醇（β-ME） | 单巯基通过巯基—二硫键交换维持还原环境 | 价格低、常需较高浓度，挥发且有强烈气味；残留会影响某些标记和定量反应 |
-| 二硫苏糖醇（DTT） | 两个巯基还原二硫键后形成较稳定的分子内环状二硫化物 | 中性至碱性条件下反应较快，但会被空气氧化，低 pH 时有效巯基负离子比例下降 |
-| 三(2-羧乙基)膦（TCEP） | 非巯基膦还原剂，不靠巯基交换完成反应 | 无巯基气味、抗空气氧化且可在较宽 pH 范围工作；仍需检查与金属、标记试剂及下游反应的兼容性 |
+| β-巯基乙醇（β-mercaptoethanol，β-ME） | 单巯基通过巯基—二硫键交换维持还原环境 | 价格低、常需较高浓度，挥发且有强烈气味；残留会影响某些标记和定量反应 |
+| 二硫苏糖醇（dithiothreitol，DTT） | 两个巯基还原二硫键后形成较稳定的分子内环状二硫化物 | 中性至碱性条件下反应较快，但会被空气氧化，低 pH 时有效巯基负离子比例下降 |
+| 三(2-羧乙基)膦（tris(2-carboxyethyl)phosphine，TCEP） | 非巯基膦还原剂，不靠巯基交换完成反应 | 无巯基气味、抗空气氧化且可在较宽 pH 范围工作；仍需检查与金属、标记试剂及下游反应的兼容性 |
 
 DTT、β-ME 和 TCEP 都可能改变蛋白质的天然共价拓扑，也可能干扰基于铜离子或游离巯基的测定。还原程度应以目标蛋白的天然共价状态和后续测定兼容性为准。[^reducing-agents]
 
@@ -63,13 +63,13 @@ $$
 \text{纯化倍数}=\frac{A_i/(C_iV_i)}{A_0/(C_0V_0)}
 $$
 
-比活力随步骤上升，说明目标活性相对于总蛋白得到富集；回收率下降则揭示代价。比活力平台可能意味着接近纯化极限，也可能是蛋白失活、抑制物共洗脱或活性测定进入非线性区。对没有便捷活性测定的结构蛋白，可以用特异 ELISA、定量质谱或其他可追踪信号替代，但必须说明这个信号究竟代表总量、可结合形式还是功能态。
+比活力随步骤上升，说明目标活性相对于总蛋白得到富集；回收率下降则揭示代价。比活力平台可能意味着接近纯化极限，也可能是蛋白失活、抑制物共洗脱或活性测定进入非线性区。对没有便捷活性测定的结构蛋白，可以用特异性免疫测定、定量质谱或其他可追踪信号替代，但必须说明这个信号究竟代表总量、可结合形式还是功能态。
 
 一个染色条带或一个对称色谱峰都不足以证明化学均一。不同蛋白可能共迁移，聚集体与单体可能在某些条件下共洗脱，微量杂质也可能低于染色检测限。所谓“纯度”必须附带方法、检测波长、上样量和检测限；准备用于动力学、结构测定或治疗开发的样品，还需分别检查活性、聚集、化学修饰和内毒素等与用途相关的属性。
 
 ## 色谱分离与保留机制 { #chromatography }
 
-色谱系统由固定相和流动相组成，样品组分反复经历吸附、分配或可逆结合。若讨论液—液分配，分配比必须写清分子和分母；例如 IUPAC 对某一确定化学形式给出的分配比可写为
+色谱系统由固定相和流动相组成，样品组分反复经历吸附、分配或可逆结合。若讨论液—液分配，分配比必须写清分子和分母；例如国际纯粹与应用化学联合会（International Union of Pure and Applied Chemistry，IUPAC）对某一确定化学形式给出的分配比可写为
 
 $$
 K_D=\frac{[A]_{\mathrm{extract}}}{[A]_{\mathrm{other\ phase}}}
@@ -80,15 +80,15 @@ $$
 | 分离方式 | 主要分辨性质 | 结合或进入条件 | 常见洗脱与关键边界 |
 | --- | --- | --- | --- |
 | 离子交换色谱 | 给定 pH 下的表面净电荷与电荷分布 | 低至中等盐浓度下与相反电荷基团结合 | 增加盐浓度或改变 pH；相同 pI 的蛋白仍可因表面电荷斑块不同而分开 |
-| 体积排阻色谱（SEC） | 溶液中的流体动力学尺寸 | 分子在不同程度上进入多孔填料 | 大颗粒较早洗脱；洗脱体积不能在未经校准和形状判断时直接等同于摩尔质量 |
-| 疏水作用色谱（HIC） | 温和条件下暴露的疏水表面 | 常以较高盐浓度促进疏水结合 | 逐渐降低盐浓度洗脱；通常比反相色谱更有利于保持天然构象 |
-| 反相高效液相色谱（RP-HPLC） | 在非极性固定相上的疏水保留 | 水相上样，常含离子对试剂或酸 | 提高有机相比例洗脱；适合肽和分析型分离，但有机溶剂可能使蛋白变性 |
+| 体积排阻色谱（size-exclusion chromatography，SEC） | 溶液中的流体动力学尺寸 | 分子在不同程度上进入多孔填料 | 大颗粒较早洗脱；洗脱体积不能在未经校准和形状判断时直接等同于摩尔质量 |
+| 疏水作用色谱（hydrophobic interaction chromatography，HIC） | 温和条件下暴露的疏水表面 | 常以较高盐浓度促进疏水结合 | 逐渐降低盐浓度洗脱；通常比反相色谱更有利于保持天然构象 |
+| 反相高效液相色谱（reversed-phase high-performance liquid chromatography，RP-HPLC） | 在非极性固定相上的疏水保留 | 水相上样，常含离子对试剂或酸 | 提高有机相比例洗脱；适合肽和分析型分离，但有机溶剂可能使蛋白变性 |
 | 亲和色谱 | 靶蛋白与固定配体的选择性结合 | 配体、标签或抗体必须可接近且仍能结合 | 加竞争配体或改变 pH、盐和金属状态；高选择性不排除非特异吸附和配体泄漏 |
 | 羟基磷灰石色谱 | 蛋白表面与磷酸钙位点的复合相互作用 | 受磷酸盐、Ca$^{2+}$、pH 与表面电荷共同影响 | 常以磷酸盐梯度洗脱；不能简化成单一的“酸碱吸附” |
 
 ### 离子交换介质的命名 { #ion-exchange }
 
-阴离子交换介质带正电，结合带负电的阴离子；阳离子交换介质带负电，结合带正电的阳离子。DEAE 基团质子化后带正电，是弱阴离子交换剂；CM 基团去质子化后带负电，是弱阳离子交换剂。名称指介质交换的对象，不是介质自身的电荷。[^ion-exchange-cellulose]
+阴离子交换介质带正电，结合带负电的阴离子；阳离子交换介质带负电，结合带正电的阳离子。二乙氨乙基（diethylaminoethyl，DEAE）质子化后带正电，是弱阴离子交换基团；羧甲基（carboxymethyl，CM）去质子化后带负电，是弱阳离子交换基团。名称指介质交换的对象，不是介质自身的电荷。[^ion-exchange-cellulose]
 
 当缓冲液 pH 高于蛋白质 pI 时，蛋白整体趋向负电，可能结合阴离子交换介质；pH 低于 pI 时整体趋向正电，可能结合阳离子交换介质。但 pI 只是起点，真实保留还受局部电荷分布、构象和盐屏蔽影响。上样前换到低盐缓冲液，洗去未结合组分，再用盐梯度竞争静电作用，是常见流程；若蛋白在结合条件下不稳定，也可以设计“杂质结合、目标流穿”的负纯化。
 
@@ -114,8 +114,8 @@ $$
 
 | 方法 | 样品状态与分离依据 | 主要读出 | 不能直接推出 |
 | --- | --- | --- | --- |
-| Native PAGE | 尽量保留非共价装配；电荷、形状和大小共同决定迁移 | 复合物异质性、活性带、相对迁移变化 | 精确摩尔质量或确定亚基数 |
-| SDS-PAGE | SDS 使多肽展开并赋予近似恒定的负电荷／质量比 | 主要按多肽链大小分离，估算表观相对分子质量 | 天然构象、非共价寡聚状态或绝对分子量 |
+| 原态聚丙烯酰胺凝胶电泳（native polyacrylamide gel electrophoresis，native PAGE） | 尽量保留非共价装配；电荷、形状和大小共同决定迁移 | 复合物异质性、活性带、相对迁移变化 | 精确摩尔质量或确定亚基数 |
+| 十二烷基硫酸钠-聚丙烯酰胺凝胶电泳（sodium dodecyl sulfate–polyacrylamide gel electrophoresis，SDS-PAGE） | SDS 使多肽展开并赋予近似恒定的负电荷／质量比 | 主要按多肽链大小分离，估算表观相对分子质量 | 天然构象、非共价寡聚状态或绝对分子量 |
 | 非还原／还原 SDS-PAGE | 分别保留或断开多数二硫键 | 判断二硫键连接是否改变迁移物种 | 二硫键的精确残基配对 |
 | 等电聚焦（IEF） | 蛋白在 pH 梯度中移动，至净电荷接近零处聚焦 | 表观 pI 与电荷异质性 | 蛋白一定处于天然构象或化学均一 |
 | 双向电泳 | 第一向 IEF，第二向 SDS-PAGE | 按电荷与大小正交展开复杂混合物 | 每个点天然只对应一个蛋白质形式 |
@@ -132,13 +132,13 @@ SDS-PAGE 中的多肽主要呈 SDS 包覆的延展链。多数蛋白在适当凝
 
 ### Western blot 的大小分离与表位识别 { #western-blot }
 
-Western blot 先用凝胶电泳分离蛋白，再把蛋白转移到硝酸纤维素或 PVDF 膜，封闭空余吸附位点，依次加入一抗和带标记的二抗或其他检测体系。每次洗涤都在分离“已结合”与“游离”试剂；显色、化学发光或荧光强度只在检测系统的线性范围内才可用于定量。Towbin、Staehelin 与 Gordon 于 1979 年发表的电泳转膜工作奠定了这种流程。[^western-transfer]
+蛋白质免疫印迹（Western blot）先用凝胶电泳分离蛋白，再把蛋白转移到硝酸纤维素或聚偏二氟乙烯（polyvinylidene fluoride，PVDF）膜，封闭空余吸附位点，依次加入一抗和带标记的二抗或其他检测体系。每次洗涤都在分离“已结合”与“游离”试剂；显色、化学发光或荧光强度只在检测系统的线性范围内才可用于定量。Towbin、Staehelin 与 Gordon 于 1979 年发表的电泳转膜工作奠定了这种流程。[^western-transfer]
 
-条带出现在预期表观质量附近只是身份支持，不是抗体特异性的充分证明。遗传敲除或敲低、独立抗体、标签蛋白、正负样品和正交质谱都可提供更强验证。定量时还要确认转移效率、曝光未饱和、各泳道上样处于线性范围，并避免把在不同膜或不同曝光条件下得到的条带直接相除。osm.bio 的 Western blot 故障页整理了气泡、膜方向、过度曝光和洗涤不足等常见现象，但其中固定电压、时间或试剂浓度不能脱离蛋白大小、膜孔径和转印体系照搬；这里仅保留“先定位流程环节”的诊断思路，并以抗体验证规范交叉核对。[^western-validation][^osm-western-troubleshooting]
+条带出现在预期表观质量附近只是身份支持，不是抗体特异性的充分证明。遗传敲除或敲低、独立抗体、标签蛋白、正负样品和正交质谱都可提供更强验证。定量时还要确认转移效率、曝光未饱和、各泳道上样处于线性范围，并避免把在不同膜或不同曝光条件下得到的条带直接相除。出现异常时，可按转移、封闭、抗体与检测环节逐级定位；固定电压、时间或试剂浓度仍须依据蛋白大小、膜孔径和转印体系调整。[^western-validation][^osm-western-troubleshooting]
 
 ### ELISA 格式与待测对象 { #elisa }
 
-ELISA 把抗原或抗体固定在固相上，用酶促反应把特异结合转换为吸光或荧光信号。直接格式用带标记的一抗识别板上抗原；间接格式用未标记一抗和带标记二抗，便于信号放大；夹心格式先以捕获抗体富集抗原，再以识别另一表位的检测抗体形成复合物；竞争格式则让样品分析物与标记或固相参照物竞争有限结合位点，信号常与分析物含量呈反向关系。[^elisa-toolbox]
+酶联免疫吸附测定（enzyme-linked immunosorbent assay，ELISA）把抗原或抗体固定在固相上，用酶促反应把特异结合转换为吸光或荧光信号。直接格式用带标记的一抗识别板上抗原；间接格式用未标记一抗和带标记二抗，便于信号放大；夹心格式先以捕获抗体富集抗原，再以识别另一表位的检测抗体形成复合物；竞争格式则让样品分析物与标记或固相参照物竞争有限结合位点，信号常与分析物含量呈反向关系。[^elisa-toolbox]
 
 不论格式如何，定量都依赖标准曲线、空白、重复孔和适当基质对照。封闭降低非特异吸附，洗涤移除游离标记物；但过度封闭也可能遮蔽表位，样品基质还可能改变抗体结合或酶活。夹心 ELISA 需要捕获抗体与检测抗体识别可同时接近的不同表位，不能只因用了“两种抗体”就假定特异性和线性范围已经成立。
 
@@ -151,7 +151,7 @@ ELISA 把抗原或抗体固定在固相上，用酶促反应把特异结合转�
 | $A_{280}$ | Trp、Tyr 和二硫键等的紫外吸收 | 已知序列、较纯蛋白的快速无损定量 | 不同蛋白消光系数差异大；核酸、浑浊和颗粒散射会抬高读数 |
 | 双缩脲法 | 碱性条件下肽键与 Cu$^{2+}$ 形成有色配合物 | 蛋白浓度较高、组成差异影响相对较小的样品 | 灵敏度较低；螯合剂和能改变铜状态的成分会干扰 |
 | Lowry 法 | 铜反应叠加 Folin–Ciocalteu 试剂还原 | 需要较高灵敏度的总蛋白测定 | 反应依赖部分侧链并受还原剂、螯合剂和多种缓冲成分影响 |
-| BCA 法 | 蛋白还原 Cu$^{2+}$，BCA 与 Cu$^+$ 形成紫色配合物 | 微孔板定量、较宽工作范围 | DTT、TCEP 等还原剂及铜螯合剂可产生显著干扰 |
+| 双喹啉甲酸法（bicinchoninic acid assay，BCA 法） | 蛋白还原 Cu$^{2+}$，BCA 与 Cu$^+$ 形成紫色配合物 | 微孔板定量、较宽工作范围 | DTT、TCEP 等还原剂及铜螯合剂可产生显著干扰 |
 | Bradford 法 | Coomassie Brilliant Blue G-250 与蛋白结合引起吸收变化 | 快速、小体积测量 | 蛋白间响应差异较大，去污剂和超出线性区会改变结果 |
 | 凯氏定氮／燃烧定氮 | 把样品总氮转为可测含氮产物，再以换算因子估计蛋白 | 食品、饲料或总物料的整体含氮分析 | 非蛋白氮也被计入；不同蛋白的氮质量分数不同，不能普遍固定为 16% |
 
@@ -159,27 +159,27 @@ ELISA 把抗原或抗体固定在固相上，用酶促反应把特异结合转�
 
 ### 氨基酸组成分析与水解偏倚 { #amino-acid-analysis }
 
-氨基酸组成分析先把蛋白水解为游离残基，再以离子交换或反相液相色谱分离，并用柱后茚三酮或柱前衍生化等方式检测。纸色谱、薄层色谱和经挥发性衍生化后的气相色谱在方法史和特定分析中仍有位置，但现代定量通常依赖自动化液相分离。常用强酸水解能充分断开许多肽键，却会破坏 Trp，使 Asn 与 Gln 分别以 Asp／Asn 总和（Asx）和 Glu／Gln 总和（Glx）出现，并不同程度损失 Ser、Thr、Tyr 及含硫残基。含硫氨基酸常在水解前氧化为更稳定的产物；Trp 可另用碱水解或其他专门条件测定。碱水解和酶水解又各有消旋、副反应、底物可接近性和裂解不完全等限制，并不存在“完全不损伤氨基酸”的通用水解法。[^amino-acid-hydrolysis]
+氨基酸组成分析先把蛋白水解为游离残基，再以离子交换或反相液相色谱分离，并用柱后茚三酮或柱前衍生化等方式检测。纸色谱、薄层色谱和经挥发性衍生化后的气相色谱在方法史和特定分析中仍有位置，但现代定量通常依赖自动化液相分离。常用强酸水解能充分断开许多肽键，却会破坏 Trp，使 Asn 与 Gln 分别以天冬氨酸／天冬酰胺总量（Asx）和谷氨酸／谷氨酰胺总量（Glx）出现，并不同程度损失 Ser、Thr、Tyr 及含硫残基。含硫氨基酸常在水解前氧化为更稳定的产物；Trp 可另用碱水解或其他专门条件测定。碱水解和酶水解又各有消旋、副反应、底物可接近性和裂解不完全等限制，并不存在“完全不损伤氨基酸”的通用水解法。[^amino-acid-hydrolysis]
 
 组成分析可用于绝对蛋白定量、检查批次一致性或估计某些残基含量，却丢失了排列顺序。两个不同序列可以有完全相同的组成；水解后测得的 D/L 比例还包含样品原有构型、前处理和水解消旋的共同影响。因此它既不是完整测序，也不能在复杂混合物中单独证明某个蛋白的身份。
 
 ### 端基化学与逐步测序 { #terminal-sequencing }
 
-Sanger 在 1945 年用 1-氟-2,4-二硝基苯（FDNB，又称 DNFB）标记胰岛素的游离氨基，酸水解后鉴定稳定的 DNP-氨基酸，由此判断肽链 N 端；这种端基分析本身只给出末端种类，不会逐残基读出全序列。丹磺酰氯也能形成灵敏的荧光衍生物，但同样通常在完全水解后只保留 N 端身份。[^sanger-end-group]
+Sanger 在 1945 年用 1-氟-2,4-二硝基苯（1-fluoro-2,4-dinitrobenzene，FDNB，又称 DNFB）标记胰岛素的游离氨基，酸水解后鉴定稳定的二硝基苯基（dinitrophenyl，DNP）氨基酸，由此判断肽链 N 端；这种端基分析本身只给出末端种类，不会逐残基读出全序列。丹磺酰氯也能形成灵敏的荧光衍生物，但同样通常在完全水解后只保留 N 端身份。[^sanger-end-group]
 
-Edman 降解在弱碱条件下让苯基异硫氰酸酯（PITC）与游离 N 端反应，随后在较温和酸性条件下选择性释放首个残基并转化为可鉴定的 PTH-氨基酸，剩余肽链可进入下一循环。Edman 于 1949 年发表初步方法，1950 年由他单独发表详细反应；1967 年 Edman 与 Begg 报道自动蛋白质顺序分析仪。每轮偶联、裂解、转移和鉴定的收率低于 100%，副产物因而随循环累积，N 端封闭、样品混合和蛋白过长都会使读序失败。[^edman-history]
+Edman 降解在弱碱条件下让苯基异硫氰酸酯（phenyl isothiocyanate，PITC）与游离 N 端反应，随后在较温和酸性条件下选择性释放首个残基并转化为可鉴定的苯硫乙内酰脲（phenylthiohydantoin，PTH）氨基酸，剩余肽链可进入下一循环。Edman 于 1949 年发表初步方法，1950 年由他单独发表详细反应；1967 年 Edman 与 Begg 报道自动蛋白质顺序分析仪。每轮偶联、裂解、转移和鉴定的收率低于 100%，副产物因而随循环累积，N 端封闭、样品混合和蛋白过长都会使读序失败。[^edman-history]
 
 ### 特异裂解与可解析肽段 { #protein-cleavage }
 
 胰蛋白酶通常在 Lys 或 Arg 的羧基侧裂解，但后接 Pro、邻近修饰和三级结构可改变效率；糜蛋白酶偏好芳香族及部分疏水残基附近，Glu-C、Lys-C、Asp-N 和胃蛋白酶则有各自条件依赖的选择性。与 Pro 相邻时的影响须按具体酶和位置判断。甲硫氨酸羧基侧的经典化学裂解试剂为溴化氰（CNBr）；其副产物和甲硫氨酸氧化状态也会影响反应。
 
-用两种不同特异性的裂解获得重叠肽段，曾是拼接长蛋白序列和定位二硫键的重要策略。还原后二硫键应及时烷基化游离 Cys，防止重新氧化。经典对角线电泳先分离含二硫键的肽，再在原位断键并以垂直方向重跑；偏离对角线说明迁移物种发生改变，却不能仅凭位于对角线上方或下方就普遍判定链内与链间二硫键。现代二硫键定位常比较还原与非还原酶解的 LC–MS/MS 结果，并用序列覆盖和碎片离子共同约束配对。
+用两种不同特异性的裂解获得重叠肽段，曾是拼接长蛋白序列和定位二硫键的重要策略。还原后二硫键应及时烷基化游离 Cys，防止重新氧化。经典对角线电泳先分离含二硫键的肽，再在原位断键并以垂直方向重跑；偏离对角线说明迁移物种发生改变，却不能仅凭位于对角线上方或下方就普遍判定链内与链间二硫键。现代二硫键定位常比较还原与非还原酶解的液相色谱—串联质谱（liquid chromatography–tandem mass spectrometry，LC–MS/MS）结果，并用序列覆盖和碎片离子共同约束配对。
 
 ### 质谱的离子质量差与序列证据 { #mass-spectrometry }
 
 质谱仪直接测量离子的质荷比 $m/z$。同一肽可形成多个电荷态，同一元素或肽也会产生同位素峰簇；电荷态、同位素峰簇和碎片系列共同提供质量与序列信息。软电离产生肽离子后，一级质谱给出前体离子的 $m/z$；串联质谱再选择前体、诱导碎裂并测量产物离子，肽键断裂形成的系列碎片提供序列约束。
 
-肽质量指纹把特异酶解得到的一组肽质量与数据库中的理论酶切结果匹配，适合较纯蛋白；LC–MS/MS 则先分离肽段，再将实验碎片谱与理论谱匹配或进行 de novo 解释。数据库搜索会受到物种序列库、允许修饰、酶切规则和质量误差影响；多个蛋白共享肽段时，肽段身份也不自动唯一指定蛋白。诱饵库与错误发现率控制、独特肽段和正交证据都是把“最高分匹配”提升为可信鉴定所必需的环节。[^mass-spectrometry-identification]
+肽质量指纹把特异酶解得到的一组肽质量与数据库中的理论酶切结果匹配，适合较纯蛋白；LC–MS/MS 则先分离肽段，再将实验碎片谱与理论谱匹配或进行从头（de novo）解释。数据库搜索会受到物种序列库、允许修饰、酶切规则和质量误差影响；多个蛋白共享肽段时，肽段身份也不自动唯一指定蛋白。诱饵库与错误发现率控制、独特肽段和正交证据都是把“最高分匹配”提升为可信鉴定所必需的环节。[^mass-spectrometry-identification]
 
 ## 光谱与三维结构方法的观察尺度 { #spectroscopy-structure }
 
@@ -187,23 +187,23 @@ Edman 降解在弱碱条件下让苯基异硫氰酸酯（PITC）与游离 N 端�
 
 紫外差光谱比较两个状态的吸收差异，可感知芳香侧链微环境变化；内源荧光尤其受 Trp 周围极性、猝灭和能量转移影响。峰位或强度改变能够报告构象变化，却通常不能唯一指出是哪一个残基移动。荧光偏振或各向异性把分子转动速度与信号偏振联系起来，可用于结合和颗粒大小变化，但也受荧光寿命、局部探针运动与混合物影响。
 
-远紫外圆二色谱（CD）主要反映肽键排列，可比较 α-螺旋、β-结构和无规构象的整体变化；近紫外 CD 更多反映芳香侧链与二硫键的不对称环境。由 CD 谱反演“二级结构百分比”依赖参考谱库、浓度、光程和基线，适合作为整体约束，不应代替残基级结构测定。浑浊、强吸收缓冲液和去污剂会使短波段数据失真，记录谱线时应同时报告样品浓度、池长、温度与缓冲液。
+远紫外圆二色谱（circular dichroism，CD）主要反映肽键排列，可比较 α-螺旋、β-结构和无规构象的整体变化；近紫外 CD 更多反映芳香侧链与二硫键的不对称环境。由 CD 谱反演“二级结构百分比”依赖参考谱库、浓度、光程和基线，适合作为整体约束，不应代替残基级结构测定。浑浊、强吸收缓冲液和去污剂会使短波段数据失真，记录谱线时应同时报告样品浓度、池长、温度与缓冲液。
 
 ### 原子模型的数据约束 { #structural-methods }
 
 | 方法 | 主要实验数据 | 适合的问题 | 核心限制与质量线索 |
 | --- | --- | --- | --- |
 | X 射线晶体学 | 晶体衍射强度及由此获得的电子密度 | 原子级折叠、配体和活性位点 | 需要有序晶体；分辨率、$R$／$R_{free}$、几何和模型—密度拟合共同约束可信度 |
-| NMR 波谱 | 化学位移、原子间距离、取向和动力学等约束 | 溶液构象、局部运动和相互作用 | 谱峰重叠与样品大小、浓度限制解析；结构集合表示满足约束的构象，不等于逐帧运动轨迹 |
+| 核磁共振（nuclear magnetic resonance，NMR）波谱 | 化学位移、原子间距离、取向和动力学等约束 | 溶液构象、局部运动和相互作用 | 谱峰重叠与样品大小、浓度限制解析；结构集合表示满足约束的构象，不等于逐帧运动轨迹 |
 | 单颗粒冷冻电镜 | 玻璃态冰中大量粒子的二维投影及三维重构密度 | 大型复合物、多个构象状态和膜蛋白 | 取向偏好、颗粒异质性、局部分辨率和模型—密度拟合都需检查；密度图不是自动生成的原子坐标 |
 
-X 射线、NMR 和冷冻电镜不会直接拍出一个无解释的“真实分子”。实验数据与已知共价几何、序列和建模假设共同形成最终坐标；柔性区可能缺少密度或约束，不同构象也可能在平均处理中被合并。PDB-101 对三类方法的说明和 wwPDB 方法特异的验证报告都强调，应同时检查原始或派生实验数据、模型几何以及模型对数据的拟合，而不只看一张彩色结构图或一个全局分辨率数值。[^structure-determination][^structure-validation]
+X 射线、NMR 和冷冻电镜不会直接拍出一个无解释的“真实分子”。实验数据与已知共价几何、序列和建模假设共同形成最终坐标；柔性区可能缺少密度或约束，不同构象也可能在平均处理中被合并。PDB-101 对三类方法的说明和全球蛋白质数据库联盟（Worldwide Protein Data Bank，wwPDB）的方法特异验证报告都强调，应同时检查原始或派生实验数据、模型几何以及模型对数据的拟合，而不只看一张彩色结构图或一个全局分辨率数值。[^structure-determination][^structure-validation]
 
 ## 固相肽合成与序列假说验证 { #solid-phase-peptide-synthesis }
 
 测得序列之后，化学合成可以构建带有非天然残基、同位素、荧光基团或特定位点修饰的肽，用来检验结合位点和酶切规则。肽键形成要求一个氨基与一个活化羧基选择性反应，其他 α-氨基、羧基和侧链官能团需要暂时保护；保护基必须能在规定步骤去除，又不能破坏此前形成的肽键和其他保护关系。
 
-Merrifield 在 1963 年报道的固相肽合成（SPPS）把首个氨基酸的 C 端固定在不溶性树脂上，随后沿 C 端到 N 端方向重复“去除 N 端保护基—偶联下一个受保护氨基酸—洗去过量试剂”。Fmoc 和 Boc 是常见的 α-氨基保护策略，羧基需由碳二亚胺、活化酯或其他缩合体系活化；完成组装后再移除侧链保护基并从树脂裂解产物。树脂让每轮洗涤变得简便，却不能消除消旋、缺失肽、天冬酰亚胺形成和聚集等副反应。[^solid-phase-peptide-synthesis]
+Merrifield 在 1963 年报道的固相肽合成（solid-phase peptide synthesis，SPPS）把首个氨基酸的 C 端固定在不溶性树脂上，随后沿 C 端到 N 端方向重复“去除 N 端保护基—偶联下一个受保护氨基酸—洗去过量试剂”。9-芴甲氧羰基（9-fluorenylmethoxycarbonyl，Fmoc）和叔丁氧羰基（tert-butoxycarbonyl，Boc）是常见的 α-氨基保护策略，羧基需由碳二亚胺、活化酯或其他缩合体系活化；完成组装后再移除侧链保护基并从树脂裂解产物。树脂让每轮洗涤变得简便，却不能消除消旋、缺失肽、天冬酰亚胺形成和聚集等副反应。[^solid-phase-peptide-synthesis]
 
 若单轮偶联收率为 $y$，连续 $n$ 轮全部正确的理论比例约为 $y^n$；即使 $y=0.99$，经过 50 轮也只有约 $0.99^{50}\approx0.61$。长肽因此需要更严格的循环监测，并在裂解后用 RP-HPLC 纯化、质谱确认分子形式。合成产物具有预期质量仍不保证形成天然折叠或生物活性；这些结论必须再由结构、结合和功能实验建立。
 
@@ -225,16 +225,16 @@ Merrifield 在 1963 年报道的固相肽合成（SPPS）把首个氨基酸的 C
 - RCSB PDB-101. [Methods for Determining Structure](https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/methods-for-determining-structure)；wwPDB [Validation Reports](https://www.wwpdb.org/validation/validation-reports)。
 - Janeway, C. A. Jr et al. [Immunologists' Toolbox](https://www.ncbi.nlm.nih.gov/books/NBK10755/). *Immunobiology*, 5th ed.
 
-[^protein-fractionation-textbook]: Alberts et al., [Fractionation of Cells](https://www.ncbi.nlm.nih.gov/books/NBK26936/)。该章把细胞分级、差速与梯度离心、蛋白质色谱、SDS-PAGE、二维电泳、Western blot 和肽质量指纹放在同一条实验链中；本页据现代方法边界重组，而不照搬其历史定量示例。
+[^protein-fractionation-textbook]: Alberts et al., [Fractionation of Cells](https://www.ncbi.nlm.nih.gov/books/NBK26936/)。该章把细胞分级、差速与梯度离心、蛋白质色谱、SDS-PAGE、二维电泳、Western blot 和肽质量指纹放在同一条实验链中；其中历史定量示例仍须结合现代方法条件解释。
 [^protease-inhibitors]: Burgess, R. R., [Overview of the Purification of Recombinant Proteins](https://pmc.ncbi.nlm.nih.gov/articles/PMC4410719/). *Methods in Enzymology* 463, 331–342 (2009)；另见蛋白质组样品流程中对 PMSF 水溶液不稳定性的操作说明：[SCX/IMAC enrichment approach](https://pmc.ncbi.nlm.nih.gov/articles/PMC2728452/)。
-[^reducing-agents]: [Use of Protein Folding Reagents](https://pmc.ncbi.nlm.nih.gov/articles/PMC4821428/). *Current Protocols in Protein Science* (2016)。该资料比较 DTT、β-ME 与 TCEP 的化学性质；正文不采用脱离 pH、浓度和下游兼容性的绝对效力排名。
+[^reducing-agents]: [Use of Protein Folding Reagents](https://pmc.ncbi.nlm.nih.gov/articles/PMC4821428/). *Current Protocols in Protein Science* (2016)。该资料比较 DTT、β-ME 与 TCEP 的化学性质；三者的适用性取决于 pH、浓度和下游兼容性。
 [^membrane-mimetics]: Dörr, J. M., [Recent advances in membrane mimetics for membrane protein research](https://pmc.ncbi.nlm.nih.gov/articles/PMC10317169/). *Essays in Biochemistry* 67, 119–131 (2023)。该综述比较去污剂、纳米盘、SapNP、peptidisc 与 SMALP 对脂质环境和复合物稳定性的不同影响。
 [^chromatography-nomenclature]: IUPAC, [Nomenclature for chromatography](https://old.iupac.org/reports/1993/6504ettre/index.html)与 Gold Book [partition ratio](https://goldbook.iupac.org/terms/view/P04440)。分配比的相次序必须显式定义；色谱保留不能用未定义的单一系数口诀概括。
 [^ion-exchange-cellulose]: Matsumoto, K., Hirayama, C. & Motozato, Y. [Preparation of Bead-shaped Cellulosic Ion Exchangers](https://doi.org/10.1246/nikkashi.1981.1890). *Nippon Kagaku Kaishi* 1981, 1890–1898。该文明确 DEAE-cellulose 为阴离子交换介质、CM-cellulose 为阳离子交换介质；术语定义另见 IUPAC [ion-exchange chromatography](https://goldbook.iupac.org/terms/view/I03168)。
 [^sds-page-laemmli]: Laemmli, U. K. [Cleavage of structural proteins during the assembly of the head of bacteriophage T4](https://pubmed.ncbi.nlm.nih.gov/5432063/). *Nature* 227, 680–685 (1970)。这篇论文中的不连续 SDS-PAGE 体系成为常用蛋白电泳格式。
 [^western-transfer]: Towbin, H., Staehelin, T. & Gordon, J. [Electrophoretic transfer of proteins from polyacrylamide gels to nitrocellulose sheets](https://pmc.ncbi.nlm.nih.gov/articles/PMC411572/). *Proceedings of the National Academy of Sciences USA* 76, 4350–4354 (1979)。
 [^western-validation]: Pillai-Kastoori, L. et al. [Antibody validation for Western blot: By the user, for the user](https://pmc.ncbi.nlm.nih.gov/articles/PMC6983856/). *Journal of Biological Chemistry* 295, 926–939 (2020)。文章强调抗体验证须针对具体实验情境，并以遗传、独立抗体或正交方法验证选择性与可重复性。
-[^osm-western-troubleshooting]: osm.bio，[Western blot 条带结果分析整理](https://osm.bio/index.php?title=Western_blot条带结果分析整理&oldid=11140)，CC BY-SA。正文仅改编其“按转移、封闭、抗体与检测环节定位异常”的线索；固定参数和带有绝对性的处置建议未采用，并以 Towbin 原始工作与抗体验证综述交叉核验。
+[^osm-western-troubleshooting]: 本段诊断思路实质性改编自 osm.bio [Western blot 条带结果分析整理](https://osm.bio/index.php?title=Western_blot条带结果分析整理&oldid=11140)，CC BY-SA。固定参数不构成通则；诊断边界另以 Towbin 原始工作与抗体验证综述交叉核验。
 [^elisa-toolbox]: Janeway et al., [Immunologists' Toolbox](https://www.ncbi.nlm.nih.gov/books/NBK10755/)。该附录说明 ELISA 中固相固定、封闭、洗涤、酶标检测、夹心格式和竞争格式的共同逻辑。
 [^protein-assays]: Lowry, O. H. et al. [Protein measurement with the Folin phenol reagent](https://pubmed.ncbi.nlm.nih.gov/14907713/). *Journal of Biological Chemistry* 193, 265–275 (1951)；Bradford, M. M. [A rapid and sensitive method for the quantitation of microgram quantities of protein](https://pubmed.ncbi.nlm.nih.gov/942051/). *Analytical Biochemistry* 72, 248–254 (1976)；Smith, P. K. et al. [Measurement of protein using bicinchoninic acid](https://pubmed.ncbi.nlm.nih.gov/3843705/). *Analytical Biochemistry* 150, 76–85 (1985)；综合适用条件见 Cold Spring Harbor Protocols, [Methods for Measuring the Concentrations of Proteins](https://doi.org/10.1101/pdb.top102277)。
 [^amino-acid-hydrolysis]: Fountoulakis, M. & Lahm, H.-W. [Hydrolysis and amino acid composition of proteins](https://pubmed.ncbi.nlm.nih.gov/9917165/). *Journal of Chromatography A* 826, 109–134 (1998)。该综述把水解、残基分离和检测视为一个整体，并详述酸碱和酶水解对敏感残基、消旋及定量的影响。

@@ -1,12 +1,12 @@
 # 核酸与核苷酸
 
-核酸由兼具碱基识别、糖连接方向和磷酸电荷的核苷酸组成。链内共价键规定序列的连续性，碱基配对与堆积塑造局部构象，离子、溶剂和蛋白质又决定长链怎样折叠、压缩和被读取。DNA 通常承担较长期的信息保存；RNA 除了传递信息，还可作为某些病毒的基因组，并充当模板、接头、结构骨架、调控分子和催化组分。
+核酸由兼具碱基识别、糖连接方向和磷酸电荷的核苷酸组成。链内共价键规定序列的连续性，碱基配对与堆积塑造局部构象，离子、溶剂和蛋白质又决定长链怎样折叠、压缩和被读取。脱氧核糖核酸（deoxyribonucleic acid，DNA）通常承担较长期的信息保存；核糖核酸（ribonucleic acid，RNA）除了传递信息，还可作为某些病毒的基因组，并充当模板、接头、结构骨架、调控分子和催化组分。
 
-游离核苷酸还承担核酸原料之外的多种功能。ATP、GTP 等把放能过程与合成、运动和运输相耦联，核苷酸糖和核苷酸脂质活化待转移的化学基团，cAMP、cGMP 等参与信号传递，NAD$^+$、FAD 和辅酶 A 则在更大的辅酶结构中保留核苷酸样模块。理解核酸要从这些共同的化学构件出发，再逐层进入序列、构象和高阶复合物。
+游离核苷酸还承担核酸原料之外的多种功能。三磷酸腺苷（adenosine triphosphate，ATP）、三磷酸鸟苷（guanosine triphosphate，GTP）等把放能过程与合成、运动和运输相耦联，核苷酸糖和核苷酸脂质活化待转移的化学基团，环磷酸腺苷（cyclic adenosine monophosphate，cAMP）、环磷酸鸟苷（cyclic guanosine monophosphate，cGMP）等参与信号传递，烟酰胺腺嘌呤二核苷酸（nicotinamide adenine dinucleotide，NAD$^+$）、黄素腺嘌呤二核苷酸（flavin adenine dinucleotide，FAD）和辅酶 A（coenzyme A，CoA）则在更大的辅酶结构中保留核苷酸样模块。理解核酸要从这些共同的化学构件出发，再逐层进入序列、构象和高阶复合物。
 
 ## 核苷酸的化学层级 { #nucleotide-chemistry }
 
-核苷由含氮碱基与戊糖组成；核苷再被一个或多个磷酸基团酯化，才成为核苷酸。嘌呤碱基的 N9 或嘧啶碱基的 N1 通常通过 β-*N*-糖苷键连接戊糖 C1′。核糖核苷含 2′-羟基，脱氧核糖核苷在该位置为氢；这个看似很小的差别改变糖环构象、双链几何、酶的识别以及骨架对碱的稳定性。假尿苷等修饰核苷采用 C—C 糖苷键，说明“碱基经氮连接糖”是规范核苷的主型，而不是没有例外的定义边界。IUPAC–IUBMB 的命名建议把碱基、核苷、核苷酸与核酸链区分为不同层级，也规定了残基、末端和序列方向的表示方式。[^nucleic-acid-nomenclature]
+核苷由含氮碱基与戊糖组成；核苷再被一个或多个磷酸基团酯化，才成为核苷酸。嘌呤碱基的 N9 或嘧啶碱基的 N1 通常通过 β-*N*-糖苷键连接戊糖 C1′。核糖核苷含 2′-羟基，脱氧核糖核苷在该位置为氢；这个看似很小的差别改变糖环构象、双链几何、酶的识别以及骨架对碱的稳定性。假尿苷等修饰核苷采用 C—C 糖苷键，说明“碱基经氮连接糖”是规范核苷的主型，而不是没有例外的定义边界。国际纯粹与应用化学联合会—国际生物化学与分子生物学联合会（IUPAC–IUBMB）的命名建议把碱基、核苷、核苷酸与核酸链区分为不同层级，也规定了残基、末端和序列方向的表示方式。[^nucleic-acid-nomenclature]
 
 | 层级 | 组成与代表 | 辨认要点 |
 | --- | --- | --- |
@@ -15,7 +15,7 @@
 | 核苷酸 | 核苷 + 磷酸；如 AMP、ATP、dGTP | 必须留意磷酸数目与连接位置；AMP 通常指腺苷 5′-单磷酸 |
 | 核酸残基 | 核苷酸进入聚合物后留下的结构单元；如 dAMP 残基 | 聚合时释放焦磷酸，链内残基不再等同于游离三磷酸底物 |
 
-DNA 与 RNA 的典型差异同时涉及糖、碱基组成和结构倾向。典型 DNA 由 2′-脱氧核糖、A/G/C/T 和磷酸组成，典型 RNA 由核糖、A/G/C/U 和磷酸组成；RNA 中也可出现胸腺嘧啶衍生残基，DNA 与 RNA 都有大量酶促修饰。5-甲基胞嘧啶是 DNA 中重要的调控性修饰，tRNA、rRNA 等 RNA 则富含假尿苷、甲基化核苷和其他修饰。修饰会改变配对边缘、堆积、构象、稳定性和蛋白识别。RNAcentral 把多种专家数据库的非编码 RNA 序列、结构和修饰信息整合在一起，也从侧面显示 RNA 类型远超过 mRNA、tRNA、rRNA 三类。[^rnacentral]
+DNA 与 RNA 的典型差异同时涉及糖、碱基组成和结构倾向。典型 DNA 由 2′-脱氧核糖、A/G/C/T 和磷酸组成，典型 RNA 由核糖、A/G/C/U 和磷酸组成；RNA 中也可出现胸腺嘧啶衍生残基，DNA 与 RNA 都有大量酶促修饰。5-甲基胞嘧啶是 DNA 中重要的调控性修饰，转运 RNA（transfer RNA，tRNA）、核糖体 RNA（ribosomal RNA，rRNA）等则富含假尿苷、甲基化核苷和其他修饰。修饰会改变配对边缘、堆积、构象、稳定性和蛋白识别。RNAcentral 把多种专家数据库的非编码 RNA 序列、结构和修饰信息整合在一起，也从侧面显示 RNA 类型远超过信使 RNA（messenger RNA，mRNA）、tRNA、rRNA 三类。[^rnacentral]
 
 碱基的芳香杂环在近紫外区有显著吸收，并可发生互变异构。生理条件下常见的酮式或氨基式主导典型 Watson–Crick 配对，稀有互变异构体、质子化状态或化学修饰则可能暂时改变供氢体和受氢体的排列，增加错配概率。将某次复制错误归因于稀有异构体需要直接证据；实际错误率还受到聚合酶选择、校对与修复共同约束。
 
@@ -40,7 +40,7 @@ DNA 与 RNA 的典型差异同时涉及糖、碱基组成和结构倾向。典�
 
 一级结构是残基种类、顺序、连接方式和必要修饰的完整描述。仅写一串 A、G、C、T/U，默认了规范 3′→5′ 骨架和未修饰残基；一旦存在支链 RNA、环状核酸、非规范连接或位点修饰，就要把这些信息显式加入结构描述。线性与环状两种拓扑都可见于核酸：质粒、许多细胞器基因组和部分病毒基因组可以是环状 DNA，细胞中也存在由反向剪接或其他机制形成的环状 RNA。
 
-序列怎样被实验读出属于另一层问题。本页只建立序列与化学结构的关系；Sanger 测序、高通量测序、长读长测序和 RNA 测序的信号产生与数据误差将在[测序技术](../bioinfo/sequencing.md)中展开，样品提取、核酸酶处理、电泳和杂交操作则由[核酸实验](../exptech/biochem_molecular/nucleic_acid.md)承接。
+序列怎样被实验读出属于另一层问题。Sanger 测序、高通量测序、长读长测序和 RNA 测序的信号产生与数据误差见[测序技术](../bioinfo/sequencing.md)，样品提取、核酸酶处理、电泳和杂交操作见[核酸实验](../exptech/biochem_molecular/nucleic_acid.md)。
 
 ## DNA 双螺旋的结构化学 { #dna-double-helix }
 
@@ -75,11 +75,11 @@ RNA 的 2′-羟基限制糖环和主链可取的构象，并提供额外氢键�
 | mRNA | 携带可翻译序列并整合稳定性、定位和翻译调控信息 | 5′、3′ 端加工和局部结构影响核糖体进入、降解与调控因子结合 |
 | tRNA | 把密码子识别与氨基酸递送相接 | 茎环二级结构折叠为 L 形三级结构；大量修饰参与解码精度和稳定性 |
 | rRNA | 构成核糖体结构与催化中心 | 蛋白质围绕折叠 RNA 装配；肽酰转移中心的关键化学环境由 rRNA 形成 |
-| snRNA、snoRNA | 参与前体 mRNA 剪接以及 rRNA 的加工与修饰 | 通常以核糖核蛋白复合物工作，RNA 提供配对和部分结构定位 |
-| miRNA、siRNA、piRNA | 以序列互补引导沉默或基因组防御 | 长度、末端与装载蛋白共同决定靶向规则，不能只凭“短 RNA”归类 |
-| lncRNA 与环状 RNA | 可作为支架、向导、诱饵、模板或调控分子 | 类别内部高度异质；表达相关性和可检测环化不能单独证明具体机制 |
+| 小核 RNA（small nuclear RNA，snRNA）、小核仁 RNA（small nucleolar RNA，snoRNA） | 参与前体 mRNA 剪接以及 rRNA 的加工与修饰 | 通常以核糖核蛋白复合物工作，RNA 提供配对和部分结构定位 |
+| 微小 RNA（microRNA，miRNA）、小干扰 RNA（small interfering RNA，siRNA）、Piwi 相互作用 RNA（Piwi-interacting RNA，piRNA） | 以序列互补引导沉默或基因组防御 | 长度、末端与装载蛋白共同决定靶向规则，不能只凭“短 RNA”归类 |
+| 长链非编码 RNA（long non-coding RNA，lncRNA）与环状 RNA | 可作为支架、向导、诱饵、模板或调控分子 | 类别内部高度异质；表达相关性和可检测环化不能单独证明具体机制 |
 
-RNA 具有催化能力的经典证据之一是细菌 RNase P：其 RNA 组分在适当条件下能够催化前体 tRNA 加工。这一发现否定了“所有生物催化剂都是蛋白质”，但不表示每个核酶在细胞内都不需要蛋白质；许多 RNP 中的蛋白质负责折叠、定位、底物选择或调节。[^rnase-p]
+RNA 具有催化能力的经典证据之一是细菌核糖核酸酶 P（ribonuclease P，RNase P）：其 RNA 组分在适当条件下能够催化前体 tRNA 加工。这一发现否定了“所有生物催化剂都是蛋白质”，但不表示每个核酶在细胞内都不需要蛋白质；许多核糖核蛋白复合物（ribonucleoprotein complex，RNP）中的蛋白质负责折叠、定位、底物选择或调节。[^rnase-p]
 
 ## 核酸拓扑与高阶组织 { #nucleic-acid-topology }
 
@@ -97,7 +97,7 @@ $Lk$ 是拓扑约束下的整数不变量，$Tw$ 和 $Wr$ 却可彼此转换。�
 
 ### 染色质与拟核组织 { #chromatin-nucleoid-organization }
 
-真核染色质的基本重复单元是核小体核心颗粒：约 147 bp DNA 围绕由 H2A、H2B、H3、H4 各两份组成的组蛋白八聚体缠绕约 1.7 圈。相邻核心之间的连接 DNA 长度可变，H1 类连接组蛋白在核小体入口、出口和连接区附近促进更高阶组织。组蛋白尾部和球状表面都参与相互作用，修饰及变体会改变结合伙伴和动力学；核小体因而同时压缩 DNA、限制可接近性，又能被重塑和局部拆装。[^nucleosome-structure]
+真核染色质的基本重复单元是核小体核心颗粒：约 147 个碱基对（base pairs，bp）的 DNA 围绕由 H2A、H2B、H3、H4 各两份组成的组蛋白八聚体缠绕约 1.7 圈。相邻核心之间的连接 DNA 长度可变，H1 类连接组蛋白在核小体入口、出口和连接区附近促进更高阶组织。组蛋白尾部和球状表面都参与相互作用，修饰及变体会改变结合伙伴和动力学；核小体因而同时压缩 DNA、限制可接近性，又能被重塑和局部拆装。[^nucleosome-structure]
 
 部分古菌具有与真核组蛋白同源的 histone fold 蛋白，其装配方式具有自身特征。结构研究显示某些古菌组蛋白二聚体可沿 DNA 连续聚合成长度可变的超螺旋。细菌拟核则主要由超螺旋、核质相关蛋白、转录与复制活动以及大尺度区室共同组织，不同物种采用的蛋白组合差异很大。[^archaeal-chromatin]
 
@@ -143,7 +143,7 @@ $A_{260}/A_{280}$ 约 1.8 常被视作较纯 DNA、约 2.0 常被视作较纯 RN
 
 ## 人工核酸与化学合成 { #synthetic-nucleic-acids }
 
-肽核酸（peptide nucleic acid, PNA）用重复的 *N*-(2-aminoethyl)glycine 单元替代糖—磷酸骨架，碱基仍按互补规则识别 DNA 或 RNA。中性骨架减少同号电荷排斥，并提高对许多核酸酶和蛋白酶的耐受性；1991 年的原始工作通过胸腺嘧啶取代的聚酰胺展示了序列选择性的 DNA 识别。高亲和力并不自动转化为体内药效，细胞摄取、组织递送、溶解性、脱靶结合和毒理仍须逐项解决。[^pna]
+肽核酸（peptide nucleic acid，PNA）用重复的 *N*-(2-aminoethyl)glycine 单元替代糖—磷酸骨架，碱基仍按互补规则识别 DNA 或 RNA。中性骨架减少同号电荷排斥，并提高对许多核酸酶和蛋白酶的耐受性；1991 年的原始工作通过胸腺嘧啶取代的聚酰胺展示了序列选择性的 DNA 识别。高亲和力并不自动转化为体内药效，细胞摄取、组织递送、溶解性、脱靶结合和毒理仍须逐项解决。[^pna]
 
 常规自动化寡核苷酸化学合成多采用固相亚磷酰胺法。首个核苷从 3′ 端固定在固相上，每轮依次暴露生长链 5′-OH、偶联活化的下一个核苷亚磷酰胺、封闭未反应链端并把不稳定的三价磷中间体氧化为五价磷；重复循环后再从载体切下并去保护。因此产物在固相上通常按 3′→5′ 方向增长，恰与聚合酶合成方向相反。RNA 单体还需保护 2′-OH，硫代磷酸酯等骨架则在氧化步骤采用相应硫化化学。[^oligonucleotide-synthesis]
 
@@ -159,11 +159,11 @@ $A_{260}/A_{280}$ 约 1.8 常被视作较纯 DNA、约 2.0 常被视作较纯 RN
 - SantaLucia, J. Jr. [A unified view of polymer, dumbbell, and oligonucleotide DNA nearest-neighbor thermodynamics](https://pmc.ncbi.nlm.nih.gov/articles/PMC19045/). *Proceedings of the National Academy of Sciences USA* 95, 1460–1465 (1998).
 - Luger, K. et al. [Crystal structure of the nucleosome core particle at 2.8 Å resolution](https://pubmed.ncbi.nlm.nih.gov/9305837/). *Nature* 389, 251–260 (1997).
 
-[^nucleic-acid-nomenclature]: IUPAC–IUB Joint Commission on Biochemical Nomenclature, [Abbreviations and Symbols for Nucleic Acids, Polynucleotides and their Constituents](https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf). *Pure and Applied Chemistry* 55, 1273–1280 (1983)。正文沿用其层级和方向性术语，但对修饰核苷和现代 RNA 类型另作补充。
-[^rnacentral]: RNAcentral Consortium, [About RNAcentral](https://www.rnacentral.org/about-us)。该资源整合多种专家数据库的非编码 RNA 序列、基因组位置、结构与功能注释；正文只据此说明 RNA 类型和修饰来源的多样性，不以数据库规模推导功能。
+[^nucleic-acid-nomenclature]: IUPAC–IUB Joint Commission on Biochemical Nomenclature, [Abbreviations and Symbols for Nucleic Acids, Polynucleotides and their Constituents](https://old.iupac.org/publications/pac/1983/pdf/5508x1273.pdf). *Pure and Applied Chemistry* 55, 1273–1280 (1983)。该建议规定核酸构件的层级、残基和方向性术语；修饰核苷与现代 RNA 类型需结合后续数据库记录。
+[^rnacentral]: RNAcentral Consortium, [About RNAcentral](https://www.rnacentral.org/about-us)。该资源整合多种专家数据库的非编码 RNA 序列、基因组位置、结构与功能注释，可用于核对 RNA 类型和修饰来源的多样性，但数据库规模本身不证明具体功能。
 [^nucleotide-functions]: Alberts et al., [The Chemical Components of a Cell](https://www.ncbi.nlm.nih.gov/books/NBK26883/)；Cooper, [Metabolic Energy](https://www.ncbi.nlm.nih.gov/books/NBK9903/)。前者说明核苷酸的聚合、能量与活化载体角色，后者强调“高能键”命名来自整个水解反应的自由能变化，而不是断键本身释放能量。
 [^nucleotide-polymerization]: Cooper, [The Molecular Composition of Cells](https://www.ncbi.nlm.nih.gov/books/NBK9879/)。该章区分核苷、核苷酸、3′→5′ 磷酸二酯连接和聚合酶的 5′→3′ 合成方向。
-[^dna-duplex-stability]: Yakovchuk, P., Protozanova, E. & Frank-Kamenetskii, M. D. [Base-stacking and base-pairing contributions into thermal stability of the DNA double helix](https://pmc.ncbi.nlm.nih.gov/articles/PMC1360284/). *Nucleic Acids Research* 34, 564–574 (2006)；另见 [Forces maintaining the DNA double helix](https://pmc.ncbi.nlm.nih.gov/articles/PMC7351851/)。不同实验与理论分解对相对贡献的表述并不完全相同，正文因此保留配对、堆积、水化和离子效应的协同性，不给出脱离条件的单一百分比。
+[^dna-duplex-stability]: Yakovchuk, P., Protozanova, E. & Frank-Kamenetskii, M. D. [Base-stacking and base-pairing contributions into thermal stability of the DNA double helix](https://pmc.ncbi.nlm.nih.gov/articles/PMC1360284/). *Nucleic Acids Research* 34, 564–574 (2006)；另见 [Forces maintaining the DNA double helix](https://pmc.ncbi.nlm.nih.gov/articles/PMC7351851/)。不同实验与理论分解对相对贡献的表述并不完全相同，配对、堆积、水化和离子效应须作为相互耦合且依赖条件的贡献解释。
 [^pdb-dna]: RCSB PDB-101, [DNA](https://pdb101.rcsb.org/motm/23)。页面以实测结构比较 A、B、Z 型 DNA，并展示蛋白质通过大沟、小沟和局部构象读取双链表面。
 [^rna-tertiary-motifs]: Tamura, M. et al. [SCOR: Structural Classification of RNA, version 2.0](https://pmc.ncbi.nlm.nih.gov/articles/PMC308814/). *Nucleic Acids Research* 32, D182–D184 (2004)。该资源把同轴螺旋、亲吻发夹、A-minor、假结和核糖拉链等归入可比较的三级相互作用类别。
 [^rnase-p]: Guerrier-Takada, C. et al. [The RNA moiety of ribonuclease P is the catalytic subunit of the enzyme](https://pubmed.ncbi.nlm.nih.gov/6197186/). *Cell* 35, 849–857 (1983)。这项体外重构实验确立 RNA 的催化能力；细胞内 RNase P 的组成和蛋白依赖性随生物类群而异。
@@ -172,8 +172,8 @@ $A_{260}/A_{280}$ 约 1.8 常被视作较纯 DNA、约 2.0 常被视作较纯 RN
 [^archaeal-chromatin]: Mattiroli, F. et al. [Structure of histone-based chromatin in Archaea](https://pmc.ncbi.nlm.nih.gov/articles/PMC5747315/). *Science* 357, 609–612 (2017)。该研究显示特定古菌组蛋白可形成长度可变的 DNA—组蛋白超螺旋，不能把所有古菌染色质等同于固定真核核小体。
 [^dna-denaturation]: Thomas, R. [The denaturation of DNA](https://pubmed.ncbi.nlm.nih.gov/8276281/). *Gene* 135, 77–79 (1993)。文章以 260 nm 增色效应区分二级结构破坏与磷酸二酯主链水解。
 [^nucleic-acid-purity]: Wilfinger, W. W., Mackey, K. & Chomczynski, P. [Effect of pH and ionic strength on the spectrophotometric assessment of nucleic acid purity](https://pubmed.ncbi.nlm.nih.gov/9067025/). *BioTechniques* 22, 474–481 (1997)。
-[^nucleic-acid-chemical-stability]: Le Vay, K. et al. [Nucleic Acid Catalysis under Potential Prebiotic Conditions](https://pmc.ncbi.nlm.nih.gov/articles/PMC7003795/). *Chemistry—An Asian Journal* 15, 214–230 (2020)。该综述比较 2′-OH 参与的 RNA 碱催化断裂与 DNA 在酸性条件下的去嘌呤风险；正文不把其中的前生物环境推论当作细胞内机制。
+[^nucleic-acid-chemical-stability]: Le Vay, K. et al. [Nucleic Acid Catalysis under Potential Prebiotic Conditions](https://pmc.ncbi.nlm.nih.gov/articles/PMC7003795/). *Chemistry—An Asian Journal* 15, 214–230 (2020)。该综述比较 2′-OH 参与的 RNA 碱催化断裂与 DNA 在酸性条件下的去嘌呤风险；其中前生物环境推论不能直接外推为细胞内机制。
 [^nearest-neighbor]: SantaLucia, J. Jr. [A unified view of polymer, dumbbell, and oligonucleotide DNA nearest-neighbor thermodynamics](https://pmc.ncbi.nlm.nih.gov/articles/PMC19045/). *Proceedings of the National Academy of Sciences USA* 95, 1460–1465 (1998)。
 [^cot-analysis]: Britten, R. J. & Kohne, D. E. [Repeated sequences in DNA](https://pubmed.ncbi.nlm.nih.gov/4874239/). *Science* 161, 529–540 (1968)。$C_0t$ 动力学揭示重复序列组分，但其分辨率与解释范围不能替代现代序列测定。
 [^pna]: Nielsen, P. E. et al. [Sequence-selective recognition of DNA by strand displacement with a thymine-substituted polyamide](https://pubmed.ncbi.nlm.nih.gov/1962210/). *Science* 254, 1497–1500 (1991)。
-[^oligonucleotide-synthesis]: Ni, S. et al. [Chemical Modifications of Nucleic Acid Aptamers for Therapeutic Purposes](https://pmc.ncbi.nlm.nih.gov/articles/PMC5578073/). *International Journal of Molecular Sciences* 18, 1683 (2017)；技术演进与长度限制另见 [Large-Scale de novo Oligonucleotide Synthesis for Whole-Genome Synthesis and Data Storage](https://pmc.ncbi.nlm.nih.gov/articles/PMC8258115/)。两篇综述均说明固相亚磷酰胺循环及 3′→5′ 化学延伸；可实现长度取决于单体、平台、纯化和用途，正文不设置通用硬阈值。
+[^oligonucleotide-synthesis]: Ni, S. et al. [Chemical Modifications of Nucleic Acid Aptamers for Therapeutic Purposes](https://pmc.ncbi.nlm.nih.gov/articles/PMC5578073/). *International Journal of Molecular Sciences* 18, 1683 (2017)；技术演进与长度限制另见 [Large-Scale de novo Oligonucleotide Synthesis for Whole-Genome Synthesis and Data Storage](https://pmc.ncbi.nlm.nih.gov/articles/PMC8258115/)。两篇综述均说明固相亚磷酰胺循环及 3′→5′ 化学延伸；可实现长度取决于单体、平台、纯化和用途，没有通用硬阈值。
