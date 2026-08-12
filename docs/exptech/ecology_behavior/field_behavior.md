@@ -2,7 +2,7 @@
 
 动物行为实验从可重复的观察开始。视频能够保存姿态、动作顺序、个体间距离和事件发生的时刻，却不会自动告诉我们动物感受到了什么、某一动作具有什么功能，或者行为是否由遗传决定。研究者需要先把片段转写成可以计数的行为，再借助对照、重复和适当的操纵，在多种解释之间作出区分。本页以 18 组经典教学录像为线索，保留其中从形态、动作到行为类型的辨认路径，同时把每个案例改写为本科实验课可以讨论的证据问题。
 
-这些案例分别通向行为学的不同层次。行为谱和取样方法可参见[行为研究方法与解释框架](../../zoology/behavior/methods_framework.md#question-to-ethogram)，先天行为与释放机制见[定向、先天行为与动机](../../zoology/behavior/orientation_innate_motivation.md#fixed-action-pattern)，学习、迁徙、求偶和社会行为的理论背景则分别见[学习、认知与文化](../../zoology/behavior/learning_cognition.md)、[生物节律、迁移与导航](../../zoology/behavior/rhythms_migration_navigation.md)、[求偶、婚配与亲代抚育](../../zoology/behavior/reproduction_parental.md)和[社会组织与群体生活](../../zoology/behavior/social_organization.md)。
+这些案例分别通向行为学的不同层次。行为谱和取样方法可参见[行为研究方法与解释框架](../../zoology/behavior/methods_framework.md#question-to-ethogram)，先天行为与释放机制见[定向、先天行为与动机](../../zoology/behavior/orientation_innate_motivation.md#fixed-action-pattern)，学习、迁徙、求偶和社会行为的理论背景则分别见[学习、认知与文化](../../zoology/behavior/learning_cognition.md)、[生物节律、迁移与导航](../../zoology/behavior/rhythms_migration_navigation.md)、[求偶、交配与婚配制度](../../zoology/behavior/reproduction_parental.md)和[社会组织与群体生活](../../zoology/behavior/social_organization.md)。
 
 ## 从视频片段到行为证据 { #from-video-to-evidence }
 

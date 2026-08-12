@@ -77,7 +77,7 @@ Tm 是特定盐、离子、浓度和邻近碱基热力学模型下的熔解温�
 
 Primer 5 保存了商业图形化设计、酶切与 pattern 分析的方法史；Primer3 及其衍生界面提供可记录参数的通用设计。NCBI Primer-BLAST 在 Primer3 候选上使用所选数据库检查潜在扩增产物，物种和数据库选择决定“特异”的含义。[^primer-blast] 对 qPCR 还应实测效率、动态范围、产物单一性和阴性对照，并按 MIQE 记录寡核苷酸序列与反应条件。[^miqe] 引物名称可编码物种、基因、方向和用途，但机器可读表还应保存序列、批次、模板登录号、坐标、软件版本和参数。
 
-具体配液、扩增条件、克隆和产物验证属于[扩增、克隆与基因编辑](../exptech/biochem_molecular/amplification_cloning.md)；本页关注如何由序列提出可检验的设计。
+具体配液与扩增条件属于[核酸扩增与定量](../exptech/biochem_molecular/amplification_cloning.md)，载体组装和构建确认属于[分子克隆与构建设计](../exptech/biochem_molecular/molecular_cloning.md)；本页关注如何由序列提出可检验的设计。
 
 ## RNA 二级结构与构象集合 { #rna-secondary-structure }
 

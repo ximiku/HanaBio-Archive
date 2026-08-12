@@ -86,7 +86,7 @@
 
 ### C4 叶片的空间分工 { #c4-leaf-anatomy }
 
-许多 C4 植物的维管束周围形成发达的束鞘，外侧叶肉细胞与束鞘细胞构成 Kranz 结构。叶肉先以 PEP 羧化酶固定无机碳，四碳酸进入束鞘后脱羧，使 Rubisco 周围维持较高二氧化碳浓度。C4 光合在不同被子植物谱系中多次独立出现，Kranz 结构的层数、细胞排列、叶绿体位置和基粒发育随 NADP-ME、NAD-ME、PEPCK 路径及谱系而变；少数盐生植物甚至在单个细胞内部完成空间分隔。束鞘叶绿体基粒和淀粉状态因而需要结合谱系、酶定位和气体交换证据诊断。完整反应与环境效应见[光合作用与呼吸作用](../physiology/photosynthesis_respiration.md)。[^c4-anatomy-diversity]
+许多 C4 植物的维管束周围形成发达的束鞘，外侧叶肉细胞与束鞘细胞构成 Kranz 结构。叶肉先以 PEP 羧化酶固定无机碳，四碳酸进入束鞘后脱羧，使 Rubisco 周围维持较高二氧化碳浓度。C4 光合在不同被子植物谱系中多次独立出现，Kranz 结构的层数、细胞排列、叶绿体位置和基粒发育随 NADP-ME、NAD-ME、PEPCK 路径及谱系而变；少数盐生植物甚至在单个细胞内部完成空间分隔。束鞘叶绿体基粒和淀粉状态因而需要结合谱系、酶定位和气体交换证据诊断。完整反应与环境效应见[光合作用](../physiology/photosynthesis_respiration.md)。[^c4-anatomy-diversity]
 
 ## 结构可塑性连接光、水与温度环境 { #leaf-structural-plasticity }
 

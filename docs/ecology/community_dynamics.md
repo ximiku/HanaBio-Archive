@@ -1,8 +1,8 @@
-# 群落动态、演替与分类
+# 群落动态与演替
 
 群落并非一张静止的物种名录。环境梯度改变物种能够到达和维持种群的范围，竞争、捕食与互利改变其实际分布，干扰在时间和空间中反复重组斑块；更长时间尺度上，定殖、局地灭绝与物种形成共同塑造岛屿和区域物种库。所谓“稳定群落”也始终带着尺度和指标：物种组成相近、总生物量波动较小、受扰后恢复较快，彼此并不等价。
 
-经典植物群落学为这些变化留下了极细致的形态、演替系列和分类语言。本页沿这条学习路径展开，完整保留梯度假说、缝隙演替、水生与旱生演替系列、顶极学说、帚石楠周期、植被分类学派和传统排序法；现代证据用于说明它们的条件、可检验预测和后续发展，而不把旧方法从知识史中抹去。
+经典植物群落学为这些变化留下了极细致的形态与演替系列。本页沿这条学习路径展开，完整保留梯度假说、缝隙演替、水生与旱生演替系列、顶极学说和帚石楠周期；现代证据用于说明它们的条件、可检验预测和后续发展。植被单位怎样命名、分类并用多变量方法展示连续梯度，见[植被分类与群落排序](vegetation_classification_ordination.md)。
 
 ## 环境梯度上的物种分布 { #community-gradients }
 
@@ -184,50 +184,11 @@ Egler 的**初始植物区系组成说**提出，许多后期种在演替开始�
 
 传统材料把这种过程称为非定向周期变化或波动，强调终点会重新提供起点。更准确地说，单个斑块有可辨认的阶段方向，景观整体则因各斑块不同步而保持循环镶嵌；更新是否真正闭合，还取决于火、放牧、年龄结构和外来物种。长期样地可以检验阶段转移概率，而一次空间调查只能提出循环假说。
 
-## 植被分类保存不同学派的观察传统 { #vegetation-classification }
-
-生物群系或生物带是在大陆尺度上由气候、生活型和优势结构概括的一组区域生态系统，其中包含许多具体植物群落和动物群落。植被分类则把实际样地按外貌、结构、优势种、完整植物区系、环境或动态关系归入可重复单位。分类是在连续自然上建立工作语言，不同目的会选择不同判据。
-
-20 世纪植物群落学形成了若干具有地区背景的传统。osm.bio 对“四大学派”的整理保留了北欧、法瑞、苏联和英美学派的中文知识线索，页面也明确提醒部分材料较旧；这里用现代命名规范和中国植被分类研究交叉核验后，保留其方法史。[^osm-schools]
-
-| 学派或传统 | 主要观察与分类路径 | 历史贡献与现代承接 |
-| --- | --- | --- |
-| 北欧学派 | 重视群落外貌、层次、优势种和恒有度，以各层优势种相同的基群丛（sociation）为细单位 | 发展了结构和恒有度比较；后来与其他欧洲传统交流融合，基群丛不再是通用国际基本单位 |
-| 法瑞学派 | 以样方的完整植物区系组成、特征种和区别种归并群落，群丛（association）为基本单位 | 形成 Braun–Blanquet 植物社会学和严密的群落表比较；现代语法分类仍强调诊断种组合与有效发表 |
-| 苏联／俄国学派 | 自上而下结合优势种、层次、地带性、群系和群丛，关注镶嵌、动态与生物地理群落 | 深刻影响中国植被分类、植被区划和“建群种”语言；同层、异层优势种的符号命名也由此进入旧教材 |
-| 英美学派 | 重视演替、顶极、生态外貌、样方数量化和梯度分析；旧教材亦称动态分类或“双轨制分类”，后期发展连续体与排序 | 从动态分类走向定量群落生态，连接永久样地、实验、梯度分析和多变量统计 |
-
-### 中国植被分类的等级与命名 { #china-vcs }
-
-传统《中国植被》系统常按植被型组—植被型—植被亚型—群系组—群系—亚群系—群丛组—群丛—亚群丛排列。高等级较强调生活型、外貌与生态条件，群系以优势种或共建种相近为核心，群丛是详细样地分类的基本单位。原素材中的针叶林、草地和荒漠属于植被型组例，夏绿阔叶林和温带草原为植被型例，草甸草原、典型草原和荒漠草原为植被亚型例，大针茅群系则展示以建群种命名的中等级单位。
-
-2020 年修订方案仍承接《中国植被》的原则，但把体系整理为上、中、下三级八个单位：植被型组、植被型、植被亚型；群系组、群系、亚群系；群丛组、群丛。它同时讨论外貌结构、群落生态特征和种类组成的分层判据，说明“中国学派”也在持续修订，并非一套冻结不变的九级表。[^china-vcs]
-
-传统中文记录常在群丛名前冠 `Ass.`，把各层建群种、优势种或生态指示种依次排列：同层共优种用 `+`，不同层用 `-`，有些资料以 `>` 标记上层优势但非建群的关系，草本层共优种也常用 `+` 连接；群系通常取建群种名称。这些符号应连同原调查规范解读，因为不同年代和地区用法会变。法瑞植物社会学采用拉丁化 syntaxon 名称及国际命名法规，要求有效发表、样方记录和命名模式，不能把它与上述中文 `Ass.` 符号法视为同一套语法。[^phytosociology-code]
-
-法瑞学派的“归并法”通常从样方×物种表出发，按完整区系组成、诊断种和恒有度反复比较归并；英美传统较强调外貌、环境、演替关系和数量排序。今天的分类可同时利用聚类、指示种、环境数据和专家审查，但任何自动分组都需回到野外样地、诊断特征和可重复判据。
-
-## 排序把高维群落数据投影为梯度 { #ordination }
-
-群落排序把样地或物种之间的多维差异投影到少数坐标轴，使连续变化、离群样地和环境关联可被观察。Q 分析以样地为实体、以物种为属性，比较样地间组成；R 分析以物种为实体，比较物种在样地中的分布。两者是观察同一物种×样地矩阵的不同方向。
-
-直接梯度分析预先使用温度、土壤、水深等环境变量排列或约束群落；间接梯度分析只从群落组成矩阵提取主要变化轴，随后再把轴与环境变量相关。直接方法检验“这些已测环境量能解释多少组成变化”，间接方法探索“组成中最强的变化是什么”；相关轴仍不自动证明因果。
-
-| 方法 | 数据几何与主要用途 | 常见限制 |
-| --- | --- | --- |
-| 极点排序／Bray–Curtis 排序 | 选择差异较大的端点样地，以群落相异度把其他样地投影到轴上；是早期连续体研究的重要手工方法 | 结果依赖端点和相异度选择，复杂弯曲梯度难以由少数极点表示[^bray-curtis] |
-| 主成分分析（PCA） | 在欧氏距离和近似线性响应下寻找方差最大的正交轴，适合经恰当转换的连续丰度数据 | 双零值和长梯度会产生误导，原始稀疏物种矩阵常不满足其几何假设 |
-| 对应分析（CA）与无倾向对应分析（DCA） | 适合沿较长梯度呈单峰响应的物种资料；DCA 通过去趋势和重标度减轻 CA 的拱形效应 | 去趋势是算法修正，可能改变局部几何；结果仍依赖稀有种、数据转换与参数[^dca] |
-| 非度量多维尺度（NMDS） | 尽量保持样地相异度的等级次序，可配合 Bray–Curtis 等生态距离 | 需要检查应力、多个随机初值和维数，坐标轴本身没有固定环境意义 |
-| RDA、CCA 与 dbRDA | 分别在近似线性、单峰或任意适当距离下，用环境变量约束组成变化 | 变量共线、空间自相关和过度拟合会夸大解释；置换检验须符合取样设计 |
-
-排序图是模型的低维投影。靠得近表示在所选数据转换和距离下较相似，箭头方向或轴相关提示候选梯度；它不能单独证明一个环境因子造成物种替代。可靠解释应报告原始矩阵处理、距离或模型、轴解释量或 NMDS 应力、置换方案，并用自然史、实验或时间序列核验机制。
-
 ## 从动态描述走向可检验的群落历史 { #community-dynamics-inference }
 
 群落动态研究先确定状态变量和尺度，再区分周期、波动、扰动响应、方向性演替与状态转换。缝隙中的一次物种更换、整个景观的斑块循环、岛屿上的迁入—灭绝平衡和百年植被演替属于不同层次，不能由同一个“稳定”或“顶极”词概括。
 
-经典形态与分类路径仍提供不可替代的野外读图能力：看到层次、优势种、基质、年龄结构、残体和斑块边界，才能提出演替与维持机制。永久样地、操纵实验、年代序列、遥感和多变量排序则检验这些解释。现代证据的作用，是让水生演替、顶极、抽彩竞争或四大学派的观察进入明确的条件和证据链，而不是用一组新名词替代长期积累的群落学知识。
+经典形态路径仍提供不可替代的野外读图能力：看到层次、优势种、基质、年龄结构、残体和斑块边界，才能提出演替与维持机制。永久样地、操纵实验、年代序列和遥感则检验这些解释；植被分类与多变量排序为跨样地比较提供另一条方法路径。现代证据的作用，是让水生演替、顶极或抽彩竞争进入明确的条件和证据链，而不是用一组新名词替代长期积累的群落学知识。
 
 ## 参考资料与延伸阅读 { #references }
 
@@ -235,8 +196,6 @@ Egler 的**初始植物区系组成说**提出，许多后期种在演替开始�
 - Glenn-Lewin, D. C., Peet, R. K. & Veblen, T. T. (eds.). *Plant Succession: Theory and Prediction*. Chapman & Hall, 1992.
 - Pickett, S. T. A., Collins, S. L. & Armesto, J. J. “Models, mechanisms and pathways of succession.” *Botanical Review* 53 (1987): 335–371.
 - MacArthur, R. H. & Wilson, E. O. *The Theory of Island Biogeography*. Princeton University Press, 1967.
-- Legendre, P. & Legendre, L. *Numerical Ecology*. 3rd English ed. Elsevier, 2012.
-- Peet, R. K. & Roberts, D. W. “Classification of natural and semi-natural vegetation.” In *Vegetation Ecology*, 2nd ed. Wiley-Blackwell, 2013.
 
 [^whittaker-gradient]: Whittaker, R. H. “Gradient analysis of vegetation.” *Biological Reviews* 42 (1967): 207–264. [doi:10.1111/j.1469-185X.1967.tb01419.x](https://doi.org/10.1111/j.1469-185X.1967.tb01419.x)。
 [^guild]: Root, R. B. “The niche exploitation pattern of the blue-gray gnatcatcher.” *Ecological Monographs* 37 (1967): 317–350. [doi:10.2307/1942327](https://doi.org/10.2307/1942327)。
@@ -253,8 +212,3 @@ Egler 的**初始植物区系组成说**提出，许多后期种在演替开始�
 [^cowles]: Cowles, H. C. “The ecological relations of the vegetation on the sand dunes of Lake Michigan. Part I.” *Botanical Gazette* 27 (1899): 95–117. [doi:10.1086/327796](https://doi.org/10.1086/327796)；[Biodiversity Heritage Library 原文](https://www.biodiversitylibrary.org/part/222940)。
 [^succession-models]: Connell, J. H. & Slatyer, R. O. “Mechanisms of succession in natural communities and their role in community stability and organization.” *The American Naturalist* 111 (1977): 1119–1144. [doi:10.1086/283241](https://doi.org/10.1086/283241)；Egler, F. E. “Vegetation science concepts I. Initial floristic composition, a factor in old-field vegetation development.” *Vegetatio* 4 (1954): 412–417. [doi:10.1007/BF00275587](https://doi.org/10.1007/BF00275587)。
 [^watt]: Watt, A. S. “Pattern and process in the plant community.” *Journal of Ecology* 35 (1947): 1–22. [原文](https://rngr.net/publications/assisted-migration/pattern-and-process-in-the-plant-community)。
-[^osm-schools]: osm&bio. “植物群落学四大学派”，页面最后编辑于 2026 年 1 月 20 日；本文仅据其保留学派史线索，并以现代植被分类研究交叉核验。[原页面](https://osm.bio/%E6%A4%8D%E7%89%A9%E7%BE%A4%E8%90%BD%E5%AD%A6%E5%9B%9B%E5%A4%A7%E5%AD%A6%E6%B4%BE)。
-[^china-vcs]: 郭柯等．“中国植被分类系统修订方案”．*植物生态学报* 44 (2020): 111–127。[doi:10.17521/cjpe.2019.0271](https://doi.org/10.17521/cjpe.2019.0271)；宋永昌、严恩荣、宋坤．“中国植被分类系统的修订”．*植物生态学报* 41 (2017): 269–278。[doi:10.17521/cjpe.2016.0255](https://doi.org/10.17521/cjpe.2016.0255)。
-[^phytosociology-code]: Theurillat, J.-P. et al. “International Code of Phytosociological Nomenclature. 4th edition.” *Applied Vegetation Science* 24 (2021): e12491. [doi:10.1111/avsc.12491](https://doi.org/10.1111/avsc.12491)。
-[^bray-curtis]: Bray, J. R. & Curtis, J. T. “An ordination of the upland forest communities of southern Wisconsin.” *Ecological Monographs* 27 (1957): 325–349. [doi:10.2307/1942268](https://doi.org/10.2307/1942268)。
-[^dca]: Hill, M. O. & Gauch, H. G. Jr. “Detrended correspondence analysis: an improved ordination technique.” *Vegetatio* 42 (1980): 47–58. [doi:10.1007/BF00048870](https://doi.org/10.1007/BF00048870)；ter Braak, C. J. F. “Canonical correspondence analysis: a new eigenvector technique for multivariate direct gradient analysis.” *Ecology* 67 (1986): 1167–1179. [doi:10.2307/1938672](https://doi.org/10.2307/1938672)。

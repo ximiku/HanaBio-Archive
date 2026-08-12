@@ -94,7 +94,7 @@ RNase H 在负链延伸时降解大部分 RNA，却保留合适的多聚嘌呤�
 
 乙型肝炎病毒等 hepadnavirus 以 DNA 为病毒颗粒基因组，却先转录 pregenomic RNA，再在装配中的核衣壳内逆转录回 DNA；其 RT 的 terminal protein 结构域以自身 Tyr 作为负链 DNA 的蛋白引物。逆转座元件和 group II intron 以 RNA 中间体移动，其中的 RT 常与核酸内切、靶位点引发或 RNA 剪接结构耦联。它们的插入步骤属于重组与转座，而 RNA 模板合成 DNA 的共同化学留在本页。[^hepadnavirus-reverse-transcription]
 
-细菌 retron 编码非编码 RNA 与 RT，产生 RNA–DNA 分支结构 msDNA；鸟苷的 2′-OH 可充当引发端。早期资料把 retron 简写成“提高突变率”，现代遗传与结构研究显示许多 retron 是在噬菌体感染时触发的防御系统，但不同家族的效应器、触发信号和生态功能并不相同。实验室用 RT 制备 cDNA、RT–qPCR 和转录组文库的操作与偏倚见[扩增、克隆与基因编辑](../exptech/biochem_molecular/amplification_cloning.md)。[^retron-defense]
+细菌 retron 编码非编码 RNA 与 RT，产生 RNA–DNA 分支结构 msDNA；鸟苷的 2′-OH 可充当引发端。早期资料把 retron 简写成“提高突变率”，现代遗传与结构研究显示许多 retron 是在噬菌体感染时触发的防御系统，但不同家族的效应器、触发信号和生态功能并不相同。实验室用 RT 制备 cDNA 和 RT–qPCR 的操作与偏倚见[核酸扩增与定量](../exptech/biochem_molecular/amplification_cloning.md)，转录组文库构建见[分子克隆与构建设计](../exptech/biochem_molecular/molecular_cloning.md#library-construction)。[^retron-defense]
 
 ## 参考资料与延伸阅读 { #references }
 

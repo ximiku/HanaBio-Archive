@@ -2,7 +2,7 @@
 
 从组织、细胞或培养物中得到一管“核酸”，实际经历了样本保存、裂解、核酸酶失活、杂质分离、目标分子富集和重新溶解。每一步都可能选择性保留某些分子而损失另一些分子：较难裂解的细胞会在群落样品中被低估，短 RNA 可能穿过不合适的固相，长 DNA 会被剪切，闭环质粒、线性 DNA 和开环分子又会以不同方式通过纯化和电泳。提取因此不是分析之前的一段中性准备，而是测量链的第一部分。
 
-本页保留质粒碱裂解、植物 CTAB、动物组织柱法、酸性胍盐—酚 RNA 提取和手工琼脂糖凝胶的经典学习路径，并把浓度、纯度、完整性、抑制物和用途适配连成质量证据链。核酸的吸收、沉淀、黏度与拓扑基础见[核酸与核苷酸](../../biochem/nucleic_acid.md#solution-properties)，PCR、克隆和基因编辑的下游操作由[扩增、克隆与基因编辑](amplification_cloning.md)承接，测序产生的读段质量则见[测序技术、读段与质量控制](../../bioinfo/sequencing.md#molecule-to-read)。
+本页保留质粒碱裂解、植物 CTAB、动物组织柱法、酸性胍盐—酚 RNA 提取和手工琼脂糖凝胶的经典学习路径，并把浓度、纯度、完整性、抑制物和用途适配连成质量证据链。核酸的吸收、沉淀、黏度与拓扑基础见[核酸与核苷酸](../../biochem/nucleic_acid.md#solution-properties)，下游操作分别见[核酸扩增与定量](amplification_cloning.md)、[分子克隆与构建设计](molecular_cloning.md)和[基因组编辑与验证](genome_editing.md)，测序产生的读段质量则见[测序技术、读段与质量控制](../../bioinfo/sequencing.md#molecule-to-read)。
 
 ## 先定义要回收的分子 { #sample-to-molecule }
 

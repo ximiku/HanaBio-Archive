@@ -1,6 +1,8 @@
-# 移植免疫与肿瘤免疫
+# 移植免疫
 
-移植与肿瘤把免疫识别置于两个近乎相反的情境：移植物是遗传上不同却生理正常的组织，肿瘤则来自自身细胞，却在突变、异常分化和持续选择中改变了可被免疫系统读取的分子。两者共同说明，免疫系统并不直接判断一个对象是否“有害”，而是读取细胞表面的肽—HLA 复合物、应激配体、抗体包被以及组织中的炎症和抑制信号。识别是否发生、效应能否进入组织以及靶细胞能否被清除，是彼此相连但并不等同的层次。
+移植把遗传上不同却生理正常的组织放入受者体内。免疫系统不直接判断移植物是否能够恢复器官功能，而是读取供受者的 HLA、次要组织相容性抗原、预存抗体以及缺血—再灌注造成的组织背景。识别、效应和移植物功能之间因而存在多个可被检测与干预的中间层。
+
+本页从同种异体识别进入实体器官排斥、选择性移植耐受和造血干细胞移植后的移植物抗宿主病。由自身细胞演化而来的异质性靶物另见[肿瘤免疫](tumor_immunity.md)，具体免疫抑制与免疫重建方案的证据评价见[免疫干预](immune_interventions.md)。
 
 ## 同种异体抗原的识别 { #allorecognition }
 
@@ -30,32 +32,6 @@
 
 输血相关 GVHD（TA-GVHD）来自血液制品中的活供者 T 细胞在受者体内存活、扩增并攻击皮肤、肠道、肝脏和骨髓。免疫功能低下者难以排斥这些细胞；供者对某个 HLA 单倍型纯合、受者同时携带该单倍型和另一单倍型时，还会形成单向匹配：受者可能难以识别供者细胞，供者 T 细胞却能识别受者没有共享的 HLA。因此，亲属供血或某些 HLA 高度匹配情境尤其危险。它并非由受者“细胞因子风暴”把供者 T 细胞普遍激活所致。对有指征的细胞性血液成分进行辐照，可阻断供者淋巴细胞增殖；白细胞去除能减少淋巴细胞数量，却不能可靠替代辐照。[^ta-gvhd]
 
-## 肿瘤抗原的形成与呈递 { #tumor-antigens }
-
-肿瘤免疫应答从可识别抗原开始。体细胞突变、插入缺失和基因融合可产生正常组织没有的新抗原；致癌病毒蛋白也可提供外源序列。分化抗原、癌—睾丸抗原和异常高表达的自身蛋白虽不是肿瘤独有，却能在表达范围或免疫耐受程度改变时成为靶标。抗原是否真正可见，还取决于蛋白表达、蛋白酶体加工、肽转运、HLA 结合以及肿瘤细胞表面呈递，而不只取决于基因组中是否存在某个突变。[^tumor-antigen-presentation]
-
-死亡或受损肿瘤细胞释放的抗原可被树突状细胞摄取并交叉呈递，在引流淋巴结中启动 CD8 T 细胞；CD4 T 细胞帮助、炎症信号和共刺激决定克隆扩增与记忆质量。效应 CD8 T 细胞进入肿瘤后，经 TCR 识别相应肽—HLA I 复合物，再以穿孔素—颗粒酶或死亡受体通路定向杀伤。自然杀伤（NK）细胞可感知 HLA I 降低和应激配体，抗体还可通过 Fc 受体募集 NK 细胞或髓系细胞。各类效应共同构成抗肿瘤网络，但只有 NK 或 CTL 的名单并不能说明某个肿瘤为何被控制或逃逸。
-
-## 免疫监视与免疫编辑 { #cancer-immunoediting }
-
-免疫监视描述免疫系统识别并限制新生转化细胞的能力。免疫编辑进一步指出，免疫压力在清除肿瘤细胞的同时也会选择肿瘤组成。其经典框架包括清除、平衡和逃逸：早期免疫效应可清除部分转化细胞；未被清除的群体在持续压力下维持低水平生长或休眠，同时积累遗传和表观遗传差异；最终，抗原性较低、呈递受损或更能塑造抑制环境的亚克隆可能扩增为临床可见肿瘤。[^cancer-immunoediting]
-
-这三个过程是解释选择关系的模型，不是每名患者都能按时间清楚划分的临床分期。一个肿瘤内部可以同时存在被 T 细胞识别的区域、暂时受控的亚克隆和已经逃逸的细胞群。免疫原性强的亚克隆被优先删除后，残余群体的抗原异质性会增加复发和治疗耐药的机会；相反，多个肿瘤细胞共同携带且稳定呈递的克隆性抗原，更有机会成为广泛而持久的靶点。
-
-## 肿瘤免疫逃逸与微环境 { #tumor-immune-evasion }
-
-肿瘤可在识别链条的不同位置降低可见度。抗原丢失、$β_2$-微球蛋白或 HLA I 缺陷、TAP 与其他加工装载环节异常，会减少 T 细胞可读的肽—HLA 复合物；干扰素信号缺陷可削弱抗原呈递和生长抑制；死亡通路改变则让已经被识别的细胞仍能抵抗杀伤。HLA I 降低可能增加 NK 细胞压力，但肿瘤还可改变应激配体、分泌抑制因子或招募抑制细胞，使一种逃逸代价被另一层机制补偿。
-
-效应细胞能否到达靶区同样关键。异常血管、致密基质和趋化因子格局可把 T 细胞排除在肿瘤巢外；缺氧、酸化、腺苷和营养竞争会降低其持续效应。调节性 T 细胞、髓源抑制性细胞及部分肿瘤相关巨噬细胞可通过 TGF-$β$、IL-10、精氨酸代谢或抑制性配体等途径限制反应。髓系细胞状态具有连续性和组织依赖性，不能把所有巨噬细胞都视为固定的促肿瘤谱系。[^tumor-microenvironment]
-
-## 免疫检查点与治疗反应边界 { #checkpoint-blockade }
-
-免疫检查点是维持耐受、限制组织损伤和终止应答的重要制动。CTLA-4 主要在 T 细胞启动和共刺激竞争阶段限制扩增；PD-1 与其配体则常在持续抗原刺激的外周组织中降低 TCR 和共刺激信号。肿瘤细胞及其周围髓系细胞可以表达 PD-L1，其中一部分由 IFN-$γ$ 诱导，形成对正在发生的免疫攻击的适应性抵抗，另一部分可由肿瘤内在通路驱动。两条检查点作用范围有重叠，并非一个只在淋巴结、另一个只在肿瘤内的绝对分工。[^checkpoint-mechanisms]
-
-抗 CTLA-4、抗 PD-1 或抗 PD-L1 抗体解除抑制信号，可以恢复或扩增已有的抗肿瘤 T 细胞反应，却不会凭空制造肿瘤抗原，也不能自动修复 HLA 呈递缺陷或让 T 细胞穿过所有组织屏障。抗原克隆性、呈递能力、T 细胞浸润、干扰素反应和微环境共同决定疗效；单一 PD-L1 染色、突变负荷或淋巴细胞数量都不是跨肿瘤通用的充分预测指标。解除耐受还可能使皮肤、肠道、内分泌器官等出现免疫相关不良事件，这正反映抗肿瘤效应与自身耐受共享调节节点。
-
-靶向抗体、双特异性分子、肿瘤疫苗、工程化 T 细胞和细胞因子治疗可分别改变抗原识别、效应细胞接近或信号强度。选择何种策略取决于肿瘤抗原是否足够特异、细胞能否到达病灶以及正常组织是否表达相同靶标；具体检测和干预证据在[免疫检测与免疫干预](immunological_methods_therapy.md)中继续展开。
-
 ## 参考资料与延伸阅读 { #references }
 
 - Murphy K, Weaver C, Berg LJ. *Janeway's Immunobiology*. 10th ed. W. W. Norton, 2022.
@@ -64,9 +40,6 @@
 - Demetris AJ, Bellamy C, Hübscher SG, et al. 2016 comprehensive update of the Banff Working Group on liver allograft pathology. *American Journal of Transplantation*. 2016;16:2816–2835.
 - Zeiser R, Blazar BR. Acute graft-versus-host disease — biologic process, prevention, and therapy. *New England Journal of Medicine*. 2017;377:2167–2179.
 - Jagasia MH, Greinix HT, Arora M, et al. National Institutes of Health Consensus Development Project on Criteria for Clinical Trials in Chronic Graft-versus-Host Disease: I. The 2014 Diagnosis and Staging Working Group report. *Biology of Blood and Marrow Transplantation*. 2015;21:389–401.e1.
-- O'Donnell JS, Teng MWL, Smyth MJ. Cancer immunoediting and resistance to T cell-based immunotherapy. *Nature Reviews Clinical Oncology*. 2019;16:151–167.
-- Jhunjhunwala S, Hammer C, Delamarre L. Antigen presentation in cancer: insights into tumour immunogenicity and immune evasion. *Nature Reviews Cancer*. 2021;21:298–312.
-- Wei SC, Duffy CR, Allison JP. Fundamental mechanisms of immune checkpoint blockade therapy. *Cancer Discovery*. 2018;8:1069–1086.
 
 [^allorecognition-pathways]: 直接、间接与半直接同种异体识别及供者细胞外囊泡转移肽—MHC 的机制，参见 Marino 等 [Activation and regulation of alloreactive T cell immunity in solid organ transplantation](https://www.nature.com/articles/s41581-022-00600-0)；HLA 的遗传与肽呈递基础见[抗原加工、呈递与 MHC](immuno_apc_mhc.md#hla-genetics)。
 [^rejection-classification]: T 细胞介导与抗体介导排斥可以在急性和慢性损伤中交叠；抗体、内皮和补体机制参见 Colvin、Smith [Antibody-mediated organ-allograft rejection](https://www.nature.com/articles/nri1702)，现代活检分类的证据组合参见 [Banff 2022 Kidney Meeting Report](https://pmc.ncbi.nlm.nih.gov/articles/PMC11135910/)。本页据此纠正 S02 lines 970–972 把急性固定为细胞免疫、慢性与超急性固定为体液免疫的旧二分。
@@ -74,7 +47,3 @@
 [^gvhd]: 异基因造血干细胞移植后组织损伤、供者 T 细胞启动、效应与调节的连续过程，参见 Zeiser、Blazar [Acute graft-versus-host disease](https://pubmed.ncbi.nlm.nih.gov/29171820/)。
 [^gvhd-classification]: NIH 2014 诊断与分期共识明确以临床特征而非移植后时间区分急、慢性 GVHD，并规定慢性 GVHD 的诊断性表现与辅助证据要求；第 100 天后的持续、复发或晚发急性表现仍属于急性类别，见 Jagasia 等[工作组报告](https://pubmed.ncbi.nlm.nih.gov/25529383/)。
 [^ta-gvhd]: TA-GVHD 的供者淋巴细胞来源、HLA 共享风险和预防证据，参见 Kopolovic 等 [A systematic review of transfusion-associated graft-versus-host disease](https://ashpublications.org/blood/article/126/3/406/34566/A-systematic-review-of-transfusion-associated)及 British Society for Haematology [Guidelines on the use of irradiated blood components](https://onlinelibrary.wiley.com/doi/10.1111/bjh.17015)。本页据此纠正 S02 line 964 将受者细胞因子风暴作为启动原因的表述。
-[^tumor-antigen-presentation]: 肿瘤抗原来源、加工呈递与抗原逃逸，参见 Jhunjhunwala、Hammer 和 Delamarre [Antigen presentation in cancer](https://www.nature.com/articles/s41568-021-00339-z)。
-[^cancer-immunoediting]: 清除、平衡与逃逸的免疫编辑框架，参见 O'Donnell、Teng 和 Smyth [Cancer immunoediting and resistance to T cell-based immunotherapy](https://www.nature.com/articles/s41571-018-0142-8)；肿瘤内异质性与选择的更新综述见 Roerden、Spranger [Cancer immune evasion, immunoediting and intratumour heterogeneity](https://www.nature.com/articles/s41577-024-01111-8)。
-[^tumor-microenvironment]: 肿瘤免疫排斥、抑制性细胞与代谢环境的组织机制，参见 Binnewies 等 [Understanding the tumor immune microenvironment](https://www.nature.com/articles/s41591-018-0014-x)。
-[^checkpoint-mechanisms]: CTLA-4、PD-1／PD-L1 的信号位置、适应性抵抗及治疗反应边界，参见 Wei、Duffy 和 Allison [Fundamental mechanisms of immune checkpoint blockade therapy](https://aacrjournals.org/cancerdiscovery/article/8/9/1069/10253/Fundamental-Mechanisms-of-Immune-Checkpoint)及 Waldman、Fritz、Lenardo [A guide to cancer immunotherapy](https://www.nature.com/articles/s41577-020-0306-5)。

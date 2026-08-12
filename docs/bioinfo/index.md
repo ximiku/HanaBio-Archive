@@ -42,7 +42,7 @@
 
 ## 分子组学 { #expression-protein-structure }
 
-[转录组、单细胞与空间组学](transcriptomics.md)从 qPCR、微阵列、EST 和 SAGE 的经典测量进入 bulk RNA-seq、转录本结构、RNA—蛋白结合、单细胞／单核和空间数据。样本重复、文库组成、归一化、簇与轨迹、空间邻近各自回答不同问题；细胞图谱和差异表达仍须回到取样位置、细胞状态和观测模型解释。
+[转录组测量与 RNA-seq 分析](transcriptomics.md)从 qPCR、微阵列、EST 和 SAGE 的经典测量进入 bulk RNA-seq、转录本结构与 RNA—蛋白结合，沿群体样本、表达矩阵和统计比较建立分析链。[单细胞与空间转录组学](single_cell_spatial_transcriptomics.md)则以细胞或捕获位置为观测单位，讨论 barcode、UMI、稀疏矩阵、簇与轨迹、空间域和细胞邻域。两页共同强调取样位置、文库组成、归一化和观测模型怎样限制表达结论。
 
 [蛋白质组与质谱数据分析](proteomics.md)连接二维电泳、蛋白芯片、酵母双杂交与现代 LC—MS/MS，追踪峰、谱图、肽段、蛋白质和蛋白质形态（proteoform）之间的推断层级。DDA、DIA、靶向采集、目标—诱饵、FDR、蛋白推断、定量、修饰定位、互作与空间蛋白质组，都必须区分“没有证据”与“证据表明不存在”。
 

@@ -6,7 +6,7 @@
 
 ## 从样品分子到读段 { #molecule-to-read }
 
-一次测序首先定义“哪些分子有机会被看到”。基因组 DNA 可以随机片段化，外显子组需要先富集目标区，常规 RNA-seq 往往先完成 RNA 选择和逆转录，扩增子、RAD-seq、CLIP-seq 与亚硫酸氢盐测序又各自选择特定分子或改变其化学状态。提取、片段化、末端修复、连接和扩增属于实验流程，具体操作见[核酸提取、质量与电泳](../exptech/biochem_molecular/nucleic_acid.md)及[扩增、克隆与基因编辑](../exptech/biochem_molecular/amplification_cloning.md)；生物信息学在接收数据时仍须知道这些步骤，因为文库选择已经决定了可观察范围和偏倚来源。
+一次测序首先定义“哪些分子有机会被看到”。基因组 DNA 可以随机片段化，外显子组需要先富集目标区，常规 RNA-seq 往往先完成 RNA 选择和逆转录，扩增子、RAD-seq、CLIP-seq 与亚硫酸氢盐测序又各自选择特定分子或改变其化学状态。提取、片段化、接头连接和扩增属于实验流程，具体操作见[核酸提取、质量与电泳](../exptech/biochem_molecular/nucleic_acid.md)、[分子克隆与构建设计](../exptech/biochem_molecular/molecular_cloning.md#library-construction)及[核酸扩增与定量](../exptech/biochem_molecular/amplification_cloning.md)；生物信息学在接收数据时仍须知道这些步骤，因为文库选择已经决定了可观察范围和偏倚来源。
 
 接头（adapter）是连接在插入片段两端的已知序列。它可以提供测序引物结合位点、固定或捕获分子的结构，也可以携带 index／barcode，把同一次运行中的多个文库重新分回样本。barcode 只是一个广义名称；平台 index、细胞 barcode、空间 barcode 和分子 barcode 的对象并不相同。唯一分子标识符（UMI）在扩增前标记原始分子，使后续分析能够区分“同一分子的扩增副本”和“碰巧具有相同序列的独立分子”，但 UMI 自身也会发生测序错误和碰撞，需要按实验设计校正。
 
@@ -138,7 +138,7 @@ RNA-seq 的读段数和“覆盖”还受到表达量、转录本长度、RNA �
 
 - 全外显子组测序通过杂交捕获富集设计区，未捕获的调控区和结构变异断点通常不在主要观察范围内；目标区域命中率（on-target rate）、靶区深度广度与捕获均一性比总读段数更直接。外显子组后续变异解释进入[基因组组装、变异与比较分析](genome_analysis.md)。
 - RAD-seq、GBS 和其他简化基因组策略在限制性位点附近取样。酶切位点变异、甲基化敏感性、片段大小选择和等位基因 dropout 都会改变可见位点集合；它们适合在既定物种和群体设计中获得分散标记，不能等同低深度全基因组测序。
-- RNA-seq 的 poly(A) 选择、rRNA 去除、链特异建库、片段化和逆转录决定哪些 RNA 及其哪一段进入读段。CLIP-seq／iCLIP／PAR-CLIP 把交联、免疫沉淀与特定截断或突变信号叠加到读段上，RIP-seq 则缺少同样的共价交联边界；信号必须结合输入、抗体和实验对照解释。定量、剪接和单细胞分析见[转录组、单细胞与空间组学](transcriptomics.md)。
+- RNA-seq 的 poly(A) 选择、rRNA 去除、链特异建库、片段化和逆转录决定哪些 RNA 及其哪一段进入读段。CLIP-seq／iCLIP／PAR-CLIP 把交联、免疫沉淀与特定截断或突变信号叠加到读段上，RIP-seq 则缺少同样的共价交联边界；信号必须结合输入、抗体和实验对照解释。群体样本的定量与剪接见[转录组测量与 RNA-seq 分析](transcriptomics.md)，细胞条形码、UMI 与空间坐标的分析见[单细胞与空间转录组学](single_cell_spatial_transcriptomics.md)。
 - 亚硫酸氢盐测序把未修饰胞嘧啶转化后再测序，导致碱基组成和比对空间改变，常规 WGBS 又通常不能区分 5mC 与 5hmC。纳米孔和 SMRT 的 native DNA 信号提供另一类修饰证据，但依赖平台模型。相关分析和三维染色质文库见[表观基因组与三维基因组分析](epigenome_3d.md)。
 - 扩增子和靶向 panel 只观察引物或探针定义的区域。引物结合位点变异、扩增效率、污染和 chimera 会造成等位基因缺失或伪变异；极高名义深度不能补回从未成功扩增的等位基因。
 

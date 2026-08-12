@@ -14,7 +14,7 @@
 
 到达叶片的水维持细胞膨压、参与光系统 II 的水氧化并补偿蒸腾损失；矿质营养参与色素、酶、电子载体和渗透调节。CO$_2$ 经气孔和叶肉扩散到叶绿体后，光反应建立 ATP 与还原力，Calvin–Benson 循环把无机碳接入三碳糖磷酸池。光呼吸、线粒体呼吸和各区室之间的代谢物交换又持续改写净碳收益，所以叶片的气体交换只是全株碳预算的一个观测窗口。
 
-[光合作用与呼吸作用](photosynthesis_respiration.md)从色素与两光系统展开到碳同化、C$_4$ 与 CAM 浓缩机制、气体交换、植物线粒体支路、冠层产量和收获后呼吸。阅读这一页时，可以把气孔看作水分页与碳代谢页的共同边界，把叶绿体输出的三碳糖磷酸看作叶片内淀粉形成、胞质蔗糖合成以及后续长距离输出的分流点。[^photosynthesis-carbon-balance]
+[光合作用](photosynthesis_respiration.md)从色素与两光系统展开到碳同化、C$_4$ 与 CAM 浓缩机制和气体交换。阅读这一页时，可以把气孔看作水分页与碳代谢页的共同边界，把叶绿体输出的三碳糖磷酸看作叶片内淀粉形成、胞质蔗糖合成以及后续长距离输出的分流点。[植物呼吸与全株碳收支](plant_respiration.md)则从糖酵解和三羧酸循环进入植物线粒体的替代电子支路，再把器官呼吸、昼夜碳预算、冠层产量和收获后代谢接回整株生长。[^photosynthesis-carbon-balance]
 
 ## 韧皮部把同化产物配置给生长与贮藏 { #phloem-source-sink }
 
@@ -30,7 +30,7 @@
 
 ## 阅读次序与逆向追踪 { #reading-paths }
 
-顺着物质进入和配置的方向，可以依次阅读[植物水分关系与木质部运输](water_minerals.md)、[矿质营养、氮同化与根际互作](mineral_nutrition.md)、[光合作用与呼吸作用](photosynthesis_respiration.md)、[韧皮部运输与源—库关系](transport_metabolism.md)和[次生代谢与化学生态](secondary_metabolism.md)。这条路线先建立水和离子的输入条件，再进入叶片能量与碳转换，随后跟踪同化物的全株分配及其在生态功能上的进一步分流。
+顺着物质进入和配置的方向，可以依次阅读[植物水分关系与木质部运输](water_minerals.md)、[矿质营养、氮同化与根际互作](mineral_nutrition.md)、[光合作用](photosynthesis_respiration.md)、[植物呼吸与全株碳收支](plant_respiration.md)、[韧皮部运输与源—库关系](transport_metabolism.md)和[次生代谢与化学生态](secondary_metabolism.md)。这条路线先建立水和离子的输入条件，再进入叶片能量与碳转换，随后核算同化物的氧化消耗、全株分配及其在生态功能上的进一步分流。
 
 也可以从可观察的现象逆向追踪机制。萎蔫、叶温升高、吐水或木质部导度下降，可从水势、气孔和水力安全回查；叶片黄化、生长迟缓、盐害或施肥反应，需要同时检查元素移动性、根际有效态、跨膜运输与组织再分配；光抑制、异常补偿点、昼夜碳亏缺或收获后呼吸变化，应返回光反应、碳同化和呼吸网络。果实灌浆不足、贮藏器官形成受限或源叶糖积累，通常要沿装载—运输—卸载—库强逐段定位；色素、气味、苦味、毒性或食草后的化学变化，则应从前体供给、合成区室、储存位置和诱导条件共同判断。
 
@@ -42,6 +42,6 @@
 
 ## 参考资料与延伸阅读 { #references }
 
-[^whole-plant-flux]: OpenStax, [*Biology 2e*: Plant Form and Physiology](https://openstax.org/books/biology-2e/pages/30-introduction)，提供从植物体结构进入水分、矿质营养、光合和长距离运输的教材框架；各机制的现代研究证据见五个正文页的专题参考资料。
+[^whole-plant-flux]: OpenStax, [*Biology 2e*: Plant Form and Physiology](https://openstax.org/books/biology-2e/pages/30-introduction)，提供从植物体结构进入水分、矿质营养、光合、呼吸和长距离运输的教材框架；各机制的现代研究证据见六个正文页的专题参考资料。
 [^photosynthesis-carbon-balance]: Murchie, E. H. et al. (2013), [Improving Photosynthesis](https://pmc.ncbi.nlm.nih.gov/articles/PMC3729760/)；White, A. C. et al. (2016), [Source–Sink Relationships in Crop Plants and Their Influence on Yield Development and Nutritional Quality](https://pmc.ncbi.nlm.nih.gov/articles/PMC6306447/)。单叶碳同化、冠层截光、库容量和产量形成需要在不同尺度上共同解释。
 [^source-sink]: Braun, D. M. (2022), [Phloem Loading and Unloading of Sucrose: What a Long, Strange Trip from Source to Sink](https://doi.org/10.1146/annurev-arplant-070721-083240), *Annual Review of Plant Biology* 73: 553–584。

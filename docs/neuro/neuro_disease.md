@@ -132,5 +132,5 @@ Apraxia 指在基本肌力、感觉和理解不足以解释时，习得性目的
 [^myasthenic-syndromes]: Wiendl et al., [Guideline for the management of myasthenic syndromes](https://pubmed.ncbi.nlm.nih.gov/38152089/), *Therapeutic Advances in Neurological Disorders*, 2023。抗体分型反映接头靶点差异，但抗体阴性不能排除所有免疫性重症肌无力。
 [^clostridial-toxins]: CDC *Emerging Infectious Diseases* 对[肉毒与破伤风神经毒素](https://wwwnc.cdc.gov/eid/article/5/2/99-0206_article)的机制综述；不同血清型裂解的 SNARE 成分并不完全相同。
 [^who-cns-tumours]: [WHO Classification of Tumours: Central Nervous System Tumours](https://publications.iarc.who.int/601), 5th ed., IARC, 2021。
-[^network-deficits]: Corbetta & Shulman, [Spatial neglect and attention networks](https://pubmed.ncbi.nlm.nih.gov/21382524/), *Annual Review of Neuroscience*, 2011；语言双流与病灶网络背景见[脑状态与高级功能](neuro_high.md#language-networks)。
+[^network-deficits]: Corbetta & Shulman, [Spatial neglect and attention networks](https://pubmed.ncbi.nlm.nih.gov/21382524/), *Annual Review of Neuroscience*, 2011；语言双流与病灶网络背景见[学习、记忆与语言认知](learning_memory_language.md#language-networks)。
 [^narcolepsy]: Bassetti et al., [Narcolepsy—clinical spectrum, aetiopathophysiology, diagnosis and treatment](https://pubmed.ncbi.nlm.nih.gov/31324898/), *Nature Reviews Neurology*, 2019；Liblau et al. 综述[免疫发病证据](https://pubmed.ncbi.nlm.nih.gov/37400646/)，其中 HLA 与免疫关联强，完整致病链仍有待确定。

@@ -68,7 +68,7 @@
 
 | 知识路径 | 主要问题 | 专题页面 |
 | --- | --- | --- |
-| 证据与深时 | 进化思想怎样形成，生命怎样进入可演化状态，化石与形态如何恢复深时历史 | [进化思想、证据与研究方法](history_evidence.md)；[生命起源与早期演化](origin_history.md)；[化石记录、生命史与宏观进化](deep_time_macroevolution.md) |
+| 证据与深时 | 进化思想怎样形成，生命怎样进入可演化状态，化石记录如何恢复地质生命史，谱系过程怎样形成宏演化格局 | [进化思想、证据与研究方法](history_evidence.md)；[生命起源与早期演化](origin_history.md)；[化石记录与地质生命史](deep_time_macroevolution.md)；[宏观进化的格局与机制](macroevolution_patterns.md) |
 | 群体过程与选择 | 变异、漂变、迁移与选择怎样改变群体，适应怎样受到历史与发育约束 | [遗传变异与群体进化过程](variation_population.md)；[自然选择、适应与约束](selection_adaptation.md) |
 | 系统发育与物种形成 | 怎样读取和推断谱系，谱系边界怎样在隔离、选择和基因流中建立 | [系统发育与生物分类](phylogenetics.md)；[物种概念与物种形成](speciation.md) |
 | 表型、发育与基因组进化 | 结构怎样经发育形成并响应选择，序列、基因家族、染色体和基因组怎样改变 | [表型、发育与数量性状进化](quantitative_evolution.md)；[分子、基因与基因组进化](molecular_genome_evolution.md) |

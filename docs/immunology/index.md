@@ -66,7 +66,7 @@
 
 ### 免疫稳态、疾病与干预 { #homeostasis-disease-path }
 
-[免疫耐受与自身免疫](tolerance_autoimmunity.md)从中央和外周耐受进入遗传易感、环境触发与靶器官损伤。[超敏反应与过敏](hypersensitivity_allergy.md)按效应机制解释四型超敏反应，并区分致敏、检测阳性和临床疾病；[免疫缺陷](immunodeficiency.md)依感染谱和免疫层级组织原发与继发缺陷。[移植免疫与肿瘤免疫](transplant_tumor_immunity.md)比较同种异体识别、免疫逃逸及治疗阈值，[免疫检测与免疫干预](immunological_methods_therapy.md)则把样本、分析性能、功能证据和临床决策连成可审查的证据链。
+[免疫耐受与自身免疫](tolerance_autoimmunity.md)从中央和外周耐受进入遗传易感、环境触发与靶器官损伤。[超敏反应与过敏](hypersensitivity_allergy.md)按效应机制解释四型超敏反应，并区分致敏、检测阳性和临床疾病；[免疫缺陷](immunodeficiency.md)依感染谱和免疫层级组织原发与继发缺陷。[移植免疫](transplant_tumor_immunity.md)说明同种异体识别、排斥与移植物抗宿主病，[肿瘤免疫](tumor_immunity.md)追踪抗原可见性、免疫编辑与逃逸；[免疫检测](immunological_methods_therapy.md)把样本、试剂、读出和分析性能连成测量链，[免疫干预](immune_interventions.md)则从靶点与效应机制进入治疗窗和临床证据。
 
 ## 参考资料与延伸阅读 { #references }
 

@@ -112,4 +112,4 @@ mRNA 疫苗通常以脂质纳米颗粒等系统将转录本送入胞质，由宿
 [^efficacy-effectiveness]: 临床试验效力、真实世界效果与免疫保护的区分，参见世界卫生组织 [Vaccine efficacy, effectiveness and protection](https://www.who.int/news-room/feature-stories/detail/vaccine-efficacy-effectiveness-and-protection)。
 [^correlates-protection]: 保护相关指标、替代终点及其验证边界，参见世界卫生组织 [Correlates of vaccine-induced protection: methods and implications](https://www.who.int/publications/i/item/WHO-IVB-13.01)。
 [^population-immunity]: 群体免疫是传播减少带来的间接保护，参见世界卫生组织 [Coronavirus disease: Herd immunity, lockdowns and COVID-19](https://www.who.int/news-room/questions-and-answers/item/herd-immunity-lockdowns-and-COVID-19)；该页面已停止更新，本页仅采用其中不依赖特定变异株的概念定义。
-[^passive-immunization]: 主动免疫的延迟记忆与被动抗体的即时、有限保护，以及异种抗血清风险，参见 NCBI Bookshelf [Vaccines: Past, Present, and Future](https://www.ncbi.nlm.nih.gov/books/NBK216821/)；抗体工程和治疗应用留待[免疫检测与免疫干预](immunological_methods_therapy.md)。
+[^passive-immunization]: 主动免疫的延迟记忆与被动抗体的即时、有限保护，以及异种抗血清风险，参见 NCBI Bookshelf [Vaccines: Past, Present, and Future](https://www.ncbi.nlm.nih.gov/books/NBK216821/)；抗体工程和治疗应用留待[免疫干预](immune_interventions.md)。

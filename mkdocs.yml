@@ -158,7 +158,8 @@ nav:
       - 微生物营养与代谢: micro/nutrition_metabolism.md
       - 微生物生长与控制: micro/growth_control.md
     - 微生物遗传与菌种改良: micro/microbial_genetics.md
-    - 微生物生态与应用: micro/ecology_applications.md
+    - 微生物生态学: micro/ecology_applications.md
+    - 应用微生物学: micro/applied_microbiology.md
     - 微生物感染与宿主防御: micro/infection_immunity.md
 
   - 神经:
@@ -175,10 +176,14 @@ nav:
     - 感觉系统:
       - 感觉编码与躯体感觉: neuro/neuro_sensation.md
       - 视觉系统: neuro/neuro_vision.md
-      - 听觉、前庭与化学感觉: neuro/neuro_auditory_vestibular.md
+      - 听觉系统: neuro/neuro_auditory_vestibular.md
+      - 前庭系统: neuro/vestibular_system.md
+      - 味觉、嗅觉与风味: neuro/taste_olfaction.md
     - 躯体运动调控: neuro/neuro_movement.md
     - 自主神经与内脏调控: neuro/neuro_autonomic.md
-    - 脑状态与高级功能: neuro/neuro_high.md
+    - 脑状态与睡眠: neuro/neuro_high.md
+    - 动机、奖赏与情绪: neuro/motivation_emotion.md
+    - 学习、记忆与语言认知: neuro/learning_memory_language.md
     - 神经系统疾病: neuro/neuro_disease.md
 
   - 免疫:
@@ -197,8 +202,10 @@ nav:
     - 免疫耐受与自身免疫: immunology/tolerance_autoimmunity.md
     - 超敏反应与过敏: immunology/hypersensitivity_allergy.md
     - 免疫缺陷: immunology/immunodeficiency.md
-    - 移植免疫与肿瘤免疫: immunology/transplant_tumor_immunity.md
-    - 免疫检测与免疫干预: immunology/immunological_methods_therapy.md
+    - 移植免疫: immunology/transplant_tumor_immunity.md
+    - 肿瘤免疫: immunology/tumor_immunity.md
+    - 免疫检测: immunology/immunological_methods_therapy.md
+    - 免疫干预: immunology/immune_interventions.md
 
   - 发育:
     - 发育生物学: development/index.md
@@ -250,7 +257,8 @@ nav:
         - 资源与物质代谢: botany/physiology/index.md
         - 植物水分关系与木质部运输: botany/physiology/water_minerals.md
         - 矿质营养、氮同化与根际互作: botany/physiology/mineral_nutrition.md
-        - 光合作用与呼吸作用: botany/physiology/photosynthesis_respiration.md
+        - 光合作用: botany/physiology/photosynthesis_respiration.md
+        - 植物呼吸与全株碳收支: botany/physiology/plant_respiration.md
         - 韧皮部运输与源—库关系: botany/physiology/transport_metabolism.md
         - 次生代谢与化学生态: botany/physiology/secondary_metabolism.md
       - 生长调控与环境响应:
@@ -321,7 +329,8 @@ nav:
       - 行为的遗传、生理与发育: zoology/behavior/genes_physiology_development.md
       - 行为演化与比较行为学: zoology/behavior/behavior_evolution.md
       - 取食、防御与争斗行为: zoology/behavior/foraging_defense.md
-      - 求偶、婚配与亲代抚育: zoology/behavior/reproduction_parental.md
+      - 求偶、交配与婚配制度: zoology/behavior/reproduction_parental.md
+      - 亲代照料与亲子关系: zoology/behavior/parental_care.md
       - 社会组织与群体生活: zoology/behavior/social_organization.md
       - 动物通讯: zoology/behavior/communication.md
       - 生物节律、迁移与导航: zoology/behavior/rhythms_migration_navigation.md
@@ -340,7 +349,8 @@ nav:
       - 竞争、生态位与共存: ecology/species_interactions.md
       - 捕食、寄生与互利: ecology/consumer_resource_interactions.md
       - 群落组成、结构与多样性: ecology/community_ecology.md
-      - 群落动态、演替与分类: ecology/community_dynamics.md
+      - 群落动态与演替: ecology/community_dynamics.md
+      - 植被分类与群落排序: ecology/vegetation_classification_ordination.md
     - 生态系统与全球变化:
       - 生态系统结构与食物网: ecology/ecosystem_ecology.md
       - 生产力、分解与能量流: ecology/production_decomposition.md
@@ -360,7 +370,8 @@ nav:
     - 证据与深时:
       - 进化思想、证据与研究方法: evolution/history_evidence.md
       - 生命起源与早期演化: evolution/origin_history.md
-      - 化石记录、生命史与宏观进化: evolution/deep_time_macroevolution.md
+      - 化石记录与地质生命史: evolution/deep_time_macroevolution.md
+      - 宏观进化的格局与机制: evolution/macroevolution_patterns.md
     - 群体过程与选择:
       - 遗传变异与群体进化过程: evolution/variation_population.md
       - 自然选择、适应与约束: evolution/selection_adaptation.md
@@ -390,7 +401,8 @@ nav:
       - 基因组组装、变异与比较分析: bioinfo/genome_analysis.md
       - 表观基因组与三维基因组分析: bioinfo/epigenome_3d.md
     - 分子组学:
-      - 转录组、单细胞与空间组学: bioinfo/transcriptomics.md
+      - 转录组测量与 RNA-seq 分析: bioinfo/transcriptomics.md
+      - 单细胞与空间转录组学: bioinfo/single_cell_spatial_transcriptomics.md
       - 蛋白质组与质谱数据分析: bioinfo/proteomics.md
       - 代谢组学: bioinfo/multiomics_metabolomics.md
       - 多组学整合: bioinfo/multiomics_integration.md
@@ -435,7 +447,9 @@ nav:
       - 蛋白质电泳、印迹与免疫检测: exptech/biochem_molecular/protein_detection.md
       - 核酸提取、质量与电泳: exptech/biochem_molecular/nucleic_acid.md
       - 核酸杂交、探针与分子互作检测: exptech/biochem_molecular/molecular_probes.md
-      - 扩增、克隆与基因编辑: exptech/biochem_molecular/amplification_cloning.md
+      - 核酸扩增与定量: exptech/biochem_molecular/amplification_cloning.md
+      - 分子克隆与构建设计: exptech/biochem_molecular/molecular_cloning.md
+      - 基因组编辑与验证: exptech/biochem_molecular/genome_editing.md
     - 细胞生物学实验:
       - exptech/cell/index.md
       - 组织学染色与细胞成像: exptech/cell/histology_imaging.md

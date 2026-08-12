@@ -93,7 +93,7 @@
 | --- | --- | --- |
 | 个体与环境 | 环境怎样成为实际暴露，生物又怎样调节并改造环境 | [生态因子、耐受与适应](organism_environment.md)；[光、温度、风与火](energy_environment.md)；[水、土壤、气候与营养](water_soil_climate.md) |
 | 种群与生活史 | 个体怎样被计数，数量为何变化，资源怎样在一生中分配 | [种群数量、取样与统计](population_ecology.md)；[种群增长、调节与空间动态](population_dynamics.md)；[生活史生态学](life_history.md) |
-| 种间关系与群落 | 物种怎样竞争、消费、互利、共存并随干扰和历史重组 | [竞争、生态位与共存](species_interactions.md)；[捕食、寄生与互利](consumer_resource_interactions.md)；[群落组成、结构与多样性](community_ecology.md)；[群落动态、演替与分类](community_dynamics.md) |
+| 种间关系与群落 | 物种怎样竞争、消费、互利、共存并随干扰和历史重组，调查资料又怎样形成可比较的类型与梯度 | [竞争、生态位与共存](species_interactions.md)；[捕食、寄生与互利](consumer_resource_interactions.md)；[群落组成、结构与多样性](community_ecology.md)；[群落动态与演替](community_dynamics.md)；[植被分类与群落排序](vegetation_classification_ordination.md) |
 | 生态系统与全球生态 | 食物网、生产、分解和元素循环怎样跨越群落与环境 | [生态系统结构与食物网](ecosystem_ecology.md)；[生产力、分解与能量流](production_decomposition.md)；[生物地球化学循环](biogeochemical_cycles.md)；[生物群系与全球变化](biomes_global_change.md)；[保护与恢复生态学](conservation_ecology.md) |
 | 行为生态学 | 个体怎样在信息、风险、资源和社会利益中形成行为规则 | [行为生态学总览](behavioral_ecology/index.md)；[最优化理论与取食生态](behavioral_ecology/foraging_optimality.md)；[栖息地、领域与捕食关系](behavioral_ecology/habitat_predation.md)；[性选择与繁殖策略](behavioral_ecology/sexual_selection.md)；[社会生活、合作与利他](behavioral_ecology/social_cooperation.md)；[冲突、博弈与通讯](behavioral_ecology/conflict_communication.md) |
 

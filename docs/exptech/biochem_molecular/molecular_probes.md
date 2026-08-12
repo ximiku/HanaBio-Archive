@@ -2,7 +2,7 @@
 
 核酸实验中的“识别”有两条相互关联的路径。一条利用互补碱基配对，让带有标记的核酸探针找到样品中的靶序列；另一条把蛋白与核酸的结合、染色质片段的空间邻近或随机序列库中少数分子的选择优势转成可以分离和计数的信号。两条路径都依赖特异性，却回答不同问题：杂交阳性说明样品中存在能在给定条件下与探针配对的序列，迁移变化说明复合物改变了分子的物理行为，免疫富集说明目标抗体回收了相应复合物，近距离连接则记录群体中片段靠近并被捕获的频率。
 
-本页沿着经典实验次序保留 Southern、Northern、菌落与噬菌斑杂交、EMSA、DNase I 足迹、DGGE、TGGE、SSCP 和 DHPLC，并把 ChIP、RIP、CLIP、3C、ATAC 与 SELEX 接到同一条证据链上。核酸样品制备和凝胶基础见[核酸提取、质量与电泳](nucleic_acid.md)，微阵列、CLIP 和三维基因组的计算分析分别见[转录组、单细胞与空间组学](../../bioinfo/transcriptomics.md)和[表观基因组与三维基因组分析](../../bioinfo/epigenome_3d.md)。
+本页沿着经典实验次序保留 Southern、Northern、菌落与噬菌斑杂交、EMSA、DNase I 足迹、DGGE、TGGE、SSCP 和 DHPLC，并把 ChIP、RIP、CLIP、3C、ATAC 与 SELEX 接到同一条证据链上。核酸样品制备和凝胶基础见[核酸提取、质量与电泳](nucleic_acid.md)，微阵列、CLIP 和三维基因组的计算分析分别见[转录组测量与 RNA-seq 分析](../../bioinfo/transcriptomics.md)和[表观基因组与三维基因组分析](../../bioinfo/epigenome_3d.md)。
 
 ## 实验问题与证据层级 { #measurement-question }
 

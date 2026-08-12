@@ -108,7 +108,7 @@ Fisher 原理从频率依赖出发：若一种性别稀少，投向该性别的�
 
 偏好还可利用感官系统原有的响应倾向。雌性 túngara 蛙的内耳对复合叫声频率成分敏感，播放实验表明这种感官结构使加入 chuck 的雄性叫声更有吸引力；这支持**感官偏向**或感官利用，但要证明偏好先于信号演化，还需近缘种系统发育比较。[^sensory-bias] 另一类**追逐式性选择**模型强调性冲突：信号先提高对异性的刺激，接受方因交配成本演化抵抗，双方发生拮抗协同演化。它提供了夸张信号的一条路径，并不把所有偏好都解释为受骗。[^chase-away]
 
-性选择是自然选择中由交配与受精成功差异构成的部分。它可以与存活选择方向相反，也可以通过筛除遗传负荷促进群体适应；某些性状提高携带者交配成功的同时，会增加配偶损伤或降低种群增长。个体、配偶和种群层面的结果须分别测量，不能把性选择一概写成有利于物种或一概有害于种群。配偶竞争、交配后选择、婚配制度和亲代投入的完整行为链见[性选择与婚配制度](../ecology/behavioral_ecology/sexual_selection.md#sexual-selection)与[动物繁殖和亲代照料](../zoology/behavior/reproduction_parental.md#reproductive-sequence)。
+性选择是自然选择中由交配与受精成功差异构成的部分。它可以与存活选择方向相反，也可以通过筛除遗传负荷促进群体适应；某些性状提高携带者交配成功的同时，会增加配偶损伤或降低种群增长。个体、配偶和种群层面的结果须分别测量，不能把性选择一概写成有利于物种或一概有害于种群。配偶竞争、交配后选择和婚配制度的完整行为链见[性选择与婚配制度](../ecology/behavioral_ecology/sexual_selection.md#sexual-selection)与[求偶、交配与婚配制度](../zoology/behavior/reproduction_parental.md#reproductive-sequence)，跨类群的照料动作则见[亲代照料与亲子关系](../zoology/behavior/parental_care.md#parental-care-sequence)。
 
 ## 从相关模式到进化机制的证据链 { #life-history-sex-evidence }
 
