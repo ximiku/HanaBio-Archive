@@ -416,7 +416,8 @@ nav:
       - 多元统计、降维与分类: biostat/multivariate_models.md
     - 生存分析与纵向数据: biostat/survival_longitudinal.md
     - 贝叶斯推断与计算统计: biostat/bayesian_computational.md
-    - 因果推断与荟萃分析: biostat/causal_meta_analysis.md
+    - 因果推断: biostat/causal_meta_analysis.md
+    - 系统综述与荟萃分析: biostat/systematic_review_meta_analysis.md
 
   - 实验:
     - 生物实验技术: exptech/index.md
