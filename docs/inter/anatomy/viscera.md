@@ -1,8 +1,8 @@
-# 消化系统、呼吸系统与腹膜
+# 消化系统与腹膜
 
-内脏学首先处理的是连续性和毗邻关系。消化管从口腔延续到肛管，呼吸道从鼻腔延续到肺泡；肝、胰、唾液腺等实质器官虽不构成食物经过的管道，却以导管、血管和神经与消化管相连。胸膜与腹膜又把器官表面、体壁和潜在腔隙组织成可活动的空间。因而，学习内脏不能停留在器官名称上，而要同时回答四个问题：管腔通向哪里，壁由哪些层次组成，器官表面被何种浆膜覆盖，以及血管、神经和导管从何处进出。[^fipat-terminology]
+消化系统的结构主线从口腔延续到肛管，肝、胰和唾液腺等实质器官通过导管把分泌物送入管腔；腹膜则以浆膜反折、系膜和韧带把腹盆腔器官连接到体壁并划分可活动的间隙。学习时需要同时追踪管腔的连续性、器官壁层、门与导管，以及器官表面和后腹壁之间的腹膜关系。[^fipat-terminology]
 
-本页沿着食物和空气的路径展开，重点放在正常成人的形态、位置、分部和相互关系。分泌、吸收、通气与气体交换的调节机制分别见[消化系统生理](../../physiology/digestive/index.md)和[呼吸生理](../../physiology/respiratory/index.md)。
+本页以正常成人大体解剖为主，沿食物通路进入腹膜与腹腔空间。咽兼属消化与呼吸通道；鼻腔以下的气道、肺、胸膜与纵隔见[呼吸系统与胸腔](respiratory_thorax.md)。分泌与吸收机制见[消化系统生理](../../physiology/digestive/index.md)。
 
 ## 内脏学的观察框架 { #viscera-framework }
 
@@ -82,54 +82,6 @@
 
 主胰管自尾向头贯穿腺体并接纳小导管，常与胆总管共同开口；副胰管的发育与开口存在变异。胰腺外分泌腺泡与导管构成消化液通路，内分泌胰岛散在实质中。这里的头尾分部、导管和血管毗邻属于肉眼解剖，消化酶分泌和胰岛激素调节分别在消化生理与内分泌页面展开。
 
-## 呼吸道 { #respiratory-airway }
-
-呼吸系统可按位置分为上、下呼吸道，也可按功能分为传导部与呼吸部。前一种划分的界线在不同教材中可置于喉或气管，后一种划分较稳定：鼻腔至终末细支气管负责传导、调温、湿化和清除颗粒，呼吸性细支气管、肺泡管、肺泡囊和肺泡构成发生气体交换的呼吸部。咽同时属于消化与呼吸通道，喉既保持气道通畅，也参与发声和吞咽保护。
-
-### 鼻腔与鼻旁窦 { #nasal-cavity }
-
-鼻腔由鼻中隔分为左右两半，前经鼻孔与外界相通，后经鼻后孔通向鼻咽。外侧壁的上、中、下鼻甲向内卷曲，其下方分别形成上、中、下鼻道；鼻甲增加黏膜表面积并使气流形成复杂路径。鼻前庭覆有皮肤和鼻毛，向后转为呼吸区黏膜；鼻腔顶部和上鼻甲附近为嗅区。鼻中隔前下部血管吻合丰富，是常见鼻出血部位。
-
-额窦、上颌窦、筛窦和蝶窦是围绕鼻腔的含气腔。额窦、上颌窦和前、中筛窦多引流到中鼻道，后筛窦引流到上鼻道，蝶窦开口于蝶筛隐窝。窦口狭窄，黏膜肿胀可影响引流；上颌窦自然开口位于其内侧壁较高处，使直立位引流受窦口位置制约。鼻旁窦参与颅面骨的轻量化、声音共鸣和黏液纤毛清除，对吸入气体的处理是整个鼻腔—鼻咽系统共同完成的，不能归给某一个窦。
-
-### 喉 { #larynx }
-
-喉位于咽下部前方，上接舌骨和咽，下续气管。喉软骨支架包括不成对的甲状软骨、环状软骨和会厌软骨，以及成对的杓状、角状和楔状软骨。环状软骨是气道中唯一完整的软骨环；杓状软骨坐落在环状软骨板上，其转动和滑动改变声带突的位置。会厌在吞咽时随喉上提和舌根运动参与关闭喉口，但气道保护还依赖杓会厌襞、前庭襞、声襞和吞咽反射的协同，并非一块“盖子”独立完成。
-
-喉腔从喉口延续到环状软骨下缘。前庭襞位于上方，声襞位于下方，两声襞之间为声门裂；声襞及声门裂合称声门。喉内肌均为骨骼肌，通过改变杓状软骨位置和声带张力控制声门，其中环杓后肌是使声襞外展的主要肌。除环甲肌由喉上神经外支支配外，多数喉内肌由喉返神经支配；喉返神经与甲状腺、气管食管沟和主动脉弓或锁骨下动脉的毗邻，使声音变化成为相关区域损伤的重要线索。[^larynx]
-
-### 气管与支气管树 { #tracheobronchial-tree }
-
-气管自环状软骨下缘向下进入胸腔，在隆嵴处分为左右主支气管。气管壁的 C 形透明软骨环在后方缺口处由气管肌和纤维弹性组织连接，既保持管腔开放，也让后方食管在吞咽时扩张。黏膜纤毛把黏液和被捕获的颗粒向咽部运送；越向远端，软骨由环变为不规则软骨板，至细支气管消失，平滑肌的相对作用增大。
-
-右主支气管通常较短、较宽并更接近垂直方向，左主支气管较长并绕过心与主动脉相关结构。因此在许多成人体位下，吸入异物更常进入右侧，但落点还受年龄、体位、异物大小和吸气气流影响。主支气管进入肺门后分为叶支气管，再分为段支气管；此后反复分支为小支气管、细支气管和终末细支气管，进入呼吸性细支气管、肺泡管与肺泡囊。分支级次存在个体差异，解剖上的“树”是反复分叉的拓扑关系，而不是每个人都完全相同的编号图。[^respiratory-tract]
-
-## 肺、胸膜与纵隔 { #lungs-pleura-mediastinum }
-
-### 肺叶、肺门与肺段 { #lungs }
-
-左右肺位于胸膜囊内，肺尖越过第一肋进入颈根部，肺底贴膈；肋面凸向胸壁，纵隔面容纳肺门，膈面随膈穹隆下凹。右肺由斜裂和水平裂分为上、中、下三叶，左肺由斜裂分为上、下两叶；左上叶前下部的舌叶与心切迹围绕心脏形成特征性轮廓。肺叶边界在深呼吸和病变时仍由裂的位置确定，裂发育不全或副裂属于常见变异。
-
-肺门是纵隔面上各结构出入的区域，这些结构被胸膜包裹后共同组成肺根。肺根包括主支气管、肺动脉、上下肺静脉、支气管血管、淋巴管与淋巴结、自主神经纤维和结缔组织。肺动脉相对于主支气管通常在右侧偏前、左侧偏上，两条肺静脉多位于较前下方；实际标本应结合壁厚、管腔和分支方向辨认，而不是只背一个前后顺序。
-
-每一叶支气管继续分为段支气管。由一个段支气管及伴行肺动脉分支供应、外形近似锥体的肺组织称支气管肺段，段间结缔组织中的肺静脉支流常标志相邻段的边界。右肺常描述为 10 段，左肺因部分段融合可记为 8—10 段。肺段具有相对独立的通气和动脉供应，是影像定位与局部切除的实用单位，但段间仍有静脉、淋巴与实质连续性，不能理解为完全隔绝的小肺。[^lungs]
-
-肺循环由肺动脉把右心泵出的血送到肺泡毛细血管，再由肺静脉回到左心；支气管循环则由体循环动脉供应支气管壁、结缔组织和脏胸膜的一部分。两套血供在肺内存在吻合，部分支气管静脉血也可进入肺静脉。这种双重血供解释了肺根内同名“肺血管”和“支气管血管”承担不同任务，具体气体扩散与通气灌注关系见[肺通气与气体交换](../../physiology/respiratory/gas_exchange.md)。
-
-胎儿肺浮沉试验曾利用含气肺组织在水中浮起的现象，推断新生儿是否呼吸过。它保留了肺泡充气会改变组织整体密度这一直观联系，却不能单独证明活产：复苏通气或腐败产气可造成假阳性，呼吸短暂、肺透明膜病、肺炎或充气不均可造成假阴性。现代法医学把它放在产科资料、全身尸检、组织学、微生物学和影像证据中综合解释。[^lung-float-test]
-
-### 胸膜与胸膜隐窝 { #pleura }
-
-脏胸膜紧贴肺表面并深入叶间裂，在肺门处反折为壁胸膜。壁胸膜依所贴结构分为肋胸膜、膈胸膜、纵隔胸膜和颈胸膜。两层之间的胸膜腔是含少量浆液的潜在腔隙，左右胸膜腔彼此分开；液体润滑使肺表面可随胸壁与膈运动。脏胸膜的感觉主要随自主神经，壁胸膜由肋间神经和膈神经提供躯体感觉，因此壁胸膜刺激通常定位更清楚。
-
-壁胸膜在肋部转向膈部形成肋膈隐窝，在肋部转向纵隔部形成肋纵隔隐窝。安静呼吸时肺缘没有占满这些反折空间，深吸气时肺可进入隐窝，却通常仍不完全填满肋膈隐窝。肺根下方两层纵隔胸膜向下形成肺韧带，为肺根在呼吸与血管充盈时提供一定活动余地。胸膜反折、肺下缘和肋骨的体表投影并不重合，这是胸腔穿刺和影像判读必须同时考虑的层次关系。[^pleura-mediastinum]
-
-### 纵隔 { #mediastinum }
-
-纵隔是两侧纵隔胸膜之间的中央区域，上起胸廓上口，下至膈，前后位于胸骨与胸椎之间。经过胸骨角和第 T4—T5 椎间盘的水平面把它分为上纵隔和下纵隔；下纵隔再依心包的位置分为前、中、后纵隔。这些分区没有天然隔壁，却能稳定描述器官、筋膜间隙和病变扩展方向。
-
-上纵隔容纳胸腺或其遗迹、头臂静脉和上腔静脉上段、主动脉弓及其分支、气管、食管、胸导管以及迷走神经、膈神经和左喉返神经等。中纵隔以心包、心和大血管根部为核心，并含膈神经及心包膈血管；前纵隔是胸骨与心包之间较窄的结缔组织区；后纵隔位于心包后、胸椎前，容纳胸主动脉、食管、胸导管、奇静脉系统、迷走神经干和内脏神经。纵隔结构按前后关系层叠，横断影像中应从胸骨、心包和椎体三个固定参照向内辨认。
-
 ## 腹膜与腹腔空间 { #peritoneum }
 
 腹膜是连续的浆膜。壁腹膜衬覆腹盆壁内面，脏腹膜覆盖器官表面；两层相互反折，其间的腹膜腔只含少量润滑液。腹腔是膈以下、盆膈以上的整个解剖空间，内含腹膜腔、腹膜后间隙和器官本身，不能与腹膜腔互换。典型男性的腹膜腔为封闭腔；典型女性的腹膜腔可经输卵管、子宫和阴道与外界形成潜在交通，这是一项腔隙拓扑关系，并不改变本页的系统边界。[^peritoneum]
@@ -150,13 +102,13 @@
 
 ## 从标本到断层影像 { #viscera-observation }
 
-观察消化系统标本时，先沿口腔—咽—食管—胃—小肠—大肠确认管腔连续性，再寻找唾液腺、肝胆和胰的导管汇入点。随后比较各段壁厚、黏膜表面和浆膜覆盖，最后沿肠系膜与韧带追踪血管。观察呼吸系统时，先由鼻腔和喉进入气管，在隆嵴处分左右，再依主支气管、叶支气管和段支气管进入肺；肺门处同时分辨气道、肺动静脉和支气管血管。打开胸膜或腹膜前，应先在原位记录反折和隐窝，因为一旦切开并牵拉器官，原有空间关系很容易消失。
+观察消化系统标本时，先沿口腔—咽—食管—胃—小肠—大肠确认管腔连续性，再寻找唾液腺、肝胆和胰的导管汇入点。随后比较各段壁厚、黏膜表面和浆膜覆盖，最后沿肠系膜与韧带追踪血管。打开腹膜前，应先在原位记录反折、隐窝和器官活动度，因为一旦切开并牵拉器官，原有空间关系很容易消失。
 
-横断影像中，骨骼和大血管是稳定参照。胸部可先找椎体、胸骨、气管隆嵴、主动脉和心包，再辨肺门与纵隔分区；上腹部可先找脊柱、主动脉、下腔静脉和门静脉，再定位肝门、胰颈和肠系膜根。冠状面适合追踪膈、肺底、肝和结肠的上下关系，矢状面适合显示咽—喉、气管—食管以及直肠—肛管的前后曲度。把管腔连续、器官表面和固定参照结合起来，才能在标本、内镜和 CT 之间保持同一套三维解剖。
+上腹部横断影像可先找脊柱、主动脉、下腔静脉和门静脉，再定位肝门、胰颈和肠系膜根。冠状面适合追踪膈、肝和结肠的上下关系，矢状面适合显示咽—食管以及直肠—肛管的前后曲度。把管腔连续、器官表面和固定参照结合起来，才能在标本、内镜和 CT 之间保持同一套三维解剖。
 
 ## 参考资料与延伸阅读 { #references }
 
-[^fipat-terminology]: FIPAT. [*Terminologia Anatomica*, 2nd ed.](https://libraries.dal.ca/Fipat/ta2.html)。用于规范消化、呼吸、胸膜、纵隔与腹膜结构名称。
+[^fipat-terminology]: FIPAT. [*Terminologia Anatomica*, 2nd ed.](https://libraries.dal.ca/Fipat/ta2.html)。用于规范消化系统与腹膜结构名称。
 [^openstax-digestive-overview]: OpenStax. [Overview of the Digestive System](https://openstax.org/books/anatomy-and-physiology-2e/pages/23-1-overview-of-the-digestive-system). *Anatomy and Physiology 2e*。用于核对消化管连续性、共同壁层和腹膜联系。
 [^openstax-mouth]: OpenStax. [The Mouth, Pharynx, and Esophagus](https://openstax.org/books/anatomy-and-physiology-2e/pages/23-3-the-mouth-pharynx-and-esophagus). *Anatomy and Physiology 2e*。用于核对口腔分区、牙组织、唾液腺、咽和食管的本科结构范围。
 [^pharynx]: NCBI Bookshelf. [Anatomy, Head and Neck: Laryngopharynx](https://www.ncbi.nlm.nih.gov/books/NBK549913/)；[Physiology, Swallowing](https://www.ncbi.nlm.nih.gov/books/NBK554405/)。用于核对咽分部、隐窝与吞咽相关肌群。
@@ -165,11 +117,6 @@
 [^liver-anatomy]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Liver](https://www.ncbi.nlm.nih.gov/books/NBK500014/)；[Surgical and Functional Anatomy of the Liver](https://www.ncbi.nlm.nih.gov/books/NBK569802/)。用于核对肝门、双重入流、肝静脉与功能分段。
 [^openstax-accessory-organs]: OpenStax. [Accessory Organs in Digestion: The Liver, Pancreas, and Gallbladder](https://openstax.org/books/anatomy-and-physiology-2e/pages/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder). *Anatomy and Physiology 2e*。用于核对胆道、胰管及消化附属器官的关系。
 [^pancreas-anatomy]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Pancreas](https://www.ncbi.nlm.nih.gov/books/NBK532912/)；[Anatomy, Abdomen and Pelvis: Retroperitoneum](https://www.ncbi.nlm.nih.gov/books/NBK549857/)。用于核对胰的分部、血管毗邻和胰尾的腹膜关系。
-[^larynx]: NCBI Bookshelf. [Anatomy, Head and Neck: Larynx](https://www.ncbi.nlm.nih.gov/books/NBK538202/)。用于核对喉软骨、声门、喉内肌和神经支配。
-[^respiratory-tract]: OpenStax. [Organs and Structures of the Respiratory System](https://openstax.org/books/anatomy-and-physiology-2e/pages/22-1-organs-and-structures-of-the-respiratory-system). *Anatomy and Physiology 2e*。用于核对传导部、呼吸部及气管支气管分支。
-[^lungs]: OpenStax. [The Lungs](https://openstax.org/books/anatomy-and-physiology-2e/pages/22-2-the-lungs). *Anatomy and Physiology 2e*。用于核对肺叶、肺门、肺段和肺循环／支气管循环。
-[^lung-float-test]: Barber JL, et al. [“Was the Infant Born Alive?” A Review of Postmortem Techniques Used to Determine Live Birth in Cases of Suspected Neonaticide](https://pmc.ncbi.nlm.nih.gov/articles/PMC6491538/). *Academic Forensic Pathology*, 2018；Große Ostendorf AL, et al. [Is the lung floating test a valuable tool or obsolete?](https://pubmed.ncbi.nlm.nih.gov/22733108/). *International Journal of Legal Medicine*, 2013。用于说明肺浮沉试验的历史原理和证据局限。
-[^pleura-mediastinum]: NCBI Bookshelf. [Anatomy, Thorax, Mediastinum](https://www.ncbi.nlm.nih.gov/books/NBK519048/)。用于核对胸膜分部、隐窝、肺韧带和纵隔分区。
 [^peritoneum]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Peritoneum](https://www.ncbi.nlm.nih.gov/books/NBK534788/)。用于核对腹膜层次、腹膜腔和器官关系。
 [^omental-foramen]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Foramen of Winslow](https://www.ncbi.nlm.nih.gov/books/NBK482186/)。用于核对大、小网膜囊交通及网膜孔边界。
 [^retroperitoneum]: NCBI Bookshelf. [Anatomy, Abdomen and Pelvis: Retroperitoneum](https://www.ncbi.nlm.nih.gov/books/NBK549857/)。用于核对原发性与继发性腹膜后器官及胰尾例外。

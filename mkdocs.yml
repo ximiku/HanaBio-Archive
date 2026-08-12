@@ -478,7 +478,8 @@ nav:
     - 系统解剖学:
       - inter/anatomy/index.md
       - 人体解剖学概论与运动系统: inter/anatomy/human_anatomy.md
-      - 消化系统、呼吸系统与腹膜: inter/anatomy/viscera.md
+      - 消化系统与腹膜: inter/anatomy/viscera.md
+      - 呼吸系统与胸腔: inter/anatomy/respiratory_thorax.md
       - 泌尿系统: inter/anatomy/urinary_system.md
       - 心血管与淋巴系统: inter/anatomy/circulatory_lymphatic.md
       - 内分泌器官: inter/anatomy/endocrine_organs.md
