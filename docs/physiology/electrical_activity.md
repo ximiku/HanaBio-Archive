@@ -1,6 +1,6 @@
 # 细胞的电活动
 
-[跨膜转运与渗透](membrane_dynamics.md)说明了离子为何会沿电化学势移动；当这些带电粒子通过膜蛋白时，跨膜电流又会改变膜两侧的电势差。细胞由此把持续维持的离子梯度转化为电信号：小幅电位变化可在局部整合，达到再生条件后可形成动作电位，并沿细胞膜远距离传播。这里讨论各类可兴奋细胞共享的电学原理；肌肉收缩、心肌特异波形、突触整合和感觉换能分别在[肌细胞生理](muscle.md)、[心脏电生理](blood/blood_heart_electrical.md)、[突触传递](../neuro/neuro_synapse.md)和[感觉编码与躯体感觉](../neuro/neuro_sensation.md)中展开。
+[跨膜转运与渗透](membrane_dynamics.md)说明了离子为何会沿电化学势移动；当这些带电粒子通过膜蛋白时，跨膜电流又会改变膜两侧的电势差。细胞由此把持续维持的离子梯度转化为电信号：小幅电位变化可在局部整合，达到再生条件后可形成动作电位，并沿细胞膜远距离传播。各类可兴奋细胞共享这些电学原理；肌肉收缩、心肌特异波形、突触整合和感觉换能的专门机制分别见[肌细胞生理](muscle.md)、[心脏电生理](blood/blood_heart_electrical.md)、[突触传递](../neuro/neuro_synapse.md)和[感觉编码与躯体感觉](../neuro/neuro_sensation.md)。
 
 ## 膜电位与跨膜电荷分离 { #membrane-potential }
 
@@ -27,11 +27,11 @@ E_X\approx\frac{61.5\ \mathrm{mV}}{z_X}
 \log_{10}\!\left(\frac{a_{X,\mathrm{o}}}{a_{X,\mathrm{i}}}\right).
 $$
 
-价数使同一形式同时适用于阳离子和阴离子，不应把“$60\log([X]_o/[X]_i)$”当作所有离子的通式。$V_m=E_X$ 表示通过该选择性通路的净电流为零；离子仍在两个方向随机通过。偏离平衡电位的差 $V_m-E_X$ 称为该离子的电化学驱动力，在欧姆近似下离子电流写成 $I_X=g_X(V_m-E_X)$。正负号还取决于约定，本页后文采用向外电流为正。[^membrane-equilibrium]
+价数使同一形式同时适用于阳离子和阴离子，不应把“$60\log([X]_o/[X]_i)$”当作所有离子的通式。$V_m=E_X$ 表示通过该选择性通路的净电流为零；离子仍在两个方向随机通过。偏离平衡电位的差 $V_m-E_X$ 称为该离子的电化学驱动力，在欧姆近似下离子电流写成 $I_X=g_X(V_m-E_X)$。正负号还取决于约定，以下采用向外电流为正。[^membrane-equilibrium]
 
 ### 静息膜电位的多离子决定 { #resting-potential }
 
-真实质膜在静息时通常同时对多种离子通透。对单价 Na$^+$、K$^+$、Cl$^-$，在恒定电场和离子独立运动近似下，零净电流电位可写成 Goldman–Hodgkin–Katz 方程：
+真实质膜在静息时通常同时对多种离子通透。对单价 Na$^+$、K$^+$、Cl$^-$，在恒定电场和离子独立运动近似下，零净电流电位可写成戈德曼—霍奇金—卡茨方程（Goldman–Hodgkin–Katz equation，GHK 方程）：
 
 $$
 \begin{aligned}
@@ -73,7 +73,7 @@ $$
 
 ### 时间常数与长度常数 { #cable-properties }
 
-在简单的等电位 RC 模型中，电位接近新稳态的快慢由
+在简单的等电位电阻—电容（resistance–capacitance，RC）模型中，电位接近新稳态的快慢由
 
 $$
 \tau=R_mC_m
@@ -105,7 +105,7 @@ $$
 
 | 阶段 | 经典快速 Na$^+$／延迟 K$^+$ 轴突中的主要变化 | 电位结果 |
 | --- | --- | --- |
-| 上升支 | 可用的 Na$_\mathrm{V}$ 通道迅速激活，Na$^+$ 内向电流形成再生性正反馈 | 快速去极化并可越过 0 mV，趋近但通常达不到 $E_{\mathrm{Na}}$ |
+| 上升支 | 可用的电压门控 Na$^+$ 通道（Na$_\mathrm{V}$）迅速激活，Na$^+$ 内向电流形成再生性正反馈 | 快速去极化并可越过 0 mV，趋近但通常达不到 $E_{\mathrm{Na}}$ |
 | 峰值附近 | Na$_\mathrm{V}$ 通道逐渐失活，延迟整流 K$^+$ 通道开放增多 | 净内向电流终止，电位转向复极化 |
 | 下降支 | K$^+$ 外向电流占优势，Na$^+$ 电导仍低 | $V_m$ 返回静息方向并趋向 $E_{\mathrm{K}}$ |
 | 后超极化与恢复 | 部分 K$^+$ 通道关闭较慢，Na$_\mathrm{V}$ 通道由失活态恢复为可激活闭合态 | 电位可短暂比静息更负，随后回到稳态 |
@@ -130,7 +130,7 @@ $$
 
 轴突越粗，单位长度轴向电阻越低，局部电流更容易使远处膜去极化，传导通常更快。无脊椎动物可借巨轴突取得高速，脊椎动物则大量采用髓鞘：结间段以被动方式快速充电下一郎飞结，富集的电压门控 Na$^+$ 通道在结处再生动作电位。所谓跳跃传导不是电流瞬移，而是结间电紧张扩布与结上再生的交替。
 
-髓鞘受损会增加结间膜的漏电与有效电容充电负担，并使到达下一结的去极化不足，造成传导减慢或阻滞。多发性硬化累及中枢髓鞘；Guillain–Barré 综合征主要累及周围神经，常见亚型损伤周围髓鞘，也有以轴突损伤为主的亚型。疾病机制远比一项电缆参数复杂，本页只保留与传导的直接联系。[^demyelination]
+髓鞘受损会增加结间膜的漏电与有效电容充电负担，并使到达下一结的去极化不足，造成传导减慢或阻滞。多发性硬化累及中枢髓鞘；吉兰—巴雷综合征（Guillain–Barré syndrome，GBS）主要累及周围神经，常见亚型损伤周围髓鞘，也有以轴突损伤为主的亚型。疾病机制远比一项电缆参数复杂，这里只说明与传导直接相关的环节。[^demyelination]
 
 ## 电生理记录中的电位与电流 { #electrophysiology }
 
@@ -148,7 +148,7 @@ $$
 
 ## 通道阻断剂的机制判读 { #channel-blockers }
 
-河豚毒素可从胞外阻断许多 Na$_\mathrm{V}$ 亚型的孔道，但 Na$_\mathrm{V}$1.5、Na$_\mathrm{V}$1.8 和 Na$_\mathrm{V}$1.9 等亚型敏感性明显较低；因此“TTX 阻断所有动作电位”并不成立。TEA、4-氨基吡啶及不同 Ca$^{2+}$ 通道阻断剂也具有浓度、亚型与组织依赖性，脱离实验条件罗列“某离子通道的唯一阻断剂”会掩盖真正证据。[^channel-pharmacology]
+河豚毒素（tetrodotoxin，TTX）可从胞外阻断许多 Na$_\mathrm{V}$ 亚型的孔道，但 Na$_\mathrm{V}$1.5、Na$_\mathrm{V}$1.8 和 Na$_\mathrm{V}$1.9 等亚型敏感性明显较低；因此“TTX 阻断所有动作电位”并不成立。四乙铵（tetraethylammonium，TEA）、4-氨基吡啶及不同 Ca$^{2+}$ 通道阻断剂也具有浓度、亚型与组织依赖性，脱离实验条件罗列“某离子通道的唯一阻断剂”会掩盖真正证据。[^channel-pharmacology]
 
 局部麻醉药主要通过电压门控 Na$^+$ 通道抑制冲动产生与传导，并常表现出状态或使用依赖性：反复去极化使开放、失活状态被更多占据，阻断随之增强。实际感觉与运动阻滞顺序还受纤维直径、髓鞘、放电频率、组织 pH、药物理化性质、剂量和给药部位影响，不宜背诵为固定普适序列。全身麻醉涉及中枢多种受体、通道和网络效应，也不能写成同一种外周 Na$_\mathrm{V}$ 阻断的剂量升级版。[^channel-pharmacology]
 
@@ -164,8 +164,8 @@ $$
 
 [^membrane-equilibrium]: 膜电位方向、单离子平衡电位和能斯特方程参见 NCBI Bookshelf 的 [The Ionic Hypothesis and Rules of Ionic Electricity](https://www.ncbi.nlm.nih.gov/books/NBK28117/)。
 [^multi-ion-potential]: 多离子零电流稳态、Goldman–Hodgkin–Katz 方程及离子泵维持梯度的边界参见 [The Ionic Hypothesis and Rules of Ionic Electricity](https://www.ncbi.nlm.nih.gov/books/NBK28117/) 与 [Ion Channels and the Electrical Properties of Membranes](https://www.ncbi.nlm.nih.gov/books/NBK26910/)。
-[^membrane-circuit]: 并联电容—电导模型、电缆性质和动作电位传播的物理基础参见 NCBI Bookshelf 的 [Electrically Excitable Cells](https://www.ncbi.nlm.nih.gov/books/NBK28091/)；本页方程和术语以该教材章节交叉核验。
-[^osm-action-potential]: 被动响应、局部响应、动作电位与传导的组织线索参考并重组自 osm.bio《[第五章 动作电位的生成和转导](https://osm.bio/index.php?title=%E7%AC%AC%E4%BA%94%E7%AB%A0_%E5%8A%A8%E4%BD%9C%E7%94%B5%E4%BD%8D%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E8%BD%AC%E5%AF%BC&oldid=11534)》（固定版本 oldid=11534；贡献者：Sofia、长河；[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）。本页依据 NCBI 教材、经典论文和 IUPHAR/BPS 数据库重新组织并纠正具体表述。
+[^membrane-circuit]: 并联电容—电导模型、电缆性质和动作电位传播的物理基础参见 NCBI Bookshelf 的 [Electrically Excitable Cells](https://www.ncbi.nlm.nih.gov/books/NBK28091/)；方程和术语与该教材章节交叉核验。
+[^osm-action-potential]: 被动响应、局部响应、动作电位与传导的组织线索实质性改编自 osm.bio《[第五章 动作电位的生成和转导](https://osm.bio/index.php?title=%E7%AC%AC%E4%BA%94%E7%AB%A0_%E5%8A%A8%E4%BD%9C%E7%94%B5%E4%BD%8D%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E8%BD%AC%E5%AF%BC&oldid=11534)》（固定版本 oldid=11534；贡献者：Sofia、长河；[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）；具体机制另以 NCBI 教材、经典论文和 IUPHAR/BPS 数据库交叉核验。
 [^hodgkin-huxley]: 经典电压钳证据与定量模型见 Hodgkin 与 Huxley 的原始论文 [A quantitative description of membrane current and its application to conduction and excitation in nerve](https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/)；其历史意义亦见 [1963 年诺贝尔奖颁奖演说](https://www.nobelprize.org/prizes/medicine/1963/ceremony-speech/)。
 [^action-potential-diversity]: 电压门控通道家族及“voltage-gated”总类中的机制例外参见 IUPHAR/BPS [Voltage-gated ion channels](https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=696)。
 [^refractory-period]: 经典轴突的不应期、传导和髓鞘化机制参见 NCBI Bookshelf 的 [Voltage-Dependent Membrane Permeability](https://www.ncbi.nlm.nih.gov/books/NBK11003/)；基强度、时值及其随刺激构型改变的边界参见 [Strength–duration relationship for intra- versus extracellular stimulation with microelectrodes](https://pmc.ncbi.nlm.nih.gov/articles/PMC3401985/)。

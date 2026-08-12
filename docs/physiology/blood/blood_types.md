@@ -2,15 +2,15 @@
 
 血型是由多组红细胞抗原共同构成的遗传表型。一个人有某种抗原而另一个人没有时，后者在妊娠、输血或其他免疫暴露后可能产生针对它的抗体；若相应红细胞再次进入循环，抗体便可促成凝集、补体激活或脾肝巨噬细胞清除。输血相容性所处理的，正是供者成分带入的抗原或抗体与受者免疫环境是否相遇。
 
-ABO 和 RhD 最先受到关注，是因为 ABO 不相容可迅速造成严重溶血，D 抗原又很容易诱导同种免疫。Kell、Kidd、Duffy、MNS 等系统同样可产生具有临床意义的抗体；国际输血协会（ISBT）持续为这些系统、抗原和等位基因维护统一命名。安全输血需要由血型鉴定、抗体筛查、成分选择和交叉配血组成证据链。[^isbt-blood-groups]
+ABO 和 RhD 最先受到关注，是因为 ABO 不相容可迅速造成严重溶血，D 抗原又很容易诱导同种免疫。Kell、Kidd、Duffy、MNS 等系统同样可产生具有临床意义的抗体；国际输血协会（International Society of Blood Transfusion，ISBT）持续为这些系统、抗原和等位基因维护统一命名。安全输血需要由血型鉴定、抗体筛查、成分选择和交叉配血组成证据链。[^isbt-blood-groups]
 
 ## 血型系统与共同遗传的红细胞抗原 { #blood-group-systems }
 
-一个血型系统收纳由同一基因、紧密连锁的同源基因或彼此直接作用的基因所决定的抗原。抗原的化学本质并不统一：ABO 抗原是糖蛋白和糖脂末端的寡糖决定簇，Rh、Kell、Kidd 和 Duffy 等抗原则位于不同膜蛋白上。它们有的参与膜稳定或跨膜运输，有的生理功能尚不清楚；“血型抗原”只说明该结构能被特定抗体辨认，不表示它原本是为输血而存在。
+按照 ISBT 的遗传学定义，一个血型系统收纳由同一基因或两个以上紧密连锁的同源基因所决定的抗原，并与其他血型系统在遗传上相互独立。抗原的化学本质并不统一：ABO 抗原是糖蛋白和糖脂末端的寡糖决定簇，Rh、Kell、Kidd 和 Duffy 等抗原则位于不同膜蛋白上。它们有的参与膜稳定或跨膜运输，有的生理功能尚不清楚；“血型抗原”只说明该结构能被特定抗体辨认，不表示它原本是为输血而存在。
 
-血清学所见的凝集，是一个抗体连接多个红细胞后形成可见团块；溶血则是红细胞膜破裂或抗体包被细胞被清除的结果。二者可以相联，却不是同义词。IgM 分子跨度大，常能直接造成盐水介质中的凝集，并可有效激活补体；IgG 通常需要抗人球蛋白试验等方法才能显示红细胞表面的包被，也更容易经 Fc 受体介导在脾、肝发生血管外清除。实际反应还取决于抗体效价、亲和力、最适温度、补体结合能力和抗原密度，不能只凭“凝不凝集”判断体内后果。[^blood-group-antibodies]
+血清学所见的凝集，是一个抗体连接多个红细胞后形成可见团块；溶血则是红细胞膜破裂或抗体包被细胞被清除的结果。二者可以相联，却不是同义词。免疫球蛋白 M（immunoglobulin M，IgM）分子跨度大，常能直接造成盐水介质中的凝集，并可有效激活补体；免疫球蛋白 G（immunoglobulin G，IgG）通常需要抗人球蛋白试验等方法才能显示红细胞表面的包被，也更容易经抗体可结晶片段（fragment crystallizable region，Fc 区）受体介导在脾、肝发生血管外清除。实际反应还取决于抗体效价、亲和力、最适温度、补体结合能力和抗原密度，不能只凭“凝不凝集”判断体内后果。[^blood-group-antibodies]
 
-这里的抗体多数是同种抗体（alloantibody）：受者缺少某抗原，却在接触同种他人的相应抗原后发生免疫。ABO 抗体看似例外——没有明确输血史的人也会在出生后数月逐渐出现抗 A 或抗 B——但它们同样不是出生时预装的。其形成被认为与肠道微生物、食物等来源中类似 A、B 决定簇的糖结构有关；因此“天然抗体”指没有已知红细胞免疫史，并非不经过免疫系统形成。[^abo-antibodies]
+针对红细胞血型抗原的抗体多数是同种抗体（alloantibody）：受者缺少某抗原，却在接触同种他人的相应抗原后发生免疫。ABO 抗体看似例外——没有明确输血史的人也会在出生后数月逐渐出现抗 A 或抗 B——但它们同样不是出生时预装的。其形成被认为与肠道微生物、食物等来源中类似 A、B 决定簇的糖结构有关；因此“天然抗体”指没有已知红细胞免疫史，并非不经过免疫系统形成。[^abo-antibodies]
 
 ## H 前体的 ABO 末端糖修饰 { #abo-biosynthesis }
 
@@ -29,7 +29,7 @@ ABO 和 RhD 最先受到关注，是因为 ABO 不相容可迅速造成严重溶
 
 A、B 等位基因表现为共显性，常见 O 等位基因相对隐性；但这个单基因模型只有在 H 前体能够形成时才成立。若两份 *FUT1* 都不能在红细胞上形成 H 抗原，即使基因组中有功能性 A 或 B 等位基因，转移酶也失去受体底物，红细胞便不能内源形成 A、B 或 H。红细胞完全缺少 H、血浆含抗 H 的经典孟买表型（Oh）由此产生，其正定型容易看似 O 型，普通 O 型红细胞却仍不相容；若 FUT2 仍能在分泌物中形成 ABH 结构并使红细胞出现微弱吸附表达，则可形成血清学表现不同的类孟买表型。[^hh-blood-group]
 
-FUT2 主要决定分泌上皮能否在唾液、消化道黏液等分泌物中形成可溶性 ABH 结构，通常不替代红系细胞的 FUT1。“分泌者／非分泌者”与红细胞 ABO 表型因而属于相联但不同的层级。ABH 决定簇可位于多种糖链骨架，其组织和分泌物表达取决于细胞类型、前体链及 FUT2 状态。糖链合成与高尔基体加工的普遍机制由后续细胞生物学页面承接。
+FUT2 主要决定分泌上皮能否在唾液、消化道黏液等分泌物中形成可溶性 ABH 结构，通常不替代红系细胞的 FUT1。“分泌者／非分泌者”与红细胞 ABO 表型因而属于相联但不同的层级。ABH 决定簇可位于多种糖链骨架，其组织和分泌物表达取决于细胞类型、前体链及 FUT2 状态；糖链合成与高尔基体加工的普遍机制见[内膜系统](../../cell/endomembrane.md#golgi-polarity-maturation)。
 
 ## Rh 红细胞膜蛋白抗原系统 { #rh-system }
 
@@ -64,7 +64,7 @@ RhD 定型主要是红细胞与抗 D 试剂的正向检测，没有一组像 ABO
 
 ## 妊娠期母体抗体与胎儿红细胞 { #hdfn }
 
-胎儿红细胞可在妊娠过程中、胎盘出血事件或分娩时进入母体循环。若 D 阴性的母体接触 D 阳性胎儿红细胞并发生同种免疫，随后形成的 IgG 抗 D 可以通过胎盘、包被胎儿红细胞并促使其被清除；严重时造成胎儿贫血、水肿，出生后还可因胆红素负荷出现黄疸。这一过程称胎儿与新生儿溶血病（HDFN）。抗 D 最为人熟知，但抗 c、抗 K 等其他同种抗体也能造成 HDFN；ABO 不合也可能导致新生儿溶血，只是其抗体类别、胎儿抗原表达和严重度分布不同。[^hdfn]
+胎儿红细胞可在妊娠过程中、胎母出血事件或分娩时进入母体循环。若 D 阴性的母体接触 D 阳性胎儿红细胞并发生同种免疫，随后形成的 IgG 抗 D 可以通过胎盘、包被胎儿红细胞并促使其被清除；严重时造成胎儿贫血、水肿，出生后还可因胆红素负荷出现黄疸。这一过程称胎儿与新生儿溶血病（hemolytic disease of the fetus and newborn，HDFN）。抗 D 最为人熟知，但抗 c、抗 K 等其他同种抗体也能造成 HDFN；ABO 不合也可能导致新生儿溶血，只是其抗体类别、胎儿抗原表达和严重度分布不同。[^hdfn]
 
 HDFN 风险取决于既往致敏、胎母出血、输血史、胎儿靶抗原及母体抗体水平随时间的变化。致敏可能发生在先前妊娠、妊娠丢失、胎母出血事件或更早的输血，也可能在首次已知妊娠中形成。
 
@@ -76,9 +76,9 @@ HDFN 风险取决于既往致敏、胎母出血、输血史、胎儿靶抗原及
 
 | 处理 | 主要改变 | 不能由它解决的问题 |
 | --- | --- | --- |
-| 去白细胞 | 过滤去除大部分供者白细胞，降低白细胞相关发热反应、HLA 同种免疫及部分细胞相关病原暴露 | 不去除红细胞血型抗原，也不能可靠灭活残留 T 细胞的增殖能力 |
+| 去白细胞 | 过滤去除大部分供者白细胞，降低白细胞相关发热反应、人类白细胞抗原（human leukocyte antigen，HLA）同种免疫及部分细胞相关病原暴露 | 不去除红细胞血型抗原，也不能可靠灭活残留 T 细胞的增殖能力 |
 | 洗涤 | 以相容溶液反复重悬，减少残余血浆蛋白、抗体、添加液和部分细胞外物质 | 不是“洗掉所有血浆”，会损失部分细胞，也不能把 ABO 不相容红细胞变得相容 |
-| 辐照 | 使细胞成分中的供者 T 淋巴细胞不能继续增殖，用于预防输血相关移植物抗宿主病（TA-GVHD） | 不等同于去白、洗涤或灭菌，也不预防一般溶血反应 |
+| 辐照 | 使细胞成分中的供者 T 淋巴细胞不能继续增殖，用于预防输血相关移植物抗宿主病（transfusion-associated graft-versus-host disease，TA-GVHD） | 不等同于去白、洗涤或灭菌，也不预防一般溶血反应 |
 
 TA-GVHD 的关键机制是活性供者 T 细胞在受者体内存活、增殖并攻击组织；严重免疫缺陷会增加风险，近亲供者或 HLA 高度相合也可能让供者细胞逃过受者清除。辐照通过抑制供者淋巴细胞增殖降低风险。[^modified-components]
 
@@ -86,25 +86,25 @@ TA-GVHD 的关键机制是活性供者 T 细胞在受者体内存活、增殖并
 
 ABO 不相容的红细胞可被既有抗体迅速结合并激活补体，造成急性血管内溶血；既往致敏形成的非 ABO 抗体也可能在筛查时低于检出限，输血后经记忆应答升高，数日到数周后造成迟发性血管外溶血。发热性非溶血反应、过敏反应和 TA-GVHD 同样包含免疫机制，却作用于不同靶点，不能统称为“红细胞凝集”。[^transfusion-reaction-guide]
 
-另一些重要反应并不以血型抗原为起点。输血相关循环超负荷（TACO）主要是输入容量超过心血管系统可承受范围造成静水压性肺水肿；输血相关急性肺损伤（TRALI）则以肺毛细血管通透性升高和炎症性损伤为核心。细菌污染、成分温度或渗透条件异常等也可伤害受者。因而，发生在输血期间或之后的发热、呼吸困难、低血压、黄疸等表现只是调查起点；时间关系、血型复核、直接抗人球蛋白试验、溶血指标、影像和容量状态共同用于区分机制。
+另一些重要反应并不以血型抗原为起点。输血相关循环超负荷（transfusion-associated circulatory overload，TACO）主要是输入容量超过心血管系统可承受范围造成静水压性肺水肿；输血相关急性肺损伤（transfusion-related acute lung injury，TRALI）则以肺毛细血管通透性升高和炎症性损伤为核心。细菌污染、成分温度或渗透条件异常等也可伤害受者。因而，发生在输血期间或之后的发热、呼吸困难、低血压、黄疸等表现只是调查起点；时间关系、血型复核、直接抗人球蛋白试验（direct antiglobulin test，DAT）、溶血指标、影像和容量状态共同用于区分机制。
 
 ## 参考资料与延伸阅读 { #references }
 
-- International Society of Blood Transfusion, [Red Cell Immunogenetics and Blood Group Terminology](https://www.isbtweb.org/isbt-working-parties/rcibgt.html)。
+- International Society of Blood Transfusion, [ISBT Blood Group Database](https://blooddatabase.isbtweb.org/)。
 - Dean, L., [The ABO blood group](https://www.ncbi.nlm.nih.gov/books/NBK2267/)、[The Hh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2268/) 与 [The Rh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2269/). *Blood Groups and Red Cell Antigens*。
 - Canadian Blood Services, [Pre-transfusion testing](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/pre-transfusion-testing) 与 [ABO Compatibility and Acceptable Substitutions](https://www.blood.ca/en/hospital-services/inventory-ordering/ordering/compatibility-and-substitutions)。
 - Canadian Blood Services, [Irradiated, washed and CMV seronegative blood components](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/irradiated-washed-and-cmv-seronegative-blood-components) 与 [Transfusion reactions](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/transfusion-reactions)。
 - NHS, [Haemolytic disease of the fetus and newborn](https://www.nhs.uk/conditions/rhesus-disease-hdfn/)。
 
-[^isbt-blood-groups]: 血型系统、抗原与等位基因的正式命名和持续更新入口见 ISBT [Red Cell Immunogenetics and Blood Group Terminology](https://www.isbtweb.org/isbt-working-parties/rcibgt.html)；血型系统数量应以持续更新的正式名录为准。
+[^isbt-blood-groups]: 血型系统、抗原与等位基因的正式命名和持续更新入口见 [ISBT Blood Group Database](https://blooddatabase.isbtweb.org/)；血型系统数量应以持续更新的正式名录为准。
 [^blood-group-antibodies]: 凝集、IgM／IgG、补体和血管外清除的免疫血液学框架见 NCBI Bookshelf [Blood transfusions and the immune system](https://www.ncbi.nlm.nih.gov/books/NBK2265/)及 [The Rh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2269/)。
 [^abo-antibodies]: ABO 抗体在出生后随环境抗原暴露逐渐形成，整体以 IgM 为主但可包含 IgG，详见 [The ABO blood group](https://www.ncbi.nlm.nih.gov/books/NBK2267/)；具体类别随抗原、个体与免疫背景而异。
-[^abo-biochemistry]: 本节采用并重组 osm.bio [《血型》固定版本](https://osm.bio/index.php?title=血型&oldid=11226)中 H—A／B 糖链修饰与糖类／蛋白质血型系统的组织线索，并以 NCBI Bookshelf [The ABO blood group](https://www.ncbi.nlm.nih.gov/books/NBK2267/)和 [The Hh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2268/)交叉核验。原条目的固定血型系统数量、Rh 首次暴露时程、首胎风险和 HDFN 处置断言未沿用；osm.bio 内容按 CC BY-SA 4.0 使用。
+[^abo-biochemistry]: H—A／B 糖链修饰与糖类／蛋白质血型系统的组织线索实质性改编自 osm.bio [《血型》固定版本](https://osm.bio/index.php?title=血型&oldid=11226)，并以 NCBI Bookshelf [The ABO blood group](https://www.ncbi.nlm.nih.gov/books/NBK2267/)和 [The Hh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2268/)交叉核验。osm.bio 内容按 CC BY-SA 4.0 使用。
 [^hh-blood-group]: FUT1 形成红细胞 H 抗原、FUT2 形成分泌型 H 抗原，以及经典孟买表型缺少 H 并产生抗 H 的关系见 [The Hh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2268/)。
 [^rh-blood-group]: *RHD*／*RHCE*、D／C／c／E／e、弱 D 与部分 D 的分子和血清学边界见 [The Rh blood group](https://www.ncbi.nlm.nih.gov/books/NBK2269/)；正式等位基因表由 ISBT 工作组持续维护。
 [^pretransfusion-testing]: ABO 正反定型、RhD 定型、抗体筛查、血清学／电子交叉配血及 4 月龄以内婴儿反定型边界见 Canadian Blood Services [Pre-transfusion testing](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/pre-transfusion-testing)。
-[^component-compatibility]: 红细胞与血浆的 ABO 相容方向见 Canadian Blood Services [ABO Compatibility and Acceptable Substitutions](https://www.blood.ca/en/hospital-services/inventory-ordering/ordering/compatibility-and-substitutions)；非 ABO 抗体为何仍需筛查与交叉配血见 [Pre-transfusion testing](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/pre-transfusion-testing)。
+[^component-compatibility]: 红细胞与血浆的 ABO 相容方向见 Canadian Blood Services [ABO Compatibility and Acceptable Substitutions](https://www.blood.ca/en/hospital-services/inventory-ordering/ordering/compatibility-and-substitutions)；非 ABO 抗体为何仍需筛查与交叉配血见 [Pre-transfusion testing](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/pre-transfusion-testing)，血小板 ABO／Rh 抗原和残余红细胞边界见 [Platelet transfusion, alloimmunization and management of platelet refractoriness](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/platelet-transfusion-alloimmunization-and-management-platelet)。
 [^hdfn]: 母体 IgG 同种抗体跨胎盘、胎儿红细胞清除及贫血／黄疸的因果链见 NCBI Bookshelf [Hemolytic disease of the newborn](https://www.ncbi.nlm.nih.gov/books/NBK2266/)和 NHS [Haemolytic disease of the fetus and newborn](https://www.nhs.uk/conditions/rhesus-disease-hdfn/)。
-[^anti-d-prophylaxis]: 未致敏 D 阴性孕妇的抗 D 免疫预防原则见 NCBI Bookshelf [Hemolytic disease of the newborn](https://www.ncbi.nlm.nih.gov/books/NBK2266/)及 NHS [Haemolytic disease of the fetus and newborn](https://www.nhs.uk/conditions/rhesus-disease-hdfn/)；本文只解释免疫学目的，不给出会随地区和指南更新的临床剂量流程。
+[^anti-d-prophylaxis]: 未致敏 D 阴性孕妇的抗 D 免疫预防原则见 NCBI Bookshelf [Hemolytic disease of the newborn](https://www.ncbi.nlm.nih.gov/books/NBK2266/)及 NHS [Haemolytic disease of the fetus and newborn](https://www.nhs.uk/conditions/rhesus-disease-hdfn/)；具体适应证、时点和剂量遵循所在地现行临床指南。
 [^modified-components]: 去白、洗涤和辐照的对象、局限及 TA-GVHD 机制见 Canadian Blood Services [Irradiated, washed and CMV seronegative blood components](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/irradiated-washed-and-cmv-seronegative-blood-components)。
 [^transfusion-reaction-guide]: 急性／迟发性溶血、发热、过敏、TRALI、TACO 与 TA-GVHD 的分类和调查框架见 Canadian Blood Services [Transfusion reactions](https://professionaleducation.blood.ca/en/transfusion/clinical-guide/transfusion-reactions)。

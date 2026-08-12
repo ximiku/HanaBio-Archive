@@ -14,7 +14,7 @@
 | --- | --- | --- | --- |
 | 冠脉 | 心肌供氧与机械做功匹配 | 代谢性舒张、肌源性与内皮反应、心肌外压 | 交感既提高心肌需氧，也直接作用于冠脉 |
 | 脑 | 稳定灌流、离子环境与区域活动供能 | 压力自身调节、CO$_2$/pH 反应、神经血管耦联 | 强烈全身反射下仍尽量保护脑灌流 |
-| 肾 | 滤过、分泌与重吸收所需的流量分配 | 肌源性反应、管球反馈、入球—出球阻力配合 | 交感和 RAS 可为容量保存牺牲肾血流 |
+| 肾 | 滤过、分泌与重吸收所需的流量分配 | 肌源性反应、管球反馈、入球—出球阻力配合 | 交感和肾素—血管紧张素系统可为容量保存牺牲肾血流 |
 | 肺 | 低压输送全部心输出量并匹配通气 | 血管募集与扩张、缺氧性肺血管收缩 | 容量和压力改变直接增加右心负荷 |
 | 骨骼肌 | 收缩代谢与氧输送匹配 | 活动性充血、传导舒张、功能性交感逸脱 | 运动时兼顾活动肌灌流与动脉压力 |
 | 皮肤 | 热交换而非单纯营养供血 | 动静脉吻合、局部温度与轴突反射 | 交感缩血管和主动舒血管通路重排散热 |
@@ -24,11 +24,11 @@
 
 左、右冠状动脉起于主动脉根部，较大分支在心外膜表面走行，较小分支穿入心肌。冠脉供血由主动脉压、舒缩周期中的壁内压迫和冠脉阻力共同决定。左心室收缩时，壁内压力压迫肌内小血管，越靠近心内膜下这一机械阻力通常越显著；舒张开始后压迫解除，主动脉与心室组织之间的灌注压差增大，左冠流入随之达到高值。因此左心室冠脉血流以舒张期为主，薄壁、低压的右心室受收缩期压迫较轻，其流量的搏动模式不能照搬左室。[^coronary-flow]
 
-心肌在静息时已经从冠脉血中提取较高比例的 O$_2$，增加耗氧主要依赖提高冠脉血流和动脉血氧含量，而不是无限增加提取率。心率、室壁张力和收缩性提高时，ATP 分解、腺苷、K$^+$、CO$_2$/H$^+$、NO 及其他信号共同降低微血管阻力，使氧输送追随代谢。腺苷是重要候选介质，却不是唯一的“冠脉开关”；多条冗余通路使敲除或阻断单一信号后仍可能保留部分代谢性舒张。
+心肌在静息时已经从冠脉血中提取较高比例的 O$_2$，提取率进一步升高的余量有限，因而匹配更高耗氧主要依赖增加冠脉血流；动脉血氧含量下降还会进一步提高达到同一氧输送所需的流量。心率、室壁张力和收缩性提高时，三磷酸腺苷（adenosine triphosphate，ATP）分解、腺苷、K$^+$、CO$_2$/H$^+$、一氧化氮（nitric oxide，NO）及其他信号共同降低微血管阻力，使氧输送追随代谢。腺苷是重要候选介质，却不是唯一的“冠脉开关”；多条冗余通路使敲除或阻断单一信号后仍可能保留部分代谢性舒张。
 
-交感兴奋一方面可直接经冠脉受体改变血管张力，另一方面会提高心率和收缩性，间接增强代谢性舒张。在完整机体中，代谢需求增加常覆盖直接缩血管效应。正常冠脉还能在一定压力变化内调节阻力，并在短暂阻断后产生反应性充血。最大舒张时的血流相对于静息血流所保留的增量称冠状血流储备；狭窄、微血管功能异常、舒张压下降或心率过快缩短舒张期时，这一储备可先于静息流量耗尽。
+交感兴奋一方面可直接经冠脉受体改变血管张力，另一方面会提高心率和收缩性，间接增强代谢性舒张。在完整机体中，代谢需求增加常覆盖直接缩血管效应。正常冠脉还能在一定压力变化内调节阻力，并在短暂阻断后产生反应性充血。最大充血时冠脉血流与静息冠脉血流之比称冠状血流储备（coronary flow reserve，CFR）；它同时受静息流量、心外膜冠脉阻力和微循环最小阻力影响。狭窄、微血管功能异常、舒张压下降或心率过快缩短舒张期时，CFR 可先于静息流量降低。[^coronary-flow-reserve]
 
-冠脉分支间存在侧支联系，但能否保护缺血心肌取决于原有吻合、阻塞速度、灌注压和重塑时间。缓慢狭窄可促使既有侧支扩大，突然闭塞却不会即时长出足以替代主干的新血管。长期心肌肥大若毛细血管和供氧能力未与肌细胞体积同步增长，也会增加心内膜下供需失衡风险；这些病理后果将在[缺血、再灌注与细胞损伤](../pathophysiology/cell_injury.md)进一步讨论。
+冠脉分支间存在侧支联系，但能否保护缺血心肌取决于原有吻合、阻塞速度、灌注压和重塑时间。缓慢狭窄可促使既有侧支扩大，突然闭塞却不会即时长出足以替代主干的新血管。长期心肌肥大若毛细血管和供氧能力未与肌细胞体积同步增长，也会增加心内膜下供需失衡风险；[缺血、再灌注与细胞损伤](../pathophysiology/cell_injury.md)说明供需失衡转为细胞损伤的条件。
 
 ## 脑血流的总量稳定与活动性分配 { #cerebral-circulation }
 
@@ -36,11 +36,11 @@
 
 阻力血管可通过肌源性和代谢性机制缓冲灌注压变化，使脑血流在一定条件范围内相对稳定。传统教材常给出一个固定平均动脉压区间，但人体自身调节并不存在普适的直线平台：下限和上限随慢性血压、CO$_2$、体位、麻醉、年龄与测量方法移动，动态压力变化下的响应也不同于稳态实验。交感神经有助于限制高压传向脑微循环，但日常区域供血主要由局部代谢和神经血管单元决定。[^cerebral-flow]
 
-PaCO$_2$ 升高时，CO$_2$ 迅速跨越血脑屏障并改变细胞外 pH，脑血管明显舒张；过度通气造成低碳酸血症时则收缩。动脉 O$_2$ 在正常范围内的小幅变化影响较弱，只有明显低氧时脑血流才显著增加。局部神经元活动增强会经神经元、星形胶质细胞、内皮、周细胞和平滑肌之间的信号使活跃区域充血，称神经血管耦联。它是功能成像血氧信号的生理基础，却不等于“某种单一代谢物直接打开一条毛细血管”。
+动脉二氧化碳分压（$P_{a\mathrm{CO}_2}$）升高时，CO$_2$ 迅速跨越血脑屏障并改变细胞外 pH，脑血管明显舒张；过度通气造成低碳酸血症时则收缩。动脉 O$_2$ 在正常范围内的小幅变化影响较弱，只有明显低氧时脑血流才显著增加。局部神经元活动增强会经神经元、星形胶质细胞、内皮、周细胞和平滑肌之间的信号使活跃区域充血，称神经血管耦联。它是功能成像血氧信号的生理基础，却不等于“某种单一代谢物直接打开一条毛细血管”。
 
 ### 血脑屏障的选择性运输 { #brain-barriers }
 
-血脑屏障的主要物质基础是脑微血管内皮细胞及其紧密连接；基膜、周细胞、星形胶质细胞足突和其他神经血管单元成员共同维持其表型。紧密连接显著限制细胞间隙的水溶性溶质通行，低水平胞吞、专一载体、受体介导转胞吞和外排泵则形成选择性跨内皮运输。O$_2$、CO$_2$ 等亲脂性小分子可跨膜扩散，葡萄糖、氨基酸和核苷等亲水营养物则依赖专一转运蛋白跨越屏障。[^blood-brain-barrier]
+血脑屏障（blood–brain barrier，BBB）的主要物质基础是脑微血管内皮细胞及其紧密连接；基膜、周细胞、星形胶质细胞足突和其他神经血管单元成员共同维持其表型。紧密连接显著限制细胞间隙的水溶性溶质通行，低水平胞吞、专一载体、受体介导转胞吞和外排泵则形成选择性跨内皮运输。O$_2$、CO$_2$ 等亲脂性小分子可跨膜扩散，葡萄糖、氨基酸和核苷等亲水营养物则依赖专一转运蛋白跨越 BBB。[^blood-brain-barrier]
 
 血—脑脊液屏障主要位于脉络丛上皮细胞之间的紧密连接，而不是脑毛细血管内皮的简单别名。两种屏障在细胞位置、运输方向和脑脊液形成中的作用不同。新生儿高未结合胆红素进入脑组织所致的胆红素脑病属于屏障负荷、结合与清除失衡后的病理结果，不能解释为健康新生儿“没有血脑屏障”。
 
@@ -50,7 +50,7 @@ PaCO$_2$ 升高时，CO$_2$ 迅速跨越血脑屏障并改变细胞外 pH，脑�
 
 入球小动脉受到牵张时产生快速肌源性收缩；致密斑感知远端 NaCl 递送变化，通过旁分泌信号改变入球阻力和肾素释放，形成较慢的管球反馈。这两套机制使肾血流与肾小球滤过率在一定压力范围内相对稳定，同时让单个肾单位的滤过负荷与转运能力相匹配。交感活动和血管紧张素 II 可在低容量状态下重排入球、出球和肾内血流；“血管紧张素 II 永远只收缩出球小动脉”只是剂量与背景受限的近似。[^renal-flow]
 
-肾皮质获得绝大部分肾血流，髓质血流较少。直小血管的低流量有利于保存髓质渗透梯度，却使外髓厚升支等高耗氧区域容易处于供需边缘。总肾血流正常并不保证髓质氧合充分，因为氧可在相邻动静脉之间分流，小管 Na$^+$ 重吸收还会随滤过负荷增加耗氧。肾循环的这种功能分区将在[泌尿生理总论](../urinary/index.md)及后续滤过—转运页面与肾单位机制衔接。[^renal-oxygenation]
+肾皮质获得绝大部分肾血流，髓质血流较少。直小血管的低流量有利于保存髓质渗透梯度，却使外髓厚升支等高耗氧区域容易处于供需边缘。总肾血流正常并不保证髓质氧合充分，因为氧可在相邻动静脉之间分流，小管 Na$^+$ 重吸收还会随滤过负荷增加耗氧。[泌尿生理总论](../urinary/index.md)和[肾小球滤过与肾小管转运](../urinary/filtration_transport.md)把这一分区供血接入肾单位结构与转运机制。[^renal-oxygenation]
 
 ## 肺循环的低阻力与全心输出量 { #pulmonary-circulation }
 
@@ -62,9 +62,9 @@ PaCO$_2$ 升高时，CO$_2$ 迅速跨越血脑屏障并改变细胞外 pH，脑�
 
 ## 骨骼肌血流的局部—全身协调 { #skeletal-muscle-circulation }
 
-静息骨骼肌的多数阻力血管保留交感缩血管张力。肌纤维开始收缩后，机械挤压可使单个收缩周期内流量波动；K$^+$、腺苷、磷酸盐、乳酸、H$^+$、NO 与红细胞供氧状态等多种线索，加上沿内皮和血管平滑肌传导的电信号，使上游小动脉舒张并募集交换表面积。流量由此在空间上优先分配给实际工作的运动单位。[^skeletal-muscle-flow]
+静息骨骼肌的多数阻力血管保留交感缩血管张力。肌纤维开始收缩后，机械挤压可使单个收缩周期内流量波动；K$^+$、腺苷、磷酸盐、乳酸、H$^+$、NO 与红细胞供氧状态等多种线索，加上沿内皮和血管平滑肌传导的电信号，使上游小动脉舒张。健康静息肌中多数毛细血管已有红细胞通量；收缩时主要通过提高既有通路中的红细胞通量、速度和管内血细胞比容，并使通量分布更均匀，增加有效交换能力。血流由此更多流向活跃肌纤维所在的微血管区域，无须假定静息时大多数毛细血管关闭后才被逐一“募集”。[^skeletal-muscle-flow]
 
-运动时交感神经活动持续存在。若所有活动肌都达到最大舒张，全身血管容量可能超过心脏可提供的流量，动脉压力便难以维持。局部代谢信号削弱去甲肾上腺素的缩血管效应，同时保留一定交感约束，这种功能性交感逸脱使活动肌获得更多血流。节律性肌肉泵还促进静脉回流；持续强直收缩若同时压迫动脉，却可能降低肌内灌流。全身运动中的心输出量、肌肉流量和温度协调见[运动与环境生理](../exercise_environment.md)。
+运动时交感神经活动持续存在。若所有活动肌都达到最大舒张，全身血管容量可能超过心脏可提供的流量，动脉压力便难以维持。局部代谢信号削弱去甲肾上腺素的缩血管效应，同时保留一定交感约束，这种功能性交感逸脱（functional sympatholysis）使活动肌获得更多血流。节律性肌肉泵还促进静脉回流；持续强直收缩若同时压迫动脉，却可能降低肌内灌流。全身运动中的心输出量、肌肉流量和温度协调见[运动与环境生理](../exercise_environment.md)。
 
 ## 皮肤血流与体表热交换 { #cutaneous-circulation }
 
@@ -76,33 +76,36 @@ PaCO$_2$ 升高时，CO$_2$ 迅速跨越血脑屏障并改变细胞外 pH，脑�
 
 胃肠道、胰腺、脾和肝脏共同组成内脏循环。进食后，腔内容物、胃肠激素、局部代谢和内皮信号可增加相应肠段血流；运动、寒冷或失血时，强交感缩血管可降低内脏灌流并把容量转移到中央循环。肠道吸收后的血液经门静脉进入肝窦，使肝脏在物质进入体循环前完成营养处理、清除和免疫监视。人类脾脏可以调节容量，但不像某些潜水哺乳动物那样是强大的红细胞储库，比较动物学结论不能无条件外推。
 
-肝脏同时接受门静脉和肝动脉血。门静脉流量主要是上游内脏器官流出的总和，肝动脉则能主动改变阻力；当门静脉流量下降时，肝动脉常扩张并部分补偿总肝血流，称肝动脉缓冲反应。腺苷洗脱假说可解释其中一部分：门静脉流量下降减少局部腺苷清除，促使肝动脉舒张；ATP、NO、H$_2$S 和神经肽等也可能参与这一多介质调节。反向补偿较弱——肝动脉流量改变通常不能主动迫使门静脉流量等量反向变化。[^hepatic-buffer]
+肝脏同时接受门静脉和肝动脉血。门静脉流量主要是上游内脏器官流出的总和，肝动脉则能主动改变阻力；当门静脉流量下降时，肝动脉常扩张并部分补偿总肝血流，称肝动脉缓冲反应。腺苷洗脱假说可解释其中一部分：门静脉流量下降减少局部腺苷清除，促使肝动脉舒张；ATP、NO、硫化氢（hydrogen sulfide，H$_2$S）和神经肽等也可能参与这一多介质调节。反向补偿较弱——肝动脉流量改变通常不能主动迫使门静脉流量等量反向变化。[^hepatic-buffer]
 
 ## 器官血流再分配的优先级 { #integrated-redistribution }
 
 器官血流分配随生理状态连续变化。动态运动时，心输出量增加，活动肌和冠脉流量上升，皮肤血流随后随散热需要增加；内脏和肾血管的交感收缩帮助维持动脉压力，但其流量不会在每种强度下按同一比例下降。餐后内脏灌流增加，睡眠和体位改变又重设自主张力与静水压。静息“器官血流百分比”必须注明受试者、姿势、温度、进食状态和测量方法，否则只是失去条件的快照。
 
-急性失血时，交感、RAS 和血管加压素共同收缩皮肤、内脏和肾血管并动员静脉容量，优先维持心脏和脑的灌注；但冠脉和脑血流也只能在有限压力范围内被局部机制保护。若动脉压和血氧输送继续下降，自身调节达到极限，保护性再分配就会转为多器官缺血。器官灌流是局部功能需求、泵血能力、血液容量与全身压力在不同时间尺度上共同作用的结果。
+急性失血时，交感、肾素—血管紧张素系统和血管加压素共同收缩皮肤、内脏和肾血管并动员静脉容量，优先维持心脏和脑的灌注；但冠脉和脑血流也只能在有限压力范围内被局部机制保护。若动脉压和血氧输送继续下降，自身调节达到极限，保护性再分配就会转为多器官缺血。器官灌流是局部功能需求、泵血能力、血液容量与全身压力在不同时间尺度上共同作用的结果。
 
 ## 参考资料与延伸阅读 { #references }
 
 - Duncker DJ, et al. [Regulation of Coronary Blood Flow in Health and Ischemic Heart Disease](https://pmc.ncbi.nlm.nih.gov/articles/PMC5856234/). *Progress in Cardiovascular Diseases*. 2015;57:409–422.
+- Rahman H, et al. [Beyond Coronary Artery Disease: Assessing the Microcirculation](https://pmc.ncbi.nlm.nih.gov/articles/PMC10019932/). *Interventional Cardiology Clinics*. 2023;12:265–278.
 - Brassard P, et al. [Regulation of cerebral blood flow in humans: physiology and clinical implications of autoregulation](https://pmc.ncbi.nlm.nih.gov/articles/PMC8576366/). *Physiological Reviews*. 2021;101:1487–1559.
 - Ballabh P, Braun A, Nedergaard M. [Anatomy and Physiology of the Blood-Brain Barrier](https://pmc.ncbi.nlm.nih.gov/articles/PMC4397166/). *Seminars in Cell & Developmental Biology*. 2015;38:2–7.
 - Edwards A, Kurtcuoglu V. [Renal blood flow and oxygenation](https://pmc.ncbi.nlm.nih.gov/articles/PMC9338895/). *Pflügers Archiv*. 2022;474:759–770.
 - Hopkins SR, Stickland MK. [The Pulmonary Vasculature](https://pmc.ncbi.nlm.nih.gov/articles/PMC11192587/). *Seminars in Respiratory and Critical Care Medicine*. 2023;44:538–554.
 - Hong KS, Kim K. [Skeletal muscle contraction-induced vasodilation in the microcirculation](https://pmc.ncbi.nlm.nih.gov/articles/PMC5667595/). *Journal of Exercise Rehabilitation*. 2017;13:502–507.
+- Poole DC, et al. [Capillary-Mitochondrial Oxygen Transport in Muscle: Paradigm Shifts](https://pmc.ncbi.nlm.nih.gov/articles/PMC10165549/). *Function*. 2023;4:zqad013.
 - Charkoudian N. [Mechanisms and modifiers of reflex induced cutaneous vasodilation and vasoconstriction in humans](https://pmc.ncbi.nlm.nih.gov/articles/PMC2963327/). *Journal of Applied Physiology*. 2010;109:1221–1228.
 - Eipel C, Abshagen K, Vollmar B. [Regulation of hepatic blood flow: The hepatic arterial buffer response revisited](https://pmc.ncbi.nlm.nih.gov/articles/PMC3012579/). *World Journal of Gastroenterology*. 2010;16:6046–6057.
 - Hall JE, Hall ME. [Guyton and Hall Textbook of Medical Physiology, 15th ed.](https://evolve.elsevier.com/cs/product/9780443111013?role=student). Elsevier, 2025.
 - Boron WF, Boulpaep EL. [Medical Physiology, 3rd ed.](https://evolve.elsevier.com/cs/product/9781455743773?role=faculty). Elsevier, 2016.
 
 [^coronary-flow]: 左、右心室冠脉血流的相位差、心肌外压、供需匹配及血流储备参见 Duncker 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC5856234/)和 Tune 的[综合综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC5966026/)。
+[^coronary-flow-reserve]: CFR 定义为最大充血冠脉血流与静息冠脉血流之比；它综合反映心外膜冠脉和微循环，并受静息血流动力学影响，见 Rahman 等的[冠脉微循环评估综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC10019932/)和 Meuwissen 等的[冠脉微血管阻力综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC2722717/)。
 [^cerebral-flow]: 脑压力自身调节的动态性、CO$_2$ 反应和神经血管耦联参见 Brassard 等的[人体脑血流综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC8576366/)。
 [^blood-brain-barrier]: 血脑屏障的内皮紧密连接、神经血管单元和载体／受体介导运输参见 Ballabh 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4397166/)。
 [^renal-flow]: 肾血流的肌源性反应、管球反馈及入球—出球阻力调节参见 Edwards 与 Kurtcuoglu 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9338895/)。
 [^renal-oxygenation]: 肾皮质—髓质血流分区、氧分流和转运耗氧的关系参见 Edwards 与 Kurtcuoglu 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9338895/)。
 [^pulmonary-vasculature]: 肺血管的低阻力特征、募集／扩张、肺容积依赖性及缺氧性收缩参见 Hopkins 与 Stickland 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC11192587/)。
-[^skeletal-muscle-flow]: 活动肌的代谢性舒张、传导反应及功能性交感逸脱参见 Hong 与 Kim 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC5667595/)。
+[^skeletal-muscle-flow]: 活动肌的代谢性舒张、传导反应及功能性交感逸脱参见 Hong 与 Kim 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC5667595/)；静息肌多数毛细血管已有红细胞通量，收缩时以通量、速度、管内血细胞比容和空间分布改变提高交换，见 Poole 等的[骨骼肌毛细血管—线粒体氧运输综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC10165549/)。
 [^cutaneous-flow]: 人类有毛与无毛皮肤的交感缩血管、主动舒血管和动静脉吻合差异参见 Charkoudian 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC2963327/)。
 [^hepatic-buffer]: 门静脉—肝动脉耦联、肝动脉缓冲反应及腺苷假说边界参见 Eipel 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3012579/)。

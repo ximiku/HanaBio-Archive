@@ -20,7 +20,7 @@
 
 ## 全血的组成依赖性流变性质 { #whole-blood-properties }
 
-血液密度受细胞体积分数、细胞内容物和血浆组成共同影响；循环阻力则主要受全血流变性质影响，密度的解释作用相对有限。血浆在许多生理测量条件下可近似为牛顿流体，而含大量可变形红细胞的全血呈明显非牛顿行为。全血的表观黏度会随 Hct、血浆黏度、红细胞聚集与变形能力、温度和剪切率改变；低剪切时聚集使表观黏度升高，剪切增强后聚集解离并出现剪切变稀。血浆黏度也由多种蛋白质共同塑造，不能简单归因于白蛋白含量。[^blood-rheology]
+血液密度受细胞体积分数、细胞内容物和血浆组成共同影响；循环阻力则主要受全血流变性质影响，密度的解释作用相对有限。血浆在许多生理测量条件下可近似为牛顿流体，而含大量可变形红细胞的全血呈明显非牛顿行为。全血的表观黏度会随红细胞比容（hematocrit，Hct）、血浆黏度、红细胞聚集与变形能力、温度和剪切率改变；低剪切时聚集使表观黏度升高，剪切增强后聚集解离并出现剪切变稀。血浆黏度也由多种蛋白质共同塑造，不能简单归因于白蛋白含量。[^blood-rheology]
 
 这些性质还随血管尺度改变。在细小血管中，红细胞趋向轴流并在近壁形成相对少细胞层，分叉处还可发生不均等分配；用大管内均一连续流体得到的黏度或阻力，不能不加条件地套到每条微血管。反过来，红细胞变形能力下降、聚集增强或 Hct 改变，也会改变微循环中的流动分布。血液流变既是组分性质，也是细胞—血浆—管壁在特定流场中的系统性质。
 
@@ -41,12 +41,12 @@ Hct 是采样血液中红细胞所占的体积分数。它可因红细胞总量�
 若已知某种示踪物进入目标区室的量，并能在充分混匀后测得其浓度，最基本的守恒关系是
 
 $$
-V = \frac{M_{\mathrm{injected}}-M_{\mathrm{lost}}}{C_0}
+V = \frac{M_{\mathrm{injected}}}{C_0}.
 $$
 
-其中 $V$ 是示踪物的表观分布容积，$M_{\mathrm{lost}}$ 包括测量前已逸出或被清除的量，$C_0$ 是校正混匀和消失后外推的初始浓度。计算本身很简单，区室特异性、混匀、取样时点、外逸、代谢和检测回收率才是估计的主要误差来源。
+其中 $V$ 是示踪物的表观分布容积，$M_{\mathrm{injected}}$ 是实际进入循环的示踪物量，$C_0$ 是将充分混匀后的浓度—时间消失曲线反向外推至注射时刻所得的理论初始浓度。这个 $C_0$ 已经校正了取样前的外逸或清除，不能再从分子重复扣除同一损失；若改用某一实际时点的浓度 $C_t$，才应与该时点仍留在区室内的示踪物量 $M_t$ 配对为 $V=M_t/C_t$。区室特异性、混匀、取样时点、外逸、代谢和检测回收率是估计的主要误差来源。[^indicator-dilution]
 
-Evans blue（T-1824）进入血液后主要与白蛋白结合，历史上用于估计血浆容积；多时点取样并将消失曲线外推到零时，比把单次浓度视为瞬时完全混匀更可靠。放射性标记白蛋白等也可追踪血浆空间，标记的自体红细胞则可估计红细胞容积。由一个区室和静脉 Hct 反算总血量时，还必须考虑全身 Hct、夹带血浆和示踪物行为，所以
+伊文思蓝（Evans blue，T-1824）进入血液后主要与白蛋白结合，历史上用于估计血浆容积；多时点取样并将消失曲线外推到零时，比把单次浓度视为瞬时完全混匀更可靠。放射性标记白蛋白等也可追踪血浆空间，标记的自体红细胞则可估计红细胞容积。由一个区室和静脉 Hct 反算总血量时，还必须考虑全身 Hct、夹带血浆和示踪物行为，所以
 “血浆容积除以 $1-\mathrm{Hct}$”只能展示理想守恒关系，不能替代经过标准化的测量程序。[^indicator-dilution]
 
 ## 串联循环与并联器官床 { #circulatory-architecture }
@@ -57,7 +57,7 @@ Evans blue（T-1824）进入血液后主要与白蛋白结合，历史上用于�
 
 ## 循环系统的压力、流量、容积与交换 { #circulatory-state-variables }
 
-对一段血管，在平均、稳态且可把流动近似为集总参数时，容积流量可写为 $Q=\Delta P/R$。这不是说压力“等于”流量：同一压差在阻力改变后可产生不同流量，同一流量也可由不同压力与阻力组合维持。心输出量 $CO=HR\times SV$ 给出单位时间由一侧心室射出的血量，却不说明血流怎样分到各器官，更不保证毛细血管内交换有效。完整的血流动力学和模型边界见[血管生理](blood_vessel.md#pressure-flow-resistance)。
+对一段血管，在平均、稳态且可把流动近似为集总参数时，容积流量可写为 $Q=\Delta P/R$。这不是说压力“等于”流量：同一压差在阻力改变后可产生不同流量，同一流量也可由不同压力与阻力组合维持。心输出量（cardiac output，CO）等于心率（heart rate，HR）与搏出量（stroke volume，SV）的乘积，即 $CO=HR\times SV$；它给出单位时间由一侧心室射出的血量，却不说明血流怎样分到各器官，更不保证毛细血管内交换有效。完整的血流动力学和模型边界见[血管生理](blood_vessel.md#pressure-flow-resistance)。
 
 | 观察量 | 首先回答的问题 | 单独使用时不能推出什么 |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ Evans blue（T-1824）进入血液后主要与白蛋白结合，历史上用于�
 
 ## 血液与循环子页的阅读脉络 { #reading-map }
 
-本组页面分别承接血液组成、泵、管网与调节机制，减少相同机制在不同章节中的重复。阅读时可先判断问题落在介质、泵、管网还是调节层，再沿接口进入相应子页。
+以下八个子页分别展开血液组成、泵、管网与调节机制。阅读时可先判断问题落在介质、泵、管网还是调节层，再沿接口进入相应子页。
 
 | 子页 | 核心问题 | 与总论的接口 |
 | --- | --- | --- |
@@ -102,9 +102,9 @@ Evans blue（T-1824）进入血液后主要与白蛋白结合，历史上用于�
 - Strobeck JE, Feldschuh J, Miller WL. [Measurement of Blood Volume in Patients with Heart Failure: Clinical Relevance, Surrogates, Historical Background and Contemporary Methodology](https://pmc.ncbi.nlm.nih.gov/articles/PMC10339432/). *Journal of Clinical Medicine*. 2023;12:4450.
 
 [^textbook-framework]: 血液、心脏与血管作为相互依赖的运输系统，以及肺循环与体循环的整体框架，见 Hall 与 Hall 的[*Guyton and Hall Textbook of Medical Physiology* 第 15 版](https://evolve.elsevier.com/cs/product/9780443111013?role=student)和 OpenStax 的[血液概述](https://openstax.org/books/anatomy-and-physiology-2e/pages/18-1-an-overview-of-blood)。
-[^plasma-physiology]: 血浆成分、主要蛋白来源及运输、胶体渗透和缓冲功能的概览见 NCBI Bookshelf 的[血浆生理](https://www.ncbi.nlm.nih.gov/books/NBK531504/)；该概览中的固定比例和临床用途未作为本页的普适阈值使用。
+[^plasma-physiology]: 血浆成分、主要蛋白来源及运输、胶体渗透和缓冲功能的概览见 NCBI Bookshelf 的[血浆生理](https://www.ncbi.nlm.nih.gov/books/NBK531504/)；其中固定比例和临床用途不宜脱离人群、状态与测量方法作为普适阈值。
 [^serum-plasma]: 血清与血浆的制备边界见 NCBI Bookshelf 的[血清白蛋白与球蛋白](https://www.ncbi.nlm.nih.gov/books/NBK204/)；凝固及血小板释放会系统改变蛋白、脂质介质和代谢物谱，见 Lesche 等的[血清—血浆多组学比较](https://pubmed.ncbi.nlm.nih.gov/38520676/)。
 [^blood-rheology]: 全血的剪切变稀、Hct、红细胞聚集／变形及血浆黏度之间的关系，见 Baskurt 与 Meiselman 的[血液流变综述](https://pubmed.ncbi.nlm.nih.gov/14631543/)及 Nader 等的[更新综述](https://pubmed.ncbi.nlm.nih.gov/31749708/)。
 [^blood-volume-interpretation]: 体重单独预测血量的局限、静脉与全身红细胞比容差异、夹带血浆及标准化解释，见 ICSH 专家组的[红细胞量与血浆容积建议](https://doi.org/10.1111/j.1365-2141.1995.tb08411.x)。
-[^indicator-dilution]: Evans blue 多点稀释、消失曲线校正与重复测量见 Foldager 与 Blomqvist 的[方法研究](https://pubmed.ncbi.nlm.nih.gov/2044359/)；示踪物选择、标记红细胞／白蛋白及当代血容量测量边界见 Strobeck 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC10339432/)。
+[^indicator-dilution]: 伊文思蓝多点稀释、消失曲线校正与重复测量见 Foldager 与 Blomqvist 的[方法研究](https://pubmed.ncbi.nlm.nih.gov/2044359/)；零时反向外推、示踪物选择、标记红细胞／白蛋白及当代血容量测量边界见 Strobeck 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC10339432/)。
 [^circulation-architecture]: 血管功能分段、并联器官床、压力—流量—阻力及容量血管的教学框架见 OpenStax 的[血管结构与功能](https://openstax.org/books/anatomy-and-physiology-2e/pages/20-1-structure-and-function-of-blood-vessels)和[血流、血压与阻力](https://openstax.org/books/anatomy-and-physiology-2e/pages/20-2-blood-flow-blood-pressure-and-resistance)。

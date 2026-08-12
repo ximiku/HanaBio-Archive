@@ -2,7 +2,7 @@
 
 生理学研究生命活动怎样发生、怎样被协调，以及生物体怎样在变化的环境中继续工作。离子通道为何产生电信号，心脏怎样把压力转化为血流，肾脏如何凭借滤过和选择性转运调节体液，运动时多个器官又怎样重新分配氧、底物和热量——这些问题需要跨越分子、细胞、组织、器官和整体建立解释。生理学既追踪局部机制，也检验这些机制放回完整生物体后能否解释可观察的功能。[^physiology-scope]
 
-本栏目以人和其他动物的共同生理原则为主。人体生理提供临床和健康问题的接口，比较生理则让不同体型、生活史和环境中的解决方案彼此映照；两者共享结构—功能、通量、反馈和系统整合等解释框架。具体疾病机制进入[病理生理学总论](pathophysiology/index.md)，神经回路、免疫效应和细胞器装置分别由神经、免疫和细胞栏目展开，由此形成明确的栏目边界。
+本栏目以人和其他动物的共同生理原则为主。人体生理提供临床和健康问题的接口，比较生理则让不同体型、生活史和环境中的解决方案彼此映照；两者共享结构—功能、通量、反馈和系统整合等解释框架。疾病中的原发扰动、代偿与失代偿见[病理生理学总论](pathophysiology/index.md)；神经回路、免疫效应和细胞器装置的专门机制分别见[神经生物学](../neuro/index.md)、[免疫学](../immunology/index.md)和[细胞生物学](../cell/index.md)。
 
 ## 功能问题与机制解释 { #function-and-mechanism }
 
@@ -10,7 +10,7 @@
 
 结构与功能的关系是双向的。肺泡和毛细血管形成面积大、距离短的交换界面，使气体扩散成为可能；长期机械负荷、激素或活动方式又会改变组织结构，从而移动此后的功能边界。分子构象、细胞极性、组织几何和器官连接方式都是生理机制的组成部分，解剖结构也会在功能活动中持续重塑。[^core-concepts]
 
-生理量还必须附带测量定义。血压是压力，心输出量是单位时间的容积流量，血容量是存量，氧输送则同时依赖血流和动脉氧含量，各指标对应不同物理量。浓度描述溶质相对溶剂或溶液体积的比例，全身总量则还取决于区室体积；血浆 Na$^+$ 浓度主要反映水与可交换钠、钾的相对关系。明确“测到的究竟是什么”，是生理推理的起点。
+生理量还必须附带量纲和测量定义。血压是压力，心输出量是单位时间的容积流量，血容量是存量，氧输送则同时依赖血流和动脉氧含量，各指标对应不同物理量。物质的量浓度是单位溶液体积中的物质的量，质量浓度、质量分数和渗透质浓度则是另外的量；任一浓度都不能单独代替区室内的总量。在多数常见条件下，血浆钠离子（Na$^+$）浓度近似取决于全身可交换 Na$^+$ 与 K$^+$ 之和相对于总体水的关系；其他有效渗透物增多或血浆固相比例异常时，还要考虑转位性改变或测量偏差。明确“测到的究竟是什么”，是生理推理的起点。[^plasma-sodium]
 
 ## 生理层级与系统整合 { #levels-and-integration }
 
@@ -36,7 +36,7 @@ $$
 
 多细胞动物把多数细胞置于相对受控的细胞外液环境中。Claude Bernard 在十九世纪强调内部环境对自由生命的重要性，Walter Cannon 随后以 *homeostasis* 概括维持这种稳定的协调过程；William Harvey 更早对血液循环作出的定量与实验论证，则以整体物质账本建立循环模型。这些工作共同推动生理学转向可测量的循环、调节和系统因果。[^physiology-history]
 
-稳态维持的是随时间和情境变化的运行范围。体温有昼夜变化，动脉压随姿势和运动改变，餐后血糖和激素水平也会按状态有组织地移动。分析时需要明确哪些变量受到调节、允许在什么范围和时间尺度内变化、感受器实际读取什么信号、效应器怎样改变通量，以及系统为此付出什么代价。[内环境与稳态](internal_env.md)将进一步区分受调变量、设定点或运行范围、负反馈、正反馈与前馈。
+稳态维持的是随时间和情境变化的运行范围。体温有昼夜变化，动脉压随姿势和运动改变，餐后血糖和激素水平也会按状态有组织地移动。分析时需要明确哪些变量受到调节、允许在什么范围和时间尺度内变化、感受器实际读取什么信号、效应器怎样改变通量，以及系统为此付出什么代价。[内环境与稳态](internal_env.md)详细区分受调变量、设定点或运行范围、负反馈、正反馈与前馈。
 
 负反馈能够减小扰动后的偏差，但真实回路存在延迟、增益限制和多个目标之间的冲突。运动时维持动脉压、活动肌灌流和散热会争用有限循环能力；禁食时维持血糖又会改变脂肪和蛋白质通量。生理调节因此按优先级在多个目标之间折中。
 
@@ -46,7 +46,7 @@ $$
 
 研究层级改变能回答的问题。在体研究保留循环、神经、内分泌和行为的耦联，却较难隔离单一机制；离体器官或组织保留部分空间结构，同时失去许多全身输入；体外细胞和分子体系便于控制条件与解析局部反应，却可能远离生理浓度、力学环境和成熟表型。计算模型、无创人体测量和临床自然实验又提供其他证据窗口。各类模型以不同代价换取控制度、可测性与整体相关性，彼此形成互补证据。[^experimental-models]
 
-急性与慢性设计分别侧重不同的调节层次。快速扰动常暴露已有蛋白、离子储备和反射回路，长期负荷还会募集转录、细胞更新和结构重塑；麻醉、手术创伤、昼夜相位、营养状态和取样过程本身都可能改变被测系统。具体实验操作、动物伦理和研究设计规范由实验栏目承接，本页保留判读模型边界所需的概念。
+急性与慢性设计分别侧重不同的调节层次。快速扰动常暴露已有蛋白、离子储备和反射回路，长期负荷还会募集转录、细胞更新和结构重塑；麻醉、手术创伤、昼夜相位、营养状态和取样过程本身都可能改变被测系统。具体实验操作、动物伦理和研究设计规范见[实验技术](../exptech/index.md)；不论采用哪种模型，机制结论都应附带对应的组织层级、时间尺度和实验条件。
 
 ## 生理调节的时间尺度 { #time-scales }
 
@@ -78,6 +78,7 @@ $$
 
 [^physiology-scope]: [The Physiological Society: What is physiology?](https://www.physoc.org/explore-physiology/what-is-physiology/)。该学会以离子与分子、细胞、器官系统、整体行为和外界环境之间的整合作为生理学的范围。
 [^core-concepts]: Michael J, Cliff W, McFarland J, et al. [The “core principles” of physiology: what should students understand?](https://doi.org/10.1152/advan.90139.2008). *Advances in Physiology Education*. 2009;33:10–16；Michael J, Martinkova P, McFarland J, et al. [Another look at the core concepts of physiology: revisions and resources](https://doi.org/10.1152/advan.00114.2020). *Advances in Physiology Education*. 2021;45:752–762。
+[^plasma-sodium]: Seay NW, Lehrich RW, Greenberg A. [Diagnosis and Management of Disorders of Body Tonicity—Hyponatremia and Hypernatremia: Core Curriculum 2020](https://pubmed.ncbi.nlm.nih.gov/32097923/). *American Journal of Kidney Diseases*. 2020;75:272–286；Tzamaloukas AH, et al. [Edelman Revisited: Concepts, Achievements, and Challenges](https://pmc.ncbi.nlm.nih.gov/articles/PMC8784663/). *Frontiers in Medicine*. 2022;8:808765。简化的 Edelman 关系用可交换 Na$^+$、K$^+$ 与总体水解释血清／血浆水 Na$^+$ 浓度的主要变化；高血糖等其他有效渗透物和间接离子选择电极下的假性低钠血症需单独辨认。
 [^mass-balance]: American Physiological Society. [The Definitions and Explanations of the 14 Core Concepts](https://www.physiology.org/docs/default-source/cpe-docs/core-concepts-of-physiology---definitions.pdf)。其中将质量守恒、梯度驱动、组织层级、科学推理和系统整合列为通用框架。
 [^physiology-history]: Cooper SJ. [From Claude Bernard to Walter Cannon: emergence of the concept of homeostasis](https://pubmed.ncbi.nlm.nih.gov/18634840/). *Appetite*. 2008;51:419–427；Billman GE. [Homeostasis: The Underappreciated and Far Too Often Ignored Central Organizing Principle of Physiology](https://pubmed.ncbi.nlm.nih.gov/32210840/). *Frontiers in Physiology*. 2020;11:200。
 [^harvey-systems]: Auffray C, Noble D. [Origins of systems biology in William Harvey's masterpiece on the movement of the heart and the blood in animals](https://pubmed.ncbi.nlm.nih.gov/19468331/). *International Journal of Molecular Sciences*. 2009;10:1658–1669；Rampling MW. [The history of the theory of the circulation of the blood](https://pubmed.ncbi.nlm.nih.gov/27791994/). *Clinical Hemorheology and Microcirculation*. 2016;64:541–549。

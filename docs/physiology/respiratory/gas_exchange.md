@@ -6,13 +6,13 @@
 
 混合气体中某组分的分压等于该组分摩尔分数与总压的乘积。吸入气进入上气道后被水蒸气饱和，干燥空气的总压不再全部由 O$_2$、N$_2$ 等气体分担；在体温下计算吸入氧分压时，应先从大气压中扣除水蒸气分压。肺泡气又持续接受静脉血带来的 CO$_2$ 并向血液失去 O$_2$，所以其组成不同于吸入气。呼出气则混合了解剖无效腔中较接近吸入气的部分与肺泡气，不能直接视为一份均一的“肺泡样品”。[^respiratory-gas-laws]
 
-稳态、吸入气中 CO$_2$ 很低并采用近似呼吸商 $R$ 时，肺泡气体方程可写成：
+稳态、吸入气中 CO$_2$ 很低并采用近似呼吸交换比（respiratory exchange ratio，$R$）时，肺泡气体方程可写成：
 
 $$
 P_{A\mathrm O_2}\approx F_{I\mathrm O_2}(P_B-P_{H_2O})-\frac{P_{a\mathrm{CO}_2}}{R}
 $$
 
-其中 $P_{A\mathrm O_2}$ 是肺泡氧分压，$F_{I\mathrm O_2}$ 是吸入氧分数，$P_B$ 是大气压。肺泡 CO$_2$ 与充分交换后的动脉 $P_{a\mathrm{CO}_2}$ 通常很接近；后者在代谢性 CO$_2$ 生成相对稳定时与肺泡通气量成反比。这个近似式说明，高原降低 $P_B$、低通气升高 $P_{a\mathrm{CO}_2}$，都会压低肺泡氧分压，但二者不能由同一种机制解释。肺泡—动脉氧分压差还可帮助区分单纯低吸入氧／低通气与 V/Q 不均、弥散限制或分流，不过具体判读必须同时交代吸入氧、年龄和测量条件。[^alveolar-gas-equation]
+其中 $P_{A\mathrm O_2}$ 是肺泡氧分压，$F_{I\mathrm O_2}$ 是吸入氧分数，$P_B$ 是大气压，$P_{H_2O}$ 是体温下饱和水蒸气分压。稳态时呼吸交换比接近细胞代谢的呼吸商（respiratory quotient，RQ）。肺泡 CO$_2$ 与充分交换后的动脉 $P_{a\mathrm{CO}_2}$ 通常很接近；后者在代谢性 CO$_2$ 生成相对稳定时与肺泡通气量成反比。这个近似式说明，高原降低 $P_B$、低通气升高 $P_{a\mathrm{CO}_2}$，都会压低肺泡氧分压，但二者不能由同一种机制解释。肺泡—动脉氧分压差（alveolar–arterial oxygen difference，A–a 氧差）还可帮助区分单纯低吸入氧／低通气与通气—灌流比（ventilation–perfusion ratio，V/Q）不均、弥散限制或分流，不过具体判读必须同时交代吸入氧、年龄和测量条件。[^alveolar-gas-equation]
 
 气体净扩散方向由分压梯度决定；总含量则由溶解量与结合量共同组成。血红蛋白结合大量 O$_2$ 后，血液总氧含量可以很高，直接建立扩散梯度的仍是血浆中物理溶解 O$_2$ 所对应的分压。结合态与溶解态迅速再平衡，使血红蛋白能够在分压仅逐步变化时连续装载或释放氧。
 
@@ -26,7 +26,7 @@ $$
 \dot V_{\mathrm{gas}}=D_{\mathrm{gas}}\frac{A}{T}(P_A-P_c)
 $$
 
-$A$ 是可交换面积，$T$ 是有效扩散距离，$P_A-P_c$ 是肺泡与毛细血管之间的分压差；扩散系数 $D_{\mathrm{gas}}$ 近似随气体在组织中的溶解度增加、随分子量平方根增加而减小。CO$_2$ 分子量虽大于 O$_2$，但溶解度高得多，因此穿越同一屏障的扩散能力明显更高。不能只看分子量判断哪种气体“扩散快”。[^respiratory-gas-laws]
+$A$ 是可交换面积，$T$ 是有效扩散距离，$P_A-P_c$ 是肺泡与毛细血管之间的分压差。式中的有效扩散系数 $D_{\mathrm{gas}}$ 同时纳入气体在组织中的溶解度和分子扩散，因而近似随溶解度增加、随分子量平方根增加而减小。CO$_2$ 分子量虽大于 O$_2$，但溶解度高得多，因此穿越同一屏障的扩散能力明显更高。不能只看分子量判断哪种气体“扩散快”。[^respiratory-gas-laws]
 
 所谓肺泡—毛细血管屏障不是一张独立薄膜，而是肺泡表面液层与Ⅰ型肺泡上皮、两侧基底膜及其间质、毛细血管内皮、血浆，直至红细胞膜和血红蛋白的连续路径。间质增厚会增加扩散距离，肺泡隔破坏会减少交换面积；运动时毛细血管募集和扩张、交换面积增大，又可提高整体气体转移能力。肺内巨噬细胞承担清除颗粒和病原相关物的防御任务，但它们并不是构成每一次 O$_2$/CO$_2$ 扩散的固定“膜层”。
 
@@ -34,7 +34,7 @@ $A$ 是可交换面积，$T$ 是有效扩散距离，$P_A-P_c$ 是肺泡与毛�
 
 若血液流出肺毛细血管前已与肺泡气达到分压平衡，继续增加屏障转移能力不会明显增加该单位的摄取，气体交换更受灌流量限制。健康人静息、海平面呼吸空气时，O$_2$ 通常在毛细血管前段就接近平衡；运动缩短毛细血管通行时间后仍常保留一定余量。高海拔降低肺泡氧分压、弥漫性间质病增加屏障距离、肺气肿减少面积，或极高血流缩短通行时间时，O$_2$ 可表现出更显著的弥散限制。[^mechanisms-hypoxemia]
 
-CO 与血红蛋白的亲和力很高，少量吸入 CO 在通过毛细血管时被迅速结合，使毛细血管 CO 分压在测量近似中维持很低。因此单次呼吸 CO 摄取试验以肺泡 CO 的消失估算 $D_{LCO}$。所得值并非一张膜的纯几何参数，还受肺泡容积、血红蛋白浓度、肺毛细血管血容量、吸气与屏气动作及测量条件影响；规范报告需按技术标准完成质量控制和必要校正。[^dlco-standard]
+一氧化碳（carbon monoxide，CO）与血红蛋白的亲和力很高，少量吸入 CO 在通过毛细血管时被迅速结合，使毛细血管 CO 分压在测量近似中维持很低。因此单次呼吸 CO 摄取试验以肺泡 CO 的消失估算肺一氧化碳弥散能力（diffusing capacity of the lung for carbon monoxide，$D_{LCO}$）。所得值并非一张膜的纯几何参数，还受肺泡容积、血红蛋白浓度、肺毛细血管血容量、吸气与屏气动作及测量条件影响；规范报告需按技术标准完成质量控制和必要校正。[^dlco-standard]
 
 ## 肺内通气—灌流匹配 { #ventilation-perfusion }
 
@@ -56,31 +56,32 @@ CO 与血红蛋白的亲和力很高，少量吸入 CO 在通过毛细血管时�
 
 ### 氧分压、饱和度与含量 { #oxygen-variables }
 
-血中 O$_2$ 一小部分物理溶解，其余与血红蛋白可逆结合。每个血红蛋白四聚体有四个亚铁血红素，最多结合四个 O$_2$；这个过程是氧合，不把 $\mathrm{Fe^{2+}}$ 氧化成 $\mathrm{Fe^{3+}}$。动脉血氧含量可按下式近似：
+血中 O$_2$ 一小部分物理溶解，其余与血红蛋白可逆结合。每个血红蛋白四聚体有四个亚铁血红素，最多结合四个 O$_2$；这个过程是氧合，不把 $\mathrm{Fe^{2+}}$ 氧化成 $\mathrm{Fe^{3+}}$。若把总血红蛋白中处于氧合状态的分数记为 $F_{a\mathrm O_2Hb}$，动脉血氧含量可按下式近似：
 
 $$
-C_{a\mathrm O_2}=1.34[\mathrm{Hb}]S_{a\mathrm O_2}+0.0031P_{a\mathrm O_2}
+C_{a\mathrm O_2}=1.34[\mathrm{Hb}]F_{a\mathrm O_2Hb}+0.0031P_{a\mathrm O_2}
 $$
 
-当血红蛋白浓度以 g/dL、$P_{a\mathrm O_2}$ 以 mmHg 表示且饱和度写成 0—1 的小数时，$C_{a\mathrm O_2}$ 的单位为 mL O$_2$/dL。1.34 与 0.0031 都是有测量条件的近似系数，不应脱离单位套用。公式也说明，只看 $P_{a\mathrm O_2}$ 会漏掉血红蛋白浓度和异常血红蛋白造成的携氧变化。[^oxygen-content]
+当血红蛋白浓度 $[\mathrm{Hb}]$ 以 g/dL、$P_{a\mathrm O_2}$ 以 mmHg 表示且 $F_{a\mathrm O_2Hb}$ 写成 0—1 的小数时，$C_{a\mathrm O_2}$ 的单位为 mL O$_2$/dL。1.34 与 0.0031 都是有测量条件的近似系数，不应脱离单位套用。异常血红蛋白比例可忽略时，$F_{a\mathrm O_2Hb}$ 与动脉血氧饱和度 $S_{a\mathrm O_2}$ 数值接近；一氧化碳血红蛋白或高铁血红蛋白升高时，二者必须区分，并以多波长共氧测定所得的血红蛋白分数评估实际含量。[^oxygen-content][^oxygen-saturation-terms]
 
 | 量 | 主要含义 | 不能单独回答的问题 |
 | --- | --- | --- |
 | $P_{a\mathrm O_2}$ | 动脉血溶解 O$_2$ 所对应的分压；决定与饱和度的平衡位置 | 每分升血实际带多少氧 |
-| $S_{a\mathrm O_2}$ | 可参与测量的血红蛋白氧结合位点中氧合所占比例 | 血红蛋白浓度是否充足；COHb、MetHb 是否被正确区分 |
+| $S_{a\mathrm O_2}$ | 动脉血中可携氧血红蛋白的氧结合位点被占据的比例 | 血红蛋白总浓度及异常衍生物所占比例 |
+| $F_{a\mathrm O_2Hb}$ | 氧合血红蛋白占总血红蛋白的分数，其分母包括一氧化碳血红蛋白（carboxyhemoglobin，COHb）和高铁血红蛋白（methemoglobin，MetHb） | 血液流量和器官分配 |
 | $C_{a\mathrm O_2}$ | 结合氧与溶解氧之和 | 每分钟流向组织的血量 |
 | $D_{\mathrm O_2}$ | 心输出量与动脉氧含量的乘积 | 各器官如何分配血流、组织是否能利用氧 |
 | $S_{\bar v\mathrm O_2}$ | 混合静脉血氧饱和度，反映全身输送与提取的综合结果 | 单个器官的局部缺血位置 |
 
-贫血时 $P_{a\mathrm O_2}$ 和血红蛋白饱和度可以正常，$C_{a\mathrm O_2}$ 却因血红蛋白减少而下降；循环衰竭时三者都可接近正常，单位时间送达组织的氧仍会因血流不足而下降。相反，单纯把 $P_{a\mathrm O_2}$ 降低称为“组织缺氧”也跨过了血红蛋白、心输出量、器官分配和提取多个中间环节。低氧血症与组织缺氧的完整病理整合留给[缺氧](../pathophysiology/hypoxia.md)。
+贫血时 $P_{a\mathrm O_2}$ 和血红蛋白饱和度可以正常，$C_{a\mathrm O_2}$ 却因血红蛋白减少而下降；循环衰竭时三者都可接近正常，单位时间送达组织的氧仍会因血流不足而下降。相反，单纯把 $P_{a\mathrm O_2}$ 降低称为“组织缺氧”也跨过了血红蛋白、心输出量、器官分配和提取多个中间环节。[缺氧](../pathophysiology/hypoxia.md)进一步整合低氧血症、氧含量、血流与细胞利用障碍。
 
 ### 氧解离曲线与氧的装载、卸载 { #oxygen-dissociation-curve }
 
-血红蛋白四个位点通过亚基界面相互耦联，氧结合使构象集合从低亲和力 T 态一侧偏向高亲和力 R 态，后续氧更易结合，因而饱和度—氧分压关系呈 S 形。T/R 是描述构象平衡的端点模型，不是每个分子只能在两种刚性形状间瞬间翻转；分子结构、Hill 方程和肌红蛋白对照见[蛋白质功能](../../biochem/protein_function.md#hemoglobin-cooperativity-allostery)。[^oxygen-transport]
+血红蛋白四个位点通过亚基界面相互耦联，氧结合使构象集合从低亲和力紧张态（tense state，T 态）一侧偏向高亲和力松弛态（relaxed state，R 态），后续氧更易结合，因而饱和度—氧分压关系呈 S 形。T／R 是描述构象平衡的端点模型，不是每个分子只能在两种刚性形状间瞬间翻转；分子结构、Hill 方程和肌红蛋白对照见[蛋白质功能](../../biochem/protein_function.md#hemoglobin-cooperativity-allostery)。[^oxygen-transport]
 
 曲线高分压段较平，肺泡氧分压在一定范围波动时仍能维持较高饱和度；中低分压段较陡，组织 $P_{\mathrm O_2}$ 下降会释放较大比例的结合氧。$P_{50}$ 是血红蛋白达到 50% 饱和所需的氧分压：$P_{50}$ 增大表示表观亲和力降低、曲线右移，$P_{50}$ 减小则表示亲和力升高、曲线左移。所谓“上段、中段、下段”只是读图区域，不代表血红蛋白分三步独立工作。
 
-代谢活跃组织中 CO$_2$ 与 H$^+$ 增加，使血红蛋白氧亲和力降低并促进卸载，这一耦联是 Bohr 效应。温度升高与 2,3-BPG 增加分别通过热力学和别构机制使曲线右移；Bohr 效应专指 H$^+$／CO$_2$ 对氧亲和力的影响。2,3-BPG 由红细胞 Rapoport–Luebering 旁路生成，优先结合去氧 HbA 中央腔并稳定低亲和力状态；其代谢来源见[糖酵解](../../biochem/emp.md#shunts-and-inhibitors)。HbF 的 γ 链使其结合 2,3-BPG 较弱，因而相对 HbA 左移，有利于胎盘氧转移。[^hemoglobin-effectors]
+代谢活跃组织中 CO$_2$ 与 H$^+$ 增加，使血红蛋白氧亲和力降低并促进卸载，这一耦联是 Bohr 效应。温度升高与 2,3-二磷酸甘油酸（2,3-bisphosphoglycerate，2,3-BPG）增加分别通过热力学和别构机制使曲线右移；Bohr 效应专指 H$^+$／CO$_2$ 对氧亲和力的影响。2,3-BPG 由红细胞 Rapoport–Luebering 旁路生成，优先结合成人血红蛋白（adult hemoglobin，HbA）的去氧构象中央腔并稳定低亲和力状态；其代谢来源见[糖酵解](../../biochem/emp.md#shunts-and-inhibitors)。胎儿血红蛋白（fetal hemoglobin，HbF）的 $\gamma$ 链使其结合 2,3-BPG 较弱，因而相对 HbA 左移，有利于胎盘氧转移。[^hemoglobin-effectors]
 
 CO 一方面占据亚铁血红素、减少可结合氧的位点，另一方面提高剩余位点的氧亲和力、妨碍组织卸载；因此患者可在 $P_{a\mathrm O_2}$ 并未下降时发生严重组织缺氧。高铁血红蛋白中的 $\mathrm{Fe^{3+}}$ 位点不能结合 O$_2$。普通双波长脉搏血氧法也未必能把氧合血红蛋白与这些异常衍生物可靠区分，异常暴露须结合共氧测定等方法解释。[^dyshemoglobins]
 
@@ -88,16 +89,16 @@ CO 一方面占据亚铁血红素、减少可结合氧的位点，另一方面�
 
 ## 组织氧输送、交换与消耗 { #tissue-oxygen-exchange }
 
-氧输送量是血流与血氧含量的乘积。若心输出量以 L/min、$C_{a\mathrm O_2}$ 以 mL/dL 表示，则需乘以 10 完成单位换算：
+氧输送量是血流与血氧含量的乘积。心输出量在以下关系中记为 $\dot Q_{\mathrm{cardiac}}$，以免与一氧化碳的化学式 CO 混淆。若心输出量以 L/min、$C_{a\mathrm O_2}$ 以 mL/dL 表示，则需乘以 10 完成单位换算：
 
 $$
-D_{\mathrm O_2}=\mathrm{CO}\times C_{a\mathrm O_2}\times10
+D_{\mathrm O_2}=\dot Q_{\mathrm{cardiac}}\times C_{a\mathrm O_2}\times10
 $$
 
 全身氧耗可由 Fick 原理连接到动静脉氧含量差：
 
 $$
-\dot V_{\mathrm O_2}=\mathrm{CO}(C_{a\mathrm O_2}-C_{\bar v\mathrm O_2})\times10
+\dot V_{\mathrm O_2}=\dot Q_{\mathrm{cardiac}}(C_{a\mathrm O_2}-C_{\bar v\mathrm O_2})\times10
 $$
 
 这两个关系把肺、血液和循环串在一起。组织代谢增强时可增加局部血流、扩大氧提取并降低局部静脉氧含量；心输出量不足时，即使动脉氧含量正常，全身提取率也可能上升而混合静脉饱和度下降。混合静脉值是各器官不同流量与不同提取的加权结果，不能据此定位某个器官。[^oxygen-supply-demand]
@@ -116,7 +117,7 @@ $$
 \mathrm{CO_2+H_2O\rightleftharpoons HCO_3^-+H^+}
 $$
 
-去氧血红蛋白结合一部分 H$^+$，而 AE1（band 3）介导 HCO$_3^-$／Cl$^-$ 的电中性交换，这就是氯转移；两种阴离子直接穿过脂质双层的通透性很低。血液到达肺后，低 $P_{\mathrm{CO}_2}$ 梯度、氧合和反向 AE1 交换共同推动反应逆转，生成的 CO$_2$ 扩散入肺泡并被通气排出。[^ae1-carbonic-anhydrase]
+去氧血红蛋白结合一部分 H$^+$，而阴离子交换蛋白 1（anion exchanger 1，AE1，又称 band 3）介导 HCO$_3^-$／Cl$^-$ 的电中性交换，这就是氯转移；两种阴离子直接穿过脂质双层的通透性很低。血液到达肺后，肺泡与血液之间的 CO$_2$ 分压梯度、血红蛋白氧合和反向 AE1 交换共同推动反应逆转，生成的 CO$_2$ 扩散入肺泡并被通气排出。[^ae1-carbonic-anhydrase]
 
 一部分 CO$_2$ 还与珠蛋白链 N 端氨基形成氨基甲酸盐，而不是结合在血红素的 O$_2$ 位点。去氧血红蛋白比氧合血红蛋白更能结合 H$^+$ 和形成氨基甲酸化合物；组织卸氧因而促进 CO$_2$ 摄取，肺内氧合则促进 CO$_2$ 和 H$^+$ 释放，这一氧合状态对总 CO$_2$ 容量的影响称为 Haldane 效应。Bohr 效应描述 H$^+$／CO$_2$ 如何改变血红蛋白对 O$_2$ 的亲和力，Haldane 效应描述氧合如何改变血液携带 CO$_2$／H$^+$ 的能力，二者方向相互配合，却不是同一个定义。
 
@@ -141,7 +142,8 @@ $$
 [^mechanisms-hypoxemia]: Sarkar, M. et al. [Mechanisms of hypoxemia](https://pmc.ncbi.nlm.nih.gov/articles/PMC5234199/). *Lung India* 34, 47–60 (2017)。综述比较低吸入氧、低通气、弥散限制、V/Q 不均和分流，并说明低 V/Q 与真性分流对补充氧的不同反应。
 [^dlco-standard]: Graham, B. L. et al. [2017 ERS/ATS standards for single-breath carbon monoxide uptake in the lung](https://pubmed.ncbi.nlm.nih.gov/28049168/). *European Respiratory Journal* 49, 1600016 (2017)。标准同时说明 $D_{LCO}$ 的测量假设、单位、动作质量和影响因素。
 [^vq-relationships]: Petersson, J. & Glenny, R. W. [Gas exchange and ventilation-perfusion relationships in the lung](https://pubmed.ncbi.nlm.nih.gov/25063240/). *European Respiratory Journal* 44, 1023–1041 (2014)。作者指出高 V/Q 所致浪费通气常表现为分钟通气和呼吸功增加，而非必然高碳酸血症。
-[^oxygen-content]: Sarkar, M. et al. [Mechanisms of hypoxemia](https://pmc.ncbi.nlm.nih.gov/articles/PMC5234199/)。文中给出 $C_{a\mathrm O_2}=1.34[\mathrm{Hb}]S_{a\mathrm O_2}+0.0031P_{a\mathrm O_2}$ 的近似，并区分低氧血症与组织缺氧。
+[^oxygen-content]: Sarkar, M. et al. [Mechanisms of hypoxemia](https://pmc.ncbi.nlm.nih.gov/articles/PMC5234199/)。文中给出异常血红蛋白可忽略时以 $S_{a\mathrm O_2}$ 计算氧含量的常用近似，并区分低氧血症与组织缺氧；异常血红蛋白存在时的含量口径另见下一条术语来源。
+[^oxygen-saturation-terms]: 血红蛋白氧饱和度、氧合血红蛋白分数、COHb／MetHb 与总血红蛋白的报告口径，参见 CLSI [C46 血气、pH 及相关测量标准](https://clsi.org/shop/standards/c46/)和 Zijlstra 等的[术语辨析](https://pubmed.ncbi.nlm.nih.gov/18048899/)。
 [^oxygen-transport]: Pittman, R. N. [Oxygen Transport](https://www.ncbi.nlm.nih.gov/books/NBK54103/)。该章系统讨论气体扩散、血红蛋白协同性、$P_{50}$、Bohr 效应、2,3-BPG 与 CO。
 [^hemoglobin-effectors]: Kaufman, D. P. et al. [Physiology, Oxyhemoglobin Dissociation Curve](https://www.ncbi.nlm.nih.gov/books/NBK499818/)；蛋白质结构层面的交叉核验见 [Hemoglobin: Structure, Function and Allostery](https://pmc.ncbi.nlm.nih.gov/articles/PMC7370311/)。
 [^dyshemoglobins]: NCBI Bookshelf, [Oxygen Transport](https://www.ncbi.nlm.nih.gov/books/NBK54103/) 与 [Methemoglobinemia](https://www.ncbi.nlm.nih.gov/books/NBK537317/)。两者分别说明 CO 对容量和剩余位点亲和力的双重影响，以及高铁血红蛋白的氧结合与测量边界。

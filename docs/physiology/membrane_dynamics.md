@@ -12,9 +12,9 @@ $$
 +zF\left(\psi_{\mathrm{i}}-\psi_{\mathrm{o}}\right),
 $$
 
-其中 $a$ 是活度，$z$ 是电荷数，$\psi$ 是电势，$R$、$T$ 和 $F$ 分别为气体常数、绝对温度和法拉第常数。中性溶质的 $z=0$，方向主要由化学势差决定；离子的浓度差与膜电位共同构成电化学势差。若指定方向的 $\Delta G<0$，净转运在热力学上可以自发发生；若 $\Delta G>0$，则必须与 ATP 水解、光能或另一溶质的顺势转运耦联。达到电化学平衡时，两个方向的通量相等，分子仍在持续运动。[^transport-thermodynamics]
+其中 $a$ 是活度，$z$ 是电荷数，$\psi$ 是电势，$R$、$T$ 和 $F$ 分别为气体常数、绝对温度和法拉第常数。中性溶质的 $z=0$，方向主要由化学势差决定；离子的浓度差与膜电位共同构成电化学势差。若指定方向的 $\Delta G<0$，净转运在热力学上可以自发发生；若 $\Delta G>0$，则必须与三磷酸腺苷（adenosine triphosphate，ATP）水解、光能或另一溶质的顺势转运耦联。达到电化学平衡时，两个方向的通量相等，分子仍在持续运动。[^transport-thermodynamics]
 
-浓度梯度只是跨膜驱动力的一部分。带正电离子可能在电场作用下逆浓度方向移动；中性分子即使存在浓度差，若脂双层对它几乎不通透且缺少转运蛋白，实际通量仍可接近零。离子平衡电位、膜电导和多离子共同形成膜电位的过程将在[细胞的电活动](electrical_activity.md)中展开。
+浓度梯度只是跨膜驱动力的一部分。带正电离子可能在电场作用下逆浓度方向移动；中性分子即使存在浓度差，若脂双层对它几乎不通透且缺少转运蛋白，实际通量仍可接近零。离子平衡电位、膜电导和多离子共同形成膜电位的过程见[细胞的电活动](electrical_activity.md)。
 
 ### 转运路径的速率与选择性 { #transport-pathways }
 
@@ -64,15 +64,15 @@ $$
 
 水可以穿过脂双层，也可经水通道蛋白快速通过；不同组织的水通透性因此相差很大。水通道改变达到平衡的速率，却不提供逆渗透方向的能量。细胞外存在较多有效渗透粒子时，水净流出、细胞缩小；外液有效渗透粒子较少时，水净流入，动物细胞可能肿胀甚至破裂。
 
-### 渗透浓度、质量渗透浓度与张力 { #osmolarity-tonicity }
+### 容量渗透摩尔浓度、质量渗透摩尔浓度与张力 { #osmolarity-tonicity }
 
 | 概念 | 常用含义 | 是否取决于具体膜和时间尺度 |
 | --- | --- | --- |
-| 渗透浓度（osmolar concentration） | 每升溶液所含渗透活性粒子数，常用 Osm/L | 否，主要是溶液的粒子浓度性质 |
-| 质量渗透浓度（osmolality） | 每千克溶剂所含渗透活性粒子数，常用 Osm/kg | 否；质量不随温度改变，实验测量常用此量 |
+| 容量渗透摩尔浓度（osmotic concentration，旧称 osmolarity） | 每升溶液所含渗透摩尔数，常用 Osm/L | 否，主要是溶液的粒子浓度性质 |
+| 质量渗透摩尔浓度（osmolality） | 每千克溶剂所含渗透摩尔数，常用 Osm/kg | 否；质量不随温度改变，临床实验测量常用此量 |
 | 张力（tonicity） | 外液在达到相应时间尺度的平衡后改变细胞体积的能力 | 是，只由对该膜有效的不易透溶质贡献 |
 
-因此，等渗透浓度与等张描述不同性质。与细胞内液等渗透浓度的尿素溶液起初可以没有明显水流，但尿素逐渐入胞后，外液留下的有效渗透粒子不足，水继续进入细胞；它在较长时间尺度上表现为低张。反过来，膜转运或代谢状态改变也会改变同一种溶质的有效性。细胞体积由总粒子数、膜对各溶质的通透性和观察时间共同决定。[^tonicity]
+因此，等渗透摩尔浓度与等张描述不同性质。与细胞内液等渗透摩尔浓度的尿素溶液起初可以没有明显水流，但尿素逐渐入胞后，外液留下的有效渗透粒子不足，水继续进入细胞；它在较长时间尺度上表现为低张。反过来，膜转运或代谢状态改变也会改变同一种溶质的有效性。细胞体积由总粒子数、膜对各溶质的通透性和观察时间共同决定。[^tonicity]
 
 细胞内蛋白质和有机磷酸等固定阴离子被限制在膜内，会影响可移动离子的分布并产生持续的入水倾向。动物细胞依靠 Na$^+$/K$^+$-ATPase 不断排出漏入的 Na$^+$，再配合 K$^+$、Cl$^-$ 通道和有机渗透物调节形成“泵—漏”平衡。细胞体积由这一耗能的非平衡稳态维持，单次渗透平衡计算只能描述其中一部分条件。
 
@@ -82,13 +82,13 @@ $$
 
 通道跨越脂双层形成亲水孔道，开放后允许适合其选择性滤器的离子或水沿电化学势差通过。孔径、带电残基、脱水代价和配位几何共同决定选择性，部分通道的底物选择可以十分严格。通道可由膜电位、细胞外或细胞内配体、机械力、温度、磷酸化状态及膜内储库充盈程度等信号门控，膜的通透性因通道数目和开放概率在短时间内显著改变。[^channels-and-carriers]
 
-Na$^+$、K$^+$、Ca$^{2+}$ 和 Cl$^-$ 通道的亚型及药理性质依赖具体细胞环境。L 型 Ca$^{2+}$ 通道参与某些心肌动作电位平台和兴奋—收缩耦联，T 型通道则具有不同的电压依赖和动力学；K2P 钾通道属于双孔域钾通道家族，细胞器膜上的双孔通道 TPC 则属于另一类阳离子通道。它们在[细胞的电活动](electrical_activity.md)、[肌细胞生理](muscle.md)、[心脏电生理](blood/blood_heart_electrical.md)及[神经递质与受体](../neuro/neuro_transmitter_receptor.md)中按相应膜环境继续展开。
+Na$^+$、K$^+$、Ca$^{2+}$ 和 Cl$^-$ 通道的亚型及药理性质依赖具体细胞环境。L 型 Ca$^{2+}$ 通道参与某些心肌动作电位平台和兴奋—收缩耦联，T 型通道则具有不同的电压依赖和动力学；双孔域钾通道（two-pore-domain potassium channel，K2P）属于钾通道家族，细胞器膜上的双孔通道（two-pore channel，TPC）则属于另一类阳离子通道。相应膜环境中的具体机制见[细胞的电活动](electrical_activity.md)、[肌细胞生理](muscle.md)、[心脏电生理](blood/blood_heart_electrical.md)及[神经递质与受体](../neuro/neuro_transmitter_receptor.md)。
 
 ### 载体介导的易化扩散 { #passive-carriers }
 
 载体先在膜的一侧结合底物，构象变化使结合位点转向另一侧，再释放底物。由于一次转运循环需要结合、构象变化和解离，载体在底物升高时会趋于饱和；结构相近的底物还可能竞争同一结合位点。被动载体不消耗 ATP，净方向仍由底物本身的电化学势差决定，并可随梯度反转。
 
-红细胞主要借 GLUT1 摄取葡萄糖，许多神经元富集 GLUT3；两者都属于 SLC2 易化己糖转运体。肠道和肾小管顶端膜的 SLC5 Na$^+$—葡萄糖同向转运体采用另一种机制：SLC2 使糖顺势转运，SLC5 则利用 Na$^+$ 梯度把糖逆其自身梯度积累。[^slc-families]
+红细胞主要借葡萄糖转运蛋白 1（glucose transporter 1，GLUT1）摄取葡萄糖，许多神经元富集 GLUT3；两者都属于溶质载体 2（solute carrier family 2，SLC2）易化己糖转运体家族。肠道和肾小管顶端膜使用溶质载体 5（solute carrier family 5，SLC5）家族中的 Na$^+$—葡萄糖同向转运体：SLC2 使糖顺势转运，相关 SLC5 蛋白则利用 Na$^+$ 梯度把糖逆其自身梯度积累。[^slc-families]
 
 ## 主动转运与能量耦联 { #active-transport }
 
@@ -96,7 +96,7 @@ Na$^+$、K$^+$、Ca$^{2+}$ 和 Cl$^-$ 通道的亚型及药理性质依赖具体
 
 初级主动转运把 ATP 水解等放能反应直接耦联到溶质转运。动物细胞质膜上的 Na$^+$/K$^+$-ATPase 每完成一个典型循环，消耗 1 个 ATP，将 3 个 Na$^+$ 运出并把 2 个 K$^+$ 运入，因此既建立 Na$^+$、K$^+$ 梯度，也产生一个净正电荷外移。泵本身对静息膜电位有直接生电贡献，更重要的作用是长期维持通道和次级载体所使用的离子梯度。[^sodium-pump]
 
-P 型 ATPase 还包括 Ca$^{2+}$ 泵和 H$^+$/K$^+$ 泵；V 型 ATPase 主要以 H$^+$ 转运酸化细胞器或某些上皮表面；ABC 蛋白常以 ATP 驱动有机物和脂质转运。家族归属需要与机制证据结合，例如同属 ABC 超家族的 CFTR 主要作为 ATP 调控的 Cl$^-$ 通道工作。
+P 型 ATP 酶（P-type ATPase）还包括 Ca$^{2+}$ 泵和 H$^+$/K$^+$ 泵；V 型 ATP 酶（V-type ATPase）主要以 H$^+$ 转运酸化细胞器或某些上皮表面；ATP 结合盒（ATP-binding cassette，ABC）蛋白常以 ATP 驱动有机物和脂质转运。家族归属需要与机制证据结合，例如同属 ABC 超家族的囊性纤维化跨膜电导调节因子（cystic fibrosis transmembrane conductance regulator，CFTR）主要作为 ATP 调控的 Cl$^-$ 通道工作。
 
 ### 次级主动转运与梯度利用 { #secondary-active-transport }
 
@@ -108,7 +108,7 @@ $$
 
 只要指定方向的总和为负，一种离子顺电化学势移动释放的能量就能推动另一底物逆势移动。动物质膜最常利用 Na$^+$ 梯度，细菌、线粒体和许多细胞器则常利用 H$^+$ 梯度。若离子梯度和膜电位发生足够大的变化，一些耦联载体也可能减慢、停止或反向运行；“主动”描述的是被耦联底物的能量关系，不保证流向永远不变。
 
-SLC5 转运体用 Na$^+$ 梯度摄取葡萄糖等底物；SLC6 单胺转运体则把 Na$^+$、常伴 Cl$^-$ 的顺势转运与递质再摄取耦联。去甲肾上腺素转运体 NET（SLC6A2）介导去甲肾上腺素的 Na$^+$／Cl$^-$ 依赖性再摄取；肾上腺素在不同组织还可经有机阳离子转运等路径摄取。[^slc-families]
+SLC5 转运体用 Na$^+$ 梯度摄取葡萄糖等底物；溶质载体 6（solute carrier family 6，SLC6）单胺转运体则把 Na$^+$、常伴 Cl$^-$ 的顺势转运与递质再摄取耦联。去甲肾上腺素转运体（norepinephrine transporter，NET；SLC6A2）介导去甲肾上腺素的 Na$^+$／Cl$^-$ 依赖性再摄取；肾上腺素在不同组织还可经有机阳离子转运等路径摄取。[^slc-families]
 
 ## 极性上皮的矢量运输 { #epithelial-transport }
 
@@ -136,9 +136,9 @@ flowchart TB
 - Boron WF, Boulpaep EL. [Medical Physiology, 3rd ed.](https://evolve.elsevier.com/cs/product/9781455743773?role=faculty). Elsevier, 2016.
 
 [^transport-thermodynamics]: 电化学势、被动与主动转运的能量边界参见 NCBI Bookshelf 的 [Principles of Membrane Transport](https://www.ncbi.nlm.nih.gov/books/NBK26815/)。
-[^osm-carriers-channels]: 通道、被动载体、泵及若干生理实例的组织线索参考并重组自 osm.bio《[载体蛋白和通道蛋白](https://osm.bio/index.php?title=%E8%BD%BD%E4%BD%93%E8%9B%8B%E7%99%BD%E5%92%8C%E9%80%9A%E9%81%93%E8%9B%8B%E7%99%BD&oldid=14634)》（固定版本 oldid=14634；贡献者：寸烛盈夜、Sofia、野狼君卡共和、长河；[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）。本页重新按自由能耦联分类，并以 NCBI Bookshelf、IUPAC 与 IUPHAR/BPS 数据库核验和纠正具体表述。
+[^osm-carriers-channels]: 通道、被动载体、泵及若干生理实例的组织线索实质性改编自 osm.bio《[载体蛋白和通道蛋白](https://osm.bio/index.php?title=%E8%BD%BD%E4%BD%93%E8%9B%8B%E7%99%BD%E5%92%8C%E9%80%9A%E9%81%93%E8%9B%8B%E7%99%BD&oldid=14634)》（固定版本 oldid=14634；贡献者：寸烛盈夜、Sofia、野狼君卡共和、长河；[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)）；自由能耦联分类和具体表述另以 NCBI Bookshelf、IUPAC 与 IUPHAR/BPS 数据库交叉核验。
 [^fick-law]: 扩散通量密度和扩散系数的定义参见 IUPAC Gold Book 的 [Diffusion coefficient](https://doi.org/10.1351/goldbook.D01719)。
-[^osmotic-pressure]: 渗透压的热力学定义及理想稀溶液近似参见 IUPAC Gold Book 的 [Osmotic pressure](https://doi.org/10.1351/goldbook.O04344)。
+[^osmotic-pressure]: 渗透压的热力学定义及理想稀溶液近似参见 IUPAC Gold Book 的 [Osmotic pressure](https://doi.org/10.1351/goldbook.O04344)；容量渗透摩尔浓度采用 IUPAC 的 [Osmotic concentration](https://doi.org/10.1351/goldbook.O04343) 定义。
 [^tonicity]: 体液区室移动和膜通透性边界交叉核对 NCBI Bookshelf 的 [Physiology, Water Balance](https://www.ncbi.nlm.nih.gov/books/NBK541059/)与 [Biochemistry, Hypertonicity](https://www.ncbi.nlm.nih.gov/books/NBK541095/)。
 [^channels-and-carriers]: 通道孔道、载体交替开放及两者速率差异参见 NCBI Bookshelf 的 [Membrane Transport of Small Molecules](https://www.ncbi.nlm.nih.gov/books/NBK21044/)与 [Principles of Membrane Transport](https://www.ncbi.nlm.nih.gov/books/NBK26815/)。
 [^slc-families]: 葡萄糖易化扩散、Na$^+$—葡萄糖同向转运和单胺再摄取的家族归属参见 IUPHAR/BPS Guide to PHARMACOLOGY 的 [SLC2](https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=140&familyType=TRANSPORTER)、[SLC5](https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=143&familyType=TRANSPORTER)及 [SLC6](https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=144&familyType=TRANSPORTER) 页面。

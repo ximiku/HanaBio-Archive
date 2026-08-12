@@ -1,6 +1,6 @@
 # 呼吸生理总论与肺通气
 
-呼吸把外界环境中的 O$_2$ 接入内环境，又把细胞代谢产生的 CO$_2$ 送回环境。完成这条通量链，需要肺与外界之间的整体气体流动、肺泡气与肺毛细血管血之间的扩散、血液中的气体运输、组织交换以及线粒体利用 O$_2$ 等连续环节。严格说来，**肺通气**只指空气在外界与肺泡之间的体积流动；肺泡膜两侧的分子交换属于[气体交换与运输](gas_exchange.md)，节律生成、化学感受和环境适应则由[呼吸调节与环境适应](regulation.md)承接。
+呼吸把外界环境中的 O$_2$ 接入内环境，又把细胞代谢产生的 CO$_2$ 送回环境。完成这条通量链，需要肺与外界之间的整体气体流动、肺泡气与肺毛细血管血之间的扩散、血液中的气体运输、组织交换以及线粒体利用 O$_2$ 等连续环节。严格说来，**肺通气**只指空气在外界与肺泡之间的体积流动；肺泡膜两侧的分子交换属于[气体交换与运输](gas_exchange.md)，节律生成、化学感受和环境适应构成[呼吸调节与环境适应](regulation.md)的主线。
 
 肺本身没有主动扩张空气腔的肌肉。肺通气是由呼吸泵、肺与胸壁弹性、肺泡液—气界面和气道流动共同形成的力学过程：呼吸肌改变胸廓容积，胸膜界面把这一运动传给肺，肺泡压随之改变，气体再沿压力梯度通过具有阻力的气道。
 
@@ -18,7 +18,7 @@ $$
 
 腹壁与胸廓位移的相对大小随姿势、年龄、妊娠、腹腔压力和呼吸负荷变化，“胸式”或“腹式”描述的是当时占优势的运动模式。呼吸困难可同时涉及通气负荷、化学驱动、呼吸肌能力和感觉处理；具体疾病判读还需结合气体交换、呼吸肌储备、感觉和病程。
 
-自然呼吸主要以降低胸膜压、扩大肺容积来吸气；正压通气则从气道开口提高压力，把气体推入肺。两者都能建立 $P_{ao}-P_A$ 梯度，却对胸内压、静脉回流和肺区域受力产生不同影响。本段仅比较两种方式建立压力梯度的不同路径；人工通气操作由临床规范处理。
+自然呼吸主要以降低胸膜压、扩大肺容积来吸气；正压通气则从气道开口提高压力，把气体推入肺。两者都能建立 $P_{ao}-P_A$ 梯度，却对胸内压、静脉回流和肺区域受力产生不同影响。正压通气的具体参数、监测与安全界限取决于临床情境和相应规范。
 
 ## 胸廓—肺的胸膜耦联 { #pleural-coupling }
 
@@ -30,7 +30,7 @@ $$
 
 $P_L$ 是维持肺扩张的压力差。只有在气道开放、无气流且把大气压取作零参考时，$P_A=P_{ao}=0$，才可写成 $P_L=-P_{pl}$；这个静态特例不能替代一般定义。胸膜压还随重力位置、呼吸相位和局部胸壁运动而异，食管压只是临床和实验中估计平均胸膜压的替代信号。
 
-在安静呼气末、呼吸肌放松且气道开放时，肺向内回缩与胸壁向外回弹大致平衡，系统停留在功能余气量。吸气肌使胸膜压降低，跨肺压增大，肺容积随之上升；用力呼气时胸膜压则可变为正值。空气进入胸膜腔会削弱或切断胸壁向肺传递的压力差，使患侧肺朝自身低容积状态回缩、胸壁向外回弹，这就是气胸的力学基础。病因与处置属于病理生理和临床边界，不能从这一静态模型直接外推。[^respiratory-system-mechanics]
+在安静呼气末、呼吸肌放松且气道开放时，肺向内回缩与胸壁向外回弹大致平衡，系统停留在功能余气量（functional residual capacity，FRC）。吸气肌使胸膜压降低，跨肺压增大，肺容积随之上升；用力呼气时胸膜压则可变为正值。空气进入胸膜腔会削弱或切断胸壁向肺传递的压力差，使患侧肺朝自身低容积状态回缩、胸壁向外回弹，这就是气胸的力学基础。病因与处置属于病理生理和临床边界，不能从这一静态模型直接外推。[^respiratory-system-mechanics]
 
 ## 呼吸功的弹性与阻力负荷 { #mechanical-loads }
 
@@ -52,34 +52,34 @@ $$
 
 ### 肺表面活性物质与液—气界面 { #surfactant }
 
-肺泡Ⅱ型上皮细胞在板层小体中储存并分泌肺表面活性物质。它不是单一的二棕榈酰磷脂酰胆碱（DPPC）膜，而是以磷脂为主、同时含特异蛋白和其他脂质的动态混合物。DPPC 是重要的饱和磷脂组分；PG 与带电脂质、疏水性 SP-B／SP-C 共同帮助脂质快速铺展和重排，SP-A／SP-D 还参与界面稳态与先天防御。[^surfactant-homeostasis]
+肺泡Ⅱ型上皮细胞在板层小体中储存并分泌肺表面活性物质。它不是单一的二棕榈酰磷脂酰胆碱（dipalmitoylphosphatidylcholine，DPPC）膜，而是以磷脂为主、同时含特异蛋白和其他脂质的动态混合物。DPPC 是重要的饱和磷脂组分；磷脂酰甘油（phosphatidylglycerol，PG）、其他带电脂质以及表面活性物质蛋白 B 和 C（surfactant protein B/C，SP-B／SP-C）共同帮助脂质快速铺展和重排，表面活性物质蛋白 A 和 D（SP-A／SP-D）还参与界面稳态与先天防御。[^surfactant-homeostasis]
 
 呼气时表面积缩小，界面膜被压缩并可达到很低的表面张力；吸气时膜重新扩展，张力上升但仍低于纯水界面。这个随面积改变的性质一方面降低撑开肺所需的压力，另一方面在低容积时保护肺泡和末端气道的开放。若用球形薄壁结构的 Laplace 近似，$P=2T/r$ 表明半径变小时必须同步降低张力，才能避免所需扩张压过度升高。但真实肺泡形状不规则、彼此共享隔并受肺实质牵拉，不能据此把肺描述为彼此孤立、较小肺泡必然排空到较大肺泡的一串气球。[^surfactant-biophysics]
 
-表面活性物质减少或铺展障碍会降低顺应性、增加呼吸功，并促进低容积肺单位关闭。未成熟新生儿的呼吸窘迫综合征是这一界面系统失效的重要例子；产前激素调节、外源表面活性物质和具体通气策略属于医疗处置，需按具体临床情境制定。由[脂质生物合成](../../biochem/lipid_synthesis.md)转来的 DPPC 线索至此完成生理承接：一种磷脂的合成只是形成正常动态肺泡表面膜的必要环节之一。
+表面活性物质减少或铺展障碍会降低顺应性、增加呼吸功，并促进低容积肺单位关闭。未成熟新生儿的呼吸窘迫综合征是这一界面系统失效的重要例子；产前激素调节、外源表面活性物质和具体通气策略属于医疗处置，需按具体临床情境制定。[脂质生物合成](../../biochem/lipid_synthesis.md)提供 DPPC 等膜脂分子，正常肺泡界面还依赖这些脂质与特异蛋白的分泌、铺展和呼吸周期内重排。
 
 ## 气道阻力的口径、肺容积与流态依赖 { #airway-resistance }
 
 气道阻力可按 $R_{aw}=\Delta P/\dot V$ 定义，但真实气道是分支、可变形且流态不均匀的网络。半径减小时阻力迅速上升；流速、气体黏度和密度以及分叉处的涡流也会改变压降。单条细支气管很窄，众多外周气道并联后的总横截面积却很大，所以健康肺的主要阻力不简单等同于最细的一段气道。
 
-肺容积升高时，肺实质的径向牵引和跨壁压通常增大，气道口径变宽、阻力降低；低容积和用力呼气时则更易变窄。平滑肌张力叠加在这套机械背景上。迷走胆碱能通路是人类气道平滑肌重要的直接神经性缩窄控制；人类气道平滑肌的交感神经直接支配较稀疏，循环肾上腺素等可通过 $\beta_2$ 受体促进舒张。组胺、白三烯、前列腺素、NO 和局部上皮信号的效应依受体、浓度与炎症背景而定，不能把每种介质列成无条件的“收缩／舒张表”。[^airway-control]
+肺容积升高时，肺实质的径向牵引和跨壁压通常增大，气道口径变宽、阻力降低；低容积和用力呼气时则更易变窄。平滑肌张力叠加在这套机械背景上。迷走胆碱能通路是人类气道平滑肌重要的直接神经性缩窄控制；人类气道平滑肌的交感神经直接支配较稀疏，循环肾上腺素等可通过 $\beta_2$ 受体促进舒张。组胺、白三烯、前列腺素、一氧化氮（nitric oxide，NO）和局部上皮信号的效应依受体、浓度与炎症背景而定，不能把每种介质列成无条件的“收缩／舒张表”。[^airway-control]
 
 ## 肺容积、容量与通气工作区间 { #lung-volumes }
 
-四个不能再相加分解的肺容积与四个由它们组合的肺容量构成共同语言。它们描述测量动作和肺所处状态，不代表所有人共享同一毫升数；年龄、身高、生物学性别、族群、体位、技术和参考方程都会改变预测范围。
+四个不能再相加分解的肺容积与四个由它们组合的肺容量构成共同语言。它们描述测量动作和肺所处状态，不代表所有人共享同一毫升数。预测值的主要个体输入通常包括年龄、身高和出生时性别，体位、技术质量与所选参考方程也会影响解释。美国胸科学会现建议采用不含种族或族群修正的参考方程，因为这些社会分类不能作为固定的生物学代理变量。[^race-neutral-pft]
 
 | 名称 | 符号 | 定义或组成 | 生理读法 |
 | --- | --- | --- | --- |
-| 潮气量 | $V_T$ | 一次安静呼吸吸入或呼出的体积 | 呼吸泵每周期实际搬运的总体积，不等于到达交换区的体积 |
-| 吸气储备量 | IRV | 安静吸气末还能尽力吸入的体积 | 当前潮气呼吸之上的吸气余量 |
-| 呼气储备量 | ERV | 安静呼气末还能尽力呼出的体积 | 受呼气肌、气道关闭和起始肺容积共同限制 |
-| 余气量 | RV | 最大呼气末仍留在肺内的体积 | 由小气道关闭、肺回缩和胸壁力学共同形成，不能靠肺量计直接呼出 |
-| 深吸气量 | IC | $V_T+\mathrm{IRV}$ | 从安静呼气末吸至最大吸气位的容量 |
-| 功能余气量 | FRC | $\mathrm{ERV}+\mathrm{RV}$ | 安静呼气末的气体储库，可缓冲每次呼吸造成的肺泡气组成波动 |
-| 肺活量 | VC | $\mathrm{IRV}+V_T+\mathrm{ERV}$ | 最大吸气位与最大呼气位之间可移动的体积；可慢呼或用力测量 |
-| 肺总量 | TLC | $\mathrm{VC}+\mathrm{RV}$ | 最大吸气位的肺内总气体量 |
+| 潮气量（tidal volume，VT） | $V_T$ | 一次安静呼吸吸入或呼出的体积 | 呼吸泵每周期实际搬运的总体积，不等于到达交换区的体积 |
+| 吸气储备量（inspiratory reserve volume，IRV） | IRV | 安静吸气末还能尽力吸入的体积 | 当前潮气呼吸之上的吸气余量 |
+| 呼气储备量（expiratory reserve volume，ERV） | ERV | 安静呼气末还能尽力呼出的体积 | 受呼气肌、气道关闭和起始肺容积共同限制 |
+| 余气量（residual volume，RV） | RV | 最大呼气末仍留在肺内的体积 | 由小气道关闭、肺回缩和胸壁力学共同形成，不能靠肺量计直接呼出 |
+| 深吸气量（inspiratory capacity，IC） | IC | $V_T+\mathrm{IRV}$ | 从安静呼气末吸至最大吸气位的容量 |
+| 功能余气量（functional residual capacity，FRC） | FRC | $\mathrm{ERV}+\mathrm{RV}$ | 安静呼气末的气体储库，可缓冲每次呼吸造成的肺泡气组成波动 |
+| 肺活量（vital capacity，VC） | VC | $\mathrm{IRV}+V_T+\mathrm{ERV}$ | 最大吸气位与最大呼气位之间可移动的体积；可慢呼或用力测量 |
+| 肺总量（total lung capacity，TLC） | TLC | $\mathrm{VC}+\mathrm{RV}$ | 最大吸气位的肺内总气体量 |
 
-常规肺量计记录进出气体的体积变化，可测 $V_T$、IRV、ERV 和 VC，却不能直接测到包含 RV 的 RV、FRC 与 TLC。后者需要气体稀释、氮洗出或体积描记等方法；气体稀释主要接触能与气道连通的肺区，体积描记则可把被困气体计入胸内气体容积。选择何种方法会影响阻塞或气体潴留时的结果。[^lung-volume-measurement]
+常规肺量计记录进出气体的体积变化，可测 $V_T$、IRV、ERV 和 VC，却不能直接测到 RV，因而也不能单凭肺量计得到包含 RV 的 FRC 与 TLC。后者需要气体稀释、氮洗出或体积描记等方法；气体稀释主要接触能与气道连通的肺区，体积描记则可把被困气体计入胸内气体容积。选择何种方法会影响阻塞或气体潴留时的结果。[^lung-volume-measurement]
 
 ## 分钟通气与肺泡通气 { #alveolar-ventilation }
 
@@ -89,7 +89,7 @@ $$
 \dot V_A=(V_T-V_D)f.
 $$
 
-$V_D$ 会随体型、姿势、肺容积、灌流和外接装置改变，不是每个人固定的 150 mL；肺泡无效腔尤其取决于局部通气—灌流关系。它与分流等气体交换问题将在下一页展开。[^physiological-dead-space]
+$V_D$ 会随体型、姿势、肺容积、灌流和外接装置改变，不是每个人固定的 150 mL；肺泡无效腔尤其取决于局部通气—灌流关系。局部通气—灌流失配、分流及其对血气的影响见[气体交换与运输](gas_exchange.md)。[^physiological-dead-space]
 
 !!! note "相同分钟通气量可以产生不同肺泡通气量"
 
@@ -103,7 +103,7 @@ $V_D$ 会随体型、姿势、肺容积、灌流和外接装置改变，不是�
 
 ### 肺功能测量与诊断模式 { #spirometry-interpretation }
 
-用力肺活量（FVC）是最大吸气后尽快、尽完全呼出的总体积；第一秒用力呼气量（FEV$_1$）及 FEV$_1$/FVC 描述呼气早期排空，流量—容积曲线则把呼气流量与肺容积位置联系起来。结果可靠的前提是设备校准、动作可接受且重复，解释时还要与适当参考方程、正常下限或 z 分数比较。固定的“第一秒必为 83%”无法适用于不同年龄与人群。
+用力肺活量（forced vital capacity，FVC）是最大吸气后尽快、尽完全呼出的总体积；第一秒用力呼气量（forced expiratory volume in one second，FEV$_1$）及 FEV$_1$/FVC 描述呼气早期排空，流量—容积曲线则把呼气流量与肺容积位置联系起来。结果可靠的前提是设备校准、动作可接受且重复，解释时还要与适当参考方程、正常下限或 z 分数比较。固定的“第一秒必为 83%”无法适用于不同年龄与人群。
 
 低于正常下限的 FEV$_1$/FVC 支持气流受限，但不能单独命名病因；FVC 降低而比值正常并不能确诊限制性通气障碍，限制模式需要 TLC 降低来确认。支气管舒张或激发试验是在规范条件下比较干预前后气流的专门检查，也不能由“气道反应性”四个字直接等同于哮喘。最大自主通气量和通气储备同样高度依赖努力、呼吸肌能力与气道阻力，不存在适合所有个体的固定合格百分比。[^spirometry-standard][^pulmonary-function-interpretation]
 
@@ -120,6 +120,7 @@ $V_D$ 会随体型、姿势、肺容积、灌流和外接装置改变，不是�
 - Pippalapalli J, Lumb AB. [The respiratory system and acid–base disorders](https://pmc.ncbi.nlm.nih.gov/articles/PMC10201398/). *BJA Education*. 2023;23:221–228.
 - Graham BL, et al. [Standardization of Spirometry 2019 Update](https://pmc.ncbi.nlm.nih.gov/articles/PMC6794117/). *American Journal of Respiratory and Critical Care Medicine*. 2019;200:e70–e88.
 - Stanojevic S, et al. [ERS/ATS technical standard on interpretive strategies for routine lung function tests](https://pubmed.ncbi.nlm.nih.gov/34949706/). *European Respiratory Journal*. 2022;60:2101499.
+- Bhakta NR, et al. [Race and Ethnicity in Pulmonary Function Test Interpretation: An Official American Thoracic Society Statement](https://doi.org/10.1164/rccm.202302-0310ST). *American Journal of Respiratory and Critical Care Medicine*. 2023;207:978–995.
 - Grillo LJF, et al. [Physiotherapy for large airway collapse: an ABC approach](https://pmc.ncbi.nlm.nih.gov/articles/PMC8864626/). *ERJ Open Research*. 2022;8:00510-2021.
 
 [^respiratory-muscles]: 安静和负荷呼吸时膈肌、肋间肌、辅助肌及上气道扩张肌的协作，参见 Patel 等的[呼吸力学与呼吸肌综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9237333/)。
@@ -127,10 +128,11 @@ $V_D$ 会随体型、姿势、肺容积、灌流和外接装置改变，不是�
 [^pulmonary-compliance]: 顺应性的容积依赖、静态／动态测量与肺—胸壁串联关系，参见 NCBI Bookshelf 的[肺顺应性章节](https://www.ncbi.nlm.nih.gov/books/NBK554517/)及 Carvalho 与 Zin 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC5418399/)。
 [^pressure-volume-hysteresis]: 液—气界面、肺单位募集和组织黏弹性对压力—容积滞后的贡献，参见 Suki 等的[肺实质力学综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3929318/)。
 [^surfactant-homeostasis]: 肺泡Ⅱ型细胞、板层小体、磷脂及 SP-A 至 SP-D 的组成和稳态，参见 Whitsett 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4127631/)。
-[^surfactant-biophysics]: 表面膜压缩、极低张力和 Laplace 模型的适用边界，参见 Hobi 等的[生物物理综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC11213971/)。
+[^surfactant-biophysics]: 表面膜压缩、极低张力和 Laplace 模型的适用边界，参见 Hall 与 Zuo 的[生物物理综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC11213971/)。
 [^airway-control]: 人类气道感觉与自主神经通路、胆碱能缩窄及较稀疏的直接交感支配，参见 Van Scott 等的[气道解剖与生理综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC7122617/)。
 [^lung-volume-measurement]: 肺容积定义、肺量计、气体稀释和体积描记的测量边界，参见 Ntima 与 Lumb 的[肺功能检查综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC7808018/)。
+[^race-neutral-pft]: 2023 年美国胸科学会（American Thoracic Society，ATS）正式声明建议采用不含种族或族群修正的 GLI Global 参考方程，参见 Bhakta 等的[正式声明](https://doi.org/10.1164/rccm.202302-0310ST)。
 [^physiological-dead-space]: 解剖与肺泡无效腔、体位和体型等影响因素，参见 Pippalapalli 与 Lumb 的[呼吸系统综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC10201398/)。
 [^equal-pressure-point]: 用力呼气时等压点、动态压缩、肺容积和弹性回缩的关系，参见 Grillo 等的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC8864626/)。
-[^spirometry-standard]: FVC、FEV$_1$ 的可接受性、重复性和报告要求，参见 ATS/ERS 的[2019 肺量计标准](https://pmc.ncbi.nlm.nih.gov/articles/PMC6794117/)。
-[^pulmonary-function-interpretation]: 气流受限、限制模式、正常下限与 z 分数的解释边界，参见 ERS/ATS 的[2022 常规肺功能解释标准](https://pubmed.ncbi.nlm.nih.gov/34949706/)。
+[^spirometry-standard]: FVC、FEV$_1$ 的可接受性、重复性和报告要求，参见美国胸科学会／欧洲呼吸学会（ATS/ERS）的[2019 肺量计标准](https://pmc.ncbi.nlm.nih.gov/articles/PMC6794117/)。
+[^pulmonary-function-interpretation]: 气流受限、限制模式、正常下限与 z 分数的解释边界，参见欧洲呼吸学会／美国胸科学会（ERS/ATS）的[2022 常规肺功能解释标准](https://pubmed.ncbi.nlm.nih.gov/34949706/)。
