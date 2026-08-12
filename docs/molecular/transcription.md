@@ -2,7 +2,7 @@
 
 转录把核酸模板的一段序列复制为 RNA。细胞用它生成可被翻译的 mRNA，也生成 rRNA、tRNA、snRNA、snoRNA、RNase P RNA、信号识别颗粒 RNA 等结构性或催化性 RNA。每条产物都来自有方向的转录单位：启动子规定聚合酶在何处、朝哪个方向起始，终止区和相关因子规定何处释放 RNA，而转录后的加工、修饰和降解继续决定成熟分子的边界与寿命。
 
-DNA 依赖的 RNA 聚合酶负责细胞转录；RNA 病毒和少数细胞系统还使用 RNA 依赖的 RNA 聚合酶。两类酶都以核苷三磷酸为底物并沿模板合成 RNA，却属于不同的复制系统。这里先建立细胞转录的共同化学和跨域机制，再说明细胞器与病毒 RNA 合成的边界；RNA 加工、翻译和表达量调控分别由后续页面展开。
+DNA 依赖的 RNA 聚合酶负责细胞转录；RNA 病毒和少数细胞系统还使用 RNA 依赖的 RNA 聚合酶。两类酶都以核苷三磷酸为底物并沿模板合成 RNA，却属于不同的复制系统。细胞转录的共同化学、跨域机制以及细胞器与病毒 RNA 合成共同构成 RNA 生物合成的范围，RNA 加工、翻译和表达调控则与之相接。
 
 ## RNA 聚合酶在局部转录泡中复制模板序列 { #transcription-chemistry }
 
@@ -10,7 +10,7 @@ RNA 聚合酶无需预先存在的引物即可从头起始。活性中心选择�
 
 聚合酶只在前方打开一小段 DNA，维持约一个十余碱基的 RNA–DNA hybrid，并在后方让两条 DNA 重新配对。离开酶的 RNA 不再与整段模板保持双链。DNA 开链和酶的移动会在复合物前后产生相反方向的扭转应力，由拓扑异构酶、染色质结构和相邻转录复合物共同吸收；相关拓扑概念见[核酸与核苷酸](../biochem/nucleic_acid.md#dna-topology-supercoiling)。
 
-模板链和编码链是针对一个转录单位定义的。RNA 序列除以 U 代替 T 外，与该单位的编码链相同，并与模板链互补；相邻基因可以朝相反方向转录，同一条染色体链因而可在一个基因处是模板链，在另一个基因处是编码链。“Watson／Crick”“有意义／无意义”不能替代这种局部、方向性的定义。转录起点记为 +1，上游和下游位置也随该转录方向确定。
+模板链和编码链是针对一个转录单位定义的。RNA 序列除以 U 代替 T 外，与该单位的编码链相同，并与模板链互补；相邻基因可以朝相反方向转录，同一条染色体链因而可在一个基因处是模板链，在另一个基因处是编码链。“Watson／Crick”或“有意义／无意义”等全局标签无法替代这种局部、方向性的定义。转录起点记为 +1，上游和下游位置也随该转录方向确定。
 
 转录中出现的错配会降低 RNA 的当次功能，却通常不会写回基因组。聚合酶可在错配、缺少底物、DNA 损伤或核小体等障碍前暂停并 backtrack，使 RNA 3′ 端退出活性中心；细菌 Gre、古菌 TFS 和真核 TFIIS 可促进切除突出 RNA，重新产生可延伸的 3′-OH。这个以回退和切割为核心的校正提高转录忠实性，但与 DNA 复制中保留遗传信息的校对和错配修复承担不同后果。[^transcription-elongation]
 
@@ -18,9 +18,9 @@ RNA 聚合酶无需预先存在的引物即可从头起始。活性中心选择�
 
 细菌、古菌和真核细胞核的 RNA 聚合酶共享钳形构架与同源催化亚基。细菌通常以一套核心酶转录各类 RNA；古菌也以一套更接近真核 Pol II 的多亚基酶工作；真核细胞核则把祖先机器分化为 Pol I、Pol II 和 Pol III。它们使用不同启动因子选择基因，却在 RNA–DNA hybrid、bridge helix、trigger loop、暂停、回退和转录本切割等基本反应上保留共同逻辑。[^multisubunit-rnap]
 
-聚合酶并不单独决定哪些位点成为启动子。细菌核心酶与 σ 因子组成 holoenzyme；古菌主要由 TBP、TFB 和 TFE 建立起始复合物；真核三种核内聚合酶各自借助通用转录因子和共激活复合物定位。启动子因此是一组在特定机器和细胞状态下提高定向起始概率的顺式序列，而不是跨物种通用的固定短字符串。
+聚合酶与起始因子共同决定哪些位点成为启动子。细菌核心酶与 σ 因子组成全酶（holoenzyme）；古菌主要由 TBP、TFB 和 TFE 建立起始复合物；真核三种核内聚合酶各自借助通用转录因子和共激活复合物定位。启动子是一组在特定机器和细胞状态下提高定向起始概率的顺式序列，其具体序列随物种和系统变化。
 
-多聚核苷酸磷酸化酶（PNPase）可在体外用 NDP 逆向合成 RNA，但细胞内主要参与 RNA 磷酸解和代谢，不是从 DNA 启动子转录基因的 RNA 聚合酶。噬菌体 T7 类、真核线粒体和部分质体的聚合酶则属于另一支单亚基家族；它们同样催化 DNA 依赖的 RNA 合成，却不应按“没有四级结构的简化版细胞核聚合酶”理解。
+多聚核苷酸磷酸化酶（polynucleotide phosphorylase，PNPase）可在体外用 NDP 逆向合成 RNA，细胞内主要参与 RNA 磷酸解和代谢；从 DNA 启动子转录基因则由 RNA 聚合酶完成。噬菌体 T7 类、真核线粒体和部分质体的聚合酶属于另一支单亚基家族，它们同样催化 DNA 依赖的 RNA 合成，并具有独立于细胞核多亚基酶的结构来源。
 
 ## 细菌以 σ 因子选择启动子 { #bacterial-initiation }
 
@@ -28,15 +28,15 @@ RNA 聚合酶无需预先存在的引物即可从头起始。活性中心选择�
 
 holoenzyme 与双链启动子先形成 closed complex，再经异构化打开起点附近 DNA，生成 open complex。最初几个磷酸二酯键在仍受启动子接触约束的空间内形成，聚合酶可通过 DNA scrunching 累积应力并多次释放短 abortive transcripts。新生 RNA 增长后与 σ 的部分接触竞争，复合物完成 promoter escape，进入稳定延伸。
 
-σ 因子的命运不是必然在某一长度瞬间完全解离。它的一部分与核心酶的接触会在逃逸时重排，部分复合物仍可把 σ 保留到早期甚至更远的延伸阶段，并在特定序列诱导 σ-dependent pause。NusA、NusG 等延伸因子的结合也不是用一个因子机械替换另一个因子的固定接力。[^bacterial-initiation]
+σ 因子与核心酶的接触会在启动子逃逸时重排，部分复合物仍可把 σ 保留到早期甚至更远的延伸阶段，并在特定序列诱导 σ-dependent pause。NusA、NusG 等延伸因子也以动态组合加入，而非按固定顺序机械替换 σ。[^bacterial-initiation]
 
 ## 延伸中的暂停把转录接到翻译、修复与调控 { #elongation-coupling }
 
-进入延伸后，聚合酶可以连续合成长 RNA，但 DNA 序列、RNA hairpin、核苷酸供应、DNA 结合蛋白、拓扑应力和损伤都会改变速度。短暂停顿可让 RNA 折叠、转录因子装配或下游反应同步；更深的 backtrack 会遮蔽 RNA 3′ 端，需要 Gre 类切割因子复活。发夹和 U-rich RNA 可以参与某些暂停，却不是所有暂停事件的共同定义。
+进入延伸后，聚合酶可以连续合成长 RNA，但 DNA 序列、RNA 发夹（RNA hairpin）、核苷酸供应、DNA 结合蛋白、拓扑应力和损伤都会改变速度。短暂停顿可让 RNA 折叠、转录因子装配或下游反应同步；更深的 backtrack 会遮蔽 RNA 3′ 端，需要 Gre 类切割因子复活。发夹和 U-rich RNA 参与其中一部分暂停，其他暂停则由不同序列或结构触发。
 
 细菌没有核膜隔开转录和翻译，核糖体可在 mRNA 仍连接聚合酶时开始翻译。领先核糖体能阻止部分 RNA 结构或 Rho 结合，并可能推动回退的聚合酶；在一些系统中，NusG 的两端分别接触 RNA 聚合酶和核糖体蛋白 uS10，NusA 进一步改变复合物构象，形成不同状态的 expressome。物理耦联的紧密程度和普遍性随物种、基因和生理状态变化，枯草芽孢杆菌等系统可让聚合酶明显领先核糖体，因此“原核转录与翻译总是锁成一个复合物”并不成立。[^transcription-translation-coupling]
 
-模板链上的 bulky lesion 可使聚合酶成为损伤传感器。细菌 Mfd 能推动并移走停滞复合物、招募 UvrA；哺乳动物 Pol II 停滞后由 CSB、CSA、UVSSA 等组织 transcription-coupled nucleotide excision repair。这里的共同接口是“转录停滞使模板链损伤优先进入修复”，两域装置并非简单一一同源；切除与修复反应见[DNA损伤、修复与突变](dna_repair.md#nucleotide-excision-repair)。[^transcription-coupled-repair]
+模板链上的 bulky lesion 可使聚合酶成为损伤传感器。细菌 Mfd 能推动并移走停滞复合物、招募 UvrA；哺乳动物 Pol II 停滞后由 CSB、CSA、UVSSA 等组织 transcription-coupled nucleotide excision repair。两域都以转录停滞使模板链损伤优先进入修复，但使用的装置并非简单一一同源；切除与修复反应见[DNA损伤、修复与突变](dna_repair.md#nucleotide-excision-repair)。[^transcription-coupled-repair]
 
 ## 细菌终止依赖 RNA 结构或蛋白因子 { #bacterial-termination }
 
@@ -86,11 +86,11 @@ Pol I 在哺乳动物中可由 TTF-I 结合 rDNA 终止区并协同转录本释�
 
 RNA-dependent RNA polymerase（RdRP）以 RNA 为模板按 5′→3′ 方向合成 RNA。多数 RNA 病毒依靠病毒编码 RdRP 复制基因组并产生 mRNA：positive-sense RNA genome 常可先作为 mRNA 翻译出复制机器；negative-sense 和 double-stranded RNA genome 不能直接承担这一启动步骤，病毒颗粒通常必须携带可用的聚合酶。是否生成 subgenomic RNAs、是否在衣壳内转录、是否使用蛋白引物以及 mRNA 的帽和尾结构都由病毒类群决定。[^viral-rdrp]
 
-“复制”生成可进入后代病毒的全长基因组或互补模板，“转录”生成供翻译的 mRNA；同一 RdRP 可通过起始位点、核蛋白状态和辅助因子在两种任务间切换。细胞真核生物也有 RdRP 参与小 RNA 扩增或 RNA silencing，但动物、植物、真菌和原生生物的保留情况不同。RNA 病毒生活史、宿主范围和装配见[病毒与亚病毒因子](../micro/viruses.md)，此处只用 RdRP 说明遗传信息可以在 RNA 模板之间传递。
+“复制”生成可进入后代病毒的全长基因组或互补模板，“转录”生成供翻译的 mRNA；同一 RdRP 可通过起始位点、核蛋白状态和辅助因子在两种任务间切换。细胞真核生物也有 RdRP 参与小 RNA 扩增或 RNA silencing，但动物、植物、真菌和原生生物的保留情况不同。RdRP 因而也显示遗传信息可以在 RNA 模板之间传递；RNA 病毒生活史、宿主范围和装配见[病毒与亚病毒因子](../micro/viruses.md)。
 
-## 转录机制由互补证据而非单一信号重建 { #transcription-evidence }
+## 转录机制的互补证据 { #transcription-evidence }
 
-启动子和转录单位可由 5′ end mapping、nascent RNA sequencing、polymerase occupancy、promoter mutagenesis 和体外重构共同界定。EMSA 或 DNase footprinting 能显示蛋白结合及受保护 DNA，却不能单独证明该位点在细胞内产生正确方向、正确起点的 RNA；steady-state RNA abundance 还混合了合成、加工与降解。相关实验操作和定量设计归入[核酸杂交、探针与分子互作检测](../exptech/biochem_molecular/molecular_probes.md)。
+启动子和转录单位可由 5′ end mapping、nascent RNA sequencing、polymerase occupancy、promoter mutagenesis 和体外重构共同界定。EMSA 或 DNase footprinting 显示蛋白结合及受保护 DNA，细胞内的定向起始还需要新生 RNA 和起点证据；steady-state RNA abundance 则混合了合成、加工与降解。相关实验操作和定量设计见[核酸杂交、探针与分子互作检测](../exptech/biochem_molecular/molecular_probes.md)。
 
 rifamycin 与细菌 RNA 聚合酶的结合、α-amanitin 对真核 Pol II 易位的抑制，以及 actinomycin D 插入 DNA 后对核酸合成的阻碍，都曾帮助定位机制。它们的敏感性受酶、物种、剂量、摄取和处理时间影响；cordycepin 还会进入腺苷代谢并扰动 RNA 3′ 端形成。药物导致 RNA 减少不能自动判定受影响的是起始、延伸、加工还是稳定性，也不宜把体外选择性改写成跨系统的固定强弱表。
 

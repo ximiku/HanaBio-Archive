@@ -2,7 +2,7 @@
 
 RNA 聚合酶释放的序列只是 RNA 生命史的起点。许多初级转录本仍带有多余的前导序列、间隔区或内含子，需要切割、修剪、拼接和末端添加；另一些 RNA 要接受碱基修饰、与蛋白质装配并通过质量检查，才成为可输出、可翻译或可催化的成熟核糖核蛋白复合体。加工也决定一种转录本能形成哪些异构体以及它能存留多久，因此它既是分子成熟过程，也是基因表达的一层选择。
 
-“转录后”描述加工相对于 RNA 合成的逻辑位置，并不表示所有反应都等到转录结束才开始。真核 mRNA 加帽和大量剪接发生于新生 RNA 仍连着 RNA polymerase II 时，细菌 rRNA 的切割也可在整条操纵子转录完成前启动；另一些修饰、装配和最终修剪则延续到核质、核仁、胞质或细胞器。加工路线应按底物、细胞区室和谱系辨认，不能排成一条对所有 RNA 通用的固定流水线。
+“转录后”描述加工相对于 RNA 合成的逻辑位置，其中许多反应在转录结束前已经开始。真核 mRNA 加帽和大量剪接发生于新生 RNA 仍连着 RNA polymerase II 时，细菌 rRNA 的切割也可在整条操纵子转录完成前启动；另一些修饰、装配和最终修剪则延续到核质、核仁、胞质或细胞器。底物、细胞区室和谱系共同决定加工路线，各类 RNA 因而具有不同次序。
 
 ## RNA 成熟通过切割、添加、重排和装配建立功能边界 { #processing-reaction-types }
 
@@ -12,7 +12,7 @@ RNA 聚合酶释放的序列只是 RNA 生命史的起点。许多初级转录�
 
 ## 细菌把 RNA 成熟与快速周转接在同一组核酸酶上 { #bacterial-rna-processing }
 
-不少细菌 mRNA 的 5′ 与 3′ 边界可以直接由转录起始和终止形成，并在新生链上立即进入翻译；这不等于细菌 mRNA 普遍不加工。多顺反子可经内切产生稳定性不同的片段，RNase III 加工双链区和部分反义 RNA，RNase E、RNase G、RNase J 或 RNase Y 等因谱系而异的酶可生成新末端并启动周转。5′ 三磷酸转为单磷酸、核糖体占据、RNA 二级结构和小 RNA—蛋白复合体都会改变这些切口的可及性。[^bacterial-rna-processing]
+不少细菌 mRNA 的 5′ 与 3′ 边界可以直接由转录起始和终止形成，并在新生链上立即进入翻译；另一些多顺反子则经内切产生稳定性不同的片段。RNase III 加工双链区和部分反义 RNA，RNase E、RNase G、RNase J 或 RNase Y 等因谱系而异的酶可生成新末端并启动周转。5′ 三磷酸转为单磷酸、核糖体占据、RNA 二级结构和小 RNA—蛋白复合体都会改变这些切口的可及性。[^bacterial-rna-processing]
 
 以大肠杆菌为代表的系统中，RNase E 还能作为 degradosome 支架，连接 RNA helicase RhlB、PNPase 和 enolase；许多革兰阳性菌则更多依靠 RNase J／Y 等不同组合。PAP I 或 PNPase 可在 RNA 3′ 端添加短 poly(A) 或富 A 尾，为 PNPase、RNase R 等 3′→5′ 核酸酶提供单链入口，因而常促进结构化片段和缺陷 RNA 的清除。真核成熟 mRNA 的长 poly(A) 尾常与稳定和翻译相连，两种语境不能互相套用。
 
@@ -22,7 +22,7 @@ RNA 聚合酶释放的序列只是 RNA 生命史的起点。许多初级转录�
 
 ## 古菌以独特装置组合真核型与原核型 RNA 代谢 { #archaeal-rna-processing }
 
-古菌没有一条可概括为“mRNA 像细菌、rRNA 和 tRNA 像真核”的单一路线。许多古菌使用与真核 exosome 同源的环状复合体进行 3′→5′ 磷酸解和非模板加尾，另一些谱系缺少典型 exosome，改用 RNase J、aCPSF1／FttA 或其他核酸酶。mRNA 的 5′ 端状态、3′ U-rich 末端、RNA 结合蛋白和翻译共同决定稳定性，成熟与降解同样紧密衔接。
+古菌 RNA 代谢组合了自身特有和跨域同源的多条路线。许多古菌使用与真核 exosome 同源的环状复合体进行 3′→5′ 磷酸解和非模板加尾，另一些谱系缺少典型 exosome，改用 RNase J、aCPSF1／FttA 或其他核酸酶。mRNA 的 5′ 端状态、3′ U-rich 末端、RNA 结合蛋白和翻译共同决定稳定性，成熟与降解同样紧密衔接。
 
 古菌 pre-rRNA 的间隔区常形成 bulge–helix–bulge（BHB）结构，可由 archaeal splicing endonuclease 切开并经连接酶封合；其他核酸酶再修剪成熟末端。box C/D small RNP 以 guide RNA 配对定位 2′-O-methylation，box H/ACA small RNP 则定位 pseudouridylation，这两类 RNA 引导装置与真核 snoRNP 同源。它们参与折叠、修饰和部分切割，却不意味着每个位点都以同一顺序加工。[^archaeal-rna-processing]
 
@@ -30,7 +30,7 @@ RNA 聚合酶释放的序列只是 RNA 生命史的起点。许多初级转录�
 
 ## 真核 mRNA 的帽和 3′ 端在转录过程中建立 { #eukaryotic-mrna-ends }
 
-### 5′ 帽连接转录、加工、输出与翻译 { #mrna-capping }
+### 5′ 帽与转录、加工、输出和翻译 { #mrna-capping }
 
 许多 RNA polymerase II 转录本在新生 RNA 约几十个核苷酸长时开始加帽。RNA triphosphatase 先除去 5′ 端一个磷酸，guanylyltransferase 再把 GMP 以反向 5′–5′ triphosphate linkage 接到第一个核苷酸，随后 guanine-N7 methyltransferase 以 SAM 为供体生成 m⁷G cap。第一个或第二个转录核苷酸的 2′-O-methylation 可形成 cap 1 或 cap 2；这些名称描述结构层级，不是所有酵母、动物和其他真核 RNA 必经的逐级“升级”。[^mrna-capping]
 
@@ -46,7 +46,7 @@ RNA 聚合酶释放的序列只是 RNA 生命史的起点。许多初级转录�
 
 major spliceosome 识别 5′ splice site、branch point、polypyrimidine tract 和 3′ splice site 的组合。U1 snRNP 起初配对 5′ 位点，U2 将 branch-point adenosine bulge 出 RNA duplex；U4/U6·U5 tri-snRNP 加入后，U4 释放，U6 与 U2 重排形成催化核心，U5 协助对齐两侧外显子。第一次 transesterification 由 branch A 的 2′-OH 进攻 5′ splice site，生成 lariat；第二次由上游 exon 的 3′-OH 进攻 3′ splice site，连接外显子。成键化学本身不改变磷酸二酯键总数，ATP 水解主要驱动装配、解旋、校验和拆卸。[^spliceosome]
 
-多数 U2 型内含子具有 GU–AG 边界，但位点选择还依赖周围共识序列、外显子／内含子剪接增强子与沉默子，以及 SR proteins、hnRNPs 等调控因子。minor spliceosome 以 U11、U12、U4atac、U6atac 和共享的 U5 处理少量 U12 型内含子；其中一些是 AU–AC，另一些仍为 GU–AG，所以不能把 minor pathway 等同于 AU–AC 规则。spliceosome 每轮都在一个内含子上重新装配，U4 的离开也不是被 U2 简单替换。[^minor-spliceosome]
+多数 U2 型内含子具有 GU–AG 边界，但位点选择还依赖周围共识序列、外显子／内含子剪接增强子与沉默子，以及 SR proteins、hnRNPs 等调控因子。次要剪接体（minor spliceosome）以 U11、U12、U4atac、U6atac 和共享的 U5 处理少量 U12 型内含子，其中既有 AU–AC 边界，也有 GU–AG 边界。spliceosome 每轮都在一个内含子上重新装配，U4 离开后由 U2／U6 重排形成催化核心。[^minor-spliceosome]
 
 alternative splicing 可改变外显子纳入、互斥外显子、剪接位点选择或内含子保留。同一基因因而形成不同 5′／3′ UTR 或编码序列；一些异构体产生不同蛋白，一些受到 nonsense-mediated decay，还有一些只在特定细胞状态短暂出现。转录本被测到并不能单独证明其蛋白产物稳定或有独立功能，需结合长读长、剪接接头证据、翻译和扰动结果判断。
 
@@ -74,7 +74,7 @@ tRNA intron 的移除也不统一：细菌 group I intron 可自剪接，古菌�
 
 RNA editing 指 RNA 序列相对于其 DNA 模板发生可定位的碱基转换、插入或删除。动物 ADAR1／ADAR2 在双链 RNA 中把 adenosine 脱氨为 inosine，测序和翻译机器常把 I 读作 G；少数位点会改变蛋白质编码，大量事件位于重复序列形成的非编码双链区，并参与避免内源双链 RNA 误触发先天免疫。APOBEC1 complex 对 apolipoprotein B mRNA 的 C→U 编辑则可生成提前终止密码子。编辑的功能需逐位点验证，不能整体解释为“纠正 DNA 突变”或必然增加蛋白多样性。[^adar-editing]
 
-陆生植物的线粒体和质体以 C→U 编辑为主，部分谱系还有 U→C 编辑，PPR proteins 等提供位点识别；编辑可以恢复保守氨基酸、生成起始／终止密码子，也可改变非编码 RNA。动基体生物线粒体使用 minicircle 编码的 guide RNA 指引 editosome 切开 mRNA，再由 terminal uridylyl transferase、U-specific exonuclease 和 RNA ligase 完成 U 的插入或删除。这里的信息由 gRNA—mRNA 配对指定位点和数量，不是所有 RNA 编辑都存在“一个 RNA 把遗传信息转给另一个 RNA”的通则。[^organelle-rna-editing]
+陆生植物的线粒体和质体以 C→U 编辑为主，部分谱系还有 U→C 编辑，PPR proteins 等提供位点识别；编辑可以恢复保守氨基酸、生成起始／终止密码子，也可改变非编码 RNA。动基体生物线粒体使用 minicircle 编码的 guide RNA 指引 editosome 切开 mRNA，再由 terminal uridylyl transferase、U-specific exonuclease 和 RNA ligase 完成 U 的插入或删除。gRNA—mRNA 配对指定位点和数量，这种信息输入属于动基体生物的专门机制。[^organelle-rna-editing]
 
 m⁶A、m⁵C、pseudouridine、2′-O-methylation 和 tRNA 高度修饰核苷等属于化学修饰。以哺乳动物 mRNA 的 m⁶A 为例，METTL3–METTL14 complex 在序列和结构语境中偏好 DRACH 相关位点，YTH-domain proteins 等 readers 将部分位点接入剪接、输出、翻译或降解；demethylases 只作用于相应底物和区室。符合 consensus motif 的位置远多于真正修饰位点，“writer／reader／eraser”也只是组织反应角色的框架，不能据 motif 或抗体富集峰直接推断确定的调控结果。[^rna-modifications]
 
@@ -82,17 +82,17 @@ m⁶A、m⁵C、pseudouridine、2′-O-methylation 和 tRNA 高度修饰核苷�
 
 真核 mRNA 的常规降解多从 PAN2–PAN3 与 CCR4–NOT 缩短 poly(A) 尾开始，随后可由 DCP1／DCP2 去帽并由 XRN1 从 5′→3′ 降解，或由 Ski–exosome 从 3′→5′ 清除。核内 exosome 与 MTR4、TRAMP、NEXT 或 PAXT 类适配复合体处理 spacer fragments、过度延伸的 sn／snoRNA、错误 pre-rRNA／pre-tRNA、未正确装配的 mRNP 和 pervasive transcripts。短 oligo(A) 尾在这些监视路线中常促进底物投递到 exosome，再次说明 polyadenylation 的后果取决于复合体语境。[^rna-exosome]
 
-翻译还为 mRNA 提供动态质检。nonsense-mediated decay（NMD）识别与 premature termination 相容的翻译和 mRNP context；哺乳动物 exon-junction complex、3′ UTR geometry 和 UPF factors 共同影响判定，其他真核谱系的线索不同。non-stop decay 处理缺少可用 stop codon 的 message，no-go decay 则从严重 elongation stall 和 ribosome collision 启动。三条路线既清除错误 RNA，也调节一部分正常转录本；完整 ribosome rescue 和 nascent protein quality control 见后续[翻译与蛋白质生物合成](translation.md)。[^translation-coupled-surveillance]
+翻译还为 mRNA 提供动态质检。无义介导的 mRNA 降解（nonsense-mediated mRNA decay，NMD）识别与 premature termination 相容的翻译和 mRNP context；哺乳动物 exon-junction complex、3′ UTR geometry 和 UPF factors 共同影响判定，其他真核谱系的线索不同。non-stop decay 处理缺少可用 stop codon 的 message，no-go decay 则从严重 elongation stall 和 ribosome collision 启动。三条路线既清除错误 RNA，也调节一部分正常转录本；完整 ribosome rescue 和 nascent protein quality control 见[翻译与蛋白质生物合成](translation.md)。[^translation-coupled-surveillance]
 
 细菌也把 translation state 接入 RNA 质量。无 stop codon 的 mRNA 使 ribosome 停在 3′ 端时，tmRNA–SmpB 可进入空 A site，先像 tRNA 接受 peptide，再切换到自身短 reading frame 给 nascent chain 添加 degradation tag，并释放 ribosome；RNase R 等随后帮助清除问题 RNA。该系统同时挽救 ribosome、标记不完整蛋白和促进 message decay，其核心不只是“tmRNA 兼有 tRNA 和 mRNA 的形状”。
 
 ## 小 RNA 成熟把序列信息装载到 Argonaute 家族 { #small-rna-biogenesis }
 
-动物经典 miRNA 由 Drosha–DGCR8 Microprocessor 在细胞核内把 pri-miRNA 裁成发夹状 pre-miRNA，经 Exportin-5 输出后由 Dicer 形成约 22 nt 的双链体；其中一条链装入 AGO，构成 miRNA-induced silencing complex。mirtron 等可绕过 Drosha，miR-451 等还可绕过 Dicer，因此发夹、长度或单链状态本身都不足以认定一个 RNA 是 miRNA。成熟 miRNA 的 seed pairing 和其余配对共同影响靶标选择，动物中常招募去腺苷酸化／去帽装置，广泛互补时也可由 AGO2 切割靶 RNA。[^mirna-biogenesis]
+动物经典 miRNA 由 Drosha–DGCR8 Microprocessor 在细胞核内把 pri-miRNA 裁成发夹状 pre-miRNA，经 Exportin-5 输出后由 Dicer 形成约 22 nt 的双链体；其中一条链装入 AGO，构成微 RNA 诱导沉默复合物（microRNA-induced silencing complex，miRISC）。mirtron 等可绕过 Drosha，miR-451 等还可绕过 Dicer，因此发夹、长度或单链状态本身都不足以认定一个 RNA 是 miRNA。成熟 miRNA 的 seed pairing 和其余配对共同影响靶标选择，动物中常招募去腺苷酸化／去帽装置，广泛互补时也可由 AGO2 切割靶 RNA。[^mirna-biogenesis]
 
 siRNA 通常来自较长 double-stranded RNA，经 Dicer／Dicer-like enzymes 切成带 characteristic ends 的 duplex 后装入 Argonaute。植物、真菌和部分无脊椎动物可用 cellular RNA-dependent RNA polymerase 生成或扩增 secondary dsRNA；Drosophila、mammals 和许多其他动物没有同一扩增装置。长 dsRNA 在哺乳动物细胞还可能优先触发 innate immune response，所以“短于 21 bp 无效、长于 30 bp 一律非特异”不能作为跨生物固定阈值。[^rnai-mechanism]
 
-植物 miRNA 多由核内 DCL1 处理，siRNA 则可由 DCL2／3／4 和 RDR family 形成不同长度与功能群，再装入具有偏好的 AGO；其中 24 nt siRNA 进入 RNA-directed DNA methylation，其他小 RNA 可切割 RNA、抑制翻译或在特定组织间移动。动物 piRNA 多由单链前体经不依赖 Dicer 的初级加工形成并装入 PIWI proteins，部分系统用 ping-pong cycle 扩增，3′ 末端常由 HENMT1 进行 2′-O-methylation。其转座抑制接口见[DNA重组与转座](dna_recombination.md#transposon-control)。小 RNA 如何改变靶标表达和染色质状态由[基因表达调控](gene_regulation.md)继续展开。[^pirna-biogenesis]
+植物 miRNA 多由核内 DCL1 处理，siRNA 则可由 DCL2／3／4 和 RDR family 形成不同长度与功能群，再装入具有偏好的 AGO；其中 24 nt siRNA 进入 RNA-directed DNA methylation，其他小 RNA 可切割 RNA、抑制翻译或在特定组织间移动。动物 piRNA 多由单链前体经不依赖 Dicer 的初级加工形成并装入 PIWI proteins，部分系统用 ping-pong cycle 扩增，3′ 末端常由 HENMT1 进行 2′-O-methylation。其转座抑制接口见[DNA重组与转座](dna_recombination.md#transposon-control)，小 RNA 改变靶标表达和染色质状态的机制见[基因表达调控](gene_regulation.md)。[^pirna-biogenesis]
 
 ## 加工机制需要同时读取末端、异构体与 RNP 状态 { #rna-processing-evidence }
 

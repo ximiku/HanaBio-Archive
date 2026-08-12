@@ -10,7 +10,7 @@ DNA 在生理条件下会自发水解。嘌呤碱基脱落留下无碱基的 AP 
 
 呼吸、炎症和其他氧化还原反应产生的活性氧可氧化碱基和脱氧核糖。8-oxo-7,8-dihydroguanine（8-oxoG）既可与 C 配对，也可采用有利于 A 配对的构象；未修复的 8-oxoG:A 中间体可在下一轮复制固定为 G:C→T:A 颠换。S-腺苷甲硫氨酸等细胞内甲基供体和活性醛也会形成烷基化碱基、DNA 链间交联或 DNA—蛋白质交联。拓扑异构酶等酶的共价反应中间体若被截获，也会成为阻断复制的 DNA—蛋白质交联。
 
-紫外线主要在相邻嘧啶间形成 cyclobutane pyrimidine dimer（CPD）和 6–4 photoproduct；电离辐射既能直接电离 DNA，也能经水辐解产生自由基，造成碱基损伤、单链断裂和空间聚集的复杂损伤。多环芳烃代谢物、黄曲霉毒素活化产物等可形成体积较大的碱基加合物；双功能烷化剂、顺铂及内源醛类可产生链内或链间交联。损伤名称描述的是产物结构，不能只由暴露名称推定最终突变。[^damage-chemistry]
+紫外线主要在相邻嘧啶间形成环丁烷嘧啶二聚体（cyclobutane pyrimidine dimer，CPD）和 6–4 光产物（6–4 photoproduct）；电离辐射既能直接电离 DNA，也能经水辐解产生自由基，造成碱基损伤、单链断裂和空间聚集的复杂损伤。多环芳烃代谢物、黄曲霉毒素活化产物等可形成体积较大的碱基加合物；双功能烷化剂、顺铂及内源醛类可产生链内或链间交联。损伤名称描述产物结构，最终突变还取决于修复和复制过程。[^damage-chemistry]
 
 | 损伤或异常 | 对 DNA 的直接改变 | 主要处置路线 | 可能固定的后果 |
 | --- | --- | --- | --- |
@@ -26,11 +26,11 @@ DNA 在生理条件下会自发水解。嘌呤碱基脱落留下无碱基的 AP 
 
 大肠杆菌的 SOS 反应展示了另一种组织方式。损伤加工或复制停顿产生单链 DNA，RecA 在其上形成核蛋白丝并促进 LexA 阻遏蛋白自切，依次解除对切除修复、重组、细胞分裂抑制和损伤跨越基因的转录抑制。后期表达的 DNA polymerase V 可提高存活，也增加某些突变。RecA–LexA 回路在细菌中分布广泛但并不普遍，各谱系的 SOS 靶基因和 SOS 之外的损伤响应差异很大；真核 ATM／ATR 网络也不称为 SOS 反应。[^bacterial-sos]
 
-## 直接逆转只处理结构明确的化学修饰 { #direct-reversal }
+## 直接逆转的特异性底物 { #direct-reversal }
 
 光裂解酶结合 CPD 或 6–4 光产物，利用还原态 FAD 和蓝光／近紫外光提供的能量裂解异常共价键，恢复原有嘧啶。不同光裂解酶对两类光产物有底物专一性；它们存在于许多细菌、古菌、植物和动物谱系，却在人类及其他胎盘哺乳动物中缺失。哺乳动物 cryptochrome 与光裂解酶同源并参与昼夜节律，但不因此具有同等的 DNA 光复活功能。[^direct-repair]
 
-O$^6$-alkylguanine-DNA alkyltransferase 把 O$^6$-烷基鸟嘌呤上的烷基转移到自身活性位点 Cys，一个酶分子完成一次转移后失活；人类同源物称 MGMT。AlkB 家族 Fe(II)／2-oxoglutarate 依赖双加氧酶则以氧化脱烷基方式修复若干 N-烷基化碱基。直接逆转保留原核苷酸骨架，适用的底物集合却很窄，不能替代通用切除修复。
+O$^6$-烷基鸟嘌呤-DNA 烷基转移酶（O$^6$-alkylguanine-DNA alkyltransferase）把 O$^6$-烷基鸟嘌呤上的烷基转移到自身活性位点 Cys，一个酶分子完成一次转移后失活；人类同源物称 MGMT。AlkB 家族 Fe(II)／2-oxoglutarate 依赖双加氧酶则以氧化脱烷基方式修复若干 N-烷基化碱基。直接逆转保留原核苷酸骨架，并以较窄的底物集合与通用切除修复形成互补。
 
 ## 切除修复以互补链重新提供序列信息 { #excision-repair }
 
@@ -48,7 +48,7 @@ O$^6$-alkylguanine-DNA alkyltransferase 把 O$^6$-烷基鸟嘌呤上的烷基转
 
 ### 错配修复识别复制产物中的信息冲突 { #mismatch-repair }
 
-错配修复（MMR）纠正逃过聚合酶校对的碱基错配和小型 insertion–deletion loop，也抑制序列差异过大的同源重组。它虽然同样经历识别、切除、重合成和连接，却不是 NER 的一个亚型。大肠杆菌 MutS 识别错配、MutL 组织反应，MutH 切开暂未甲基化的新生链 GATC 位点；Dam–MutH 途径只见于部分 γ-proteobacteria，不能代表所有细菌。多数具有 MutS／MutL 的其他细菌使用滑动钳、既有缺口和 MutL 内切活性建立链方向。[^mismatch-repair]
+错配修复（mismatch repair，MMR）纠正逃过聚合酶校对的碱基错配和小型插入—缺失环（insertion–deletion loop），也抑制序列差异过大的同源重组。它同样经历识别、切除、重合成和连接，但识别对象和链选择机制独立于 NER。大肠杆菌 MutS 识别错配、MutL 组织反应，MutH 切开暂未甲基化的新生链 GATC 位点；Dam–MutH 途径只见于部分 γ-proteobacteria，其他细菌还可使用滑动钳、既有缺口和 MutL 内切活性建立链方向。[^mismatch-repair]
 
 真核 MutSα（MSH2–MSH6）偏向识别碱基错配与小环，MutSβ（MSH2–MSH3）处理较大的插入／缺失环；MutLα（MLH1–PMS2）、PCNA、RFC、EXO1、polymerase δ 和 ligase I 将识别连接到新生链切除与重合成。部分古菌和 Actinobacteria 缺少经典 MutS／MutL，使用与复制滑动钳相连的 EndoMS／NucS 非经典系统，且其底物谱与插入／缺失纠正能力不同。MMR 缺陷会使复制错误和微卫星长度变化积累；Lynch syndrome 的肿瘤易感性和 microsatellite instability 正是这条通路失效的遗传与基因组读出。[^nucs-mismatch-repair]
 
@@ -58,15 +58,15 @@ O$^6$-alkylguanine-DNA alkyltransferase 把 O$^6$-烷基鸟嘌呤上的烷基转
 
 双链断裂丢失了连续互补链作为局部模板。在哺乳动物细胞中，classical non-homologous end joining（c-NHEJ）由 Ku 保护末端，并通过 DNA-PKcs、末端处理酶和 XRCC4–XLF–ligase IV 复合体重新连接；末端本来兼容时可以无序列改变，末端受损或不兼容时则常产生小型插入／缺失。homologous recombination（HR）先由 MRN–CtIP 等启动 5′ 端切除，再由 BRCA1–PALB2–BRCA2 促进 RAD51 在 3′ 单链 DNA 上组丝并寻找同源模板，因而在复制后的 S／G$_2$ 期可利用姐妹染色单体恢复信息。链侵入、DNA 合成和重组中间体处理见[DNA重组与转座](dna_recombination.md)。[^double-strand-break-choice]
 
-末端连接与 HR 不是固定的“易错／无错”二选一。断口结构、细胞周期、染色质、转录状态、末端切除和可用同源模板共同改变路径选择。single-strand annealing 会在重复序列间退火并删除中间 DNA；polymerase θ-mediated end joining（TMEJ）利用短微同源序列连接经切除的末端，也常留下特征性插入或缺失。细菌通常以 RecBCD／AddAB–RecA 类同源重组处理断裂，一些物种还具有 Ku–LigD 型 NHEJ；古菌和真核的具体因子组合也随谱系变化。
+末端连接与 HR 的准确性取决于断口结构、细胞周期、染色质、转录状态、末端切除和可用同源模板，而非固定对应“易错／无错”二选一。single-strand annealing 会在重复序列间退火并删除中间 DNA；polymerase θ-mediated end joining（TMEJ）利用短微同源序列连接经切除的末端，也常留下特征性插入或缺失。细菌通常以 RecBCD／AddAB–RecA 类同源重组处理断裂，一些物种还具有 Ku–LigD 型 NHEJ；古菌和真核的具体因子组合也随谱系变化。
 
-DNA interstrand crosslink 把两条模板共价锁在一起，单一切除通路无法独立恢复双链。复制耦联的 Fanconi anemia（FA）通路以 FANCD2–FANCI 单泛素化为核心，协调结构特异性核酸酶解除交联、TLS 越过残余加合物以及 HR 恢复断裂复制中间体；某些交联还可由 NEIL3 等采取不同的解联化学。DNA—蛋白质交联则可先经 SPRTN 或蛋白酶体等降解蛋白部分，再由磷酸二酯酶、NER 或复制耦联通路处理残基。Fanconi anemia 细胞对交联剂敏感，反映的是多通路协调缺陷，而不是一个孤立“重组跨越酶”的缺失。[^crosslink-repair]
+DNA interstrand crosslink 把两条模板共价锁在一起，单一切除通路无法独立恢复双链。复制耦联的 Fanconi anemia（FA）通路以 FANCD2–FANCI 单泛素化为核心，协调结构特异性核酸酶解除交联、TLS 越过残余加合物以及 HR 恢复断裂复制中间体；某些交联还可由 NEIL3 等采取不同的解联化学。DNA—蛋白质交联则可先经 SPRTN 或蛋白酶体等降解蛋白部分，再由磷酸二酯酶、NER 或复制耦联通路处理残基。Fanconi anemia 细胞对交联剂敏感，反映多通路协调缺陷，不能归结为一个孤立“重组跨越酶”的缺失。[^crosslink-repair]
 
 ## 复制压力可通过重启、模板转换或损伤跨越化解 { #replication-stress-tolerance }
 
 复制型聚合酶停在损伤前并不意味着整套复制体立即断裂。解旋酶—聚合酶解偶联可暴露 RPA／SSB 包被的单链 DNA，叉也可减速、反转，或在下游重新引发而留下待补缺口。邻近复制叉会合、同源重组依赖重启、以姐妹新生链为模板的 template switching，以及核酸酶受控切开后的重建，都能在不同情境下恢复复制。反转叉需要 BRCA1／BRCA2、RAD51 等保护其新生链，失控降解会把可逆的停顿转成染色体断裂。[^fork-recovery]
 
-translesion synthesis（TLS）让活性位点较宽、通常缺少 3′→5′ 校对的专门聚合酶暂时接替复制聚合酶。TLS 并非随机插入核苷酸：其准确性取决于损伤与聚合酶配对。人 Pol η 能较准确地跨越 UV 形成的 TT-CPD，POLH 缺陷导致 xeroderma pigmentosum variant；Pol κ 对部分 N$^2$-guanine 加合物较合适，REV1 兼具支架与 dCMP transferase 特征，Pol ζ 常负责从畸变引物末端继续延伸。PCNA 单泛素化有助于真核聚合酶切换，细菌 RecA–LexA 网络则调节 Pol IV／Pol V 等。TLS 可减少叉崩溃和大型缺失，却也可能在损伤位点或邻近序列留下碱基置换。[^translesion-synthesis]
+损伤跨越合成（translesion synthesis，TLS）让活性位点较宽、通常缺少 3′→5′ 校对的专门聚合酶暂时接替复制聚合酶。其准确性取决于损伤与聚合酶的具体配对。人 Pol η 能较准确地跨越 UV 形成的 TT-CPD，POLH 缺陷导致 xeroderma pigmentosum variant；Pol κ 对部分 N$^2$-guanine 加合物较合适，REV1 兼具支架与 dCMP transferase 特征，Pol ζ 常负责从畸变引物末端继续延伸。PCNA 单泛素化有助于真核聚合酶切换，细菌 RecA–LexA 网络则调节 Pol IV／Pol V 等。TLS 可减少叉崩溃和大型缺失，却也可能在损伤位点或邻近序列留下碱基置换。[^translesion-synthesis]
 
 ## 突变是损伤、复制与修复共同留下的稳定结果 { #mutation-formation }
 
@@ -78,13 +78,13 @@ translesion synthesis（TLS）让活性位点较宽、通常缺少 3′→5′ �
 
 正向突变使参考表型转为新表型；true reversion 在原位恢复原序列，second-site suppressor 则在基因内其他位置或另一基因中补偿表型。第二处移码可恢复下游阅读框，tRNA anticodon 改变可抑制某些无义或错义密码子，旁路通路也可补偿代谢缺陷。表型恢复因此不证明原突变已消失，大型缺失也可能通过基因剂量或通路层面的抑制获得部分补偿。
 
-### 突变特征是过程的概率性合成读出 { #mutational-signatures }
+### 突变特征的概率性过程读出 { #mutational-signatures }
 
 把碱基置换连同 5′／3′ 序列环境、相邻双碱基变化、indel、结构变异及转录链偏向共同统计，可得到 mutational signature。UV、烟草相关加合物、APOBEC 脱氨、MMR 缺陷、HR 缺陷和 polymerase proofreading 缺陷等都可留下可重复的模式；但一个样本通常叠加多种过程，同一损伤在不同修复背景下也会形成不同谱。技术误差、暴露剂量、发生时间和克隆选择还会改变最终目录，所以 signature 与病因之间不是无条件的一一对应。[^mutational-signatures]
 
 ## 遗传缺陷与诱变试验揭示通路边界 { #repair-evidence }
 
-人类遗传病把特定维护系统与基因组后果联系起来：NER 缺陷可导致 xeroderma pigmentosum，MMR 缺陷导致 microsatellite instability 与 Lynch syndrome 易感性，FA／BRCA 网络缺陷影响交联修复、HR 和复制叉保护。不同患者、基因与等位变体的表型范围很大；细胞对某种损伤剂敏感能提示通路参与，却不能把疾病压缩成一张固定“修复系统—诱变剂”对应表。
+人类遗传病把特定维护系统与基因组后果联系起来：NER 缺陷可导致着色性干皮病（xeroderma pigmentosum），MMR 缺陷导致微卫星不稳定（microsatellite instability）与 Lynch syndrome 易感性，FA／BRCA 网络缺陷影响交联修复、HR 和复制叉保护。不同患者、基因与等位变体的表型范围很大；细胞对某种损伤剂敏感能提示通路参与，但疾病谱仍取决于具体基因、变体和组织环境。
 
 Ames／bacterial reverse mutation test 使用需要特定氨基酸的 *Salmonella enterica* serovar Typhimurium 或 *Escherichia coli* 试验株，以回复菌落读出碱基置换或小型移码；加入哺乳动物肝 S9 等外源代谢活化系统，可检测需要代谢转化的前体化合物。菌株通透性、修复缺陷、剂量、细胞毒性和自发回复背景都会影响结果。阳性结果说明在该体外系统中具有致突变活性，不能直接给出哺乳动物体内剂量、致癌强度或组织风险；标准操作与判读属于[微生物培养、鉴定与功能检测](../exptech/microbiology/culture_identification.md)。[^ames-test]
 

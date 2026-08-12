@@ -1,8 +1,8 @@
 # 翻译与蛋白质生物合成
 
-翻译把 mRNA 的核苷酸序列转换为多肽的氨基酸序列。两种聚合物之间没有直接的化学对应：氨酰-tRNA 合成酶（aminoacyl-tRNA synthetase, aaRS）先把特定氨基酸连接到具有相应身份的 tRNA，tRNA 再以反密码子读取 mRNA 密码子，核糖体则选择底物、催化肽键并沿模板移动。遗传密码由此不是一张脱离装置的对照表，而是 aaRS、tRNA、核糖体和辅助因子共同实现的映射关系。
+翻译把 mRNA 的核苷酸序列转换为多肽的氨基酸序列。两种聚合物之间的对应由分子装置建立：氨酰-tRNA 合成酶（aminoacyl-tRNA synthetase，aaRS）先把特定氨基酸连接到具有相应身份的 tRNA，tRNA 再以反密码子读取 mRNA 密码子，核糖体则选择底物、催化肽键并沿模板移动。遗传密码是 aaRS、tRNA、核糖体和辅助因子共同实现的映射关系。
 
-翻译从 mRNA 的 5′ 端向 3′ 端读取，肽链从 N 端向 C 端延伸。起始步骤选择阅读框，延伸循环维持三核苷酸步进，终止与循环释放产物并回收核糖体；任何一步也都可以成为表达调控或质量控制的入口。多肽离开核糖体时往往还没有成为成熟蛋白，折叠、切割、定位和降解选择由后续[蛋白质成熟、定位与质量控制](protein_processing.md)继续展开。
+翻译从 mRNA 的 5′ 端向 3′ 端读取，肽链从 N 端向 C 端延伸。起始步骤选择阅读框，延伸循环维持三核苷酸步进，终止与循环释放产物并回收核糖体；任何一步也都可以成为表达调控或质量控制的入口。多肽离开核糖体后还会继续折叠、切割、定位并接受质量控制，相关过程见[蛋白质成熟、定位与质量控制](protein_processing.md)。
 
 ## 遗传密码把连续 RNA 划分为三联体 { #genetic-code }
 
@@ -10,13 +10,13 @@
 
 1961 年，Nirenberg 与 Matthaei 用 poly(U) 驱动无细胞体系合成 polyphenylalanine，给出第一个密码子指派。随后，人工重复 RNA、定义明确的合成 RNA 和三核苷酸—核糖体结合实验逐步完成密码表；Holley 对 tRNA 序列与结构的研究又确立了解码适配体。Nirenberg、Khorana 与 Holley 因遗传密码及其在蛋白质合成中的作用获 1968 年诺贝尔生理学或医学奖。[^genetic-code-history]
 
-标准密码表在生命中高度保守，却不是没有例外的“宇宙常数”。线粒体、部分细菌和古菌、某些真核核基因组及病毒可发生密码子重指派；同一个 UGA 在普通终止、硒代半胱氨酸插入或特定遗传密码中的色氨酸之间如何解释，取决于基因组背景、tRNA、释放因子和局部 RNA 信号。密码子的含义、某条 mRNA 上的程序化重编码和翻译错误是三个不同层级，不能把任一异常读出直接称为“密码表改变”。[^genetic-code-variation]
+标准密码表在生命中高度保守，同时存在线粒体、部分细菌和古菌、某些真核核基因组及病毒中的密码子重指派。同一个 UGA 在普通终止、硒代半胱氨酸插入或特定遗传密码中的色氨酸之间如何解释，取决于基因组背景、tRNA、释放因子和局部 RNA 信号。密码子的稳定含义、某条 mRNA 上的程序化重编码和偶发翻译错误处于三个不同层级，只有第一层发生稳定变化时才构成密码表改变。[^genetic-code-variation]
 
 ### 摆动配对减少所需 tRNA 种类 { #wobble-decoding }
 
-反密码子与密码子反向平行配对。解码中心严格检查前两个碱基对的几何，第三个密码子位置允许部分非 Watson–Crick 配对；反密码子第一位的 inosine、queuosine、5-methyluridine 衍生物等修饰还可扩展或限制识别范围。因此，“第三位可以任意配对”并不成立，具体摆动集合由碱基、修饰、tRNA 构象和核糖体环境共同决定。
+反密码子与密码子反向平行配对。解码中心严格检查前两个碱基对的几何，第三个密码子位置允许部分非 Watson–Crick 配对；反密码子第一位的 inosine、queuosine、5-methyluridine 衍生物等修饰还可扩展或限制识别范围。具体摆动集合由碱基、修饰、tRNA 构象和核糖体环境共同决定，配对范围因而受到明确约束。
 
-同义密码子的使用频率随基因组组成、基因类别、组织和生理状态变化。tRNA 丰度与充氨水平、mRNA 结构、新生肽序列和相邻密码子都能改变局部延伸；稀有密码子有时造成停顿，有时参与共翻译折叠或表达调节。密码子适应指数（codon adaptation index）可以描述相对于参考基因集的偏好，却不能直接给出任一蛋白的合成速率。
+同义密码子的使用频率随基因组组成、基因类别、组织和生理状态变化。tRNA 丰度与充氨水平、mRNA 结构、新生肽序列和相邻密码子都能改变局部延伸；稀有密码子有时造成停顿，有时参与共翻译折叠或表达调节。密码子适应指数（codon adaptation index，CAI）描述相对于参考基因集的偏好，蛋白合成速率还受到起始、tRNA 供应和转录本状态等因素影响。
 
 ## tRNA 和 aaRS 在核糖体之前建立氨基酸身份 { #trna-aminoacylation }
 
@@ -58,7 +58,7 @@ cap-dependent initiation 中，eIF4E、eIF4G 与 eIF4A 组成的 eIF4F 连接 5�
 
 正确 aa-tRNA 的 CCA 端进入 PTC 后，A 位氨基的 α-amino group 进攻 P 位 peptidyl-tRNA 的 ester carbonyl，肽链整体转移到 A 位 tRNA。rRNA 和 tRNA A76 周围的氢键网络定位底物并协助 proton shuttle；反应不需要一个核糖体蛋白提供经典共价催化基团。随后小、大亚基相对旋转形成 hybrid states，EF-G／aEF2／eEF2 促进 mRNA—tRNA 向前移动一个密码子，肽酰-tRNA 进入 P 位，脱氨酰 tRNA 经 E 位离开。[^ribosome-catalysis]
 
-多个核糖体可同时翻译一条 mRNA，形成多核糖体（polysome）。其核糖体密度由起始频率、密码子特异的延伸速度、mRNA 结构、新生链作用和碰撞共同产生，不存在通用的 80-nucleotide 间距。细菌中转录与翻译可在同一胞质空间重叠，某些基因形成 RNAP—ribosome 直接或间接耦联；真核核编码 mRNA 则先输出至胞质。无论哪种系统，核糖体占据量都同时受装载和行进速度影响，不能直接等同于蛋白产量。
+多个核糖体可同时翻译一条 mRNA，形成多核糖体（polysome）。其核糖体密度由起始频率、密码子特异的延伸速度、mRNA 结构、新生链作用和碰撞共同产生，核糖体间距因而没有通用的 80-nucleotide 固定值。细菌中转录与翻译可在同一胞质空间重叠，某些基因形成 RNAP—ribosome 直接或间接耦联；真核核编码 mRNA 则先输出至胞质。核糖体占据量同时受装载和行进速度影响，蛋白产量还需结合完成翻译和降解速率判断。
 
 ## 终止释放肽链，循环回收核糖体 { #termination-recycling }
 
@@ -72,11 +72,11 @@ cap-dependent initiation 中，eIF4E、eIF4G 与 eIF4A 组成的 eIF4F 连接 5�
 
 ## 停滞核糖体把 mRNA、肽链与核糖体质控接在一起 { #ribosome-rescue }
 
-缺失终止密码子、受损 mRNA、难解结构、稀缺底物或新生肽—出口通道相互作用都可能使核糖体长时间停滞。单个 pause 可以参与调控或共翻译折叠；当后续核糖体追上并形成特定碰撞界面时，细胞获得更强的异常信号。质量控制的任务不仅是降解 mRNA，还要释放被占用的核糖体并处置尚连在 tRNA 上的新生链。
+缺失终止密码子、受损 mRNA、难解结构、稀缺底物或新生肽—出口通道相互作用都可能使核糖体长时间停滞。单个 pause 可以参与调控或共翻译折叠；当后续核糖体追上并形成特定碰撞界面时，细胞获得更强的异常信号。质量控制同时负责清除问题 mRNA、释放被占用的核糖体并处置尚连在 tRNA 上的新生链。
 
 细菌 tmRNA 先由 alanyl-tRNA synthetase 充入 alanine，并与 SmpB 进入停滞 ribosome 的空 A site；肽链转移给 tmRNA 后，核糖体从原 mRNA 切换到 tmRNA 内部 ORF，合成含 stop codon 的 degradation tag。终止释放核糖体，tag 引导多种 protease 清除不完整蛋白，RNase R 等参与问题 mRNA 周转。不同细菌还可使用 ArfA–RF2、ArfB 等替代救援路线，所以 trans-translation 是主干系统之一，不是唯一可能。[^bacterial-ribosome-rescue]
 
-真核碰撞核糖体可被 ZNF598 等识别并发生小亚基蛋白 ubiquitination，随后由 ASCC 等拆分；留在 60S 上的 peptidyl-tRNA 进入 ribosome-associated quality control（RQC），NEMF 帮助招募 LTN1 使新生链泛素化，ANKZF1 等促进 peptidyl-tRNA hydrolysis。Pelota–HBS1L–ABCE1 还可救援空 A 位的停滞复合体。no-go、non-stop 和 nonsense-mediated decay 描述不同触发语境且彼此有交叉；NMD 还调控一批正常转录本，不能把所有提前终止都写成碰撞触发的同一条 RQC 路线。RNA 周转接口见[RNA转录后加工](rna_processing.md#rna-quality-control)。[^eukaryotic-rqc]
+真核碰撞核糖体可被 ZNF598 等识别并发生小亚基蛋白 ubiquitination，随后由 ASCC 等拆分；留在 60S 上的 peptidyl-tRNA 进入核糖体相关质量控制（ribosome-associated quality control，RQC），NEMF 帮助招募 LTN1 使新生链泛素化，ANKZF1 等促进 peptidyl-tRNA hydrolysis。Pelota–HBS1L–ABCE1 还可救援空 A 位的停滞复合体。no-go、non-stop 和 nonsense-mediated decay 描述不同触发语境且彼此有交叉；NMD 还调控一批正常转录本，不能把所有提前终止都写成碰撞触发的同一条 RQC 路线。RNA 周转接口见[RNA转录后加工](rna_processing.md#rna-quality-control)。[^eukaryotic-rqc]
 
 ## 程序化重编码在局部改变常规读取规则 { #translational-recoding }
 
@@ -88,7 +88,7 @@ cap-dependent initiation 中，eIF4E、eIF4G 与 eIF4A 组成的 eIF4F 连接 5�
 
 四环素类与 aa-tRNA 在细菌 A site 的位置冲突；多类 aminoglycosides 改变 16S rRNA decoding-center 构象并提高误读，另一些则更偏向抑制 translocation。macrolides 位于 nascent-peptide exit tunnel，许多药物只在特定新生肽和 incoming amino acid 组合下造成 context-specific arrest，而非像塞子一样阻断所有肽链。chloramphenicol、lincosamides、oxazolidinones 等在 PTC 周围占据不同位置，作用阶段和序列偏好也不同。[^ribosome-antibiotics]
 
-puromycin 模拟 aminoacyl-tRNA 的 3′ 端并接受肽链，使细菌和真核翻译提前终止；cycloheximide 抑制真核细胞质核糖体转位，diphtheria toxin 通过 ADP-ribosylation 失活 eEF2，ricin 则去嘌呤化 sarcin–ricin loop。选择性来自靶点结构、药物进入与外排、修饰酶和旁路装置的组合，不能仅以 70S／80S 标签预测全部物种、细胞器或剂量反应。抗菌药谱、耐药与应用留给[微生物生长控制](../micro/growth_control.md)。
+puromycin 模拟 aminoacyl-tRNA 的 3′ 端并接受肽链，使细菌和真核翻译提前终止；cycloheximide 抑制真核细胞质核糖体转位，diphtheria toxin 通过 ADP-ribosylation 失活 eEF2，ricin 则去嘌呤化 sarcin–ricin loop。选择性来自靶点结构、药物进入与外排、修饰酶和旁路装置的组合，70S／80S 标签不足以预测全部物种、细胞器或剂量反应。抗菌药谱、耐药与应用见[微生物生长控制](../micro/growth_control.md)。
 
 ## 翻译证据需要区分占据、速度与完成产物 { #translation-evidence }
 

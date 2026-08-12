@@ -1,6 +1,6 @@
 # DNA重组与转座
 
-基因组并非只能按原有顺序复制。细胞可以让一条 DNA 链进入另一条同源双链，以完整模板修复断裂；重组酶可以识别一对短位点，定向删除、倒位或整合其间片段；转座元件还携带自身移动所需的顺式末端和酶，在较少依赖靶序列同源性的条件下改变位置。它们都产生新的 DNA 接头，但识别对象、反应中间体和生物学后果并不相同。
+基因组序列除按原有顺序复制外，还可通过重组和转座形成新的排列。细胞可以让一条 DNA 链进入另一条同源双链，以完整模板修复断裂；重组酶可以识别一对短位点，定向删除、倒位或整合其间片段；转座元件还携带自身移动所需的顺式末端和酶，在较少依赖靶序列同源性的条件下改变位置。这些过程都产生新的 DNA 接头，但识别对象、反应中间体和生物学后果各异。
 
 同源重组通常要求较长的序列相似性，核心任务是从同源模板恢复信息。保守型位点特异性重组要求重组酶识别相配的短位点，交换前后通常没有净核苷酸增减。DNA 转座由转座酶连接元件末端与新靶位点；逆转座则先把元件转录成 RNA，再生成可插入的新 DNA 拷贝。区分这四类过程，是理解交叉互换、基因转换、病毒整合、插入突变和重复序列扩增的起点。
 
@@ -10,11 +10,11 @@
 
 链侵入之后存在多条去路。新合成链若从 D-loop 解离并回到断裂另一端退火，形成 synthesis-dependent strand annealing（SDSA），通常得到 noncrossover 产物。若第二个断裂端被捕获，可形成 double Holliday junction（dHJ）；结构特异性核酸酶按不同方向切开两个连接，可能产生 crossover 或 noncrossover，BLM／Sgs1–TOP3–RMI 类解旋酶—拓扑异构酶复合体也可把两个连接相向迁移并 dissolve 为 noncrossover。只有一个可用断裂端时，break-induced replication（BIR）可在供体上建立长距离复制，但也容易伴随拷贝数变化、模板切换和杂合性丢失。[^hr-outcomes]
 
-Holliday 在 1964 年提出的模型用对称单链切口、链交换、分支迁移和四臂连接解释重组产物，是识别 heteroduplex 与 Holliday junction 的关键概念来源。现代细胞中的 HR 常从复制缺口、停滞复制叉或双链断裂开始，也有 SDSA 等不形成稳定 Holliday junction 的路线。因此，Holliday junction 是一类真实中间体，不是所有同源重组都必须逐步照搬的统一起始模型；crossover 也不是“切同一组链或另一组链”这一单一规则即可预测的固定结果。
+Holliday 在 1964 年提出的模型用对称单链切口、链交换、分支迁移和四臂连接解释重组产物，是识别异源双链（heteroduplex）与 Holliday 连接（Holliday junction）的关键概念来源。现代细胞中的 HR 常从复制缺口、停滞复制叉或双链断裂开始，也有合成依赖的链退火（synthesis-dependent strand annealing，SDSA）等不形成稳定 Holliday junction 的路线。Holliday junction 因此是一类真实中间体，而非所有同源重组共享的统一起始模型；crossover 结局也由中间体结构和处理路线共同决定。
 
 ### 细菌、古菌和真核使用同源的反应逻辑与不同的装置 { #hr-across-domains }
 
-大肠杆菌的 RecBCD 结合近乎平齐的双链断裂末端，同时解旋并切割 DNA。遇到方向正确的 Chi 位点后，复合物改变核酸酶偏向并把 RecA 装载到 3′ 单链尾；RecA 核蛋白丝完成同源搜索和链交换，RuvAB 推动 Holliday junction 分支迁移，RuvC 将其切开。单链缺口和复制后间隙更多由 RecJ、RecQ 与 RecFOR 扩大并把 RecA 装载到 SSB 包被的 DNA。RecBCD、Chi 和 RuvC 是大肠杆菌范式；其他细菌可使用 AddAB、AdnAB、RecU 或不同 Chi 序列，不能由一套蛋白名代表整个细菌域。[^bacterial-recombination]
+大肠杆菌的 RecBCD 结合近乎平齐的双链断裂末端，同时解旋并切割 DNA。遇到方向正确的 Chi 位点后，复合物改变核酸酶偏向并把 RecA 装载到 3′ 单链尾；RecA 核蛋白丝完成同源搜索和链交换，RuvAB 推动 Holliday junction 分支迁移，RuvC 将其切开。单链缺口和复制后间隙更多由 RecJ、RecQ 与 RecFOR 扩大并把 RecA 装载到 SSB 包被的 DNA。RecBCD、Chi 和 RuvC 构成大肠杆菌范式，其他细菌可使用 AddAB、AdnAB、RecU 或不同 Chi 序列。[^bacterial-recombination]
 
 许多古菌以 Mre11–Rad50 感知断端，HerA 解旋酶与 NurA 核酸酶参与切除，再由 RadA 核蛋白丝完成同源搜索。真核细胞则由 MRN–CtIP、EXO1 或 DNA2–BLM 等建立 3′ 单链尾，RPA 先保护单链，BRCA2 等介质再促进 RAD51 取代 RPA。三域系统共享“末端加工—重组酶核蛋白丝—同源搜索—DNA 合成—中间体拆解”的功能逻辑，但其切除、介质和连接处理机器经过了谱系特异的组合。断裂修复通路选择及 NHEJ 边界见[DNA损伤、修复与突变](dna_repair.md#break-crosslink-repair)。[^archaea-eukaryote-hr]
 
@@ -30,9 +30,9 @@ crossover 把同源染色体臂的两侧标记重新组合，并与姐妹染色�
 
 保守型位点特异性重组由重组酶把一对 cognate sites 装配为 synaptic complex，通过可逆转酯反应同时完成切割与重连。反应能量保存在共价蛋白质—DNA 中间体中，通常不需要 DNA 聚合酶填补，也不产生靶位点重复。两个位点在同一 DNA 上同向排列时，重组常把中间片段切出为环；反向排列时产生倒位；位于不同 DNA 上时可完成整合、解整合或染色体交换。实际方向还由位点不对称性、DNA 拓扑和辅助蛋白共同限定。[^site-specific-recombination]
 
-tyrosine recombinase 以活性位点 Tyr 形成 3′-phosphotyrosine 键并释放 5′-OH。四聚体先交换一对链，经过 Holliday junction 中间体后再交换另一对链；Cre–loxP、Flp–FRT、λ integrase 和细菌染色体二聚体拆分系统 Xer 都属于此类。loxP 是 34 bp 位点，由两个 13 bp Cre 结合臂夹住不对称的 8 bp spacer；spacer 决定位点方向和链交换相容性，并非任意八个碱基都可等效替换。
+酪氨酸重组酶（tyrosine recombinase）以活性位点 Tyr 形成 3′-phosphotyrosine 键并释放 5′-OH。四聚体先交换一对链，经过 Holliday junction 中间体后再交换另一对链；Cre–loxP、Flp–FRT、λ integrase 和细菌染色体二聚体拆分系统 Xer 都属于此类。loxP 是 34 bp 位点，由两个 13 bp Cre 结合臂夹住不对称的 8 bp spacer；spacer 决定位点方向和链交换相容性，等效替换还受具体序列约束。
 
-serine recombinase 则以 Ser 形成 5′-phosphoserine 键，协同切断四条链后通过亚基相对旋转交换末端，再重新连接。Hin 类 invertase 可翻转启动子区域并改变细菌表面结构表达，Tn3 resolvase 负责拆分复制型转座产生的 cointegrate，大型 serine integrase 如 φC31、Bxb1 则能在不同 att 位点间高效整合。tyrosine 与 serine 两大家族的催化折叠和中间体不同，不能因都使用短识别位点而视为同一种酶。
+丝氨酸重组酶（serine recombinase）则以 Ser 形成 5′-phosphoserine 键，协同切断四条链后通过亚基相对旋转交换末端，再重新连接。Hin 类 invertase 可翻转启动子区域并改变细菌表面结构表达，Tn3 resolvase 负责拆分复制型转座产生的 cointegrate，大型 serine integrase 如 φC31、Bxb1 则能在不同 att 位点间高效整合。tyrosine 与 serine 两大家族使用短识别位点，却具有不同的催化折叠和中间体。
 
 天然系统常以辅助蛋白建立方向性。λ integrase 在 attP 与 attB 间整合后产生 attL 和 attR；integration host factor、DNA 弯曲和臂位点帮助组装整合复合物，Xis 等则使解整合采用另一套核蛋白结构。Cre–loxP 在简化实验系统中所需辅助因子较少，因此成为条件性删除、倒位和谱系追踪工具；条件构建设计见[分子克隆与构建设计](../exptech/biochem_molecular/molecular_cloning.md#expression-conditional-genetics)，脱靶、嵌合与等位基因验证见[基因组编辑与验证](../exptech/biochem_molecular/genome_editing.md#editing-outcomes-validation)。
 
@@ -64,7 +64,7 @@ SINE 通常没有蛋白质编码能力，SVA 是由 SINE-R、VNTR 和 Alu-derive
 
 逆转录病毒先把基因组 RNA 复制成两端带 LTR 的线性双链 DNA。integrase 在 preintegration complex 中结合两个病毒 DNA 末端，完成 3′ processing 后把两端协同接入宿主 DNA 的错列位点；宿主修复填补缺口，最终在 provirus 两侧留下长度依病毒类群而异的 TSD。该反应与 DDE 转座酶的 strand transfer 化学同源，却不是 Cre 类保守型位点特异性重组。[^retroviral-integration]
 
-宿主靶位点也并非简单“随机”。integrase 对局部 DNA 形状和短序列有弱偏好，并可由 LEDGF/p75、BET 蛋白等宿主染色质因子引导到不同基因组环境；HIV-1、MLV 和其他逆转录病毒因而呈现不同的整合分布。病毒入胞、表达、装配和传播属于[病毒与亚病毒因子](../micro/viruses.md)，这里仅保留 DNA 接头形成及其与转座化学的关系。
+宿主靶位点具有非随机的选择偏好。integrase 对局部 DNA 形状和短序列有弱偏好，并可由 LEDGF/p75、BET 蛋白等宿主染色质因子引导到不同基因组环境；HIV-1、MLV 和其他逆转录病毒因而呈现不同的整合分布。病毒入胞、表达、装配和传播见[病毒与亚病毒因子](../micro/viruses.md)，DNA 接头形成则与转座化学直接相连。
 
 ## 移动元件受自身限速和宿主防御共同约束 { #transposon-control }
 

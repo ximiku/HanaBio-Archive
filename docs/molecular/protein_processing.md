@@ -2,7 +2,7 @@
 
 核糖体释放的是一条具有确定序列的多肽，细胞实际使用的却往往是已经折叠、定位、切割、共价修饰并与其他亚基装配的蛋白质分子种。上述事件可以在翻译进行时开始，也可以在多肽释放后很久才发生；有些形成稳定成熟产物，有些则随信号、代谢状态或细胞周期反复改变。由同一基因产生、但序列加工、修饰或构象状态不同的分子通常称为不同 proteoforms。蛋白质生物合成因此并不止于肽链延伸，而是一直延续到分子取得合适结构、区室和寿命。
 
-折叠、分选与质量控制并非三条互不相干的流水线。疏水信号序列刚从核糖体出口出现时，既可能招募膜靶向装置，也可能被伴侣蛋白暂时遮蔽；糖链和二硫键既参与成熟，也成为内质网检查折叠状态的依据；未装配亚基或暴露的疏水表面又可转化为降解信号。最终命运来自多种识别反应的竞争，而不是翻译完成后的一次总验收。
+折叠、分选与质量控制是彼此耦联的过程。疏水信号序列刚从核糖体出口出现时，既可能招募膜靶向装置，也可能被伴侣蛋白暂时遮蔽；糖链和二硫键既参与成熟，也成为内质网检查折叠状态的依据；未装配亚基或暴露的疏水表面又可转化为降解信号。多种识别反应从翻译过程中开始竞争，并共同决定最终命运。
 
 ## 新生链在合成过程中取得结构 { #nascent-chain-folding }
 
@@ -26,13 +26,13 @@
 
 ## 分选信号把蛋白质送入合适区室 { #protein-targeting }
 
-多数蛋白质都在胞质核糖体上起始合成。没有被其他靶向装置捕获的可溶蛋白通常留在胞质，但“胞质是默认去向”不表示所有定位都由一个可切除的 N 端标签决定。信号可以位于 N 端、C 端或链内，由疏水性、带电残基、三维表面和相邻序列共同构成；剪接、翻译起点、磷酸化、配体结合或亚基装配还能暴露或遮蔽它。一个蛋白也可具有竞争信号，在不同细胞状态或 proteoform 中进入不同区室。
+多数蛋白质都在胞质核糖体上起始合成。没有被其他靶向装置捕获的可溶蛋白通常留在胞质，而主动定位信号可以位于 N 端、C 端或链内，由疏水性、带电残基、三维表面和相邻序列共同构成；剪接、翻译起点、磷酸化、配体结合或亚基装配还能暴露或遮蔽它。一个蛋白也可具有竞争信号，在不同细胞状态或蛋白质分子型（proteoform）中进入不同区室。
 
 ### 细菌与古菌使用 Sec、SRP 和 Tat 等路线 { #prokaryotic-protein-export }
 
 细菌 SRP 在疏水跨膜段露出时结合 ribosome–nascent-chain complex，经受体 FtsY 把它交给 SecYEG 或 YidC，使许多内膜蛋白共翻译插入。大量分泌或周质蛋白则在合成后由 SecB 等伴侣维持为可转位状态，SecA 以 ATP 驱动它们通过 SecYEG；实际底物中也存在共翻译 SecA 参与和不同路线交叉。Sec 通常运输未折叠链，twin-arginine translocation（Tat）则可转运已经折叠并常已结合辅因子的底物。信号肽酶切除许多 N 端 export signals，signal anchor 和一部分定位信号则保留在成熟蛋白中。[^bacterial-targeting]
 
-古菌具有同源的 SRP–FtsY 与 SecY 装置，也可具有 Tat 和 YidC/Oxa1-family insertases，但组成随谱系而变。细菌内膜外侧是周质或细胞外环境，古菌膜和细胞表面结构又具有自身拓扑；不能把真核内质网、高尔基体和分泌囊泡的整套路线投射到二者。跨膜之后的 signal-peptide cleavage、脂化、糖基化和折叠同样构成成熟过程。
+古菌具有同源的 SRP–FtsY 与 SecY 装置，也可具有 Tat 和 YidC/Oxa1-family insertases，但组成随谱系而变。细菌内膜外侧是周质或细胞外环境，古菌膜和细胞表面结构又具有自身拓扑；二者的分选路线需要按自身膜拓扑理解，而非套用真核内质网、高尔基体和分泌囊泡系统。跨膜之后的 signal-peptide cleavage、脂化、糖基化和折叠同样构成成熟过程。
 
 ### 内质网入口同时建立分泌蛋白和膜蛋白拓扑 { #er-targeting-translocation }
 
@@ -60,7 +60,7 @@
 
 磷酸化、乙酰化、甲基化、ADP-ribosylation、AMPylation、硝基化与多种氧化还原修饰能够改变电荷、构象、催化活性和结合界面。真核 signaling 常讨论 Ser／Thr／Tyr phosphorylation，细菌和古菌同样具有 Ser／Thr／Tyr kinases；细菌 two-component systems 中又常由 His kinase 把 phosphoryl group 转给 response regulator 的 Asp。将“原核磷酸化”全部写成 His modification 会把两套化学和更多例外压成一条规则。
 
-ubiquitin、SUMO 及其他 ubiquitin-like proteins 通过酶级联连接到底物，既可改变稳定性，也可控制相互作用、DNA repair、核质运输或膜分选。修饰后果取决于 attachment site、链连接方式、长度、空间和读取蛋白，单见一个 ubiquitin 标记不能直接推出蛋白将被 proteasome 降解。细菌也有 Pup 等不同的 protein-tagging systems，古菌可使用 SAMP／Ubl 类标记；这些系统在结构和酶学上不能全部称为真核泛素化。
+泛素（ubiquitin）、小泛素相关修饰蛋白（small ubiquitin-like modifier，SUMO）及其他泛素样蛋白通过酶级联连接到底物，既可改变稳定性，也可控制相互作用、DNA repair、核质运输或膜分选。修饰后果取决于 attachment site、链连接方式、长度、空间和读取蛋白，单个 ubiquitin 标记只表明发生了相应修饰，是否进入蛋白酶体还取决于链型与识别环境。细菌也有 Pup 等不同的 protein-tagging systems，古菌可使用 SAMP／Ubl 类标记；这些系统在结构和酶学上与真核泛素化各有区别。
 
 羟化、γ-carboxylation、tyrosine sulfation、citrullination 和 C-terminal amidation 展示了不同成熟化学。胶原 Pro／Lys hydroxylation 与后续 glycosylation、分泌后交联共同决定纤维性质；凝血因子的 vitamin-K-dependent γ-carboxyglutamate 帮助结合 Ca$^{2+}$ 和膜。肽类激素的 C-terminal amidation 常以末端 Gly 提供 amidating group，Gly 随反应被移除，并非简单“把 Gly 本身酰胺化以延长半衰期”。hypusination 则几乎专属于 eIF5A 的一个 Lys，经 deoxyhypusine 中间体形成 hypusine，不能概括为普遍 Lys modification。[^ptm-diversity]
 
@@ -92,9 +92,9 @@ degron 是能被降解装置识别的结构特征，可由短序列、特定 N�
 
 ### 真核区室质量控制连接蛋白酶体与自噬 { #eukaryotic-proteostasis }
 
-胞质和细胞核中可被展开的单个底物多由 ubiquitin–proteasome system 处理；ER lumen 或膜中的异常蛋白可先经 ER-associated degradation（ERAD）逆向抽提到胞质，再被 proteasome 降解。内质网 folding load 超过处理能力时，UPR 会调整 translation input、chaperones、ERAD、膜发生和 stress transcription，但 UPR 是系统级负荷响应，不是识别每个错误折叠分子的单一受体。具体 ERAD 与 UPR 路线见[内质网质量控制](../cell/endomembrane.md#er-proteostasis)。[^er-quality-control]
+胞质和细胞核中可被展开的单个底物多由 ubiquitin–proteasome system 处理；ER lumen 或膜中的异常蛋白可先经 ER-associated degradation（ERAD）逆向抽提到胞质，再被 proteasome 降解。内质网 folding load 超过处理能力时，未折叠蛋白反应（unfolded protein response，UPR）会调整 translation input、chaperones、ERAD、膜发生和 stress transcription。UPR 是系统级负荷响应，而具体错误折叠分子由多类识别与处置装置处理。具体 ERAD 与 UPR 路线见[内质网质量控制](../cell/endomembrane.md#er-proteostasis)。[^er-quality-control]
 
-endocytosed membrane proteins、分泌通路腔内货物和 extracellular material 多在 endosome–lysosome route 中水解；macroautophagy 能包围大复合体、aggregate 和完整 organelle，chaperone-mediated autophagy 则逐个转运一类具有可识别 motif 的 soluble clients。mitochondrial、peroxisomal 与 nuclear protein quality control 还含区室内 proteases、逆向输出或 selective autophagy。蛋白酶体和自噬的完整降解化学已在[蛋白质周转](../biochem/pr_aa_catabolism.md#protein-turnover)展开，本页关注的是成熟失败怎样暴露识别信号并进入这些出口。
+内吞膜蛋白、分泌通路腔内货物和细胞外物质多在内体—溶酶体路线（endosome–lysosome route）中水解；大自噬（macroautophagy）能包围大复合体、聚集体和完整细胞器，伴侣介导的自噬（chaperone-mediated autophagy）则逐个转运一类具有可识别 motif 的可溶性底物。线粒体、过氧化物酶体与细胞核的蛋白质质量控制还含区室内 proteases、逆向输出或选择性自噬。蛋白酶体和自噬的完整降解化学见[蛋白质周转](../biochem/pr_aa_catabolism.md#protein-turnover)；成熟失败会暴露识别信号并使底物进入这些出口。
 
 ## 多层证据区分定位、修饰与成熟功能 { #protein-processing-evidence }
 
