@@ -2,7 +2,7 @@
 
 溶液变蓝、吸光度上升或荧光增强，都是分子状态经过化学反应、光路和检测器转换后留下的信号。要把信号写成浓度、含量或结合参数，还需要知道它由什么物种产生，样品经过了哪些处理，空白扣除了什么，校准关系覆盖到哪里，以及仪器是否在可用范围内。光谱测定的核心是建立从待测物到可解释量值的完整测量链，表观光密度（optical density，OD）只是其中一种读数表述。
 
-本页先从吸收、荧光和微孔板读数进入这条链，再比较经典生化显色与蛋白定量方法，并说明表面等离子共振和呼吸测量怎样把另一类物理量转成生物学证据。移液、配液、温度与校准的共同要求见[测量、溶液配制与仪器校准](../foundations/safety_measurement.md#calibration-verification)，样品编码、质控样和原始数据处理见[实验设计、记录与数据质量](../foundations/design_data.md#controls-quality-samples)。
+吸收、荧光和微孔板读数构成光学信号链的起点，经典生化显色与蛋白定量方法沿这条链比较，表面等离子共振和呼吸测量则把其他物理量转成生物学证据。移液、配液、温度与校准的共同要求见[测量、溶液配制与仪器校准](../foundations/safety_measurement.md#calibration-verification)，样品编码、质控样和原始数据处理见[实验设计、记录与数据质量](../foundations/design_data.md#controls-quality-samples)。
 
 ## 光学信号的来源 { #optical-signal-chain }
 
@@ -107,7 +107,7 @@ $$
 
 血清胆固醇的磷硫铁显色（Zak 类反应）具有方法史价值：乙醇沉淀蛋白并提取甾醇，强酸和铁盐形成可见颜色。它使用浓硫酸、磷酸和易燃乙醇，必须置于机构批准的化学卫生和危废程序中；其他甾醇、试剂纯度和血清基质可造成偏差。教学显色结果不能直接用于个体诊断或治疗决策。现代临床结果依赖可溯源校准和标准化网络，CDC 的总胆固醇参考体系以 Abell–Kendall 和同位素稀释质谱等参考程序维持跨方法可比性。[^cholesterol-standardization]
 
-3,5-二硝基水杨酸（3,5-dinitrosalicylic acid，DNS）—淀粉酶、酪蛋白—Folin 蛋白酶、转氨酶显色和甲醛滴定等动力学实验，都会使用本页的空白、标准曲线和光度原则；其反应时间、初始线性区、活力单位和动力学拟合见下一页[酶活性测定与动力学](enzyme_kinetics.md)。离子交换柱后的 Bradford 追踪和氨基酸薄层显色，则在[分离、层析与蛋白质制备](separation_protein.md)中沿完整操作链展开。
+3,5-二硝基水杨酸（3,5-dinitrosalicylic acid，DNS）—淀粉酶、酪蛋白—Folin 蛋白酶、转氨酶显色和甲醛滴定等动力学实验，都会使用相同的空白、标准曲线和光度原则；其反应时间、初始线性区、活力单位和动力学拟合见[酶活性测定与动力学](enzyme_kinetics.md)。离子交换柱后的 Bradford 追踪和氨基酸薄层显色，则在[分离、层析与蛋白质制备](separation_protein.md)中沿完整操作链展开。
 
 ## 表面等离子共振 { #surface-plasmon-resonance }
 
@@ -139,7 +139,7 @@ Clark 型电极直接连续测量封闭体系中的溶解氧，现代高分辨�
 - Schuck P, Zhao H. [The role of mass transport limitation and surface heterogeneity in the biophysical characterization of macromolecular binding processes by SPR biosensing](https://pmc.ncbi.nlm.nih.gov/articles/PMC4134667/). *Methods in Molecular Biology*. 2010;627:15–54.
 - Mookerjee SA, et al. [A practical guide for the analysis, standardization, and interpretation of oxygen consumption measurements](https://pmc.ncbi.nlm.nih.gov/articles/PMC9618452/). *Cell Metabolism*. 2022;34:1782–1794.
 
-[^iupac-beer-lambert]: IUPAC Gold Book 对 [Beer–Lambert–Bouguer 定律](https://goldbook.iupac.org/terms/view/B00626)的定义同时限定平行单色辐射、均一各向同性介质、光程与浓度，并使用十进摩尔吸收系数；本页据此区分吸光度、透射比和表观散射读数。
+[^iupac-beer-lambert]: IUPAC Gold Book 对 [Beer–Lambert–Bouguer 定律](https://goldbook.iupac.org/terms/view/B00626)的定义同时限定平行单色辐射、均一各向同性介质、光程与浓度，并使用十进摩尔吸收系数；正文据此区分吸光度、透射比和表观散射读数。
 [^nist-spectrophotometry]: NIST 的[分子分光光度计溯源体系](https://www.nist.gov/programs-projects/traceability-molecular-spectrophotometry)使用规定波长的透射／吸光参考物质传递光度量值；[SRM 2082 光程标准](https://www.nist.gov/publications/development-nist-standard-reference-material-2082-pathlength-standard-measurements)说明微量紫外测量中实际光程也需要独立表征。
 [^chance-difference-spectra]: Chance B, Williams GR. [Respiratory enzymes in oxidative phosphorylation. II. Difference spectra](https://doi.org/10.1016/S0021-9258%2819%2957190-3). *Journal of Biological Chemistry*. 1955;217:395–407；同系列的[呼吸链研究](https://pubmed.ncbi.nlm.nih.gov/13271405/)以光谱和功能状态连接各电子载体。
 [^nist-calibration]: NIST [Models for instrument calibration](https://www.itl.nist.gov/div898/handbook/mpc/section3/mpc361.htm)列出线性、二次、幂与非线性模型；[Data analysis and model validation](https://www.itl.nist.gov/div898/handbook/mpc/section3/mpc365.htm)要求检查残差、精密度和模型假设，不以单一相关系数放行。

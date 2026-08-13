@@ -111,7 +111,7 @@ PFU 是条件性的感染性单位，并非成熟病毒颗粒总数。多个聚�
 
 ## 参考资料与延伸阅读 { #references }
 
-[^cdc-environmental-sampling]: Centers for Disease Control and Prevention. [*Environmental Sampling*](https://www.cdc.gov/infection-control/hcp/environmental-control/environmental-sampling.html). 该指南讨论医疗环境中的空气、水和表面采样；本页采用其采样问题、对照、分母和行动计划原则，不把医疗场景阈值移作一般环境标准。
+[^cdc-environmental-sampling]: Centers for Disease Control and Prevention. [*Environmental Sampling*](https://www.cdc.gov/infection-control/hcp/environmental-control/environmental-sampling.html). 该指南讨论医疗环境中的空气、水和表面采样；正文采用其采样问题、对照、分母和行动计划原则，不把医疗场景阈值移作一般环境标准。
 
 [^iso-water-sampling]: International Organization for Standardization. [ISO 19458:2006, *Water quality — Sampling for microbiological analysis*](https://www.iso.org/standard/33845.html). 标准覆盖微生物水样采集、运输、保存及不同采样目的下的程序选择。
 

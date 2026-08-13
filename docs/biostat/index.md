@@ -104,7 +104,7 @@
 - Hernán MA, Robins JM. [*Causal Inference: What If*](https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf), 2024 更新版。
 - Higgins JPT, Thomas J, Chandler J, et al., eds. [*Cochrane Handbook for Systematic Reviews of Interventions*](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current), version 6.5, 2024.
 
-[^ich-estimand]: International Council for Harmonisation. [ICH E9(R1): Addendum on Estimands and Sensitivity Analysis in Clinical Trials](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-estimands-and-sensitivity-analysis-clinical-trials-guideline-statistical-principles-clinical-trials-step-5_en.pdf)。本页将其“先定义目标、再选择估计方法”的一般原则扩展到其他生命科学研究。
+[^ich-estimand]: International Council for Harmonisation. [ICH E9(R1): Addendum on Estimands and Sensitivity Analysis in Clinical Trials](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-estimands-and-sensitivity-analysis-clinical-trials-guideline-statistical-principles-clinical-trials-step-5_en.pdf)。正文将其“先定义目标、再选择估计方法”的一般原则扩展到其他生命科学研究。
 [^nist-confidence]: NIST/SEMATECH. [Confidence Limits](https://www.itl.nist.gov/div898/handbook/prc/section1/prc14.htm)：以重复抽样中区间覆盖固定参数的比例解释置信水平。
 [^asa-pvalue]: Wasserstein RL, Lazar NA. [The ASA's Statement on *p*-Values: Context, Process, and Purpose](https://doi.org/10.1080/00031305.2016.1154108). *The American Statistician*, 2016, 70(2): 129–133。
 [^nasem-reproducibility]: National Academies of Sciences, Engineering, and Medicine. [*Reproducibility and Replicability in Science*](https://doi.org/10.17226/25303). National Academies Press, 2019。

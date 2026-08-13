@@ -4,7 +4,7 @@
 
 催化体系以蛋白质酶为主，也包括具有催化能力的核糖核酸（ribonucleic acid，RNA），并常依赖金属、有机辅因子和多亚基装配。专一性和活力都需要在规定条件下描述；反应名称、酶委员会编号（Enzyme Commission number，EC number）和显色读数也应还原为可检验的催化过程。
 
-本页讨论酶的共同性质、物质组成、命名分类、底物识别、活力测定和工程化。米氏方程及抑制动力学见[酶动力学](enzyme_dynamics.md)，活性位点的化学机制、别构调节、酶原和同工酶见[酶的催化机制与调控](enzyme_mechanism_regulation.md)，各类维生素衍生辅酶的反应化学见[维生素与辅酶](vitamin_and_coenzyme.md)。
+酶的共同性质、物质组成、命名分类、底物识别、活力测定和工程化构成酶学的基础框架。米氏方程及抑制动力学见[酶动力学](enzyme_dynamics.md)，活性位点的化学机制、别构调节、酶原和同工酶见[酶的催化机制与调控](enzyme_mechanism_regulation.md)，各类维生素衍生辅酶的反应化学见[维生素与辅酶](vitamin_and_coenzyme.md)。
 
 ## 催化路径与平衡终点 { #catalytic-pathway }
 

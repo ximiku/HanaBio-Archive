@@ -2,7 +2,7 @@
 
 蛋白质电泳把混合物转化为按迁移率排列的区带，印迹再把这些区带复制到便于探测的固相，抗体或总蛋白染料最终把某一类分子变成可见信号。三步各自回答不同问题：凝胶显示样品中有哪些迁移组分，转印显示哪些组分到达并留在膜上，免疫信号则显示所用抗体在这些位置识别了什么。只有把样品状态、分离、转移、抗体验证和成像范围连成一条证据链，条带强弱才能支持蛋白丰度或分子形式的比较。
 
-本页从[分离、层析与蛋白质制备](separation_protein.md#preparation-objective)接过样品，保留手工灌胶、上样、染色、湿转、半干转、封闭和显色的经典操作路径，并补足现代定量与原始图像要求。电泳和抗体识别的机制全貌见[蛋白质研究方法](../../biochem/protein_methods.md#electrophoresis)，微孔板的吸光与发光读数见[光谱测定与生化定量](spectroscopy_assays.md#microplate-readers)。
+蛋白质检测从[分离、层析与蛋白质制备](separation_protein.md#preparation-objective)接过样品，沿手工灌胶、上样、染色、湿转、半干转、封闭和显色的经典操作路径进入现代定量与原始图像要求。电泳和抗体识别的机制全貌见[蛋白质研究方法](../../biochem/protein_methods.md#electrophoresis)，微孔板的吸光与发光读数见[光谱测定与生化定量](spectroscopy_assays.md#microplate-readers)。
 
 ## 从实验问题选择检测路线 { #measurement-path }
 
@@ -140,7 +140,7 @@ Towbin、Staehelin 和 Gordon 1979 年证明可把聚丙烯酰胺凝胶中的蛋
 
 Western 以凝胶迁移位置分开样品，斑点／狭缝印迹（dot/slot blot）则把样品直接点在 NC 或 PVDF 上，省去分离但丢失表观质量信息。酶反应生成不溶有色沉淀时，点的颜色可显示结合，相同位置的交叉反应则需要相应对照排除。辣根过氧化物酶（horseradish peroxidase，HRP）和碱性磷酸酶是常用酶报告物；3,3′-二氨基联苯胺（3,3′-diaminobenzidine，DAB）经 HRP 催化形成棕褐色不溶产物，适合空间定位但须按危险化学品条件处置。放射免疫测定把结合转成同位素信号，保留了高灵敏历史路径，同时需要辐射许可、衰变校正和放射废物管理。
 
-免疫荧光、免疫组织化学和免疫电镜保留空间信息，具体固定、表位修复、成像和伪影迁交[组织学染色与细胞成像](../cell/histology_imaging.md)，不在本页用一套膜上条件替代。HA 等短肽标签可由相应标签抗体检测，适合验证构建表达或纯化级分；信号证明的是带标签分子，标签对表达、加工和迁移的影响仍需对照，不能自动代表未标记内源蛋白。
+免疫荧光、免疫组织化学和免疫电镜保留空间信息，具体固定、表位修复、成像和伪影迁交[组织学染色与细胞成像](../cell/histology_imaging.md)，需要采用与膜上检测不同的条件。HA 等短肽标签可由相应标签抗体检测，适合验证构建表达或纯化级分；信号证明的是带标签分子，标签对表达、加工和迁移的影响仍需对照，不能自动代表未标记内源蛋白。
 
 ELISA 把抗原或抗体固定在微孔板等固相，用洗涤分隔结合与游离组分，再以酶标反应读出。Engvall 与 Perlmann 1971 年已用酶标体系定量免疫球蛋白 G，奠定了 ELISA 的定量路径。[^elisa-origin]
 
@@ -216,7 +216,7 @@ Taylor 等以定量 Western 流程说明，目标和归一化信号的线性范�
 [^western-handbook]: Thermo Fisher Scientific, [Western blotting handbook and troubleshooting guide](https://documents.thermofisher.com/TFS-Assets/LSG/brochures/1602761-Western-Blotting-Handbook.pdf)。手册系统列出胶—膜接触、电极方向、蛋白大小、场强、去污剂、膜上总蛋白检查、封闭和故障排查；其中商品专用时间和浓度不提升为跨设备通则。
 [^antibody-validation]: Uhlen 等, [A proposal for validation of antibodies](https://doi.org/10.1038/nmeth.3995). *Nature Methods*. 2016;13:823–827。五类验证支柱按具体应用组合使用，单克隆来源、供应商验证或预期大小条带都不能单独证明特异性。
 [^elisa-origin]: Engvall 与 Perlmann, [Enzyme-linked immunosorbent assay (ELISA): quantitative assay of immunoglobulin G](https://doi.org/10.1016/0019-2791(71)90454-X). *Immunochemistry*. 1971;8:871–874。该工作把固相免疫结合与酶标读出连接，并用校准实现定量。
-[^ligand-binding-validation]: US FDA, [Bioanalytical Method Validation for Biomarkers](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioanalytical-method-validation-biomarkers)。该指导按预定用途讨论选择性、校准、精密度、准确度、稀释与样品稳定性；本页借其限定定量 ELISA 和其他配体结合分析，不把研究用教学板直接写成临床诊断方法。
+[^ligand-binding-validation]: US FDA, [Bioanalytical Method Validation for Biomarkers](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioanalytical-method-validation-biomarkers)。该指导按预定用途讨论选择性、校准、精密度、准确度、稀释与样品稳定性；正文借其限定定量 ELISA 和其他配体结合分析，不把研究用教学板直接写成临床诊断方法。
 [^total-protein-normalization]: Eaton 等在[总蛋白归一化研究](https://doi.org/10.1371/journal.pone.0072457)中比较整泳道总蛋白与单一管家蛋白；其结果支持把总蛋白图同时用于上样／转移质量控制和定量归一化，但具体染色仍须在样品范围内验证。
 [^quantitative-western]: Taylor 等, [A critical path to producing high quality, reproducible data from quantitative western blot experiments](https://doi.org/10.1038/s41598-022-22294-x). *Scientific Reports*. 2022;12:17599。文章以样品系列、线性范围、同膜总蛋白、膜内归一化和跨膜参照组织完整工作流。
 [^western-reporting]: Nature Portfolio, [Western blot data acquisition and presentation guidelines](https://www.nature.com/documents/Western_blot_guidelines.pdf)。规范要求分子质量标记、同膜加载参照、未裁切源图、清楚标示拼接、抗体身份和稀释信息；正文把这些要求并入可追溯记录。

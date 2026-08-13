@@ -128,7 +128,7 @@ $$
 
 ## 参考资料与延伸阅读 {#references}
 
-[^water-potential]: OpenStax, [*Biology 2e*: Transport of Water and Solutes in Plants](https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants)。该教材页提供水势分量与土壤—植物—大气梯度的入门框架；重力项在本文按 $\rho gh$ 计算，不沿用该页的数量级笔误。
+[^water-potential]: OpenStax, [*Biology 2e*: Transport of Water and Solutes in Plants](https://openstax.org/books/biology-2e/pages/30-5-transport-of-water-and-solutes-in-plants)。该教材页提供水势分量与土壤—植物—大气梯度的入门框架；重力项在正文按 $\rho gh$ 计算，不沿用该页的数量级笔误。
 [^water-potential-measurement]: Boyer, [Leaf Water Potentials Measured with a Pressure Chamber](https://doi.org/10.1104/pp.42.1.133), *Plant Physiology* 42: 133–137, 1967；Busso, [Use of the pressure chamber and thermocouple psychrometers to determine the water relations of plant tissues](https://doi.org/10.32604/phyton.2008.77.327), *Phyton* 77: 327–350, 2008。
 [^soil-water-irrigation]: FAO, [Chapter 8: Crop evapotranspiration under soil water stress conditions](https://www.fao.org/4/x0490e/x0490e0e.htm)。田间持水量、萎蔫点、总可利用水和易利用水是灌溉核算中的操作性量，实际供水还受根深与大气需求影响。
 [^root-water-transport]: 根内质外体、共质体和跨细胞路线及其串并联阻力，见 Gambetta 等的[根复合运输模型综述](https://pubmed.ncbi.nlm.nih.gov/29503659/)；根毛贡献和根—土水力接触的物种与土壤依赖性见[根毛吸水综述](https://pubmed.ncbi.nlm.nih.gov/35323893/)。

@@ -538,8 +538,6 @@ theme:
     primary: white
     accent: pink
 
-  favicon: material/archive-edit
-
   icon:
     logo: material/archive-edit
 

@@ -46,7 +46,7 @@ DNA 损伤、宿主生理变化或噬菌体特定感知系统可触发诱导，�
 
 ## 病毒分类与演化谱系 { #virus-taxonomy }
 
-ICTV 用基因组组成、序列和系统发育、标志蛋白、粒子结构、表达程序及宿主范围等多类证据建立从种到域的层级分类。当前正式名录随批准提案持续更新；2025—2026 版 MSL41 是本页撰写时的基准。宿主可以帮助描述生态位，却不能作为最高分类轴：细菌、古菌、真菌、植物、动物和原生生物都拥有多个互不相邻的病毒谱系，同一病毒家族的已知宿主范围也会随培养和宏基因组证据扩展。[^virus-taxonomy]
+ICTV 用基因组组成、序列和系统发育、标志蛋白、粒子结构、表达程序及宿主范围等多类证据建立从种到域的层级分类。当前正式名录随批准提案持续更新；此处采用 2025—2026 版 MSL41。宿主可以帮助描述生态位，却不能作为最高分类轴：细菌、古菌、真菌、植物、动物和原生生物都拥有多个互不相邻的病毒谱系，同一病毒家族的已知宿主范围也会随培养和宏基因组证据扩展。[^virus-taxonomy]
 
 基因组序列使大量不可培养病毒进入比较，但短片段、组装污染和未知宿主会限制分类与生态解释。一个环境序列与已知病毒相似，不自动证明存在完整颗粒、正在复制或感染某个邻近细胞；培养、病毒粒富集、核酸末端和包装证据、转录活性、单细胞共现及受体实验提供彼此不同的支持。病毒分类需要把形态、序列、基因组完整性和生态证据结合起来；宏基因组重叠群（contig）只有满足相应证据标准后才能进入正式命名。
 
@@ -84,7 +84,7 @@ Pospiviroidae 成员主要在细胞核中把宿主 RNA polymerase II 改用于 R
 [^viral-cycle]: 附着、进入、脱壳、表达与复制、装配、成熟和释放的共同框架及主要例外见 NCBI Bookshelf 的[病毒增殖章节](https://www.ncbi.nlm.nih.gov/books/NBK8181/)。
 [^phage-lifestyles]: 烈性与温和噬菌体、原噬菌体、诱导和溶原转换的教学框架见 OpenStax Microbiology [The Viral Life Cycle](https://openstax.org/books/microbiology/pages/6-2-the-viral-life-cycle)。
 [^virus-measurement]: 一步生长曲线中的隐蔽期、潜伏期、集中释放与裂解量见 OpenStax Microbiology [The Viral Life Cycle](https://openstax.org/books/microbiology/pages/6-2-the-viral-life-cycle)；PFU 作为条件依赖感染单位的边界据此与颗粒计数区分。
-[^virus-taxonomy]: ICTV 说明病毒分类综合基因组、结构、表达、宿主和序列系统发育等证据，见[病毒分类说明](https://ictv.global/about/taxonomy)；最新正式层级以 [Master Species List](https://ictv.global/msl) 为准，本页核验时为 MSL41。
+[^virus-taxonomy]: ICTV 说明病毒分类综合基因组、结构、表达、宿主和序列系统发育等证据，见[病毒分类说明](https://ictv.global/about/taxonomy)；最新正式层级以 [Master Species List](https://ictv.global/msl) 为准，核验版本为 MSL41。
 [^viroids]: Pospiviroidae 的环状非编码 RNA、核内不对称滚环复制和宿主酶重定向见 ICTV [Pospiviroidae 报告](https://ictv.global/report/chapter/pospiviroidae/pospiviroidae)；质体定位、对称滚环复制和锤头核酶见 ICTV [Avsunviroidae 报告](https://ictv.global/report/chapter/avsunviroidae/avsunviroidae)。
 [^satellite-agents]: 卫星核酸的病毒依赖定义及其与卫星病毒、噬病毒、viriform 的边界见 [ICTV Code](https://ictv.global/about/code)；卫星与辅助病毒基因组、缺陷干扰 RNA 的来源差异见 ICTV 的[卫星因子概述](https://ictv.global/report_9th/subviral/Satellites-introduction)。
 [^prions]: PrP 构象模板化、聚集播种、遗传依赖与传播证据见 NCBI Bookshelf 的[朊粒传播综述](https://www.ncbi.nlm.nih.gov/books/NBK221457/)。

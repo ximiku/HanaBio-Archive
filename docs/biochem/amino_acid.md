@@ -112,7 +112,7 @@ Val、Leu 和 Ile 合称支链氨基酸（branched-chain amino acids，BCAA）�
 无可电离侧链的 α-氨基酸随 pH 升高依次去质子化。[^fig-amino-acid-ionization]
 ///
 
-下表给出本页计算使用的宏观解离常数。甘氨酸数值来自 25 ℃、离子强度 0.10 mol·L⁻¹ 的电位滴定；Asp 和 Lys 使用教材参考表中的水相数值。不同测定温度、离子强度、活度修正和实验方法会造成差异，表中数值不能视为脱离条件的常数。[^amino-acid-pka-values]
+下表给出计算所用的宏观解离常数。甘氨酸数值来自 25 ℃、离子强度 0.10 mol·L⁻¹ 的电位滴定；Asp 和 Lys 使用教材参考表中的水相数值。不同测定温度、离子强度、活度修正和实验方法会造成差异，表中数值不能视为脱离条件的常数。[^amino-acid-pka-values]
 
 | 氨基酸 | α-羧基 pKa | 侧链 pKa | α-铵基 pKa | pI |
 | --- | ---: | ---: | ---: | ---: |
@@ -228,7 +228,7 @@ Phe、Tyr 和 Trp 的芳香侧链具有近紫外吸收，其中蛋白质在 280 
 
 茚三酮反应之所以适合氨基酸检测，是因为许多氨基酸都有可参与反应的游离氨基，并生成吸收强的有色产物；同一理由也决定了它不能证明样品中的反应物一定是 α-氨基酸。胺、氨以及某些肽端同样可能响应，Pro 和羟脯氨酸还因仲胺结构产生不同颜色。经典反应的机理与用途须按反应基团、样品组成和测定条件解释。[^osm-amino-acid-reactions]
 
-甲醛滴定不是把羧基当作唯一待测对象。甲醛与游离氨基反应后降低其碱性，使样品的碱耗量能够用于估计游离氨基酸或氨基氮；反应不完全、铵离子、其他胺类和终点选择都会影响结果。[^formol-titration] N 端标记也利用同一“游离氨基仍可反应”的差异，但详细的水解条件、Sanger 端基分析、Edman 逐步降解及自动测序史属于[蛋白质研究方法](protein_methods.md)，不在本页展开。
+甲醛滴定不是把羧基当作唯一待测对象。甲醛与游离氨基反应后降低其碱性，使样品的碱耗量能够用于估计游离氨基酸或氨基氮；反应不完全、铵离子、其他胺类和终点选择都会影响结果。[^formol-titration] N 端标记也利用同一“游离氨基仍可反应”的差异，详细的水解条件、Sanger 端基分析、Edman 逐步降解及自动测序史属于[蛋白质研究方法](protein_methods.md)的范围。
 
 ### 侧链特异性反应 { #side-chain-reactions }
 
@@ -254,9 +254,9 @@ DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 41
 
 现代氨基酸分析常将色谱分离与串联质谱（tandem mass spectrometry，MS/MS）结合。保留时间、前体离子的质荷比 $m/z$ 和碎片离子共同提高鉴定选择性，稳定同位素内标可校正部分回收与离子化差异；但响应因子、基质效应和同分异构体仍须用方法学验证。亲水相互作用色谱—串联质谱（HILIC–MS/MS）的具体研究展示了极性氨基酸如何在不依赖单一显色反应的情况下分离和定量；经典反应、其他色谱机制和水解条件仍各自提供与研究问题相应的证据。[^hilic-amino-acid-analysis]
 
-测定蛋白质氨基酸组成还必须先释放残基。酸、碱或酶水解对 Trp、Cys、Met、Ser、Thr、Asn 和 Gln 的保存程度不同，完全水解只留下各残基的组成信息，不保留原有序列。详细水解条件、组成分析流程、离子交换与高效液相色谱（high-performance liquid chromatography，HPLC）操作以及端基测序见[蛋白质研究方法](protein_methods.md)；本页只保留理解这些方法所需的官能团、电荷和光谱基础。
+测定蛋白质氨基酸组成还必须先释放残基。酸、碱或酶水解对 Trp、Cys、Met、Ser、Thr、Asn 和 Gln 的保存程度不同，完全水解只留下各残基的组成信息，不保留原有序列。详细水解条件、组成分析流程、离子交换与高效液相色谱（high-performance liquid chromatography，HPLC）操作以及端基测序见[蛋白质研究方法](protein_methods.md)；理解这些方法还需要官能团、电荷和光谱基础。
 
-游离氨基酸形成肽键后，主链官能团的自由状态和构象空间随之改变，侧链则把本页讨论的电荷、氢键、疏水作用与反应性带入多肽。下一页的[蛋白质结构](protein_structure.md)将由肽键平面性和主链二面角出发，说明这些局部性质如何共同形成可折叠的三维结构。
+游离氨基酸形成肽键后，主链官能团的自由状态和构象空间随之改变，侧链则把电荷、氢键、疏水作用与反应性带入多肽。[蛋白质结构](protein_structure.md)将由肽键平面性和主链二面角出发，说明这些局部性质如何共同形成可折叠的三维结构。
 
 ## 参考资料与延伸阅读
 
@@ -270,7 +270,7 @@ DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 41
 
 [^zwitterion-structure]: IUPAC Gold Book, [zwitterionic compounds／zwitterions](https://goldbook.iupac.org/terms/view/Z06752)；OpenStax, [Structures of Amino Acids](https://openstax.org/books/organic-chemistry/pages/26-1-structures-of-amino-acids)。
 [^iupac-amino-acid-nomenclature]: IUPAC–IUBMB, [3AA-3 to 3AA-5: configuration and optical rotation](https://iupac.qmul.ac.uk/AminoAcid/AA3t5.html) 与 [3AA-14 to 3AA-16: three-letter symbols and amino-acid residues](https://iupac.qmul.ac.uk/AminoAcid/A1416.html)。
-[^osm-sidechain-classification]: 本节对分类的组织参考并实质性改编自 osm.bio [《氨基酸性质整理》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E6%80%A7%E8%B4%A8%E6%95%B4%E7%90%86&oldid=15292)，并以 OpenStax 的结构与 pKa 表交叉核对。
+[^osm-sidechain-classification]: 侧链分类的组织参考并实质性改编自 osm.bio [《氨基酸性质整理》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E6%80%A7%E8%B4%A8%E6%95%B4%E7%90%86&oldid=15292)，并以 OpenStax 的结构与 pKa 表交叉核对。
 [^amino-acid-codes]: IUPAC–IUBMB, [3AA-20 and 3AA-21: symbols for amino-acid residues](https://iupac.qmul.ac.uk/AminoAcid/A2021.html) 给出 B、Z、X 与 Sec／U；NCBI [Biological Sequences](https://www.ncbi.nlm.nih.gov/IEB/ToolBox/SDKDOCS/BIOSEQ.HTML) 的扩展编码表列出 Sec／U 和 Pyl／O；RCSB PDB-101 [Primary Sequences](https://pdb101-east.rcsb.org/learn/guide-to-understanding-pdb-data/primary-sequences)列出 SEC、PYL 三字母代码。
 [^fig-amino-acid-ionization]: 本站依据 Borkovec, M., Koper, G. J. M. & Spiess, B. [The intrinsic view of ionization equilibria of polyprotic molecules](https://doi.org/10.1039/C4NJ00655K) 和 OpenStax [Amino Acids and the Henderson–Hasselbalch Equation: Isoelectric Points](https://openstax.org/books/organic-chemistry/pages/26-2-amino-acids-and-the-henderson-hasselbalch-equation-isoelectric-points)绘制；图中仅表示无可电离侧链氨基酸的主要形式。
 [^amino-acid-pka-values]: Gly 的两个宏观 pKa 取自 Borkovec, M., Koper, G. J. M. & Spiess, B. [The intrinsic view of ionization equilibria of polyprotic molecules](https://doi.org/10.1039/C4NJ00655K)，文中给出 25 ℃、离子强度 0.10 mol·L⁻¹ 条件；Asp、Lys 的数值与 pI 取自 OpenStax [Structures of Amino Acids](https://openstax.org/books/organic-chemistry/pages/26-1-structures-of-amino-acids) 的 Table 26.1。
@@ -280,7 +280,7 @@ DTNB 与可接近的游离巯基发生巯基—二硫键交换，释放在约 41
 [^glycan-assembly-timing]: Varki, A. et al., eds. *Essentials of Glycobiology*, 4th ed., NCBI Bookshelf: [Glycosyltransferases and Glycan-Processing Enzymes](https://www.ncbi.nlm.nih.gov/books/NBK453021/)。该章分别说明真核 N-糖链的共翻译起始与黏蛋白型 O-GalNAc 糖链在折叠、转运后的起始。
 [^d-amino-acids]: Cava, F. et al. [Emerging knowledge of regulatory roles of D-amino acids in bacteria](https://pmc.ncbi.nlm.nih.gov/articles/PMC3037491/). *Cellular and Molecular Life Sciences* 68, 817–831 (2011)。
 [^dietary-amino-acids]: National Academies. [Dietary Reference Intakes: The Essential Guide to Nutrient Requirements, Part II, p. 147, Table 2](https://nap.nationalacademies.org/skim.php?chap=144-155&record_id=11537)。
-[^osm-amino-acid-reactions]: 本节对经典反应的组织参考并实质性改编自 osm.bio [《氨基酸的化学反应》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E7%9A%84%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BA%94&oldid=16272)，并按官能团反应边界重新核对、改写。
+[^osm-amino-acid-reactions]: 经典反应的组织参考并实质性改编自 osm.bio [《氨基酸的化学反应》固定版本](https://osm.bio/index.php?title=%E6%B0%A8%E5%9F%BA%E9%85%B8%E7%9A%84%E5%8C%96%E5%AD%A6%E5%8F%8D%E5%BA%94&oldid=16272)，并按官能团反应边界重新核对、改写。
 [^formol-titration]: Eurasian Economic Union Pharmacopoeia, [Formol titration method](https://www.consultant.ru/document/cons_doc_LAW_359911/2658e69a5f901438e40b32f622896064e8192289/)；该方法用于测定游离或端基氨基所代表的氨基氮，并明确提示铵离子等干扰。
 [^ellman-thiol-assay]: Ellman, G. L. [Tissue sulfhydryl groups](https://doi.org/10.1016/0003-9861%2859%2990090-6). *Archives of Biochemistry and Biophysics* 82, 70–77 (1959)。
 [^hilic-amino-acid-analysis]: Kambhampati, S. et al. [Accurate and efficient amino acid analysis for protein quantification using hydrophilic interaction chromatography coupled tandem mass spectrometry](https://pmc.ncbi.nlm.nih.gov/articles/PMC6511150/). *Plant Methods* 15, 46 (2019)。

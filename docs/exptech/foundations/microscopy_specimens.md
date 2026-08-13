@@ -2,7 +2,7 @@
 
 显微镜把样品与光或电子的相互作用转换成可观察、可记录的图像。图像由样品状态和成像系统共同形成：可见细节取决于样品怎样被固定、切薄、染色或标记，也取决于照明方式、物镜数值孔径、焦平面、探测器采样和后续处理。学习显微技术因此要沿着“制样—照明—成像—校准—记录—解释”整条链工作，才能判断图中的亮暗、颜色、边缘和颗粒分别对应什么结构。
 
-本页从教学实验常见的复式光学显微镜出发，保留低倍定位、高倍观察、测微、临时装片、离析、压片、涂片和生物绘图的完整训练路径，再把相差、微分干涉、荧光、共焦和电子显微镜放入同一证据框架。具体仪器的机械限位、光源、清洁剂和操作方向必须遵守当前型号说明书；刀片、固定剂、染液和离析液的使用还须经过[实验安全、伦理与风险管理](safety_ethics.md#hazard-management)所述的风险评估。
+显微观察从教学实验常见的复式光学显微镜出发，沿低倍定位、高倍观察、测微、临时装片、离析、压片、涂片和生物绘图形成完整训练路径，再把相差、微分干涉、荧光、共焦和电子显微镜放入同一证据框架。具体仪器的机械限位、光源、清洁剂和操作方向必须遵守当前型号说明书；刀片、固定剂、染液和离析液的使用还须经过[实验安全、伦理与风险管理](safety_ethics.md#hazard-management)所述的风险评估。
 
 ## 样品平面与观察图像 { #image-formation }
 
@@ -139,7 +139,7 @@ l_o=\frac{N_s l_s}{N_o},
 [^micrometry]: 目镜分划板必须与镜台测微尺在当前物镜下重合标定，见 Nikon MicroscopyU [Eyepiece Reticle Calibration](https://www.microscopyu.com/tutorials/reticlecalibration)。正文中的格值换算由已知镜台尺度直接推导。
 [^cell-microscopy]: 光镜、荧光、共焦与电镜分别怎样形成结构和定位证据，见 Alberts 等的[显微观察章节](https://www.ncbi.nlm.nih.gov/books/NBK26880/)与 Cooper 的[细胞生物学工具章节](https://www.ncbi.nlm.nih.gov/books/NBK9941/)；相差光晕、shade-off 与 DIC 伪浮雕的模式边界见 Nikon 的[相差与 DIC 比较](https://www.microscopyu.com/tutorials/comparison-of-phase-contrast-and-dic-microscopy)。
 [^tissue-preparation]: 固定与包埋可能改变细胞结构，切片会丢失三维连续信息，见 Alberts 等的[显微观察章节](https://www.ncbi.nlm.nih.gov/books/NBK26880/)；固定后脱水、透明、浸透、包埋和切片的一般链条另见 Leica Biosystems [Science of Tissue Processing](https://www.leicabiosystems.com/en-ca/knowledge-pathway/science-of-tissue-processing/)。
-[^microscopy-quality]: Boehm 等建立的 [QUAREP-LiMi](https://doi.org/10.1038/s41592-021-01162-y)把显微硬件校准、图像采集、管理和分析纳入共同质量保证框架；本页据此把日常观察与定量 QC 区分为不同层级。
+[^microscopy-quality]: Boehm 等建立的 [QUAREP-LiMi](https://doi.org/10.1038/s41592-021-01162-y)把显微硬件校准、图像采集、管理和分析纳入共同质量保证框架；正文据此把日常观察与定量 QC 区分为不同层级。
 [^microscope-cleaning]: ZEISS 的[显微镜清洁与维护指南](https://www.zeiss.com/microscopy/us/l/service-support/cleaning-your-microscope.html)强调先定位污染、使用合适材料与清洁液、及时移除浸油并把内部光学维护交给专业人员；具体厂商对涂层和材料的要求可能不同。
-[^image-reporting]: Schmied 等的[显微图像与图像分析发表清单](https://doi.org/10.1038/s41592-023-01987-9)覆盖图像格式、标注、颜色、数据可得性和分析工作流报告；本页将其最低思路前移到采集记录阶段。
+[^image-reporting]: Schmied 等的[显微图像与图像分析发表清单](https://doi.org/10.1038/s41592-023-01987-9)覆盖图像格式、标注、颜色、数据可得性和分析工作流报告；正文将其最低思路前移到采集记录阶段。
 [^image-integrity]: US Office of Research Integrity 的[图像处理最佳实践](https://ori.hhs.gov/education/products/RIandImages/guidelines/list.html)要求把图像视为数据、保留原始文件、避免选择性局部操作，并在可比数据上统一处理；强度测量与尺度问题分别见其[强度测量](https://ori.hhs.gov/education/products/RIandImages/guidelines/guideline_9.html)和[图像尺度](https://ori.hhs.gov/education/products/RIandImages/guidelines/guideline_11.html)说明。

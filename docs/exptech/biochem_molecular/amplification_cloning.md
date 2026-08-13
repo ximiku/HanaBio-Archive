@@ -2,7 +2,7 @@
 
 核酸扩增以成对引物或特定引发策略在体外选择性复制模板区段。反应化学、模板与引物设计、污染控制和产物确认决定一次扩增能否支持检出、分型或定量；预期大小条带、Cq 或阳性分区数分别只是读出，仍需结合对照、效率、抑制与身份验证解释。
 
-本页从 PCR 化学与引物设计进入反应优化、RT-PCR、qPCR、数字 PCR 和经典派生 PCR。核酸样品制备与凝胶基础见[核酸提取、质量与电泳](nucleic_acid.md)，PCR 产物进入载体、文库或表达构建的后续工作见[分子克隆与构建设计](molecular_cloning.md)，染色体靶位点的改变和等位基因验证见[基因组编辑与验证](genome_editing.md)。测序数据和 qPCR 数据处理分别见[测序技术与读段证据](../../bioinfo/sequencing.md#assay-specific-read-evidence)和[qPCR 相对与绝对定量](../../bioinfo/transcriptomics.md#qpcr-quantification)。
+核酸扩增从 PCR 化学与引物设计进入反应优化、RT-PCR、qPCR、数字 PCR 和经典派生 PCR。核酸样品制备与凝胶基础见[核酸提取、质量与电泳](nucleic_acid.md)，PCR 产物进入载体、文库或表达构建的后续工作见[分子克隆与构建设计](molecular_cloning.md)，染色体靶位点的改变和等位基因验证见[基因组编辑与验证](genome_editing.md)。测序数据和 qPCR 数据处理分别见[测序技术与读段证据](../../bioinfo/sequencing.md#assay-specific-read-evidence)和[qPCR 相对与绝对定量](../../bioinfo/transcriptomics.md#qpcr-quantification)。
 
 ## 从实验问题到操作链 { #workflow-selection }
 

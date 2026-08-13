@@ -118,4 +118,4 @@ Ames 试验更规范的名称是细菌回复突变试验。测试株携带特定
 
 [^oecd-ames]: OECD. [*Test No. 471: Bacterial Reverse Mutation Test*](https://www.oecd.org/en/publications/test-no-471-bacterial-reverse-mutation-test_9789264071247-en.html). OECD Guidelines for the Testing of Chemicals, Section 4, 2020. DOI: 10.1787/9789264071247-en.
 
-[^clsi-identification]: Clinical and Laboratory Standards Institute. [M58: *Methods for the Identification of Cultured Microorganisms Using MALDI-TOF Mass Spectrometry*](https://clsi.org/shop/standards/m58/)；[MM18: *Interpretive Criteria for Identification of Bacteria and Fungi by Targeted DNA Sequencing*](https://clsi.org/shop/standards/mm18/). 两份指南适用于其声明的医学实验室范围，本页只迁移方法验证与证据边界。
+[^clsi-identification]: Clinical and Laboratory Standards Institute. [M58: *Methods for the Identification of Cultured Microorganisms Using MALDI-TOF Mass Spectrometry*](https://clsi.org/shop/standards/m58/)；[MM18: *Interpretive Criteria for Identification of Bacteria and Fungi by Targeted DNA Sequencing*](https://clsi.org/shop/standards/mm18/). 两份指南适用于其声明的医学实验室范围，这里只迁移方法验证与证据边界。

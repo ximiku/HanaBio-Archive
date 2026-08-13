@@ -4,7 +4,7 @@
 
 经典组织学训练是理解这条证据链的直观入口。取材方向决定切面，固定速度决定自溶能否被及时抑制，石蜡包埋让组织具有可切性，苏木精—伊红染色（hematoxylin and eosin staining，H&E）把核酸丰富区和蛋白丰富区转成可比较的颜色。福尔根、PAS 和酶组织化学进一步把某类化学反应限制在原位；免疫荧光、原位杂交、荧光蛋白和免疫电镜则增加分子选择性。现代方法扩展了可见对象，同时仍受样品状态、试剂可达性、标记性能和取样设计约束。
 
-本页说明如何从问题选择制片与成像路径，保留石蜡、冰冻、压片、染色体铺片和常规电镜等形态学方法，并把空间标记、活细胞成像和图像质量控制接入同一实验框架。显微镜光路、放大与分辨、低倍至高倍观察、测微和基础装片见[显微观察与标本制备](../foundations/microscopy_specimens.md)；危险固定剂、二甲苯、强酸、重金属和放射性材料须先按[实验安全、伦理与风险管理](../foundations/safety_ethics.md#hazard-management)完成机构风险评估。
+制片与成像路径应由问题决定。石蜡、冰冻、压片、染色体铺片和常规电镜等形态学方法，与空间标记、活细胞成像和图像质量控制共同构成实验框架。显微镜光路、放大与分辨、低倍至高倍观察、测微和基础装片见[显微观察与标本制备](../foundations/microscopy_specimens.md)；危险固定剂、二甲苯、强酸、重金属和放射性材料须先按[实验安全、伦理与风险管理](../foundations/safety_ethics.md#hazard-management)完成机构风险评估。
 
 ## 从问题选择空间读出 { #question-to-spatial-readout }
 
@@ -120,7 +120,7 @@ H&E 是形态学背景染色而非分子特异定量。苏木精经氧化形成 
 
 [^he-protocol]: Fischer 等的 [H&E 组织与细胞切片染色方案](https://pubmed.ncbi.nlm.nih.gov/21356829/)给出经典脱蜡、复水、核染、胞质复染、脱水和封片链。具体染液、时间和分化条件须按组织、切片厚度与实验室体系验证，不能由一套配方外推全部材料。
 [^chromosome-preparation]: Howe B, et al. [Chromosome preparation from cultured cells](https://pmc.ncbi.nlm.nih.gov/articles/PMC4091199/). *Journal of Visualized Experiments*. 2014:e50203。该文说明高质量中期铺片和 G 带依赖细胞收获、低渗、固定、滴片及带纹条件；临床核型还须遵循获认可实验室的验证与报告规范。
-[^feulgen-review]: Chieco P, Derenzini M. [The Feulgen reaction: A brief review and new perspectives](https://doi.org/10.1016/j.acthis.2017.07.002). *Acta Histochemica*. 2017;119:603–609。本文据此保留经典 DNA 原位反应并纠正酸水解化学与细胞器 DNA 的绝对化说法。
+[^feulgen-review]: Chieco P, Derenzini M. [The Feulgen reaction: A brief review and new perspectives](https://doi.org/10.1016/j.acthis.2017.07.002). *Acta Histochemica*. 2017;119:603–609。正文据此保留经典 DNA 原位反应并纠正酸水解化学与细胞器 DNA 的绝对化说法。
 [^ihc-controls]: Hewitt SM, et al. [Controls for Immunohistochemistry](https://pmc.ncbi.nlm.nih.gov/articles/PMC4212362/). *Journal of Histochemistry & Cytochemistry*. 2014;62:693–697. https://doi.org/10.1369/0022155414545224。该标准强调抗体身份、组织情境、阳性和阴性控制；吸收对照或非同条件 Western 不能独自证明组织内所有着色身份。
 [^misfishie]: Deutsch EW, et al. [MISFISHIE](https://pmc.ncbi.nlm.nih.gov/articles/PMC4367930/). *Nature Biotechnology*. 2008;26:305–312. https://doi.org/10.1038/nbt1391。其六类最小信息适用于 ISH、IHC、亲和组织化学和报告基因等空间表达实验；规范要求足够信息，不强制所有实验采用同一编码格式。
 [^bifc]: Kerppola TK. [Design and implementation of BiFC assays](https://pubmed.ncbi.nlm.nih.gov/17406412/). *Nature Protocols*. 2006;1:1278–1286. https://doi.org/10.1038/nprot.2006.201。经典方案要求用破坏互作界面的突变体平行确认；互补成熟、稳定化和片段背景限制其动态与直接性解释。

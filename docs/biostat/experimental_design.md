@@ -189,11 +189,11 @@ DE=1+(m-1)\rho.
 
 随机种子使伪随机步骤可重放，输入数据、软件版本和处理顺序则共同界定计算环境。代码能够在原始输入上重新生成分析数据和最终图表，才形成完整的计算链；设计合理性和数据质量还需分别检查。
 
-术语在不同学科中并不完全统一。本页采用美国国家科学院 2019 年报告的区分：**可复现性**（reproducibility）指使用相同数据、计算步骤、方法和代码得到一致结果；**可重复性**（replicability）指新研究重新收集数据，对同一科学问题得到与不确定性相容的结果。[^nasem] 前者依赖透明数据与计算记录，后者还检验效应能否跨样本、批次、地点或研究团队维持。真实异质性可能使两项设计严谨的研究得到不同效应，因此比较时需结合效应量、区间、条件与方法解释 *p* 值。
+术语在不同学科中并不完全统一。这里采用美国国家科学院 2019 年报告的区分：**可复现性**（reproducibility）指使用相同数据、计算步骤、方法和代码得到一致结果；**可重复性**（replicability）指新研究重新收集数据，对同一科学问题得到与不确定性相容的结果。[^nasem] 前者依赖透明数据与计算记录，后者还检验效应能否跨样本、批次、地点或研究团队维持。真实异质性可能使两项设计严谨的研究得到不同效应，因此比较时需结合效应量、区间、条件与方法解释 *p* 值。
 
 ## 参考资料与延伸阅读 { #references }
 
-[^ich-estimand]: International Council for Harmonisation. [ICH E9(R1): Addendum on Estimands and Sensitivity Analysis in Clinical Trials](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-estimands-and-sensitivity-analysis-clinical-trials-guideline-statistical-principles-clinical-trials-step-5_en.pdf)。指南把试验目标与待估量、主要估计方法和敏感性分析对齐；本页将这一一般思路扩展到生命科学实验。
+[^ich-estimand]: International Council for Harmonisation. [ICH E9(R1): Addendum on Estimands and Sensitivity Analysis in Clinical Trials](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-estimands-and-sensitivity-analysis-clinical-trials-guideline-statistical-principles-clinical-trials-step-5_en.pdf)。指南把试验目标与待估量、主要估计方法和敏感性分析对齐；正文将这一一般思路扩展到生命科学实验。
 [^nih-replicates]: NIH Office of Extramural Research. [Rigor and Reproducibility Training Module 4: Biological and Technical Replicates](https://www.grants.nih.gov/policy/reproducibility/training/biological-technical-rep.pdf)。
 [^nc3rs-allocation]: NC3Rs Experimental Design Assistant. [Allocation](https://eda.nc3rs.org.uk/experimental-design-allocation)。资料说明随机分派的目的、分派层级及随意分派与真正随机化的区别。
 [^nist-block]: NIST/SEMATECH. [Randomized Block Designs](https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm)。

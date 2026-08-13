@@ -2,7 +2,7 @@
 
 生物实验中的定量结果通常来自一条连续的测量链：先界定要测的量，再由称量、移液、定容、温控和仪器读数把它转化为数值，最后依据校准、空白、重复测量和不确定度判断这个数值能支持怎样的结论。链条中任何一个环节含糊，后面计算保留的额外小数位也不会增加真实信息。配制溶液同样涉及试剂形态、纯度、温度、最终体积、混合次序、稳定性与量具的计量特性，而不仅是把配方换算成克数和毫升数。
 
-本页以常见教学和研究实验为背景，说明量值表达、溶液配制、天平与容量器具、活塞式移液器、滴定和 pH 测量的共同逻辑。具体仪器应按当前型号说明书、机构标准操作规程（standard operating procedure，SOP）和[实验安全、伦理与风险管理](safety_ethics.md#hazard-management)中的风险评估使用；本文中的原理和判断框架用于辅助现场培训。
+常见教学和研究实验共享量值表达、溶液配制、天平与容量器具、活塞式移液器、滴定和 pH 测量的基本逻辑。具体仪器应按当前型号说明书、机构标准操作规程（standard operating procedure，SOP）和[实验安全、伦理与风险管理](safety_ethics.md#hazard-management)中的风险评估使用；这些原理和判断框架用于辅助现场培训。
 
 ## 量值、单位与测量条件 { #measurement-result }
 
@@ -136,7 +136,7 @@ pH 与氢离子活度相关；玻璃电极系统通过比较未知样品和标�
 - Gilson. [Guide to Pipetting](https://www.gilson.com/default/guide-to-pipetting)；Sartorius. [Reverse Pipetting](https://www.sartorius.com/en/products/pipetting/reverse-pipetting).
 
 [^vim3]: 准确、真度、精密度、误差、不确定度、校准、验证、调整和分辨力的定义采用 JCGM [VIM 第三版](https://www.bipm.org/en/doi/10.59161/jcgm200-2012)及其[在线注释版](https://jcgm.bipm.org/vim/en/info.html)；正文保留这些概念之间的边界，不沿用把精密度等同准确度的旧用法。
-[^gum]: 测量模型、A 类和 B 类评定、合成与扩展不确定度的总框架见 BIPM 的 [JCGM GUM 出版物页](https://www.bipm.org/en/committees/jc/jcgm/publications)；本页只建立进入具体实验方法前所需的共同语言。
+[^gum]: 测量模型、A 类和 B 类评定、合成与扩展不确定度的总框架见 BIPM 的 [JCGM GUM 出版物页](https://www.bipm.org/en/committees/jc/jcgm/publications)；这里只建立进入具体实验方法前所需的共同语言。
 [^traceability]: VIM 对[计量溯源性](https://jcgm.bipm.org/vim/en/2.41.html)的定义要求通过有文件记录且不中断的校准链联系到参考，并让每一级校准对不确定度作出贡献。
 [^iupac-quantities]: 物质的量浓度、质量浓度、质量分数、体积分数和质量摩尔浓度的定义分别见 IUPAC Gold Book 的 [amount concentration](https://goldbook.iupac.org/terms/view/A00295)、[mass concentration](https://goldbook.iupac.org/terms/view/M03713)、[mass fraction](https://goldbook.iupac.org/terms/view/M03722)、[volume fraction](https://goldbook.iupac.org/terms/view/V06643) 与 [molality](https://goldbook.iupac.org/terms/view/M03970)。
 [^nist-weighing]: NIST [Good Measurement Practices](https://www.nist.gov/pml/owm/laboratory-metrology/documentary-standards-and-resources/gmps)收录弯月面读取、精密玻璃器具清洁、称量影响因素、校准周期和溯源性指南；称量中的气流、温度平衡、静电、磁性和操作者影响见 [NISTIR 6969（2019）](https://www.nist.gov/publications/nistir-6969-selected-laboratory-and-measurement-practices-and-procedures-support-2)。

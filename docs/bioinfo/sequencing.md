@@ -164,7 +164,7 @@ RNA-seq 的读段数和“覆盖”还受到表达量、转录本长度、RNA �
 - Oxford Nanopore Technologies. [How nanopore sequencing works](https://nanoporetech.com/platform/technology/)；[How basecalling works](https://nanoporetech.com/platform/technology/basecalling).
 - Babraham Bioinformatics. [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)；Ewels P, et al. [MultiQC](https://doi.org/10.1093/bioinformatics/btw354). *Bioinformatics*. 2016;32:3047–3048.
 
-[^sequencing-platform-review]: Metzker 对 [大规模并行测序平台](https://doi.org/10.1038/nrg2626)的比较展示了模板制备、扩增、测序化学与成像方式如何共同塑造 read 和错误谱；本文使用平台原理组织内容，不把历史“代际”当作性能等级。
+[^sequencing-platform-review]: Metzker 对 [大规模并行测序平台](https://doi.org/10.1038/nrg2626)的比较展示了模板制备、扩增、测序化学与成像方式如何共同塑造 read 和错误谱；正文使用平台原理组织内容，不把历史“代际”当作性能等级。
 [^sanger-chain-termination]: Sanger、Nicklen 与 Coulson 的[原始论文](https://doi.org/10.1073/pnas.74.12.5463)说明 2′,3′-双脱氧核苷酸和相关类似物如何作为 DNA 聚合酶的特异链终止抑制剂。
 [^maxam-gilbert]: Maxam 与 Gilbert 的[化学裂解测序论文](https://doi.org/10.1073/pnas.74.2.560)描述末端标记 DNA 的碱基选择性修饰、断裂与凝胶分离。
 [^homochromatography-history]: Sanger 等 1973 年以引物延伸测定噬菌体 f1 DNA 片段时，明确使用二维 [homochromatography 分离聚合产物](https://pmc.ncbi.nlm.nih.gov/articles/PMC433459/)；早期 RNA 序列工作也以 DEAE-纤维素薄层和寡核苷酸混合物完成长片段分离。

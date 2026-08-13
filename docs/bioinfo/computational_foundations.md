@@ -145,7 +145,7 @@ HMM 的常见计算任务包括：对一条观测序列求总似然，在所有�
 - Walsh I, et al. [DOME: recommendations for supervised machine learning validation in biology](https://doi.org/10.1038/s41592-021-01205-4). *Nature Methods*. 2021;18:1122–1127.
 - Saito T, Rehmsmeier M. [The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets](https://doi.org/10.1371/journal.pone.0118432). *PLOS ONE*. 2015;10(3):e0118432.
 
-[^iscb-framework]: Brooksbank 等提出的 [ISCB Competency Framework v3](https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae166/7903279)包含生命科学、数据准备、适合数据规模与复杂度的数据科学方法、软件工具、数据管理和专业实践等 13 项能力，为本页的跨领域边界提供依据。
+[^iscb-framework]: Brooksbank 等提出的 [ISCB Competency Framework v3](https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae166/7903279)包含生命科学、数据准备、适合数据规模与复杂度的数据科学方法、软件工具、数据管理和专业实践等 13 项能力，为计算基础的跨领域边界提供依据。
 [^algorithm-course]: MIT OpenCourseWare 的 [6.006 Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)系统组织数据结构、排序、图、动态规划和复杂度；渐近分析用于比较资源消耗随输入规模的增长，而不是预测某台机器上的精确秒数。
 [^dynamic-programming]: MIT 6.006 的[动态规划讲义](https://live.ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/6022dc36557c5e5df2ad0a77e9463855_MIT6_006S20_r15.pdf)将子问题定义、递推关系、依赖的拓扑次序、边界条件、原问题恢复和时间分析列为完整设计步骤。
 [^hmm-primer]: Eddy SR. [What is a hidden Markov model?](https://doi.org/10.1038/nbt1004-1315). *Nature Biotechnology*. 2004;22:1315–1316；该文以剪接位点为例说明状态、转移、发射和序列概率在计算生物学中的作用。

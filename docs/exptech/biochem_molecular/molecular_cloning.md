@@ -2,7 +2,7 @@
 
 分子克隆把目标核酸装入能够在宿主中维持、筛选或表达的载体，再从候选细胞中确认构建的序列与结构。载体图谱、片段末端、组装化学、宿主递送和选择筛选组成一条连续的物料链；菌落、颜色或报告信号用于缩小候选范围，连接点、全长序列和功能仍需分别验证。
 
-本页从载体结构和 DNA 组装进入转化、筛选、文库、表达构建、条件遗传和定点／随机构建。插入片段的聚合酶链式反应（polymerase chain reaction，PCR）制备见[核酸扩增与定量](amplification_cloning.md)，内源染色体的定向改变见[基因组编辑与验证](genome_editing.md)，核酸杂交筛库见[核酸杂交、探针与分子互作检测](molecular_probes.md#library-screening)。重组／合成核酸和病毒载体的风险评估与机构审查见[基因组编辑与验证](genome_editing.md#biosafety-reporting)及[实验安全、伦理与风险管理](../foundations/safety_ethics.md#risk-assessment)。
+分子克隆从载体结构和 DNA 组装进入转化、筛选、文库、表达构建、条件遗传和定点／随机构建。插入片段的聚合酶链式反应（polymerase chain reaction，PCR）制备见[核酸扩增与定量](amplification_cloning.md)，内源染色体的定向改变见[基因组编辑与验证](genome_editing.md)，核酸杂交筛库见[核酸杂交、探针与分子互作检测](molecular_probes.md#library-screening)。重组／合成核酸和病毒载体的风险评估与机构审查见[基因组编辑与验证](genome_editing.md#biosafety-reporting)及[实验安全、伦理与风险管理](../foundations/safety_ethics.md#risk-assessment)。
 
 ## 载体结构与经典载体谱系 { #vector-architecture }
 

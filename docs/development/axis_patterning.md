@@ -86,7 +86,7 @@ PSM 后部较高的 FGF／Wnt 活动随轴延长后移，前部成熟环境则�
 - Matsuda M, et al. [Recapitulating the human segmentation clock with pluripotent stem cells](https://pubmed.ncbi.nlm.nih.gov/32238941/). *Nature*. 2020;580:124–129.
 
 [^initial-polarity]: 海胆动物—植物轴分离实验、植物侧 β-catenin 和随后的内中胚层信号网络见[细胞命运决定与胚胎诱导](cell_fate_models.md#conditional-specification)及其中引用的原始研究；β-catenin 依赖的植物侧 Wnt8 及其对原肠形成和内中胚层分化的作用见[原始研究](https://pubmed.ncbi.nlm.nih.gov/15282746/)。“动物极化物质／植物极化物质”是概括早期操作结果的历史模型；Nodal 主要参与另一条口—反口轴的外胚层图式。
-[^xenopus-axis]: 皮层旋转、背侧 β-catenin、Nieuwkoop 中心和组织者之间的诱导层级见 Gilbert 的[两栖类轴形成章节](https://www.ncbi.nlm.nih.gov/books/NBK10101/)；具体分子搬运模型仍随物种和实验更新，本文只采用有遗传与胚胎操作支持的层级关系。
+[^xenopus-axis]: 皮层旋转、背侧 β-catenin、Nieuwkoop 中心和组织者之间的诱导层级见 Gilbert 的[两栖类轴形成章节](https://www.ncbi.nlm.nih.gov/books/NBK10101/)；具体分子搬运模型仍随物种和实验更新，正文只采用有遗传与胚胎操作支持的层级关系。
 [^amniote-axis]: 小鼠 DVE／AVE 迁移、Nodal／Wnt 拮抗和原条定位见 Stower 与 Srinivas 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4216468/)及[AVE 功能研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC3060820/)；AVE 同时限制后部信号并支持前部图式。
 [^organizer-transplantation]: Spemann—Mangold 移植中供体轴中胚层与宿主神经组织的不同贡献见[模式生物与发育研究方法](models_methods.md#from-form-to-causality)及 Gilbert 的[组织者章节](https://www.ncbi.nlm.nih.gov/books/NBK10101/)。
 [^left-right-cilia]: 小鼠结、鱼类 Kupffer 囊和两栖类原肠顶板的运动纤毛、定向液流与遗传扰动证据见 [Cilia in vertebrate left–right patterning](https://pmc.ncbi.nlm.nih.gov/articles/PMC5104509/)；纤毛并非所有脊椎动物左右破缺的共同必需装置。
