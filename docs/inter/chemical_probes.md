@@ -4,7 +4,7 @@
 
 化学遗传学把这类分子作为条件性扰动，用来寻找控制表型的蛋白或检验已知蛋白的功能。常见的正向路线从表型筛选进入靶点鉴定，反向路线从靶标或通路进入小分子扰动和表型观察；二者分别与正向、反向遗传学相似，却直接改变已有蛋白的分子状态，可以提供快速、可定量和常可逆的时间坐标。[^chemical-genetics-definition]
 
-本页沿“探针资格—对照体系—正向化学遗传学—反向化学遗传学—化学基因组图谱”展开。分子结合的统计热力学见[分子结合的状态计数](biophysics_thermodynamics.md#binding-statistical-mechanics)，共价捕获和未知靶点的蛋白质组鉴定留给[共价工具、化学蛋白质组学与靶点鉴定](chemical_proteomics.md)。
+下文沿“探针资格—对照体系—正向化学遗传学—反向化学遗传学—化学基因组图谱”展开。分子结合的统计热力学见[分子结合的状态计数](biophysics_thermodynamics.md#binding-statistical-mechanics)，共价捕获和未知靶点的蛋白质组鉴定见[共价工具、化学蛋白质组学与靶点鉴定](chemical_proteomics.md)。
 
 ## 探针资格的用途与证据 { #probe-qualification }
 
@@ -14,9 +14,9 @@ Chemical Probes Portal 对经典调节型探针给出一组常用基线：亚微
 
 | 评价层次 | 直接问题 | 常见读出 | 能支持的结论 |
 | --- | --- | --- | --- |
-| 化学身份与物性 | 样品中是什么分子，它能否在实验介质中保持可用 | NMR／质谱、纯度、立体化学、溶解度、稳定性、聚集与反应性测量 | 实际施加的化学变量得到定义 |
+| 化学身份与物性 | 样品中是什么分子，它能否在实验介质中保持可用 | 核磁共振（nuclear magnetic resonance，NMR）／质谱、纯度、立体化学、溶解度、稳定性、聚集与反应性测量 | 实际施加的化学变量得到定义 |
 | 生化结合或调节 | 分子能否直接结合、抑制或激活纯化靶标 | $K_d$、$K_i$、$IC_{50}$、$EC_{50}$、速率常数与机制实验 | 规定简化体系中的分子活性和浓度尺度 |
-| 细胞内靶点占有 | 分子是否到达完整细胞中的目标并在何种浓度下结合 | CETSA、NanoBRET、竞争标记、近端磷酸化或酶活动 | 细胞环境中的靶点占有或紧邻功能调节 |
+| 细胞内靶点占有 | 分子是否到达完整细胞中的目标并在何种浓度下结合 | 细胞热迁移分析（cellular thermal shift assay，CETSA）、NanoLuc 生物发光共振能量转移（NanoLuc bioluminescence resonance energy transfer，NanoBRET）、竞争标记、近端磷酸化或酶活动 | 细胞环境中的靶点占有或紧邻功能调节 |
 | 选择性 | 在同一家族和更广分子集合中还作用于谁 | 家族面板、蛋白质组竞争、转录／形态表型及反筛 | 当前浓度、时间和样品中的作用范围 |
 | 表型归因 | 观察到的细胞或个体变化是否由目标靶标介导 | 正交探针、失活类似物、抗性等位基因、缺失与救援 | 靶标作用与生物学后果之间的因果联系 |
 
@@ -48,7 +48,7 @@ CETSA 利用配体结合常会改变蛋白热稳定性的现象，比较细胞�
 
 ### 选择性的多个层级 { #selectivity-layers }
 
-首先要在最相似的蛋白之间比较，因为它们常共享结合口袋。一个 ATP 竞争性激酶探针若只与无关酶比较，无法说明能否区分激酶家族成员；靶向溴结构域、HDAC、PARP 或 GPCR 的探针也应优先覆盖同家族结构域和旁系同源蛋白。用同一种实验格式测量选择窗口，能减少不同实验条件造成的假差异。
+首先要在最相似的蛋白之间比较，因为它们常共享结合口袋。一个三磷酸腺苷（adenosine triphosphate，ATP）竞争性激酶探针若只与无关酶比较，无法说明能否区分激酶家族成员；靶向溴结构域、组蛋白去乙酰化酶（histone deacetylase，HDAC）、多聚（ADP-核糖）聚合酶（poly(ADP-ribose) polymerase，PARP）或 G 蛋白偶联受体（G protein-coupled receptor，GPCR）的探针也应优先覆盖同家族结构域和旁系同源蛋白。用同一种实验格式测量选择窗口，能减少不同实验条件造成的假差异。
 
 随后要检查家族之外的作用。蛋白质组竞争结合、热蛋白质组和活性位点标记可以发现未预先设定的结合者，受体或离子通道面板可以补足低丰度膜蛋白，转录和形态表型则能提示未解释的系统效应。没有单一方法能够覆盖全部蛋白质和作用方式，选择性结论应注明实际测过的范围。浓度升高会逐步占据较弱靶标，所以同一探针的选择窗口总与使用浓度相连。
 
@@ -112,7 +112,7 @@ Mayer 等在哺乳动物细胞中结合有丝分裂标志和微管／染色质�
 
 ### JQ1 的家族选择性与立体对照 { #jq1-bet-probe }
 
-JQ1 竞争结合乙酰赖氨酸识别口袋，抑制 BET 家族溴结构域与染色质的相互作用。晶体结构显示活性立体异构体与 BRD4 溴结构域具有形状互补，细胞实验中它可置换 BRD4 融合蛋白并改变相应转录与分化状态。结构不同的 BET 探针和失活 JQ1 立体异构体，使这一分子成为说明探针—对照组合的经典案例。[^jq1]
+JQ1 竞争结合乙酰赖氨酸识别口袋，抑制溴结构域和超末端（bromodomain and extra-terminal，BET）蛋白家族与染色质的相互作用。晶体结构显示活性立体异构体与 BRD4 溴结构域具有形状互补，细胞实验中它可置换 BRD4 融合蛋白并改变相应转录与分化状态。结构不同的 BET 探针和失活 JQ1 立体异构体，使这一分子成为说明探针—对照组合的经典案例。[^jq1]
 
 JQ1 的选择性层级必须准确表述：它是 BET 溴结构域家族探针，作用于 BRD2、BRD3、BRD4 和 BRDT 的相关结构域，并非只识别 BRD4 的单蛋白探针。因此，JQ1 与失活异构体的差异支持 BET 溴结构域依赖，若要把表型进一步归给 BRD4、某一个溴结构域或某个细胞复合物，还需要蛋白特异遗传扰动、结构域替换或更窄的化学工具。
 
@@ -134,7 +134,7 @@ JQ1 的选择性层级必须准确表述：它是 BET 溴结构域家族探针�
 
 证据之间的矛盾尤其有信息。生化效力很高而细胞内占有很低，提示通透、外排、代谢或区室问题；占有充分却没有近端调节，提示结合位点不控制当前功能或靶标状态不同；近端调节出现而只有一个化学骨架产生远端表型，提示离靶作用或构象偏向；遗传缺失与急性探针作用不一致，则可能暴露长期代偿、支架功能或剂量时程差别。
 
-因此，化学探针的价值不在于把复杂系统压缩成“一个分子对应一个蛋白”，而在于提供结构明确、时间可控并能与多种证据交叉的扰动。下一页[生物正交化学、标记与成像](chemical_bioorthogonal.md)将转向怎样为特定分子和时间窗生成可观测信号；[共价工具、化学蛋白质组学与靶点鉴定](chemical_proteomics.md)则继续展开未知结合者的捕获、竞争和机制确证。
+化学探针提供结构明确、时间可控并能与多种证据交叉的扰动，并以实验证据界定一个分子与一个或多个蛋白的关系。[生物正交化学、标记与成像](chemical_bioorthogonal.md)将转向怎样为特定分子和时间窗生成可观测信号；[共价工具、化学蛋白质组学与靶点鉴定](chemical_proteomics.md)则继续展开未知结合者的捕获、竞争和机制确证。
 
 ## 参考资料与延伸阅读 { #references }
 
@@ -150,7 +150,7 @@ JQ1 的选择性层级必须准确表述：它是 BET 溴结构域家族探针�
 - NCBI Bookshelf. [Receptor Binding Assays for HTS and Drug Discovery](https://www.ncbi.nlm.nih.gov/books/NBK91992/). *Assay Guidance Manual*.
 
 [^chemical-genetics-definition]: Stockwell, B. R. [Chemical genetics: ligand-based discovery of gene function](https://doi.org/10.1038/35038557). *Nature Reviews Genetics* 1, 116–125 (2000)。该经典综述把靶标筛选与表型筛选分别对应到反向和正向化学遗传学，并把化合物库、并行筛选和靶点鉴定列为共同技术支柱。
-[^portal-criteria]: Chemical Probes Portal, [Classical Modulators Criteria](https://www.chemicalprobes.org/info/classical-modulators)。Portal 对经典调节剂分别评估生化效力、家族及更广选择性、细胞内占有、物性、失活对照和使用浓度；本文把其阈值作为常用审查基线，并保留不同靶标类别的条件差异。
+[^portal-criteria]: Chemical Probes Portal, [Classical Modulators Criteria](https://www.chemicalprobes.org/info/classical-modulators)。Portal 对经典调节剂分别评估生化效力、家族及更广选择性、细胞内占有、物性、失活对照和使用浓度；这些阈值可作为常用审查基线，不同靶标类别仍有条件差异。
 [^cheng-prusoff]: NCBI Bookshelf, [Receptor Binding Assays for HTS and Drug Discovery](https://www.ncbi.nlm.nih.gov/books/NBK91992/). *Assay Guidance Manual*。该章给出竞争结合中的 Cheng–Prusoff 关系，并逐项说明单一位点、平衡、无显著配体耗竭及总浓度近似游离浓度等适用条件。
 [^cellular-engagement]: Martinez Molina, D. et al. [Monitoring drug target engagement in cells and tissues using the cellular thermal shift assay](https://doi.org/10.1126/science.1233606). *Science* 341, 84–87 (2013)；Robers, M. B. et al. [Target engagement and drug residence time can be observed in living cells with BRET](https://doi.org/10.1038/ncomms10091). *Nature Communications* 6, 10091 (2015)。两项研究分别建立无外源靶标标签的热稳定性路径和基于竞争示踪的指定靶标占有／动力学路径。
 [^orthogonal-controls]: Chemical Probes Portal, [Selecting the Best Chemical Probe](https://www.chemicalprobes.org/info/selecting-the-best-chemical-probe)；Arrowsmith, C. H. et al. [The promise and peril of chemical probes](https://doi.org/10.1038/nchembio.1867). *Nature Chemical Biology* 11, 536–541 (2015)。两项资料均强调按建议浓度使用，并将结构不同的活性探针与结构相近的失活化合物组合。

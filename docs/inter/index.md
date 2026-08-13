@@ -4,7 +4,7 @@
 
 跨学科研究的要点是让不同学科对同一问题作出的陈述能够彼此连接。National Academies 关于“汇聚研究”的报告把这种工作概括为将生命科学、物理科学和工程等不同路径整合成统一框架；整合的结果应产生共同变量、可交换的证据和新的可检验问题，而不只是把多个专业术语放在一起。[^convergence-report]
 
-本栏目由五个页面组构成。[系统解剖学](anatomy/index.md)建立结构、位置和空间连续性，[系统生物学](systems_biology.md)追踪网络、状态与动态，[生物物理学](biophysics.md)给出能量、时间、输运和力的尺度约束，[化学生物学](chemical_synthetic_biology.md)用化学结构产生选择性读出与扰动，[合成生物学](synthetic_biology.md)把候选原理转为可以构建和测量的系统。五种视角各有核心对象，也在共同的生命问题上反复会合。
+五个领域从不同坐标进入生命问题。[系统解剖学](anatomy/index.md)建立结构、位置和空间连续性，[系统生物学](systems_biology.md)追踪网络、状态与动态，[生物物理学](biophysics.md)给出能量、时间、输运和力的尺度约束，[化学生物学](chemical_synthetic_biology.md)用化学结构产生选择性读出与扰动，[合成生物学](synthetic_biology.md)把候选原理转为可以构建和测量的系统。五种视角各有核心对象，也在共同的生命问题上反复会合。
 
 ## 同一生命问题具有多种坐标 { #multiple-coordinates }
 
@@ -18,7 +18,7 @@
 
 ## 五种研究视角连接同一对象 { #five-perspectives }
 
-| 页面组 | 核心对象 | 典型问题 | 提供给其他视角的接口 |
+| 研究视角 | 核心对象 | 典型问题 | 提供给其他视角的接口 |
 | --- | --- | --- | --- |
 | [系统解剖学](anatomy/index.md) | 器官、组织、区域、层次、管道与毗邻 | 结构在哪里，怎样分区、连续和变异，标本与影像如何对应 | 实体身份、空间坐标、几何边界与输运通路 |
 | [系统生物学](systems_biology.md) | 网络、状态变量、输入输出、反馈与多尺度系统 | 相互作用怎样形成稳态、开关、振荡、噪声和空间模式 | 可检验的动力学模型、扰动预测与系统观测量 |
@@ -26,7 +26,7 @@
 | [化学生物学](chemical_synthetic_biology.md) | 配体、探针、选择性反应、标记和化学结构 | 怎样选择性地观察或改变分子状态，并把表型归因于靶标 | 时间可控的扰动、靶点占有、空间标记与分子证据 |
 | [合成生物学](synthetic_biology.md) | 元件、线路、通路、基因组、无细胞与多细胞系统 | 哪些组分足以产生指定行为，组合后怎样受宿主和环境影响 | 构建检验、功能规格、组合边界与设计失败信息 |
 
-系统解剖学在这里并非其他四组的静态前言。它给出真实空间中可命名、可追踪的结构层级。FIPAT 的标准术语主要依据成人身体结构组织层级，并明确结构可由功能、生化、基因表达和发生信息补充，而不由这些信息单独决定。[^fipat-structure] 这一区分使“垂体门脉”“肾段”“腹膜后”等空间陈述能够成为模型边界，也避免用一个功能标签覆盖真实的形态差异。
+系统解剖学给出真实空间中可命名、可追踪的结构层级，是其余四种视角的空间基础。解剖学术语国际联合计划（Federative International Programme for Anatomical Terminology，FIPAT）的标准术语主要依据成人身体结构组织层级，功能、生化、基因表达和发生信息则用于补充结构描述。[^fipat-structure] 这一区分使“垂体门脉”“肾段”“腹膜后”等空间陈述能够成为模型边界，也避免用一个功能标签覆盖真实的形态差异。
 
 系统生物学把结构关系放进时间和扰动。网络边必须说明是反应、调控、结合、遗传互作还是相关，状态变量必须对应可观察或可推断的量。Kitano 将结构、动力学、控制和设计并列为系统层面理解的核心内容；在本栏目中，网络结构与反馈页面给出机制候选，随机和空间模型加入涨落与细胞耦合，建模页面再用参数推断和前瞻扰动判断候选解释是否受到数据支持。[^kitano-systems]
 
@@ -77,17 +77,17 @@
 
 这个例子没有把器官解剖缩写成网络节点，也没有把整体稳态归结为一个分子靶标。各视角保留自己的证据对象，再通过位置、物质流、状态变量、直接靶点和构建行为连接起来。相同方法也可用于发育图案、神经回路、免疫应答、植物运输或生态群体，只需重新界定相应的结构层级、环境边界和观测尺度。
 
-## 页面组与全站阅读路径 { #reading-path }
+## 全站阅读路径 { #reading-path }
 
 若问题从器官或影像开始，可先进入[系统解剖学](anatomy/index.md)，建立方位、切面、层次、变异和系统连续性，再转向生理、细胞和神经栏目解释功能。从组学网络、反馈或群体行为开始时，适合由[系统生物学](systems_biology.md)进入网络模体、动力学、随机空间过程和参数推断，同时把数据处理与通用统计回链[生物信息学](../bioinfo/index.md)和[生物统计学](../biostat/index.md)。
 
 当核心问题涉及能量、速率、扩散、膜形变、材料或流动，可从[生物物理学](biophysics.md)选择统计热力学、输运、大分子与分子机器、细胞组织力学四条路径，并回到生化、细胞与生理栏目辨认具体组分。需要选择性观察和急性干预分子状态时，由[化学生物学](chemical_synthetic_biology.md)进入化学探针、生物正交标记或化学蛋白质组学；仪器与样品操作由[生物实验技术](../exptech/index.md)承接，谱图和高维读出则由生信与统计页面承接。
 
-若研究目标是检验一组组分是否足以形成某种行为，或从零件、通路、基因组、无细胞区室和多细胞群体逐层构建，可进入[合成生物学](synthetic_biology.md)。天然基因调控与遗传变异的机制来自分子和遗传栏目，代谢通路来自生化栏目，宿主细胞状态来自细胞和微生物栏目，群体稳定与空间环境又连接发育、生态和进化栏目。跨学科页面组提供的是这些知识之间的接口；每项具体机制仍应返回相应基础学科深入学习。
+若研究目标是检验一组组分是否足以形成某种行为，或从零件、通路、基因组、无细胞区室和多细胞群体逐层构建，可进入[合成生物学](synthetic_biology.md)。天然基因调控与遗传变异的机制来自分子和遗传栏目，代谢通路来自生化栏目，宿主细胞状态来自细胞和微生物栏目，群体稳定与空间环境又连接发育、生态和进化栏目。跨学科栏目提供这些知识之间的接口，每项具体机制仍可返回相应基础学科深入学习。
 
 ## 参考资料与延伸阅读 { #references }
 
-[^convergence-report]: National Research Council. [*Convergence: Facilitating Transdisciplinary Integration of Life Sciences, Physical Sciences, Engineering, and Beyond*](https://doi.org/10.17226/18722). National Academies Press, 2014. 报告将 convergence 的关键特征概括为把不同方法合并成统一整体；本页只取其科学知识整合含义。
+[^convergence-report]: National Research Council. [*Convergence: Facilitating Transdisciplinary Integration of Life Sciences, Physical Sciences, Engineering, and Beyond*](https://doi.org/10.17226/18722). National Academies Press, 2014. 报告将 convergence 的关键特征概括为把不同方法合并成统一整体；此处采用其科学知识整合含义。
 [^fipat-structure]: Federative International Programme for Anatomical Terminology. [The IFAA Terminologies](https://ifaa.net/committees/anatomical-terminology-fipat/fipat-ifaa-terminologies/). FIPAT 说明成人解剖术语的层级主要依据结构，并由功能、生化、基因表达、发生与比较解剖信息补充。
 [^kitano-systems]: Kitano H. [Systems biology: a brief overview](https://doi.org/10.1126/science.1069492). *Science*. 2002;295(5560):1662–1664.
 [^biophysics-scope]: Biophysical Society. [What Is Biophysics?](https://www.biophysics.org/what-is-biophysics).

@@ -1,8 +1,8 @@
 # 统计热力学与分子相互作用
 
-细胞中的分子不断受到周围水分子的碰撞。一次氢键开合、一个离子离开结合位点或一段蛋白质改变构象，所涉及的能量常与热涨落处在相近尺度。此时只画出一个最低能结构，不能说明体系在实验中实际出现哪些状态；还要知道每类状态包含多少种微观排布，以及这些排布在给定温度下各有多大概率。
+细胞中的分子不断受到周围水分子的碰撞。一次氢键开合、一个离子离开结合位点或一段蛋白质改变构象，所涉及的能量常与热涨落处在相近尺度。体系在实验中实际出现哪些状态，取决于每类状态包含的微观排布以及这些排布在给定温度下的概率。
 
-统计热力学把这种微观的不确定性转换为宏观可测量的分布、平均量和响应。它让构象交换、配体占据、协同结合和序列识别可以用同一套状态权重来理解。本页从微观状态和 Boltzmann 权重出发，逐步建立两态模型、结合多项式与协同性；生化反应的标准转化状态、代谢耦联和跨膜能量记账见[生物能学](../biochem/bioenergetics.md#thermodynamic-foundations)，具体蛋白质构象和配体动力学见[蛋白质功能](../biochem/protein_function.md#ligand-binding-equilibrium-kinetics)。[^physical-biology-textbook]
+统计热力学把这种微观的不确定性转换为宏观可测量的分布、平均量和响应。它让构象交换、配体占据、协同结合和序列识别可以用同一套状态权重来理解。微观状态和玻尔兹曼（Boltzmann）权重进一步连接到两态模型、结合多项式与协同性；生化反应的标准转化状态、代谢耦联和跨膜能量记账见[生物能学](../biochem/bioenergetics.md#thermodynamic-foundations)，具体蛋白质构象和配体动力学见[蛋白质功能](../biochem/protein_function.md#ligand-binding-equilibrium-kinetics)。[^physical-biology-textbook]
 
 ## 微观状态与宏观描述 { #microstates-macrostates }
 
@@ -24,7 +24,7 @@ $$
 
 熵由概率分布和所采用的状态划分共同定义。把许多分辨不出的微观排布归入同一个宏观状态后，状态的多重度便成为真实的统计权重。蛋白质展开态可以拥有比某个紧凑折叠态更多的主链、侧链和溶剂排布；配体结合又会限制平移、转动和构象自由度。因而比较两个分子状态时，需要同时考虑能量与可及状态数。
 
-### Boltzmann 权重与配分函数 { #boltzmann-partition }
+### 玻尔兹曼权重与配分函数 { #boltzmann-partition }
 
 处于恒温环境、可与热库交换能量的体系，在平衡时落入微观状态 $i$ 的概率为
 
@@ -61,7 +61,7 @@ k_{\mathrm B}T\approx4.11\ \mathrm{pN\,nm}
 \approx4.11\times10^{-21}\ \mathrm J,
 $$
 
-按一摩尔粒子计则有 $RT\approx2.48\ \mathrm{kJ\,mol^{-1}}$。这里的 $k_{\mathrm B}$ 与 Avogadro 常数都是 SI 制中的精确定义常数；数值随温度线性变化。[^codata-constants]
+按一摩尔粒子计则有 $RT\approx2.48\ \mathrm{kJ\,mol^{-1}}$。这里的 $k_{\mathrm B}$ 与阿伏伽德罗常数都是国际单位制（International System of Units，SI）中的精确定义常数；数值随温度线性变化。[^codata-constants]
 
 两个状态的自由能相差 $1k_{\mathrm B}T$ 时，较高自由能状态相对权重约为 $e^{-1}$；相差 $5k_{\mathrm B}T$ 时约为 $e^{-5}$。几倍 $k_{\mathrm B}T$ 的变化已经能显著移动状态分布，而多个弱相互作用、多个结合位点或重复结构单元的贡献可以累积。温度升高也不仅意味着“运动更快”：它改变能量差相对于 $k_{\mathrm B}T$ 的大小，并可能通过溶剂化、热容和构象熵改变自由能差本身。
 
@@ -93,7 +93,7 @@ $$
 
 多重度比可以改写成熵差 $\Delta S=k_{\mathrm B}\ln(g_1/g_0)$，于是概率比取决于 $\Delta E-T\Delta S$。这说明低能状态未必占优势：若另一状态拥有足够多的微观排布，熵贡献可以抵消能量差。
 
-### 力、配体和环境改变状态权重 { #state-coupling }
+### 力、配体与环境的状态权重 { #state-coupling }
 
 外界变量通过改变状态自由能来移动分布。若两态沿受力方向的位置相差 $\Delta x$，恒定力 $f$ 对自由能差的一阶影响可写为
 
@@ -176,7 +176,7 @@ $$
 
 Monod–Wyman–Changeux（MWC）模型把寡聚蛋白表示成两个预存的整体构象，所有亚基协同处于 T 态或 R 态；配体对两态亲和力不同，结合遂重新分配两态群体。Koshland–Némethy–Filmer（KNF）模型允许配体结合后亚基逐步改变，并把变化传给相邻亚基，因此同一寡聚体中可以出现混合构象。两者是理解协同结合的经典极限模型，真实蛋白质可以兼有构象选择、诱导调整和多条耦联路径。[^mwc-model][^knf-model]
 
-酶调控中同促、异促效应与催化速率的关系，见[变构调节模型](../biochem/enzyme_mechanism_regulation.md#allosteric-models)；本页关注占据状态和构象状态的统计权重。
+酶调控中同促、异促效应与催化速率的关系，见[变构调节模型](../biochem/enzyme_mechanism_regulation.md#allosteric-models)；这里关注占据状态和构象状态的统计权重。
 
 实验中常用 Hill 形式概括曲线陡峭度：
 
@@ -193,7 +193,7 @@ $K_{0.5}$ 是半最大响应对应的浓度，$n_{\mathrm H}$ 是 Hill 系数。
 
 ### 从序列到相对结合权重 { #energy-matrix }
 
-DNA、RNA 或肽结合蛋白面对的候选配体常是一组彼此相近的序列。设序列 $s$ 的结合自由能为 $\Delta G_{\mathrm{bind}}(s)$，在相同游离蛋白浓度和环境下，它的结合权重相对于序列 $s'$ 为
+脱氧核糖核酸（deoxyribonucleic acid，DNA）、核糖核酸（ribonucleic acid，RNA）或肽结合蛋白面对的候选配体常是一组彼此相近的序列。设序列 $s$ 的结合自由能为 $\Delta G_{\mathrm{bind}}(s)$，在相同游离蛋白浓度和环境下，它的结合权重相对于序列 $s'$ 为
 
 $$
 \frac{w(s)}{w(s')}
@@ -233,16 +233,16 @@ pH、盐浓度、温度、二价离子、辅因子和膜组成都能改变结合
 
 温度依赖还受热容变化影响。简单地把 $\Delta G=\Delta H-T\Delta S$ 中的 $\Delta H$ 与 $\Delta S$ 当作恒定常数，往往只适用于有限温区。比较突变体或不同配体时，焓—熵补偿可能来自真实的溶剂和构象重排，也可能受参数相关性、测量误差或不同耦联平衡影响；可靠解释需要跨条件重复、独立方法与结构证据。
 
-## 从实验读出反推状态模型 { #experimental-inference }
+## 实验读出与状态模型反演 { #experimental-inference }
 
 统计热力学给出状态权重与可观测量之间的关系，实验则决定哪些权重真正受到数据约束。不同方法读取热量、占据、折射率、距离或力，各自把若干微观过程压缩成一个信号。
 
 | 方法 | 主要直接读出 | 可由模型推断的量与关键边界 |
 | --- | --- | --- |
 | 平衡滴定、荧光各向异性或电泳迁移 | 随游离配体浓度变化的结合信号或复合物比例 | $K_d$、位点数或协同性依赖明确的信号—占据映射；配体耗竭、标记扰动和多种复合物会改变曲线 |
-| 等温滴定量热（ITC） | 每次注射引起的热流与积分热量 | 拟合可给出结合计量、$K_a$ 和 $\Delta H$，再由关系式求 $\Delta G$、$\Delta S$；缓冲液质子化、浓度误差和多状态模型会进入表观参数 |
-| 表面等离子体共振（SPR）或生物层干涉 | 固相表面上复合物随时间的生成与解离信号 | 在合适模型下估计 $k_{\mathrm{on}}$、$k_{\mathrm{off}}$ 与 $K_d$；固定化、再结合、表面异质性和传质限制可能扭曲速率 |
-| 单分子 FRET、光镊或磁镊 | 单分子距离状态、跃迁时间或力—位移轨迹 | 可分辨群体平均隐藏的状态与转换；标记位置、时间分辨率、加载速率和非平衡驱动决定可解释范围 |
+| 等温滴定量热（isothermal titration calorimetry，ITC） | 每次注射引起的热流与积分热量 | 拟合可给出结合计量、$K_a$ 和 $\Delta H$，再由关系式求 $\Delta G$、$\Delta S$；缓冲液质子化、浓度误差和多状态模型会进入表观参数 |
+| 表面等离子体共振（surface plasmon resonance，SPR）或生物层干涉 | 固相表面上复合物随时间的生成与解离信号 | 在合适模型下估计 $k_{\mathrm{on}}$、$k_{\mathrm{off}}$ 与 $K_d$；固定化、再结合、表面异质性和传质限制可能扭曲速率 |
+| 单分子 Förster 共振能量转移（Förster resonance energy transfer，FRET）、光镊或磁镊 | 单分子距离状态、跃迁时间或力—位移轨迹 | 可分辨群体平均隐藏的状态与转换；标记位置、时间分辨率、加载速率和非平衡驱动决定可解释范围 |
 
 ITC 直接测量结合过程的热效应，在合适的单一位点模型下可同时约束亲和力、计量和结合焓；SPR 则实时记录结合与解离，能够把相同 $K_d$ 背后的不同速率组合分开。两类方法都需要检查模型假设：ITC 的滴定曲线可能无法区分若干参数组合，SPR 的表面传质可能使表观结合速率低于溶液中的真实反应速率。[^itc-thermodynamics][^spr-kinetics]
 
@@ -252,7 +252,7 @@ ITC 直接测量结合过程的热效应，在合适的单一位点模型下可�
 
 外力扫描、光激活或快速混合会让体系暂时离开平衡。此时轨迹包含耗散、路径依赖和实验驱动速率的信息，不能直接代入平衡 Boltzmann 分布。若扰动足够缓慢，或采用明确的非平衡统计关系与动力学模型，才可由工作分布、跃迁率或迟滞曲线反推平衡自由能景观。
 
-### 用多种观测区分候选机制 { #model-discrimination }
+### 多种观测对候选机制的区分 { #model-discrimination }
 
 一条平衡结合曲线常不足以唯一确定机制。正协同曲线可能来自构象耦联，也可能受样品聚集、配体耗竭或信号非线性影响；双相曲线可能来自两个位点，也可能来自两个分子群体。更有辨别力的证据组合包括游离配体的直接测量、不同蛋白浓度下的全局拟合、构象读出、动力学轨迹、计量测量以及破坏特定位点或界面的突变。
 
@@ -261,7 +261,7 @@ ITC 直接测量结合过程的热效应，在合适的单一位点模型下可�
 ## 参考资料与延伸阅读 { #references }
 
 [^physical-biology-textbook]: Phillips R, Kondev J, Theriot J, Garcia H. [*Physical Biology of the Cell*, 2nd ed.](https://www.routledge.com/Physical-Biology-of-the-Cell-2nd-Edition/Phillips-Kondev-Theriot-Garcia/p/book/9780815344506). Garland Science, 2012；Dill KA, Bromberg S. [*Molecular Driving Forces: Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience*, 2nd ed.](https://www.routledge.com/9780815344308). Garland Science, 2010.
-[^codata-constants]: Mohr PJ, Newell DB, Taylor BN, Tiesinga E. [CODATA recommended values of the fundamental physical constants: 2022](https://physics.nist.gov/cuu/pdf/JPCRD2022CODATA.pdf). *J Phys Chem Ref Data*. 2025;54:033105. 本页数值由精确的 $k_{\mathrm B}=1.380649\times10^{-23}\ \mathrm{J\,K^{-1}}$ 与 $N_{\mathrm A}=6.02214076\times10^{23}\ \mathrm{mol^{-1}}$ 在 $298\ \mathrm K$ 下换算。
+[^codata-constants]: Mohr PJ, Newell DB, Taylor BN, Tiesinga E. [CODATA recommended values of the fundamental physical constants: 2022](https://physics.nist.gov/cuu/pdf/JPCRD2022CODATA.pdf). *J Phys Chem Ref Data*. 2025;54:033105. 上述数值由精确的 $k_{\mathrm B}=1.380649\times10^{-23}\ \mathrm{J\,K^{-1}}$ 与 $N_{\mathrm A}=6.02214076\times10^{23}\ \mathrm{mol^{-1}}$ 在 $298\ \mathrm K$ 下换算。
 [^mwc-model]: Monod J, Wyman J, Changeux J-P. [On the nature of allosteric transitions: a plausible model](https://doi.org/10.1016/S0022-2836(65)80285-6). *J Mol Biol*. 1965;12:88–118.
 [^knf-model]: Koshland DE Jr, Némethy G, Filmer D. [Comparison of experimental binding data and theoretical models in proteins containing subunits](https://doi.org/10.1021/bi00865a047). *Biochemistry*. 1966;5(1):365–385.
 [^hill-equation]: Weiss JN. [The Hill equation revisited: uses and misuses](https://doi.org/10.1096/fasebj.11.11.9285481). *FASEB J*. 1997;11(11):835–841.
