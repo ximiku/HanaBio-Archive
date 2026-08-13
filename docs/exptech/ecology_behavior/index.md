@@ -2,7 +2,7 @@
 
 生态与行为实验从真实环境中的个体、种群和群落取得证据。研究者面对的对象往往能够移动、选择环境、相互作用并随季节改变，样地也存在坡位、基质、微气候和历史差异。一次计数、一次捕获或一段录像只是复杂过程留下的局部记录；只有把研究对象、空间与时间范围、取样或操纵方式、观测误差和分析模型连在一起，读数才会成为可以解释的生态证据。
 
-本页面组保留传统教学中从标本辨认、样方调查、标记重捕、时间序列手算和行为录像进入问题的路径，同时补足现代实验设计、模型检验、动物福利与数据管理。具体公式、数据表和案例分散在五个专题页中，本页说明它们为什么属于同一条证据链，以及学习时应怎样在自然史观察、数量分析和因果推断之间往返。
+学习路径从标本辨认、样方调查、标记重捕、时间序列手算和行为录像进入问题，同时纳入现代实验设计、模型检验、动物福利与数据管理。五个专题共享一条证据链：由自然史观察提出问题，以标准化取样或操纵获得数据，再用数量分析和因果推断限定结论。
 
 ## 研究对象、尺度与观测过程 { #objects-scale-observation }
 
@@ -12,7 +12,7 @@
 
 生态数据还包含一个容易被忽略的**观测过程**。真实个体数、行为状态或环境暴露先经过捕获概率、观察距离、分类能力、仪器响应和记录规则，才成为表格中的数值。标记重捕模型显式处理再次捕获，行为谱规定什么算一次动作，样方和样带规定搜索边界，温度记录则决定动物实际经历的暴露。把观测过程写入设计，能够区分生态变化与方法变化。
 
-## 从自然史问题到可检验设计 { #natural-history-to-design }
+## 自然史问题与可检验设计 { #natural-history-to-design }
 
 自然史观察提供对象身份、行为序列、生境结构和候选机制，是提出问题的起点。一个可检验问题随后要指出比较对象、主要反应量和预期方向。例如“阳叶是否具有更高的单位面积质量”需要控制物种、植株与叶位；“巢内幼体数量是否改变穴蜂投食次数”需要先定义巢、雌蜂和一次投食；“两种草履虫是否竞争”则需要单独培养与共同培养来分开密度反馈和种间作用。问题越明确，现场记录越容易区分必要变量与事后感兴趣的线索。
 
@@ -46,17 +46,17 @@
 
 行为观察应在取样前建立行为谱，定义状态、事件、起止和个体身份，再选择焦点个体、扫描、连续或事件取样。Altmann 的经典综述把这些取样方法与偏倚问题系统连接起来；摄像、定位和计算机视觉可以延长记录，却仍依赖明确定义和验证过的编码规则。[^altmann-sampling] 同样地，生态调查必须固定样方、样带、捕捉或搜索方案，并保存取样努力。方法改变后得到的数量差异，可能来自真实生态变化，也可能来自检出范围变化。
 
-每次现场活动都应有稳定的事件 ID，并记录日期与时间、地点及坐标基准、目标类群、方法版本、面积／体积／时长、人员、环境条件、处理偏离和样品去向。GBIF 的采样事件框架把 `eventID`、`samplingProtocol`、样本尺度和采样努力作为连接地点、方法与物种记录的关键字段；这些字段同样适合本科课程的现场数据表。[^gbif-sampling-events] 原始计数、照片、音视频、标记历程和环境读数保持只读，分类订正、单位换算与模型输入另存整理层，使每个图表都能回到具体取样事件。
+每次现场活动都应有稳定的事件标识符（event identifier，event ID），并记录日期与时间、地点及坐标基准、目标类群、方法版本、面积／体积／时长、人员、环境条件、处理偏离和样品去向。全球生物多样性信息机构（Global Biodiversity Information Facility，GBIF）的采样事件框架把 `eventID`、`samplingProtocol`、样本尺度和采样努力作为连接地点、方法与物种记录的关键字段；这些字段同样适合本科课程的现场数据表。[^gbif-sampling-events] 原始计数、照片、音视频、标记历程和环境读数保持只读，分类订正、单位换算与模型输入另存整理层，使每个图表都能回到具体取样事件。
 
-长期或多地点项目还要保存变量定义、单位、缺失代码、空间与时间范围、处理方法和数据使用条件。生态元数据语言 EML 为数据包、方法、时空与分类范围以及表结构提供了可共享的描述框架；课堂记录不必从一开始就写成完整 XML，但应具备这些信息，避免数据脱离现场人员后失去含义。[^eml]
+长期或多地点项目还要保存变量定义、单位、缺失代码、空间与时间范围、处理方法和数据使用条件。生态元数据语言（Ecological Metadata Language，EML）为数据包、方法、时空与分类范围以及表结构提供了可共享的描述框架；课堂记录不必从一开始就写成完整的可扩展标记语言（Extensible Markup Language，XML），但应具备这些信息，避免数据脱离现场人员后失去含义。[^eml]
 
 ## 伦理、许可与研究完整性 { #ethics-permits-integrity }
 
-野外采集和动物观察在取样前就受到伦理与许可约束。研究者要确认土地与保护地准入、物种采集或标记许可、保护物种和敏感地点信息的处理、样品保存与归还、非目标捕获以及现场人员安全。能由照片、脱落材料、既有录像或非侵入观察回答的问题，不应为了课堂展示额外捕捉动物或使其受伤、死亡。行为研究的福利评估还要覆盖干扰、追逐、隔离、播放、诱饵、捕捉、标记、释放与长期后果；ASAB 的伦理框架同时强调减少动物痛苦与保护所研究的种群。[^asab-ethics]
+野外采集和动物观察在取样前就受到伦理与许可约束。研究者要确认土地与保护地准入、物种采集或标记许可、保护物种和敏感地点信息的处理、样品保存与归还、非目标捕获以及现场人员安全。能由照片、脱落材料、既有录像或非侵入观察回答的问题，不应为了课堂展示额外捕捉动物或使其受伤、死亡。行为研究的福利评估还要覆盖干扰、追逐、隔离、播放、诱饵、捕捉、标记、释放与长期后果；动物行为研究协会（Association for the Study of Animal Behaviour，ASAB）的伦理框架同时强调减少动物痛苦与保护所研究的种群。[^asab-ethics]
 
 合法和低干扰的设计也必须保持数据完整。未知标本、意外层位、零捕获、失败对照和偏离方案都属于证据，不能因“不符合预期”而丢弃、借用他组材料补数、暗改温度或事后重写条件。分类暂不能确定时可保留为形态种或较高阶元，附照片、凭证和置信度；动物达到福利停止条件时应立即处置并如实记录缺失原因。具体放行条件见[实验安全、伦理与风险管理](../foundations/safety_ethics.md#animal-and-field-ethics)。
 
-## 建议的学习次序 { #learning-sequence }
+## 学习次序 { #learning-sequence }
 
 学习可以从同一地点的一次标准化观察开始：先画出样地或行为场景，定义单位和分类项目，再记录努力、环境与原始观察。随后用样方、样带或焦点个体取样练习把连续自然过程变成数据，并用重复观察估计方法变异。种群抽样和群落矩阵适合训练“未观察到”与“真实不存在”、数量与努力、距离与组成之间的区别。
 
@@ -69,9 +69,9 @@
 - Popovic G, et al. [Four principles for improved statistical ecology](https://doi.org/10.1111/2041-210X.14270). *Methods in Ecology and Evolution*. 2024;15:266–281.
 - Global Biodiversity Information Facility. [Guide for publishing biological survey and monitoring data to GBIF](https://docs.gbif.org/guide-publishing-survey-data/en/).
 
-[^hurlbert-pseudoreplication]: Hurlbert SH. [Pseudoreplication and the design of ecological field experiments](https://doi.org/10.2307/1942661). *Ecological Monographs*. 1984;54:187–211. 本页采用其对处理重复、子样本和处理交错的区分，不把历史分类当作替代现代层级模型的固定术语表。
+[^hurlbert-pseudoreplication]: Hurlbert SH. [Pseudoreplication and the design of ecological field experiments](https://doi.org/10.2307/1942661). *Ecological Monographs*. 1984;54:187–211. 该文区分处理重复、子样本和处理交错；这些历史分类不能替代现代层级模型。
 [^popovic-principles]: Popovic G, et al. [Four principles for improved statistical ecology](https://doi.org/10.1111/2041-210X.14270). *Methods in Ecology and Evolution*. 2024;15:266–281. 文章把问题与设计、适当分析、效应大小及充分报告组织为连续的研究流程。
 [^altmann-sampling]: Altmann J. [Observational study of behavior: sampling methods](https://doi.org/10.1163/156853974X00534). *Behaviour*. 1974;49:227–267. 该文系统讨论焦点个体、扫描、行为和连续记录等取样方式及其偏倚基础。
-[^gbif-sampling-events]: Global Biodiversity Information Facility. [Data quality requirements: Sampling-event datasets](https://www.gbif.org/uk/data-quality-requirements-sampling-events). 其采样事件字段要求包括稳定事件标识、日期、方法、样本尺度、地点和努力；正文将这些字段作为一般记录框架，而不是要求所有课程数据必须公开至 GBIF。
+[^gbif-sampling-events]: Global Biodiversity Information Facility. [Data quality requirements: Sampling-event datasets](https://www.gbif.org/uk/data-quality-requirements-sampling-events). 其采样事件字段要求包括稳定事件标识、日期、方法、样本尺度、地点和努力；这些字段可作为一般记录框架，并不要求课程数据必须公开至 GBIF。
 [^eml]: Jones MB, et al. [Ecological Metadata Language version 2.2.0](https://eml.ecoinformatics.org/). KNB Data Repository; 2019. [https://doi.org/10.5063/F11834T2](https://doi.org/10.5063/F11834T2). EML 覆盖数据包的时空与分类范围、方法、表结构和语义描述。
 [^asab-ethics]: Association for the Study of Animal Behaviour. [Ethics and guidelines for the ethical treatment of nonhuman animals in behavioural research and teaching](https://www.asab.org/ethics). 具体实施仍须遵守所在地法律、机构审查和物种适用规范。

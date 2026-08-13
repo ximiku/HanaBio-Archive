@@ -1,8 +1,8 @@
 # 植物形态、解剖与分类实验
 
-植物形态学实验从一件可以反复核对的标本开始：先确认材料来自哪一个个体、哪一个器官和哪一个发育阶段，再确定近轴—远轴、基部—顶部以及横切—纵切方向，随后由整体外形进入组织配置和细胞形态。分类鉴定是这条观察链的后半段。一个名称应当能够追溯到标本及其性状记录，而不能只由“扁平就是叶”“三棱就是莎草”“花三数就是单子叶”之类的单项口诀产生。
+植物形态学实验从一件可以反复核对的标本开始：先确认材料来自哪一个个体、哪一个器官和哪一个发育阶段，再确定近轴—远轴、基部—顶部以及横切—纵切方向，随后由整体外形进入组织配置和细胞形态。分类鉴定是这条观察链的后半段，一个名称应当能够追溯到标本及其多项性状记录。
 
-传统实验中的徒手切片、离析、花部解剖、生物绘图和检索表训练仍然是理解植物体的基本路径。分子系统学补充了类群亲缘关系和性状演化的证据，却没有使形态与解剖失去作用：野外取样、标本复核、化石比较和无序列材料的鉴定都要从可观察性状出发。本页因此保留经典辨认对象及操作次序，同时把常见性状放回器官发生、组织连续性和现代系统树中解释。
+徒手切片、离析、花部解剖、生物绘图和检索表训练是理解植物体的基本路径。分子系统学补充了类群亲缘关系和性状演化的证据，野外取样、标本复核、化石比较和无序列材料的鉴定则仍从可观察性状出发。经典辨认对象及操作次序由此与器官发生、组织连续性和现代系统树共同构成解释框架。
 
 ## 标本身份、方向与观察层级 { #specimen-orientation }
 
@@ -50,7 +50,7 @@
 
 木质材料先用外部标志区分轴和取材位置。节、节间、叶痕和芽痕可以支持茎的判断；根没有这些枝条模块，但根也能形成维管形成层、周皮、皮孔样通气结构和生长轮。年轮记录形成层活动随季节和环境的变化，不是茎专有标志，也不必然每一轮都等于一个日历年。树皮表面和横切面不足以稳定区分根木与茎木时，应结合与植株的连接、木射线、初生木质部位置和早期发育结构。
 
-木材鉴定要联合横切、径切和弦切。被子植物木材可按导管在一个生长轮中的尺度与分布描述为环孔材、半环孔材或散孔材，还要记录导管组合、穿孔板、纹孔、轴向薄壁组织、纤维和射线；裸子植物木材则重点观察轴向管胞、具缘纹孔、射线和树脂道。IAWA 性状表把这些特征编成可比较的标准术语，说明孔材类型只是鉴定矩阵中的一个字段。[^wood-anatomy]
+木材鉴定要联合横切、径切和弦切。被子植物木材可按导管在一个生长轮中的尺度与分布描述为环孔材、半环孔材或散孔材，还要记录导管组合、穿孔板、纹孔、轴向薄壁组织、纤维和射线；裸子植物木材则重点观察轴向管胞、具缘纹孔、射线和树脂道。国际木材解剖学家协会（International Association of Wood Anatomists，IAWA）性状表把这些特征编成可比较的标准术语，孔材类型是鉴定矩阵中的一个字段。[^wood-anatomy]
 
 多数单子叶植物缺少产生内侧次生木质部、外侧次生韧皮部的典型双面维管形成层，但这不等于单子叶植物都“没有次生结构”。龙血树、丝兰等可由次生增粗分生组织形成新的维管束和基本组织，棕榈等还可通过初生增粗及既有组织细胞的扩张显著增粗。切片中观察到的同心带也未必是年轮，需依据分生组织来源和组织连续性解释。[^monocot-thickening]
 
@@ -66,9 +66,9 @@
 
 分类鉴定先描述后命名。把生活型、地下器官、茎叶连接、叶序、叶片和托叶、乳汁或分泌物、花序、花对称性、花部数目与联合、子房位置、胎座、果实和种子分别记录，再使用适用于该地区、该类群和该发育阶段的检索表。每一对检索项都要回到标本核对；关键性状缺失时暂留多个候选，不能用后续印象倒推看不见的结构。[植物检索表与鉴定证据](../../botany/classification/classification_principles.md#identification-keys)进一步说明了多份标本、完整材料和来源记录的作用。
 
-被子植物高阶分类以共同祖先和单系类群为框架，APG 系统大量采用分子系统发育证据；传统形态学中的“木本或草本”“花部三、四、五基数”等性状可能在不同支系反复演化。现代系统树用于解释哪些特征是共同衍征、哪些可能是趋同或返祖，形态实验则提供样品身份、可诊断性状和结构功能。二者的关系是相互校验，而不是用序列结果替换花、果实、孢子或木材观察。[^apg-iv]
+被子植物高阶分类以共同祖先和单系类群为框架，被子植物系统发育组（Angiosperm Phylogeny Group，APG）系统大量采用分子系统发育证据；传统形态学中的“木本或草本”“花部三、四、五基数”等性状可能在不同支系反复演化。现代系统树用于解释哪些特征是共同衍征、哪些可能是趋同或返祖，形态实验则提供样品身份、可诊断性状和结构功能。二者相互校验，并共同约束花、果实、孢子或木材的鉴定。[^apg-iv]
 
-鉴定结果至少写出使用的检索表版本、检索路径、支持性状、冲突或缺失性状以及最终置信范围。重要材料应保留凭证标本或与正式馆藏标本比对；凭证把名称、采集地点、日期、形态和后续 DNA 或化学数据固定在同一个可复核对象上。[^voucher-specimen] 若要继续比较具体被子植物科，可从[被子植物科级索引](../../botany/classification/angiosperms/family_index.md)进入各支系页面。
+鉴定结果至少写出使用的检索表版本、检索路径、支持性状、冲突或缺失性状以及最终置信范围。重要材料应保留凭证标本或与正式馆藏标本比对；凭证把名称、采集地点、日期、形态和后续脱氧核糖核酸（deoxyribonucleic acid，DNA）或化学数据固定在同一个可复核对象上。[^voucher-specimen] 若要继续比较具体被子植物科，可从[被子植物科级索引](../../botany/classification/angiosperms/family_index.md)进入各支系页面。
 
 ## 生物绘图与观察报告 { #biological-drawing-report }
 
@@ -93,7 +93,7 @@
 - Angiosperm Phylogeny Group. [An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG IV](https://doi.org/10.1111/boj.12385). *Botanical Journal of the Linnean Society*. 2016;181:1–20.
 - Royal Botanic Gardens, Kew. [The Herbarium](https://www.kew.org/science/collections-and-resources/collections/herbarium)；Smithsonian National Museum of Natural History. [Voucher Specimens](https://naturalhistory.si.edu/research/botany/research/plant-dna-barcode-project/sampling/voucher-specimens).
 
-[^plant-anatomy]: 根、茎、叶的组织系统及单子叶与真双子叶典型配置见 OpenStax *Biology 2e* 的 [The Plant Body](https://openstax.org/books/biology-2e/pages/30-1-the-plant-body)、[Stems](https://openstax.org/books/biology-2e/pages/30-2-stems)、[Roots](https://openstax.org/books/biology-2e/pages/30-3-roots) 与 [Leaves](https://openstax.org/books/biology-2e/pages/30-4-leaves)；正文将这些配置作为多性状比较，而非无例外检索键。
+[^plant-anatomy]: 根、茎、叶的组织系统及单子叶与真双子叶典型配置见 OpenStax *Biology 2e* 的 [The Plant Body](https://openstax.org/books/biology-2e/pages/30-1-the-plant-body)、[Stems](https://openstax.org/books/biology-2e/pages/30-2-stems)、[Roots](https://openstax.org/books/biology-2e/pages/30-3-roots) 与 [Leaves](https://openstax.org/books/biology-2e/pages/30-4-leaves)；这些配置适合组成多性状比较，而非无例外检索键。
 [^guard-cell-shape]: Rui 与 Anderson 的[保卫细胞壁结构与功能综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC6110162/)比较了真双子叶植物常见肾形保卫细胞与禾草常见哑铃形保卫细胞；更广的气孔构型多样性见[真双子叶植物与禾草气孔细胞壁综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC11232514/)。
 [^seedless-plants]: 叶状苔类配子体、假根与表面结构见 OpenStax [Bryophytes](https://openstax.org/books/biology-2e/pages/25-3-bryophytes)；蕨类孢子囊群、心形原叶体、假根和配子囊位置见 [Seedless Vascular Plants](https://openstax.org/books/biology-2e/pages/25-4-seedless-vascular-plants)。
 [^gymnosperm-xylem]: 现代裸子植物木质部通常以管胞为主要轴向输导细胞，买麻藤类具有次生木质部导管；买麻藤类导管与被子植物导管的独立演化解释见 Carlquist 的[木材、树皮与茎解剖综述](https://doi.org/10.1086/297404)，现生裸子植物形态与系统发育背景见 Ran 等的[裸子植物系统基因组学综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC9363647/)。

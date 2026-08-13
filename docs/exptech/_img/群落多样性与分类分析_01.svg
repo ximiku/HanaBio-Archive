@@ -16,7 +16,7 @@
   </style>
 
   <text class="title" x="240" y="34" text-anchor="middle">候选修订：x₃c = 1</text>
-  <text class="subtitle" x="240" y="57" text-anchor="middle">全部复现素材所列欧氏距离</text>
+  <text class="subtitle" x="240" y="57" text-anchor="middle">全部复现随表给出的欧氏距离</text>
   <text class="title" x="680" y="34" text-anchor="middle">原表记录：x₃c = 7</text>
   <text class="subtitle" x="680" y="57" text-anchor="middle">从丰度表重新计算距离</text>
 

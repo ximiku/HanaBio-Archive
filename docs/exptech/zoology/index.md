@@ -2,7 +2,7 @@
 
 动物学实验从完整标本进入身体建制。外形观察建立前后、背腹、内外和体区，逐层解剖保存器官原位关系，切片与游离标本再补充组织层次和连续结构。经过这条路径，口器、附肢、鳃、消化管、肾、生殖管和神经索不再只是图谱上的名称，而成为能够由位置、连接、层次和比较对象共同确认的结构。
 
-本页面组保留传统形态解剖教学的基本次序：先辨认标本，再观察外形；先记录原位关系，再移动或取下器官；先沿管道、系膜和附着处连续追踪，再作跨类群比较。现代发育、分子和系统发育证据参与同源判断、旧名校准和物种差异解释，同时保留亲手观察标本所提供的空间证据。比较解剖教材也以形态为主体，把功能与演化放入器官系统的系统关系中；解剖手册则依赖稳定的方向和逐步暴露，使不同标本能够按同一框架比较。[^kardong-comparative-anatomy][^de-iuliis-dissection]
+形态解剖遵循稳定的观察次序：先辨认标本，再观察外形；先记录原位关系，再移动或取下器官；先沿管道、系膜和附着处连续追踪，再作跨类群比较。现代发育、分子和系统发育证据参与同源判断、历史名称校准和物种差异解释，亲手观察标本则提供空间证据。比较解剖教材也以形态为主体，把功能与演化放入器官系统的关系中；解剖手册依赖稳定的方向和逐步暴露，使不同标本能够按同一框架比较。[^kardong-comparative-anatomy][^de-iuliis-dissection]
 
 ## 标本身份与观察尺度 { #specimen-identity-scale }
 
@@ -12,7 +12,7 @@
 
 观察尺度由任务决定。整体和低倍观察适合建立体区、体节、附肢序列和器官地图；解剖镜用于分离肌肉、导管、神经和小型附肢；组织切片检验体壁层次、腔隙和组织身份。由高倍看到的细胞结构不能自动补齐其在完整动物中的方向，完整标本上相邻的两个器官也未必具有管道连接。每次转换尺度时，都要保留方向标记和上一层级的定位照片或草图。
 
-## 从外形到内部关系的观察次序 { #external-to-internal-sequence }
+## 外形与内部关系的观察次序 { #external-to-internal-sequence }
 
 外形观察先确定身体轴、体区和左右对称关系，再依前后顺序记录口、感觉器官、附肢、体节、呼吸开口、肛门和生殖开口。分节动物的体节号、节肢动物的附肢序列、软体动物的壳顶与壳口、脊椎动物的鳍或肢，都可作为内部定位的坐标。外部测量和图版完成后再进入开口步骤，能够避免为寻找某一器官而过早破坏其他证据。
 
@@ -56,11 +56,11 @@
 
 ## 标本来源、动物福利与操作条件 { #provenance-welfare-safety }
 
-教学标本须具有合法且可追溯的来源，涉及野外采集、保护物种、进出口或馆藏借用时保存相应许可和流转文件。能够由既有馆藏、固定标本、组织切片、图像、录像或模型完成的学习目标，优先利用这些材料。需要活体观察或动物程序的课程由机构审批、人员训练、物种照护和预设人道终点共同约束；替代、减少和优化分别要求寻找足以回答问题的替代材料、用合理设计避免无效重复，并减轻疼痛、痛苦和持续伤害。[^guide-lab-animals][^nc3rs-three-rs]
+教学标本须具有合法且可追溯的来源，涉及野外采集、保护物种、进出口或馆藏借用时保存相应许可和流转文件。能够由既有馆藏、固定标本、组织切片、图像、录像或模型完成的学习目标，优先利用这些材料。需要活体观察或动物程序的课程由机构审批、人员训练、物种照护和预设人道终点共同约束；替代、减少和优化原则（Replacement, Reduction and Refinement，3Rs）分别要求寻找足以回答问题的替代材料、用合理设计避免无效重复，并减轻疼痛、痛苦和持续伤害。[^guide-lab-animals][^nc3rs-three-rs]
 
-刀片、解剖针、剪刀、玻璃、贝壳和甲壳碎片需要稳定支撑、明确的器械传递和锐器回收；固定液、染色液及防腐材料按标签、SDS、通风与废物路线管理。含毒刺、毒腺、寄生虫或来源不明体液的标本先完成风险评估，课堂观察不以分离危险结构作为熟练度证明。具体的风险评估和动物伦理框架见[实验安全、伦理与风险管理](../foundations/safety_ethics.md#animal-and-field-ethics)。
+刀片、解剖针、剪刀、玻璃、贝壳和甲壳碎片需要稳定支撑、明确的器械传递和锐器回收；固定液、染色液及防腐材料按标签、安全数据表（safety data sheet，SDS）、通风与废物路线管理。含毒刺、毒腺、寄生虫或来源不明体液的标本先完成风险评估，课堂观察不以分离危险结构作为熟练度证明。具体的风险评估和动物伦理框架见[实验安全、伦理与风险管理](../foundations/safety_ethics.md#animal-and-field-ethics)。
 
-## 建议的学习次序 { #learning-sequence }
+## 学习次序 { #learning-sequence }
 
 学习可先从[无脊椎动物观察与解剖方法](invertebrate.md)建立方位、开口、连续追踪和绘图规则，再依原生生物与蠕虫、环节、软体、甲壳和昆虫逐步增加身体建制的差异。完成甲壳和昆虫后进入[节肢动物比较观察](arthropod_comparison.md)，把此前按物种记录的体区与附肢重新排成跨类群矩阵。
 
@@ -76,7 +76,7 @@
 
 [^kardong-comparative-anatomy]: McGraw Hill, [*Vertebrates: Comparative Anatomy, Function, Evolution*, 8th ed.](https://www.mheducation.com/highered/product/vertebrates-kardong.html?viewOption=student)；教材以形态为主体，并把功能与演化纳入按系统组织的比较解剖。
 [^de-iuliis-dissection]: De Iuliis & Pulerà, [*The Dissection of Vertebrates*, 3rd ed.](https://shop.elsevier.com/books/the-dissection-of-vertebrates/de-iuliis/978-0-12-410460-0)；该手册以系统性的逐步解剖和准确图版组织常用比较标本。
-[^smithsonian-collections]: Smithsonian National Museum of Natural History, [Museum Collections Policies](https://naturalhistory.si.edu/research/nmnh-collections/museum-collections-policies)；馆藏公开字段包括目录号、学名、产地、采集者、采集日期和模式状态。正文借用其可追溯原则，不把馆藏全套字段规定为课堂固定格式。
+[^smithsonian-collections]: Smithsonian National Museum of Natural History, [Museum Collections Policies](https://naturalhistory.si.edu/research/nmnh-collections/museum-collections-policies)；馆藏公开字段包括目录号、学名、产地、采集者、采集日期和模式状态，其可追溯原则可转化为简化的课堂记录。
 [^spnhc-accession]: Society for the Preservation of Natural History Collections, [Accession of Specimens](https://spnhc.org/accession-of-specimens/)；该规范说明标本取得、许可、流转文件和永久记录之间的关系。
 [^guide-lab-animals]: National Research Council, [*Guide for the Care and Use of Laboratory Animals*, 8th ed.](https://nap.nationalacademies.org/catalog/12910/guide-for-the-care-and-use-of-laboratory-animals-eighth-edition), 2011；适用于研究、测试与教学中的机构动物照护和使用体系。
 [^nc3rs-three-rs]: NC3Rs, [The 3Rs](https://nc3rs.org.uk/who-we-are/3rs)；Replacement、Reduction 与 Refinement 分别对应替代、与科学目标相容的数量减少，以及疼痛、痛苦、困扰和持续伤害的减轻。
