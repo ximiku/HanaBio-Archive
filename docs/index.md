@@ -21,7 +21,7 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 ## 简介
 
-🎉🎉  **Jul. 24, 2026 Update** ：网站重构为Zensical架构 🎉🎉
+[[site-events:latest]]
 
 这里是 **Ximiku67 的个人生物学笔记**，汇集了生物化学、细胞生物学、动植物学等微观到宏观层面的知识内容，既包括基础理论，也包括最新的前沿研究。这里会尽可能完整地整理我在两年半的高中生物竞赛生涯中学习到的理论和实验知识，以之前的生物竞赛笔记为底稿，并持续融入北大生科的课程笔记、前沿论文与资料等，希望把这个网站逐渐建成一个**生物学知识库**，在讲解生物学基础知识的同时，也链接相关的前沿内容。
 
@@ -67,6 +67,10 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 本站的知识内容开源免费开放，如果有侵权之处，请联系删除；本站由我（[Ximiku67](https://github.com/ximiku)）原创的内容遵循 **[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)** 和 **[SATA](https://github.com/zTrix/sata-license)** 协议，其余部分遵循原作者规定的许可发布。
 
+## 站点纪事 { #site-events }
+
+[[site-events:all]]
+
 <!--初音未来开始-->
 <style>
 .cywl {
@@ -85,17 +89,3 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 <img src="https://external-30160.picsz.qpic.cn/39ff4096c204652d7c7b56418fb37631" width="65px" height="65px" id="d" onclick="c();">
 </div>
 <!--初音未来结束-->
-
-
-
-<!--侧栏更新通知-->
-<div id="updates-box" hidden>
-
-**Update Notification**
-
-<ul>
-  <li data-date="2026-07-24">网站重构为 Zensical 架构</li>
-  <li data-date="2025-08-08">提交第一条 commit 🚀，网站建立</li>
-</ul>
-
-</div>

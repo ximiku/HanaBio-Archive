@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% include "partials/content.html" %}
+  {% if page.meta and page.meta.hanabio_revision and not page.meta.git_revision_date_localized and not page.meta.revision_date %}
+    {% set revision = page.meta.hanabio_revision %}
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="{{ revision.source_path }}"
+      {% if revision.date %}data-revision-date="{{ revision.date }}"{% endif %}
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          {% include ".icons/material/clock-edit-outline.svg" %}
+        </span>
+        {% if revision.status == "committed" %}
+          最后修订于
+          <time datetime="{{ revision.iso }}">{{ revision.date }}</time>
+          {% if revision.history_url %}
+            <span aria-hidden="true">·</span>
+            <a href="{{ revision.history_url }}">查看历史</a>
+          {% endif %}
+        {% else %}
+          尚未提交
+        {% endif %}
+      </span>
+    </aside>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  {% endif %}
+  {% if page.meta and page.meta.hanabio_site_revision %}
+    {% set revision = page.meta.hanabio_site_revision %}
+    <div
+      class="hb-site-revision"
+      data-mode="{{ revision.mode }}"
+      {% if revision.commit %}data-commit="{{ revision.commit }}"{% endif %}
+    >
+      {% if revision.mode == "public" %}
+        最近更新：<a href="{{ revision.commit_url }}"><code>{{ revision.short_sha }}</code></a>
+        <span aria-hidden="true">·</span>
+      {% else %}
+        本地预览
+        <span aria-hidden="true">·</span>
+      {% endif %}
+      <time datetime="{{ revision.iso }}">{{ revision.datetime }}</time>
+    </div>
+  {% endif %}
+</div>

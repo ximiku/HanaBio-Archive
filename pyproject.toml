@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hanabio-site-metadata"
+version = "0.1.0"
+description = "Build-time timestamp metadata for HanaBio Archive"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["hanabio_site"]

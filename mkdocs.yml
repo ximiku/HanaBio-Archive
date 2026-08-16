@@ -524,6 +524,7 @@ nav:
 # Theme
 theme:
   name: material
+  custom_dir: overrides
 
   palette:
     primary: white
@@ -557,7 +558,9 @@ plugins:
   - search
   - glightbox
   - git-revision-date-localized: #显示日期
-      enable_creation_date: true
+      type: iso_date
+      timezone: Asia/Shanghai
+      enable_creation_date: false
   - minify:
       minify_html: true
 
@@ -568,22 +571,21 @@ extra:
       link: https://space.bilibili.com/30710225
     - icon: simple/zhihu
       link: https://www.zhihu.com/people/jia-jia-77-45-25
-  update_log_items: 7   # 首页保留最近 7 条
 
 extra_javascript:
   - js/mathjax.js #数学公式
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js #数学公式
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js #表格排序
   - js/tablesort.js #表格排序
-  - js/updates.js
 
 extra_css:
   - styles/active-tab.css
-  - styles/updates.css
+  - styles/site-history.css
   - styles/extra.css
 
 # markdown扩展
 markdown_extensions:  
+  - hanabio_site.metadata
   - abbr #缩写
   - attr_list #属性列表
   - admonition 
@@ -629,3 +631,7 @@ markdown_extensions:
 
 watch:
   - includes
+  - hanabio_site
+  - overrides
+  - site-events.yml
+  - .git/logs/HEAD

@@ -1,4 +1,5 @@
 # ——— 基础 ———
+-e .                   # HanaBio 构建期时间与事件扩展
 mkdocs==1.6.1          # MkDocs 主程序
 mkdocs-material==9.7.7 # 主题，已自带 meta、search 等插件
 
