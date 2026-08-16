@@ -43,6 +43,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # 内置 token，足够推分支
           publish_dir: ./site                       # 要上传的目录
           publish_branch: gh-pages                  # 目标分支
+          force_orphan: true                        # 部署分支只保留最新快照
 
   # 保留 MkDocs 兼容性检查；失败不会阻止 Zensical 生产部署
   mkdocs-check:
