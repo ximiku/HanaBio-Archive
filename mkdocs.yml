@@ -521,15 +521,6 @@ nav:
       - 无细胞系统、最小细胞与人工细胞: inter/synthetic_cell_free.md
       - 多细胞合成系统与空间模式: inter/synthetic_multicellular.md
 
-  - Blog:
-    - Blog: blog/index.md
-    - 第一条博客测试: blog/posts/hello-world.md
-
-  - 课程资料:
-    - PKUSKY课程资料: pkusky_course/index.md
-    - 01139630 生物化学: pkusky_course/biochemistryEN.md
-    - 生理学: pkusky_course/physiology.md
-
 # Theme
 theme:
   name: material
