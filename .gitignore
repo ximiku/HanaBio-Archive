@@ -1,6 +1,8 @@
 /.venv/
 /.venv-zensical/
 /includes/
+/AGENTS.md
+/tmp/
 site/
 __pycache__/
 .DS_Store
