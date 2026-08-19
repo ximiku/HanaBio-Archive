@@ -1,0 +1,20 @@
+name = "hanabio-comments"
+main = "src/index.mjs"
+compatibility_date = "2026-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hanabio-comments"
+database_id = "replace-with-cloudflare-d1-database-id"
+
+[vars]
+SITE_URL = "https://ximiku.github.io/HanaBio-Archive/"
+ALLOWED_ORIGINS = "https://ximiku.github.io,http://127.0.0.1:8000,http://localhost:8000"
+GITHUB_CLIENT_ID = "replace-with-github-oauth-client-id"
+ADMIN_GITHUB_IDS = "replace-with-numeric-github-user-id"
+
+# Set these with `wrangler secret put`, never in this file:
+# JWT_SECRET
+# DEPLOY_SECRET
+# TURNSTILE_SECRET_KEY
+# GITHUB_CLIENT_SECRET

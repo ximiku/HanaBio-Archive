@@ -14,6 +14,11 @@ from .metadata import (
     is_public_build,
     load_events,
 )
+from .comments import (
+    comment_runtime_config,
+    load_comment_registry,
+    validate_comment_registry,
+)
 
 
 class MetadataHTMLParser(HTMLParser):
@@ -24,6 +29,9 @@ class MetadataHTMLParser(HTMLParser):
         self.site_revisions: list[dict[str, str]] = []
         self.milestones: list[dict[str, str]] = []
         self.timeline_items: list[dict[str, str]] = []
+        self.comment_roots: list[dict[str, str]] = []
+        self.comment_blocks: list[dict[str, str]] = []
+        self.giscus_sections: list[dict[str, str]] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {key: value or "" for key, value in attrs}
@@ -40,6 +48,12 @@ class MetadataHTMLParser(HTMLParser):
             self.milestones.append(values)
         if "hb-timeline__item" in classes:
             self.timeline_items.append(values)
+        if "hb-comments-root" in classes:
+            self.comment_roots.append(values)
+        if values.get("data-hanabio-comments") == "block":
+            self.comment_blocks.append(values)
+        if "hb-giscus" in classes:
+            self.giscus_sections.append(values)
 
 
 def _zensical_template_root() -> Path:
@@ -67,6 +81,8 @@ def check_template_contract() -> None:
 
 def preflight() -> None:
     check_template_contract()
+    validate_comment_registry(load_comment_registry())
+    comment_runtime_config()
     events = load_events(ROOT / "site-events.yml")
     repository = GitRepository(ROOT)
     public = is_public_build()
@@ -104,6 +120,8 @@ def audit_site(site_dir: Path) -> None:
     public = is_public_build()
     head = repository.validate_public_head() if public else repository.head()
     events = load_events(ROOT / "site-events.yml")
+    comments_config = comment_runtime_config()
+    comment_registry = load_comment_registry()
     markdown_count = len(list((ROOT / "docs").rglob("*.md")))
 
     page_records: list[tuple[Path, dict[str, str]]] = []
@@ -119,6 +137,21 @@ def audit_site(site_dir: Path) -> None:
             if len(parsed.site_revisions) != 1:
                 raise SiteMetadataError(f"站点版本标记数量错误：{html_path}")
             page_records.append((html_path, parsed.page_revisions[0]))
+            if len(parsed.comment_roots) != 1:
+                raise SiteMetadataError(f"页面评论根节点数量错误：{html_path}")
+            if not parsed.comment_blocks:
+                raise SiteMetadataError(f"页面没有可评论语义块：{html_path}")
+            expected_giscus = 1 if comments_config["giscus_enabled"] else 0
+            if len(parsed.giscus_sections) != expected_giscus:
+                raise SiteMetadataError(f"页面 giscus 节点数量错误：{html_path}")
+            root = parsed.comment_roots[0]
+            expected_revision = head.commit if public else "local"
+            if root.get("data-build-revision") != expected_revision:
+                raise SiteMetadataError(f"评论构建版本错误：{html_path}")
+            if root.get("data-paragraph-enabled") != str(
+                comments_config["paragraph_enabled"]
+            ).lower():
+                raise SiteMetadataError(f"段落评论启用状态错误：{html_path}")
             footer = parsed.site_revisions[0]
             footer_count += 1
             if public:
@@ -154,6 +187,16 @@ def audit_site(site_dir: Path) -> None:
             continue
         if record.get("data-revision-date") != revision.display_date:
             raise SiteMetadataError(f"页面时间与 git log 不一致：{html_path}")
+        parsed = _parse_html(html_path)
+        expected_page_id = comment_registry.page_id(source_path)
+        root = parsed.comment_roots[0]
+        if root.get("data-hanabio-page-id") != expected_page_id:
+            raise SiteMetadataError(f"页面稳定评论 ID 错误：{html_path}")
+        for block in parsed.comment_blocks:
+            if block.get("data-hanabio-page-id") != expected_page_id:
+                raise SiteMetadataError(f"语义块页面 ID 错误：{html_path}")
+            if block.get("data-build-revision") != root.get("data-build-revision"):
+                raise SiteMetadataError(f"语义块构建版本错误：{html_path}")
 
     homepage = _parse_html(site_dir / "index.html")
     if len(homepage.milestones) != 1:

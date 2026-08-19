@@ -1,0 +1,16 @@
+{
+  "name": "hanabio-comments-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "dev": "wrangler dev --config wrangler.toml",
+    "deploy": "wrangler deploy --config wrangler.toml",
+    "db:local": "wrangler d1 execute hanabio-comments --local --file schema.sql --config wrangler.toml",
+    "db:remote": "wrangler d1 execute hanabio-comments --remote --file schema.sql --config wrangler.toml"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

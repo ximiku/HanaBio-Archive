@@ -15,6 +15,13 @@ concurrency:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env:
+      HANABIO_COMMENT_API_URL: ${{ vars.HANABIO_COMMENT_API_URL }}
+      HANABIO_TURNSTILE_SITE_KEY: ${{ vars.HANABIO_TURNSTILE_SITE_KEY }}
+      HANABIO_GISCUS_REPO_ID: ${{ vars.HANABIO_GISCUS_REPO_ID }}
+      HANABIO_GISCUS_CATEGORY: ${{ vars.HANABIO_GISCUS_CATEGORY }}
+      HANABIO_GISCUS_CATEGORY_ID: ${{ vars.HANABIO_GISCUS_CATEGORY_ID }}
+      HANABIO_COMMENTS_REQUIRED: ${{ vars.HANABIO_COMMENTS_REQUIRED }}
 
     steps:
       # 1. 拉取源码
@@ -53,6 +60,20 @@ jobs:
       - name: Audit generated timestamp metadata
         run: python -m hanabio_site.checks audit --site-dir site
 
+      - name: Prepare non-destructive comment migration
+        if: ${{ vars.HANABIO_COMMENT_API_URL != '' }}
+        env:
+          HANABIO_COMMENT_DEPLOY_SECRET: ${{ secrets.HANABIO_COMMENT_DEPLOY_SECRET }}
+        run: |
+          python scripts/comment_deploy.py state --output "$RUNNER_TEMP/comment-current-revision"
+          current_revision="$(tr -d '\n' < "$RUNNER_TEMP/comment-current-revision")"
+          python scripts/comment_migration.py \
+            --from-ref "$current_revision" \
+            --to-ref "$GITHUB_SHA" \
+            --revision "$GITHUB_SHA" \
+            --output "$RUNNER_TEMP/comment-migration.json"
+          python scripts/comment_deploy.py prepare --payload "$RUNNER_TEMP/comment-migration.json"
+
       # 5. 发布到 gh-pages 分支
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4          # 专门部署静态文件的官方动作
@@ -61,6 +82,12 @@ jobs:
           publish_dir: ./site                       # 要上传的目录
           publish_branch: gh-pages                  # 目标分支
           force_orphan: true                        # 部署分支只保留最新快照
+
+      - name: Activate comment migration
+        if: ${{ vars.HANABIO_COMMENT_API_URL != '' }}
+        env:
+          HANABIO_COMMENT_DEPLOY_SECRET: ${{ secrets.HANABIO_COMMENT_DEPLOY_SECRET }}
+        run: python scripts/comment_deploy.py activate --revision "$GITHUB_SHA"
 
   # 保留 MkDocs 兼容性检查；失败不会阻止 Zensical 生产部署
   mkdocs-check:

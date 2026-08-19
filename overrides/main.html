@@ -26,4 +26,28 @@
       </span>
     </aside>
   {% endif %}
+  {% if page.meta and page.meta.hanabio_comments %}
+    {% set comments = page.meta.hanabio_comments %}
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="{{ comments.page_id | e }}"
+      data-build-revision="{{ comments.build_revision | e }}"
+      data-paragraph-enabled="{{ 'true' if comments.paragraph_enabled else 'false' }}"
+      data-comment-api-url="{{ comments.api_url | e }}"
+      data-turnstile-site-key="{{ comments.turnstile_site_key | e }}"
+      data-giscus-enabled="{{ 'true' if comments.giscus_enabled else 'false' }}"
+      data-giscus-repo="{{ comments.giscus_repo | e }}"
+      data-giscus-repo-id="{{ comments.giscus_repo_id | e }}"
+      data-giscus-category="{{ comments.giscus_category | e }}"
+      data-giscus-category-id="{{ comments.giscus_category_id | e }}"
+    >
+      {% if comments.giscus_enabled %}
+        <section class="hb-giscus" aria-labelledby="hb-giscus-title" data-no-instant>
+          <h2 id="hb-giscus-title">页面讨论</h2>
+          <p class="hb-giscus__notice">使用 GitHub 登录后可参与整页讨论；评论独立保存在 GitHub Discussions 中。</p>
+          <div class="hb-giscus__mount" aria-live="polite"></div>
+        </section>
+      {% endif %}
+    </div>
+  {% endif %}
 {% endblock %}

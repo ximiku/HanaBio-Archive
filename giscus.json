@@ -1,0 +1,12 @@
+{
+  "origins": [
+    "https://ximiku.github.io",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000"
+  ],
+  "originsRegex": [
+    "http://localhost:[0-9]+",
+    "http://127\\.0\\.0\\.1:[0-9]+"
+  ],
+  "defaultCommentOrder": "oldest"
+}

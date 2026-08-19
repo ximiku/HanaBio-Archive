@@ -577,15 +577,18 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js #数学公式
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js #表格排序
   - js/tablesort.js #表格排序
+  - js/comments.js #页面与段落评论
 
 extra_css:
   - styles/active-tab.css
   - styles/site-history.css
   - styles/extra.css
+  - styles/comments.css
 
 # markdown扩展
 markdown_extensions:  
   - hanabio_site.metadata
+  - hanabio_site.comments
   - abbr #缩写
   - attr_list #属性列表
   - admonition 
