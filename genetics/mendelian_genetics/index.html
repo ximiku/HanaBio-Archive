@@ -1,0 +1,3344 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/genetics/mendelian_genetics/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../linkage_mapping/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>孟德尔遗传及其扩展 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              孟德尔遗传及其扩展
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  遗传
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  经典遗传与染色体
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  经典遗传与染色体
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  孟德尔遗传及其扩展
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  孟德尔遗传及其扩展
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cross-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        杂交设计把表型差异转化为可检验的遗传模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分离律来自同源染色体上的等位分配
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#independent-assortment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        独立分配把多座位问题拆成概率乘积
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goodness-of-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        子代计数检验的是概率模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allelic-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        等位基因关系决定杂合体怎样被分类
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        非等位基因互作重排双杂合表型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genotype-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        基因型效应随遗传背景和环境展开
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-mendelian-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        人类孟德尔性状需要家系与变异证据共同解释
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkage_mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  连锁、交换与遗传作图
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sex_cytoplasmic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  性别决定、伴性遗传与细胞质遗传
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chromosome_variation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  突变与染色体变异
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../quantitative_genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数量与群体
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microbial_genetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细菌与噬菌体遗传分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../genomics_epigenetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  基因组学与表观遗传学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developmental_genetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育遗传学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developmental_human/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  人类遗传学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cross-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        杂交设计把表型差异转化为可检验的遗传模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segregation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分离律来自同源染色体上的等位分配
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#independent-assortment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        独立分配把多座位问题拆成概率乘积
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goodness-of-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        子代计数检验的是概率模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allelic-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        等位基因关系决定杂合体怎样被分类
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-interactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        非等位基因互作重排双杂合表型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genotype-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        基因型效应随遗传背景和环境展开
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#human-mendelian-inheritance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        人类孟德尔性状需要家系与变异证据共同解释
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    遗传
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    经典遗传与染色体
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="11" data-block-fingerprint="a75bf83476a62e0650a5" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="_1">孟德尔遗传及其扩展<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="194" data-block-fingerprint="6c4de8b48636d31d5ccc" data-block-start="13" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">孟德尔遗传首先是一套由杂交结果反推遗传单位行为的方法。研究者选择差异清楚的亲本，控制交配方向，逐代记录子代，再用概率模型判断某种遗传解释能否产生所见计数。分离律和独立分配律描述的是等位基因进入配子的方式；显性、共显性、上位效应和外显率描述的则是基因型怎样映射为可观察表型。把这两个层次分开，许多看似“偏离孟德尔比例”的现象仍可由正常分离与另一套表型分类共同解释。</p>
+<p data-block-end="395" data-block-fingerprint="7b9db571ef20005df962" data-block-start="196" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">经典模型把遗传信息视为可分离的颗粒，同时允许基因在物理上继续细分。基因内部可以发生突变和重组，同一基因也可以有许多等位变异；在一次特定杂交中，只要这些变异能够作为座位上的状态被追踪，传递遗传学仍可把它们当作分析单位。现代遗传学因而保留孟德尔的实验逻辑，同时用染色体、DNA 序列和分子通路解释这些单位为何分离、何时不独立，以及为何同一基因型未必产生同一表型。<sup id="fnref:mendel-chromosome"><a class="footnote-ref" href="#fn:mendel-chromosome">1</a></sup></p>
+<h2 data-block-end="438" data-block-fingerprint="c4faac979b20f80814d3" data-block-start="397" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="cross-design">杂交设计把表型差异转化为可检验的遗传模型<a class="headerlink" href="#cross-design" title="Permanent link">&para;</a></h2>
+<p data-block-end="628" data-block-fingerprint="45a74e9ed46854cba914" data-block-start="440" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">性状（character）是所研究的可变属性，表型（phenotype）是个体在给定尺度上的可观察状态。座位（locus）指染色体上的遗传位置，等位基因（allele）是该位置可区别的序列或功能状态，基因型（genotype）则记录个体在一个或多个座位上的等位组合。二倍体在某座位携带两个相同等位基因时为纯合，携带两个不同等位基因时为杂合；这些术语只说明组合，不预先规定表型。</p>
+<p data-block-end="931" data-block-fingerprint="3b2891240f02221cfed0" data-block-start="630" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">一个典型单因子杂交从两个稳定传递相反表型的纯系开始。以 <span class="arithmatex">\(AA\times aa\)</span> 表示亲本代（P），两亲本分别只产生 <span class="arithmatex">\(A\)</span> 或 <span class="arithmatex">\(a\)</span> 配子，第一子代（F<span class="arithmatex">\(_1\)</span>）因此全为 <span class="arithmatex">\(Aa\)</span>。让 F<span class="arithmatex">\(_1\)</span> 自交或彼此杂交得到 F<span class="arithmatex">\(_2\)</span>，再继续检查 F<span class="arithmatex">\(_3\)</span>，可以区分表型相同而基因型不同的个体。正交与反交交换雌雄亲本，用来识别伴性、母体效应或细胞质来源；回交是子代与某一亲本类型交配，测交则特指把待测个体与在目标座位纯合隐性的个体交配，使待测者产生的配子直接显现在子代中。育种中反复接受回交的亲本称轮回亲本，提供待导入等位基因的另一亲本称非轮回亲本或供体亲本；这些名称描述育种设计，不是新的遗传方式。</p>
+<p data-block-end="1022" data-block-fingerprint="5dbb7a536bb755fa0659" data-block-start="933" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">棋盘格可以枚举少数座位的配子组合；遗传模型还要说明每类配子的概率、受精组合的概率，以及哪些基因型被合并成同一表型。这种概率表达也更容易扩展到多座位、复等位基因和不完全外显的情形。</p>
+<h2 data-block-end="1060" data-block-fingerprint="0822e5448a4014bd55e7" data-block-start="1024" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="segregation">分离律来自同源染色体上的等位分配<a class="headerlink" href="#segregation" title="Permanent link">&para;</a></h2>
+<p data-block-end="1282" data-block-fingerprint="253c7e2dd9d51be8d8a3" data-block-start="1062" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">杂合体 <span class="arithmatex">\(Aa\)</span> 形成配子时，两种等位基因通常等概率分开，因此 <span class="arithmatex">\(P(A)=P(a)=1/2\)</span>。两个 <span class="arithmatex">\(Aa\)</span> 个体交配时，合子由两次独立取样形成：<span class="arithmatex">\(AA\)</span> 的概率为 <span class="arithmatex">\(1/4\)</span>，<span class="arithmatex">\(Aa\)</span> 为 <span class="arithmatex">\(1/2\)</span>，<span class="arithmatex">\(aa\)</span> 为 <span class="arithmatex">\(1/4\)</span>。这就是 F<span class="arithmatex">\(_2\)</span> 的 <span class="arithmatex">\(1:2:1\)</span> 基因型比。若 <span class="arithmatex">\(AA\)</span> 与 <span class="arithmatex">\(Aa\)</span> 在所测表型上相同，才进一步合并为 <span class="arithmatex">\(3:1\)</span> 表型比；不完全显性或共显性会保留三个可辨表型，但等位基因仍按 <span class="arithmatex">\(1:2:1\)</span> 分离。</p>
+<p data-block-end="1466" data-block-fingerprint="291321c1f272bb6a8d35" data-block-start="1284" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">在细胞层面，同源染色体于减数第一次分裂分向两极，使同一座位的两个等位基因进入不同的单倍体产物；受精再恢复成对状态。这个解释以规则减数分裂、配子随机结合、各基因型在观察前没有差异性死亡或取样偏倚为前提。染色体不分离、减数分裂驱动、配子竞争、合子致死和分型误差都可能改变实测计数，需要用独立证据区分分离过程与观察偏差。<sup id="fnref:segregation-boundaries"><a class="footnote-ref" href="#fn:segregation-boundaries">2</a></sup></p>
+<p data-block-end="1627" data-block-fingerprint="6322be5215ecdc4bfe96" data-block-start="1468" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">测交把这种分离转成直接读出。若显性表型个体是 <span class="arithmatex">\(AA\)</span>，与 <span class="arithmatex">\(aa\)</span> 交配的子代全为 <span class="arithmatex">\(Aa\)</span>；若它是 <span class="arithmatex">\(Aa\)</span>，子代预期为 <span class="arithmatex">\(Aa:aa=1:1\)</span>。同一设计用于两个座位时还可揭示连锁，重组分数和遗传图距见<a href="../linkage_mapping/">连锁、交换与遗传作图</a>；“测交”描述交配设计，可以服务于多种遗传问题。</p>
+<h2 data-block-end="1676" data-block-fingerprint="eee5234267b9c004c262" data-block-start="1629" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="independent-assortment">独立分配把多座位问题拆成概率乘积<a class="headerlink" href="#independent-assortment" title="Permanent link">&para;</a></h2>
+<p data-block-end="1821" data-block-fingerprint="4385c9c67326a52cd2f8" data-block-start="1678" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">不同同源染色体对在减数第一次分裂中各自定向。若 <span class="arithmatex">\(A/a\)</span> 与 <span class="arithmatex">\(B/b\)</span> 位于不同染色体，<span class="arithmatex">\(AaBb\)</span> 个体产生 <span class="arithmatex">\(AB\)</span>、<span class="arithmatex">\(Ab\)</span>、<span class="arithmatex">\(aB\)</span>、<span class="arithmatex">\(ab\)</span> 四类配子的概率各为 <span class="arithmatex">\(1/4\)</span>。两个双杂合体交配时，每个座位单独仍给出 <span class="arithmatex">\(3/4\)</span> 显性表型与 <span class="arithmatex">\(1/4\)</span> 隐性表型；乘法法则得到</p>
+<div class="arithmatex" data-block-end="1881" data-block-fingerprint="e3fe093ffdc6428607e0" data-block-start="1823" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">\[
+P(A\_B\_)=\frac{3}{4}\times\frac{3}{4}=\frac{9}{16},
+\]</div>
+<p data-block-end="2046" data-block-fingerprint="e3e6fc649ad2705ce455" data-block-start="1883" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">其余三类依次为 <span class="arithmatex">\(3/16\)</span>、<span class="arithmatex">\(3/16\)</span> 和 <span class="arithmatex">\(1/16\)</span>，由此形成 <span class="arithmatex">\(9:3:3:1\)</span>。这里的下划线表示该位置可以是显性纯合或杂合。加法法则用于互斥途径，例如 <span class="arithmatex">\(Aa\)</span> 可以由母方给 <span class="arithmatex">\(A\)</span>、父方给 <span class="arithmatex">\(a\)</span>，也可以反向形成；乘法法则用于需要同时发生的独立事件。对于 <span class="arithmatex">\(n\)</span> 次同类独立试验，某事件恰出现 <span class="arithmatex">\(k\)</span> 次的概率为</p>
+<div class="arithmatex" data-block-end="2088" data-block-fingerprint="c093ad617e13aef09a73" data-block-start="2048" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">\[
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}.
+\]</div>
+<p data-block-end="2211" data-block-fingerprint="3b071ea43b47de6339b1" data-block-start="2090" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">同一条染色体上相距较近的座位通常不会独立分配；交换可使距离较远的同染色体座位在统计上接近独立。因而“非等位基因自由组合”必须附带染色体位置和重组条件，不能写成对所有不同基因都成立的无条件定律。<sup id="fnref:independent-assortment"><a class="footnote-ref" href="#fn:independent-assortment">3</a></sup></p>
+<h2 data-block-end="2249" data-block-fingerprint="9d274055919fe27e28b3" data-block-start="2213" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="goodness-of-fit">子代计数检验的是概率模型<a class="headerlink" href="#goodness-of-fit" title="Permanent link">&para;</a></h2>
+<p data-block-end="2368" data-block-fingerprint="82dff15fbbe6c347b1e5" data-block-start="2251" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">分离比是大量重复下的期望比例，不是每一窝、每一果荚都必须精确复制的整数模板。样本越小，随机波动相对于总数越大；培养条件、表型判定时点和遗漏死亡个体还会引入系统偏差。实验记录因此应保留原始计数、交配单位与重复，而不只把结果约成一个比例。</p>
+<p data-block-end="2408" data-block-fingerprint="c0bd402b2599ecd0fb5e" data-block-start="2370" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">当零假设规定了各类别概率时，可用拟合优度卡方统计量概括观察值与期望值的差距：</p>
+<div class="arithmatex" data-block-end="2461" data-block-fingerprint="eeb64698786ad93962bb" data-block-start="2410" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">\[
+\chi^2=\sum_{i=1}^{k}\frac{(O_i-E_i)^2}{E_i},
+\]</div>
+<p data-block-end="2638" data-block-fingerprint="b7db7ae2e2c2edfc45d2" data-block-start="2463" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">其中 <span class="arithmatex">\(O_i\)</span> 是第 <span class="arithmatex">\(i\)</span> 类观察数，<span class="arithmatex">\(E_i=Np_i\)</span> 是模型给出的期望数。若 <span class="arithmatex">\(k\)</span> 类概率均由理论预先给定且总数固定，自由度通常为 <span class="arithmatex">\(k-1\)</span>；若从同一数据估计了额外参数，还要扣除相应自由度。卡方分布只是离散计数分布的渐近近似，期望数很小或类别极不均衡时，应预先合并有生物学意义的类别，或改用精确二项／多项方法。<sup id="fnref:chi-square"><a class="footnote-ref" href="#fn:chi-square">4</a></sup></p>
+<p data-block-end="2791" data-block-fingerprint="a66b137277415256e6f6" data-block-start="2640" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics"><span class="arithmatex">\(p\)</span> 值表示在零假设及抽样模型成立时，获得当前或更极端偏差的概率。<span class="arithmatex">\(p\)</span> 较小提示数据与该模型不相容；<span class="arithmatex">\(p\)</span> 不小只表示现有样本没有检出足够大的偏离，并不证明遗传定律为真，也不排除低外显、轻度选择或连锁等效应。检验前还须明确表型类别、显著性阈值和备择机制，避免在观察结果后反复改分组直到“符合比例”。</p>
+<h2 data-block-end="2839" data-block-fingerprint="6ffa04c9d19d12639764" data-block-start="2793" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="allelic-relationships">等位基因关系决定杂合体怎样被分类<a class="headerlink" href="#allelic-relationships" title="Permanent link">&para;</a></h2>
+<p data-block-end="3037" data-block-fingerprint="87d994f437b654d98328" data-block-start="2841" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">显性描述的是同一座位两个等位基因在某个表型层级上的关系。一个等位基因在外观上显性，不表示它更常见、更有适合度，也不表示其产物必然抑制另一产物。许多功能缺失变异呈隐性，是因为一份正常拷贝提供的产物已超过该表型所需阈值；单倍剂量不足、显性负效应、功能获得或异位表达则可使变异在杂合体中显现。换用分子读出时，原先“完全显性”的两个基因型也可能可以区分。<sup id="fnref:dominance-mechanisms"><a class="footnote-ref" href="#fn:dominance-mechanisms">5</a></sup></p>
+<p data-block-end="3244" data-block-fingerprint="10f6e8c2e6844a08ccfb" data-block-start="3039" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">完全显性时，杂合体与一种纯合体在所测表型上归为同类；不完全显性时，杂合体处在两个纯合表型之间；共显性时，两种等位产物或抗原可同时被检出。MNS 血型中，<em>GYPA</em> 的 M 与 N 等位基因在杂合红细胞上共同表达相应糖蛋白抗原，是共显性的直接例子。所谓“镶嵌显性”不宜作为与共显性并列的普遍等位关系：个体不同区域表达不同状态，还可能来自细胞谱系、体细胞变异、随机单等位表达或染色体失活，必须另寻细胞层面的证据。</p>
+<p data-block-end="3323" data-block-fingerprint="46a052e898d75c0ccbb6" data-block-start="3246" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">一个二倍体个体在一个座位最多携带两个等位基因，但群体中可存在复等位系列。若某座位有 <span class="arithmatex">\(n\)</span> 个等位基因且所有二等位组合均可存活，纯合与无序杂合基因型合计为</p>
+<div class="arithmatex" data-block-end="3367" data-block-fingerprint="af6d637f09327fc826a9" data-block-start="3325" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">\[
+n+\frac{n(n-1)}{2}=\frac{n(n+1)}{2}.
+\]</div>
+<p data-block-end="3744" data-block-fingerprint="b885e59c6f25e8e238e2" data-block-start="3369" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">ABO 座位的常见 <span class="arithmatex">\(I^A\)</span>、<span class="arithmatex">\(I^B\)</span> 和 <span class="arithmatex">\(i\)</span> 说明复等位与共显性可以同时出现：<span class="arithmatex">\(I^AI^B\)</span> 红细胞可形成 A、B 两类抗原，而常见 <span class="arithmatex">\(i\)</span> 等位基因不产生有活性的相应糖基转移酶。这个三等位模型还依赖另一座位提供底物。<em>FUT1</em> 两份均失活时，红细胞不能正常形成 H 前体，即使携带 <span class="arithmatex">\(I^A\)</span> 或 <span class="arithmatex">\(I^B\)</span> 也不能内源合成 A、B 抗原；<em>FUT2</em> 状态、残余酶活和分泌物来源抗原又会影响经典孟买型与类孟买型的血清学表现。这是上游通路缺陷掩盖下游 ABO 基因型的隐性上位。凝集素只是可用于识别特定糖链的试剂类别，不能一概等同于“抗 H 抗体”。血清学和输血后果见<a href="../../physiology/blood/blood_types/#bombay-phenotype">血型与输血</a>。<sup id="fnref:blood-group-alleles"><a class="footnote-ref" href="#fn:blood-group-alleles">6</a></sup></p>
+<p data-block-end="4030" data-block-fingerprint="48a9f942e2210cf38675" data-block-start="3746" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">致死等位基因改变的是观察前的存活概率。若某等位基因在杂合体产生可见表型、在纯合体胚胎期致死，两个杂合亲本受精时仍形成 <span class="arithmatex">\(1:2:1\)</span> 合子基因型，存活子代中却只剩 <span class="arithmatex">\(1:2\)</span>。因此“<span class="arithmatex">\(2:1\)</span>”不是新的配子分离律，而是分离以后一类合子被移除的结果。显性致死变异若在生殖前总能致死，通常难以经患病亲本持续传递；迟发、低外显或新生变异可改变这一结论。遗传性视网膜母细胞瘤也不应列作简单“显性致死”：<em>RB1</em> 胚系易感按常染色体显性模式传递，肿瘤细胞常需另一份 <em>RB1</em> 再受损，家系层级与细胞层级是两个不同问题。<sup id="fnref:lethal-and-retinoblastoma"><a class="footnote-ref" href="#fn:lethal-and-retinoblastoma">7</a></sup></p>
+<h2 data-block-end="4072" data-block-fingerprint="49b7ebde5bfdeac1ebaa" data-block-start="4032" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="gene-interactions">非等位基因互作重排双杂合表型<a class="headerlink" href="#gene-interactions" title="Permanent link">&para;</a></h2>
+<p data-block-end="4255" data-block-fingerprint="ab04b6da0c8872c1b5f9" data-block-start="4074" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">在两个独立分配的座位中，<span class="arithmatex">\(AaBb\times AaBb\)</span> 仍产生四个基础基因型组：<span class="arithmatex">\(A\_B\_\)</span>、<span class="arithmatex">\(A\_bb\)</span>、<span class="arithmatex">\(aaB\_\)</span>、<span class="arithmatex">\(aabb\)</span>，概率分别为 <span class="arithmatex">\(9/16\)</span>、<span class="arithmatex">\(3/16\)</span>、<span class="arithmatex">\(3/16\)</span>、<span class="arithmatex">\(1/16\)</span>。若两个基因的产物参与同一合成链、并行支路或抑制回路，这四组可被合并成较少的表型。经典比例只是这种“基因型组如何合并”的速记，而不是脱离机制的定律。</p>
+<table data-block-end="4726" data-block-fingerprint="6aaded4f9ea6e138d4c4" data-block-start="4257" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">
+<thead>
+<tr>
+<th>常见 F<span class="arithmatex">\(_2\)</span> 表型比</th>
+<th>基因型组的合并方式</th>
+<th>一种可能的通路解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(9:3:3:1\)</span></td>
+<td>四组各自可辨</td>
+<td>两座位分别改变可区分的表型维度</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(9:7\)</span></td>
+<td><span class="arithmatex">\(A\_B\_\)</span>；其余三组</td>
+<td>两步都需要功能产物，任一步中断都到达同一终点</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(9:3:4\)</span></td>
+<td><span class="arithmatex">\(A\_B\_\)</span>；<span class="arithmatex">\(A\_bb\)</span>；<span class="arithmatex">\(aaB\_+aabb\)</span></td>
+<td><span class="arithmatex">\(aa\)</span> 阻断上游步骤，掩盖 <span class="arithmatex">\(B/b\)</span> 的差别</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(9:6:1\)</span></td>
+<td><span class="arithmatex">\(A\_B\_\)</span>；<span class="arithmatex">\(A\_bb+aaB\_\)</span>；<span class="arithmatex">\(aabb\)</span></td>
+<td>两种产物共同存在、单独存在和都缺失形成三级输出</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(12:3:1\)</span></td>
+<td><span class="arithmatex">\(A\_B\_+A\_bb\)</span>；<span class="arithmatex">\(aaB\_\)</span>；<span class="arithmatex">\(aabb\)</span></td>
+<td>显性 <span class="arithmatex">\(A\)</span> 状态掩盖另一座位</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(13:3\)</span></td>
+<td><span class="arithmatex">\(A\_B\_+A\_bb+aabb\)</span>；<span class="arithmatex">\(aaB\_\)</span></td>
+<td>显性抑制状态与双缺失归入同一类</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(15:1\)</span></td>
+<td>除 <span class="arithmatex">\(aabb\)</span> 外全部；<span class="arithmatex">\(aabb\)</span></td>
+<td>任一座位有功能拷贝便足以形成同一输出</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="4907" data-block-fingerprint="abe477b587c742bc1b98" data-block-start="4728" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">“互补基因”“隐性上位”“抑制基因”“积加效应”等名称在教材间并不完全统一，真实实验也可能因不完全外显、连锁和生活力差异偏离整数比。分析时应先写出四个基础基因型组，再依据代谢物、酶活、表达或双突变表型判断合并原因。上位效应并不意味着参与互作的等位基因停止按孟德尔方式分离；它表示一个座位改变了另一座位对所测表型的可见效应。<sup id="fnref:epistasis-logic"><a class="footnote-ref" href="#fn:epistasis-logic">8</a></sup></p>
+<h2 data-block-end="4953" data-block-fingerprint="46eb195c8a6b31a347f1" data-block-start="4909" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="genotype-environment">基因型效应随遗传背景和环境展开<a class="headerlink" href="#genotype-environment" title="Permanent link">&para;</a></h2>
+<p data-block-end="5154" data-block-fingerprint="2beb80e6be19a7b347c9" data-block-start="4955" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">外显率是在规定人群、年龄、环境和判定标准下，具有某一基因型的个体中出现指定表型的比例；表现度描述已经出现该表型的个体之间，表型程度或组成怎样变化。前者回答“是否达到观察阈值”，后者回答“表现到什么程度”。两者都针对明确的基因型—表型关系，不是某个基因永久不变的常数。年龄、性别相关生理、等位变异本身、修饰座位、环境暴露和随机发育过程都可改变它们。<sup id="fnref:penetrance-expressivity"><a class="footnote-ref" href="#fn:penetrance-expressivity">9</a></sup></p>
+<p data-block-end="5369" data-block-fingerprint="1a4ea1ff8d20c2bf67c1" data-block-start="5156" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">反应规范描述同一基因型在一系列环境中的表型函数，而非一个固定数值。不同基因型的反应规范若不平行，便存在基因型—环境互作。环境诱导出与已知遗传变异相似的表型称为拟表型或表型模写（phenocopy），它不因此成为可遗传的 DNA 变异。遗传同化则是跨世代选择使原先依赖环境诱导的表型逐渐在无诱导环境下也出现的群体演化过程，不能解释成单个个体把获得性表型“改写进”基因组。<sup id="fnref:reaction-norm-assimilation"><a class="footnote-ref" href="#fn:reaction-norm-assimilation">10</a></sup></p>
+<p data-block-end="5499" data-block-fingerprint="47f547ab66ee21f68d55" data-block-start="5371" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">多效性指同一基因的变异影响多个表型维度；遗传异质性指相似表型可由不同座位或同一座位的不同变异造成。修饰基因、通路上位和环境作用还会进一步改变结果。因此，“单基因性状”表示某个座位在特定家系或实验中具有可追踪的主要因果作用，不表示其他基因和环境完全没有作用。</p>
+<h2 data-block-end="5557" data-block-fingerprint="88b74cd39b4785eb423f" data-block-start="5501" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="human-mendelian-inheritance">人类孟德尔性状需要家系与变异证据共同解释<a class="headerlink" href="#human-mendelian-inheritance" title="Permanent link">&para;</a></h2>
+<p data-block-end="5794" data-block-fingerprint="f5cfab9bbac862fb9dec" data-block-start="5559" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">在常染色体显性模式中，一份相关等位变异即可显著提高指定表型出现的概率，杂合亲本每次生育向子代传递该变异的概率通常为 <span class="arithmatex">\(1/2\)</span>；在常染色体隐性模式中，指定表型通常需要两份相关变异，两个杂合携带者的子代在模型条件下有 <span class="arithmatex">\(1/4\)</span> 概率获得双等位基因型。这些数字是每次受精的条件概率，不保证四名子女恰好各占一类，也不能由家庭规模很小的表型计数直接确认致病变异。伴 X、伴 Y 和性别决定的家系特征见<a href="../sex_cytoplasmic/">性别决定、伴性遗传与细胞质遗传</a>。</p>
+<p data-block-end="6180" data-block-fingerprint="3732ce87746a5dbacfeb" data-block-start="5796" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">人类家系还会受到新生变异、生殖系或体细胞嵌合、年龄相关外显、误诊、收养关系和小家系的影响。相似疾病可有遗传异质性，同一变异也可呈多效性和可变表现度。HbS、地中海贫血、G6PD 缺乏和凝血因子缺陷分别展示了蛋白聚合、亚基供给、氧化防线和止血通路的分子后果，说明“等位传递”与“表型形成”需要分层分析；相应机制见<a href="../../biochem/protein_function/#hbs-polymerization">蛋白质功能</a>、<a href="../../biochem/ppp/#g6pd-deficiency">磷酸戊糖途径</a>和<a href="../../physiology/blood/blood_hemostasis/">生理性止血</a>。家系判读、变异证据、遗传检测和伦理边界见<a href="../developmental_human/">人类遗传学</a>。<sup id="fnref:human-genetic-evidence"><a class="footnote-ref" href="#fn:human-genetic-evidence">11</a></sup></p>
+<h2 data-block-end="6210" data-block-fingerprint="0f4e06b460b5ff5ddecb" data-block-start="6182" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul data-block-end="10012" data-block-fingerprint="b6058ce7a4752da9a2a2" data-block-start="6212" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-genetics-mendelian-genetics">
+<li>Cooper GM. <a href="https://www.ncbi.nlm.nih.gov/books/NBK9944/">Heredity, Genes, and DNA</a>. In: <em>The Cell: A Molecular Approach</em>. 2nd ed. Sinauer Associates; 2000.</li>
+<li>Strome S, Bhalla N, Kamakaka R, Sharma U, Sullivan W. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11228857/">Clarifying Mendelian vs non-Mendelian inheritance</a>. <em>Genetics</em>. 2024;227:iyae078.</li>
+<li>NIST/SEMATECH. <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm">Chi-Square Goodness-of-Fit Test</a>. <em>e-Handbook of Statistical Methods</em>.</li>
+<li>Wilkie AOM. <a href="https://pubmed.ncbi.nlm.nih.gov/8182727/">The molecular basis of genetic dominance</a>. <em>Journal of Medical Genetics</em>. 1994;31:89–98.</li>
+<li>Dean L. <a href="https://www.ncbi.nlm.nih.gov/books/NBK2267/">The ABO blood group</a>, <a href="https://www.ncbi.nlm.nih.gov/books/NBK2268/">The Hh blood group</a> and <a href="https://www.ncbi.nlm.nih.gov/books/NBK2274/">The MNS blood group</a>. In: <em>Blood Groups and Red Cell Antigens</em>. NCBI; 2005.</li>
+<li>National Academies of Sciences, Engineering, and Medicine. <a href="https://www.ncbi.nlm.nih.gov/books/NBK425808/">An Evidence Framework for Genetic Testing</a>. National Academies Press; 2017.</li>
+<li>Ehrenreich IM, Pfennig DW. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4845796/">Genetic assimilation: a review of its potential proximate causes and evolutionary consequences</a>. <em>Annals of Botany</em>. 2016;117:769–779.</li>
+<li>Lohmann DR, Gallie BL. <a href="https://www.ncbi.nlm.nih.gov/books/NBK1452/">Retinoblastoma</a>. <em>GeneReviews®</em>. Updated 2023.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:mendel-chromosome">
+<p>孟德尔杂交、基因型／表型、减数分裂与染色体分离之间的关系见 Cooper 的教材章节 <a href="https://www.ncbi.nlm.nih.gov/books/NBK9944/">Heredity, Genes, and DNA</a>；基因可在分子层面继续分解，不改变等位状态可作为杂交分析单位。&#160;<a class="footnote-backref" href="#fnref:mendel-chromosome" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:segregation-boundaries">
+<p>分离与染色体行为的经典框架见 <a href="https://www.ncbi.nlm.nih.gov/books/NBK9944/">Heredity, Genes, and DNA</a>；Strome 等的 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11228857/">Clarifying Mendelian vs non-Mendelian inheritance</a>进一步区分等位分离、表型映射和真正的非孟德尔传递。&#160;<a class="footnote-backref" href="#fnref:segregation-boundaries" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:independent-assortment">
+<p>不同染色体上的基因独立分配、同染色体基因的连锁及重组距离效应见 <a href="https://www.ncbi.nlm.nih.gov/books/NBK9944/">Heredity, Genes, and DNA</a>；概率乘法只适用于相应事件独立的模型。&#160;<a class="footnote-backref" href="#fnref:independent-assortment" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:chi-square">
+<p>统计量、期望频数和自由度的通用定义见 NIST/SEMATECH <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm">Chi-Square Goodness-of-Fit Test</a>。卡方是渐近检验，低期望计数不能机械套表。&#160;<a class="footnote-backref" href="#fnref:chi-square" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:dominance-mechanisms">
+<p>NHGRI 将显性界定为观察性状与一对等位基因之间的关系，见 <a href="https://www.genome.gov/genetics-glossary/Dominant-Traits-and-Alleles">Dominant Traits and Alleles</a>；单倍剂量不足、显性负效应、功能获得等分子来源见 Wilkie 的<a href="https://pubmed.ncbi.nlm.nih.gov/8182727/">综述</a>。&#160;<a class="footnote-backref" href="#fnref:dominance-mechanisms" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:blood-group-alleles">
+<p>ABO 糖基转移酶、<em>FUT1</em>—H 前体和孟买表型见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK2267/">The ABO blood group</a>与 <a href="https://www.ncbi.nlm.nih.gov/books/NBK2268/">The Hh blood group</a>；M／N 共显性及 <em>GYPA</em> 分子基础见 <a href="https://www.ncbi.nlm.nih.gov/books/NBK2274/">The MNS blood group</a>。&#160;<a class="footnote-backref" href="#fnref:blood-group-alleles" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lethal-and-retinoblastoma">
+<p>致死等位改变存活子代比例而不改变受精时的分离概率。视网膜母细胞瘤的胚系显性易感、体细胞第二次事件、外显率与嵌合边界见 GeneReviews <a href="https://www.ncbi.nlm.nih.gov/books/NBK1452/">Retinoblastoma</a>。&#160;<a class="footnote-backref" href="#fnref:lethal-and-retinoblastoma" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:epistasis-logic">
+<p>双杂合基础分离与表型组重排的区别见 Strome 等的 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11228857/">Clarifying Mendelian vs non-Mendelian inheritance</a>；经典比例只是特定完全外显、独立分配模型下的分组结果。&#160;<a class="footnote-backref" href="#fnref:epistasis-logic" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:penetrance-expressivity">
+<p>外显率、表现度、修饰背景与因果推断局限见 National Academies <a href="https://www.ncbi.nlm.nih.gov/books/NBK425809/">Evidence</a>及 <a href="https://www.ncbi.nlm.nih.gov/books/NBK425811/">Understanding Genetic Variance and Phenotype Expression</a>。&#160;<a class="footnote-backref" href="#fnref:penetrance-expressivity" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:reaction-norm-assimilation">
+<p>基因型—环境互作和反应规范的概念见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK225676/">Human Genetics and the Human Genome Project</a>；遗传同化是跨世代选择过程，见 Ehrenreich 与 Pfennig 的<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4845796/">综述</a>。&#160;<a class="footnote-backref" href="#fnref:reaction-norm-assimilation" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:human-genetic-evidence">
+<p>单基因病的遗传模式、遗传背景与环境作用概览见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK132152/">Genetics 101</a>；外显率不足和表现度变化为何限制从变异直接预测个体表型，见 National Academies <a href="https://www.ncbi.nlm.nih.gov/books/NBK425808/">An Evidence Framework for Genetic Testing</a>。&#160;<a class="footnote-backref" href="#fnref:human-genetic-evidence" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/genetics/mendelian_genetics.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/genetics/mendelian_genetics.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-genetics-mendelian-genetics"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: 遗传学">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                遗传学
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../linkage_mapping/" class="md-footer__link md-footer__link--next" aria-label="Next: 连锁、交换与遗传作图">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                连锁、交换与遗传作图
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

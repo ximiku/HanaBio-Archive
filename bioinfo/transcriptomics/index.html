@@ -1,0 +1,3666 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/bioinfo/transcriptomics/">
+      
+      
+        <link rel="prev" href="../epigenome_3d/">
+      
+      
+        <link rel="next" href="../single_cell_spatial_transcriptomics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>转录组测量与 RNA-seq 分析 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rna-seq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              转录组测量与 RNA-seq 分析
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生信
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_15" id="__nav_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  生信
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data_databases/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据、计算与工作流
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../sequencing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  测序与序列
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../genome_analysis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  基因组
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_15_5" id="__nav_15_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子组学
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  分子组学
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  转录组测量与 RNA-seq 分析
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  转录组测量与 RNA-seq 分析
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expression-object-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        表达测量的对象与实验设计
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historical-expression-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        qPCR、芯片、EST 与 SAGE 的表达测量
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="qPCR、芯片、EST 与 SAGE 的表达测量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qpcr-quantification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        qPCR 的扩增曲线与相对定量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microarray-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        微阵列的探针、杂交与归一化
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#est-sage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EST 与 SAGE 的表达抽样
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-rnaseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        bulk RNA-seq 的文库与计数矩阵
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bulk RNA-seq 的文库与计数矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-rnaseq-qc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        原始读段与文库质量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alignment-quantification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        剪接感知比对与转录本定量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalization-differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        归一化、设计矩阵与差异表达
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoforms-splicing-fusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        转录本结构、剪接、融合与非编码 RNA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="转录本结构、剪接、融合与非编码 RNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-splicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可变剪接与转录本使用
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-transcripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        融合转录本与异常连接
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noncoding-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        非编码 RNA 的文库依赖
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-protein-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RNA—蛋白结合图谱
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-spatial-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        群体平均与细胞、空间解析的接口
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可复现分析与报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../single_cell_spatial_transcriptomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  单细胞与空间转录组学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proteomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  蛋白质组与质谱数据分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiomics_metabolomics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  代谢组学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multiomics_integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  多组学整合
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structural_bioinformatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  结构生物信息学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functional_annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  功能注释、富集与功能预测
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phylogenetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子进化与系统发育分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phylogenetics_networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物网络与系统生物学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expression-object-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        表达测量的对象与实验设计
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historical-expression-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        qPCR、芯片、EST 与 SAGE 的表达测量
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="qPCR、芯片、EST 与 SAGE 的表达测量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qpcr-quantification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        qPCR 的扩增曲线与相对定量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microarray-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        微阵列的探针、杂交与归一化
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#est-sage" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        EST 与 SAGE 的表达抽样
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-rnaseq" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        bulk RNA-seq 的文库与计数矩阵
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="bulk RNA-seq 的文库与计数矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bulk-rnaseq-qc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        原始读段与文库质量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alignment-quantification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        剪接感知比对与转录本定量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalization-differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        归一化、设计矩阵与差异表达
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isoforms-splicing-fusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        转录本结构、剪接、融合与非编码 RNA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="转录本结构、剪接、融合与非编码 RNA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alternative-splicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可变剪接与转录本使用
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fusion-transcripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        融合转录本与异常连接
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noncoding-rna" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        非编码 RNA 的文库依赖
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rna-protein-binding" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        RNA—蛋白结合图谱
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-spatial-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        群体平均与细胞、空间解析的接口
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可复现分析与报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    生信
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    分子组学
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="19" data-block-fingerprint="43bcd5e2d46fce0ebdeb" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="rna-seq">转录组测量与 RNA-seq 分析<a class="headerlink" href="#rna-seq" title="Permanent link">&para;</a></h1>
+<p data-block-end="339" data-block-fingerprint="fe0bca0323322c63f467" data-block-start="21" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">转录组是一个细胞、组织或生物体在特定条件下产生的核糖核酸（ribonucleic acid，RNA）分子集合。这个集合随细胞类型、发育阶段、环境刺激和时间迅速变化，还受到 RNA 合成、加工与降解共同控制。实验把其中一部分 RNA 转换为荧光、标签序列、测序片段或原位坐标，分析再从这些读出推断基因、转录本和细胞状态。“某基因表达量”的具体含义取决于观测方法：实时荧光定量聚合酶链式反应（quantitative real-time polymerase chain reaction，qPCR）的扩增循环、芯片的杂交强度、RNA 测序（RNA sequencing，RNA-seq）的片段计数和原位成像的分子点分别对应不同的观测模型。</p>
+<p data-block-end="663" data-block-fingerprint="a1f86d10138ac29efb2d" data-block-start="341" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">表达序列标签（expressed sequence tag，EST）和基因表达系列分析（serial analysis of gene expression，SAGE）建立了从互补 DNA（complementary DNA，cDNA）抽样认识表达产物的路径，微阵列把已知探针并行化，RNA-seq 又扩展了动态范围与转录本结构观察。这些方法留下的数据今天仍广泛存在，经典方法所揭示的取样、杂交和计数问题也继续约束现代分析。以下沿着从群体样本到表达矩阵的测量脉络展开，并区分实验读出、统计结果与机制结论；以细胞或组织坐标为分析单位的方法见<a href="../single_cell_spatial_transcriptomics/">单细胞与空间转录组学</a>。</p>
+<h2 data-block-end="710" data-block-fingerprint="8b931167de35b99498eb" data-block-start="665" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="expression-object-design">表达测量的对象与实验设计<a class="headerlink" href="#expression-object-design" title="Permanent link">&para;</a></h2>
+<p data-block-end="1068" data-block-fingerprint="6f11069b0cb127274e0d" data-block-start="712" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">广义转录组包括蛋白质编码 RNA、长链非编码 RNA、核糖体 RNA（ribosomal RNA，rRNA）、转运 RNA（transfer RNA，tRNA）、小 RNA、未完成加工的前体和降解中间体；许多常规文库主要富集带多聚腺苷酸尾（polyadenylate tail，poly(A) tail）的真核 RNA，或先去除 rRNA 后测量其余 RNA。3′ 端标签文库主要回答每个基因捕获到多少分子，全长或长读长文库更适合连接远距离外显子、转录起止位点和 poly(A) 位点。小 RNA、环状 RNA、新生 RNA、核糖体保护片段和 RNA—蛋白结合片段还需要各自的选择或富集步骤。分析开始前必须明确分母里有哪些 RNA，以及一个特征（feature）究竟是基因、转录本、外显子、剪接连接、峰还是细胞。</p>
+<p data-block-end="1478" data-block-fingerprint="7d32801efef32f0176ff" data-block-start="1070" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">稳态 RNA 丰度是合成与清除的合成结果。一个信使 RNA（messenger RNA，mRNA）增多，可能来自转录起始增强、延伸更充分、剪接或 3′ 端加工改变，也可能来自降解减慢。常规 RNA-seq 测量这些过程共同形成的稳态丰度；代谢标记、全局活跃转录测序（global run-on sequencing，GRO-seq）／精确活跃转录测序（precision run-on sequencing，PRO-seq）等新生 RNA 测量、转录抑制后的衰减曲线和 RNA 半衰期实验提供过程层面的互补信息。蛋白质产量还取决于翻译效率、蛋白降解和亚细胞定位。相应的分子机制见<a href="../../molecular/transcription/">转录</a>、<a href="../../molecular/rna_processing/">RNA 加工</a>和<a href="../../molecular/gene_regulation/">基因表达调控</a>。</p>
+<p data-block-end="1713" data-block-fingerprint="efc2c90d9dac1004ed57" data-block-start="1480" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">样本设计决定了统计分析能回答什么问题。独立个体、独立培养物或独立组织制备是估计生物变异的实验单位；同一 RNA 被分到多个孔、多个测序泳道（lane）或多次测序形成的是技术重复。技术重复可评估测量稳定性，合并后仍只有一个生物学样本。处理与批次完全重合时，例如全部对照先建库、全部处理后建库，设计矩阵无法把处理效应与批次效应分开。随机化、平衡建库、配对设计和预先记录性别、年龄、组织区域、细胞组成、处理时间与操作者，比分析末端再选择一个“去批次”算法更能保护可辨识性。</p>
+<p data-block-end="1885" data-block-fingerprint="bb6483ce736c2abf7f7f" data-block-start="1715" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">组织表达差异还可能来自细胞组成变化。炎症组织中免疫细胞比例上升，可以使免疫标志基因在群体 RNA 测序（bulk RNA-seq）中整体升高，即使每种细胞内部的转录程序保持稳定。流式分选、显微切割、单细胞／单核测量、空间定位或基于参考表达谱的去卷积，可以把组成与细胞内状态进一步拆开；校正后矩阵的解释仍受细胞选择偏倚、参考谱和模型条件限制。</p>
+<h2 data-block-end="1951" data-block-fingerprint="529622a06c32136ce19f" data-block-start="1887" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="historical-expression-profiling">qPCR、芯片、EST 与 SAGE 的表达测量<a class="headerlink" href="#historical-expression-profiling" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="1997" data-block-fingerprint="6dff211a7876f51e1b8a" data-block-start="1953" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="qpcr-quantification">qPCR 的扩增曲线与相对定量<a class="headerlink" href="#qpcr-quantification" title="Permanent link">&para;</a></h3>
+<p data-block-end="2405" data-block-fingerprint="b2d16f613bc196bde198" data-block-start="1999" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">qPCR 在每个扩增循环读取荧光。双链脱氧核糖核酸（deoxyribonucleic acid，DNA）结合染料报告体系简单，却也会读取引物二聚体和其他双链产物；序列特异探针通过报告基团与淬灭基团的分离增加识别层次，但探针效率、降解和错配仍影响信号。逆转录 qPCR（reverse-transcription qPCR，RT-qPCR）还包含 RNA 质量、逆转录效率和基因组 DNA 污染等上游变异。扩增曲线呈典型 S 形、熔解曲线出现单一主峰可以发现明显异常；扩增产物身份和定量偏倚还需无模板对照、无逆转录对照、产物长度或测序确认及标准曲线共同评价。定量实时 PCR 实验最低信息（Minimum Information for Publication of Quantitative Real-Time PCR Experiments，MIQE）指南为这些实验与报告环节建立了最低信息框架。<sup id="fnref:miqe"><a class="footnote-ref" href="#fn:miqe">1</a></sup></p>
+<p data-block-end="2538" data-block-fingerprint="e611b413f4224de14564" data-block-start="2407" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">荧光越早越过统一阈值，起始模板通常越多。定量循环（quantification cycle，Cq）也常记作阈值循环（threshold cycle，Ct）。若起始分子数为 <span class="arithmatex">\(N_0\)</span>，每循环扩增效率为 <span class="arithmatex">\(E\)</span>，第 <span class="arithmatex">\(C_q\)</span> 个循环达到阈值产物量 <span class="arithmatex">\(N_q\)</span>，则</p>
+<div class="arithmatex" data-block-end="2565" data-block-fingerprint="8a0f11b1cb9da00a57b7" data-block-start="2540" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">\[
+N_q=N_0(1+E)^{C_q}.
+\]</div>
+<p data-block-end="2684" data-block-fingerprint="5be5695d266de263aeb4" data-block-start="2567" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">标准曲线用已知浓度梯度检验线性范围并估计效率，可用于绝对定量；其数值取决于标准品纯度、拷贝数定义和逆转录校准。相对定量先以参考基因校正样本输入和部分过程变异，再以一个校准样本定义倍数。目标与参考扩增效率相近且接近 100% 时，可计算</p>
+<div class="arithmatex" data-block-end="2754" data-block-fingerprint="90ecafdd96cc3f6e9ce8" data-block-start="2686" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">\[
+\Delta C_q=C_{q,\mathrm{target}}-C_{q,\mathrm{reference}},
+\]</div>
+<div class="arithmatex" data-block-end="2837" data-block-fingerprint="391235afe905e28e3718" data-block-start="2755" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">\[
+\Delta\Delta C_q=\Delta C_{q,\mathrm{sample}}-\Delta C_{q,\mathrm{calibrator}},
+\]</div>
+<p data-block-end="2956" data-block-fingerprint="b5bb10e379d22caf99ef" data-block-start="2839" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">并以 <span class="arithmatex">\(2^{-\Delta\Delta C_q}\)</span> 表示相对量。扩增效率不相等时，应使用各自效率的模型。参考基因也需在当前组织、处理和输入范围内验证稳定性；管家基因的表达可能随条件改变，多个经验证的参考通常比未经检验的单基因更稳健。</p>
+<p data-block-end="3092" data-block-fingerprint="072e17e3c56e2fdbd85a" data-block-start="2958" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">qPCR 擅长对少量预设靶标做高灵敏验证和时间序列测量，也常用于确认测序结果。其重复孔首先描述移液和扩增技术变异，条件差异的推断仍以生物学重复为单位。报告应同时保留引物／探针序列、扩增子位置、效率、Cq 判定方法、排除规则、参考基因、阴性对照、原始 Cq 和倍数结果。</p>
+<h3 data-block-end="3136" data-block-fingerprint="f0f84e73b0f559efa677" data-block-start="3094" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="microarray-analysis">微阵列的探针、杂交与归一化<a class="headerlink" href="#microarray-analysis" title="Permanent link">&para;</a></h3>
+<p data-block-end="3353" data-block-fingerprint="3d5daf1b74ef10b30f66" data-block-start="3138" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">表达微阵列把成千上万条已知 DNA 探针固定在固相载体上，再以荧光标记的样本核酸与其杂交。双通道阵列把两个样本以不同染料放在同一玻片上，信号天然形成样本比值，但染料效率和扫描通道可造成系统偏差，因此常需染料互换（dye swap）或平衡设计；单通道阵列每张芯片测一个样本，便于在多张芯片间比较，却更依赖批次一致性和跨阵列归一化。一个基因可由一个长 cDNA 点位或多个寡核苷酸探针代表，探针序列与目标转录本版本共同决定测到的对象。</p>
+<p data-block-end="3666" data-block-fingerprint="07f982a5d800cbcb9983" data-block-start="3355" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">扫描图像先经过网格定位、背景评估和异常点标记，再形成探针—阵列强度矩阵。双通道数据常在阵列内校正强度依赖的染料偏差，并在阵列间对齐分布；Affymetrix 等单通道寡核苷酸阵列可用稳健多阵列平均（robust multi-array average，RMA）联合完成背景处理、分位数归一化（quantile normalization）和探针集汇总（probe-set summarization）。<sup id="fnref:rma"><a class="footnote-ref" href="#fn:rma">2</a></sup> 这些步骤依赖“大部分特征的总体分布可比较”等假设。若处理造成全局 RNA 产量改变或大量转录本同向变化，内部归一化会重新定义相对基线，外源参照（spike-in）或每细胞总 RNA 测量可帮助识别这种情形。</p>
+<p data-block-end="3863" data-block-fingerprint="342ee642b683871644fe" data-block-start="3668" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">探针饱和限制高丰度动态范围，低强度信号接近背景；交叉杂交会把同源基因、重复序列或相近异构体混合。早期芯片的探针注释（probe annotation）可能仍指向退役基因编号或已经变更的转录本，重分析时要把探针序列重新映射到明确版本的参考注释。差异分析应使用包含处理、配对和批次的设计矩阵，并在探针或基因层面进行多重检验校正。聚类热图适合呈现模式，效应量、样本间变异和正式检验则支撑统计判断。</p>
+<p data-block-end="3997" data-block-fingerprint="44a5d46cc5dbb1eb3300" data-block-start="3865" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">微阵列系统读取设计时已经放置的探针，并在长期队列、疾病分型和标准化平台中积累了大量可复用数据。RNA-seq 提供了更宽的转录本发现空间，芯片历史样本仍可用于复现、荟萃分析和与后续测序队列交叉验证，前提是保留原始强度文件、平台与探针版本，重新注释并控制研究间批次。</p>
+<h3 data-block-end="4033" data-block-fingerprint="d2de3bba4e2298a7f9cc" data-block-start="3999" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="est-sage">EST 与 SAGE 的表达抽样<a class="headerlink" href="#est-sage" title="Permanent link">&para;</a></h3>
+<p data-block-end="4287" data-block-fingerprint="b27dd8c9d2ecb384eb09" data-block-start="4035" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">EST 来自 cDNA 克隆的一次单向测序，常读取插入片段的 5′ 或 3′ 端。大量 EST 可聚类和拼接为较长的一致序列，帮助发现基因、定位外显子、识别 poly(A) 位点并为早期基因组注释提供转录证据。预处理要去除载体、接头、低质量、低复杂度和 poly(A) 序列，识别嵌合克隆，再谨慎处理同一家族和剪接异构体的重叠。一个 EST 簇既可能混合相近旁系同源基因，也可能把同一基因的可变剪接拆开；历史上的 UniGene 等聚类结果适合追溯，当前参考转录本集合则提供经过更新的转录本边界和标识符。</p>
+<p data-block-end="4479" data-block-fingerprint="86cf9df1d89b8dfed459" data-block-start="4289" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">EST 数量在一定条件下反映文库中转录本的抽样频率，但克隆、归一化、组织混合与测序方向会改变这个频率。dbEST 作为 GenBank 的组成部分保存了大量历史记录，对早期研究的物种、组织和基因发现过程仍有价值。对于参考不足的物种，长读长转录组和经过质量控制的从头组装（de novo assembly）延续了“从表达产物建立转录本”的思路，读长、错误模型和定量方式则发生了变化。</p>
+<p data-block-end="4722" data-block-fingerprint="c8c1fc664565c35051ee" data-block-start="4481" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">SAGE 在每个转录本的特定位置切取短标签（tag），把多个标签串联后测序，再以标签出现次数估计表达丰度。它把表达分析从连续荧光强度推进为离散计数，并能在没有逐基因探针的情况下并行采样。经典 9–14 个核苷酸的标签可能对应多个基因组位置，也会受限制酶位点、转录本注释和测序错误影响；LongSAGE、SuperSAGE 等延长标签以改善定位。SAGE 的标签计数思想与后来的数字基因表达和 3′ RNA-seq 一脉相承，其“抽样—计数—多重映射”问题仍有教学意义。<sup id="fnref:sage"><a class="footnote-ref" href="#fn:sage">3</a></sup></p>
+<h2 data-block-end="4765" data-block-fingerprint="48d73e9743bd06052eb3" data-block-start="4724" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="bulk-rnaseq">bulk RNA-seq 的文库与计数矩阵<a class="headerlink" href="#bulk-rnaseq" title="Permanent link">&para;</a></h2>
+<p data-block-end="4964" data-block-fingerprint="1dee12bf1fc26355e91e" data-block-start="4767" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">RNA-seq 将样本中的 RNA 转换成可测序文库，并以片段序列连接表达量与转录本结构。早期哺乳动物 RNA-seq 已展示读段覆盖、剪接连接和数字定量可以同时用于已知与新转录本。<sup id="fnref:rnaseq-foundation"><a class="footnote-ref" href="#fn:rnaseq-foundation">4</a></sup> 现代分析仍从文库类型开始：poly(A) 富集、rRNA 去除、总 RNA、小 RNA、链特异或非链特异、随机引物或 3′ 标签、短读长或长读长分别决定哪些分子进入结果。</p>
+<h3 data-block-end="4999" data-block-fingerprint="978475aa58a42441cc91" data-block-start="4966" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="bulk-rnaseq-qc">原始读段与文库质量<a class="headerlink" href="#bulk-rnaseq-qc" title="Permanent link">&para;</a></h3>
+<p data-block-end="5231" data-block-fingerprint="32e33cb85fdafd1fb52b" data-block-start="5001" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">FASTQ 格式的碱基质量、接头、长度、重复序列和污染检查是第一层。比对或定量后还应报告总读段、唯一与多重比对比例、外显子／内含子／基因间分布、rRNA 与线粒体比例、链特异性、插入片段长度、5′—3′ 基因体覆盖（gene-body coverage）、文库复杂度和样本间相关。降解的 poly(A) RNA 常出现明显 3′ 偏倚；珠蛋白（globin）、rRNA 或少数极高表达基因可以吞噬大部分读深；样本交换则可能由性染色体、已知基因型或组织标志发现。</p>
+<p data-block-end="5387" data-block-fingerprint="a3b32ef4c7a54a1387fb" data-block-start="5233" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">这些指标的参考范围随物种和文库类型变化。原核 mRNA 通常缺少稳定的 poly(A) 尾，内含子比例和操纵子结构也不同；单核 RNA-seq 本就含更多未剪接和内含子读段；新生 RNA 文库又有自己的基因体分布。质量判定应比较同批样本、阳性对照和实验对象的预期，并使用与当前 RNA 测量相匹配的参考范围。</p>
+<p data-block-end="5575" data-block-fingerprint="629ce2cac86f80769693" data-block-start="5389" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">生物学重复之间的主成分、样本距离和表达分布能发现离群与批次，主成分的成因则需要结合样本信息判断。一个样本远离其他样本，可能是真实生物亚型、细胞组成差异、降解、低输入或污染。排除样本需要预先定义或有独立证据支持，并保留排除前后的敏感性分析；依据同一主成分分析（principal component analysis，PCA）反复改分组会把探索性模式转化为难以校准的显著性。</p>
+<h3 data-block-end="5623" data-block-fingerprint="5a30d260576e6aab9103" data-block-start="5577" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="alignment-quantification">剪接感知比对与转录本定量<a class="headerlink" href="#alignment-quantification" title="Permanent link">&para;</a></h3>
+<p data-block-end="5815" data-block-fingerprint="06aeab271158122daa3d" data-block-start="5625" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">基因组比对器需要识别跨越内含子的读段。剪接感知算法把一个读段分成与两个外显子端匹配的片段，并利用注释或数据中的典型剪接连接（canonical junction）建立候选连接；STAR 等方法以索引和两阶段连接发现支持大规模比对。<sup id="fnref:star"><a class="footnote-ref" href="#fn:star">5</a></sup> 基因组比对适合观察新连接、RNA 编辑候选、等位表达和融合断点，同时会面对重复序列、伪基因、近缘基因家族和未注释转录本造成的多重比对。</p>
+<p data-block-end="6056" data-block-fingerprint="5198264b09d7ed57f1bd" data-block-start="5817" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">转录组定量把读段与一组已知转录本比较。kallisto、Salmon 等方法先确定与片段兼容的转录本集合，再用概率模型在共享外显子和异构体之间分配不确定的片段，无需为每个片段生成完整基因组比对；Salmon 还显式处理序列、鸟嘌呤—胞嘧啶（guanine–cytosine，GC）含量和位置等偏倚。<sup id="fnref:salmon"><a class="footnote-ref" href="#fn:salmon">6</a></sup> 这种路线速度快且适合已知注释的表达定量，模型在给定参考转录本范围内处理遗漏、错误和高度相似序列造成的归属不确定性。伪比对或轻量比对以转录本兼容集合表示多重归属。</p>
+<p data-block-end="6276" data-block-fingerprint="858b2aaa7e2819c6dc39" data-block-start="6058" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">基因层计数通常把与某基因外显子兼容的片段汇总成整数或近似计数；转录本层定量同时估计各异构体（isoform）的有效长度和丰度。共享外显子越多、读段越短，异构体比例越依赖模型。双端测序（paired-end sequencing）、链特异、较长读段和剪接连接信息能增加约束；长读长可以直接连接远距离外显子，却仍受逆转录、PCR、读长完整性和较高单读错误影响。发现完整转录本结构与精确估计其丰度是两个问题，常需短、长读长和靶向验证共同完成。</p>
+<p data-block-end="6457" data-block-fingerprint="1f80bed70d2acadc24f7" data-block-start="6278" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">转录组从头组装在缺乏高质量参考时从 k-mer／德布鲁因图（de Bruijn graph）等结构重建转录本。覆盖悬殊、等位变异、重复和异构体共享路径会造成碎片、冗余和嵌合。组装后应评估读段支持、完整编码区、污染、冗余和与近缘物种同源关系，并保存原始重叠群（contig）与版本；每个 contig 可能对应等位、异构体或装配产物，新基因命名需要进一步证据。</p>
+<h2 data-block-end="6518" data-block-fingerprint="83f2fef42fcc7d46d1ef" data-block-start="6459" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="normalization-differential-expression">归一化、设计矩阵与差异表达<a class="headerlink" href="#normalization-differential-expression" title="Permanent link">&para;</a></h2>
+<p data-block-end="6842" data-block-fingerprint="4f26e4a695da16d131f9" data-block-start="6520" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">一个样本中某基因获得的片段数同时取决于分子丰度、可被测到的有效长度、文库总片段数和各种序列偏倚。每千碱基每百万读段数（reads per kilobase per million mapped reads，RPKM）／每千碱基每百万片段数（fragments per kilobase per million mapped fragments，FPKM）先按基因长度和测序量缩放；每百万转录本数（transcripts per million，TPM）先按有效长度得到速率，再使每个样本的速率总和为一百万。TPM 适合描述同一样本中转录本相对构成，或在方法与组成相近时用于可视化；生物学重复间方差和少数转录本大量增加引起的组成效应需要另行建模。</p>
+<p data-block-end="7108" data-block-fingerprint="1eabb60777cfd6161cc8" data-block-start="6844" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">基因差异表达通常从未经样本间预先归一化的计数或由转录本定量正确汇总的类计数量出发。edgeR 的截尾 M 值均值（trimmed mean of M-values，TMM）、DESeq2 的比值中位数（median-of-ratios）等方法估计样本尺度因子，并以多数基因没有巨大同向变化或存在可用参考分布为前提。转录本汇总到基因时，异构体使用改变会改变平均有效长度；tximport 一类方法可把转录本丰度估计及其长度偏移传递给基因计数模型。TPM 矩阵的均值—方差关系和偏移量定义与原始计数不同，应采用与输入数据匹配的模型。</p>
+<p data-block-end="7355" data-block-fingerprint="630904b424a5a218f38e" data-block-start="7110" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">RNA-seq 计数的样本间方差通常大于简单泊松（Poisson）模型，负二项广义线性模型以均值和离散度（dispersion）描述这种过度离散。DESeq2、edgeR 等方法在基因间共享信息以稳定小样本的离散度或对数倍数变化（log fold change）估计，再依据设计矩阵检验系数或对比（contrast）。<sup id="fnref:deseq2"><a class="footnote-ref" href="#fn:deseq2">7</a></sup> 一个配对处理设计可以写成“个体 + 处理”，时间序列可以包含时间、处理及交互项；多个组别适合在同一模型中定义计划好的对比，使方差估计和检验范围保持一致。</p>
+<p data-block-end="7562" data-block-fingerprint="04cf00501424acb1eaed" data-block-start="7357" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">批次、性别、组织区和 RNA 质量可以作为协变量，但协变量过多会耗尽有限样本的自由度；完全共线的因素则无法同时估计。隐藏因子方法能概括未记录变异，却可能一并移除真实处理信号。模型诊断应检查样本距离、离散度、均值—方差趋势、离群影响和对比方向。结果至少报告基因／转录本版本、基础均值（base mean）、对数倍数变化、标准误、原始与校正后 P 值，以及独立生物样本数；效应大小和检测能力应与显著性名单一同呈现。</p>
+<p data-block-end="7749" data-block-fingerprint="ef4f6bb7f7126c806880" data-block-start="7564" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">全局 RNA 输出变化是相对计数的特殊难题。如果每个细胞中几乎所有 mRNA 都增加，而测序仍从等量 RNA 建库，内部尺度归一化可能把总量变化消去。已知量外源 RNA、细胞数归一化、总 RNA 或独立分子计数可提供参照，但 spike-in 必须在能够经历目标技术变异的步骤加入，且其回收稳定。任何归一化都以某个量为不变参照，“无偏”需要相对于具体生物问题和参照定义。</p>
+<p data-block-end="7926" data-block-fingerprint="c32d2a707546bd4fc1e5" data-block-start="7751" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">多重检验控制一组声明中的错误比例，各显著基因的生物意义还取决于效应大小、功能语境和验证证据。低计数过滤可以减少几乎无信息的检验，独立过滤规则应在观察效应方向前确定。基因集富集、通路和网络分析还会继承基因长度、表达检测能力、注释密度和基因间相关；这些下游方法由<a href="../functional_annotation/">功能注释、富集与功能预测</a>进一步展开。</p>
+<h2 data-block-end="7981" data-block-fingerprint="9f267e73b33e5dd9ed4d" data-block-start="7928" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="isoforms-splicing-fusions">转录本结构、剪接、融合与非编码 RNA<a class="headerlink" href="#isoforms-splicing-fusions" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="8023" data-block-fingerprint="697bc27b48f07975e2fc" data-block-start="7983" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="alternative-splicing">可变剪接与转录本使用<a class="headerlink" href="#alternative-splicing" title="Permanent link">&para;</a></h3>
+<p data-block-end="8288" data-block-fingerprint="4d9f451ebf9b9c7f0c74" data-block-start="8025" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">外显子覆盖下降可能来自该外显子被跳过，也可能来自整个基因表达下降或比对困难。剪接分析因此常比较剪接连接、外显子分箱或转录本使用在同一基因内部的相对变化。盒式外显子（cassette exon）、可变 5′／3′ 剪接位点（alternative 5′／3′ splice site）、互斥外显子（mutually exclusive exon）和内含子保留（intron retention）各有不同的可观测读段；百分比剪入值（percent spliced in，PSI）以可区分该事件的读段为分母，描述相应剪接产物的比例。</p>
+<p data-block-end="8527" data-block-fingerprint="980196ffb24de98bde83" data-block-start="8290" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">短读长能精确计数局部连接，对相隔较远的多个外显子是否位于同一分子的约束较弱。长读长或靶向扩增能连接完整异构体，但低丰度分子、5′ 端不完整和测序错误仍影响发现与定量。正式结论应给出事件定义、覆盖、效应大小和重复一致性，并以逆转录聚合酶链式反应（reverse-transcription polymerase chain reaction，RT-PCR）、长读段或独立数据验证关键异构体。RNA 加工因子的结合或扰动可以加强机制链，单次差异剪接统计本身说明的是产物比例改变。</p>
+<h3 data-block-end="8567" data-block-fingerprint="a05e176a08c6c0ebbf34" data-block-start="8529" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="fusion-transcripts">融合转录本与异常连接<a class="headerlink" href="#fusion-transcripts" title="Permanent link">&para;</a></h3>
+<p data-block-end="8854" data-block-fingerprint="e997e36c58e876750139" data-block-start="8569" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">融合检测寻找一端来自基因 A、另一端来自基因 B 的分裂读段（split read）或不一致读段对（discordant pair）。真实染色体重排可产生稳定融合转录本，反式剪接（trans-splicing）、读穿转录（read-through transcription）、模板切换、PCR 嵌合和样本污染也能形成类似读段。候选评估要考虑断点是否落在可解释的外显子边界、支持片段是否独立、配对方向与插入长度、同源序列和正常样本背景，并与基因组结构变异证据相接。临床或机制性主张通常需要独立 RNA 验证、DNA 断点或蛋白产物证据，软件候选列表用于确定后续验证对象。</p>
+<h3 data-block-end="8892" data-block-fingerprint="ce22208fc9a0ff304628" data-block-start="8856" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="noncoding-rna">非编码 RNA 的文库依赖<a class="headerlink" href="#noncoding-rna" title="Permanent link">&para;</a></h3>
+<p data-block-end="9277" data-block-fingerprint="b472bed7f7c965215d0d" data-block-start="8894" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">长链非编码 RNA 常丰度低、组织特异，且与邻近编码基因、反义转录和重复序列重叠；它们需要链特异数据、可靠转录边界和独立表达证据。小 RNA 文库以接头连接和尺寸选择富集微 RNA（microRNA，miRNA）、小干扰 RNA（small interfering RNA，siRNA）、PIWI 相互作用 RNA（PIWI-interacting RNA，piRNA）等短分子，连接偏倚（ligation bias）会使不同末端和结构的 RNA 捕获效率不同。rRNA、tRNA 和其他高度修饰 RNA 会造成逆转录终止（reverse-transcription stop）或错配；专用去修饰、末端处理和比对规则改变可见分子集合。普通 poly(A) RNA-seq 中的零读数首先表示该文库没有捕获相应分子，文库设计是否覆盖该类非编码 RNA 决定其表达解释。</p>
+<p data-block-end="9473" data-block-fingerprint="3c770f8d21794b5cc1a5" data-block-start="9279" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">环状 RNA 候选常由反向剪接连接（back-splice junction）支持，重复序列、转录本重排和模板切换可产生伪连接。核糖核酸酶 R（ribonuclease R，RNase R）富集、不同建库策略、跨连接引物和长读段可加强证据，但稳定性、翻译或调控功能仍需独立实验。RNA 编辑候选同样要排除 DNA 变异、比对偏倚、旁系同源序列和测序错误，并用配对 DNA 或特异实验区分。</p>
+<h3 data-block-end="9514" data-block-fingerprint="9e106dde19f90913ab85" data-block-start="9475" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="rna-protein-binding">RNA—蛋白结合图谱<a class="headerlink" href="#rna-protein-binding" title="Permanent link">&para;</a></h3>
+<p data-block-end="10104" data-block-fingerprint="e14fcb05b7a82c08a3b6" data-block-start="9516" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">RNA 免疫沉淀测序（RNA immunoprecipitation sequencing，RIP-seq）在原生或较温和条件下用抗体沉淀 RNA 结合蛋白（RNA-binding protein，RBP）及其关联 RNA，能发现处于同一复合物的候选转录本，也可能包含间接结合并受复合物重排影响。交联免疫沉淀（crosslinking and immunoprecipitation，CLIP）家族先以紫外交联固定直接接触附近的 RNA—蛋白关系，再免疫沉淀、有限 RNase 消化并测序留下的 RNA 片段。高通量测序 CLIP（high-throughput sequencing CLIP，HITS-CLIP）、单核苷酸分辨率 CLIP（individual-nucleotide resolution CLIP，iCLIP）、光活化核糖核苷增强 CLIP（photoactivatable-ribonucleoside-enhanced CLIP，PAR-CLIP）和增强型 CLIP（enhanced CLIP，eCLIP）在交联化学、接头连接、截短 cDNA 捕获、对照和重复处理上各有差异；iCLIP 利用交联诱导截短（crosslink-induced truncation），PAR-CLIP 借助光活性核苷及特征转换帮助定位。<sup id="fnref:clip-methods"><a class="footnote-ref" href="#fn:clip-methods">8</a></sup></p>
+<p data-block-end="10434" data-block-fingerprint="52cb9e7def4c75ceaa46" data-block-start="10106" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">分析通常包括条形码（barcode）／唯一分子标识符（unique molecular identifier，UMI）处理、接头与低复杂度过滤、比对、PCR 重复控制、富集区或交联位点识别、基序与转录区域富集。交联效率具有碱基和结构偏好，抗体决定沉淀对象，RNase 强度改变片段边界，高丰度 RNA 又会提高背景。输入对照（input）、尺寸匹配输入对照（size-matched input）、免疫球蛋白 G（immunoglobulin G，IgG）／基因敲除（knockout）对照和生物学重复帮助区分非特异回收。一个 CLIP 峰表示当前流程中相对于背景富集的候选结合区；结合对剪接、稳定性或翻译的功能影响需要扰动该蛋白或位点并观察直接产物变化。</p>
+<h2 data-block-end="10489" data-block-fingerprint="562d2cb26dc2c18b6658" data-block-start="10436" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="single-cell-spatial-interface">群体平均与细胞、空间解析的接口<a class="headerlink" href="#single-cell-spatial-interface" title="Permanent link">&para;</a></h2>
+<p data-block-end="10709" data-block-fingerprint="38bc5d8b3a2894af381d" data-block-start="10491" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">bulk RNA-seq 的样本矩阵适合比较组织或群体的平均表达，其中同时包含细胞组成和细胞内状态的贡献。单细胞／单核方法以细胞条形码和 UMI 建立稀疏的基因—细胞矩阵，空间方法再把分子、细胞或捕获位置连接到组织坐标；分析对象由“样本中的基因”扩展为细胞类型、状态、轨迹、空间域和邻域。相关的数据模型、质量控制、整合及证据边界见<a href="../single_cell_spatial_transcriptomics/">单细胞与空间转录组学</a>。</p>
+<p data-block-end="10861" data-block-fingerprint="bc4c564a260fa9ed2720" data-block-start="10711" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">无论分辨率如何提高，转录组结果仍须回到分子与组织尺度验证。qPCR 可验证少量靶标，原位杂交保留位置，蛋白质印迹（Western blot）、质谱和成像检验蛋白输出，流式或组织计数检验细胞组成，功能扰动检验必要性和充分性。验证靶标应覆盖不同效应大小、丰度和机制层级，避免只选择热图中最醒目的几个基因。</p>
+<h2 data-block-end="10889" data-block-fingerprint="1c36cfb2dfa191d82a5c" data-block-start="10863" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="reporting">可复现分析与报告<a class="headerlink" href="#reporting" title="Permanent link">&para;</a></h2>
+<p data-block-end="11126" data-block-fingerprint="9a43600a347d33c02d53" data-block-start="10891" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">一个可复现的转录组项目应把样本表、原始数据、参考序列和注释版本、文库类型、软件与参数、过滤规则、设计矩阵、对比、随机种子和主要中间矩阵连接起来。bulk 数据应保留样本—特征原始计数，qPCR 和芯片分别保留原始 Cq 或强度文件；最终归一化矩阵还需与原始计数并存，才能重新判断过滤、计数和实验单位。单细胞条形码矩阵、空间坐标与图像的报告要求见<a href="../single_cell_spatial_transcriptomics/#reporting">单细胞与空间转录组学</a>。</p>
+<p data-block-end="11499" data-block-fingerprint="cd42fe4453a15d174303" data-block-start="11128" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">基因表达综合数据库（Gene Expression Omnibus，GEO）、序列读取档案（Sequence Read Archive，SRA）／欧洲核苷酸档案（European Nucleotide Archive，ENA）等档案分别承接处理后矩阵、实验元数据与原始读段，提交时应使用稳定样本标识连接生物样本（BioSample）、测序运行（run）和分析对象。人类可识别的基因型、疾病和空间病理数据可能需要受控访问或去标识化；可查找、可访问、可互操作、可复用（findable, accessible, interoperable and reusable，FAIR）原则中的“可访问”允许明确的访问条件。命令行、环境、容器、工作流与来源追踪（provenance）的具体组织见<a href="../workflows/">命令行、工作流与可重复研究</a>。</p>
+<p data-block-end="11612" data-block-fingerprint="fac456fee440475e06b4" data-block-start="11501" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics">图表应让读者看见实验单位和不确定性。样本级 PCA、每样本计数、效应量与置信区间通常比单独的聚类热图更能支撑比较。无论数据量多大，最终结论都应回到“测到了什么对象、在哪些独立样本中重复、模型假设是什么、还需要哪一种验证”。</p>
+<h2 data-block-end="12811" data-block-fingerprint="852b4693a6cab96631e3" data-block-start="11614" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-transcriptomics" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:miqe">
+<p>qPCR 实验设计、扩增效率、参考基因、对照和最低报告信息见 Bustin 等的 <a href="https://pubmed.ncbi.nlm.nih.gov/19246619/">MIQE guidelines</a>；<span class="arithmatex">\(2^{-\Delta\Delta C_q}\)</span> 的使用必须与效率和参照稳定性前提共同说明。&#160;<a class="footnote-backref" href="#fnref:miqe" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rma">
+<p>单通道寡核苷酸阵列的背景校正、quantile normalization 与 summarization 路线见 Irizarry 等的 <a href="https://pubmed.ncbi.nlm.nih.gov/12925520/">RMA 研究</a>；具体平台仍须使用对应 probe annotation 和原始强度文件。&#160;<a class="footnote-backref" href="#fnref:rma" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sage">
+<p>SAGE 的短标签串联测序与数字表达计数原理见 Velculescu 等的<a href="https://pubmed.ncbi.nlm.nih.gov/7570003/">原始研究</a>。&#160;<a class="footnote-backref" href="#fnref:sage" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rnaseq-foundation">
+<p>以深度测序映射和定量哺乳动物转录组、直接观察 splice junction 的早期 RNA-seq 路线见 Mortazavi 等的<a href="https://pubmed.ncbi.nlm.nih.gov/18516045/">研究</a>。&#160;<a class="footnote-backref" href="#fnref:rnaseq-foundation" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:star">
+<p>剪接感知的快速基因组比对及 junction discovery 见 Dobin 等的 <a href="https://pubmed.ncbi.nlm.nih.gov/23104886/">STAR 研究</a>。&#160;<a class="footnote-backref" href="#fnref:star" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:salmon">
+<p>转录本兼容片段的概率分配与序列、GC 等 bias-aware quantification 见 Patro 等的 <a href="https://www.nature.com/articles/nmeth.4197">Salmon 研究</a>。&#160;<a class="footnote-backref" href="#fnref:salmon" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:deseq2">
+<p>负二项计数模型、dispersion 与 log fold change 的跨基因收缩估计见 Love、Huber 与 Anders 的 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4302049/">DESeq2 研究</a>。&#160;<a class="footnote-backref" href="#fnref:deseq2" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:clip-methods">
+<p>HITS-CLIP、PAR-CLIP、iCLIP／eCLIP 的交联、免疫沉淀、截短或转换信号及分析差异见 Wheeler 等的<a href="https://pubmed.ncbi.nlm.nih.gov/28008714/">方法综述</a>；UV crosslinking 的序列偏好和方法造成的定位差异见 Sugimoto 等的<a href="https://pubmed.ncbi.nlm.nih.gov/22863408/">比较研究</a>。&#160;<a class="footnote-backref" href="#fnref:clip-methods" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/bioinfo/transcriptomics.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/bioinfo/transcriptomics.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-bioinfo-transcriptomics"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../epigenome_3d/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 表观基因组与三维基因组分析">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                表观基因组与三维基因组分析
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../single_cell_spatial_transcriptomics/" class="md-footer__link md-footer__link--next" aria-label="Next: 单细胞与空间转录组学">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                单细胞与空间转录组学
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

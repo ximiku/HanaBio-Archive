@@ -1,0 +1,4343 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/exptech/ecology_behavior/population_sampling/">
+      
+      
+        <link rel="prev" href="../ecophysiology/">
+      
+      
+        <link rel="next" href="../population_dynamics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>种群抽样、标记重捕与空间格局 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              种群抽样、标记重捕与空间格局
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_17" id="__nav_17_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  实验
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../foundations/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验基础
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem_molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生化与分子生物学实验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学实验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../microbiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学实验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学实验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学实验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_8" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态与行为实验
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_17_8" id="__nav_17_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_17_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  生态与行为实验
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecophysiology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  环境梯度与生态生理实验
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  种群抽样、标记重捕与空间格局
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  种群抽样、标记重捕与空间格局
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-population-sampling-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        目标总体与抽样框
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-occasion-mark-recapture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        两次捕获—标记—重捕
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两次捕获—标记—重捕">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-occasion-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        比例关系与估计量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark-recapture-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型假设与现场后果
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-capture-schumacher-eschmeyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多次标记重捕与 Schumacher–Eschmeyer 估计
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多次标记重捕与 Schumacher–Eschmeyer 估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-capture-ledger" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        捕获历程表
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schumacher-eschmeyer-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        估计量、标准误与区间
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrat-counts-dispersion-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        样方频数与方差—均值比
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样方频数与方差—均值比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaf-insect-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        叶片虫口数据
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peach-gum-aphids" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        桃胶与蚜虫生活史问题
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neyman-type-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Neyman A 型聚簇模型
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neyman A 型聚簇模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compound-poisson-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        复合泊松过程
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neyman-recursion-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        概率递推与拟合检验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plant-quadrat-recalculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        植物样方数据重算
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-pattern-to-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        格局描述与机制模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#records-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        记录与报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../population_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  种群增长与种间竞争实验
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  群落多样性与分类分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field_behavior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物行为观察与实验设计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-population-sampling-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        目标总体与抽样框
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-occasion-mark-recapture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        两次捕获—标记—重捕
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两次捕获—标记—重捕">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-occasion-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        比例关系与估计量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mark-recapture-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型假设与现场后果
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-capture-schumacher-eschmeyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多次标记重捕与 Schumacher–Eschmeyer 估计
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多次标记重捕与 Schumacher–Eschmeyer 估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-capture-ledger" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        捕获历程表
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schumacher-eschmeyer-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        估计量、标准误与区间
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quadrat-counts-dispersion-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        样方频数与方差—均值比
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="样方频数与方差—均值比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaf-insect-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        叶片虫口数据
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peach-gum-aphids" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        桃胶与蚜虫生活史问题
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neyman-type-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Neyman A 型聚簇模型
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neyman A 型聚簇模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compound-poisson-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        复合泊松过程
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neyman-recursion-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        概率递推与拟合检验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plant-quadrat-recalculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        植物样方数据重算
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-pattern-to-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        格局描述与机制模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#records-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        记录与报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    实验
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    生态与行为实验
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="16" data-block-fingerprint="aa68d9b419f6e09919d2" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="_1">种群抽样、标记重捕与空间格局<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="175" data-block-fingerprint="38eb524b18527bc927d8" data-block-start="18" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">种群调查面对的对象往往不能一次数清：动物会躲藏和移动，植物或固着动物的个体边界可能模糊，叶片上的小型植食者也会集中在少数寄主部位。于是，观测到的数量同时取决于种群本身和观察过程。可靠的估计要先说明目标总体、空间边界、调查时段与样本单位，再选择样方、标记重捕或重复计数等方法，并把未被观察到的个体和抽样误差纳入推断。</p>
+<p data-block-end="398" data-block-fingerprint="b13f399220013b8227b5" data-block-start="177" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">四组经典训练分别处理两次捕获—标记—重捕、多次标记重捕、叶片虫口频数和植物样方频数。原始数据完整保留，公式、符号和结论则按相应统计定义复核。随机化、实验单位、缺失与异常记录的一般原则见<a href="../../foundations/design_data/">实验设计、记录与数据质量</a>，种群生态学中的样方、距离取样和现代捕获模型见<a href="../../../ecology/population_ecology/#sampling-design">种群生态学</a>。</p>
+<h2 data-block-end="447" data-block-fingerprint="4a776059f2c7e9c281b3" data-block-start="400" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="target-population-sampling-frame">目标总体与抽样框<a class="headerlink" href="#target-population-sampling-frame" title="Permanent link">&para;</a></h2>
+<p data-block-end="581" data-block-fingerprint="fd0f8c0ee5936af45950" data-block-start="449" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">目标总体由对象、地点和时间共同限定。例如“校园桃树上的蚜虫”仍缺少树木范围、叶位、发育阶段和调查日期；“样地中的某种草本”还要定义克隆分株、基株或丛是否作为一个个体。抽样框是实际能够被抽到的单位清单或空间范围。只有目标总体与抽样框相符，样本的不确定度才有明确含义。</p>
+<p data-block-end="761" data-block-fingerprint="d5947cea27f5a68f1b9b" data-block-start="583" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">样方调查先确定样方形状、面积、边界规则和布点方式。简单随机布点适合相对均一且可完整编号的区域；系统布点能均匀覆盖空间，却要避免步长与环境周期重合；分层随机抽样可保证不同坡位、植被带或管理区都有代表。样方大小决定所见格局：小样方可能把同一斑块拆成许多零值和少数高值，大样方则会把局部聚集平均掉。因而“随机、均匀或聚集”始终是相对于观察尺度和样本框而言的属性。</p>
+<p data-block-end="935" data-block-fingerprint="bcb6d7e733dca6ca5dc4" data-block-start="763" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">计数前还要规定边界个体怎样处理。常用规则是计入落在上、左边界的个体而排除下、右边界，或以个体基部、根颈、叶柄着生点等预先指定的位置判断。不同人员需用同一规则，并保留样方坐标、面积、调查时长、观察者、天气和可见度。若检测概率可能随植被遮挡、个体大小或观察者显著变化，应使用重复调查、距离取样或占域／丰度模型，而不能把“没有看到”直接当作真实零值。</p>
+<h2 data-block-end="981" data-block-fingerprint="54b08a993a6490e8e091" data-block-start="937" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="two-occasion-mark-recapture">两次捕获—标记—重捕<a class="headerlink" href="#two-occasion-mark-recapture" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="1022" data-block-fingerprint="b5021c5b177e3a2931d1" data-block-start="983" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="two-occasion-estimators">比例关系与估计量<a class="headerlink" href="#two-occasion-estimators" title="Permanent link">&para;</a></h3>
+<p data-block-end="1173" data-block-fingerprint="c20bdcc0e808e0f5ac4c" data-block-start="1024" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">第一次捕获并成功释放 <span class="arithmatex">\(M\)</span> 个带标记个体；充分混合后第二次捕获 <span class="arithmatex">\(n\)</span> 个，其中有 <span class="arithmatex">\(m\)</span> 个已经带标记。在封闭、充分混合且各个体捕获机会相近的理想条件下，第二次样本中的标记比例 <span class="arithmatex">\(m/n\)</span> 近似总体中的标记比例 <span class="arithmatex">\(M/N\)</span>，由此得到林肯–彼得森（Lincoln–Petersen，LP）估计量：</p>
+<div class="arithmatex" data-block-end="1214" data-block-fingerprint="af0ac6463df07e225288" data-block-start="1175" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat N_{\mathrm{LP}}=\frac{Mn}{m}
+\]</div>
+<p data-block-end="1297" data-block-fingerprint="e409ea089f3b977ef2d2" data-block-start="1216" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">这个比例关系是超几何抽样模型的直观形式。<span class="arithmatex">\(m\)</span> 很小时，倒数造成明显的向上偏倚；若 <span class="arithmatex">\(m=0\)</span>，点估计甚至不存在。两次调查的小样本通常采用 Chapman 修正：</p>
+<div class="arithmatex" data-block-end="1349" data-block-fingerprint="3e0734c4da4da57f5c78" data-block-start="1299" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat N_{\mathrm{C}}=\frac{(M+1)(n+1)}{m+1}-1
+\]</div>
+<p data-block-end="1443" data-block-fingerprint="4591c9fdd129cac7c652" data-block-start="1351" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">例题中第一次捕获并标记 <span class="arithmatex">\(M=80\)</span> 只，第二次捕获 <span class="arithmatex">\(n=60\)</span> 只，其中 <span class="arithmatex">\(m=20\)</span> 只有标记。<span class="arithmatex">\(M\)</span> 与 <span class="arithmatex">\(n\)</span> 的乘积虽不受次序影响，两者的记录含义不能互换。按上述数据计算：</p>
+<div class="arithmatex" data-block-end="1497" data-block-fingerprint="4762ecc8d7926a61adf8" data-block-start="1445" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat N_{\mathrm{LP}}=\frac{80\times60}{20}=240
+\]</div>
+<p data-block-end="1526" data-block-fingerprint="aa9e7466ed551e5e7565" data-block-start="1499" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">插入式标准误（standard error，SE）为：</p>
+<div class="arithmatex" data-block-end="1631" data-block-fingerprint="c6b6faadf879c31716eb" data-block-start="1528" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\widehat{\mathrm{SE}}(\hat N)=
+\hat N\sqrt{\frac{(\hat N-M)(\hat N-n)}{Mn(\hat N-1)}}
+\approx38.0
+\]</div>
+<p data-block-end="1862" data-block-fingerprint="cd8bc5c0bdd46cf4af08" data-block-start="1633" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">再用 <span class="arithmatex">\(\hat N\pm2\mathrm{SE}\)</span> 得到约 <span class="arithmatex">\([164,316]\)</span>。这保留为经典手算结果，但总体大小为离散量且抽样分布常不对称，正态对称区间在重捕数较少时覆盖率不稳。Chapman 点估计为 <span class="arithmatex">\(234.3\)</span>；对超几何分布反演得到的双侧 95% 区间约为 <span class="arithmatex">\([181,353]\)</span>，更能显示上界方向较长的不确定性。不同区间算法可能给出略有差异的整数端点，报告时应注明算法，而不能只写“95% 置信区间”。<sup id="fnref:closed-estimators"><a class="footnote-ref" href="#fn:closed-estimators">1</a></sup></p>
+<h3 data-block-end="1907" data-block-fingerprint="0a44538278316631ee17" data-block-start="1864" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="mark-recapture-assumptions">模型假设与现场后果<a class="headerlink" href="#mark-recapture-assumptions" title="Permanent link">&para;</a></h3>
+<p data-block-end="1948" data-block-fingerprint="d755a06c390b427e0891" data-block-start="1909" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">两次标记重捕的关键假设不仅是“标记无毒无害”。每项假设都对应可检查的现场记录：</p>
+<table data-block-end="2368" data-block-fingerprint="78fe063b54a8b01b95b9" data-block-start="1950" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<thead>
+<tr>
+<th>假设</th>
+<th>可能的违背</th>
+<th>设计与诊断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>调查期间种群近似封闭</td>
+<td>出生、死亡、迁入或迁出改变 <span class="arithmatex">\(N\)</span></td>
+<td>缩短闭合期；记录物候、迁移与干扰；必要时改用开放种群模型</td>
+</tr>
+<tr>
+<td>标记不丢失且可正确辨认</td>
+<td>褪色、脱落或误读使 <span class="arithmatex">\(m\)</span> 偏低，常把 <span class="arithmatex">\(N\)</span> 推高</td>
+<td>预试标记持久性；双重标记或照片复核；记录无法判定的标记</td>
+</tr>
+<tr>
+<td>标记不改变存活、行为和被捕概率</td>
+<td>陷阱趋避、标记显眼、处理应激造成组间差异</td>
+<td>选择适合物种和体型的方法；缩短处理；记录损伤与恢复；遵守许可和福利方案</td>
+</tr>
+<tr>
+<td>标记个体在第二次取样前充分混合</td>
+<td>释放点附近局部富集使 <span class="arithmatex">\(m\)</span> 偏高</td>
+<td>给出合理混合时间；分散释放或扩大取样覆盖；保存捕获位置</td>
+</tr>
+<tr>
+<td>个体捕获机会在模型允许的范围内相近</td>
+<td>性别、年龄、领地、陷阱位置和天气造成异质性</td>
+<td>标准化努力；记录个体与时段协变量；采用允许时间、行为或个体异质性的模型</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="2550" data-block-fingerprint="d3be6c93d497a3dd123b" data-block-start="2370" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">“标记个体均匀分布”不要求动物在整个栖息地形成几何上的均匀格局，而要求第二次样本能以模型规定的机会抽到标记与未标记个体。将陷阱只放在释放点附近，即使动物本来随机分布，也会破坏这一条件。闭合性同样是研究时段内的近似，不是物种永久不出生、不死亡或不迁移。经典闭合模型的系统框架正是围绕时间变化、行为反应和个体异质性等捕获概率来源建立的。<sup id="fnref:otis-closed"><a class="footnote-ref" href="#fn:otis-closed">2</a></sup></p>
+<h2 data-block-end="2627" data-block-fingerprint="934bcf8c895040af9ec7" data-block-start="2552" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="multiple-capture-schumacher-eschmeyer">多次标记重捕与 Schumacher–Eschmeyer 估计<a class="headerlink" href="#multiple-capture-schumacher-eschmeyer" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="2665" data-block-fingerprint="ca66b1dcf221f3cad9d0" data-block-start="2629" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="multiple-capture-ledger">捕获历程表<a class="headerlink" href="#multiple-capture-ledger" title="Permanent link">&para;</a></h3>
+<p data-block-end="2821" data-block-fingerprint="794dabdcd96b826f3898" data-block-start="2667" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">多次调查能积累更多重捕信息，并检查捕获概率是否随时间变化。第 <span class="arithmatex">\(i\)</span> 次调查中，<span class="arithmatex">\(n_i\)</span> 是捕获总数，<span class="arithmatex">\(m_i\)</span> 是其中已标记数，<span class="arithmatex">\(u_i=n_i-m_i\)</span> 是本次新标记并释放数，<span class="arithmatex">\(M_i\)</span> 是本次捕获开始前种群中可供重捕的标记总数。若有死亡、永久移除或标记丢失，不能直接用上一行的累计数代替 <span class="arithmatex">\(M_i\)</span>。</p>
+<p data-block-end="2874" data-block-fingerprint="06020e08fc1bf0a1f7bf" data-block-start="2823" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">14 次调查及全部派生列如下。最后一次之后不再需要为本估计量计算新标记数，故 <span class="arithmatex">\(u_{15}\)</span> 留空。</p>
+<table data-block-end="3816" data-block-fingerprint="70c1c467169e8156fb33" data-block-start="2876" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<thead>
+<tr>
+<th style="text-align: right;">日期</th>
+<th style="text-align: right;"><span class="arithmatex">\(n_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(m_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(u_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(M_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(n_iM_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(M_im_i\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(n_iM_i^2\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(m_i^2/n_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">270</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2,700</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">629</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">23,273</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">378</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">20,412</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3,721</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">310</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">19,220</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">402</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">26,934</td>
+<td style="text-align: right;">0.6667</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">1,065</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">75,615</td>
+<td style="text-align: right;">0.0667</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">765</td>
+<td style="text-align: right;">425</td>
+<td style="text-align: right;">65,025</td>
+<td style="text-align: right;">2.7778</td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">1,602</td>
+<td style="text-align: right;">445</td>
+<td style="text-align: right;">142,578</td>
+<td style="text-align: right;">1.3889</td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">1,632</td>
+<td style="text-align: right;">408</td>
+<td style="text-align: right;">166,464</td>
+<td style="text-align: right;">1.0000</td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">560</td>
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">62,720</td>
+<td style="text-align: right;">0.8000</td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">805</td>
+<td style="text-align: right;">230</td>
+<td style="text-align: right;">92,575</td>
+<td style="text-align: right;">0.5714</td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">2,261</td>
+<td style="text-align: right;">357</td>
+<td style="text-align: right;">269,059</td>
+<td style="text-align: right;">0.4737</td>
+</tr>
+<tr>
+<td style="text-align: right;">合计</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">984</td>
+<td style="text-align: right;">10,740</td>
+<td style="text-align: right;">2,294</td>
+<td style="text-align: right;">970,296</td>
+<td style="text-align: right;">7.7451</td>
+</tr>
+</tbody>
+</table>
+<h3 data-block-end="3868" data-block-fingerprint="8eed2598f33ed6a62472" data-block-start="3818" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="schumacher-eschmeyer-calculation">估计量、标准误与区间<a class="headerlink" href="#schumacher-eschmeyer-calculation" title="Permanent link">&para;</a></h3>
+<p data-block-end="3965" data-block-fingerprint="3dc91751aa09a7e7cf1c" data-block-start="3870" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">Schumacher–Eschmeyer 闭合种群估计量可理解为将每次样本中的标记比例 <span class="arithmatex">\(m_i/n_i\)</span> 对捕前标记数 <span class="arithmatex">\(M_i\)</span> 作加权、过原点回归，斜率估计 <span class="arithmatex">\(\theta=1/N\)</span>：</p>
+<div class="arithmatex" data-block-end="4097" data-block-fingerprint="8bda96a3b292eade03e6" data-block-start="3967" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat\theta=\widehat{\frac{1}{N}}
+=\frac{\sum_i M_im_i}{\sum_i n_iM_i^2},
+\qquad
+\hat N=\frac{\sum_i n_iM_i^2}{\sum_i M_im_i}
+\]</div>
+<p data-block-end="4109" data-block-fingerprint="011c5a1458d47edb0a56" data-block-start="4099" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">代入表中合计，得到：</p>
+<div class="arithmatex" data-block-end="4190" data-block-fingerprint="675d46b92ddf4118ede8" data-block-start="4111" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat\theta=\frac{2294}{970296}=0.00236423,
+\qquad
+\hat N=422.97\approx423
+\]</div>
+<p data-block-end="4221" data-block-fingerprint="58266a7bab2e3d12eae6" data-block-start="4192" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">令 <span class="arithmatex">\(a=14\)</span> 为调查次数，过原点回归的残差方差估计为：</p>
+<div class="arithmatex" data-block-end="4337" data-block-fingerprint="dd910a846df83d460ace" data-block-start="4223" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+s^2=\frac{1}{a-1}\left[
+\sum_i\frac{m_i^2}{n_i}
+-\frac{(\sum_i M_im_i)^2}{\sum_i n_iM_i^2}
+\right]
+=0.178583
+\]</div>
+<p data-block-end="4383" data-block-fingerprint="58d8e51079fefa4b74c2" data-block-start="4339" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">这里的 <span class="arithmatex">\(s^2\)</span> 是回归残差方差估计，并不是“<span class="arithmatex">\(1/N\)</span> 的方差”本身。斜率标准误为：</p>
+<div class="arithmatex" data-block-end="4462" data-block-fingerprint="fc0e34b7b38c5a5a821a" data-block-start="4385" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\mathrm{SE}(\hat\theta)
+=\sqrt{\frac{s^2}{\sum_i n_iM_i^2}}
+=0.00042901
+\]</div>
+<p data-block-end="4547" data-block-fingerprint="0dac6b479a22ff6dfc10" data-block-start="4464" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">标准误应为 <span class="arithmatex">\(0.00042901\)</span>；<span class="arithmatex">\(3.935\times10^{-5}\)</span> 与公式和随后区间所用数值均不一致。以 <span class="arithmatex">\(t_{0.975,13}=2.160\)</span> 计算：</p>
+<div class="arithmatex" data-block-end="4608" data-block-fingerprint="62e07b254cb39d06faba" data-block-start="4549" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat\theta\pm t\,\mathrm{SE}
+=[0.0014374,\ 0.0032910]
+\]</div>
+<p data-block-end="4797" data-block-fingerprint="2a87db26d618388ea94f" data-block-start="4610" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">由于 <span class="arithmatex">\(N=1/\theta\)</span>，反演时端点次序颠倒，得到 <span class="arithmatex">\(N\)</span> 的约 95% 区间 <span class="arithmatex">\([304,696]\)</span>。该区间来自经典回归近似；重捕稀少、捕获概率异质或样本量小的时候，应使用与具体捕获模型匹配的似然、剖面似然或自助法区间。近期模拟比较也显示，简单闭合种群估计量的偏倚与精度强烈依赖样本量和重捕信息，增加次数不能自动修复假设违背。<sup id="fnref2:closed-estimators"><a class="footnote-ref" href="#fn:closed-estimators">1</a></sup></p>
+<p data-block-end="4977" data-block-fingerprint="c63304e31a838e9274f0" data-block-start="4799" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">多次标记记录还可用于描述移动距离，但只有保存个体标识、每次时间、坐标与搜索努力后，捕获点间距离才可计算；它仍是实际移动路径的下界。若研究期间存在出生、死亡、迁入和迁出，Jolly–Seber 类开放模型可估计表观存活、补充和捕获概率。若关注个体状态或地点转换，则需多状态模型。选择多次调查的理由是研究问题和预期重捕信息，而不是把“单次捕捉少”当作唯一规则。</p>
+<h2 data-block-end="5028" data-block-fingerprint="12b6d6855c7ab81d9b42" data-block-start="4979" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="quadrat-counts-dispersion-index">样方频数与方差—均值比<a class="headerlink" href="#quadrat-counts-dispersion-index" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="5062" data-block-fingerprint="4ba017a0b560f63f1127" data-block-start="5030" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="leaf-insect-counts">叶片虫口数据<a class="headerlink" href="#leaf-insect-counts" title="Permanent link">&para;</a></h3>
+<p data-block-end="5131" data-block-fingerprint="836bd090238ac441abf0" data-block-start="5064" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">调查包含 156 片叶，每片叶上的虫口数 <span class="arithmatex">\(x\)</span> 与叶片数 <span class="arithmatex">\(f\)</span> 如下。频数表须先展开其加权和，才能计算按叶片定义的均值与样本方差。</p>
+<table data-block-end="5371" data-block-fingerprint="e0dbbe8466619b265251" data-block-start="5133" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<thead>
+<tr>
+<th style="text-align: right;"><span class="arithmatex">\(x\)</span>／虫口·叶<span class="arithmatex">\(^{-1}\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(f\)</span>／片</th>
+<th style="text-align: right;"><span class="arithmatex">\(fx\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(fx^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr>
+<td style="text-align: right;">合计</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">99</td>
+<td style="text-align: right;">267</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="5402" data-block-fingerprint="7823cb50e2ab72c5783e" data-block-start="5373" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">以 <span class="arithmatex">\(q=156\)</span> 表示叶片数，样本均值和无偏样本方差为：</p>
+<div class="arithmatex" data-block-end="5447" data-block-fingerprint="291a0ff85f0b62b996ed" data-block-start="5404" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\bar x=\frac{\sum fx}{q}=0.634615
+\]</div>
+<div class="arithmatex" data-block-end="5499" data-block-fingerprint="95296439e6bd9a3de1bb" data-block-start="5448" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+s^2=\frac{\sum fx^2-(\sum fx)^2/q}{q-1}=1.317246
+\]</div>
+<p data-block-end="5519" data-block-fingerprint="cd08eba7c71ed037c5b5" data-block-start="5501" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">方差—均值比，也称离散指数，定义为：</p>
+<div class="arithmatex" data-block-end="5556" data-block-fingerprint="da6d93a27c262d75da9d" data-block-start="5521" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+I=\frac{s^2}{\bar x}=2.075660
+\]</div>
+<p data-block-end="5620" data-block-fingerprint="33d25ce31e4e1ad56610" data-block-start="5558" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling"><span class="arithmatex">\(I-1=1.075660\)</span> 是相对于泊松基线的超额离散量，不是与 <span class="arithmatex">\(I\)</span> 可以任意替换的第二种定义。练习中的聚集度系数为：</p>
+<div class="arithmatex" data-block-end="5699" data-block-fingerprint="6b8a7841c450cc4eefaa" data-block-start="5622" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+c_A=\frac{s^2-\bar x}{\bar x^2}=1.694979,
+\qquad \frac{1}{c_A}=0.589978
+\]</div>
+<p data-block-end="5733" data-block-fingerprint="c9503a92fefe06b99d9c" data-block-start="5701" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">若各叶片计数在同一个均值下相互独立并服从泊松分布，则离散度统计量</p>
+<div class="arithmatex" data-block-end="5756" data-block-fingerprint="5914f5c8c62c80def3d4" data-block-start="5735" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+Q=(q-1)I=321.73
+\]</div>
+<p data-block-end="6002" data-block-fingerprint="ae14eee5f1bb6297a629" data-block-start="5758" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">近似服从自由度 <span class="arithmatex">\(q-1=155\)</span> 的卡方分布；这里 <span class="arithmatex">\(p\approx9.8\times10^{-14}\)</span>，可拒绝均一、独立泊松模型。这个结果说明数据相对于该零模型过度离散，却尚未区分生物聚集、寄主叶片质量差异、叶位梯度、漏检或空间相关等原因。美国国家标准与技术研究院（National Institute of Standards and Technology，NIST）对泊松离散度检验给出的统计量正是 <span class="arithmatex">\((q-1)s^2/\bar x\)</span>。<sup id="fnref:poisson-dispersion"><a class="footnote-ref" href="#fn:poisson-dispersion">3</a></sup></p>
+<h3 data-block-end="6038" data-block-fingerprint="232db37174fe65a5fbcc" data-block-start="6004" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="peach-gum-aphids">桃胶与蚜虫生活史问题<a class="headerlink" href="#peach-gum-aphids" title="Permanent link">&para;</a></h3>
+<p data-block-end="6152" data-block-fingerprint="10bb67870f1cba531f5f" data-block-start="6040" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">桃胶是桃树等核果类木本从树干、枝条或果实组织渗出的胶状物，主要成分为复杂多糖；机械损伤、冻害和病原侵染等都可能诱发流胶。把它简单记作“树皮的分泌物”会漏掉组织损伤和流胶病理过程，也不能说明其化学性质。<sup id="fnref:peach-gum"><a class="footnote-ref" href="#fn:peach-gum">4</a></sup></p>
+<p data-block-end="6381" data-block-fingerprint="8f91a37c184effbf54aa" data-block-start="6154" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">成虫和若虫不必具有相同的空间格局，但“若虫一律聚集、有翅成虫一律随机、无翅成虫一律聚集”也不是通则。蚜虫孤雌生殖可在着陆点附近迅速建立家系斑块，无翅成虫和若虫能够在叶片内或植株间步行扩散；有翅型扩大了飞行传播距离，其着陆仍会受寄主气味、植株质量、风和边缘效应影响。翅型产生又受密度、营养、天敌和季节影响。<sup id="fnref:aphid-dispersal"><a class="footnote-ref" href="#fn:aphid-dispersal">5</a></sup> 因此，应分别记录物种、龄期、翅型、叶位和日期，在相同样本框和尺度下检验各组频数，而不是从发育阶段直接指定分布型。</p>
+<h2 data-block-end="6417" data-block-fingerprint="e431b05fed3c7b4c889e" data-block-start="6383" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="neyman-type-a">Neyman A 型聚簇模型<a class="headerlink" href="#neyman-type-a" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="6457" data-block-fingerprint="4ca2326dcddaaa3ec1d1" data-block-start="6419" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="compound-poisson-process">复合泊松过程<a class="headerlink" href="#compound-poisson-process" title="Permanent link">&para;</a></h3>
+<p data-block-end="6563" data-block-fingerprint="8e2994adb1a686251084" data-block-start="6459" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">Neyman A 型分布把计数想象成两层过程：每个样方中的潜在“聚簇中心”数服从均值为 <span class="arithmatex">\(\lambda_1\)</span> 的泊松分布，每个聚簇中心贡献的个体数再独立服从均值为 <span class="arithmatex">\(\lambda_2\)</span> 的泊松分布。于是：</p>
+<div class="arithmatex" data-block-end="6659" data-block-fingerprint="f537e7b566a90fe0e775" data-block-start="6565" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\mathrm{E}(X)=\lambda_1\lambda_2,
+\qquad
+\mathrm{Var}(X)=\lambda_1\lambda_2(1+\lambda_2)
+\]</div>
+<p data-block-end="6672" data-block-fingerprint="c819aa0113b9685bef74" data-block-start="6661" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">用矩估计代入叶片数据：</p>
+<div class="arithmatex" data-block-end="6781" data-block-fingerprint="7f2cd254b37e69916659" data-block-start="6674" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\hat\lambda_2=I-1=1.075660,
+\qquad
+\hat\lambda_1=\frac{\bar x}{\hat\lambda_2}
+=\frac{1}{c_A}=0.589978
+\]</div>
+<p data-block-end="6908" data-block-fingerprint="7ad821db6c16ed5e20eb" data-block-start="6783" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">部分教材把它们分别记作 <span class="arithmatex">\(m_2\)</span> 和 <span class="arithmatex">\(m_1\)</span>；使用这一符号时须明确对应关系，不能把 <span class="arithmatex">\(I\)</span> 本身当作每簇个体数。<span class="arithmatex">\(I&gt;1\)</span> 只提示相对泊松模型过度离散，不足以唯一识别 Neyman A 过程，因为负二项分布、环境异质性和零膨胀也能产生相同现象。</p>
+<h3 data-block-end="6947" data-block-fingerprint="af3cfb991dbd732280d7" data-block-start="6910" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="neyman-recursion-fit">概率递推与拟合检验<a class="headerlink" href="#neyman-recursion-fit" title="Permanent link">&para;</a></h3>
+<p data-block-end="6950" data-block-fingerprint="d1f75d3232cef72f09b8" data-block-start="6949" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">令</p>
+<div class="arithmatex" data-block-end="7024" data-block-fingerprint="ee3e53e3cdbe2eda5586" data-block-start="6952" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+F_0=\lambda_2e^{-\lambda_2},
+\qquad
+F_j=\frac{\lambda_2F_{j-1}}{j}
+\]</div>
+<p data-block-end="7142" data-block-fingerprint="5d631e9abd1d01ba6ba8" data-block-start="7026" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">本例得到 <span class="arithmatex">\(F_0\)</span> 至 <span class="arithmatex">\(F_5\)</span> 依次为 0.366878、0.394636、0.212247、0.076102、0.020465 和 0.004403；<span class="arithmatex">\(F_5=0.0644\)</span> 不符合上述递推关系。零计数概率与后续概率递推为：</p>
+<div class="arithmatex" data-block-end="7204" data-block-fingerprint="4e4c761821cdbd61acc0" data-block-start="7144" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+P_0=\exp\!\left[\lambda_1(e^{-\lambda_2}-1)\right]
+\]</div>
+<div class="arithmatex" data-block-end="7262" data-block-fingerprint="54c6ae95c76d5f50493e" data-block-start="7205" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+P_{r+1}=\frac{\lambda_1}{r+1}
+\sum_{k=0}^{r}F_kP_{r-k}
+\]</div>
+<p data-block-end="7299" data-block-fingerprint="d1f86640e50a7a0d65ba" data-block-start="7264" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">把 <span class="arithmatex">\(156P_x\)</span> 与观察频数比较，并将期望数小于 5 的尾部合并：</p>
+<table data-block-end="7478" data-block-fingerprint="0381f8df06289af53bc4" data-block-start="7301" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<thead>
+<tr>
+<th style="text-align: right;">虫口数</th>
+<th style="text-align: right;">观察数</th>
+<th style="text-align: right;">Neyman A 期望数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">105.753</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">22.890</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">14.788</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7.258</td>
+</tr>
+<tr>
+<td style="text-align: right;"><span class="arithmatex">\(\ge4\)</span></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5.311</td>
+</tr>
+<tr>
+<td style="text-align: right;">合计</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">156.000</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="7763" data-block-fingerprint="1bd112a98056faec1fa9" data-block-start="7480" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">Pearson 统计量为 <span class="arithmatex">\(\chi^2=3.344\)</span>。合并后有 5 类，扣除总数约束和从同一数据估计的 2 个参数，自由度为 <span class="arithmatex">\(5-1-2=2\)</span>，得到 <span class="arithmatex">\(p\approx0.188\)</span>。在这个分组与近似下没有足够证据拒绝 Neyman A 模型，但这不等于“证明原数据符合奈曼分布”。样本主要集中于零值，尾部信息有限；参数又由同一数据拟合，使用参数自助法检验，或以似然和预测检验比较 Neyman A、负二项及含环境协变量的模型，会更可靠。Neyman 最初提出这一复合计数分布，正是为了描述昆虫样方中由聚簇过程产生的超泊松变异。<sup id="fnref:neyman-original"><a class="footnote-ref" href="#fn:neyman-original">6</a></sup></p>
+<h2 data-block-end="7807" data-block-fingerprint="d44729ca94c6837c926e" data-block-start="7765" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="plant-quadrat-recalculation">植物样方数据重算<a class="headerlink" href="#plant-quadrat-recalculation" title="Permanent link">&para;</a></h2>
+<p data-block-end="7849" data-block-fingerprint="1967a8ccb1af62ccb4c5" data-block-start="7809" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">另一组练习包含 200 个样方，植物个体数从 0 到 10。完整频数与乘积如下：</p>
+<table data-block-end="8169" data-block-fingerprint="73ceb15dd7f2e3f632a0" data-block-start="7851" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<thead>
+<tr>
+<th style="text-align: right;"><span class="arithmatex">\(x\)</span>／个体·样方<span class="arithmatex">\(^{-1}\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(f\)</span>／样方</th>
+<th style="text-align: right;"><span class="arithmatex">\(fx\)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\(fx^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">128</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">36</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td style="text-align: right;">合计</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">531</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="8176" data-block-fingerprint="4738bb49c8db28e058c5" data-block-start="8171" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">由此得到：</p>
+<div class="arithmatex" data-block-end="8263" data-block-fingerprint="671b00acfd28d1690fed" data-block-start="8178" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+\bar x=\frac{145}{200}=0.725,
+\qquad
+s^2=\frac{531-145^2/200}{199}=2.140075
+\]</div>
+<div class="arithmatex" data-block-end="8317" data-block-fingerprint="e62b37e428a672e014a1" data-block-start="8264" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+I=\frac{s^2}{\bar x}=2.951828,
+\qquad
+I-1=1.951828
+\]</div>
+<p data-block-end="8449" data-block-fingerprint="3f0cdefae898233f997f" data-block-start="8319" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">也可计算 <span class="arithmatex">\(\sqrt{2/(q-1)}=0.1003\)</span>，再以 <span class="arithmatex">\((I-1)/0.1003=19.46\)</span> 与临界值比较。这是泊松零模型下对离散指数的渐近正态标准化，不是 Student 的 <span class="arithmatex">\(t\)</span> 检验，也不使用 <span class="arithmatex">\(t\)</span> 分布自由度。直接使用泊松离散度统计量：</p>
+<div class="arithmatex" data-block-end="8474" data-block-fingerprint="714e4c03795ce5f7a865" data-block-start="8451" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">\[
+Q=(200-1)I=587.41
+\]</div>
+<p data-block-end="8660" data-block-fingerprint="0ac83462a053fd820c94" data-block-start="8476" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">在近似 <span class="arithmatex">\(\chi^2_{199}\)</span> 下，<span class="arithmatex">\(p\approx5.5\times10^{-40}\)</span>，同样强烈拒绝均一、独立泊松模型。结论应写成“在本样方面积、布点和调查时段下观察到显著的过度离散”，而不是脱离尺度断言该植物具有永恒的聚集分布。克隆生长、有限种子散布和微生境斑块可能造成真实聚集；样方面积不等、环境梯度未分层、个体边界不一致和相邻样方相关也会抬高 <span class="arithmatex">\(I\)</span>。</p>
+<h2 data-block-end="8699" data-block-fingerprint="53c15d0ee69cba07d6a9" data-block-start="8662" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="from-pattern-to-model">格局描述与机制模型<a class="headerlink" href="#from-pattern-to-model" title="Permanent link">&para;</a></h2>
+<p data-block-end="8742" data-block-fingerprint="02c2b74703067d853e2c" data-block-start="8701" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">离散指数压缩了计数分布，只适合用作初步描述。后续模型应匹配数据生成过程和研究问题：</p>
+<table data-block-end="9087" data-block-fingerprint="ad638f33823de3251d68" data-block-start="8744" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<thead>
+<tr>
+<th>数据与问题</th>
+<th>可用方法</th>
+<th>需要保留的信息</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>独立样方计数，方差随均值增大</td>
+<td>泊松或负二项广义线性模型</td>
+<td>样方面积、层次、环境协变量与取样努力</td>
+</tr>
+<tr>
+<td>零值多于常规模型预期</td>
+<td>hurdle 或零膨胀模型，并与检测过程比较</td>
+<td>结构零与未检出零的生物学定义、重复调查</td>
+</tr>
+<tr>
+<td>个体坐标与邻域尺度</td>
+<td>点格局、成对相关或 Ripley 类函数</td>
+<td>坐标、边界、观察窗和空间分辨率</td>
+</tr>
+<tr>
+<td>同一地点重复计数</td>
+<td>广义线性混合模型或时空模型</td>
+<td>地点、日期、观察者和重复测量结构</td>
+</tr>
+<tr>
+<td>个体捕获历程</td>
+<td>封闭、开放、多状态或空间显式捕获—重捕模型</td>
+<td>个体标识符（identifier，ID）、每次捕获／未捕获、位置、努力与协变量</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="9338" data-block-fingerprint="9860ff7dc8989330e27e" data-block-start="9089" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">负二项模型以一个额外离散参数容纳个体间异质性，Neyman A 则对“聚簇中心—簇内个体”提出具体生成解释；两者都不应仅凭 <span class="arithmatex">\(I&gt;1\)</span> 自动选定。若有土壤水分、叶位或光照等空间协变量，先把它们纳入均值结构，再检查残余空间相关，才可区分环境斑块与个体相互作用。相关统计接口见<a href="../../../biostat/probability/#poisson-distribution">概率分布</a>和<a href="../../../biostat/generalized_mixed_models/">广义线性与混合模型</a>。</p>
+<h2 data-block-end="9369" data-block-fingerprint="39b171c64178836cb5fd" data-block-start="9340" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="records-reporting">记录与报告<a class="headerlink" href="#records-reporting" title="Permanent link">&para;</a></h2>
+<p data-block-end="9521" data-block-fingerprint="5713ae9a17e2f08b2376" data-block-start="9371" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">样方记录至少包括目标物种或形态种、个体定义、样方坐标与面积、边界规则、布点方式、日期、观察者、取样努力和原始计数。标记重捕还应逐个体记录标记类型、首次与各次捕获时间、地点、捕获装置、处理结局和标记状态，并保留每次未捕获所形成的捕获历程。只保存合计数会阻断捕获概率异质性、移动和开放种群模型的后续分析。</p>
+<p data-block-end="9657" data-block-fingerprint="e99eae1a2819ab0a37f1" data-block-start="9523" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">报告结果时同时给出样本量、点估计、区间算法、模型假设和诊断。零重捕、全零样方、异常高计数和无法辨认的标记都是数据，不得为得到有限估计或“符合某分布”而删除。若经典手算方法与现代模型给出不同结论，应并列说明估计对象、假设和不确定度来源，使计算训练与真实生态推断保持连贯。</p>
+<h2 data-block-end="9685" data-block-fingerprint="8d7d76c5874dd22264b7" data-block-start="9659" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul data-block-end="12002" data-block-fingerprint="cfc0d314e45fe99618d3" data-block-start="9687" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling">
+<li>Krebs, C. J. <em>Ecological Methodology</em>. 3rd ed. University of British Columbia, 2014.</li>
+<li>Williams, B. K., Nichols, J. D. &amp; Conroy, M. J. <em>Analysis and Management of Animal Populations</em>. Academic Press, 2002.</li>
+<li>Fortin, M.-J. &amp; Dale, M. R. T. <em>Spatial Analysis: A Guide for Ecologists</em>. 2nd ed. Cambridge University Press, 2014.</li>
+<li>Hilbe, J. M. <em>Negative Binomial Regression</em>. 2nd ed. Cambridge University Press, 2011.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:closed-estimators">
+<p>Dettloff K. Assessment of bias and precision among simple closed population mark-recapture estimators. <em>Fisheries Research</em>. 2023;268:106756. <a href="https://repository.library.noaa.gov/view/noaa/52288/noaa_52288_DS1.pdf">NOAA repository</a>; <a href="https://doi.org/10.1016/j.fishres.2023.106756">doi:10.1016/j.fishres.2023.106756</a>.&#160;<a class="footnote-backref" href="#fnref:closed-estimators" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:closed-estimators" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:otis-closed">
+<p>Otis DL, Burnham KP, White GC, Anderson DR. Statistical inference from capture data on closed animal populations. <em>Wildlife Monographs</em>. 1978;(62):3–135. <a href="https://pubs.usgs.gov/publication/70119899">U.S. Geological Survey record</a>.&#160;<a class="footnote-backref" href="#fnref:otis-closed" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:poisson-dispersion">
+<p>National Institute of Standards and Technology. <a href="https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/poisdisp.htm">Poisson dispersion test</a>; <a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/ind_disp.htm">index of dispersion</a>.&#160;<a class="footnote-backref" href="#fnref:poisson-dispersion" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:peach-gum">
+<p>Simas-Tosin FF, Barraza RR, Petkowicz CLO, et al. Rheological and structural characteristics of peach tree gum exudate. <em>Food Hydrocolloids</em>. 2010;24:486–493. <a href="https://doi.org/10.1016/j.foodhyd.2009.12.010">doi:10.1016/j.foodhyd.2009.12.010</a>; University of Kentucky Plant Pathology. <a href="https://publications.mgcafe.uky.edu/ppfs-fr-t-8">Gummosis of Fruit Trees</a>.&#160;<a class="footnote-backref" href="#fnref:peach-gum" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:aphid-dispersal">
+<p>Braendle C, Davis GK, Brisson JA, Stern DL. Wing dimorphism in aphids. <em>Heredity</em>. 2006;97:192–199. <a href="https://doi.org/10.1038/sj.hdy.6800863">doi:10.1038/sj.hdy.6800863</a>; Ben-Ari M, Gish M, Inbar M. Walking aphids can partake in within-field dispersal to distant plants. <em>Basic and Applied Ecology</em>. 2015;16:162–171. <a href="https://doi.org/10.1016/j.baae.2014.12.004">doi:10.1016/j.baae.2014.12.004</a>.&#160;<a class="footnote-backref" href="#fnref:aphid-dispersal" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:neyman-original">
+<p>Neyman J. On a new class of “contagious” distributions, applicable in entomology and bacteriology. <em>Annals of Mathematical Statistics</em>. 1939;10:35–57. <a href="https://doi.org/10.1214/aoms/1177732245">doi:10.1214/aoms/1177732245</a>.&#160;<a class="footnote-backref" href="#fnref:neyman-original" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/exptech/ecology_behavior/population_sampling.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/exptech/ecology_behavior/population_sampling.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-exptech-ecology-behavior-population-sampling"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ecophysiology/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 环境梯度与生态生理实验">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                环境梯度与生态生理实验
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../population_dynamics/" class="md-footer__link md-footer__link--next" aria-label="Next: 种群增长与种间竞争实验">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                种群增长与种间竞争实验
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../../js/tablesort.js"></script>
+      
+        <script src="../../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

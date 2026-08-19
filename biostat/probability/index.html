@@ -1,0 +1,4012 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/biostat/probability/">
+      
+      
+        <link rel="prev" href="../data_description/">
+      
+      
+        <link rel="next" href="../sampling_estimation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>概率与概率分布 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              概率与概率分布
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  统计
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  统计
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimental_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验设计、效能与可重复统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_16_3" id="__nav_16_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据与概率
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  数据与概率
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物数据整理与描述统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  概率与概率分布
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  概率与概率分布
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probability-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        概率空间与事件
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概率空间与事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        随机试验、样本空间与事件
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        事件关系
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        概率公理与加法法则
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        条件概率、独立性与贝叶斯公式
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="条件概率、独立性与贝叶斯公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        条件概率与乘法法则
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        独立与互斥
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        全概率与贝叶斯公式
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        随机变量与概率分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机变量与概率分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从结果到数值
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        期望与方差
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        联合、边缘与条件分布
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        大数定律与长期稳定性
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        二项分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二项分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        伯努利试验与概率质量函数
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        中心、离散与形状
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poisson-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        泊松分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="泊松分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        事件计数与发生率
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        与二项分布的关系及模型偏离
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        正态分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正态分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        密度、位置与尺度
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        标准化与概率面积
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        正态近似的边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        生命科学中的其他常用分布
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从机制到概率模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sampling_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  抽样、参数估计与置信区间
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../hypothesis_testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  假设检验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../anova_regression/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  回归与多变量
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survival_longitudinal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生存分析与纵向数据
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_computational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  贝叶斯推断与计算统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../causal_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  因果推断
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systematic_review_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统综述与荟萃分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probability-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        概率空间与事件
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概率空间与事件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        随机试验、样本空间与事件
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        事件关系
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        概率公理与加法法则
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        条件概率、独立性与贝叶斯公式
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="条件概率、独立性与贝叶斯公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        条件概率与乘法法则
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        独立与互斥
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        全概率与贝叶斯公式
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        随机变量与概率分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="随机变量与概率分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从结果到数值
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        期望与方差
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        联合、边缘与条件分布
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        大数定律与长期稳定性
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        二项分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二项分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        伯努利试验与概率质量函数
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        中心、离散与形状
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poisson-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        泊松分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="泊松分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        事件计数与发生率
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        与二项分布的关系及模型偏离
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        正态分布
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="正态分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        密度、位置与尺度
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        标准化与概率面积
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        正态近似的边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        生命科学中的其他常用分布
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从机制到概率模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    统计
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../data_description/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    数据与概率
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="9" data-block-fingerprint="e841a272752357c08d65" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_1">概率与概率分布<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="169" data-block-fingerprint="bbe2e808ed0105a87f46" data-block-start="11" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">生物研究面对的随机性有多种来源：亲本产生哪一种配子、一个样方中出现多少个体、同一表型在不同个体上取何数值，以及某个事件要等待多久，都可能随重复观察而改变。概率论为这些不确定结果建立数学模型，概率分布则把可能取值及其相对可能性组织起来。它们既是二项检验、回归模型和生存分析的基础，也是理解抽样波动与统计推断的共同语言。</p>
+<p data-block-end="320" data-block-fingerprint="c49e7a3e1a460e909e38" data-block-start="171" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">每一种概率分布都包含取值范围、重复机制、独立性、发生率或误差结构等模型条件。计数数据是否适合泊松分布（Poisson distribution）、钟形数据是否适合正态分布，都需要结合这些条件判断。下面从事件关系开始，逐步建立随机变量、期望与方差，再以二项、泊松和正态分布说明怎样从生物过程选择模型。</p>
+<h2 data-block-end="355" data-block-fingerprint="28414a4ecbc1bd5f45ea" data-block-start="322" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="probability-space">概率空间与事件<a class="headerlink" href="#probability-space" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="373" data-block-fingerprint="aee463e215024542b5b7" data-block-start="357" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_2">随机试验、样本空间与事件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p data-block-end="543" data-block-fingerprint="021c50bf182356f23bb3" data-block-start="375" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">在规定条件下可以重复、而单次结果不能事先确定的过程称为随机试验。一次杂合子 <code>Aa</code> 产生配子时，结果可能是 <code>A</code> 或 <code>a</code>；从一个群落样方记录物种组成时，结果则复杂得多。试验所有可能基本结果组成<strong>样本空间</strong>，通常记为 <span class="arithmatex">\(\Omega\)</span>。样本空间中的一个结果记为 <span class="arithmatex">\(\omega\)</span>，由若干结果构成的集合称为<strong>事件</strong>。</p>
+<p data-block-end="711" data-block-fingerprint="3a18dc65e03af19ef83a" data-block-start="545" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">事件 <span class="arithmatex">\(A\)</span> 发生，表示实际结果落入集合 <span class="arithmatex">\(A\)</span>。不可能事件是空集 <span class="arithmatex">\(\varnothing\)</span>，必然事件是整个样本空间 <span class="arithmatex">\(\Omega\)</span>。样本空间必须连同试验单位和观察规则定义：抛两枚可区分硬币时，<span class="arithmatex">\((正,反)\)</span> 与 <span class="arithmatex">\((反,正)\)</span> 是不同结果；若只记录正面总数，则随机变量把这两个结果映射成同一个数值 1。</p>
+<p data-block-end="810" data-block-fingerprint="d6fad56250f78a823e82" data-block-start="713" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">给有限样本空间中的每个基本结果赋予相同概率时，事件概率可以用“有利结果数除以全部结果数”计算。等可能性需来自对称性、随机化或模型假设；实际生物问题更多依赖频率资料、机制模型或参数估计来赋予概率。</p>
+<h3 data-block-end="820" data-block-fingerprint="0cea7aed24608b3ff03d" data-block-start="812" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_3">事件关系<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p data-block-end="841" data-block-fingerprint="19937f7e617ca32ea01d" data-block-start="822" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">集合运算准确表达“或”“且”与“非”：</p>
+<ul data-block-end="975" data-block-fingerprint="d3d9ae930c68d6068d4e" data-block-start="843" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">
+<li>并集 <span class="arithmatex">\(A\cup B\)</span> 表示至少一个事件发生；</li>
+<li>交集 <span class="arithmatex">\(A\cap B\)</span> 表示两个事件同时发生；</li>
+<li>补集 <span class="arithmatex">\(A^c\)</span> 表示事件 <span class="arithmatex">\(A\)</span> 不发生；</li>
+<li>差集 <span class="arithmatex">\(A\setminus B\)</span> 表示 <span class="arithmatex">\(A\)</span> 发生而 <span class="arithmatex">\(B\)</span> 不发生。</li>
+</ul>
+<p data-block-end="1171" data-block-fingerprint="1c2b7b546da9fbca7e1d" data-block-start="977" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">若 <span class="arithmatex">\(A\cap B=\varnothing\)</span>，两事件<strong>互斥</strong>，同一次试验中不能同时发生。若 <span class="arithmatex">\(A\cup B=\Omega\)</span> 且二者互斥，则互为对立事件。若一组事件 <span class="arithmatex">\(A_1,\ldots,A_m\)</span> 两两互斥且并集为 <span class="arithmatex">\(\Omega\)</span>，它们构成样本空间的一个<strong>划分</strong>，旧称“完全事件系”。年龄组、互不重叠的基因型类别或互斥的疾病状态，在定义完整时都可以形成划分。</p>
+<h3 data-block-end="1186" data-block-fingerprint="bf25711d1a406be9e56c" data-block-start="1173" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_4">概率公理与加法法则<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p data-block-end="1224" data-block-fingerprint="e024312594bf069a78b9" data-block-start="1188" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">概率 <span class="arithmatex">\(P\)</span> 对事件赋予 0 到 1 之间的数，并满足三个基本条件：</p>
+<div class="arithmatex" data-block-end="1261" data-block-fingerprint="8a0074f5944409e1729d" data-block-start="1226" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A)\ge 0,\qquad P(\Omega)=1,
+\]</div>
+<p data-block-end="1297" data-block-fingerprint="45e4645ef724c7450a17" data-block-start="1263" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">以及对两两互斥的可数事件序列 <span class="arithmatex">\(A_1,A_2,\ldots\)</span>，</p>
+<div class="arithmatex" data-block-end="1347" data-block-fingerprint="0f59d7fb70d698ff136c" data-block-start="1299" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P\left(\bigcup_i A_i\right)=\sum_i P(A_i).
+\]</div>
+<p data-block-end="1385" data-block-fingerprint="a03a8763673d61a47917" data-block-start="1349" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">由此可得 <span class="arithmatex">\(P(A^c)=1-P(A)\)</span>。对任意两个事件，加法法则为</p>
+<div class="arithmatex" data-block-end="1425" data-block-fingerprint="e6bde155ac5c727fbae6" data-block-start="1387" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B).
+\]</div>
+<p data-block-end="1541" data-block-fingerprint="39900c074f7a375ae456" data-block-start="1427" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">交集部分同时计入了 <span class="arithmatex">\(P(A)\)</span> 与 <span class="arithmatex">\(P(B)\)</span>，所以必须减去一次。只有在 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 互斥时，才有 <span class="arithmatex">\(P(A\cup B)=P(A)+P(B)\)</span>。把简式用于可以同时发生的事件，会重复计算共同部分。</p>
+<h2 data-block-end="1589" data-block-fingerprint="e6ec7a61d1a3abba7520" data-block-start="1543" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="conditional-probability">条件概率、独立性与贝叶斯公式<a class="headerlink" href="#conditional-probability" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="1604" data-block-fingerprint="9fa5cc736650592e8892" data-block-start="1591" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_5">条件概率与乘法法则<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p data-block-end="1676" data-block-fingerprint="9bb826102b5019c0e6f9" data-block-start="1606" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">得知事件 <span class="arithmatex">\(B\)</span> 已发生后，可能结果被限制到 <span class="arithmatex">\(B\)</span> 内。若 <span class="arithmatex">\(P(B)&gt;0\)</span>，事件 <span class="arithmatex">\(A\)</span> 在这一新样本空间中的条件概率为</p>
+<div class="arithmatex" data-block-end="1719" data-block-fingerprint="9d45d1b99f0ea98301a6" data-block-start="1678" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+\]</div>
+<p data-block-end="1735" data-block-fingerprint="47f5c2b48a201191da71" data-block-start="1721" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">等式重新排列后得到乘法法则：</p>
+<div class="arithmatex" data-block-end="1796" data-block-fingerprint="0596a8221e56f566ed25" data-block-start="1737" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A\cap B)=P(B)P(A\mid B)
+           =P(A)P(B\mid A).
+\]</div>
+<p data-block-end="1952" data-block-fingerprint="9cf396842ed6e8c60dcb" data-block-start="1798" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">条件次序具有实际含义。诊断试验的敏感度 <span class="arithmatex">\(P(+\mid D)\)</span> 是患病条件下呈阳性的概率，阳性预测值 <span class="arithmatex">\(P(D\mid +)\)</span> 则是已呈阳性者患病的概率；二者通常不同。Penn State 的概率课程也以诊断资料说明，条件概率的第一步是把样本空间限制到条件事件。<sup id="fnref:psu-conditional"><a class="footnote-ref" href="#fn:psu-conditional">1</a></sup></p>
+<p data-block-end="1972" data-block-fingerprint="f5a8444984f55ab7087b" data-block-start="1954" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">多个事件的链式乘法同样保留逐层条件：</p>
+<div class="arithmatex" data-block-end="2078" data-block-fingerprint="c593f81b0e0602fdebc0" data-block-start="1974" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A_1\cap\cdots\cap A_m)
+=P(A_1)\prod_{j=2}^{m}
+P\!\left(A_j\mid A_1\cap\cdots\cap A_{j-1}\right).
+\]</div>
+<h3 data-block-end="2089" data-block-fingerprint="694f0e833da54c5e231b" data-block-start="2080" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_6">独立与互斥<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p data-block-end="2123" data-block-fingerprint="38a48d7f9a07a166ffcf" data-block-start="2091" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">若一个事件是否发生不改变另一个事件的概率，则称二者独立。数学上，</p>
+<div class="arithmatex" data-block-end="2151" data-block-fingerprint="ebe3b079c23d6c805939" data-block-start="2125" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A\cap B)=P(A)P(B).
+\]</div>
+<p data-block-end="2266" data-block-fingerprint="94796060de1b52aaf70c" data-block-start="2153" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">当相关概率非零时，这也等价于 <span class="arithmatex">\(P(A\mid B)=P(A)\)</span> 和 <span class="arithmatex">\(P(B\mid A)=P(B)\)</span>。因此 <span class="arithmatex">\(P(A\cap B)=P(A)P(B)\)</span> 是独立事件的乘法简式；一般事件则使用带条件概率的乘法法则。</p>
+<p data-block-end="2389" data-block-fingerprint="3e7e0b80763a0aa84730" data-block-start="2268" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">互斥与独立表达不同关系。两个概率均大于零的互斥事件一旦其中一个发生，另一个便不可能发生，因而不独立。例如一只二倍体个体在单个位点上“基因型为 <code>AA</code>”与“基因型为 <code>Aa</code>”互斥；来自不同、独立减数分裂事件的等位基因传递才可能在模型中独立。</p>
+<p data-block-end="2470" data-block-fingerprint="54e39744ce4261ef2550" data-block-start="2391" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">三个以上事件还要区分两两独立与相互独立。两两独立只约束每一对事件，相互独立还要求事件的任意组合满足相应的概率乘积；二项模型等重复试验通常需要整组试验相互独立。</p>
+<h3 data-block-end="2485" data-block-fingerprint="153309fd954706b786a5" data-block-start="2472" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_7">全概率与贝叶斯公式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p data-block-end="2573" data-block-fingerprint="398d46533ae181a55b6d" data-block-start="2487" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">若 <span class="arithmatex">\(A_1,\ldots,A_m\)</span> 构成样本空间的划分，且 <span class="arithmatex">\(P(A_i)&gt;0\)</span>，那么任意事件 <span class="arithmatex">\(B\)</span> 可拆成互斥的 <span class="arithmatex">\(B\cap A_i\)</span>。全概率公式为</p>
+<div class="arithmatex" data-block-end="2619" data-block-fingerprint="a9e370ca151520b90b16" data-block-start="2575" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(B)=\sum_{i=1}^{m}P(A_i)P(B\mid A_i).
+\]</div>
+<p data-block-end="2647" data-block-fingerprint="8afb13d4a1a5254862e2" data-block-start="2621" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">它把各来源的条件概率按来源概率加权，再对各来源求和。</p>
+<p data-block-end="2700" data-block-fingerprint="880b3530a75e71c2c7ca" data-block-start="2649" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">在 <span class="arithmatex">\(P(B)&gt;0\)</span> 时，观察到 <span class="arithmatex">\(B\)</span> 后属于第 <span class="arithmatex">\(k\)</span> 个来源的概率由贝叶斯公式给出：</p>
+<div class="arithmatex" data-block-end="2790" data-block-fingerprint="7a20a321528151289a1c" data-block-start="2702" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(A_k\mid B)
+=\frac{P(A_k)P(B\mid A_k)}
+       {\sum_{i=1}^{m}P(A_i)P(B\mid A_i)}.
+\]</div>
+<p data-block-end="2930" data-block-fingerprint="12af1065796a261f4d80" data-block-start="2792" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability"><span class="arithmatex">\(P(A_k)\)</span> 常称先验概率，<span class="arithmatex">\(P(A_k\mid B)\)</span> 常称后验概率。这里的“先验”和“后验”首先描述信息更新前后的事件概率；把参数本身设为随机量、构造先验分布和后验分布属于更完整的<a href="../bayesian_computational/">贝叶斯推断与计算统计</a>。</p>
+<p data-block-end="2985" data-block-fingerprint="f48c83f917c7bb38b983" data-block-start="2932" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">一个假想筛查例子可以显示基准率的作用。若目标群体患病率为 1%，试验敏感度为 95%、特异度为 90%，则</p>
+<div class="arithmatex" data-block-end="3079" data-block-fingerprint="701887e7dcd7369f1d6e" data-block-start="2987" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(D\mid +)
+=\frac{0.01\times0.95}
+       {0.01\times0.95+0.99\times0.10}
+\approx0.088.
+\]</div>
+<p data-block-end="3132" data-block-fingerprint="e22a1ca73a33fd686708" data-block-start="3081" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">阳性者真正患病的概率由患病率、敏感度和假阳性率共同决定。这里的数值仅用于演示公式，未对应具体检测项目。</p>
+<h2 data-block-end="3168" data-block-fingerprint="7fa60455cec493621cfe" data-block-start="3134" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="random-variables">随机变量与概率分布<a class="headerlink" href="#random-variables" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="3180" data-block-fingerprint="4ea24a23d3ea2d5c86ad" data-block-start="3170" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_8">从结果到数值<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p data-block-end="3300" data-block-fingerprint="e2db1f62b4f2ff36b8f2" data-block-start="3182" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability"><strong>随机变量</strong>是把样本空间中的结果映射为数值的函数。抛十次硬币的完整正反序列是试验结果，“正面次数”则是取 <span class="arithmatex">\(0,1,\ldots,10\)</span> 的随机变量。随机变量用大写字母 <span class="arithmatex">\(X\)</span> 表示，观察到的具体值用小写 <span class="arithmatex">\(x\)</span> 表示。</p>
+<p data-block-end="3331" data-block-fingerprint="12c99410eb2c3c0cf3de" data-block-start="3302" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">离散随机变量的可能取值有限或可数，其<strong>概率质量函数</strong>为</p>
+<div class="arithmatex" data-block-end="3394" data-block-fingerprint="df6d88cff218ebe3e624" data-block-start="3333" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+p_X(x)=P(X=x),\qquad p_X(x)\ge0,\qquad
+\sum_x p_X(x)=1.
+\]</div>
+<p data-block-end="3428" data-block-fingerprint="32fdb2378c9850750c55" data-block-start="3396" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">连续随机变量用<strong>概率密度函数</strong> <span class="arithmatex">\(f_X(x)\)</span> 描述：</p>
+<div class="arithmatex" data-block-end="3490" data-block-fingerprint="f27237892ab53b52f9be" data-block-start="3430" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+f_X(x)\ge0,\qquad
+\int_{-\infty}^{\infty}f_X(x)\,dx=1,
+\]</div>
+<p data-block-end="3493" data-block-fingerprint="41605b7064f8a4d33a22" data-block-start="3492" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">且</p>
+<div class="arithmatex" data-block-end="3536" data-block-fingerprint="c58f665b7e2602fa3a98" data-block-start="3495" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(a\le X\le b)=\int_a^b f_X(x)\,dx.
+\]</div>
+<p data-block-end="3720" data-block-fingerprint="70949f2d4a583472b521" data-block-start="3538" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">密度曲线下的面积表示概率。对连续变量，单点概率 <span class="arithmatex">\(P(X=x)=0\)</span>；密度高度描述单位取值尺度上的概率集中程度，窄区间上的密度甚至可以大于 1。美国国家标准与技术研究院（National Institute of Standards and Technology，NIST）的概率分布定义明确区分了离散质量与连续密度。<sup id="fnref:nist-distributions"><a class="footnote-ref" href="#fn:nist-distributions">2</a></sup></p>
+<p data-block-end="3743" data-block-fingerprint="77c05ce9a31c45be3ca5" data-block-start="3722" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">两类随机变量都可以用累积分布函数统一表示：</p>
+<div class="arithmatex" data-block-end="3768" data-block-fingerprint="337eb7dd667663d08274" data-block-start="3745" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+F_X(x)=P(X\le x).
+\]</div>
+<p data-block-end="3915" data-block-fingerprint="2fcae2386957b716116d" data-block-start="3770" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">离散分布的 <span class="arithmatex">\(F_X\)</span> 呈阶梯状，连续分布在存在密度时满足 <span class="arithmatex">\(F_X(x)=\int_{-\infty}^{x}f_X(t)\,dt\)</span>。分位数是累积概率达到指定水平时的取值；离散分布可能跨过目标概率，因此软件通常把分位数定义为使 <span class="arithmatex">\(F_X(x)\ge p\)</span> 的最小 <span class="arithmatex">\(x\)</span>。</p>
+<h3 data-block-end="3926" data-block-fingerprint="798270e815f2a08d1ebd" data-block-start="3917" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_9">期望与方差<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p data-block-end="3958" data-block-fingerprint="a45662d18beda30b8b52" data-block-start="3928" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">期望给出随机变量在概率模型下的加权中心。离散和连续情形分别为</p>
+<div class="arithmatex" data-block-end="4037" data-block-fingerprint="85945c351cddc4e3e689" data-block-start="3960" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+E(X)=\sum_x x\,p_X(x),
+\qquad
+E(X)=\int_{-\infty}^{\infty}x f_X(x)\,dx,
+\]</div>
+<p data-block-end="4104" data-block-fingerprint="2588f734552ec70676ac" data-block-start="4039" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">前提是相应和或积分存在。期望不必是随机变量可能实际取得的值，也不必是最常见值。例如公平六面骰的期望为 3.5，却不会掷出 3.5。</p>
+<p data-block-end="4122" data-block-fingerprint="dad4c28e69e98b77813f" data-block-start="4106" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">方差衡量结果围绕期望的平方离散：</p>
+<div class="arithmatex" data-block-end="4197" data-block-fingerprint="cafce7d58b3a0b1fb76f" data-block-start="4124" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+\operatorname{Var}(X)
+=E\!\left[(X-E(X))^2\right]
+=E(X^2)-[E(X)]^2.
+\]</div>
+<p data-block-end="4376" data-block-fingerprint="1c4750802067688b74b5" data-block-start="4199" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">标准差为 <span class="arithmatex">\(\sqrt{\operatorname{Var}(X)}\)</span>，与 <span class="arithmatex">\(X\)</span> 具有相同单位。期望具有线性性质，即使变量不独立也有 <span class="arithmatex">\(E(aX+bY)=aE(X)+bE(Y)\)</span>；方差相加则要考虑协方差，只有 <span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 独立或至少不相关时，才可将 <span class="arithmatex">\(\operatorname{Var}(X+Y)\)</span> 简化为两方差之和。</p>
+<h3 data-block-end="4392" data-block-fingerprint="4152cfd99c4e6859650d" data-block-start="4378" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_10">联合、边缘与条件分布<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p data-block-end="4485" data-block-fingerprint="5d71129aa5a3f77dc127" data-block-start="4394" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">同时研究两个随机变量时，联合分布描述 <span class="arithmatex">\((X,Y)\)</span> 的共同取值。离散情形的联合质量函数为 <span class="arithmatex">\(p_{X,Y}(x,y)=P(X=x,Y=y)\)</span>。对另一个变量求和得到边缘分布：</p>
+<div class="arithmatex" data-block-end="4520" data-block-fingerprint="f3abadd6e086bcb3f818" data-block-start="4487" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+p_X(x)=\sum_y p_{X,Y}(x,y).
+\]</div>
+<p data-block-end="4544" data-block-fingerprint="c0d1e4437cdcb965fd2a" data-block-start="4522" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">在 <span class="arithmatex">\(p_Y(y)&gt;0\)</span> 时，条件分布为</p>
+<div class="arithmatex" data-block-end="4602" data-block-fingerprint="bed1dcfa92c9ebd9fdd2" data-block-start="4546" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+p_{X\mid Y}(x\mid y)
+=\frac{p_{X,Y}(x,y)}{p_Y(y)}.
+\]</div>
+<p data-block-end="4758" data-block-fingerprint="6fa8d36a89d3d9b3e4b2" data-block-start="4604" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">连续情形把求和换为积分、把质量函数换为密度。若联合分布可以分解为边缘分布乘积，<span class="arithmatex">\(p_{X,Y}(x,y)=p_X(x)p_Y(y)\)</span> 或 <span class="arithmatex">\(f_{X,Y}(x,y)=f_X(x)f_Y(y)\)</span>，随机变量独立。个体内多次测量、亲缘个体和同一批次样本往往具有联合结构，需要在边缘分布之外描述变量间的依赖。</p>
+<h2 data-block-end="4799" data-block-fingerprint="b038cd36ed31c7be0ca9" data-block-start="4760" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="law-of-large-numbers">大数定律与长期稳定性<a class="headerlink" href="#law-of-large-numbers" title="Permanent link">&para;</a></h2>
+<p data-block-end="4855" data-block-fingerprint="fc7c79a896a4379f7de0" data-block-start="4801" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">设 <span class="arithmatex">\(X_1,\ldots,X_n\)</span> 为独立同分布且具有有限期望 <span class="arithmatex">\(\mu\)</span> 的随机变量，样本均值为</p>
+<div class="arithmatex" data-block-end="4901" data-block-fingerprint="91cb20ccc197f4837ad5" data-block-start="4857" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+\bar X_n=\frac{1}{n}\sum_{i=1}^{n}X_i.
+\]</div>
+<p data-block-end="4933" data-block-fingerprint="befec7ef2dd432d80c61" data-block-start="4903" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">弱大数定律说明，对任意 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，</p>
+<div class="arithmatex" data-block-end="5019" data-block-fingerprint="bfbbbd6ac98ff2047149" data-block-start="4935" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P\!\left(|\bar X_n-\mu|&gt;\varepsilon\right)\longrightarrow0
+\qquad(n\to\infty).
+\]</div>
+<p data-block-end="5138" data-block-fingerprint="f18fbc27a44958bcf22e" data-block-start="5021" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">对 Bernoulli 指示变量，<span class="arithmatex">\(\bar X_n\)</span> 就是事件发生的相对频率，所以长期频率会趋近事件概率。MIT 的概率课程把这一结论表述为样本均值依概率收敛，并以 Chebyshev 不等式建立其基本形式。<sup id="fnref:mit-lln"><a class="footnote-ref" href="#fn:mit-lln">3</a></sup></p>
+<p data-block-end="5301" data-block-fingerprint="da09ba22770eecd60ae8" data-block-start="5140" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">大数定律描述平均或比例随重复次数增加而稳定。短序列仍可远离理论比例；在相互独立且成功概率不变的试验中，此前连续失败也不改变下一次成功的概率。大数定律关注样本平均的收敛，样本均值的分布形状怎样随 <span class="arithmatex">\(n\)</span> 改变则属于中心极限定理，将在<a href="../sampling_estimation/">抽样、参数估计与置信区间</a>中继续讨论。</p>
+<h2 data-block-end="5337" data-block-fingerprint="1660879bd2b79eaf7a44" data-block-start="5303" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="binomial-distribution">二项分布<a class="headerlink" href="#binomial-distribution" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="5355" data-block-fingerprint="947761925f86b0ea5182" data-block-start="5339" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_11">伯努利试验与概率质量函数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p data-block-end="5493" data-block-fingerprint="9e0441dfc20d6f7c8b56" data-block-start="5357" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">一次只有成功与失败两种互斥结果的伯努利试验（Bernoulli trial）可用伯努利随机变量表示，成功记为 1，失败记为 0，成功概率为 <span class="arithmatex">\(p\)</span>，失败概率为 <span class="arithmatex">\(q=1-p\)</span>。若进行固定的 <span class="arithmatex">\(n\)</span> 次相互独立试验，且每次成功概率都为同一个 <span class="arithmatex">\(p\)</span>，成功总数</p>
+<div class="arithmatex" data-block-end="5520" data-block-fingerprint="387f07a7546f1da56726" data-block-start="5495" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+X=\sum_{i=1}^{n}X_i
+\]</div>
+<p data-block-end="5573" data-block-fingerprint="ff1c6fc0607951b83a84" data-block-start="5522" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">服从二项分布，记为 <span class="arithmatex">\(X\sim\operatorname{Bin}(n,p)\)</span>。其概率质量函数为</p>
+<div class="arithmatex" data-block-end="5638" data-block-fingerprint="2fd9d4c16201d81efb41" data-block-start="5575" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(X=x)=\binom{n}{x}p^x(1-p)^{n-x},
+\qquad x=0,1,\ldots,n,
+\]</div>
+<p data-block-end="5695" data-block-fingerprint="348dc31168b83f60ee85" data-block-start="5640" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">其中 <span class="arithmatex">\(\binom{n}{x}\)</span> 计算 <span class="arithmatex">\(n\)</span> 次试验中恰有 <span class="arithmatex">\(x\)</span> 次成功的排列数。累计概率为</p>
+<div class="arithmatex" data-block-end="5755" data-block-fingerprint="ad683dc598ba9e606164" data-block-start="5697" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(X\le k)=\sum_{x=0}^{k}
+\binom{n}{x}p^x(1-p)^{n-x}.
+\]</div>
+<p data-block-end="5878" data-block-fingerprint="7780994ef48610fa0dc3" data-block-start="5757" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">例如在一个理想的、无选择且后代相互独立的孟德尔分离模型中，<code>Aa × Aa</code> 后代呈隐性表型的概率为 <span class="arithmatex">\(p=1/4\)</span>；固定观察 <span class="arithmatex">\(n\)</span> 个独立后代时，隐性个体数可用二项分布建模。若同一果实内种子共享母体或微环境，独立性则需要重新评估。</p>
+<h3 data-block-end="5892" data-block-fingerprint="3a256742504286e308b4" data-block-start="5880" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_12">中心、离散与形状<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p data-block-end="5907" data-block-fingerprint="29f6679574daf31c87dd" data-block-start="5894" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">二项随机变量的期望和方差为</p>
+<div class="arithmatex" data-block-end="5964" data-block-fingerprint="c9a0b869aca672e4350a" data-block-start="5909" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+E(X)=np,\qquad
+\operatorname{Var}(X)=np(1-p)=npq.
+\]</div>
+<p data-block-end="6017" data-block-fingerprint="7708d7cb505ef95c6aff" data-block-start="5966" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">标准差为 <span class="arithmatex">\(\sqrt{npq}\)</span>。样本成功比例 <span class="arithmatex">\(\hat p=X/n\)</span> 的期望与标准差则为</p>
+<div class="arithmatex" data-block-end="6115" data-block-fingerprint="99d6667b4b9ff4c779c8" data-block-start="6019" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+E(\hat p)=p,\qquad
+\operatorname{SD}(\hat p)=\sqrt{\frac{p(1-p)}{n}}
+=\sqrt{\frac{pq}{n}}.
+\]</div>
+<p data-block-end="6179" data-block-fingerprint="fcd0de31001c53435134" data-block-start="6117" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">样本比例的标准差由 <span class="arithmatex">\(p\)</span>、<span class="arithmatex">\(q\)</span> 与试验数共同决定，并随独立试验数增加而缩小，这正是大数定律在伯努利试验中的体现。</p>
+<p data-block-end="6400" data-block-fingerprint="29f828215cc0db200fa9" data-block-start="6181" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">当 <span class="arithmatex">\(p=0.5\)</span> 时二项分布对称；<span class="arithmatex">\(p\)</span> 接近 0 或 1 时分布偏斜。随着 <span class="arithmatex">\(np\)</span> 与 <span class="arithmatex">\(n(1-p)\)</span> 同时增大，标准化后的二项分布可由正态分布近似；近似质量还取决于所求尾部和精度，需要综合判断而非只按 <span class="arithmatex">\(n\)</span> 设定阈值。离散计数用连续正态近似时常采用连续性校正；现代软件可以直接计算二项尾概率时，精确计算通常更稳妥。NIST 的二项分布页面列出了相同的质量函数、均值和标准差。<sup id="fnref:nist-binomial"><a class="footnote-ref" href="#fn:nist-binomial">4</a></sup></p>
+<p data-block-end="6500" data-block-fingerprint="9a9754442246bde4e4db" data-block-start="6402" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">固定 <span class="arithmatex">\(n\)</span>、恒定 <span class="arithmatex">\(p\)</span> 和独立性都是模型条件。从有限总体中不放回抽样时，试验并不独立，成功数通常服从超几何分布；不同个体的成功概率异质、窝内聚集或批次效应也会使二项变异不足以描述数据。</p>
+<h2 data-block-end="6535" data-block-fingerprint="6b9e929590341b0e860d" data-block-start="6502" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="poisson-distribution">泊松分布<a class="headerlink" href="#poisson-distribution" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="6549" data-block-fingerprint="741734896a911f87bb3e" data-block-start="6537" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_13">事件计数与发生率<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p data-block-end="6667" data-block-fingerprint="f7ef8021723b05946748" data-block-start="6551" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">泊松分布用于描述给定时间、面积、体积或其他暴露范围内的事件数。若事件在不相交小区间中的发生近似独立，平均发生率在研究范围内稳定，极短区间内出现多个事件的概率可以忽略，那么总计数可以由参数 <span class="arithmatex">\(\lambda&gt;0\)</span> 的泊松分布描述：</p>
+<div class="arithmatex" data-block-end="6777" data-block-fingerprint="15f2e20c769b18960a6b" data-block-start="6669" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+X\sim\operatorname{Pois}(\lambda),\qquad
+P(X=x)=\frac{e^{-\lambda}\lambda^x}{x!},
+\quad x=0,1,2,\ldots
+\]</div>
+<p data-block-end="6808" data-block-fingerprint="b7660f958bb2553f728e" data-block-start="6779" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability"><span class="arithmatex">\(\lambda\)</span> 是规定暴露量内的期望事件数，并满足</p>
+<div class="arithmatex" data-block-end="6894" data-block-fingerprint="eca074ebe1c59f2e12ed" data-block-start="6810" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+E(X)=\operatorname{Var}(X)=\lambda,\qquad
+\operatorname{SD}(X)=\sqrt{\lambda}.
+\]</div>
+<p data-block-end="7026" data-block-fingerprint="4b05b53c7db19c849b11" data-block-start="6896" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">NIST 与 R 的正式分布文档均给出这一质量函数及均值—方差关系。<sup id="fnref:nist-poisson"><a class="footnote-ref" href="#fn:nist-poisson">5</a></sup><sup id="fnref:r-distributions"><a class="footnote-ref" href="#fn:r-distributions">6</a></sup> 若观察面积或随访时间不同，应先记录暴露量；在回归模型中通常通过率和偏置项（offset）处理，使计数比较具有共同的暴露尺度。</p>
+<p data-block-end="7144" data-block-fingerprint="b55572f72dd041a2e7f8" data-block-start="7028" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">泊松分布还具有可加性：相互独立的 <span class="arithmatex">\(X_j\sim\operatorname{Pois}(\lambda_j)\)</span> 之和服从参数 <span class="arithmatex">\(\sum_j\lambda_j\)</span> 的泊松分布。这使它适合把独立时间段或空间单元的计数汇总起来。</p>
+<h3 data-block-end="7163" data-block-fingerprint="a0e3a0522a3a63197754" data-block-start="7146" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_14">与二项分布的关系及模型偏离<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p data-block-end="7323" data-block-fingerprint="66187c4ddde53430d87d" data-block-start="7165" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">当二项分布满足 <span class="arithmatex">\(n\to\infty\)</span>、<span class="arithmatex">\(p\to0\)</span> 且 <span class="arithmatex">\(np\to\lambda\)</span> 时，其分布趋近 <span class="arithmatex">\(\operatorname{Pois}(\lambda)\)</span>。因此泊松分布可以近似大量独立、单次概率很小的伯努利事件；泊松过程及其计数模型还具有独立增量和发生率结构，可以直接作为生成模型使用。</p>
+<p data-block-end="7556" data-block-fingerprint="67cf4f0635cf213b16b2" data-block-start="7325" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability"><span class="arithmatex">\(\lambda\)</span> 较小时分布明显右偏，随 <span class="arithmatex">\(\lambda\)</span> 增大逐渐接近对称；大 <span class="arithmatex">\(\lambda\)</span> 时可以用正态近似，但仍应检查尾部精度。更重要的是，真实生物计数常因个体异质性、空间聚集、传染过程或遗漏层级而出现方差大于均值的过度离散，也可能因竞争产生方差小于均值。此时负二项、广义 Poisson、零膨胀或层级模型可能更符合生成机制；具体模型将在<a href="../generalized_mixed_models/">广义线性模型与混合效应模型</a>中展开。</p>
+<h2 data-block-end="7590" data-block-fingerprint="9ee71aa8654a5b153969" data-block-start="7558" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="normal-distribution">正态分布<a class="headerlink" href="#normal-distribution" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="7604" data-block-fingerprint="840014ade1325e4ffa12" data-block-start="7592" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_15">密度、位置与尺度<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p data-block-end="7698" data-block-fingerprint="49f121865a41595abe9e" data-block-start="7606" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">正态分布是由均值 <span class="arithmatex">\(\mu\)</span> 和方差 <span class="arithmatex">\(\sigma^2\)</span> 决定的连续分布，记为 <span class="arithmatex">\(X\sim N(\mu,\sigma^2)\)</span>。当 <span class="arithmatex">\(\sigma&gt;0\)</span> 时，其密度为</p>
+<div class="arithmatex" data-block-end="7812" data-block-fingerprint="0c9a66ca02b31945bf1b" data-block-start="7700" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+f(x)=\frac{1}{\sigma\sqrt{2\pi}}
+\exp\!\left[-\frac{(x-\mu)^2}{2\sigma^2}\right],
+\qquad -\infty&lt;x&lt;\infty.
+\]</div>
+<p data-block-end="8004" data-block-fingerprint="ff99244b411486810337" data-block-start="7814" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">曲线关于 <span class="arithmatex">\(x=\mu\)</span> 对称，均值、中位数和众数重合；密度在 <span class="arithmatex">\(\mu\)</span> 处最高，拐点位于 <span class="arithmatex">\(\mu-\sigma\)</span> 与 <span class="arithmatex">\(\mu+\sigma\)</span>。<span class="arithmatex">\(\mu\)</span> 平移分布中心，<span class="arithmatex">\(\sigma\)</span> 决定展开程度：<span class="arithmatex">\(\sigma\)</span> 越大，曲线越宽而峰越低，总面积始终为 1。NIST 的正态分布说明给出了同一密度与位置—尺度解释。<sup id="fnref:nist-normal"><a class="footnote-ref" href="#fn:nist-normal">7</a></sup></p>
+<p data-block-end="8134" data-block-fingerprint="def4abe1fa6b5d207d27" data-block-start="8006" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">正态分布的支持范围是整个实数轴，因此它适合由许多小的加性扰动形成、且远离自然边界的连续变异。浓度、寿命和面积等只能取正值且常右偏的变量，其边缘分布形状由生成机制决定；样本量增大主要改善相关统计量的抽样近似。是否需要变换或其他分布应由生成机制与诊断共同判断。</p>
+<h3 data-block-end="8148" data-block-fingerprint="7d2ae78ca175b7e544cb" data-block-start="8136" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_16">标准化与概率面积<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p data-block-end="8159" data-block-fingerprint="cc42b84ad0230fff8859" data-block-start="8150" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">把正态变量标准化，</p>
+<div class="arithmatex" data-block-end="8190" data-block-fingerprint="80303ddcfe823c7884cb" data-block-start="8161" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+Z=\frac{X-\mu}{\sigma},
+\]</div>
+<p data-block-end="8224" data-block-fingerprint="dc2711935e54723edb1f" data-block-start="8192" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">即可得到标准正态分布 <span class="arithmatex">\(Z\sim N(0,1)\)</span>，其密度为</p>
+<div class="arithmatex" data-block-end="8272" data-block-fingerprint="87a64d9d53bdd21f1488" data-block-start="8226" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+\phi(z)=\frac{1}{\sqrt{2\pi}}e^{-z^2/2}.
+\]</div>
+<p data-block-end="8325" data-block-fingerprint="8b3b3e587d51e0a32b81" data-block-start="8274" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">标准化把原值表示为距离均值多少个标准差，并使所有正态概率都可转化为标准正态累积分布 <span class="arithmatex">\(\Phi\)</span>：</p>
+<div class="arithmatex" data-block-end="8384" data-block-fingerprint="5877f7a9373928a7e3b3" data-block-start="8327" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">\[
+P(X\le x)
+=\Phi\!\left(\frac{x-\mu}{\sigma}\right).
+\]</div>
+<p data-block-end="8520" data-block-fingerprint="e543e121f1e1a706dc64" data-block-start="8386" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">正态分布约有 68.27%、95.45% 和 99.73% 的概率分别落在 <span class="arithmatex">\(\mu\pm\sigma\)</span>、<span class="arithmatex">\(\mu\pm2\sigma\)</span> 和 <span class="arithmatex">\(\mu\pm3\sigma\)</span> 内。这些比例以正态模型为条件；其他分布的异常观测需要结合各自的形状与生成过程识别。</p>
+<h3 data-block-end="8533" data-block-fingerprint="561fe4a91b5fe93f44a3" data-block-start="8522" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="_17">正态近似的边界<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p data-block-end="8666" data-block-fingerprint="1de0d88fc765fdb00055" data-block-start="8535" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">二项分布在 <span class="arithmatex">\(np\)</span> 与 <span class="arithmatex">\(n(1-p)\)</span> 都足够大时、泊松分布在 <span class="arithmatex">\(\lambda\)</span> 足够大时，可以在适当范围内用正态分布近似。这里“足够大”随尾部概率、误差容忍和离散性而变；<span class="arithmatex">\(p\)</span> 接近 0.5 会使二项分布更对称，近似精度还取决于其他条件。</p>
+<p data-block-end="8792" data-block-fingerprint="cb8c8de0dc538cf3b874" data-block-start="8668" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">中心极限定理说明，在相应独立性和矩条件下，许多观测的和或均值经标准化后趋近正态。它讨论统计量的抽样分布，原始总体仍可具有其他形状；异常依赖、重尾或聚类结构还会改变适用条件。正态分布作为数据模型、误差模型和抽样近似是三种不同用法，应在分析中明确区分。</p>
+<h2 data-block-end="8834" data-block-fingerprint="fc7cb467d3526b3450eb" data-block-start="8794" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="distribution-family">生命科学中的其他常用分布<a class="headerlink" href="#distribution-family" title="Permanent link">&para;</a></h2>
+<p data-block-end="8930" data-block-fingerprint="aacd796d3d29529e3cf0" data-block-start="8836" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">二项、Poisson 和正态分布覆盖三条经典主线，但变量支持范围与生成机制更为多样。下表给出后续模型中常见的接口；具体参数化在不同教材和软件间可能不同，使用时应明确写出质量函数或密度函数。</p>
+<table data-block-end="9447" data-block-fingerprint="b0005d3d71a6b1906204" data-block-start="8932" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">
+<thead>
+<tr>
+<th>分布</th>
+<th>支持范围与生成线索</th>
+<th>生物学用途与边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bernoulli、分类与多项</td>
+<td>单次二分类；单次多分类；固定次数的多分类计数</td>
+<td>生死、等位基因传递、多种表型类别；类别需互斥且穷尽</td>
+</tr>
+<tr>
+<td>超几何</td>
+<td>有限总体中不放回抽样的成功数</td>
+<td>从有限标本库抽样；与固定 <span class="arithmatex">\(p\)</span> 的独立二项试验不同</td>
+</tr>
+<tr>
+<td>几何与负二项</td>
+<td>等待首次／第 <span class="arithmatex">\(r\)</span> 次成功的试验数；或异质 Poisson 计数</td>
+<td>等待成功、过度离散计数；“试验数”是否包含成功次及负二项参数化须说明</td>
+</tr>
+<tr>
+<td>均匀</td>
+<td>有界区间内密度恒定</td>
+<td>随机化、无偏位置或时间起点模型；均匀性需要相应生成假设</td>
+</tr>
+<tr>
+<td>指数、Gamma 与 Weibull</td>
+<td>非负等待时间或正值；风险率形状由模型决定</td>
+<td>事件间隔、寿命与生长量；删失和时间变化将在生存分析页处理</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td><span class="arithmatex">\(0&lt;x&lt;1\)</span>，形状由两个参数调节</td>
+<td>概率参数、连续比例和贝叶斯先验；有精确 0 或 1 时需额外建模</td>
+</tr>
+<tr>
+<td>对数正态</td>
+<td>对数值服从正态，原尺度为正且常右偏</td>
+<td>乘法增长、浓度和体量；对数均值的指数对应原尺度几何中心</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="9565" data-block-fingerprint="0ad3a9bf4fa55ee15307" data-block-start="9449" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">R 的正式分布索引将密度／质量、累积概率、分位数和随机数生成作为四类基本计算，并列出上述多数分布。<sup id="fnref2:r-distributions"><a class="footnote-ref" href="#fn:r-distributions">6</a></sup> 分布名称相同也要核对参数是率还是尺度、随机变量计数的是失败数还是总试验数，以及软件对端点的定义。</p>
+<h2 data-block-end="9599" data-block-fingerprint="ed2944033fc2cb948b42" data-block-start="9567" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="model-selection">从机制到概率模型<a class="headerlink" href="#model-selection" title="Permanent link">&para;</a></h2>
+<p data-block-end="9754" data-block-fingerprint="cdd0b6b816f25b4fa652" data-block-start="9601" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">选择分布首先看变量能取什么值：二分类、非负整数、区间比例、正连续量和全实数连续量的支持范围不同。随后检查数据怎样产生：试验次数是否固定，抽样是否放回，事件率是否稳定，各单位是否独立，暴露量是否一致，是否存在层级、聚集、删失或结构性零值。均值—方差关系、偏斜和尾部图形用于检验这些假设，并与机制判断相互印证。</p>
+<p data-block-end="9926" data-block-fingerprint="675415570310fbd77ce9" data-block-start="9756" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">概率分布还区分参数与观测。二项模型中的 <span class="arithmatex">\(p\)</span>、Poisson 模型中的 <span class="arithmatex">\(\lambda\)</span> 和正态模型中的 <span class="arithmatex">\(\mu,\sigma\)</span> 是控制分布的参数；实际看到的 <span class="arithmatex">\(x\)</span> 是随机变量的一次实现。参数未知时，要通过样本估计并表达不确定性，这将进入<a href="../sampling_estimation/">抽样、参数估计与置信区间</a>。</p>
+<p data-block-end="10072" data-block-fingerprint="39f7f6e1488eecf7f8b7" data-block-start="9928" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">手工推导帮助理解事件怎样组合，实际计算则应使用经过检验的数值函数。极小概率的阶乘、幂和尾部相减可能下溢或损失精度；直接使用对数概率或上尾函数通常比先算接近 1 的累积概率再相减稳定。模拟可以检查推导和建立直觉；蒙特卡洛（Monte Carlo）频率自身带有随机误差，模型条件仍需另行核验。</p>
+<h2 data-block-end="10102" data-block-fingerprint="561c4b71ded496f75bf9" data-block-start="10074" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul data-block-end="12280" data-block-fingerprint="82b645a00df6f3f26e1e" data-block-start="10104" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-probability">
+<li>Whitlock MC, Schluter D. <a href="https://store.macmillanlearning.com/us/product/The-Analysis-of-Biological-Data/p/131922623X"><em>The Analysis of Biological Data</em></a>. 3rd ed. Macmillan Learning; 2020.</li>
+<li>Penn State Department of Statistics. <a href="https://online.stat.psu.edu/stat414/">STAT 414: Introduction to Probability Theory</a>.</li>
+<li>NIST/SEMATECH. <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda36.htm"><em>e-Handbook of Statistical Methods: Probability Distributions</em></a>.</li>
+<li>MIT OpenCourseWare. <a href="https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-iv/lecture-19/">Lecture 19: Weak Law of Large Numbers</a>.</li>
+<li>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html">Distributions in the <code>stats</code> Package</a>. <em>R Documentation</em>.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:psu-conditional">
+<p>Penn State STAT 414 的<a href="https://online.stat.psu.edu/stat414/Lesson04">条件概率课程</a>从限制样本空间推导 <span class="arithmatex">\(P(A\mid B)\)</span> 与乘法法则；其<a href="https://online.stat.psu.edu/stat414/Lesson06">贝叶斯公式课程</a>进一步用样本空间划分推导全概率和后验概率公式。&#160;<a class="footnote-backref" href="#fnref:psu-conditional" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-distributions">
+<p>NIST/SEMATECH 的<a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda361.htm">概率分布定义</a>分别给出离散质量函数求和为 1、连续密度积分为 1，并说明连续变量的单点概率为 0、密度高度可以大于 1。&#160;<a class="footnote-backref" href="#fnref:nist-distributions" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mit-lln">
+<p>MIT OpenCourseWare 的<a href="https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/unit-iv/lecture-19/">弱大数定律课程</a>围绕样本均值、Chebyshev 不等式和依概率收敛建立大数定律。&#160;<a class="footnote-backref" href="#fnref:mit-lln" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-binomial">
+<p>NIST/SEMATECH 的<a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm">二项分布条目</a>给出固定 <span class="arithmatex">\(n\)</span>、恒定 <span class="arithmatex">\(p\)</span> 下的质量函数，以及均值 <span class="arithmatex">\(np\)</span> 和标准差 <span class="arithmatex">\(\sqrt{np(1-p)}\)</span>。&#160;<a class="footnote-backref" href="#fnref:nist-binomial" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-poisson">
+<p>NIST/SEMATECH 的<a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366j.htm">Poisson 分布条目</a>给出固定时间区间事件计数的质量函数、均值 <span class="arithmatex">\(\lambda\)</span> 和标准差 <span class="arithmatex">\(\sqrt{\lambda}\)</span>。&#160;<a class="footnote-backref" href="#fnref:nist-poisson" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-distributions">
+<p>R Core Team 的<a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Distributions.html">分布索引</a>统一列出标准分布的质量／密度、累积分布、分位数和随机生成函数；<a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Poisson.html">Poisson 文档</a>明确给出 <span class="arithmatex">\(E(X)=\operatorname{Var}(X)=\lambda\)</span>。&#160;<a class="footnote-backref" href="#fnref:r-distributions" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:r-distributions" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-normal">
+<p>NIST/SEMATECH 的<a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm">正态分布条目</a>给出由位置参数 <span class="arithmatex">\(\mu\)</span> 和尺度参数 <span class="arithmatex">\(\sigma\)</span> 决定的密度，并以 <span class="arithmatex">\(\mu=0,\sigma=1\)</span> 定义标准正态分布。&#160;<a class="footnote-backref" href="#fnref:nist-normal" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/biostat/probability.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/biostat/probability.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-biostat-probability"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../data_description/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 生物数据整理与描述统计">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                生物数据整理与描述统计
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sampling_estimation/" class="md-footer__link md-footer__link--next" aria-label="Next: 抽样、参数估计与置信区间">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                抽样、参数估计与置信区间
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

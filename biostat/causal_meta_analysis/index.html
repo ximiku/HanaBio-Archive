@@ -1,0 +1,3467 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/biostat/causal_meta_analysis/">
+      
+      
+        <link rel="prev" href="../bayesian_computational/">
+      
+      
+        <link rel="next" href="../systematic_review_meta_analysis/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>因果推断 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              因果推断
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  统计
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  统计
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimental_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验设计、效能与可重复统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data_description/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据与概率
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../hypothesis_testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  假设检验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../anova_regression/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  回归与多变量
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survival_longitudinal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生存分析与纵向数据
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_computational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  贝叶斯推断与计算统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  因果推断
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  因果推断
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#association-to-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从关联到干预效应
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从关联到干预效应">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        描述、预测与因果问题
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        潜在结局与待估量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-trial-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        目标试验与因果识别
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目标试验与因果识别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        先写出理想试验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        一致性、交换性与正值性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        因果图与变量角色
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#causal-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从识别到估计
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从识别到估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        标准化与结局回归
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        匹配、倾向评分与加权
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        双重稳健估计
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        工具变量与准实验设计
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-causal-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        中介、时间变化与未测偏倚
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="中介、时间变化与未测偏倚">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        中介与效应修饰
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        时间变化处理与混杂
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        敏感性分析与负对照
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#causal-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分析边界与完整报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systematic_review_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统综述与荟萃分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#association-to-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从关联到干预效应
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从关联到干预效应">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        描述、预测与因果问题
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        潜在结局与待估量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-trial-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        目标试验与因果识别
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="目标试验与因果识别">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        先写出理想试验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        一致性、交换性与正值性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        因果图与变量角色
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#causal-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从识别到估计
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从识别到估计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        标准化与结局回归
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        匹配、倾向评分与加权
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        双重稳健估计
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        工具变量与准实验设计
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-causal-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        中介、时间变化与未测偏倚
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="中介、时间变化与未测偏倚">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        中介与效应修饰
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        时间变化处理与混杂
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        敏感性分析与负对照
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#causal-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分析边界与完整报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="6" data-block-fingerprint="9c54b1090b14650abca9" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_1">因果推断<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="155" data-block-fingerprint="93579205cb7ecc050fea" data-block-start="8" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">相关、回归和组间比较描述数据中稳定的差异；“如果改变处理，结局会怎样”则是因果问题。因果推断把这个反事实问题写成明确的待估量，再说明研究设计和识别假设怎样把不可同时观察的潜在结局连接到实际数据。它的核心顺序是先定义干预、对照、时间和目标总体，再判断效应能否识别，最后选择与待估量相符的估计方法。</p>
+<p data-block-end="343" data-block-fingerprint="c89b34345995d082e7db" data-block-start="157" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">因果结论首先属于一个明确的研究问题与数据生成过程。模型拟合、显著系数和精确区间只有在时间零点、变量角色、共同支持与偏倚机制可辩护时，才具有相应的因果含义；向其他物种、人群或环境推广还需额外论证。多项研究之间的检索、可比性与定量合并由<a href="../systematic_review_meta_analysis/#systematic-review">系统综述与荟萃分析</a>继续展开。</p>
+<h2 data-block-end="383" data-block-fingerprint="4a262ac450f586393a7e" data-block-start="345" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="association-to-effect">从关联到干预效应<a class="headerlink" href="#association-to-effect" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="399" data-block-fingerprint="dac6bb2849233c99e239" data-block-start="385" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_2">描述、预测与因果问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p data-block-end="616" data-block-fingerprint="24792d6f9b51f79a078f" data-block-start="401" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">变量之间可以具有直接因果关系，也可以因共同因素而形成平行变化。统计工具与关系类型各有自己的角色：相关系数描述联合变化，回归描述给定预测变量时的条件分布；它们可以服务于描述、预测，也可以在额外设计与识别条件成立时估计因果效应。<a href="../correlation_regression/#questions-and-data">相关、回归与模型诊断</a>已经说明单相关、复相关和偏相关的计算路径，这里进一步说明何时“调整其他变量”具有因果意义。</p>
+<p data-block-end="775" data-block-fingerprint="274cbb466baa6e891daf" data-block-start="618" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">描述问题可以问施肥量与叶片氮含量在样地中怎样共同变化；预测问题可以问根据萌发温度和含水量能否预测种子萌发；因果问题则要问把温度从某一方案改为另一方案，会使同一目标种子群体的萌发概率改变多少。第三个问题需要定义可实施或至少足够清楚的干预、对照、结局、时间范围和目标总体；模型拟合、系数和调整变量都在这个定义之后解释。</p>
+<h3 data-block-end="789" data-block-fingerprint="177c27d50414673c12c7" data-block-start="777" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_3">潜在结局与待估量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p data-block-end="869" data-block-fingerprint="fea9fdfa08fbd9923834" data-block-start="791" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">令二元处理 <span class="arithmatex">\(A\in\{0,1\}\)</span>，个体 <span class="arithmatex">\(i\)</span> 在处理与对照下的潜在结局分别为 <span class="arithmatex">\(Y_i(1)\)</span> 和 <span class="arithmatex">\(Y_i(0)\)</span>。个体处理效应是</p>
+<div class="arithmatex" data-block-end="891" data-block-fingerprint="902c5d71dc76e06f5e02" data-block-start="871" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+Y_i(1)-Y_i(0),
+\]</div>
+<p data-block-end="953" data-block-fingerprint="581050dc1e4f9601827e" data-block-start="893" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">但同一个体在同一研究时点只能经历其中一种处理，这就是因果推断的基本缺失数据结构。研究通常估计群体平均量，例如平均处理效应</p>
+<div class="arithmatex" data-block-end="995" data-block-fingerprint="1709425e07e4edda2e13" data-block-start="955" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+\operatorname{ATE}=E\{Y(1)-Y(0)\},
+\]</div>
+<p data-block-end="1012" data-block-fingerprint="40657ae44f078c60be9e" data-block-start="997" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">或已接受处理者中的平均处理效应</p>
+<div class="arithmatex" data-block-end="1062" data-block-fingerprint="59c6290d1232124e4a8c" data-block-start="1014" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+\operatorname{ATT}=E\{Y(1)-Y(0)\mid A=1\}.
+\]</div>
+<p data-block-end="1277" data-block-fingerprint="efb29e6980f092f77e05" data-block-start="1064" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">对于二分类结局，还可以比较 <span class="arithmatex">\(P\{Y(1)=1\}\)</span> 与 <span class="arithmatex">\(P\{Y(0)=1\}\)</span> 的风险差、风险比或优势比。它们在数值和可迁移性上不同，分别定义不同的待估量。连续结局可以比较均值差，时间到事件结局可以比较特定时点风险、限制平均生存时间或在条件成立时比较风险率。先定义待估量，再选择估计方法，延续了<a href="../experimental_design/#question-to-estimand">实验设计</a>中建立的顺序。</p>
+<p data-block-end="1445" data-block-fingerprint="bfc0ba7f7754f633344f" data-block-start="1279" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">潜在结局的记号还要求处理版本足够明确。若“高蛋白饲料”包含成分、能量密度和给药时程完全不同的方案，<span class="arithmatex">\(Y(1)\)</span> 对应多个可能的反事实。一个单位的处理也可能改变另一个单位的结局，例如传染病疫苗改变群体传播、样方除草改变邻近样方的种子雨、同笼动物共享微生物群。此时需要把群体覆盖率、邻域处理或网络暴露纳入待估量，以直接表达溢出效应。</p>
+<h2 data-block-end="1492" data-block-fingerprint="9295a306686c51f2c5dd" data-block-start="1447" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="target-trial-identification">目标试验与因果识别<a class="headerlink" href="#target-trial-identification" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="1505" data-block-fingerprint="2afa1926edbdc8cd8a63" data-block-start="1494" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_4">先写出理想试验<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p data-block-end="1706" data-block-fingerprint="c78e7e9885247a2d3357" data-block-start="1507" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">观察性研究可以先写出希望模拟的<strong>目标试验（target trial）</strong>：纳入标准是什么，比较哪些处理策略，如何分派，随访从何时开始，结局和因果对比如何定义，以及采用意向处理效应还是依从方案效应。Hernán 与 Robins 将这种做法用于把观察性比较对齐到一个明确的随机试验问题；处理资格、处理分组与随访起点对齐，还能暴露不死时间偏倚等由时间定义造成的系统错误。<sup id="fnref:target-trial"><a class="footnote-ref" href="#fn:target-trial">1</a></sup></p>
+<p data-block-end="1859" data-block-fingerprint="4ad67b080399e8af117d" data-block-start="1708" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">例如比较“确诊后立即用药”与“暂不使用”的一年死亡风险，入组、处理判定和随访必须从同一个零时点开始。若把后来开始用药的个体从确诊时起都算作用药组，那么他们在真正用药前必须存活的时间被错误归给了治疗，处理组会获得一段结构性的“不会死亡”时间。单纯在 Cox 模型中加入更多基线变量并不能修正这个时间错位。</p>
+<p data-block-end="1960" data-block-fingerprint="75f97488e414426c2dd5" data-block-start="1861" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">随机试验用已知的分派机制建立处理组可比性；观察性资料的可比性依靠关于分派、随访、测量和选择机制的可审查假设。目标试验用于让问题、时间零点和分析策略保持一致；未测量变量仍需由额外数据或敏感性分析处理。</p>
+<h3 data-block-end="1977" data-block-fingerprint="44bb2aa802285be1efad" data-block-start="1962" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_5">一致性、交换性与正值性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p data-block-end="2088" data-block-fingerprint="c096099526f76e04095b" data-block-start="1979" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">在简单单时点处理中，常见识别条件包括一致性、交换性和正值性。<strong>一致性</strong>要求个体实际接受 <span class="arithmatex">\(A=a\)</span> 时，其观察结局等于相应潜在结局 <span class="arithmatex">\(Y(a)\)</span>，这依赖处理定义清楚且相关干扰已被建模。<strong>条件交换性</strong>写为</p>
+<div class="arithmatex" data-block-end="2114" data-block-fingerprint="09836f3503a4ec59ce34" data-block-start="2090" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+Y(a)\perp A\mid L,
+\]</div>
+<p data-block-end="2209" data-block-fingerprint="1df9699ac54dad52a3ea" data-block-start="2116" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">表示在一组处理前变量 <span class="arithmatex">\(L\)</span> 的各层内，实际接受不同处理的单位在潜在结局方面可比。随机分派可以由设计支持这种可比性；观察研究只能依靠充分测量共同原因、合理的因果结构和领域知识来论证。</p>
+<p data-block-end="2248" data-block-fingerprint="0d1d28dc4d145478195f" data-block-start="2211" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis"><strong>正值性</strong>要求在用于推广的每个 <span class="arithmatex">\(L\)</span> 取值处，各处理都有正概率：</p>
+<div class="arithmatex" data-block-end="2275" data-block-fingerprint="88a71983919d6271c7a4" data-block-start="2250" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+0&lt;P(A=a\mid L=l)&lt;1.
+\]</div>
+<p data-block-end="2389" data-block-fingerprint="8da3097ddcb0b893938b" data-block-start="2277" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">若严重感染的动物必定接受药物、轻症动物从不接受，数据缺少比较相同病情下两种策略的共同支持区。模型给出的系数包含超出观测支持的外推。实际分析要查看协变量重叠、倾向评分分布、极端权重和被排除人群，并把待估总体限制在有支持的区域。</p>
+<p data-block-end="2492" data-block-fingerprint="f67c2aeb4c5c55702396" data-block-start="2391" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">这些条件与抽样代表性是不同问题。研究样本内的处理效应可以被识别，却未必能推广到其他物种、性别、发育阶段或环境；推广还需要目标总体与研究总体在效应修饰因素上的可比性，或使用标准化、抽样权重等方法重新加权。</p>
+<h3 data-block-end="2506" data-block-fingerprint="1884bac42247ee771245" data-block-start="2494" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_6">因果图与变量角色<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p data-block-end="2739" data-block-fingerprint="87ce52f24906f8c3fea9" data-block-start="2508" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">有向无环图（directed acyclic graph，DAG）用箭头表达研究者关于变量生成顺序和直接因果联系的假设。共同影响处理 <span class="arithmatex">\(A\)</span> 与结局 <span class="arithmatex">\(Y\)</span> 的变量是混杂来源；位于 <span class="arithmatex">\(A\rightarrow Y\)</span> 路径上的变量是中介；同时受到两个变量影响的共同结果是碰撞变量。Greenland、Pearl 与 Robins 说明了因果图怎样识别需要阻断的后门路径，并揭示只按统计关联强弱选择“混杂因素”的不足。<sup id="fnref:causal-diagrams"><a class="footnote-ref" href="#fn:causal-diagrams">2</a></sup></p>
+<p data-block-end="2947" data-block-fingerprint="1a861847d7cd89337de1" data-block-start="2741" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">假设宿主基础健康状态 <span class="arithmatex">\(L\)</span> 同时影响接受治疗的概率和恢复结局，<span class="arithmatex">\(L\)</span> 形成后门路径，应在设计或分析中处理。若治疗 <span class="arithmatex">\(A\)</span> 与另一病理过程 <span class="arithmatex">\(U\)</span> 都影响住院 <span class="arithmatex">\(S\)</span>，只分析住院个体便相当于对碰撞变量 <span class="arithmatex">\(S\)</span> 条件化，可能在 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(U\)</span> 之间制造关联。治疗后的炎症指标若位于效应路径上，把它当作普通基线协变量调整则会改变问题，从总效应变成某种直接效应，并可能引入新的偏倚。</p>
+<p data-block-end="3073" data-block-fingerprint="a96c1638eda906bbb2af" data-block-start="2949" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">DAG 把领域假设显式化，使变量为何测量、为何调整或为何不调整可以被讨论；图的结构需要由研究设计和领域知识给出，并可能存在遗漏变量。时间顺序、选择机制和测量过程同样要进入图或目标试验方案，因果识别需要同时覆盖生物通路、样本进入、测量时点和失访过程。</p>
+<h2 data-block-end="3107" data-block-fingerprint="b9e00425e20cab4cb4eb" data-block-start="3075" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="causal-estimation">从识别到估计<a class="headerlink" href="#causal-estimation" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="3121" data-block-fingerprint="e8495d0cc5aa4fae7ddb" data-block-start="3109" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_7">标准化与结局回归<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p data-block-end="3141" data-block-fingerprint="068e6f7236368dc2ba8e" data-block-start="3123" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">若一致性、条件交换性和正值性成立，记</p>
+<div class="arithmatex" data-block-end="3173" data-block-fingerprint="2b4e561645c881812a04" data-block-start="3143" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+m(a,l)=E(Y\mid A=a,L=l),
+\]</div>
+<p data-block-end="3192" data-block-fingerprint="2af6a97768375947feb0" data-block-start="3175" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">则平均潜在结局可由 g 公式识别：</p>
+<div class="arithmatex" data-block-end="3231" data-block-fingerprint="57034be187dbd2408a2e" data-block-start="3194" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+E\{Y(a)\}
+=\sum_l m(a,l)P(L=l).
+\]</div>
+<p data-block-end="3348" data-block-fingerprint="27783c2db04e2db66d6e" data-block-start="3233" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">连续协变量时把求和换成积分。计算上可以在每个协变量层求结局均值，也可以拟合结局模型，再把每个单位分别设为 <span class="arithmatex">\(A=1\)</span> 和 <span class="arithmatex">\(A=0\)</span> 进行预测，最后在目标协变量分布上平均。这一过程称为标准化或 g-computation。</p>
+<p data-block-end="3488" data-block-fingerprint="48225eb030dc8b2c8d8d" data-block-start="3350" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">回归系数与标准化效应对应不同概括。非线性模型中的条件优势比与边际优势比处于不同尺度；交互存在时，处理效应还会随个体特征而变。标准化明确了平均所用的人群分布，并能把风险差、风险比或均值差返回到易解释的尺度。结局模型仍需要正确表达非线性和交互，超出数据支持范围的预测依赖外推假设。</p>
+<h3 data-block-end="3504" data-block-fingerprint="79109942934ed4c02085" data-block-start="3490" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_8">匹配、倾向评分与加权<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p data-block-end="3533" data-block-fingerprint="1227f88958b03284d3a2" data-block-start="3506" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">倾向评分是给定处理前变量 <span class="arithmatex">\(L\)</span> 时接受处理的概率</p>
+<div class="arithmatex" data-block-end="3559" data-block-fingerprint="71135141288118f992af" data-block-start="3535" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+e(L)=P(A=1\mid L).
+\]</div>
+<p data-block-end="3731" data-block-fingerprint="eb3ea33d15b0e123d5e7" data-block-start="3561" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">Rosenbaum 与 Rubin 证明，在所纳入协变量足以建立条件交换性的前提下，按真实倾向评分分层可以平衡这些已观察协变量。<sup id="fnref:propensity-score"><a class="footnote-ref" href="#fn:propensity-score">3</a></sup> 倾向评分可以用于匹配、分层、加权或协变量调整；它压缩的是已测量协变量的处理分派信息。未测混杂需要另行评估，因果设计质量则主要由协变量平衡和共同支持判断，而非处理预测准确率。</p>
+<p data-block-end="3875" data-block-fingerprint="1c9567c054c4e5498a42" data-block-start="3733" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">匹配应先规定目标效应、距离、卡钳、是否替换和共同支持区，然后以标准化差异、分布图和有效样本量检查匹配后的协变量平衡。匹配会改变目标总体：丢弃无法匹配的处理单位可能改变原先的 ATT，丢弃两端单位则可能转向重叠人群。倾向评分模型的 <em>p</em> 值描述模型参数，协变量平衡才直接反映设计结果。</p>
+<p data-block-end="3895" data-block-fingerprint="ff8378c2691a601c4b35" data-block-start="3877" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">估计 ATE 的简单逆概率加权形式为</p>
+<div class="arithmatex" data-block-end="4117" data-block-fingerprint="468209e9f5726f28e662" data-block-start="3897" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">\[
+\widehat{\operatorname{ATE}}_{\mathrm{IPW}}
+\begin{aligned}
+&amp;=\frac1n\sum_{i=1}^{n}
+\left\{
+\frac{A_iY_i}{\widehat e(L_i)}
+\right.\\[-2pt]
+&amp;\qquad\left.
+-\frac{(1-A_i)Y_i}{1-\widehat e(L_i)}
+\right\}.
+\end{aligned}
+\]</div>
+<p data-block-end="4239" data-block-fingerprint="363f1c4afa41b11f55d0" data-block-start="4119" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">它构造一个处理与已测基线变量近似独立的伪总体。极端倾向评分会产生巨大权重，使少数单位主导估计；稳定化权重、截尾或改估重叠人群可以改善精度，却同时改变方法或待估量，必须预先说明并做敏感性分析。标准误还应反映权重估计、匹配、聚类和重复测量结构。</p>
+<h3 data-block-end="4251" data-block-fingerprint="a4a404356adc80034e55" data-block-start="4241" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_9">双重稳健估计<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p data-block-end="4472" data-block-fingerprint="1df21372c508b4d1388f" data-block-start="4253" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">增广逆概率加权等双重稳健估计同时使用处理模型和结局模型。在常见条件下，只要两者之一正确设定，效应估计仍可保持一致；Bang 与 Robins 给出了这一性质在缺失资料与因果模型中的系统表述。<sup id="fnref:doubly-robust"><a class="footnote-ref" href="#fn:doubly-robust">4</a></sup> 这一性质以至少一个模型正确以及交换性和正值性等识别条件成立为前提；两个模型都错设、小样本极端估计和未测混杂仍需诊断。使用灵活机器学习拟合滋扰函数时，还需要交叉拟合等安排控制过拟合，并以设计诊断和敏感性分析检查结果。</p>
+<h3 data-block-end="4488" data-block-fingerprint="d057d010901ddb2bfdbc" data-block-start="4474" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_10">工具变量与准实验设计<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p data-block-end="4706" data-block-fingerprint="2e448def4abe0f94521a" data-block-start="4490" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">有效工具变量 <span class="arithmatex">\(Z\)</span> 必须影响处理，且在所需条件下与潜在结局的共同原因独立，并只通过实际处理影响结局。二元工具和处理还常需要单调性，排除因工具鼓励而反向拒绝处理的“逆从者”。在这些假设下，工具变量估计的通常是因工具而改变处理选择者中的局部平均处理效应，它与总体 ATE 对应不同人群。Angrist、Imbens 与 Rubin 的潜在结局表述使这一局部待估量及其假设变得明确。<sup id="fnref:instrumental-variables"><a class="footnote-ref" href="#fn:instrumental-variables">5</a></sup></p>
+<p data-block-end="4836" data-block-fingerprint="6209b771b78e0d8d3978" data-block-start="4708" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">回归不连续设计利用处理规则阈值附近的近似可比性；双重差分依赖未处理反事实趋势的平行趋势假设；自然实验则依赖外部事件产生的近似随机变异。它们从各自的设计结构获得识别，需要检查阈值操纵、处理前趋势、同期冲击、溢出效应和可推广范围，并清楚区分局部效应与总体效应。</p>
+<h2 data-block-end="4883" data-block-fingerprint="13b2063dcf36b751a47f" data-block-start="4838" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="complex-causal-questions">中介、时间变化与未测偏倚<a class="headerlink" href="#complex-causal-questions" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="4896" data-block-fingerprint="244d58fd7b538364ac1d" data-block-start="4885" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_11">中介与效应修饰<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p data-block-end="5084" data-block-fingerprint="aa8bc42f3e2750de404f" data-block-start="4898" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">中介分析询问处理通过某一路径产生了多少效应。例如药物可能先改变炎症因子，再改变组织损伤。总效应、受控直接效应、自然直接效应和自然间接效应对应不同干预和反事实对比；后两者通常需要关于处理后中介—结局混杂及跨反事实关系的更强假设。Imai、Keele 与 Tingley 的一般框架把识别、估计和对未测中介混杂的敏感性分析放在同一体系中。<sup id="fnref:causal-mediation"><a class="footnote-ref" href="#fn:causal-mediation">6</a></sup></p>
+<p data-block-end="5214" data-block-fingerprint="281b12d9da08b782a325" data-block-start="5086" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">中介与效应修饰应分开。中介位于因果路径上，效应修饰则表示处理效应随基线变量或环境改变。交互项的尺度很重要：风险差、风险比和优势比尺度可以显示不同的交互模式。亚组结论应预先规定、报告区间，并通过组间效应对比直接检验异质性；两个亚组各自的显著性只描述各自区间。</p>
+<h3 data-block-end="5229" data-block-fingerprint="0faf3f11174998b6cec4" data-block-start="5216" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_12">时间变化处理与混杂<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p data-block-end="5331" data-block-fingerprint="18418cbbef2e18a0ca8e" data-block-start="5231" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">在纵向研究中，既往处理可改变后续病情，病情又影响后续处理和最终结局。此时病情既是下一时点的混杂因素，又是既往处理的结果。把每次病情都作为普通时间变化协变量纳入结局回归，可能阻断既往处理效应或产生偏倚。</p>
+<p data-block-end="5535" data-block-fingerprint="bd5f443626a1124c13fe" data-block-start="5333" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">边际结构模型使用按完整处理史计算的逆概率权重，重建每个时点处理与已观察历史近似独立的伪总体。Robins、Hernán 与 Brumback 正是为这类“受既往处理影响的时间变化混杂”提出了相应方法。<sup id="fnref:marginal-structural"><a class="footnote-ref" href="#fn:marginal-structural">7</a></sup> 参数 g 公式和结构嵌套模型提供其他 g 方法路径。治疗、失访和死亡过程往往需要共同考虑；极端累计权重、历史变量测量频率和处理策略的可执行性都是主要诊断对象。</p>
+<h3 data-block-end="5550" data-block-fingerprint="629300026f4dc473861c" data-block-start="5537" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_13">敏感性分析与负对照<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p data-block-end="5650" data-block-fingerprint="9ab7c2a4dacac827457b" data-block-start="5552" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">观察研究的不确定性包括抽样误差、未测混杂、选择偏倚、暴露或结局误分类、处理版本不一致、正值性不足和干扰。敏感性分析应把这些偏倚参数化，说明多强的未测关系、多少差异性误分类或多大选择效应会改变结论。</p>
+<p data-block-end="5790" data-block-fingerprint="d854ba495eedfe70984c" data-block-start="5652" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">E 值（E-value）把一个风险比尺度上的结果转换为：一个未测混杂因素至少要与处理、结局分别具有多强的条件关联，才能把观察关联解释到指定阈值。它是一种针对未测混杂的单参数稳健性概括，结果应与已测混杂因素的强度、生物学可能性以及其他偏倚机制的分析一起解释。<sup id="fnref:e-value"><a class="footnote-ref" href="#fn:e-value">8</a></sup></p>
+<p data-block-end="6011" data-block-fingerprint="e7fd7a1b880326e068cf" data-block-start="5792" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">负对照结局按设计应不受目标处理影响，负对照暴露应不影响目标结局，同时与待检测的混杂或测量机制共享结构。观察到负对照关联可以提示残余混杂、选择或测量偏倚。Lipsitch、Tchetgen Tchetgen 与 Cohen 系统说明了这一思路，并指出负对照自身也依赖结构假设。<sup id="fnref:negative-controls"><a class="footnote-ref" href="#fn:negative-controls">9</a></sup> 多种设计、不同偏倚方向和不同数据源所得结果若相互支持，会比单一模型规格更有说服力；三角互证仍需逐项审查每条证据的识别条件。</p>
+<h2 data-block-end="6047" data-block-fingerprint="f7b014df6cb46b1260ef" data-block-start="6013" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="causal-reporting">分析边界与完整报告<a class="headerlink" href="#causal-reporting" title="Permanent link">&para;</a></h2>
+<p data-block-end="6196" data-block-fingerprint="dbdcb37f8498228621d4" data-block-start="6049" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">识别与估计属于两个层次。目标试验、潜在结局和 DAG 用来说明比较对象以及哪些假设把反事实连接到数据；标准化、匹配、加权、双重稳健估计或工具变量则在这些条件下计算目标效应。更换估计器可以改善效率或模型稳健性；未测量的共同原因、缺失的共同支持和错位的时间零点需要在设计、数据或敏感性分析层面解决。</p>
+<p data-block-end="6336" data-block-fingerprint="779d0cc01e1ecb21ca6f" data-block-start="6198" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">一份可复核的因果研究报告应给出目标试验或等价问题说明、DAG 与调整理由、待估量、识别假设、共同支持和权重诊断、主要估计与区间、替代规格、负对照或偏倚敏感性分析，以及结果可推广到哪些单位和条件。识别若只在某个局部人群或特定工具变量条件下成立，应直接报告这一范围和相应局部效应。</p>
+<p data-block-end="6499" data-block-fingerprint="620d4d11512bb84dad98" data-block-start="6338" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis">多种设计、数据源和分析得到相近结果时，证据会更有说服力，但每条证据仍保留自己的待估量与偏倚结构。跨研究综合前需逐项核对总体、处理版本、时间零点、调整集与效应尺度，具体方法见<a href="../systematic_review_meta_analysis/#causal-evidence-synthesis">待估量对齐与完整报告</a>。</p>
+<h2 data-block-end="8581" data-block-fingerprint="0ab2d54137d2a4988273" data-block-start="6501" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-causal-meta-analysis" id="_14">参考资料与延伸阅读<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:target-trial">
+<p>Hernán MA, Robins JM. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4832051/">Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available</a>. <em>American Journal of Epidemiology</em>, 2016, 183(8): 758–764；Hernán MA, Robins JM. <a href="https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf">Causal Inference: What If</a>, 2024 更新版。&#160;<a class="footnote-backref" href="#fnref:target-trial" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:causal-diagrams">
+<p>Greenland S, Pearl J, Robins JM. <a href="https://pubmed.ncbi.nlm.nih.gov/9888278/">Causal Diagrams for Epidemiologic Research</a>. <em>Epidemiology</em>, 1999, 10(1): 37–48.&#160;<a class="footnote-backref" href="#fnref:causal-diagrams" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:propensity-score">
+<p>Rosenbaum PR, Rubin DB. <a href="https://doi.org/10.1093/biomet/70.1.41">The Central Role of the Propensity Score in Observational Studies for Causal Effects</a>. <em>Biometrika</em>, 1983, 70(1): 41–55.&#160;<a class="footnote-backref" href="#fnref:propensity-score" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:doubly-robust">
+<p>Bang H, Robins JM. <a href="https://pubmed.ncbi.nlm.nih.gov/16401269/">Doubly Robust Estimation in Missing Data and Causal Inference Models</a>. <em>Biometrics</em>, 2005, 61(4): 962–973.&#160;<a class="footnote-backref" href="#fnref:doubly-robust" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:instrumental-variables">
+<p>Angrist JD, Imbens GW, Rubin DB. <a href="https://doi.org/10.2307/2291629">Identification of Causal Effects Using Instrumental Variables</a>. <em>Journal of the American Statistical Association</em>, 1996, 91(434): 444–455.&#160;<a class="footnote-backref" href="#fnref:instrumental-variables" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:causal-mediation">
+<p>Imai K, Keele L, Tingley D. <a href="https://pubmed.ncbi.nlm.nih.gov/20954780/">A General Approach to Causal Mediation Analysis</a>. <em>Psychological Methods</em>, 2010, 15(4): 309–334.&#160;<a class="footnote-backref" href="#fnref:causal-mediation" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:marginal-structural">
+<p>Robins JM, Hernán MA, Brumback B. <a href="https://pubmed.ncbi.nlm.nih.gov/10955408/">Marginal Structural Models and Causal Inference in Epidemiology</a>. <em>Epidemiology</em>, 2000, 11(5): 550–560.&#160;<a class="footnote-backref" href="#fnref:marginal-structural" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:e-value">
+<p>VanderWeele TJ, Ding P. <a href="https://pubmed.ncbi.nlm.nih.gov/28693043/">Sensitivity Analysis in Observational Research: Introducing the E-Value</a>. <em>Annals of Internal Medicine</em>, 2017, 167(4): 268–274.&#160;<a class="footnote-backref" href="#fnref:e-value" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:negative-controls">
+<p>Lipsitch M, Tchetgen Tchetgen E, Cohen T. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3053408/">Negative Controls: A Tool for Detecting Confounding and Bias in Observational Studies</a>. <em>Epidemiology</em>, 2010, 21(3): 383–388.&#160;<a class="footnote-backref" href="#fnref:negative-controls" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/biostat/causal_meta_analysis.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/biostat/causal_meta_analysis.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-biostat-causal-meta-analysis"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../bayesian_computational/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 贝叶斯推断与计算统计">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                贝叶斯推断与计算统计
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../systematic_review_meta_analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: 系统综述与荟萃分析">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                系统综述与荟萃分析
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

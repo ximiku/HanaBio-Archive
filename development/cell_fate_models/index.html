@@ -1,0 +1,3317 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/development/cell_fate_models/">
+      
+      
+        <link rel="prev" href="../models_methods/">
+      
+      
+        <link rel="next" href="../developmental_signaling/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>细胞命运决定与胚胎诱导 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              细胞命运决定与胚胎诱导
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  发育
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  原理与方法
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  原理与方法
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  模式生物与发育研究方法
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞命运决定与胚胎诱导
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞命运决定与胚胎诱导
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commitment-assays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        命运承诺的实验判据
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        三种命运指定方式
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三种命运指定方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autonomous-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        自主指定与内部差异
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        条件指定与位置输入
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syncytial-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        合胞体指定与共同细胞质
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#induction-and-competence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        胚胎诱导与组织感受态
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphogen-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        形态发生素的梯度解释
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        细胞命运的记忆与可塑性
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        命运机制的证据边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developmental_signaling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育信号与基因调控
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../gametogenesis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生殖与早期胚胎
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../axis_patterning/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  图式与形态发生
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stem_cells_regeneration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  干细胞、重编程与再生
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environmental_evo_devo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育时序、性别决定与环境可塑性
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../evo_devo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  演化发育生物学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commitment-assays" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        命运承诺的实验判据
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        三种命运指定方式
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三种命运指定方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autonomous-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        自主指定与内部差异
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        条件指定与位置输入
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syncytial-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        合胞体指定与共同细胞质
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#induction-and-competence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        胚胎诱导与组织感受态
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphogen-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        形态发生素的梯度解释
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cell-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        细胞命运的记忆与可塑性
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        命运机制的证据边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    发育
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../models_methods/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    原理与方法
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="13" data-block-fingerprint="4fba4ff9dcbcd9822f50" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="_1">细胞命运决定与胚胎诱导<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="147" data-block-fingerprint="ecab0aaef78b6925baf5" data-block-start="15" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">同一个受精卵产生肌细胞、神经元、肠上皮和生殖细胞。多数体细胞保留大致相同的基因组，细胞质中的母源物质、细胞之间的信号、所在位置和既往状态共同改变基因表达。发育中的细胞逐步取得终末身份：它可能先偏向若干可选方向，随后在特定环境中收窄潜能，最后才出现可见的结构和功能。</p>
+<p data-block-end="272" data-block-fingerprint="99b792fd910054d5b46f" data-block-start="149" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">“命运”因此既是正常胚胎中的观察结果，也是实验条件下的判断。命运图谱说明细胞通常会产生什么，分离培养检验它离开邻居后能产生什么，异位移植则检验新环境能否改变这一结果。这些实验共同区分细胞已经携带的内部信息、邻近组织提供的诱导和组织位置提供的坐标。</p>
+<h2 data-block-end="309" data-block-fingerprint="5a7cd7028e07b440e8b6" data-block-start="274" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="commitment-assays">命运承诺的实验判据<a class="headerlink" href="#commitment-assays" title="Permanent link">&para;</a></h2>
+<p data-block-end="457" data-block-fingerprint="059e643ebc186dd8d71b" data-block-start="311" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">细胞的预期命运（prospective fate）是它在未受扰动胚胎中的正常去向，发育潜能（potency）则是它在允许条件下能够产生的全部细胞类型。两者可以相等，也可以相差很大。海胆早期卵裂球在完整胚胎中只贡献一部分组织，分离后却可能调整发育并形成相对完整的幼体，说明它的潜能大于正常命运。</p>
+<p data-block-end="725" data-block-fingerprint="a7a2b2c102678d605a03" data-block-start="459" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">命运承诺（commitment）通常分成指定与决定两个操作阶段。把细胞放进不推动其他命运的中性环境，如果它仍按原方向分化，就称该命运已被指定（specification）；若把它移入会推动另一命运的胚胎区域，它仍保持原方向，则称已经决定（determination）。分化（differentiation）是随后可检测的结构、代谢和功能状态，例如肌节组装或神经递质合成。指定和决定描述在特定实验强度下测得的稳定程度，更强的重编程、损伤或实验干预仍可能改写通常被视为“已决定”的状态。<sup id="fnref:commitment-definitions"><a class="footnote-ref" href="#fn:commitment-definitions">1</a></sup></p>
+<p data-block-end="864" data-block-fingerprint="042b1aecf35e7d0cabcd" data-block-start="727" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">中文教材有时把 specification 译为“特化”，也把整个承诺过程称为“定型”。这些译法容易与 specialization 混淆；“指定—决定—分化”更能保持三个实验概念的边界。判断时还应注明物种、阶段、移植位置和培养条件，使“不可逆”等结论具有可复现的实验范围。</p>
+<h2 data-block-end="902" data-block-fingerprint="8532e2330fac28c47e84" data-block-start="866" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="specification-modes">三种命运指定方式<a class="headerlink" href="#specification-modes" title="Permanent link">&para;</a></h2>
+<p data-block-end="1021" data-block-fingerprint="aace0b4d5c64e84f5460" data-block-start="904" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">自主指定、条件指定和合胞体指定描述信息进入命运决定的三种典型方式，同一胚胎可依次或并行使用。胚胎可以先依靠母源定位物质建立差异，再由细胞间信号细化区域，之后继续用相互抑制和反馈稳定单细胞命运；同一细胞也可能在不同阶段先后接受多种机制。</p>
+<h3 data-block-end="1066" data-block-fingerprint="ee3cffad5ecaa4a35369" data-block-start="1023" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="autonomous-specification">自主指定与内部差异<a class="headerlink" href="#autonomous-specification" title="Permanent link">&para;</a></h3>
+<p data-block-end="1354" data-block-fingerprint="0f32c9c6a06493f67902" data-block-start="1068" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">自主指定（autonomous specification）发生在卵或早期胚胎的某些调控分子分布不均，并在卵裂中进入特定子细胞时。孤立这样的卵裂球，它仍产生在完整胚胎中原本会产生的组织；从胚胎移除它，剩余部分则缺少相应组织。海鞘、软体动物和线虫的部分早期谱系提供了经典例证。许多母源信使核糖核酸（messenger RNA，mRNA）在卵母细胞中与蛋白组成核糖核蛋白颗粒，其定位、储存和定时翻译都能造成早期差异。细胞质决定因子可以是定位的 mRNA、转录调节蛋白或其他调控组分，其身份由定位、缺失和异位转移证据共同确认。<sup id="fnref:specification-mechanics"><a class="footnote-ref" href="#fn:specification-mechanics">2</a></sup></p>
+<p data-block-end="1463" data-block-fingerprint="4789a9a6dc63f104e1bc" data-block-start="1356" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">自主指定产生的缺失表型常被称为镶嵌式发育。海鞘早期肌肉谱系可以显示强烈自主性，其他组织仍需要细胞接触；线虫的谱系高度可重复，其中也包含多次诱导。自主程度是具体细胞、阶段和性状的属性，各无脊椎动物和组织之间差异很大。</p>
+<h3 data-block-end="1509" data-block-fingerprint="11b375cb366ca4af51fa" data-block-start="1465" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="conditional-specification">条件指定与位置输入<a class="headerlink" href="#conditional-specification" title="Permanent link">&para;</a></h3>
+<p data-block-end="1710" data-block-fingerprint="c72f8f97aef5b647fdd7" data-block-start="1511" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">条件指定（conditional specification）中，细胞最初具有多个可能去向，邻近细胞、细胞外基质和组织位置逐步限制其选择。移走某个卵裂球后，其余细胞可能改变贡献并补足缺失部分；把一个细胞换到新位置，它也可能采取与新邻居相符的命运。这种调整能力称为调节发育。早期胚胎分离后形成同卵多胎体现了这种能力，其范围随阶段和细胞状态逐渐收窄。<sup id="fnref2:specification-mechanics"><a class="footnote-ref" href="#fn:specification-mechanics">2</a></sup></p>
+<p data-block-end="1856" data-block-fingerprint="92fff68ab26963508a98" data-block-start="1712" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">这里的位置效应指细胞读取胚胎中的空间信息，遗传学中的“染色体位置效应”则描述基因处于不同染色质邻域时的表达改变。接触对象、配体浓度、基质硬度、力学应力和代谢环境都可传递位置信息。细胞的正常命运是这些输入在未受扰动胚胎中的一次实现；改变位置后是否改变命运，取决于它当时仍保留多大的响应能力。</p>
+<p data-block-end="2063" data-block-fingerprint="685f79b92488820670e7" data-block-start="1858" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">海胆动物极和植物极片段的经典分离与重组实验说明卵沿动物—植物轴已不对称，植物侧组织还能诱导相邻细胞形成内中胚层。早期文献以“动物极化物质”和“植物极化物质”两种对立梯度概括结果，这是操作性历史模型。现代研究显示，植物侧核内 β-catenin 启动内中胚层基因调控网络，随后局部 Delta—Notch 等信号继续分开细胞命运；极性、内部调控状态和细胞间诱导共同建立各区域。<sup id="fnref:sea-urchin-axis"><a class="footnote-ref" href="#fn:sea-urchin-axis">3</a></sup></p>
+<h3 data-block-end="2109" data-block-fingerprint="cbb6f398bf6acdd8e9c5" data-block-start="2065" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="syncytial-specification">合胞体指定与共同细胞质<a class="headerlink" href="#syncytial-specification" title="Permanent link">&para;</a></h3>
+<p data-block-end="2245" data-block-fingerprint="694432fea0fcdff7eb60" data-block-start="2111" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">许多昆虫早期胚胎先进行核分裂而不立即完成胞质分裂，多个细胞核因而共享同一片细胞质。定位于卵两端的母源 mRNA 及其蛋白梯度可直接影响不同位置的细胞核；细胞膜形成后，先前的核位置差异便转化为细胞间的基因表达差异。这种合胞体指定同时具有内部定位物质和位置依赖梯度的特征。</p>
+<p data-block-end="2460" data-block-fingerprint="1e188754cfc4f030c392" data-block-start="2247" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">果蝇前端的 Bicoid 蛋白梯度既调控合子基因转录，也抑制前端 <em>caudal</em> mRNA 的翻译；后端定位的 Nanos 与 Pumilio 抑制母源 <em>hunchback</em> mRNA 的翻译。Caudal 梯度由此也依赖翻译调控。共享胞质在细胞化之前赋予细胞核不同输入；母体效应、分节级联和轴形成的完整机制见<a href="../axis_patterning/">胚轴、分节与位置身份</a>。<sup id="fnref:drosophila-syncytium"><a class="footnote-ref" href="#fn:drosophila-syncytium">4</a></sup></p>
+<h2 data-block-end="2505" data-block-fingerprint="90e50ab59afa0c78f697" data-block-start="2462" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="induction-and-competence">胚胎诱导与组织感受态<a class="headerlink" href="#induction-and-competence" title="Permanent link">&para;</a></h2>
+<p data-block-end="2699" data-block-fingerprint="57fd8a6f0bc3e802c4f7" data-block-start="2507" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">胚胎诱导（embryonic induction）是一个细胞群改变另一个细胞群行为或命运的相互作用。诱导组织提供信号，响应组织必须具有接收并解释信号的能力。诱导可以是指令性的：响应组织由此启动原本不会启动的命运程序；也可以是许可性的：组织已经具备相应程序，只需要基质、营养或其他环境允许它表现。区分二者需要同时比较有无诱导组织，并用其他组织或介质排除“任何支持环境都能产生同样结果”。</p>
+<p data-block-end="2905" data-block-fingerprint="90e472b68e6321e8df9c" data-block-start="2701" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">感受态（competence）是响应组织在特定时间对某种诱导作出特定反应的能力。它由受体、胞内信号装置、谱系转录因子和染色质可及性共同建立。相同配体遇到不同细胞可以产生不同结果；同一组织在较早阶段能够响应，稍后也可能关闭受体或靶增强子而失去感受态。先锋转录因子预先接近核小体包裹的调控区，是建立某些响应能力的一种机制；完整的感受态来自多个分子层面的组合。<sup id="fnref:developmental-competence"><a class="footnote-ref" href="#fn:developmental-competence">5</a></sup></p>
+<p data-block-end="3068" data-block-fingerprint="7780eecf0bd75e7a322d" data-block-start="2907" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">晶状体发生展示了诱导的连续性。经典移植实验中，视泡能够在头部外胚层诱导晶状体样结构，躯干部外胚层则因感受态不同而缺少同样反应。进一步研究表明，头部外胚层在接触视泡之前已接受咽内胚层、前部神经板等早期输入，视泡信号继续推进和维持晶状体程序。器官发生中的诱导者常是接力链中的一环。<sup id="fnref:induction-competence"><a class="footnote-ref" href="#fn:induction-competence">6</a></sup></p>
+<p data-block-end="3251" data-block-fingerprint="c299de2110a983d78ab8" data-block-start="3070" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">邻近细胞之间还可以通过相互限制把近似等价的群体分成不同命运。Notch—Delta 侧向抑制中，细胞间微小差异经反馈放大：配体较高的细胞成为主要发送者，邻细胞的 Notch 活性升高并采取另一命运。这是神经前体选择等过程的常见逻辑。Notch 在其他情境还可促进相邻细胞采用相似状态，具体结果取决于配体、反馈和预先图式。<sup id="fnref:lateral-inhibition"><a class="footnote-ref" href="#fn:lateral-inhibition">7</a></sup></p>
+<h2 data-block-end="3296" data-block-fingerprint="c4c1c545c23bb686d0d9" data-block-start="3253" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="morphogen-interpretation">形态发生素的梯度解释<a class="headerlink" href="#morphogen-interpretation" title="Permanent link">&para;</a></h2>
+<p data-block-end="3480" data-block-fingerprint="6dbcb70c6dd644d409e3" data-block-start="3298" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">形态发生素（morphogen）是能够在组织中形成空间分布，并直接使响应细胞按局部信号水平产生两个或更多不同结果的信号分子。证明一个分子具有这种作用，需要显示它在体内的空间或活性梯度，改变剂量或分布会移动命运边界，响应细胞直接接收该信号，而且不同水平确实引出不同命运。仅有扩散、梯度外观或一种浓度下的诱导活性，都不足以完成证明。<sup id="fnref:morphogen-rules"><a class="footnote-ref" href="#fn:morphogen-rules">8</a></sup></p>
+<p data-block-end="3657" data-block-fingerprint="35f49d48f84492a8ae2c" data-block-start="3482" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">“法国国旗”模型用多个浓度阈值说明连续梯度怎样产生离散区域，是理解位置值的起点。真实胚胎还会读取暴露持续时间、信号变化速率和既往状态。受体周转、抑制物、正负反馈与下游转录因子之间的交叉抑制能够移动或锐化边界，组织生长又要求图案随尺度调整。因此，成熟的命运边界通常由梯度给出的初始偏向与基因调控网络动态共同形成，细胞对瞬时浓度的单次读取只是其中一部分。</p>
+<p data-block-end="3894" data-block-fingerprint="e07ee43a2d5293d64994" data-block-start="3659" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">非洲爪蟾动物帽实验是剂量解释的经典例子：孤立的动物极外胚层在培养中趋向表皮命运，接受不同水平的转化生长因子 β（transforming growth factor beta，TGF-β）家族输入时可表达不同中内胚层标志。外加 Activin 曾清楚展示浓度和暴露时间如何改变响应；遗传和拮抗实验进一步支持 Nodal 相关信号在胚胎内中内胚层诱导中的核心作用。对生理诱导物的判断需要结合外植体剂量—反应、体内分布、缺失表型和救援。<sup id="fnref:xenopus-mesoderm"><a class="footnote-ref" href="#fn:xenopus-mesoderm">9</a></sup></p>
+<p data-block-end="3998" data-block-fingerprint="2ced93bdd08229920fb7" data-block-start="3896" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">形态发生素与细胞质决定因子描述不同的信息来源和传播情境：前者跨一定空间作用，后者随细胞质继承。定位决定因子的剂量可以影响结果，形态发生素也由具有特定内部状态的细胞解释，两者最终都通过调控网络改变基因表达。</p>
+<h2 data-block-end="4031" data-block-fingerprint="7ae7cdd9760b96c69fa1" data-block-start="4000" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="cell-memory">细胞命运的记忆与可塑性<a class="headerlink" href="#cell-memory" title="Permanent link">&para;</a></h2>
+<p data-block-end="4227" data-block-fingerprint="5d797e5a7682570a6e30" data-block-start="4033" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">短暂信号要产生持续命运，细胞必须在信号消失后维持新的调控状态。转录因子自激活、两个命运程序之间的交叉抑制、Polycomb／Trithorax 等染色质调节、脱氧核糖核酸（deoxyribonucleic acid，DNA）甲基化以及细胞与环境的反馈，都可以参与这种记忆。不同机制维持的时间尺度不同，单一表观标记只能反映稳定过程的一部分；稳定身份来自调控网络、染色质和细胞生理的共同延续。</p>
+<p data-block-end="4407" data-block-fingerprint="4b7e3ddad019ce205790" data-block-start="4229" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">果蝇成虫盘的连续移植实验提供了直观证据。未终末分化的盘组织在成体宿主体内多轮增殖后，通常仍能在变态时形成其来源对应的翅、足或其他结构，表明决定状态可以跨许多细胞代保持。少数组织在损伤和再生条件下发生转决定（transdetermination），例如由足盘命运转向翅盘命运，显示这种记忆具有长期稳定性，也保留特定条件下的可塑性。<sup id="fnref:cell-memory"><a class="footnote-ref" href="#fn:cell-memory">10</a></sup></p>
+<p data-block-end="4643" data-block-fingerprint="e940410bbce6680c1ed1" data-block-start="4409" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">大多数发育性命运变化通过可逆或可维持的基因表达调节实现，DNA 序列保持不变。B、T 细胞的 V(D)J 重排则是免疫受体多样化的谱系特异过程；其发生阶段与功能见<a href="../../immunology/lymphocyte_development_repertoire/#vdj-recombination">淋巴细胞发育与受体多样性</a>。温度、营养和其他外部环境对发育轨迹的系统影响见<a href="../environmental_evo_devo/">发育时序、性别决定与环境可塑性</a>。</p>
+<h2 data-block-end="4682" data-block-fingerprint="05c3e32f0d4560b5769d" data-block-start="4645" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="evidence-boundaries">命运机制的证据边界<a class="headerlink" href="#evidence-boundaries" title="Permanent link">&para;</a></h2>
+<p data-block-end="4887" data-block-fingerprint="99e411284d70a7562d26" data-block-start="4684" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">判断命运机制时，表达相关性只能提出候选。分离实验检验自主性，异位移植检验决定程度和感受态，消融检验必要性，异位表达或局部加珠检验条件性充分性，谱系标记则确认最终组织来自供体还是宿主。若扰动同时改变细胞存活、增殖或位置，表型可能是间接结果，还要用时序控制、剂量系列和救援缩小解释范围。各类操作的完整逻辑见<a href="../models_methods/#perturbation-logic">模式生物与发育研究方法</a>。</p>
+<p data-block-end="5049" data-block-fingerprint="3233e0055375e644e944" data-block-start="4889" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">细胞命运最终表现为一条动态轨迹：内部不对称提供初始偏向，邻居和远距离信号按位置与时间改变选择，感受态决定哪些输入可被读取，反馈与染色质再把暂时差异稳定下来。<a href="../developmental_signaling/">发育信号与基因调控</a>进一步说明少数信号通路如何借助受体、增强子和基因调控网络，在不同组织反复产生不同结果。</p>
+<h2 data-block-end="5079" data-block-fingerprint="395b0f0ea627f066b451" data-block-start="5051" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul data-block-end="8310" data-block-fingerprint="c85dc74cbe7b2ea27dc9" data-block-start="5081" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-development-cell-fate-models">
+<li>Gilbert SF. <em>Developmental Biology</em>. 6th ed. Sinauer Associates, 2000.</li>
+<li>Wolpert L, Tickle C, Arias AM. <em>Principles of Development</em>. 6th ed. Oxford University Press, 2019.</li>
+<li>Briscoe J, Small S. Morphogen rules: design principles of gradient-mediated embryo patterning. <em>Development</em>. 2015;142:3996–4009.</li>
+<li>Zaret KS, Carroll JS. Pioneer transcription factors: establishing competence for gene expression. <em>Genes &amp; Development</em>. 2011;25:2227–2241.</li>
+<li>McClure KD, Schubiger G. Transdetermination: Drosophila imaginal disc cells exhibit stem cell-like potency. <em>International Journal of Biochemistry &amp; Cell Biology</em>. 2007;39:1105–1118.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:commitment-definitions">
+<p>指定、决定与分化的经典操作判据，以及预期命运和发育潜能的差别，参见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK9968/">The Developmental Mechanics of Cell Specification</a>；“中性环境”和“不可逆”均需结合具体实验条件理解。&#160;<a class="footnote-backref" href="#fnref:commitment-definitions" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:specification-mechanics">
+<p>自主、条件和合胞体指定的分离、缺损与调节发育判据，参见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK9968/">The Developmental Mechanics of Cell Specification</a>；没有一种动物胚胎只使用其中一种方式。&#160;<a class="footnote-backref" href="#fnref:specification-mechanics" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:specification-mechanics" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sea-urchin-axis">
+<p>海胆植物侧细胞命运对 β-catenin 的依赖及其与 Wnt 样母源极性信息的关系，参见 Logan 等 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC21340/">β-Catenin is essential for patterning the maternally specified animal-vegetal axis in the sea urchin embryo</a>；β-catenin、内中胚层网络与 Delta—Notch 的关系参见 McClay <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4765714/">Developmental gene regulatory networks in sea urchins and what we can learn from them</a>。“动物极化／植物极化梯度”是概括早期操作结果的历史模型。&#160;<a class="footnote-backref" href="#fnref:sea-urchin-axis" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:drosophila-syncytium">
+<p>合胞体指定及 Bicoid、Nanos 的母源定位见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK9968/">The Developmental Mechanics of Cell Specification</a>；Bicoid 对 <em>caudal</em> 翻译的抑制和 Nanos 对 <em>hunchback</em> 翻译的抑制见 <a href="https://www.ncbi.nlm.nih.gov/books/NBK21127/">Regulation of Genome Activity</a>。&#160;<a class="footnote-backref" href="#fnref:drosophila-syncytium" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:developmental-competence">
+<p>先锋转录因子进入核小体包裹调控区并为后续基因激活建立感受态的机制，参见 Zaret 与 Carroll <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3219227/">Pioneer transcription factors: establishing competence for gene expression</a>；先锋因子只是感受态的一个分子层面。&#160;<a class="footnote-backref" href="#fnref:developmental-competence" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:induction-competence">
+<p>指令性／许可性诱导、响应组织的感受态及晶状体多步诱导，参见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK9993/">Induction and Competence</a>；经典“视泡诱导晶状体”需要放在此前的头部外胚层预置与后续组织互作中理解。&#160;<a class="footnote-backref" href="#fnref:induction-competence" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lateral-inhibition">
+<p>Notch—Delta 侧向抑制如何从近似等价细胞中放大差异，以及 Notch 在不同情境的多种作用模式，参见 Perrimon、Pitsouli 与 Shilo <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3405863/">Signaling Mechanisms Controlling Cell Fate and Embryonic Patterning</a>。&#160;<a class="footnote-backref" href="#fnref:lateral-inhibition" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:morphogen-rules">
+<p>形态发生素的直接、浓度依赖作用及梯度与转录网络共同定位边界的证据要求，参见 Briscoe 与 Small <a href="https://pubmed.ncbi.nlm.nih.gov/26628090/">Morphogen rules: design principles of gradient-mediated embryo patterning</a>。&#160;<a class="footnote-backref" href="#fnref:morphogen-rules" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:xenopus-mesoderm">
+<p>Activin 动物帽剂量实验与胚胎内 Nodal 相关信号的区分，参见 Smith <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2742078/">Forming and Interpreting Gradients in the Early Xenopus Embryo</a>及 Agius 等 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2292107/">Endodermal Nodal-related signals and mesoderm induction in Xenopus</a>。&#160;<a class="footnote-backref" href="#fnref:xenopus-mesoderm" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cell-memory">
+<p>成虫盘经连续移植长期保持来源身份、同时在再生条件下偶见转决定的实验，参见 McClure 与 Schubiger <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2000801/">Transdetermination: Drosophila imaginal disc cells exhibit stem cell-like potency</a>；经典定位记忆与选择基因关系见 NCBI Bookshelf <a href="https://www.ncbi.nlm.nih.gov/books/NBK26901/">Organogenesis and the Patterning of Appendages</a>。&#160;<a class="footnote-backref" href="#fnref:cell-memory" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/development/cell_fate_models.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/development/cell_fate_models.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-development-cell-fate-models"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../models_methods/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 模式生物与发育研究方法">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                模式生物与发育研究方法
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../developmental_signaling/" class="md-footer__link md-footer__link--next" aria-label="Next: 发育信号与基因调控">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                发育信号与基因调控
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3610 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/bioinfo/workflows/">
+      
+      
+        <link rel="prev" href="../computational_foundations/">
+      
+      
+        <link rel="next" href="../sequencing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>命令行、工作流与可重复研究 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              命令行、工作流与可重复研究
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生信
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_15" id="__nav_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  生信
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_15_2" id="__nav_15_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据、计算与工作流
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_15_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  数据、计算与工作流
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物数据、格式与数据库
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computational_foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  算法、统计与计算基础
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  命令行、工作流与可重复研究
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  命令行、工作流与可重复研究
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从结果回溯分析过程
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Shell、进程与文件流
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell、进程与文件流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal-shell-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        终端、Shell 与命令
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        标准输入、标准输出与错误流
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        项目结构、脚本与版本历史
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        软件环境与依赖封装
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从脚本串联到工作流图
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        测试、日志与失败诊断
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpc-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        本机、高性能计算与云端执行
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-manifest-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        运行清单与结果发布
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducibility-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可重复性的层次与证据边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../sequencing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  测序与序列
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../genome_analysis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  基因组
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../transcriptomics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子组学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structural_bioinformatics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  结构生物信息学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functional_annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  功能注释、富集与功能预测
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phylogenetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子进化与系统发育分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phylogenetics_networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物网络与系统生物学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#analysis-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从结果回溯分析过程
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Shell、进程与文件流
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell、进程与文件流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminal-shell-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        终端、Shell 与命令
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        标准输入、标准输出与错误流
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projects-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        项目结构、脚本与版本历史
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environments-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        软件环境与依赖封装
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从脚本串联到工作流图
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        测试、日志与失败诊断
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpc-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        本机、高性能计算与云端执行
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-manifest-publication" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        运行清单与结果发布
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducibility-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可重复性的层次与证据边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    生信
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../data_databases/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    数据、计算与工作流
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="15" data-block-fingerprint="5e7e6acd84d122947e9b" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="_1">命令行、工作流与可重复研究<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="121" data-block-fingerprint="406f86daccc7f3fba622" data-block-start="17" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">生物信息学分析通常由下载、筛选、格式转换、计算、汇总与作图等多个步骤组成。需要保存的是从输入到结论的完整生成关系：哪些数据进入了哪一步，使用了什么代码、软件、参数和环境，运行是否成功，输出又经过了怎样的检验。</p>
+<p data-block-end="293" data-block-fingerprint="2102446f3f7aea88cc53" data-block-start="123" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">命令行、脚本、计算笔记本、Galaxy 历史和工作流引擎都是组织这条关系的工具。命令行便于把小程序组合成数据流，脚本把交互操作固定为程序，工作流系统进一步声明任务之间的依赖并管理并行、缓存和调度。图形界面和命令行都可以形成可重复研究，决定性条件是实际操作能否被准确记录、检查并在适当环境中重新执行。<sup id="fnref:reproducible-rules"><a class="footnote-ref" href="#fn:reproducible-rules">1</a></sup></p>
+<h2 data-block-end="332" data-block-fingerprint="842a0e7b3931192f4713" data-block-start="295" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="analysis-provenance">从结果回溯分析过程<a class="headerlink" href="#analysis-provenance" title="Permanent link">&para;</a></h2>
+<p data-block-end="579" data-block-fingerprint="6e1e7fbec830733e38fa" data-block-start="334" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">一项分析可以看成由数据实体和计算活动组成的有向关系网。原始文件、参考序列、配置和样本表是输入，软件调用或人工判断是活动，中间文件、质量报告、统计量和图表是输出。某一步的输出又成为下一步的输入。这里既有计划层面的过程说明，也有运行层面的事实记录：工作流文件描述“准备怎样计算”，执行日志描述“这一次实际上怎样计算”。这两类信息分别称为前瞻性来源信息和回顾性来源信息（prospective and retrospective provenance）。<sup id="fnref:workflow-run-crate"><a class="footnote-ref" href="#fn:workflow-run-crate">2</a></sup></p>
+<p data-block-end="728" data-block-fingerprint="6aff4f375e41cbf5e08e" data-block-start="581" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">完整记录应从研究开始时形成。分析结束后依据记忆补写方法，容易遗漏失败的尝试、临时过滤、软件默认值和后来改变的参考数据库。Sandve 等提出的可重复计算原则把“每个结果都能追踪其产生方式”放在首位，并建议以可执行脚本或工作流保持方法说明与实际操作同步。<sup id="fnref2:reproducible-rules"><a class="footnote-ref" href="#fn:reproducible-rules">1</a></sup></p>
+<p data-block-end="856" data-block-fingerprint="fdc0ca6a015111571525" data-block-start="730" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">对一个准备交付的结果，可以沿生成关系反向追问：输出文件由哪个任务创建；任务使用哪次代码提交、哪份配置和哪个软件环境；输入文件来自哪个样本、数据库发布版或上游任务；运行记录是否表明正常结束；质量检查是否覆盖了最终文件。保存这些层次即可维持完整的证据关系。</p>
+<h2 data-block-end="892" data-block-fingerprint="cab772863f93aa4b85bd" data-block-start="858" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="shell-streams">Shell、进程与文件流<a class="headerlink" href="#shell-streams" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="938" data-block-fingerprint="b8a709cbbe76ed3bdc71" data-block-start="894" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="terminal-shell-command">终端、Shell 与命令<a class="headerlink" href="#terminal-shell-command" title="Permanent link">&para;</a></h3>
+<p data-block-end="1116" data-block-fingerprint="2dc5dbf7b87a16e92c0d" data-block-start="940" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">终端是呈现输入和输出的界面，Shell 是读取命令、展开参数并启动进程的解释器，具体程序才执行序列比对、格式转换或统计计算。Bash、Zsh 等 Shell 的语法存在差异；脚本若依赖某种语法，应在文件开头声明解释器，并记录执行平台。把“在终端里运行”写成方法信息仍然不充分，因为同一行文字可能受当前目录、环境变量、别名、搜索路径和文件名展开方式影响。</p>
+<p data-block-end="1300" data-block-fingerprint="9c0d8682deee3cdf80d5" data-block-start="1118" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">绝对路径从文件系统根开始，相对路径则依赖当前工作目录。项目内部使用相对路径通常更便于迁移，但脚本应从明确的项目入口解析路径，而不是假定使用者恰好站在某个目录。变量展开、空格和通配符需要正确引用；例如 <code>*.fastq.gz</code> 在程序启动前就由 Shell 展开，匹配不到文件时的行为也随 Shell 设置而异。文件处理顺序若会影响结果，还需固定排序规则和区域设置。</p>
+<p data-block-end="1416" data-block-fingerprint="b99db8bbe346a3986897" data-block-start="1302" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">命令由程序名、选项和位置参数组成。长命令应把可变值放入具有字段说明的配置文件或命名参数，实验组别和关键阈值通过显式字段记录。密码、访问令牌和私钥应由受控的凭据系统或运行时环境提供，不能写进命令历史、脚本、配置模板、日志和版本库。</p>
+<h3 data-block-end="1457" data-block-fingerprint="f0d9df3b44ec31c9432d" data-block-start="1418" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="standard-streams">标准输入、标准输出与错误流<a class="headerlink" href="#standard-streams" title="Permanent link">&para;</a></h3>
+<p data-block-end="1705" data-block-fingerprint="f87766fff5573e246d1b" data-block-start="1459" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">Unix 程序通常接收标准输入（standard input，stdin），把主要结果写到标准输出（standard output，stdout），把诊断信息写到标准错误（standard error，stderr）。重定向可以把输出保存为文件，管道则把前一个进程的 stdout 接到下一个进程的 stdin。Software Carpentry 用“管道与过滤器”说明这种组合方式：每个程序完成一个边界清楚的转换，多个小程序由共同的数据流接口组成更大的分析。<sup id="fnref:shell-lesson"><a class="footnote-ref" href="#fn:shell-lesson">3</a></sup></p>
+<p data-block-end="1831" data-block-fingerprint="92b5c8e129dfcf5fc8a4" data-block-start="1707" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows"><div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>producer<span class="w"> </span>--input<span class="w"> </span>reads.txt<span class="w"> </span><span class="p">|</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>transformer<span class="w"> </span>--min-quality<span class="w"> </span><span class="m">20</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">)</span><span class="w"> </span>&gt;<span class="w"> </span>results/filtered.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>logs/filter.stderr
+</span></code></pre></div></p>
+<p data-block-end="2004" data-block-fingerprint="38938e82515f1ffea2fa" data-block-start="1833" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">这段形式同时展示了数据流和错误流。可靠脚本还需处理 <code>&gt;</code> 对已有文件的覆盖、上游失败后空数据继续传递，以及 Bash 默认以最后一个命令决定管道退出状态等情况。正式脚本应明确错误策略，例如启用并理解 <code>pipefail</code>，逐步检查退出状态、输出是否存在及内容是否满足预期。退出码为零表示程序按其约定结束；样本、参数和生物学结论还需另行检查。</p>
+<p data-block-end="2110" data-block-fingerprint="296923f8aa31d7a7a9b4" data-block-start="2006" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">标准流适合逐行或分块处理，可以减少临时文件和磁盘写入；需要随机访问、建立索引、重复检查或保留审计节点时，中间文件仍有价值。是否保留中间产物应由重算成本、审计需要和存储代价决定，并记录哪些文件可由上游重新生成。</p>
+<h2 data-block-end="2157" data-block-fingerprint="9e4d7f17d85f7f1ea553" data-block-start="2112" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="projects-version-control">项目结构、脚本与版本历史<a class="headerlink" href="#projects-version-control" title="Permanent link">&para;</a></h2>
+<p data-block-end="2398" data-block-fingerprint="330dc11d0be77f6071e1" data-block-start="2159" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">一个计算项目至少要区分不可变的原始数据、人工维护的代码与配置、自动生成的中间结果和最终交付物。目录名称可以因项目而异，关键是来源数据不被就地修改、派生结果能够由代码重建、临时文件与正式结果分开。研究对象、文件格式、标识符、版本和校验和的管理原则见<a href="../data_databases/">生物数据、格式与数据库</a>。Wilson 等面向科研计算给出的实践同样强调保存原始数据、记录所有处理步骤、显式声明依赖，并为程序提供小型示例数据。<sup id="fnref:good-enough-computing"><a class="footnote-ref" href="#fn:good-enough-computing">4</a></sup></p>
+<p data-block-end="2530" data-block-fingerprint="56d2609c9abc0ac909be" data-block-start="2400" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">交互探索应尽快沉淀为脚本。脚本接收显式输入和参数，把输出写到指定位置，遇到错误给出非零退出状态；重复使用的代码应拆成函数或模块。脚本既是执行工具，也是精确的方法记录。文档解释研究意图、输入字段、参数理由和输出含义，代码负责落实具体计算，两者共同构成可复核说明。</p>
+<p data-block-end="2703" data-block-fingerprint="e5dc32cd8d2ad82ecfc3" data-block-start="2532" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">计算笔记本把代码、叙述、表格和图形放在同一文档中，适合探索数据和展示分析思路。它的交互状态也会形成风险：单元格可以乱序执行，内存中可能留有已从文档删除的变量，显示结果可能来自旧代码。准备分享时，应从干净内核按固定顺序完整执行，公开依赖和输入，把复杂、可测试的逻辑提取到普通模块，并保留便于长期阅读的静态输出。<sup id="fnref:notebook-rules"><a class="footnote-ref" href="#fn:notebook-rules">5</a></sup></p>
+<p data-block-end="2956" data-block-fingerprint="e2487f37e574901ac17a" data-block-start="2705" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">版本控制系统记录文件随时间的变化。Git 的一次提交保存一组相关变更及其父提交关系，使代码、配置和文档能够回到明确状态并比较差异。分析结果应引用代码提交哈希或发布标签，以取代含义会随时间变化的“最新版脚本”。提交宜小而语义完整，代码审查和自动测试应针对同一提交进行。大型测序文件、数据库快照和生成结果通常保存在合适的数据仓库或对象存储中，并由清单记录持久标识符、版本和校验和；普通 Git 历史主要承载代码、配置和文档。凭据与受限个体数据不得进入公开版本库。<sup id="fnref:git-version-control"><a class="footnote-ref" href="#fn:git-version-control">6</a></sup></p>
+<h2 data-block-end="2999" data-block-fingerprint="433a91a0a0d6dedb2ea8" data-block-start="2958" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="environments-containers">软件环境与依赖封装<a class="headerlink" href="#environments-containers" title="Permanent link">&para;</a></h2>
+<p data-block-end="3240" data-block-fingerprint="56bf5b59a94383b393d9" data-block-start="3001" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">同一脚本在不同机器上产生差异，常来自编程语言、库、底层二进制程序或系统组件的版本变化。顶层软件名称需要与传递依赖共同记录。环境描述文件声明需要哪些包和版本，求解器据此选择一组相容依赖；锁定文件进一步记录具体构建或下载对象。前者通常更便于跨平台安装，后者更接近在特定平台上精确重建。Conda 的官方文档也区分跨平台环境规格、只包含显式安装包的 <code>--from-history</code> 导出，以及面向同一平台精确重建的 explicit 规格。<sup id="fnref:conda-environments"><a class="footnote-ref" href="#fn:conda-environments">7</a></sup></p>
+<p data-block-end="3389" data-block-fingerprint="010ef2c35f5d113d3ad0" data-block-start="3242" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">环境文件必须与代码一同版本化，并在干净环境中实际创建和测试。仅保存一次 <code>package list</code> 输出，可能记录了大量偶然安装却遗漏系统库；仅给出宽泛版本下限，则可能在未来解析到行为不同的组合。稳妥的发布往往同时保存便于维护的抽象规格和经过验证的锁定结果，并说明支持的操作系统与处理器架构。</p>
+<p data-block-end="3685" data-block-fingerprint="7f18759e7f0150dc2d3e" data-block-start="3391" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">容器镜像把程序及其用户空间依赖封装起来，可减少宿主机发行版差异。镜像标签可能被重新指向，因此重要运行还应记录不可变摘要和构建配方。宿主内核、中央处理器（central processing unit，CPU）与图形处理器（graphics processing unit，GPU）指令和驱动、挂载数据、网络服务及外部数据库仍位于容器封装边界之外，需要按其对结果的影响记录。Apptainer 以单文件镜像格式（Singularity Image Format，SIF）、非特权运行和对并行文件系统、加速器的集成为高性能计算提供了常用容器路径。<sup id="fnref:apptainer-containers"><a class="footnote-ref" href="#fn:apptainer-containers">8</a></sup></p>
+<p data-block-end="3882" data-block-fingerprint="fe840539a5e3d125d2c7" data-block-start="3687" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">环境管理器和容器解决的是不同层次的问题。前者便于选择语言包和生信软件版本，后者还能固定更多操作系统用户空间。工作流可以为不同任务分别声明轻量环境，也可以在统一容器基础上加载任务环境。Snakemake 文档把无环境管理、每规则 Conda 环境以及容器内 Conda 环境列为逐步增强的封装层次，同时提醒平台专用的环境模块应有可移植的替代描述。<sup id="fnref:snakemake-deployment"><a class="footnote-ref" href="#fn:snakemake-deployment">9</a></sup></p>
+<h2 data-block-end="3918" data-block-fingerprint="624bb2ebcaee68439434" data-block-start="3884" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="workflow-graphs">从脚本串联到工作流图<a class="headerlink" href="#workflow-graphs" title="Permanent link">&para;</a></h2>
+<p data-block-end="4096" data-block-fingerprint="e3fdc1817967642bd535" data-block-start="3920" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">短分析可以用一个脚本按顺序执行；当样本增加、任务需要并行、步骤具有不同资源需求或失败后需要续跑时，隐含在脚本中的控制关系会变得难以维护。工作流系统把每个任务的输入、输出、命令、参数、环境和资源声明为节点，再依据数据依赖形成有向无环图（directed acyclic graph，DAG）。没有依赖关系的任务可以并发，依赖输出改变的任务才需要重新计算。</p>
+<p data-block-end="4122" data-block-fingerprint="a4f0770bc59686c510d3" data-block-start="4098" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">不同系统采用不同表达方式，但承担的核心职责相近：</p>
+<table data-block-end="4501" data-block-fingerprint="176502e164849262a1f7" data-block-start="4124" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">
+<thead>
+<tr>
+<th>工作方式</th>
+<th>主要表达</th>
+<th>可保存的关键对象</th>
+<th>仍需主动核对的边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shell／通用脚本</td>
+<td>命令顺序、循环和条件</td>
+<td>脚本、配置、stdout／stderr</td>
+<td>依赖常是隐式的，并行、续跑与失败传播需自行实现</td>
+</tr>
+<tr>
+<td>Snakemake</td>
+<td>规则的输入、输出与通配符</td>
+<td>Snakefile、规则环境、配置、报告</td>
+<td>文件和外部状态必须完整声明，不能依赖未登记的全局环境</td>
+</tr>
+<tr>
+<td>Nextflow</td>
+<td>进程及数据流通道</td>
+<td>流程代码、配置、trace、报告与任务缓存</td>
+<td>通道配对、非确定性输入和缓存目录会影响续跑语义</td>
+</tr>
+<tr>
+<td>Galaxy</td>
+<td>工具、数据集、历史与可视化工作流</td>
+<td>历史、工具版本、参数、工作流和数据集合</td>
+<td>需导出或共享历史，并确认目标实例仍有相应工具与参考数据</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="4776" data-block-fingerprint="ea89d901fb1a9ac8f8d3" data-block-start="4503" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">Snakemake 以文件输入输出决定任务依赖，并可把同一工作流调度到本机、集群或云端；Nextflow 用进程和数据流通道分离计算逻辑与执行平台；Galaxy 则可以从图形用户界面（graphical user interface，GUI）的分析历史提取可重用工作流。Galaxy 历史会保存工具、版本和参数，使 GUI 操作也能形成透明记录。三者提供不同的表达与执行方式，方法科学性仍由研究设计、数据、参数与验证决定。<sup id="fnref:snakemake-workflows"><a class="footnote-ref" href="#fn:snakemake-workflows">10</a></sup><sup id="fnref:nextflow-executors"><a class="footnote-ref" href="#fn:nextflow-executors">11</a></sup><sup id="fnref:galaxy-histories"><a class="footnote-ref" href="#fn:galaxy-histories">12</a></sup></p>
+<p data-block-end="4947" data-block-fingerprint="a9e8107bcfb3ff9747b1" data-block-start="4778" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">缓存和续跑依赖“任务身份”的定义。Nextflow 的任务哈希会考虑脚本、输入、容器或环境等信息，并要求相应工作目录中的输出仍然存在；输入被就地修改、未声明的全局变量或非确定性配对会破坏缓存语义。缓存命中表示系统按既定规则认为任务未改变；缓存文件完整性和隐藏依赖则由校验和、完整性测试和运行清单继续验证。<sup id="fnref:nextflow-cache"><a class="footnote-ref" href="#fn:nextflow-cache">13</a></sup></p>
+<p data-block-end="5091" data-block-fingerprint="7f7018e11cbc462776c6" data-block-start="4949" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">工作流还应区分重试与检查点。重试是在相同或调整后的资源条件下重新执行失败任务；检查点保存长任务内部的进度；工作流级缓存则重用已经完成的任务输出。三者都能减少重复计算，输出有效性仍需通过完整性和语义检查确认。任务应先写入临时位置，通过检查后再原子地发布正式输出，避免下游读取未完成文件。</p>
+<h2 data-block-end="5127" data-block-fingerprint="1a71153be82b4df96f83" data-block-start="5093" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="testing-logging">测试、日志与失败诊断<a class="headerlink" href="#testing-logging" title="Permanent link">&para;</a></h2>
+<p data-block-end="5333" data-block-fingerprint="de6bb1fad15de741a48c" data-block-start="5129" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">可靠工作流把“运行成功”的含义分成多个层次。语法检查确认文件能被解释，单元测试验证小函数，集成测试检查工具之间的接口，回归测试比较已知输入的稳定输出，冒烟测试则用小数据确认整个流程能够完成。生物信息学还需要领域不变量，例如样本 ID 不应无故丢失、坐标必须落在指定组装范围、配对文件数量一致、过滤后的记录数不应超过输入。测试数据应足够小以便频繁运行，同时包含缺失值、空结果、重复记录和异常字符等真实边界情况。</p>
+<p data-block-end="5466" data-block-fingerprint="f78e1de2d04a24b957b9" data-block-start="5335" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">连续集成可以在代码或环境变化时自动建立干净环境并运行测试。它证明的是给定测试集在给定执行条件下通过，覆盖不到的分支、真实大数据的资源瓶颈和生物学模型错误仍可能存在。升级数据库或软件时，应先在固定基准数据上比较输出变化，再决定差异来自修正、默认值改变还是新的错误。</p>
+<p data-block-end="5640" data-block-fingerprint="ce57ddeca638058da37d" data-block-start="5468" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">日志要能回答任务何时开始和结束、处理了哪个输入、使用了哪些参数、运行在哪个节点、消耗多少资源以及为何失败。stdout 与 stderr 应分别捕获，任务和样本使用稳定标识符关联；日志级别既要保留诊断所需信息，也要避免写入访问令牌、个体身份、受控数据内容和不必要的绝对路径。集中式日志便于检索，但长期归档还需保存与发布结果对应的不可变运行摘要。</p>
+<h2 data-block-end="5673" data-block-fingerprint="e63831c1fc00d8113b6a" data-block-start="5642" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="hpc-cloud">本机、高性能计算与云端执行<a class="headerlink" href="#hpc-cloud" title="Permanent link">&para;</a></h2>
+<p data-block-end="5824" data-block-fingerprint="9e2baf20ad8ef2deaea6" data-block-start="5675" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">工作流描述“计算什么”，执行器描述“在哪里和怎样运行”。同一任务可以作为本机进程、集群调度作业、云端批处理任务或容器编排单元运行。工作流系统能够转换提交方式，却仍需研究者为每类任务给出合理的 CPU、内存、墙钟时间、GPU、临时磁盘和并发限制。资源估计应来自小规模试跑和历史监测，再按输入规模调整。</p>
+<p data-block-end="5965" data-block-fingerprint="2996b1ec5dc5c67f4173" data-block-start="5826" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">资源申请过小会导致内存溢出、超时和反复重跑；申请过大则延长排队、降低集群利用率并增加成本。计算密集任务关注处理器和加速器利用率，I/O 密集任务更受存储吞吐、文件数量、网络和数据位置限制。把计算移动到大型数据所在的受控平台，常比反复传输数据更有效，也能减少不必要的敏感数据副本。</p>
+<p data-block-end="6123" data-block-fingerprint="39328ebfb25e04649592" data-block-start="5967" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">云端可伸缩性仍受配额、供应和成本约束。对象存储与普通文件系统的语义不同，虚拟机和加速器型号会变化，区域影响数据驻留、延迟、价格和电力结构。访问权限遵循最小必要原则，运行身份、审计日志、加密和销毁策略应满足数据使用协议。受控人类数据可以在同样受权的安全环境中验证可重复性；公开层则提供合规的元数据、代码和申请条件。</p>
+<p data-block-end="6301" data-block-fingerprint="ec971aae8493f8cca38c" data-block-start="6125" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">计算的环境代价也属于方法选择。碳排放估计取决于硬件、运行时间、内存、数据中心效率和所在地能源结构。先用小数据调试、复用经过验证的缓存、减少无效参数搜索、按需申请资源、把计算靠近数据并报告核心小时和硬件信息，通常同时改善成本、速度和可追溯性。绿色计算以减少不产生科学价值的消耗为目标，研究价值则由科学问题和证据判断。<sup id="fnref:green-algorithms"><a class="footnote-ref" href="#fn:green-algorithms">14</a></sup></p>
+<h2 data-block-end="6345" data-block-fingerprint="8161e664adf217269143" data-block-start="6303" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="run-manifest-publication">运行清单与结果发布<a class="headerlink" href="#run-manifest-publication" title="Permanent link">&para;</a></h2>
+<p data-block-end="6469" data-block-fingerprint="d0959c2a33919995a9a5" data-block-start="6347" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">一次运行的最小清单应连接输入、方法、环境、执行和输出。字段可以保存在工作流报告、JavaScript 对象表示法（JavaScript Object Notation，JSON）、YAML、数据库或研究对象包中；具体格式次于信息之间的稳定关联。</p>
+<table data-block-end="6849" data-block-fingerprint="56981761b3f4cb90e9f8" data-block-start="6471" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">
+<thead>
+<tr>
+<th>层次</th>
+<th>至少记录</th>
+<th>需要回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>研究与数据</td>
+<td>项目、样本、数据许可、登录号／版本／访问日期、文件大小与校验和</td>
+<td>分析对象是谁，输入是否与声明一致</td>
+</tr>
+<tr>
+<td>代码与工作流</td>
+<td>仓库地址、提交哈希／发布标签、工作流文件及配置摘要</td>
+<td>哪个可执行过程生成了结果</td>
+</tr>
+<tr>
+<td>软件环境</td>
+<td>工具与工作流引擎版本、锁定文件、容器摘要、操作系统与关键驱动</td>
+<td>依赖和运行语义是否可重建</td>
+</tr>
+<tr>
+<td>参数与随机性</td>
+<td>完整参数、默认值来源、随机种子、样本分组与排除清单</td>
+<td>哪些选择可能改变结果</td>
+</tr>
+<tr>
+<td>执行记录</td>
+<td>运行 ID、起止时间、任务状态、日志、计算节点与资源消耗</td>
+<td>这一次实际发生了什么</td>
+</tr>
+<tr>
+<td>输出与验证</td>
+<td>输出校验和、记录数、质量指标、测试结果、失败与重试</td>
+<td>文件是否完整，结果经过哪些检查</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="6990" data-block-fingerprint="dae5abf060aede76ef6a" data-block-start="6851" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">参数需要保存具体取值及其来源，软件需要记录实际使用的默认设置及版本。默认值会随版本改变，网页服务背后的数据库和模型也会更新。对于 API 和在线分析，应记录请求参数、服务版本或访问日期、返回对象标识和必要的响应摘要；若服务无法冻结，应说明这一限制并保存允许许可范围内的原始响应。</p>
+<p data-block-end="7256" data-block-fingerprint="bc726b801b348a2a3841" data-block-start="6992" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">研究成果发布时，代码仓库适合协作历史，带数字对象标识符（digital object identifier，DOI）的档案适合引用稳定版本，数据档案保存数据和元数据，容器注册表保存镜像，WorkflowHub 等注册平台则增强工作流发现。README 说明从哪里开始，许可证界定代码和数据的复用条件，引用文件把作者贡献和推荐引文机器化。Workflow Run RO-Crate 等规范还能把输入、输出、软件、参数、运行活动和容器摘要组织为机器可读的来源记录，并与面向人的方法说明互补。<sup id="fnref2:workflow-run-crate"><a class="footnote-ref" href="#fn:workflow-run-crate">2</a></sup></p>
+<p data-block-end="7464" data-block-fingerprint="da7a47b8bbf390f060ab" data-block-start="7258" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">可查找、可访问、可互操作与可复用（Findable, Accessible, Interoperable and Reusable，FAIR）原则允许按许可和授权条件访问对象。工作流、环境和元数据同样可以获得持久标识符、标准格式、明确许可和来源关系。Galaxy Training Network 的 FAIR 路径把元数据、持久标识符、开放格式、版本维护和可重用工作流放在同一管理框架中。<sup id="fnref:gtn-fair"><a class="footnote-ref" href="#fn:gtn-fair">15</a></sup></p>
+<h2 data-block-end="7509" data-block-fingerprint="0670b5154f420aebd793" data-block-start="7466" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="reproducibility-levels">可重复性的层次与证据边界<a class="headerlink" href="#reproducibility-levels" title="Permanent link">&para;</a></h2>
+<p data-block-end="7694" data-block-fingerprint="e4c6b33d72dfb78ebba0" data-block-start="7511" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">“可重复”“可复现”和“可重现”在不同学科中用法并不统一，报告中应给出操作性定义。美国国家科学院 2019 年报告把 reproducibility 定义为使用相同输入数据、计算步骤、方法、代码和分析条件得到一致的计算结果，把 replicability 定义为针对同一科学问题、使用新获得数据的独立研究得到一致结果。<sup id="fnref:nasem-reproducibility"><a class="footnote-ref" href="#fn:nasem-reproducibility">16</a></sup></p>
+<table data-block-end="8020" data-block-fingerprint="456d41b06349f3e358cf" data-block-start="7696" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">
+<thead>
+<tr>
+<th>层次</th>
+<th>典型检验</th>
+<th>能支持的结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可重跑</td>
+<td>原作者在当前环境再次启动流程</td>
+<td>入口、权限和依赖此刻可用</td>
+</tr>
+<tr>
+<td>计算可重复</td>
+<td>他人以同一数据、代码和明确条件得到一致结果</td>
+<td>已报告计算过程足以重建，未发现影响结果的执行差异</td>
+</tr>
+<tr>
+<td>数值稳健</td>
+<td>改变并行顺序、硬件或允许范围内的软件环境后，数值在预设容差内一致</td>
+<td>结论不依赖无关的低层执行细节</td>
+</tr>
+<tr>
+<td>统计稳健</td>
+<td>合理改变随机种子、划分、模型或敏感参数后，主要推断保持稳定</td>
+<td>结论对已检查的分析选择不敏感</td>
+</tr>
+<tr>
+<td>独立重复与生物学验证</td>
+<td>新样本、新队列、替代测定或扰动实验支持同一问题的结论</td>
+<td>证据超出原始数据和原始计算实现</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="8142" data-block-fingerprint="d6d734ef8c08c27076a6" data-block-start="8022" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">一致结果也需要预先定义比较尺度。位级相同适合校验归档文件，浮点计算常以绝对或相对容差比较，随机模型应比较分布和关键统计量，复杂图表则应回到生成它们的数据。为了得到相同结果而固定所有细节，与为了判断结论稳健而有计划地改变条件，是两个互补目标。</p>
+<p data-block-end="8368" data-block-fingerprint="858dc303f0cbb781aec7" data-block-start="8144" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">工作流能够减少遗漏、记录失败并让规模化计算更可靠；实验设计、统计假设和生物学解释仍由相应证据链承担。一个管线在容器中完整重跑，证明既定输入经过既定实现得到相容输出；样本身份、参考版本、评价数据独立性和模型假设还需分别核验。<a href="../computational_foundations/">算法、统计与计算基础</a>给出算法与评估层面的判断框架，后续的<a href="../sequencing/">测序技术、读段与质量控制</a>及各组学页面将把这些工作流原则应用到具体数据链。</p>
+<h2 data-block-end="8398" data-block-fingerprint="21c4667e301b3c3e5564" data-block-start="8370" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul data-block-end="13514" data-block-fingerprint="d8cff9602b9ae4d145e6" data-block-start="8400" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-workflows">
+<li>Software Carpentry. <a href="https://swcarpentry.github.io/shell-novice/">The Unix Shell</a>.</li>
+<li>Wilson G, et al. <a href="https://doi.org/10.1371/journal.pcbi.1005510">Good enough practices in scientific computing</a>. <em>PLOS Computational Biology</em>. 2017;13(6):e1005510.</li>
+<li>Sandve GK, et al. <a href="https://doi.org/10.1371/journal.pcbi.1003285">Ten Simple Rules for Reproducible Computational Research</a>. <em>PLOS Computational Biology</em>. 2013;9(10):e1003285.</li>
+<li>Rule A, et al. <a href="https://doi.org/10.1371/journal.pcbi.1007007">Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks</a>. <em>PLOS Computational Biology</em>. 2019;15(7):e1007007.</li>
+<li>Git Project. <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control.html">Pro Git: About Version Control</a>.</li>
+<li>Conda. <a href="https://docs.conda.io/projects/conda/en/stable/user-guide/tasks/manage-environments.html">Managing environments</a>.</li>
+<li>Mölder F, et al. <a href="https://doi.org/10.12688/f1000research.29032.2">Sustainable data analysis with Snakemake</a>. <em>F1000Research</em>. 2021;10:33；<a href="https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html">Distribution and Reproducibility</a>.</li>
+<li>Nextflow. <a href="https://www.nextflow.io/docs/latest/cache-and-resume.html">Caching and resuming</a>；<a href="https://www.nextflow.io/docs/latest/executor.html">Executors</a>.</li>
+<li>Galaxy Training Network. <a href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-reproduce/tutorial.html">How to reproduce published Galaxy analyses</a>；<a href="https://training.galaxyproject.org/training-material/topics/fair/index.html">FAIR Data, Workflows, and Research</a>.</li>
+<li>National Academies of Sciences, Engineering, and Medicine. <a href="https://doi.org/10.17226/25303"><em>Reproducibility and Replicability in Science</em></a>. National Academies Press; 2019.</li>
+<li>Leo S, et al. <a href="https://doi.org/10.1371/journal.pone.0309210">Recording provenance of workflow runs with RO-Crate</a>. <em>PLOS ONE</em>. 2024;19(9):e0309210.</li>
+<li>Lannelongue L, Grealey J, Inouye M. <a href="https://doi.org/10.1002/advs.202100707">Green Algorithms: Quantifying the Carbon Footprint of Computation</a>. <em>Advanced Science</em>. 2021;8:2100707.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:reproducible-rules">
+<p>Sandve 等的<a href="https://doi.org/10.1371/journal.pcbi.1003285">可重复计算研究原则</a>要求为每个结果保存完整生成过程、避免无法追踪的手工数据操作、归档程序版本并记录中间结果；可执行脚本和工作流能降低方法说明与实际执行脱节的风险。&#160;<a class="footnote-backref" href="#fnref:reproducible-rules" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:reproducible-rules" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:workflow-run-crate">
+<p>Workflow Run RO-Crate 的 <a href="https://www.researchobject.org/workflow-run-crate/profiles/process_run_crate/">Process Run Crate</a>区分过程计划与实际执行，并用软件、运行活动、输入、输出、环境变量和容器镜像等实体表达 provenance；Leo 等在<a href="https://doi.org/10.1371/journal.pone.0309210">正式论文</a>中说明其跨工作流语言记录和再执行用途。&#160;<a class="footnote-backref" href="#fnref:workflow-run-crate" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:workflow-run-crate" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:shell-lesson">
+<p>Software Carpentry 的 <a href="https://swcarpentry.github.io/shell-novice/instructor/04-pipefilter.html">Pipes and Filters</a>说明 stdin、stdout、重定向、管道以及把单一功能过滤器组合为处理链的方式。&#160;<a class="footnote-backref" href="#fnref:shell-lesson" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:good-enough-computing">
+<p>Wilson 等的 <a href="https://doi.org/10.1371/journal.pcbi.1005510">Good enough practices in scientific computing</a>覆盖原始数据保护、处理记录、显式依赖、示例数据、项目目录、版本控制、许可和受限数据安全等基础实践。&#160;<a class="footnote-backref" href="#fnref:good-enough-computing" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:notebook-rules">
+<p>Rule 等的 <a href="https://doi.org/10.1371/journal.pcbi.1007007">Jupyter Notebook 指南</a>同时说明计算叙事的价值和交互式隐藏状态、乱序执行、依赖缺失及 JSON 版本差异带来的风险，并建议从头执行、记录环境和提供可读归档。&#160;<a class="footnote-backref" href="#fnref:notebook-rules" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:git-version-control">
+<p>Git Project 的 <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control.html">About Version Control</a>把版本控制定义为记录文件随时间变化并恢复、比较具体版本的系统；Git 提交和分支进一步提供可引用的项目历史。&#160;<a class="footnote-backref" href="#fnref:git-version-control" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:conda-environments">
+<p>Conda 的<a href="https://docs.conda.io/projects/conda/en/stable/user-guide/tasks/manage-environments.html#sharing-an-environment">环境管理文档</a>区分跨平台 YAML／JSON 环境规格、平台特定 explicit 规格和 <code>--from-history</code> 导出，并说明精确重建与跨平台可移植性具有不同要求。&#160;<a class="footnote-backref" href="#fnref:conda-environments" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:apptainer-containers">
+<p>Apptainer <a href="https://apptainer.org/docs/user/latest/introduction.html">User Guide</a>说明容器替换的是 Linux 用户空间，并介绍 SIF 镜像、签名、非特权运行以及与 GPU、高速网络和并行文件系统的集成。&#160;<a class="footnote-backref" href="#fnref:apptainer-containers" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:snakemake-deployment">
+<p>Snakemake 的 <a href="https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html">Distribution and Reproducibility</a>说明每规则 Conda 环境、平台锁定规格、Apptainer 容器、HPC 环境模块和可归档工作流之间的关系。&#160;<a class="footnote-backref" href="#fnref:snakemake-deployment" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:snakemake-workflows">
+<p>Snakemake <a href="https://snakemake.readthedocs.io/en/stable/">官方文档</a>以输入输出规则描述可扩展分析，并支持把软件环境和运行报告与工作流绑定；Mölder 等的<a href="https://doi.org/10.12688/f1000research.29032.2">持续更新论文</a>讨论其可持续与可重复分析设计。&#160;<a class="footnote-backref" href="#fnref:snakemake-workflows" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nextflow-executors">
+<p>Nextflow 的 <a href="https://www.nextflow.io/docs/latest/executor.html">Executors</a>把任务定义与本机、HPC 调度器、云批处理和 Kubernetes 等执行后端分离，使同一流程逻辑能够采用不同资源平台。&#160;<a class="footnote-backref" href="#fnref:nextflow-executors" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:galaxy-histories">
+<p>Galaxy Training Network 的<a href="https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-reproduce/tutorial.html">分析复现教程</a>说明历史保存工具、工具版本与参数，并可从历史提取、分享和再次运行工作流。&#160;<a class="footnote-backref" href="#fnref:galaxy-histories" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nextflow-cache">
+<p>Nextflow 的 <a href="https://www.nextflow.io/docs/latest/cache-and-resume.html">Caching and resuming</a>列出任务哈希考虑的脚本、输入、环境和容器等对象，并说明缓存与工作目录必须同时保留、输出存在且退出状态有效时才能续跑。&#160;<a class="footnote-backref" href="#fnref:nextflow-cache" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:green-algorithms">
+<p>Lannelongue 等的 <a href="https://doi.org/10.1002/advs.202100707">Green Algorithms</a>以处理器、运行时间、内存、数据中心效率和所在地能源强度估计计算碳足迹，并提出减少无效计算和合理选择资源的框架。&#160;<a class="footnote-backref" href="#fnref:green-algorithms" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gtn-fair">
+<p>Galaxy Training Network 的 <a href="https://training.galaxyproject.org/training-material/topics/fair/index.html">FAIR Data, Workflows, and Research</a>把元数据、持久标识符、访问规则、互操作格式、许可、版本维护与工作流复用纳入计算研究对象的管理。&#160;<a class="footnote-backref" href="#fnref:gtn-fair" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nasem-reproducibility">
+<p>National Academies 的 <a href="https://doi.org/10.17226/25303"><em>Reproducibility and Replicability in Science</em></a>采用“原数据与代码的计算可重复性”和“新数据独立研究的一致性”这组操作定义；其他学科可能采用相反术语，故实际报告仍须写明比较对象和条件。&#160;<a class="footnote-backref" href="#fnref:nasem-reproducibility" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/bioinfo/workflows.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/bioinfo/workflows.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-bioinfo-workflows"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../computational_foundations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 算法、统计与计算基础">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                算法、统计与计算基础
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../sequencing/" class="md-footer__link md-footer__link--next" aria-label="Next: 测序技术、读段与质量控制">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                测序技术、读段与质量控制
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3736 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/physiology/membrane_dynamics/">
+      
+      
+        <link rel="prev" href="../internal_env/">
+      
+      
+        <link rel="next" href="../electrical_activity/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>跨膜转运与渗透 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              跨膜转运与渗透
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  生理
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../internal_env/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  内环境与稳态
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨膜转运与渗透
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨膜转运与渗透
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transport-driving-force" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        跨膜转运的自由能差
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="跨膜转运的自由能差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transport-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        转运路径的速率与选择性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        单纯扩散与净通量
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单纯扩散与净通量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ficks-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        菲克第一定律与膜通透系数
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osmosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        渗透与水的化学势
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="渗透与水的化学势">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osmolarity-tonicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        容量渗透摩尔浓度、质量渗透摩尔浓度与张力
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#facilitated-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        蛋白质介导的被动转运
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="蛋白质介导的被动转运">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        通道介导的扩散
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-carriers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        载体介导的易化扩散
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        主动转运与能量耦联
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主动转运与能量耦联">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-active-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        初级主动转运与梯度建立
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-active-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        次级主动转运与梯度利用
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epithelial-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        极性上皮的矢量运输
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../electrical_activity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞的电活动
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../muscle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  肌细胞生理
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../blood/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  血液与循环生理总论
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../respiratory/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  呼吸生理总论与肺通气
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../digestive/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  消化生理总论
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  能量代谢与体温
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../urinary/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  泌尿生理总论
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reproductive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生殖生理
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../growth_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生长、发育与衰老
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../endo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  内分泌生理总论
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercise_environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  运动生理与整体适应
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../pathophysiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  病理生理学总论
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transport-driving-force" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        跨膜转运的自由能差
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="跨膜转运的自由能差">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transport-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        转运路径的速率与选择性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-diffusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        单纯扩散与净通量
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单纯扩散与净通量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ficks-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        菲克第一定律与膜通透系数
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osmosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        渗透与水的化学势
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="渗透与水的化学势">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osmolarity-tonicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        容量渗透摩尔浓度、质量渗透摩尔浓度与张力
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#facilitated-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        蛋白质介导的被动转运
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="蛋白质介导的被动转运">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        通道介导的扩散
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-carriers" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        载体介导的易化扩散
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#active-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        主动转运与能量耦联
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主动转运与能量耦联">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primary-active-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        初级主动转运与梯度建立
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-active-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        次级主动转运与梯度利用
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epithelial-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        极性上皮的矢量运输
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="9" data-block-fingerprint="043cc31125eae374d760" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="_1">跨膜转运与渗透<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="187" data-block-fingerprint="34a7d9532efeb3ccf319" data-block-start="11" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics"><a href="../internal_env/">内环境与稳态</a>之所以能够维持，首先因为膜把连续的体液分成了组成不同的区室。脂双层会阻挡多数水溶性物质，通道和载体又为特定溶质提供受控路径；泵消耗代谢能建立梯度，梯度随后驱动离子、电信号、营养吸收和细胞容积变化。完整描述一种跨膜转运，需要同时说明净通量的自由能来源、溶质实际经过的路径，以及膜如何改变这条路径的通透性。</p>
+<h2 data-block-end="230" data-block-fingerprint="fbe5aa6be3030e6d9623" data-block-start="189" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="transport-driving-force">跨膜转运的自由能差<a class="headerlink" href="#transport-driving-force" title="Permanent link">&para;</a></h2>
+<p data-block-end="264" data-block-fingerprint="175c0d8d373c05f77dcb" data-block-start="232" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">对于从膜外移到膜内的一种溶质，稀溶液近似下的摩尔自由能变化可写成</p>
+<div class="arithmatex" data-block-end="426" data-block-fingerprint="23bac38b2c02d47d3896" data-block-start="266" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">\[
+\Delta G_{\mathrm{o}\rightarrow\mathrm{i}}
+=RT\ln\!\left(\frac{a_{\mathrm{i}}}{a_{\mathrm{o}}}\right)
++zF\left(\psi_{\mathrm{i}}-\psi_{\mathrm{o}}\right),
+\]</div>
+<p data-block-end="696" data-block-fingerprint="43f7a53039e0120cfe05" data-block-start="428" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">其中 <span class="arithmatex">\(a\)</span> 是活度，<span class="arithmatex">\(z\)</span> 是电荷数，<span class="arithmatex">\(\psi\)</span> 是电势，<span class="arithmatex">\(R\)</span>、<span class="arithmatex">\(T\)</span> 和 <span class="arithmatex">\(F\)</span> 分别为气体常数、绝对温度和法拉第常数。中性溶质的 <span class="arithmatex">\(z=0\)</span>，方向主要由化学势差决定；离子的浓度差与膜电位共同构成电化学势差。若指定方向的 <span class="arithmatex">\(\Delta G&lt;0\)</span>，净转运在热力学上可以自发发生；若 <span class="arithmatex">\(\Delta G&gt;0\)</span>，则必须与三磷酸腺苷（adenosine triphosphate，ATP）水解、光能或另一溶质的顺势转运耦联。达到电化学平衡时，两个方向的通量相等，分子仍在持续运动。<sup id="fnref:transport-thermodynamics"><a class="footnote-ref" href="#fn:transport-thermodynamics">1</a></sup></p>
+<p data-block-end="834" data-block-fingerprint="606a74d769bd215ed680" data-block-start="698" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">浓度梯度只是跨膜驱动力的一部分。带正电离子可能在电场作用下逆浓度方向移动；中性分子即使存在浓度差，若脂双层对它几乎不通透且缺少转运蛋白，实际通量仍可接近零。离子平衡电位、膜电导和多离子共同形成膜电位的过程见<a href="../electrical_activity/">细胞的电活动</a>。</p>
+<h3 data-block-end="875" data-block-fingerprint="62a3f9e84beecd25a93e" data-block-start="836" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="transport-pathways">转运路径的速率与选择性<a class="headerlink" href="#transport-pathways" title="Permanent link">&para;</a></h3>
+<table data-block-end="1246" data-block-fingerprint="d5757129a5c17cf6fd24" data-block-start="877" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">
+<thead>
+<tr>
+<th>路径</th>
+<th>跨膜装置</th>
+<th>净通量的直接驱动力</th>
+<th>主要动力学特征</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单纯扩散</td>
+<td>脂双层本身</td>
+<td>溶质的化学势差；带电物质还受电势差影响</td>
+<td>低浓度范围内通常近似随浓度差线性变化</td>
+</tr>
+<tr>
+<td>通道介导的被动转运</td>
+<td>可开放的亲水孔道</td>
+<td>电化学势差或水的化学势差</td>
+<td>通量大，受选择性滤器、门控和开放概率控制</td>
+</tr>
+<tr>
+<td>载体介导的易化扩散</td>
+<td>交替开放的结合位点</td>
+<td>被转运物自身的电化学势差</td>
+<td>可饱和，具有底物选择性和竞争现象</td>
+</tr>
+<tr>
+<td>初级主动转运</td>
+<td>ATP 酶或其他能量耦联泵</td>
+<td>ATP 水解等直接供能</td>
+<td>有固定或偏好的耦联化学计量，可建立梯度</td>
+</tr>
+<tr>
+<td>次级主动转运</td>
+<td>同向或反向耦联载体</td>
+<td>一种溶质顺势移动释放的自由能</td>
+<td>多种底物必须按一定关系完成同一转运循环</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="1369" data-block-fingerprint="9488076ba2d0aec23683" data-block-start="1248" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">这张表按能量耦联方式区分机制；具体蛋白的作用仍由底物方向、化学计量和实验条件共同确定。载体既可催化被动易化扩散，也可参与主动转运；通道开放时则让底物沿既有驱动力移动，部分家族还存在机制上的例外。<sup id="fnref:osm-carriers-channels"><a class="footnote-ref" href="#fn:osm-carriers-channels">2</a></sup></p>
+<h2 data-block-end="1404" data-block-fingerprint="b00cd610338cc89d21ac" data-block-start="1371" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="simple-diffusion">单纯扩散与净通量<a class="headerlink" href="#simple-diffusion" title="Permanent link">&para;</a></h2>
+<p data-block-end="1605" data-block-fingerprint="fe2ec7c83ee4027a47b7" data-block-start="1406" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">分子在热运动中不断改变方向；没有梯度时，任一截面两侧的平均交换量相等，宏观上没有净通量。出现浓度梯度后，高浓度一侧越过截面的分子平均更多，于是产生由高浓度指向低浓度的净扩散。随机游走的均方位移满足 <span class="arithmatex">\(\langle r^2\rangle=2dDt\)</span>，其中 <span class="arithmatex">\(d\)</span> 是空间维数、<span class="arithmatex">\(D\)</span> 是扩散系数，因此典型扩散距离只按时间的平方根增长。扩散适合短距离交换，具体距离取决于扩散系数、介质性质和空间维数。</p>
+<h3 data-block-end="1638" data-block-fingerprint="d7cb64b9d5a68df397b9" data-block-start="1607" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="ficks-law">菲克第一定律与膜通透系数<a class="headerlink" href="#ficks-law" title="Permanent link">&para;</a></h3>
+<p data-block-end="1661" data-block-fingerprint="306ede296ac053deec40" data-block-start="1640" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">一维情况下，溶质 <span class="arithmatex">\(s\)</span> 的扩散通量密度为</p>
+<div class="arithmatex" data-block-end="1711" data-block-fingerprint="5a9ab5805406c86f3b25" data-block-start="1663" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">\[
+J_s=-D_s\frac{\mathrm{d}c_s}{\mathrm{d}x},
+\]</div>
+<p data-block-end="1860" data-block-fingerprint="50850f28e32162a3f893" data-block-start="1713" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics"><span class="arithmatex">\(J_s\)</span> 的单位是单位面积、单位时间通过的物质的量，<span class="arithmatex">\(D_s\)</span> 的量纲为面积／时间；负号表示净通量指向浓度降低的方向。膜面积为 <span class="arithmatex">\(A\)</span> 时，物质的量转运速率是 <span class="arithmatex">\(\dot n_s=AJ_s\)</span>；通量密度 <span class="arithmatex">\(J_s\)</span> 与总转运速率 <span class="arithmatex">\(\dot n_s\)</span> 具有不同含义和量纲。<sup id="fnref:fick-law"><a class="footnote-ref" href="#fn:fick-law">3</a></sup></p>
+<p data-block-end="1921" data-block-fingerprint="fd25fb330b87fa2e3340" data-block-start="1862" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">若把膜近似为厚度 <span class="arithmatex">\(\delta\)</span>、性质均一的薄层，并假定两侧边界层内浓度稳定，则从 1 侧到 2 侧的稳态通量可写成</p>
+<div class="arithmatex" data-block-end="2004" data-block-fingerprint="ccc4a77f0a2460232414" data-block-start="1923" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">\[
+J_{s,1\rightarrow2}=P_s(c_{s,1}-c_{s,2}),
+\qquad
+P_s=\frac{K_sD_s}{\delta}.
+\]</div>
+<p data-block-end="2177" data-block-fingerprint="c6d0c33b768e4729b5db" data-block-start="2006" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics"><span class="arithmatex">\(K_s\)</span> 是溶质在膜相与水相之间的分配系数，<span class="arithmatex">\(P_s\)</span> 是通透系数。脂溶性较高、扩散系数较大或膜较薄时，其他条件相同的通量较大；膜面积则决定总转运量。氧、二氧化碳和许多疏水小分子可以直接穿过脂双层，离子及多数较大的极性分子通常需要蛋白质路径。真实细胞还存在未搅拌水层、膜脂组成变化和代谢消耗，因而这一线性式主要适用于相应条件近似恒定的范围。</p>
+<h2 data-block-end="2203" data-block-fingerprint="de6df868f2b4549d1f25" data-block-start="2179" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="osmosis">渗透与水的化学势<a class="headerlink" href="#osmosis" title="Permanent link">&para;</a></h2>
+<p data-block-end="2294" data-block-fingerprint="4a5ca1036c0540a998a7" data-block-start="2205" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">当膜允许水通过而对某些溶质不通透时，加入溶质会降低水的化学势，水便从水化学势较高的一侧净移向较低的一侧。达到平衡时，渗透造成的静水压差可以抵消这一趋势。对理想稀溶液，渗透压近似为</p>
+<div class="arithmatex" data-block-end="2325" data-block-fingerprint="e459c83c9a9bf04cb603" data-block-start="2296" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">\[
+\Pi\simeq RT\sum_j c_j,
+\]</div>
+<p data-block-end="2433" data-block-fingerprint="9ea6142ffc1e67c6104d" data-block-start="2327" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">求和对象是能够独立运动的溶质粒子，所以解离产生的离子需要分别计入；非理想溶液则应使用活度。真实细胞膜对不同溶质的通透性不同，在观察时间内跨膜缓慢的粒子才能持续形成有效渗透力。<sup id="fnref:osmotic-pressure"><a class="footnote-ref" href="#fn:osmotic-pressure">4</a></sup></p>
+<p data-block-end="2554" data-block-fingerprint="7ae8b1fb13d71cb2af8c" data-block-start="2435" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">水可以穿过脂双层，也可经水通道蛋白快速通过；不同组织的水通透性因此相差很大。水通道改变达到平衡的速率，却不提供逆渗透方向的能量。细胞外存在较多有效渗透粒子时，水净流出、细胞缩小；外液有效渗透粒子较少时，水净流入，动物细胞可能肿胀甚至破裂。</p>
+<h3 data-block-end="2605" data-block-fingerprint="d155364a2a1ba439a820" data-block-start="2556" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="osmolarity-tonicity">容量渗透摩尔浓度、质量渗透摩尔浓度与张力<a class="headerlink" href="#osmolarity-tonicity" title="Permanent link">&para;</a></h3>
+<table data-block-end="2884" data-block-fingerprint="224c33bc42555a8c24e4" data-block-start="2607" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">
+<thead>
+<tr>
+<th>概念</th>
+<th>常用含义</th>
+<th>是否取决于具体膜和时间尺度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>容量渗透摩尔浓度（osmotic concentration，旧称 osmolarity）</td>
+<td>每升溶液所含渗透摩尔数，常用 Osm/L</td>
+<td>否，主要是溶液的粒子浓度性质</td>
+</tr>
+<tr>
+<td>质量渗透摩尔浓度（osmolality）</td>
+<td>每千克溶剂所含渗透摩尔数，常用 Osm/kg</td>
+<td>否；质量不随温度改变，临床实验测量常用此量</td>
+</tr>
+<tr>
+<td>张力（tonicity）</td>
+<td>外液在达到相应时间尺度的平衡后改变细胞体积的能力</td>
+<td>是，只由对该膜有效的不易透溶质贡献</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="3048" data-block-fingerprint="f4957292b0940d6552d1" data-block-start="2886" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">因此，等渗透摩尔浓度与等张描述不同性质。与细胞内液等渗透摩尔浓度的尿素溶液起初可以没有明显水流，但尿素逐渐入胞后，外液留下的有效渗透粒子不足，水继续进入细胞；它在较长时间尺度上表现为低张。反过来，膜转运或代谢状态改变也会改变同一种溶质的有效性。细胞体积由总粒子数、膜对各溶质的通透性和观察时间共同决定。<sup id="fnref:tonicity"><a class="footnote-ref" href="#fn:tonicity">5</a></sup></p>
+<p data-block-end="3213" data-block-fingerprint="67435ce9f4568a3a636a" data-block-start="3050" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">细胞内蛋白质和有机磷酸等固定阴离子被限制在膜内，会影响可移动离子的分布并产生持续的入水倾向。动物细胞依靠 Na<span class="arithmatex">\(^+\)</span>/K<span class="arithmatex">\(^+\)</span>-ATPase 不断排出漏入的 Na<span class="arithmatex">\(^+\)</span>，再配合 K<span class="arithmatex">\(^+\)</span>、Cl<span class="arithmatex">\(^-\)</span> 通道和有机渗透物调节形成“泵—漏”平衡。细胞体积由这一耗能的非平衡稳态维持，单次渗透平衡计算只能描述其中一部分条件。</p>
+<h2 data-block-end="3255" data-block-fingerprint="236903817c79bc81d125" data-block-start="3215" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="facilitated-transport">蛋白质介导的被动转运<a class="headerlink" href="#facilitated-transport" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="3282" data-block-fingerprint="f1945aac4bb9fa5442fd" data-block-start="3257" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="channels">通道介导的扩散<a class="headerlink" href="#channels" title="Permanent link">&para;</a></h3>
+<p data-block-end="3460" data-block-fingerprint="512bd5991fee5dbd0075" data-block-start="3284" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">通道跨越脂双层形成亲水孔道，开放后允许适合其选择性滤器的离子或水沿电化学势差通过。孔径、带电残基、脱水代价和配位几何共同决定选择性，部分通道的底物选择可以十分严格。通道可由膜电位、细胞外或细胞内配体、机械力、温度、磷酸化状态及膜内储库充盈程度等信号门控，膜的通透性因通道数目和开放概率在短时间内显著改变。<sup id="fnref:channels-and-carriers"><a class="footnote-ref" href="#fn:channels-and-carriers">6</a></sup></p>
+<p data-block-end="3822" data-block-fingerprint="43d50a62956b969aed1a" data-block-start="3462" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">Na<span class="arithmatex">\(^+\)</span>、K<span class="arithmatex">\(^+\)</span>、Ca<span class="arithmatex">\(^{2+}\)</span> 和 Cl<span class="arithmatex">\(^-\)</span> 通道的亚型及药理性质依赖具体细胞环境。L 型 Ca<span class="arithmatex">\(^{2+}\)</span> 通道参与某些心肌动作电位平台和兴奋—收缩耦联，T 型通道则具有不同的电压依赖和动力学；双孔域钾通道（two-pore-domain potassium channel，K2P）属于钾通道家族，细胞器膜上的双孔通道（two-pore channel，TPC）则属于另一类阳离子通道。相应膜环境中的具体机制见<a href="../electrical_activity/">细胞的电活动</a>、<a href="../muscle/">肌细胞生理</a>、<a href="../blood/blood_heart_electrical/">心脏电生理</a>及<a href="../../neuro/neuro_transmitter_receptor/">神经递质与受体</a>。</p>
+<h3 data-block-end="3859" data-block-fingerprint="845727bbde406f50d9cc" data-block-start="3824" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="passive-carriers">载体介导的易化扩散<a class="headerlink" href="#passive-carriers" title="Permanent link">&para;</a></h3>
+<p data-block-end="3987" data-block-fingerprint="b193c4a53fd831299a79" data-block-start="3861" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">载体先在膜的一侧结合底物，构象变化使结合位点转向另一侧，再释放底物。由于一次转运循环需要结合、构象变化和解离，载体在底物升高时会趋于饱和；结构相近的底物还可能竞争同一结合位点。被动载体不消耗 ATP，净方向仍由底物本身的电化学势差决定，并可随梯度反转。</p>
+<p data-block-end="4233" data-block-fingerprint="3de43d1ba6d27f3c0e64" data-block-start="3989" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">红细胞主要借葡萄糖转运蛋白 1（glucose transporter 1，GLUT1）摄取葡萄糖，许多神经元富集 GLUT3；两者都属于溶质载体 2（solute carrier family 2，SLC2）易化己糖转运体家族。肠道和肾小管顶端膜使用溶质载体 5（solute carrier family 5，SLC5）家族中的 Na<span class="arithmatex">\(^+\)</span>—葡萄糖同向转运体：SLC2 使糖顺势转运，相关 SLC5 蛋白则利用 Na<span class="arithmatex">\(^+\)</span> 梯度把糖逆其自身梯度积累。<sup id="fnref:slc-families"><a class="footnote-ref" href="#fn:slc-families">7</a></sup></p>
+<h2 data-block-end="4269" data-block-fingerprint="ff205d66672e888b9c86" data-block-start="4235" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="active-transport">主动转运与能量耦联<a class="headerlink" href="#active-transport" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="4316" data-block-fingerprint="dc9edb1bb1e45ea0ed92" data-block-start="4271" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="primary-active-transport">初级主动转运与梯度建立<a class="headerlink" href="#primary-active-transport" title="Permanent link">&para;</a></h3>
+<p data-block-end="4520" data-block-fingerprint="78818f913dcae41bb871" data-block-start="4318" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">初级主动转运把 ATP 水解等放能反应直接耦联到溶质转运。动物细胞质膜上的 Na<span class="arithmatex">\(^+\)</span>/K<span class="arithmatex">\(^+\)</span>-ATPase 每完成一个典型循环，消耗 1 个 ATP，将 3 个 Na<span class="arithmatex">\(^+\)</span> 运出并把 2 个 K<span class="arithmatex">\(^+\)</span> 运入，因此既建立 Na<span class="arithmatex">\(^+\)</span>、K<span class="arithmatex">\(^+\)</span> 梯度，也产生一个净正电荷外移。泵本身对静息膜电位有直接生电贡献，更重要的作用是长期维持通道和次级载体所使用的离子梯度。<sup id="fnref:sodium-pump"><a class="footnote-ref" href="#fn:sodium-pump">8</a></sup></p>
+<p data-block-end="4802" data-block-fingerprint="56b7c8f239543d13aff3" data-block-start="4522" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">P 型 ATP 酶（P-type ATPase）还包括 Ca<span class="arithmatex">\(^{2+}\)</span> 泵和 H<span class="arithmatex">\(^+\)</span>/K<span class="arithmatex">\(^+\)</span> 泵；V 型 ATP 酶（V-type ATPase）主要以 H<span class="arithmatex">\(^+\)</span> 转运酸化细胞器或某些上皮表面；ATP 结合盒（ATP-binding cassette，ABC）蛋白常以 ATP 驱动有机物和脂质转运。家族归属需要与机制证据结合，例如同属 ABC 超家族的囊性纤维化跨膜电导调节因子（cystic fibrosis transmembrane conductance regulator，CFTR）主要作为 ATP 调控的 Cl<span class="arithmatex">\(^-\)</span> 通道工作。</p>
+<h3 data-block-end="4851" data-block-fingerprint="29cc7ee7cbe331931102" data-block-start="4804" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="secondary-active-transport">次级主动转运与梯度利用<a class="headerlink" href="#secondary-active-transport" title="Permanent link">&para;</a></h3>
+<p data-block-end="4919" data-block-fingerprint="393f6af51a5af6290423" data-block-start="4853" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">耦联载体把几种底物放进同一个循环。若它们同向移动，称同向转运；若方向相反，称反向转运。对一个完整循环，所有被转运物的自由能变化相加：</p>
+<div class="arithmatex" data-block-end="4976" data-block-fingerprint="8746b31ae318be18825a" data-block-start="4921" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">\[
+\Delta G_{\mathrm{cycle}}=\sum_i \nu_i\Delta G_i.
+\]</div>
+<p data-block-end="5131" data-block-fingerprint="96065f1b56f2b4f3ce6a" data-block-start="4978" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">只要指定方向的总和为负，一种离子顺电化学势移动释放的能量就能推动另一底物逆势移动。动物质膜最常利用 Na<span class="arithmatex">\(^+\)</span> 梯度，细菌、线粒体和许多细胞器则常利用 H<span class="arithmatex">\(^+\)</span> 梯度。若离子梯度和膜电位发生足够大的变化，一些耦联载体也可能减慢、停止或反向运行；“主动”描述的是被耦联底物的能量关系，不保证流向永远不变。</p>
+<p data-block-end="5355" data-block-fingerprint="70c92bb75316b33e1789" data-block-start="5133" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">SLC5 转运体用 Na<span class="arithmatex">\(^+\)</span> 梯度摄取葡萄糖等底物；溶质载体 6（solute carrier family 6，SLC6）单胺转运体则把 Na<span class="arithmatex">\(^+\)</span>、常伴 Cl<span class="arithmatex">\(^-\)</span> 的顺势转运与递质再摄取耦联。去甲肾上腺素转运体（norepinephrine transporter，NET；SLC6A2）介导去甲肾上腺素的 Na<span class="arithmatex">\(^+\)</span>／Cl<span class="arithmatex">\(^-\)</span> 依赖性再摄取；肾上腺素在不同组织还可经有机阳离子转运等路径摄取。<sup id="fnref2:slc-families"><a class="footnote-ref" href="#fn:slc-families">7</a></sup></p>
+<h2 data-block-end="5395" data-block-fingerprint="e237a97ea9af0b07e66e" data-block-start="5357" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="epithelial-transport">极性上皮的矢量运输<a class="headerlink" href="#epithelial-transport" title="Permanent link">&para;</a></h2>
+<p data-block-end="5536" data-block-fingerprint="67a1b2a9bc8d6a527ab2" data-block-start="5397" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">吸收和分泌需要跨越整个细胞层及其两侧膜。极性上皮把不同转运蛋白分别放在顶端膜和基底外侧膜：顶端膜面向肠腔、肾小管腔或腺腔，基底外侧膜面向组织间液和血液。溶质可依次跨过两侧膜走经细胞路径，也可沿紧密连接控制的细胞旁路径通过；水则根据渗透与静水压力，经水通道、脂双层或细胞旁隙移动。</p>
+<p data-block-end="5710" data-block-fingerprint="dd5bcd65afecc7a3d144" data-block-start="5538" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics"><pre class="mermaid"><code>flowchart TB
+  L["肠腔／肾小管腔"] --&gt; S["顶端膜 SLC5&lt;br/&gt;Na⁺—葡萄糖同向进入"]
+  S --&gt; C["上皮细胞"]
+  C --&gt; O["基底外侧膜&lt;br/&gt;GLUT：葡萄糖外流&lt;br/&gt;Na⁺/K⁺泵：Na⁺ 出、K⁺ 入"]
+  O --&gt; B["组织间液／血液"]</code></pre></p>
+<p data-block-end="5941" data-block-fingerprint="9c11ee10b08517c1714b" data-block-start="5712" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">图中以葡萄糖吸收说明能量接力：基底外侧 Na<span class="arithmatex">\(^+\)</span>/K<span class="arithmatex">\(^+\)</span>-ATPase 消耗 ATP 维持低胞内 Na<span class="arithmatex">\(^+\)</span>，顶端 SLC5 同向转运体利用这一梯度积累葡萄糖，葡萄糖再由基底外侧 GLUT 顺势离开。不同肠段和肾单位各有相应的同工型、化学计量及调节方式；详细过程分别见<a href="../digestive/digestion_absorption/">消化与吸收</a>和<a href="../urinary/filtration_transport/">肾小球滤过与肾小管转运</a>。</p>
+<p data-block-end="6094" data-block-fingerprint="7b791ec2b041e5c828ad" data-block-start="5943" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">细胞吞噬、胞饮、受体介导内吞和胞吐也能搬运大量物质，但货物随膜泡出芽和融合改变区室，分析时属于膜泡运输，而单个溶质直接穿过脂双层则属于跨膜通量。前一类过程见<a href="../../cell/endomembrane/">内膜系统、蛋白质分选与囊泡运输</a>。区分这两个层级，有助于衔接跨膜热力学、膜泡拓扑和器官级运输。</p>
+<h2 data-block-end="6124" data-block-fingerprint="497b4b3390d2d022d7a1" data-block-start="6096" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul data-block-end="8975" data-block-fingerprint="6d5fcc9c03f9b7ab6157" data-block-start="6126" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-physiology-membrane-dynamics">
+<li>Alberts B, Johnson A, Lewis J, et al. <a href="https://www.ncbi.nlm.nih.gov/books/NBK21044/">Membrane Transport of Small Molecules and the Electrical Properties of Membranes</a>. <em>Molecular Biology of the Cell</em>, 4th ed.</li>
+<li>IUPAC. <a href="https://goldbook.iupac.org/terms/view/D01719">Diffusion coefficient</a>；<a href="https://goldbook.iupac.org/terms/view/O04344">Osmotic pressure</a>. <em>Compendium of Chemical Terminology</em>, 5th ed.</li>
+<li>OpenStax. <a href="https://openstax.org/books/anatomy-and-physiology-2e/pages/3-1-the-cell-membrane">The Cell Membrane</a>. <em>Anatomy and Physiology 2e</em>.</li>
+<li>IUPHAR/BPS Guide to PHARMACOLOGY. <a href="https://www.guidetopharmacology.org/GRAC/ReceptorFamiliesForward?type=TRANSPORTER">Transporter families</a>.</li>
+<li>Hall JE, Hall ME. <a href="https://evolve.elsevier.com/cs/product/9780443111013?role=student">Guyton and Hall Textbook of Medical Physiology, 15th ed.</a>. Elsevier, 2025.</li>
+<li>Boron WF, Boulpaep EL. <a href="https://evolve.elsevier.com/cs/product/9781455743773?role=faculty">Medical Physiology, 3rd ed.</a>. Elsevier, 2016.</li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:transport-thermodynamics">
+<p>电化学势、被动与主动转运的能量边界参见 NCBI Bookshelf 的 <a href="https://www.ncbi.nlm.nih.gov/books/NBK26815/">Principles of Membrane Transport</a>。&#160;<a class="footnote-backref" href="#fnref:transport-thermodynamics" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:osm-carriers-channels">
+<p>通道、被动载体、泵及若干生理实例的组织线索实质性改编自 osm.bio《<a href="https://osm.bio/index.php?title=%E8%BD%BD%E4%BD%93%E8%9B%8B%E7%99%BD%E5%92%8C%E9%80%9A%E9%81%93%E8%9B%8B%E7%99%BD&amp;oldid=14634">载体蛋白和通道蛋白</a>》（固定版本 oldid=14634；贡献者：寸烛盈夜、Sofia、野狼君卡共和、长河；<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>）；自由能耦联分类和具体表述另以 NCBI Bookshelf、IUPAC 与 IUPHAR/BPS 数据库交叉核验。&#160;<a class="footnote-backref" href="#fnref:osm-carriers-channels" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:fick-law">
+<p>扩散通量密度和扩散系数的定义参见 IUPAC Gold Book 的 <a href="https://doi.org/10.1351/goldbook.D01719">Diffusion coefficient</a>。&#160;<a class="footnote-backref" href="#fnref:fick-law" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:osmotic-pressure">
+<p>渗透压的热力学定义及理想稀溶液近似参见 IUPAC Gold Book 的 <a href="https://doi.org/10.1351/goldbook.O04344">Osmotic pressure</a>；容量渗透摩尔浓度采用 IUPAC 的 <a href="https://doi.org/10.1351/goldbook.O04343">Osmotic concentration</a> 定义。&#160;<a class="footnote-backref" href="#fnref:osmotic-pressure" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:tonicity">
+<p>体液区室移动和膜通透性边界交叉核对 NCBI Bookshelf 的 <a href="https://www.ncbi.nlm.nih.gov/books/NBK541059/">Physiology, Water Balance</a>与 <a href="https://www.ncbi.nlm.nih.gov/books/NBK541095/">Biochemistry, Hypertonicity</a>。&#160;<a class="footnote-backref" href="#fnref:tonicity" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:channels-and-carriers">
+<p>通道孔道、载体交替开放及两者速率差异参见 NCBI Bookshelf 的 <a href="https://www.ncbi.nlm.nih.gov/books/NBK21044/">Membrane Transport of Small Molecules</a>与 <a href="https://www.ncbi.nlm.nih.gov/books/NBK26815/">Principles of Membrane Transport</a>。&#160;<a class="footnote-backref" href="#fnref:channels-and-carriers" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:slc-families">
+<p>葡萄糖易化扩散、Na<span class="arithmatex">\(^+\)</span>—葡萄糖同向转运和单胺再摄取的家族归属参见 IUPHAR/BPS Guide to PHARMACOLOGY 的 <a href="https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=140&amp;familyType=TRANSPORTER">SLC2</a>、<a href="https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=143&amp;familyType=TRANSPORTER">SLC5</a>及 <a href="https://www.guidetopharmacology.org/GRAC/FamilyDisplayForward?familyId=144&amp;familyType=TRANSPORTER">SLC6</a> 页面。&#160;<a class="footnote-backref" href="#fnref:slc-families" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:slc-families" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sodium-pump">
+<p>Na<span class="arithmatex">\(^+\)</span>/K<span class="arithmatex">\(^+\)</span>-ATPase 的化学计量、生电性及其对次级转运和细胞容积的作用参见 NCBI Bookshelf 的 <a href="https://www.ncbi.nlm.nih.gov/books/NBK26896/">Carrier Proteins and Active Membrane Transport</a>。&#160;<a class="footnote-backref" href="#fnref:sodium-pump" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/physiology/membrane_dynamics.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/physiology/membrane_dynamics.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-physiology-membrane-dynamics"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../internal_env/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 内环境与稳态">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                内环境与稳态
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../electrical_activity/" class="md-footer__link md-footer__link--next" aria-label="Next: 细胞的电活动">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                细胞的电活动
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

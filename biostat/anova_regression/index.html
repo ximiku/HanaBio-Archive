@@ -1,0 +1,4219 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/biostat/anova_regression/">
+      
+      
+        <link rel="prev" href="../categorical_nonparametric/">
+      
+      
+        <link rel="next" href="../correlation_regression/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>方差分析与线性模型 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              方差分析与线性模型
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  统计
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  统计
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimental_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验设计、效能与可重复统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data_description/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据与概率
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../hypothesis_testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  假设检验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_16_5" id="__nav_16_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  回归与多变量
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  回归与多变量
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  方差分析与线性模型
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  方差分析与线性模型
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        试验语言与模型对象
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="试验语言与模型对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        因素、水平、处理与重复
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        固定、随机与混合效应
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-way-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        单因素固定效应 ANOVA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单因素固定效应 ANOVA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        单元均值模型与效应模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        平方和恒等式
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        自由度、均方与 F 检验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-linear-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ANOVA 的一般线性模型表示
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANOVA 的一般线性模型表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        设计矩阵与参数化
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        F 检验是嵌套模型比较
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimation-contrasts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        均值估计、效应量与计划对比
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="均值估计、效应量与计划对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#f_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从总体 F 回到生物学尺度
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        计划对比
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多重比较与经典极差法
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多重比较与经典极差法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LSD 法
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tukey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        学生化极差与 Tukey 方法
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snkduncan-ssr" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SNK、Duncan 与“SSR”名称
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multifactor-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多因素设计中的效应分解
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多因素设计中的效应分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        析因设计与交互作用
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        区组与嵌套
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        协方差分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbalanced-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        不平衡数据、平方和类型与边际均值
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="不平衡数据、平方和类型与边际均值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        不等样本量与比较精度
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-iii-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Type I、II 与 III 平方和
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        估计边际均值与可估性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostics-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型条件、诊断与替代方法
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模型条件、诊断与替代方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        独立性、方差与残差分布
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        异方差、偏斜与随机化替代
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分析顺序与结果报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../correlation_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  相关、回归与模型诊断
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalized_mixed_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  广义线性模型与混合效应模型
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multivariate_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  多元统计、降维与分类
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survival_longitudinal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生存分析与纵向数据
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_computational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  贝叶斯推断与计算统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../causal_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  因果推断
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systematic_review_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统综述与荟萃分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        试验语言与模型对象
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="试验语言与模型对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        因素、水平、处理与重复
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        固定、随机与混合效应
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-way-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        单因素固定效应 ANOVA
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单因素固定效应 ANOVA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        单元均值模型与效应模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        平方和恒等式
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        自由度、均方与 F 检验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-linear-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        ANOVA 的一般线性模型表示
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ANOVA 的一般线性模型表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        设计矩阵与参数化
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        F 检验是嵌套模型比较
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimation-contrasts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        均值估计、效应量与计划对比
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="均值估计、效应量与计划对比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#f_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从总体 F 回到生物学尺度
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        计划对比
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-comparisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多重比较与经典极差法
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多重比较与经典极差法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        LSD 法
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tukey" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        学生化极差与 Tukey 方法
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snkduncan-ssr" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        SNK、Duncan 与“SSR”名称
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multifactor-anova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多因素设计中的效应分解
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多因素设计中的效应分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        析因设计与交互作用
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        区组与嵌套
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        协方差分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unbalanced-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        不平衡数据、平方和类型与边际均值
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="不平衡数据、平方和类型与边际均值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        不等样本量与比较精度
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-iii-iii" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Type I、II 与 III 平方和
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        估计边际均值与可估性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagnostics-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型条件、诊断与替代方法
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模型条件、诊断与替代方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        独立性、方差与残差分布
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        异方差、偏斜与随机化替代
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分析顺序与结果报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    统计
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    回归与多变量
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="11" data-block-fingerprint="309b3d5f187d3448d897" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_1">方差分析与线性模型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="191" data-block-fingerprint="d47713b06ea66776dfb8" data-block-start="13" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">方差分析（analysis of variance，ANOVA）处理的核心问题是：当若干组观测均围绕各自的总体均值波动时，组间均值的差异能否由实验误差解释。它先将全部观测的变异按模型来源分解，再比较某一来源的均方与合适的误差均方。单因素 ANOVA、析因 ANOVA、区组分析和协方差分析看似各有一套表格，实质上都是一般线性模型对不同设计矩阵与假设的表达。</p>
+<p data-block-end="322" data-block-fingerprint="60018a566aea9fb2cc58" data-block-start="193" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">平方和、自由度与 F 表揭示了变异怎样被分配，也能暴露原始数据中的实验单位、平衡性和误差层级。设计矩阵则把这些经典手算原理扩展到不等样本量、交互作用、连续协变量和更复杂的效应结构。两条路径共同指向同一个要求：检验对象、误差项和可推广范围都必须由研究设计决定。</p>
+<h2 data-block-end="357" data-block-fingerprint="b4efe39e03298daf8013" data-block-start="324" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="design-language">试验语言与模型对象<a class="headerlink" href="#design-language" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="374" data-block-fingerprint="91175fee9584645319a2" data-block-start="359" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_2">因素、水平、处理与重复<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p data-block-end="558" data-block-fingerprint="f088eaf612a05c73c6b4" data-block-start="376" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">因素是可能改变响应变量的解释变量，例如培养温度、基因型或药物剂量。因素的具体取值称为水平。单因素试验中，一个水平就是一个处理；多因素试验中，处理通常是若干因素水平的组合，例如温度 <span class="arithmatex">\(25\,^{\circ}\mathrm C\)</span> 与高氮条件共同构成一个处理组合。连续剂量既可按若干预设水平作为分类因素，也可保留数值尺度拟合剂量—反应趋势；两种写法回答的问题不同。</p>
+<p data-block-end="796" data-block-fingerprint="87d09b4921ab67f3f9f7" data-block-start="560" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">试验单位是能够独立接受某个处理的最小单位。把一个处理施加到多个试验单位，才形成生物学意义上的重复。若每只小鼠接受一种饲料，而每只小鼠取三张切片，处理的重复数是小鼠数，切片则是同一试验单位内的子样本。重复测量、技术复孔和空间子样方可以提高测量精度，处理分派的独立信息仍由实验单位提供。实验单位与观测单位的区别已经在<a href="../data_description/#population-to-table">生物数据整理与描述统计</a>中建立，ANOVA 的误差层级必须继续保留这个结构。</p>
+<p data-block-end="900" data-block-fingerprint="3cd457116fc6e2081612" data-block-start="798" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">效应是模型中与某一因素或水平组合相联系的响应差异。主效应描述一个因素在指定的其他因素分布上平均后的对比；交互作用描述一个因素的效应随另一因素水平而改变。二者都是相对于明确平均方式和参照水平定义的模型对比。</p>
+<h3 data-block-end="916" data-block-fingerprint="50e51e57ede8e21894d9" data-block-start="902" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_3">固定、随机与混合效应<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p data-block-end="1115" data-block-fingerprint="383a120f6d6bead6468b" data-block-start="918" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">固定效应关注研究中特定水平的均值或对比。例如，研究者选择三种明确配方并希望比较这三种配方，配方通常作为固定效应。随机效应把观察到的水平视为更大水平总体的一个样本，目标转为估计水平间变异。例如，从某地区许多可能地点中抽取若干样地，地点效应可作为随机变量，其方差描述地点间异质性。NIST 的单因素模型也以水平是否从更大水平总体随机抽取来区分固定与随机效应。<sup id="fnref:nist-oneway-model"><a class="footnote-ref" href="#fn:nist-oneway-model">1</a></sup></p>
+<p data-block-end="1249" data-block-fingerprint="a7dff123c75879547471" data-block-start="1117" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">固定与随机效应的分类取决于待估目标、水平来源与推广范围。操作者可以被严格安排，却仍可能代表更广泛的操作者总体；年份无法由研究者制造，却可作为几个特定年份的固定比较。判断时应先问：结论只关于这些水平，还是要推广到未观察水平？模型要估计各水平对比，还是估计水平间方差？</p>
+<p data-block-end="1444" data-block-fingerprint="cc0ae0ec9c0926e9be13" data-block-start="1251" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">固定效应和随机效应同时存在时形成混合效应模型。例如，三种固定处理在随机抽取的地点中重复，模型既估计处理对比，也估计地点及地点内相关。随机因素会改变期望均方、F 检验分母和自由度，复杂设计需要为每个效应匹配相应误差项。随机、混合与重复测量模型将在<a href="../generalized_mixed_models/">广义线性模型与混合效应模型</a>中继续展开，这里说明它们与经典 ANOVA 表的接口。</p>
+<h2 data-block-end="1481" data-block-fingerprint="11cd672194520b691c71" data-block-start="1446" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="one-way-anova">单因素固定效应 ANOVA<a class="headerlink" href="#one-way-anova" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="1498" data-block-fingerprint="4e81996095ae8db8acf2" data-block-start="1483" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_4">单元均值模型与效应模型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p data-block-end="1579" data-block-fingerprint="02258a4b02917ed97233" data-block-start="1500" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">设因素 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(k\)</span> 个水平，第 <span class="arithmatex">\(i\)</span> 个水平有 <span class="arithmatex">\(n_i\)</span> 个独立观测，总样本量 <span class="arithmatex">\(N=\sum_i n_i\)</span>。单元均值模型写为</p>
+<div class="arithmatex" data-block-end="1659" data-block-fingerprint="dd6ea718c4eaaa01be24" data-block-start="1581" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ij}=\mu_i+\varepsilon_{ij},
+\qquad i=1,\ldots,k,\quad j=1,\ldots,n_i.
+\]</div>
+<p data-block-end="1823" data-block-fingerprint="042a3ee5ad2a9fce2942" data-block-start="1661" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">这里 <span class="arithmatex">\(\mu_i\)</span> 是第 <span class="arithmatex">\(i\)</span> 组总体均值，<span class="arithmatex">\(\varepsilon_{ij}\)</span> 是该观测相对于组均值的误差。经典固定效应模型假定误差相互独立、均值为零、具有共同方差 <span class="arithmatex">\(\sigma^2\)</span>，并在精确有限样本 F 推断中假定正态。NIST 给出的模型和条件与此一致。<sup id="fnref2:nist-oneway-model"><a class="footnote-ref" href="#fn:nist-oneway-model">1</a></sup></p>
+<p data-block-end="1838" data-block-fingerprint="d2e32906ce30c02cdd31" data-block-start="1825" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">同一模型也可写成效应形式：</p>
+<div class="arithmatex" data-block-end="1881" data-block-fingerprint="702f68c0ee9b5788059d" data-block-start="1840" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ij}=\mu+\tau_i+\varepsilon_{ij}.
+\]</div>
+<p data-block-end="2048" data-block-fingerprint="96e225d17004add65383" data-block-start="1883" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">其中 <span class="arithmatex">\(\tau_i\)</span> 是第 <span class="arithmatex">\(i\)</span> 个水平相对于某个基准的效应，而非“处理误差”。由于 <span class="arithmatex">\(\mu\)</span> 与全部 <span class="arithmatex">\(\tau_i\)</span> 同时自由变化会产生不唯一表示，需要施加约束，例如 <span class="arithmatex">\(\sum_i\tau_i=0\)</span>，或指定一个水平为参照。不同约束改变系数的文字解释，却不会改变各组拟合均值、残差或可估计的组间对比。</p>
+<p data-block-end="2055" data-block-fingerprint="fcc6530abfea51b2d3eb" data-block-start="2050" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">总体检验为</p>
+<div class="arithmatex" data-block-end="2123" data-block-fingerprint="b410c4698bec57697228" data-block-start="2057" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+H_0:\mu_1=\mu_2=\cdots=\mu_k,
+\qquad
+H_A:\text{至少有一个总体均值不同}.
+\]</div>
+<p data-block-end="2209" data-block-fingerprint="32fddaceaba7f0123a69" data-block-start="2125" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">备择假设只说明至少一组均值不同，未指出具体组别和差异方向。拒绝总体零假设后仍需用预先规定的对比或适当的多重比较来回答具体问题；未拒绝则表示这组数据对总体差异的证据不足。</p>
+<h3 data-block-end="2221" data-block-fingerprint="c4263d624ecfe595077f" data-block-start="2211" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_5">平方和恒等式<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p data-block-end="2318" data-block-fingerprint="8d4c424d22b4c7ad9f8c" data-block-start="2223" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">以 <span class="arithmatex">\(\bar Y_{i\cdot}\)</span> 表示第 <span class="arithmatex">\(i\)</span> 组样本均值，以 <span class="arithmatex">\(\bar Y_{\cdot\cdot}\)</span> 表示按观测数加权的总均值。每个观测相对于总均值的偏差可以分解为</p>
+<div class="arithmatex" data-block-end="2419" data-block-fingerprint="52d0ad59d716ce265fe5" data-block-start="2320" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ij}-\bar Y_{\cdot\cdot}
+=
+(\bar Y_{i\cdot}-\bar Y_{\cdot\cdot})
++(Y_{ij}-\bar Y_{i\cdot}).
+\]</div>
+<p data-block-end="2440" data-block-fingerprint="836b4283b935cf8b839e" data-block-start="2421" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">对全部观测平方求和后，交叉项为零，得到</p>
+<div class="arithmatex" data-block-end="2503" data-block-fingerprint="7aa13f78b6322a794567" data-block-start="2442" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+SS_{\mathrm{Total}}
+=SS_A+SS_E,
+\]</div>
+<div class="arithmatex" data-block-end="2574" data-block-fingerprint="5a5507c33d366b5b6030" data-block-start="2504" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+SS_{\mathrm{Total}}
+=\sum_{i=1}^{k}\sum_{j=1}^{n_i}
+(Y_{ij}-\bar Y_{\cdot\cdot})^2,
+\]</div>
+<div class="arithmatex" data-block-end="2714" data-block-fingerprint="6774c6969b607616899c" data-block-start="2575" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+SS_A
+=\sum_{i=1}^{k}n_i
+(\bar Y_{i\cdot}-\bar Y_{\cdot\cdot})^2,
+\qquad
+SS_E
+=\sum_{i=1}^{k}\sum_{j=1}^{n_i}
+(Y_{ij}-\bar Y_{i\cdot})^2.
+\]</div>
+<p data-block-end="2813" data-block-fingerprint="b20de880bd719a4ebf67" data-block-start="2716" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression"><span class="arithmatex">\(SS_A\)</span> 衡量组均值围绕总均值的变异，<span class="arithmatex">\(SS_E\)</span> 衡量同组观测围绕组均值的剩余变异。后者叫残差平方和，其中既可能包含随机测量误差，也可能包含遗漏的批次、时间趋势、异方差或依赖结构。</p>
+<p data-block-end="2866" data-block-fingerprint="db73b0ce4d140ae311ef" data-block-start="2815" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">经典手算常使用校正数。令 <span class="arithmatex">\(T_i=\sum_jY_{ij}\)</span>、<span class="arithmatex">\(T=\sum_iT_i\)</span>，则</p>
+<div class="arithmatex" data-block-end="2943" data-block-fingerprint="2155b31f750b52431c32" data-block-start="2868" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+C=\frac{T^2}{N},
+\qquad
+SS_{\mathrm{Total}}=\sum_{i,j}Y_{ij}^2-C,
+\]</div>
+<div class="arithmatex" data-block-end="3024" data-block-fingerprint="cffa599e1f999522dec5" data-block-start="2944" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+SS_A=\sum_{i=1}^{k}\frac{T_i^2}{n_i}-C,
+\qquad
+SS_E=SS_{\mathrm{Total}}-SS_A.
+\]</div>
+<p data-block-end="3147" data-block-fingerprint="5954f491f66b78b073d4" data-block-start="3026" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">这些公式同时适用于相等和不等组样本量，校正数始终为总和平方除以总样本量，即 <span class="arithmatex">\(T^2/N\)</span>。Penn State 对一般线性模型的手算说明也给出这一恒等式及 <span class="arithmatex">\(T_i^2/n_i\)</span> 的处理平方和。<sup id="fnref:psu-linear-model"><a class="footnote-ref" href="#fn:psu-linear-model">2</a></sup></p>
+<h3 data-block-end="3165" data-block-fingerprint="2a80d1fd90642d572900" data-block-start="3149" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="f">自由度、均方与 F 检验<a class="headerlink" href="#f" title="Permanent link">&para;</a></h3>
+<p data-block-end="3182" data-block-fingerprint="86af8db865cfb87a521f" data-block-start="3167" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">平方和除以相应自由度得到均方：</p>
+<table data-block-end="3432" data-block-fingerprint="c7ee3da77846156f0236" data-block-start="3184" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">
+<thead>
+<tr>
+<th>变异来源</th>
+<th style="text-align: right;">平方和</th>
+<th style="text-align: right;">自由度</th>
+<th style="text-align: right;">均方</th>
+<th style="text-align: right;">F 统计量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>因素 <span class="arithmatex">\(A\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(SS_A\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(k-1\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(MS_A=SS_A/(k-1)\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(F=MS_A/MS_E\)</span></td>
+</tr>
+<tr>
+<td>残差</td>
+<td style="text-align: right;"><span class="arithmatex">\(SS_E\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(N-k\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(MS_E=SS_E/(N-k)\)</span></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>校正总变异</td>
+<td style="text-align: right;"><span class="arithmatex">\(SS_{\mathrm{Total}}\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(N-1\)</span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="3591" data-block-fingerprint="be8831dc81d2fdbeb0f5" data-block-start="3434" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">总均值的估计消耗一个自由度；<span class="arithmatex">\(k\)</span> 个组均值相对于总均值只有 <span class="arithmatex">\(k-1\)</span> 个独立偏差；每组估计一个均值后，残差共有 <span class="arithmatex">\(N-k\)</span> 个自由度。因此组间、残差与总自由度依次为 <span class="arithmatex">\(k-1\)</span>、<span class="arithmatex">\(N-k\)</span> 和 <span class="arithmatex">\(N-1\)</span>。NIST 的 ANOVA 表给出相同分解。<sup id="fnref:nist-anova-table"><a class="footnote-ref" href="#fn:nist-anova-table">3</a></sup></p>
+<p data-block-end="3645" data-block-fingerprint="4215507c00f14857d4cd" data-block-start="3593" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">在 <span class="arithmatex">\(H_0\)</span> 和经典模型条件下，<span class="arithmatex">\(MS_A\)</span> 与 <span class="arithmatex">\(MS_E\)</span> 都估计同一个误差方差，因而</p>
+<div class="arithmatex" data-block-end="3689" data-block-fingerprint="728cda94567e2b2b1883" data-block-start="3647" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+F=\frac{MS_A}{MS_E}\sim F_{k-1,N-k}.
+\]</div>
+<p data-block-end="3851" data-block-fingerprint="48ee5f73b253cf4edeb4" data-block-start="3691" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">若组均值确有差异，<span class="arithmatex">\(MS_A\)</span> 还包含均值偏离所贡献的变异，F 往往增大。F 检验比较模型解释的变异与残差变异；“处理效应方差”由模型分解得到，并非直接观测量。两组时，等方差单因素 F 检验与合并方差（pooled-variance）<em>t</em> 检验满足 <span class="arithmatex">\(F=t^2\)</span>，这也说明 ANOVA 是均值线性模型的扩展。</p>
+<h2 data-block-end="3897" data-block-fingerprint="ab7e5d863abaebedf09b" data-block-start="3853" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="general-linear-model">ANOVA 的一般线性模型表示<a class="headerlink" href="#general-linear-model" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="3911" data-block-fingerprint="5d87f3134e206ebb593c" data-block-start="3899" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_6">设计矩阵与参数化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p data-block-end="3939" data-block-fingerprint="41987860f45cb187ce89" data-block-start="3913" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">把 <span class="arithmatex">\(N\)</span> 个响应排成向量，ANOVA 可以写成</p>
+<div class="arithmatex" data-block-end="4072" data-block-fingerprint="a472424dbfd6722b6897" data-block-start="3941" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+\mathbf Y=\mathbf X\boldsymbol\beta+\boldsymbol\varepsilon,
+\qquad
+\boldsymbol\varepsilon\sim N(\mathbf 0,\sigma^2\mathbf I).
+\]</div>
+<p data-block-end="4273" data-block-fingerprint="b3aff5874407599f8ab6" data-block-start="4074" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">设计矩阵 <span class="arithmatex">\(\mathbf X\)</span> 记录每个观测属于哪些因素水平、交互组合或协变量取值；<span class="arithmatex">\(\boldsymbol\beta\)</span> 存放相应参数。一个 <span class="arithmatex">\(k\)</span> 水平因素可以用 <span class="arithmatex">\(k-1\)</span> 个参照编码列、<span class="arithmatex">\(k-1\)</span> 个和为零编码列，或无截距的 <span class="arithmatex">\(k\)</span> 个单元均值列表示。R 的正式文档也明确说明，模型矩阵会把因素按对比编码展开，并以相应列构成交互项。<sup id="fnref:r-model-matrix"><a class="footnote-ref" href="#fn:r-model-matrix">4</a></sup></p>
+<p data-block-end="4416" data-block-fingerprint="7f9220b64f947bbff0ec" data-block-start="4275" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">编码决定单个系数回答什么问题。参照编码下，截距是参照组均值，其余系数是各组与参照组之差；和为零编码下，截距对应一组规定权重的总体水平，系数表达相对偏离。只要模型张成同一列空间，拟合值和所有可估计均值对比一致。单个虚拟变量系数检验与因素的 <span class="arithmatex">\(k-1\)</span> 自由度总体检验对应不同假设。</p>
+<p data-block-end="4665" data-block-fingerprint="dc0bd587c95c7a93725d" data-block-start="4418" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">R 的 <code>aov</code> 本身通过 <code>lm</code> 拟合 ANOVA，并以传统 ANOVA 语言显示结果；官方文档同时提醒，它主要为平衡设计组织输出，不平衡或多误差层设计更难解释。<sup id="fnref:r-aov"><a class="footnote-ref" href="#fn:r-aov">5</a></sup> 这反映了 ANOVA 与回归共享同一线性模型骨架，差别主要来自预测变量的尺度、设计结构以及要检验的线性函数。这里的<strong>一般线性模型</strong>（general linear model）假定响应由参数的线性组合表示；<strong>广义线性模型</strong>（generalized linear model）则允许非正态响应和链接函数。</p>
+<h3 data-block-end="4682" data-block-fingerprint="bfed44364c9bdd4bff37" data-block-start="4667" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="f_1">F 检验是嵌套模型比较<a class="headerlink" href="#f_1" title="Permanent link">&para;</a></h3>
+<p data-block-end="4790" data-block-fingerprint="972f3da4464aa38ccf39" data-block-start="4684" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">单因素总体零假设可比较两个嵌套模型：约简模型只含一个共同均值，完整模型为每组允许不同均值。设两模型残差平方和分别为 <span class="arithmatex">\(SSE_R,SSE_F\)</span>，参数秩相差 <span class="arithmatex">\(q\)</span>，完整模型残差自由度为 <span class="arithmatex">\(\nu\)</span>，则</p>
+<div class="arithmatex" data-block-end="4835" data-block-fingerprint="768df4c257db71af541e" data-block-start="4792" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+F=
+\frac{(SSE_R-SSE_F)/q}{SSE_F/\nu}.
+\]</div>
+<p data-block-end="4942" data-block-fingerprint="a04b22720dd530ea1720" data-block-start="4837" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">这个表达把“变异来源”翻译为“加入一组参数后减少了多少残差平方和”。两因素主效应、交互、区组、嵌套效应和 ANCOVA 斜率都可以用同一形式检验，但约简模型必须代表真正的零假设，分母也必须匹配随机化与相关结构。</p>
+<h2 data-block-end="4986" data-block-fingerprint="bd2f53178a3444bac433" data-block-start="4944" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="estimation-contrasts">均值估计、效应量与计划对比<a class="headerlink" href="#estimation-contrasts" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="5005" data-block-fingerprint="522280ea0c7ea46806f8" data-block-start="4988" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="f_2">从总体 F 回到生物学尺度<a class="headerlink" href="#f_2" title="Permanent link">&para;</a></h3>
+<p data-block-end="5112" data-block-fingerprint="ba46d5afa90c3476c649" data-block-start="5007" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">ANOVA 表应与各组样本量、原始点、均值及区间一起阅读。总体 F 很大可能来自一个组远离其余组，也可能来自沿剂量有序变化的多个均值；具体形状需要由均值模式和预先定义的均值差、趋势或处理组合差及其置信区间说明。</p>
+<p data-block-end="5133" data-block-fingerprint="057eddbfe6726c733b98" data-block-start="5114" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">单因素固定效应设计中，常见方差解释量为</p>
+<div class="arithmatex" data-block-end="5181" data-block-fingerprint="5c94a433e1ae096732fc" data-block-start="5135" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+\eta^2=\frac{SS_A}{SS_{\mathrm{Total}}}.
+\]</div>
+<p data-block-end="5245" data-block-fingerprint="3b8c555fe01f86b42053" data-block-start="5183" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">它描述本样本校正总变异中由组别模型分配的比例，但会随设计中的其他因素、协变量范围和样本构成变化。偏差校正的一种总体效应估计为</p>
+<div class="arithmatex" data-block-end="5312" data-block-fingerprint="eb4a476cafa79665d8e9" data-block-start="5247" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+\omega^2=
+\frac{SS_A-(k-1)MS_E}
+{SS_{\mathrm{Total}}+MS_E}.
+\]</div>
+<p data-block-end="5506" data-block-fingerprint="3ba3260cf4986de1e4a5" data-block-start="5314" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">样本 <span class="arithmatex">\(\omega^2\)</span> 可能略小于零，这表示估计在零附近波动；解释变异在总体意义上仍以零为下界。多因素设计中还常见偏 <span class="arithmatex">\(\eta^2\)</span>，其分母只含该效应与误差平方和，跨设计比较时需说明与普通 <span class="arithmatex">\(\eta^2\)</span> 的区别。效应量应注明公式并尽可能给出区间；方法学综述也强调 ANOVA 效应量的用途依赖组间、组内设计和后续综合目标。<sup id="fnref:anova-effect-size"><a class="footnote-ref" href="#fn:anova-effect-size">6</a></sup></p>
+<h3 data-block-end="5516" data-block-fingerprint="35824c3b6ad513a739e5" data-block-start="5508" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_7">计划对比<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p data-block-end="5562" data-block-fingerprint="38ba95d931c7fbbbc5b0" data-block-start="5518" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">若科学问题在观察结果前已经明确，线性对比比“总体显著后寻找任意差异”更直接。一个对比写为</p>
+<div class="arithmatex" data-block-end="5623" data-block-fingerprint="7e96e4eb7c91237230a9" data-block-start="5564" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+L=\sum_{i=1}^{k}c_i\mu_i,
+\qquad
+\sum_{i=1}^{k}c_i=0.
+\]</div>
+<p data-block-end="5705" data-block-fingerprint="6b71b3c76f23bdadd9eb" data-block-start="5625" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">例如三种处理与一个对照的平均效应可用系数 <span class="arithmatex">\((1/3,1/3,1/3,-1)\)</span>；等距剂量的线性趋势可由相应正交多项式系数表示。估计值与等方差模型下的标准误为</p>
+<div class="arithmatex" data-block-end="5824" data-block-fingerprint="eec7a4d22d4415219446" data-block-start="5707" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+\widehat L=\sum_i c_i\bar Y_{i\cdot},
+\qquad
+\operatorname{SE}(\widehat L)=
+\sqrt{MS_E\sum_i\frac{c_i^2}{n_i}}.
+\]</div>
+<p data-block-end="5962" data-block-fingerprint="1bb4f3955750a768168f" data-block-start="5826" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">于是 <span class="arithmatex">\(t=\widehat L/\operatorname{SE}(\widehat L)\)</span> 具有 <span class="arithmatex">\(N-k\)</span> 个残差自由度，单自由度检验也可写成 <span class="arithmatex">\(F=t^2\)</span>。Penn State 的对比分析给出同一条件、标准误和自由度。<sup id="fnref:psu-contrasts"><a class="footnote-ref" href="#fn:psu-contrasts">7</a></sup></p>
+<p data-block-end="6102" data-block-fingerprint="5fd9442f3977b63ec1c1" data-block-start="5964" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">在平衡设计中，若两组对比系数的内积为零，它们相互正交；最多可以用 <span class="arithmatex">\(k-1\)</span> 个正交单自由度对比完全分解 <span class="arithmatex">\(SS_A\)</span>。不平衡设计中的正交性要按估计协方差加权。计划对比减少了无目标的搜索，但多个确认性对比仍属于一个检验家族，需要按事前科学主张决定是否及怎样控制多重性。</p>
+<h2 data-block-end="6143" data-block-fingerprint="2d8cb12394a40749610b" data-block-start="6104" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="multiple-comparisons">多重比较与经典极差法<a class="headerlink" href="#multiple-comparisons" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="6154" data-block-fingerprint="568b8c8b2db6aa5c94b7" data-block-start="6145" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="lsd">LSD 法<a class="headerlink" href="#lsd" title="Permanent link">&para;</a></h3>
+<p data-block-end="6244" data-block-fingerprint="fb417db09859c774a1bd" data-block-start="6156" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">最小显著差数（least significant difference，LSD）把共同的 <span class="arithmatex">\(MS_E\)</span> 代入两组均值差的 <em>t</em> 检验。第 <span class="arithmatex">\(i,j\)</span> 组比较的临界差为</p>
+<div class="arithmatex" data-block-end="6328" data-block-fingerprint="3c47502e70ebe32ff747" data-block-start="6246" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+LSD_{ij}=t_{1-\alpha/2,N-k}
+\sqrt{MS_E\left(\frac1{n_i}+\frac1{n_j}\right)}.
+\]</div>
+<p data-block-end="6594" data-block-fingerprint="97f8ead98b4b181ee00c" data-block-start="6330" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">若 <span class="arithmatex">\(\lvert\bar Y_{i\cdot}-\bar Y_{j\cdot}\rvert&gt;LSD_{ij}\)</span>，该未调整比较在单次 <span class="arithmatex">\(\alpha\)</span> 水平拒绝均值相等。先要求总体 F 显著再做 LSD，称为保护性 LSD（protected LSD）；它在经典路径中为多次 <em>t</em> 检验增加总体门槛。然而组数增加时，它仍不能对所有两两比较提供一般的强家族错误率控制。生理学方法综述指出，LSD 与 Newman–Keuls 在许多实验情形下都会失去这种控制。<sup id="fnref:multiple-comparisons-review"><a class="footnote-ref" href="#fn:multiple-comparisons-review">8</a></sup></p>
+<p data-block-end="6743" data-block-fingerprint="4c1b7d086c7d6f489cd9" data-block-start="6596" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">LSD 的用途因目标而异。少数事前对比可直接检验并按该小型家族调整；若所有两两差异都属于确认性结论，通常应使用明确控制全家族错误率的方法。总体 F 与预设对比回答不同假设：一个狭窄而预设的对比可能显著，即使 <span class="arithmatex">\(k-1\)</span> 自由度的总体检验未拒绝；总体显著也不保证任一经严格调整的两两比较显著。</p>
+<h3 data-block-end="6764" data-block-fingerprint="3c14cce11bf14c67eb67" data-block-start="6745" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="tukey">学生化极差与 Tukey 方法<a class="headerlink" href="#tukey" title="Permanent link">&para;</a></h3>
+<p data-block-end="7026" data-block-fingerprint="d947b2dc7b75b6c42f57" data-block-start="6766" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">把有序样本均值的极差除以均值标准误，可得到学生化极差（studentized range）统计量 <span class="arithmatex">\(q\)</span>。R 的正式分布文档把它定义为正态样本极差 <span class="arithmatex">\(R\)</span> 与独立方差估计尺度之比，并由均值个数和误差自由度确定分布。<sup id="fnref:r-studentized-range"><a class="footnote-ref" href="#fn:r-studentized-range">10</a></sup> 对所有 <span class="arithmatex">\(k(k-1)/2\)</span> 个两两比较，Tukey 诚实显著差（Tukey honestly significant difference，Tukey HSD）在平衡设计中使用同一个全极差临界值；不等样本量的 Tukey–Kramer 区间可写为</p>
+<div class="arithmatex" data-block-end="7150" data-block-fingerprint="b51297efbd7a7de5abb3" data-block-start="7028" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+(\bar Y_{i\cdot}-\bar Y_{j\cdot})
+\pm q_{1-\alpha;k,N-k}
+\sqrt{\frac{MS_E}{2}
+\left(\frac1{n_i}+\frac1{n_j}\right)}.
+\]</div>
+<p data-block-end="7268" data-block-fingerprint="d46c369440b571f4bbe7" data-block-start="7152" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">这组区间共同具有规定的家族覆盖率。R 的 <code>TukeyHSD</code> 文档明确说明，普通逐对 <em>t</em> 区间会抬高至少一次错误声明的概率，而 Tukey 区间以学生化极差控制整组两两比较；其不等样本量调整适合轻度不平衡。<sup id="fnref:r-tukey"><a class="footnote-ref" href="#fn:r-tukey">11</a></sup></p>
+<p data-block-end="7391" data-block-fingerprint="d899342a0f706163dc61" data-block-start="7270" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">Tukey–Kramer 尺度为上式中的
+<span class="arithmatex">\(\sqrt{MS_E(1/n_i+1/n_j)/2}\)</span>。<span class="arithmatex">\(\lvert r_i-r_j\rvert+1\)</span> 表示排序后两均值之间跨越的均值个数 <span class="arithmatex">\(p\)</span>，误差自由度则来自 ANOVA 模型。</p>
+<h3 data-block-end="7416" data-block-fingerprint="a853983570d303f7fe11" data-block-start="7393" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="snkduncan-ssr">SNK、Duncan 与“SSR”名称<a class="headerlink" href="#snkduncan-ssr" title="Permanent link">&para;</a></h3>
+<p data-block-end="7566" data-block-fingerprint="9aea2de71502a1e6dfb7" data-block-start="7418" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">Student–Newman–Keuls（SNK）检验也把均值排序，并按两均值间包含的有序均值个数 <span class="arithmatex">\(p\)</span> 使用 <span class="arithmatex">\(q_{\alpha;p,\nu}\)</span>。距离较短的比较使用较小临界范围，形成逐步判定；这种灵活性使它比全范围 Tukey 方法更易拒绝，但不对任意真零假设组合强控制家族错误率。</p>
+<p data-block-end="7798" data-block-fingerprint="0bdbcf7a28f666c52616" data-block-start="7568" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">一些中文农学教材把 Duncan 新复极差检验使用的临界表称为 SSR，并与 SNK 一起归入最小显著极差法。Duncan 方法又进一步按跨距改变逐步错误率，通常比 SNK 更宽松。这些名称和按秩次距查表的历史计算路线需要区分：<span class="arithmatex">\(q\)</span> 是学生化极差统计量，Tukey、SNK 与 Duncan 使用临界范围的方式各不相同。方法应按比较家族、错误率目标、设计平衡性和科学代价选择；拒绝数量本身不表示精度高低。<sup id="fnref:mean-comparison-review"><a class="footnote-ref" href="#fn:mean-comparison-review">9</a></sup></p>
+<p data-block-end="8003" data-block-fingerprint="e3b99332da9376d8d9d0" data-block-start="7800" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">若只需把每个处理与一个对照比较，Dunnett 型同时比较比全体两两比较更贴近假设集合；有限个预设对比可用 Holm 或 Bonferroni；任意对比都可能被结果驱动选择时，Scheffé 方法提供更广的同时保护。NIST 的多重比较指南也分别把 Tukey 对应全部两两比较、Scheffé 对应全部对比、Bonferroni 对应有限预选对比。<sup id="fnref:nist-multiple-comparisons"><a class="footnote-ref" href="#fn:nist-multiple-comparisons">12</a></sup></p>
+<p data-block-end="8129" data-block-fingerprint="cf07b6841b9c59a40bec" data-block-start="8005" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">字母标记法适合压缩大量两两结果：没有共同字母表示相应比较达到所用方法的阈值，共享字母表示该比较未拒绝。均值等效需要预设界值另行判断，差值大小和区间宽度也需在正式结果中呈现。因此还应给出均值或估计边际均值、差值、同时置信区间、调整方法和完整比较家族。</p>
+<h2 data-block-end="8168" data-block-fingerprint="9e07d37972c0bc2111da" data-block-start="8131" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="multifactor-anova">多因素设计中的效应分解<a class="headerlink" href="#multifactor-anova" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="8183" data-block-fingerprint="840042440a529b3a7adf" data-block-start="8170" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_8">析因设计与交互作用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p data-block-end="8259" data-block-fingerprint="63437599a8e8d9a09739" data-block-start="8185" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">若因素 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(a\)</span> 个水平、因素 <span class="arithmatex">\(B\)</span> 有 <span class="arithmatex">\(b\)</span> 个水平，且每个水平组合有 <span class="arithmatex">\(r\)</span> 个独立重复，两因素固定效应模型为</p>
+<div class="arithmatex" data-block-end="8334" data-block-fingerprint="83b1c65dd437acb492ba" data-block-start="8261" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ijk}=\mu+\alpha_i+\beta_j
++(\alpha\beta)_{ij}+\varepsilon_{ijk}.
+\]</div>
+<p data-block-end="8348" data-block-fingerprint="828d897ef9ff1f6d17f3" data-block-start="8336" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">平衡设计中的自由度分解为</p>
+<table data-block-end="8501" data-block-fingerprint="5cc46ff11c1fe5b96ba2" data-block-start="8350" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">
+<thead>
+<tr>
+<th>来源</th>
+<th style="text-align: right;">自由度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>因素 <span class="arithmatex">\(A\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(a-1\)</span></td>
+</tr>
+<tr>
+<td>因素 <span class="arithmatex">\(B\)</span></td>
+<td style="text-align: right;"><span class="arithmatex">\(b-1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A\times B\)</span> 交互</td>
+<td style="text-align: right;"><span class="arithmatex">\((a-1)(b-1)\)</span></td>
+</tr>
+<tr>
+<td>残差</td>
+<td style="text-align: right;"><span class="arithmatex">\(ab(r-1)\)</span></td>
+</tr>
+<tr>
+<td>总计</td>
+<td style="text-align: right;"><span class="arithmatex">\(abr-1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="8682" data-block-fingerprint="f07541513b686a7578b9" data-block-start="8503" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">交互作用表示 <span class="arithmatex">\(A\)</span> 的某个对比随 <span class="arithmatex">\(B\)</span> 的水平改变。例如同一药物在两个基因型中的均值差方向相反，边际平均后可能得到接近零的药物主效应，但两个基因型内仍分别存在方向相反的条件效应。解释时应先画各单元均值与区间，检验交互，再根据科学问题考察简单效应或交互对比。Penn State 的析因模型给出同一模型与自由度分解。<sup id="fnref:psu-factorial"><a class="footnote-ref" href="#fn:psu-factorial">13</a></sup></p>
+<p data-block-end="8790" data-block-fingerprint="feb5cb3799140d1c166d" data-block-start="8684" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">交互未显著表示当前设计对非加性效应的证据不足，较小样本可能缺乏识别交互的能力。若分析计划允许删去交互，应结合区间、功效、机制和层级原则作出决定。保留高阶交互时通常也保留其组成主效应，使模型参数和预测保持层级结构。</p>
+<h3 data-block-end="8801" data-block-fingerprint="a12aa279b7b55d2dff17" data-block-start="8792" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_9">区组与嵌套<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p data-block-end="8845" data-block-fingerprint="eb02bd20a17ed0e01c2a" data-block-start="8803" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">随机完全区组设计在每个区组内各安排一次全部处理。若区组内单位比跨区组单位更相似，模型</p>
+<div class="arithmatex" data-block-end="8894" data-block-fingerprint="9f4abde8e1a82715ca22" data-block-start="8847" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ij}=\mu+\tau_i+\rho_j+\varepsilon_{ij}
+\]</div>
+<p data-block-end="9101" data-block-fingerprint="da3f69e1ef7c9b3d99d4" data-block-start="8896" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">把区组间变异从残差中分离，可能提高处理对比精度。每格只有一个观测时，处理—区组交互无法与误差分开，模型实际上假定该交互可忽略；随机化也必须在区组内完成。Penn State 对随机完全区组设计（randomized complete block design，RCBD）的说明强调每个处理在每个区组出现一次并在区组内随机分派。<sup id="fnref:psu-blocks"><a class="footnote-ref" href="#fn:psu-blocks">14</a></sup> 区组是固定还是随机仍由推断目标、水平来源和推广范围决定。</p>
+<p data-block-end="9176" data-block-fingerprint="757ca77477bcc7b6d756" data-block-start="9103" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">嵌套结构中，一个因素的水平只存在于另一因素的某个水平内。例如巢位嵌套于样地，样地 1 的“巢 1”与样地 2 的“巢 1”不是同一水平。模型可写为</p>
+<div class="arithmatex" data-block-end="9236" data-block-fingerprint="3f9fef8d5eee3f16cc20" data-block-start="9178" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ijk}=\mu+\alpha_i+\beta_{j(i)}+\varepsilon_{ijk},
+\]</div>
+<p data-block-end="9430" data-block-fingerprint="f6b9a4cdb93e72782223" data-block-start="9238" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">其中 <span class="arithmatex">\(B(A)\)</span> 表示 <span class="arithmatex">\(B\)</span> 嵌套于 <span class="arithmatex">\(A\)</span>，其结构不同于 <span class="arithmatex">\(A\times B\)</span> 的交互。固定平衡模型下 <span class="arithmatex">\(B(A)\)</span> 有 <span class="arithmatex">\(a(b-1)\)</span> 个自由度；随机嵌套设计中，检验 <span class="arithmatex">\(A\)</span> 常需用 <span class="arithmatex">\(MS_{B(A)}\)</span> 而非最底层残差作分母。Penn State 对嵌套随机效应的期望均方展示了这种不同误差项。<sup id="fnref:psu-random-effects"><a class="footnote-ref" href="#fn:psu-random-effects">15</a></sup></p>
+<p data-block-end="9508" data-block-fingerprint="4844890b9d1c5adf8e4f" data-block-start="9432" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">裂区、重复测量和同一培养皿内多个样本进一步产生多个随机化层级。分析应从处理实际施加在哪一级开始构造误差结构，而非仅在普通 ANOVA 表中增加一行因素。</p>
+<h3 data-block-end="9519" data-block-fingerprint="ebafdf99544ca08a8d4d" data-block-start="9510" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_10">协方差分析<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p data-block-end="9575" data-block-fingerprint="e69d79812324e1e062bc" data-block-start="9521" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">协方差分析（ANCOVA）在分类因素之外加入连续协变量。例如比较处理后生物量时，可把处理前生物量作为协变量：</p>
+<div class="arithmatex" data-block-end="9637" data-block-fingerprint="69cbd679efe4148b2de5" data-block-start="9577" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">\[
+Y_{ij}=\mu+\tau_i
++\beta(X_{ij}-X_0)+\varepsilon_{ij}.
+\]</div>
+<p data-block-end="9735" data-block-fingerprint="8db17294fe1ccb954c83" data-block-start="9639" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression"><span class="arithmatex">\(X_0\)</span> 是选定的参照值，处理效应比较的是各组在相同 <span class="arithmatex">\(X_0\)</span> 下的调整均值。ANCOVA 因而是同时含分类列与连续列的一般线性模型，而非另一种独立算法。<sup id="fnref:psu-ancova"><a class="footnote-ref" href="#fn:psu-ancova">16</a></sup></p>
+<p data-block-end="9915" data-block-fingerprint="16d15702add5fea7cacd" data-block-start="9737" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">共同斜率模型假定协变量与响应的关系在各处理组相同。应先检查包含 <span class="arithmatex">\(\tau_i(X_{ij}-X_0)\)</span> 的交互模型；若斜率确实不同，处理差异随 <span class="arithmatex">\(X\)</span> 改变，应在有数据支持的协变量范围内报告若干 <span class="arithmatex">\(X\)</span> 水平的条件效应。Penn State 的 ANCOVA 步骤也把处理—协变量交互作为平行斜率判断。<sup id="fnref:psu-ancova-slopes"><a class="footnote-ref" href="#fn:psu-ancova-slopes">17</a></sup></p>
+<p data-block-end="10039" data-block-fingerprint="998d437b201cb1f243f4" data-block-start="9917" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">协变量应由研究目标与设计预先确定。随机试验中的处理前预测变量常可提高精度；处理后变量可能是处理作用路径的一部分，对其调整会改变待估效应并可能引入偏倚。观察性研究中，即使模型拟合良好，协变量调整也只有在混杂结构和函数形式足以支持时才具有因果含义。</p>
+<h2 data-block-end="10084" data-block-fingerprint="8b39f1b559496230527c" data-block-start="10041" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="unbalanced-designs">不平衡数据、平方和类型与边际均值<a class="headerlink" href="#unbalanced-designs" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="10100" data-block-fingerprint="12ffea323512064c03c9" data-block-start="10086" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_11">不等样本量与比较精度<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p data-block-end="10263" data-block-fingerprint="f8145749add9e7c68fae" data-block-start="10102" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">单因素模型中，<span class="arithmatex">\(SS_A=\sum_i n_i(\bar Y_i-\bar Y)^2\)</span> 已经正确反映不等样本量，均值差标准误也应使用实际的 <span class="arithmatex">\(n_i,n_j\)</span>。用一个合成的 <span class="arithmatex">\(n_0\)</span> 代替所有组样本量、再套用统一 LSD 或极差标准误会掩盖不同比较的精度。现代计算直接使用模型参数的协方差矩阵表达这种不平衡。</p>
+<p data-block-end="10378" data-block-fingerprint="45f5da324a2749495486" data-block-start="10265" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">在总样本量和共同方差固定、所有组同等重要时，平衡配置通常使比较精度均匀并保持效应正交。不同组成本、方差、失访或科学优先级也可能支持有意的不等分配。分析需要说明不平衡如何产生、是否与结局或处理有关，以及它怎样改变待估总体和精度。</p>
+<h3 data-block-end="10403" data-block-fingerprint="4a9d49e00e707763e881" data-block-start="10380" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="type-iii-iii">Type I、II 与 III 平方和<a class="headerlink" href="#type-iii-iii" title="Permanent link">&para;</a></h3>
+<p data-block-end="10490" data-block-fingerprint="1588cf837b6cf1697de7" data-block-start="10405" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">多因素平衡且无缺失的正交设计中，各效应平方和彼此独立，常见平方和类型会给出相同检验。不平衡时，因素列不再正交，同一批变异可以由多个项解释，因而必须先定义要检验的参数函数。</p>
+<table data-block-end="10740" data-block-fingerprint="83006bcd8e6f71ea09be" data-block-start="10492" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">
+<thead>
+<tr>
+<th>类型</th>
+<th>核心含义</th>
+<th>主要边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type I</td>
+<td>按模型书写顺序依次加入各项，计算残差平方和的递减量</td>
+<td>依赖项的顺序；适合有科学顺序的层级模型或正交多项式分解</td>
+</tr>
+<tr>
+<td>Type II</td>
+<td>每个主效应在其他不包含它的效应之后检验</td>
+<td>不适合把含有重要交互的主效应解释成统一边际效应</td>
+</tr>
+<tr>
+<td>Type III</td>
+<td>每个效应在模型中其余效应，包括包含它的交互之后，以可估函数检验</td>
+<td>需要明确对比编码、边际权重和可估性；其含义由待检验函数决定</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="10930" data-block-fingerprint="c724cef64dd22e32d83d" data-block-start="10742" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">SAS 的一般线性模型（general linear model，GLM）文档明确指出，Type I 是顺序平方和且在不平衡数据中依赖项顺序和单元格数；Type II 不依赖书写顺序，但含有效应会进入其可估假设；Type III/IV 通过可估函数构造，在无空单元格时相同。<sup id="fnref:sas-sums-of-squares"><a class="footnote-ref" href="#fn:sas-sums-of-squares">18</a></sup> 因此应先定义科学问题和待检验函数，再选择相应平方和类型。</p>
+<h3 data-block-end="10946" data-block-fingerprint="59504a9c68dafbbd35f5" data-block-start="10932" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_12">估计边际均值与可估性<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p data-block-end="11119" data-block-fingerprint="75af56a86f43d5b204c3" data-block-start="10948" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">估计边际均值（estimated marginal mean，EMM；旧称 least-squares mean）是模型对一组协变量或其他因素水平作出的预测，再按规定权重平均。它适合在不平衡设计中比较经其他因素调整的均值。Lenth 将这类量定义为线性模型预测值或其平均，并以此构造对比。<sup id="fnref:estimated-marginal-means"><a class="footnote-ref" href="#fn:estimated-marginal-means">19</a></sup></p>
+<p data-block-end="11314" data-block-fingerprint="ca1116c33fb7d318d264" data-block-start="11121" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">平均权重必须写清。对另一因素各水平等权，回答的是标准化到平衡水平分布后的效应；按样本频数加权，回答的是当前样本构成下的边际效应；按目标总体权重，才直接对应预先定义的目标人群。三者可能得到不同数值。SAS 的不平衡两因素示例也显示，Type III 检验对应在平衡因素分布上的 LS-means，而 Type I、II 回答不同加权问题。<sup id="fnref:sas-unbalanced-example"><a class="footnote-ref" href="#fn:sas-unbalanced-example">20</a></sup></p>
+<p data-block-end="11429" data-block-fingerprint="d6be661526ac8951a62e" data-block-start="11316" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">若某些因素组合没有任何观测，部分对比可能无法由数据唯一估计。软件给出的别名、奇异或不可估（non-estimable）提示表明相应设计证据缺失。此时需要缩小推断范围、合并有科学依据的水平、补充数据，或改用能明确表达结构的模型。</p>
+<h2 data-block-end="11476" data-block-fingerprint="40d178cf4ce88ef661ae" data-block-start="11431" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="diagnostics-alternatives">模型条件、诊断与替代方法<a class="headerlink" href="#diagnostics-alternatives" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="11493" data-block-fingerprint="8a7f93fe5cc7d55f12e9" data-block-start="11478" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_13">独立性、方差与残差分布<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p data-block-end="11645" data-block-fingerprint="24d18a0ddb8f520e3697" data-block-start="11495" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">经典固定效应 ANOVA 的精确 F 参照依赖误差独立、均值为零、方差相同且近似正态。独立性主要由随机化、抽样与实验单位保证，残差图无法从一张无顺序信息的数据表中证明独立。按时间、空间位置、个体或批次排列残差，有助于发现趋势、聚集和相关；若处理在笼、地块或培养皿层面施加，就必须在该层面估计不确定性。</p>
+<p data-block-end="11844" data-block-fingerprint="244ed33020a18e6075d7" data-block-start="11647" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">正态性针对误差或条件残差，各组混合后的边缘响应可以呈现其他形状。分位数—分位数图（quantile–quantile plot，Q–Q plot）检查尾部和离群，残差—拟合值图检查方差随均值变化与模型形状，按处理绘制原始点和残差可发现特定组问题。NIST 的单因素 ANOVA 指南至少建议检查按运行顺序的残差、正态概率图以及残差—拟合值图。<sup id="fnref:nist-oneway-diagnostics"><a class="footnote-ref" href="#fn:nist-oneway-diagnostics">21</a></sup></p>
+<p data-block-end="11989" data-block-fingerprint="91a4b607ee7ff9e2b0fb" data-block-start="11846" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">平衡且各组样本量适中时，均值 F 检验对轻度非正态往往较稳健；方差不等与样本量不等同时出现时则可能严重扭曲错误率。离群值既可能是记录错误，也可能是真实生物异质性，删除前应追溯实验记录并报告规则。正态性检验和 Levene 检验的检出能力受样本量影响，需要与图形、设计和模型诊断结合解释。</p>
+<h3 data-block-end="12007" data-block-fingerprint="ac18dba1bd5a1a74a4cd" data-block-start="11991" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_14">异方差、偏斜与随机化替代<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p data-block-end="12182" data-block-fingerprint="51ae6033664098af3b7d" data-block-start="12009" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">一个因素、独立组且目标仍是均值时，Welch ANOVA 允许各组方差不同，并使用近似 F 分布和自由度；R 的正式 <code>oneway.test</code> 默认就是这一推广。<sup id="fnref:r-welch-anova"><a class="footnote-ref" href="#fn:r-welch-anova">22</a></sup> 方差结构随均值成比例时，预先有机制依据的对数或方差稳定变换可能改善模型，但效应解释随尺度改变。也可使用异方差稳健协方差、加权最小二乘或显式方差模型。</p>
+<p data-block-end="12395" data-block-fingerprint="4f16cd845e1309f7b4c1" data-block-start="12184" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">强偏斜、重尾或少量离群下，可以报告稳健位置估计、自助法（bootstrap）区间或稳健 ANOVA；科学目标是秩位置或随机优势时，可使用 <a href="../categorical_nonparametric/#rank-methods">Kruskal–Wallis</a>；随机分派实验还可在设计允许的单位内置换 F 或对比统计量。伪重复、错误误差层级、处理后选择或非随机缺失仍需在设计和模型中分别处理，各替代方法对应的效应参数也需明确。</p>
+<p data-block-end="12539" data-block-fingerprint="91d03bc6bd8a659dc1a6" data-block-start="12397" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">计数、比例和有界结局即使画出近似对称的组分布，也可能具有均值—方差联系；Poisson、二项或 Beta 型模型通常比在正态 ANOVA 中反复变换更贴近生成机制。这些模型与随机效应的结合由<a href="../generalized_mixed_models/">广义线性模型与混合效应模型</a>承接。</p>
+<h2 data-block-end="12577" data-block-fingerprint="d49e338a3daa1d6673ec" data-block-start="12541" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="workflow-reporting">分析顺序与结果报告<a class="headerlink" href="#workflow-reporting" title="Permanent link">&para;</a></h2>
+<p data-block-end="12749" data-block-fingerprint="5659d7a8398fe2abc04a" data-block-start="12579" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">ANOVA 分析从设计图开始：标出响应、因素与水平、处理组合、实验单位、随机化层级、区组、重复和协变量；再写出目标均值或对比及其可推广总体。随后查看各单元原始点、样本量和缺失，建立包含必要交互与误差结构的模型，检查可估性与残差，最后按事前比较家族给出估计和推断。模型选择围绕科学问题进行，平方和类型、变换和事后检验各自服务于预先定义的目标。</p>
+<p data-block-end="12932" data-block-fingerprint="4982d21873a53fe92e84" data-block-start="12751" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">结果至少报告：每个单元的分析单位数、均值与标准差或其他适当描述；完整模型公式与固定／随机效应角色；平方和类型、误差项、自由度、F 与精确 <em>p</em> 值；主要对比或估计边际均值的权重、效应估计与置信区间；多重比较家族及调整方法；效应量公式；残差和敏感性分析；缺失、排除及不平衡原因。字母分组或“ANOVA 后做 LSD”只概括部分比较结果，以上信息才能重建完整分析。</p>
+<p data-block-end="13039" data-block-fingerprint="510e6edb219cf1fc6253" data-block-start="12934" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression">ANOVA 的因果解释来自处理随机分派，向总体推广来自抽样与研究场景。模型把观察变异分解成若干数学来源，生物机制则需要结合实验设计和外部证据解释。可靠结论应把变异分解、效应大小、实验设计和机制证据重新合在一起。</p>
+<h2 data-block-end="16814" data-block-fingerprint="6cb37e71339cf74c66d8" data-block-start="13041" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-anova-regression" id="_15">参考资料与延伸阅读<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:nist-oneway-model">
+<p>NIST/SEMATECH. <a href="https://www.itl.nist.gov/div898/handbook/prc/section4/prc432.htm">The one-way ANOVA model and assumptions</a>。&#160;<a class="footnote-backref" href="#fnref:nist-oneway-model" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:nist-oneway-model" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-linear-model">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/4/4.1">The ANOVA Models</a>：单元均值、效应编码、一般线性模型与平方和工作公式。&#160;<a class="footnote-backref" href="#fnref:psu-linear-model" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-anova-table">
+<p>NIST/SEMATECH. <a href="https://www.itl.nist.gov/div898/handbook/prc/section4/prc423.htm">The ANOVA table and tests of hypotheses about means</a>。&#160;<a class="footnote-backref" href="#fnref:nist-anova-table" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-model-matrix">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/model.matrix.html"><code>model.matrix</code>: Construct Design Matrices</a>。&#160;<a class="footnote-backref" href="#fnref:r-model-matrix" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-aov">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/aov.html"><code>aov</code>: Fit an Analysis of Variance Model</a>。&#160;<a class="footnote-backref" href="#fnref:r-aov" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:anova-effect-size">
+<p>Lakens, D. (2013). <a href="https://pubmed.ncbi.nlm.nih.gov/24324449/">Calculating and reporting effect sizes to facilitate cumulative science: a practical primer for <em>t</em>-tests and ANOVAs</a>. <em>Frontiers in Psychology</em>, 4, 863。&#160;<a class="footnote-backref" href="#fnref:anova-effect-size" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-contrasts">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/2/2.5">Contrast Analysis</a>。&#160;<a class="footnote-backref" href="#fnref:psu-contrasts" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:multiple-comparisons-review">
+<p>Curran-Everett, D. (2000). <a href="https://pubmed.ncbi.nlm.nih.gov/10896857/">Multiple comparisons: philosophies and illustrations</a>. <em>American Journal of Physiology-Regulatory, Integrative and Comparative Physiology</em>, 279, R1–R8。&#160;<a class="footnote-backref" href="#fnref:multiple-comparisons-review" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mean-comparison-review">
+<p>Peck, S. L. et al. (2024). <a href="https://academic.oup.com/jimb/article/doi/10.1093/jimb/kuae001/7515277">A discussion and evaluation of statistical procedures used by JIMB authors when comparing means</a>. <em>Journal of Industrial Microbiology and Biotechnology</em>, 51, kuae001。&#160;<a class="footnote-backref" href="#fnref:mean-comparison-review" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-studentized-range">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/Tukey.html">The Studentized Range Distribution</a>。&#160;<a class="footnote-backref" href="#fnref:r-studentized-range" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-tukey">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/TukeyHSD.html"><code>TukeyHSD</code>: Compute Tukey Honest Significant Differences</a>。&#160;<a class="footnote-backref" href="#fnref:r-tukey" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-multiple-comparisons">
+<p>NIST/SEMATECH. <a href="https://www.itl.nist.gov/div898/handbook/prc/section4/prc47.htm">How can we make multiple comparisons?</a>。&#160;<a class="footnote-backref" href="#fnref:nist-multiple-comparisons" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-factorial">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/5/5.1">Factorial or Crossed Treatment Design</a>。&#160;<a class="footnote-backref" href="#fnref:psu-factorial" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-blocks">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/7/7.3">Randomized Complete Block Design</a>。&#160;<a class="footnote-backref" href="#fnref:psu-blocks" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-random-effects">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/6/6.3">Testing Random Effects</a>。&#160;<a class="footnote-backref" href="#fnref:psu-random-effects" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-ancova">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/9/9.1">ANCOVA in the GLM Setting</a>。&#160;<a class="footnote-backref" href="#fnref:psu-ancova" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-ancova-slopes">
+<p>Penn State Eberly College of Science, STAT 502. <a href="https://online.stat.psu.edu/stat502/lesson/9/9.2">Steps in ANCOVA</a>。&#160;<a class="footnote-backref" href="#fnref:psu-ancova-slopes" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sas-sums-of-squares">
+<p>SAS Institute. <a href="https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/statug_glm_sect030.htm">Hypothesis Testing in PROC GLM</a>：Type I、II、III 与 IV 可估函数及其不平衡设计边界。&#160;<a class="footnote-backref" href="#fnref:sas-sums-of-squares" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:estimated-marginal-means">
+<p>Lenth, R. V. (2016). <a href="https://www.jstatsoft.org/article/view/v069i01">Least-Squares Means: The R Package <code>lsmeans</code></a>. <em>Journal of Statistical Software</em>, 69(1), 1–33。&#160;<a class="footnote-backref" href="#fnref:estimated-marginal-means" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sas-unbalanced-example">
+<p>SAS Institute. <a href="https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/statug_glm_sect048.htm">Unbalanced ANOVA for Two-Way Design with Interaction</a>。&#160;<a class="footnote-backref" href="#fnref:sas-unbalanced-example" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nist-oneway-diagnostics">
+<p>NIST/SEMATECH. <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda354.htm">One-Factor ANOVA</a>：模型验证与三类基本残差图。&#160;<a class="footnote-backref" href="#fnref:nist-oneway-diagnostics" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-welch-anova">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/oneway.test.html"><code>oneway.test</code>: Test for Equal Means in a One-Way Layout</a>。&#160;<a class="footnote-backref" href="#fnref:r-welch-anova" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/biostat/anova_regression.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/biostat/anova_regression.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-biostat-anova-regression"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../categorical_nonparametric/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 分类资料与非参数检验">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                分类资料与非参数检验
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../correlation_regression/" class="md-footer__link md-footer__link--next" aria-label="Next: 相关、回归与模型诊断">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                相关、回归与模型诊断
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

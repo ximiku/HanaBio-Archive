@@ -1,0 +1,3585 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/inter/systems_modeling_inference/">
+      
+      
+        <link rel="prev" href="../systems_stochastic_spatial/">
+      
+      
+        <link rel="next" href="../biophysics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>系统建模、参数推断与实验检验 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              系统建模、参数推断与实验检验
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_18" id="__nav_18_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  跨学科
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../anatomy/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统解剖学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_18_3" id="__nav_18_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统生物学
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_18_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  系统生物学
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems_biology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统生物学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems_networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物网络结构与网络模体
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems_dynamics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  反馈、开关与振荡
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems_stochastic_spatial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  随机动力学、空间模式与群体系统
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统建模、参数推断与实验检验
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统建模、参数推断与实验检验
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-boundary-observables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型的问题、边界与观测量
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        三类模型的信息层次
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stoichiometric-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        化学计量矩阵与代谢网络的可行运动
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-balance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        通量平衡分析的目标函数与可行空间
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metabolic-control-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        稳态附近的代谢控制分配
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitivity-robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参数灵敏度与预测变化
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observation-likelihood" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参数推断中的观测模型与误差模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参数可辨识性
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型选择、独立条件与残差结构
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omics-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        组学数据的约束、先验与观测层
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiscale-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多尺度模型的接口变量
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        候选模型分歧的实验设计
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可复现模型的完整假设链
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../biophysics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物物理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../chemical_synthetic_biology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  化学生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../synthetic_biology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  合成生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-boundary-observables" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型的问题、边界与观测量
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        三类模型的信息层次
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stoichiometric-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        化学计量矩阵与代谢网络的可行运动
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-balance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        通量平衡分析的目标函数与可行空间
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metabolic-control-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        稳态附近的代谢控制分配
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensitivity-robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参数灵敏度与预测变化
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observation-likelihood" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参数推断中的观测模型与误差模型
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identifiability" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参数可辨识性
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型选择、独立条件与残差结构
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omics-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        组学数据的约束、先验与观测层
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiscale-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多尺度模型的接口变量
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        候选模型分歧的实验设计
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可复现模型的完整假设链
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    跨学科
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../systems_biology/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    系统生物学
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="16" data-block-fingerprint="dc034b5e481f8e2c995e" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="_1">系统建模、参数推断与实验检验<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="210" data-block-fingerprint="3110860032a02436612c" data-block-start="18" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">系统模型把关于组成、相互作用和边界条件的假设写成可计算的关系，再把这些关系产生的预测交给实验检验。它既可以追踪分子浓度随时间怎样变化，也可以在缺少完整动力学参数时限定代谢通量的可行范围，还可以把细胞、组织和器官尺度上的过程连接起来。模型的价值不由方程数量决定，而在于它是否明确回答了一个生物学问题，并使不同机制在观测或扰动下给出可以区分的结果。<sup id="fnref:systems-textbooks"><a class="footnote-ref" href="#fn:systems-textbooks">1</a></sup></p>
+<p data-block-end="487" data-block-fingerprint="2556d4c72a11d46cc55f" data-block-start="212" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">网络拓扑及其边语义、反馈回路的确定性动力学以及随机、空间和群体过程分别见<a href="../systems_networks/#biological-graph">生物网络结构与网络模体</a>、<a href="../systems_dynamics/#state-rate-equations">反馈、开关与振荡</a>和<a href="../systems_stochastic_spatial/#discrete-reaction-events">随机动力学、空间模式与群体系统</a>。这些模型进入推断阶段后，需要选择模型边界，由数据约束参数，识别不可辨识性，整合组学证据，并用尚未参与拟合的扰动检验模型。</p>
+<h2 data-block-end="539" data-block-fingerprint="d6db532593dae36fa6ea" data-block-start="489" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="question-boundary-observables">模型的问题、边界与观测量<a class="headerlink" href="#question-boundary-observables" title="Permanent link">&para;</a></h2>
+<p data-block-end="778" data-block-fingerprint="4dadd17ca462f2f5d606" data-block-start="541" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">建模首先要确定系统的空间边界、时间范围和分析单位。同一条丝裂原活化蛋白激酶（mitogen-activated protein kinase，MAPK）信号通路可以被写成一个受体到转录因子的分子反应网络，也可以被粗粒化为“输入—激酶活性—细胞命运”三个状态；肝脏葡萄糖代谢可以按单细胞酶反应、肝小叶空间梯度或全身器官交换来描述。边界以外的过程成为输入、输出、外部参数或噪声来源。若营养供给、细胞生长或组织血流在实验中持续变化，却被模型当作常量，所得参数会吸收这些未建模变化。</p>
+<p data-block-end="791" data-block-fingerprint="b7caf005a76ed9e68264" data-block-start="780" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">一个动力学模型可概括为</p>
+<div class="arithmatex" data-block-end="939" data-block-fingerprint="0071b16f23f918b3828d" data-block-start="793" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+\frac{\mathrm d\mathbf{x}}{\mathrm dt}
+=\mathbf{f}(\mathbf{x},\mathbf{u},\theta),
+\qquad
+\mathbf{y}=\mathbf{h}(\mathbf{x},\phi)+\varepsilon.
+\]</div>
+<p data-block-end="1171" data-block-fingerprint="57ce3e5aa24f51b99cb1" data-block-start="941" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference"><span class="arithmatex">\(\mathbf{x}\)</span> 是模型内部的状态变量，<span class="arithmatex">\(\mathbf{u}\)</span> 是实验施加的输入，<span class="arithmatex">\(\theta\)</span> 是反应或转移参数向量；实验真正记录的是观测量 <span class="arithmatex">\(\mathbf{y}\)</span>。观测函数 <span class="arithmatex">\(\mathbf{h}\)</span> 把内部状态映射为荧光、蛋白条带、细胞比例或代谢物峰面积，<span class="arithmatex">\(\phi\)</span> 可包含比例因子、背景和检测饱和参数，<span class="arithmatex">\(\varepsilon\)</span> 表示测量误差。实验只能看到状态的组合、相对变化或有限时间窗口，这一观测限制与动力学本身共同造成参数推断困难。</p>
+<p data-block-end="1302" data-block-fingerprint="8e938138cd6468fa8fdc" data-block-start="1173" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">模型的输出须与问题对应。研究适应时，应预测峰值、恢复时间和稳态偏差；研究开关时，应预测阈值、滞后区和状态占比；研究代谢时，应区分代谢物池量、交换通量与净通量。先规定要解释的观测量和可接受的预测误差，才能判断模型是否需要增加空间、随机性、细胞异质性或额外反应。</p>
+<h2 data-block-end="1336" data-block-fingerprint="d5fbcd79359dad0ff2a8" data-block-start="1304" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="model-families">三类模型的信息层次<a class="headerlink" href="#model-families" title="Permanent link">&para;</a></h2>
+<p data-block-end="1413" data-block-fingerprint="ab78ec3e289b8fba4006" data-block-start="1338" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">机制模型、现象模型和约束模型对信息作出不同取舍。一个研究常先用现象模型概括数据结构，再以机制模型解释局部过程，同时用约束模型限定大规模网络的可行状态。</p>
+<table data-block-end="1728" data-block-fingerprint="96236f34f57988559bfd" data-block-start="1415" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">
+<thead>
+<tr>
+<th>模型家族</th>
+<th>保留的核心信息</th>
+<th>典型输出</th>
+<th>主要检验方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>机制模型</td>
+<td>反应、转运、调控或状态转换的因果结构及速率关系</td>
+<td>时间轨迹、稳态、阈值、波长、状态分布</td>
+<td>改变特定反应边、输入波形或初始状态，比较完整动力学</td>
+</tr>
+<tr>
+<td>现象模型</td>
+<td>数据中稳定出现的输入—输出关系、增长曲线、潜变量或经验尺度律</td>
+<td>趋势、特征时间、分类与预测分布</td>
+<td>在独立样本和新条件中检验预测及残差结构</td>
+</tr>
+<tr>
+<td>约束模型</td>
+<td>化学计量、质量守恒、反应方向、容量和环境交换边界</td>
+<td>可行通量空间、通量范围及目标条件下的候选状态</td>
+<td>测量摄取／分泌、同位素通量或扰动后的可行性变化</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="1909" data-block-fingerprint="f34cbfbc89cb04b844cc" data-block-start="1730" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">机制模型中的每一条边也有分辨率。质量作用速率可以展开到结合、构象变化和催化步骤，也可以把数个快过程压缩成 Hill 函数或有效速率常数。粗粒化参数只在所拟合的条件和尺度内有意义：一个包含转录、翻译和降解延迟的“有效时间常数”，不能直接解释成某一种分子的寿命。若两种模型在当前实验下产生相同输出，它们就是当前证据下等价的候选，而不是由拟合优度自动选出唯一机制。</p>
+<h2 data-block-end="1962" data-block-fingerprint="05bb7f43ca4163252265" data-block-start="1911" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="stoichiometric-constraints">化学计量矩阵与代谢网络的可行运动<a class="headerlink" href="#stoichiometric-constraints" title="Permanent link">&para;</a></h2>
+<p data-block-end="2100" data-block-fingerprint="f6bde0d6944de16fc521" data-block-start="1964" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">代谢网络由 <span class="arithmatex">\(m\)</span> 种内部代谢物和 <span class="arithmatex">\(n\)</span> 个反应组成时，可用化学计量矩阵 <span class="arithmatex">\(\mathbf{S}\in\mathbb{R}^{m\times n}\)</span> 记录每个反应消耗和生成的化学计量数。令通量向量为 <span class="arithmatex">\(\mathbf{v}\)</span>，内部代谢物量为 <span class="arithmatex">\(\mathbf{x}\)</span>，则</p>
+<div class="arithmatex" data-block-end="2168" data-block-fingerprint="5588b7ce08ce1180150d" data-block-start="2102" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+\frac{\mathrm d\mathbf{x}}{\mathrm dt}=\mathbf{S}\mathbf{v}.
+\]</div>
+<p data-block-end="2333" data-block-fingerprint="83bf273bb0afa082b934" data-block-start="2170" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">在选定时间尺度内把内部代谢物池视为准稳态，可写成 <span class="arithmatex">\(\mathbf{S}\mathbf{v}=\mathbf{0}\)</span>。这条式子要求每种内部代谢物的总生成与总消耗相抵，并不要求单个反应达到热力学平衡，也不表示代谢物浓度为零。交换反应把营养摄取、产物分泌和生物量形成接到系统边界；反应可逆性、营养条件、酶容量和热力学信息进一步给出</p>
+<div class="arithmatex" data-block-end="2380" data-block-fingerprint="e3f7afac6e1fc5d27d8b" data-block-start="2335" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+\mathbf{l}\leq\mathbf{v}\leq\mathbf{u}.
+\]</div>
+<p data-block-end="2581" data-block-fingerprint="844b1087c33443622290" data-block-start="2382" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">由此得到的是一个可行通量空间。网络结构和边界条件排除了违反守恒或容量的状态，却常留下许多彼此不同的通量分配。基因组注释、反应数据库与代谢网络重建怎样形成 <span class="arithmatex">\(\mathbf{S}\)</span>，以及矩阵求解和软件实现，见生信栏目的<a href="../../bioinfo/phylogenetics_networks/#constraint-based-models">代谢约束与通量平衡</a>；这里关注这些约束所支持的系统推断。</p>
+<h2 data-block-end="2629" data-block-fingerprint="2894c8143e3cc969a2e0" data-block-start="2583" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="flux-balance-analysis">通量平衡分析的目标函数与可行空间<a class="headerlink" href="#flux-balance-analysis" title="Permanent link">&para;</a></h2>
+<p data-block-end="2684" data-block-fingerprint="87354613c60f54b65178" data-block-start="2631" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">通量平衡分析（flux balance analysis，FBA）通常在稳态和通量上下界之上加入线性目标：</p>
+<div class="arithmatex" data-block-end="2849" data-block-fingerprint="c7a7c3ce104d07f05025" data-block-start="2686" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+\max_{\mathbf v}\;\mathbf{c}^{\mathsf T}\mathbf{v}
+\quad\text{subject to}\quad
+\mathbf{S}\mathbf{v}=\mathbf{0},\qquad
+\mathbf{l}\leq\mathbf{v}\leq\mathbf{u}.
+\]</div>
+<p data-block-end="3027" data-block-fingerprint="6d5543f9ee01b6d58be7" data-block-start="2851" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference"><span class="arithmatex">\(\mathbf{c}\)</span> 选择要最大化或最小化的通量组合，例如特定培养条件下的生物量生成、三磷酸腺苷（adenosine triphosphate，ATP）维持或副产物形成。FBA 不需要为每个酶指定速率常数，因而能处理规模很大的代谢网络；它预测满足约束并符合所设目标的候选通量状态，代谢物浓度的时间轨迹则需由动力学模型描述。<sup id="fnref:fba-primer"><a class="footnote-ref" href="#fn:fba-primer">2</a></sup></p>
+<p data-block-end="3213" data-block-fingerprint="2842930090596df5948e" data-block-start="3029" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">最优目标值相同的通量解可能不唯一。平行通路、可逆循环和未受测量约束的交换反应会形成替代最优解；逐个求每条反应在保持目标值条件下的最小与最大值，可得到通量变异范围。若某条反应的范围很窄，说明当前约束已强烈限定它；范围很宽则表示多种通量分配仍与同一表型相容。通量范围也依赖网络完整性、反应方向和外界交换界限，错误的缺失反应或能量生成循环会造成看似精确却不具生理意义的结果。</p>
+<p data-block-end="3403" data-block-fingerprint="2e42507086b3dd47807a" data-block-start="3215" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">目标函数是可检验的生物学假设。快速生长微生物在特定实验条件下可能接近生物量最大化，维持期细胞、分化组织或受胁迫细胞却可能同时权衡能量、还原力、蛋白成本和存活。研究者可比较不同目标、加入测得的摄取和分泌速率，或直接问哪些反应在所有可行状态中都必需。删除基因、改变培养基或限制氧供后，预测的生长与交换通量应由独立实验检验；预测失败可指向目标假设、基因—反应映射或网络结构中的缺口。</p>
+<h2 data-block-end="3451" data-block-fingerprint="6be113c5b1e202ad9dd6" data-block-start="3405" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="metabolic-control-analysis">稳态附近的代谢控制分配<a class="headerlink" href="#metabolic-control-analysis" title="Permanent link">&para;</a></h2>
+<p data-block-end="3573" data-block-fingerprint="95b0d604e97e187e42e1" data-block-start="3453" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">FBA 主要利用守恒和边界约束，代谢控制分析（metabolic control analysis，MCA）则在一个具体稳态附近询问酶活性的小变化怎样传到系统通量和代谢物浓度。对通量 <span class="arithmatex">\(J\)</span> 和反应活性参数 <span class="arithmatex">\(E_i\)</span>，归一化通量控制系数为</p>
+<div class="arithmatex" data-block-end="3631" data-block-fingerprint="3a446a282ab59fd63691" data-block-start="3575" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+C_{E_i}^{J}=\frac{\partial\ln J}{\partial\ln E_i}.
+\]</div>
+<p data-block-end="3844" data-block-fingerprint="1b10e97d4574c9719dfd" data-block-start="3633" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">在经典连续稳态模型的适用条件下，各反应的通量控制系数满足 <span class="arithmatex">\(\sum_i C_{E_i}^{J}=1\)</span>。控制因而可分散在多步反应、转运和分支之间，并随营养、需求与酶饱和度重新分配；“限速酶”的控制程度同样依赖这些条件。局部反应对底物和效应物的弹性怎样与系统控制系数连接，见<a href="../../biochem/metabolism/#metabolic-control-analysis">代谢控制分析</a>。<sup id="fnref:mca-review"><a class="footnote-ref" href="#fn:mca-review">3</a></sup></p>
+<p data-block-end="3999" data-block-fingerprint="b4b4646e83446ca46f3b" data-block-start="3846" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">MCA 的实验需要小幅、可定量地改变单个反应活性，并在新的稳态测量通量和中间物池。酶表达梯度、可调抑制、等位基因剂量或急性降解都可提供扰动；只比较完全敲除与野生型，常会触发补偿、状态转换或生长差异，超出局部系数的解释范围。不同扰动幅度得到的响应曲线还能检验线性近似何时失效，并显示控制是否在网络中重新分配。</p>
+<h2 data-block-end="4042" data-block-fingerprint="77558e88d22233371d10" data-block-start="4001" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="sensitivity-robustness">参数灵敏度与预测变化<a class="headerlink" href="#sensitivity-robustness" title="Permanent link">&para;</a></h2>
+<p data-block-end="4081" data-block-fingerprint="8cdf1d941f5302633f6f" data-block-start="4044" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">对预测量 <span class="arithmatex">\(y_i\)</span> 和参数 <span class="arithmatex">\(\theta_j\)</span>，局部归一化灵敏度可写为</p>
+<div class="arithmatex" data-block-end="4146" data-block-fingerprint="5f8cb47c7a56d72e1306" data-block-start="4083" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+S_{ij}(t)=\frac{\partial\ln y_i(t)}{\partial\ln\theta_j}.
+\]</div>
+<p data-block-end="4309" data-block-fingerprint="deef82948e095b7322e3" data-block-start="4148" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">它回答在当前参数点附近小幅改变 <span class="arithmatex">\(\theta_j\)</span> 时，某个时间和条件下的预测怎样变化。灵敏度随时间、初始状态和输入而异：一个参数可能强烈影响早期峰值，却几乎不改变晚期稳态；也可能只在阈值附近显现。局部灵敏度适合追踪具体机制路径，全局灵敏度则在预先规定的参数范围和分布上同时改变多个参数，比较方差贡献、交互和非线性区域。</p>
+<p data-block-end="4528" data-block-fingerprint="ea3790f53e9cd9d8d490" data-block-start="4311" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">低灵敏度有几种不同含义。它可能表示系统对该参数的生物学鲁棒性，也可能只是当前观测量、时间窗口或输入没有激发相关过程。高维系统的灵敏度矩阵常呈“松散”结构：少数组合方向显著改变输出，许多参数组合可大幅变化而保持相似预测。Gutenkunst 等在多种系统生物学模型中系统展示了这种参数敏感性的宽谱分布；这说明精确预测某些系统量有时不需要每个微观参数都被精确估计，但参数本身的机制解释仍须接受可辨识性检验。<sup id="fnref:sloppy-models"><a class="footnote-ref" href="#fn:sloppy-models">4</a></sup></p>
+<p data-block-end="4645" data-block-fingerprint="0723608fc982981481e8" data-block-start="4530" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">鲁棒性也必须指明对象。系统可以对单个酶量变化保持稳态通量，却对联合扰动或环境改变非常敏感；某组参数可以维持平均响应，却改变噪声、恢复时间或代谢成本。灵敏度分析因此应围绕要保持的表型和现实扰动范围设计，并分别报告不同输出的敏感程度。</p>
+<h2 data-block-end="4693" data-block-fingerprint="aede9cbaaa854bcea31f" data-block-start="4647" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="observation-likelihood">参数推断中的观测模型与误差模型<a class="headerlink" href="#observation-likelihood" title="Permanent link">&para;</a></h2>
+<p data-block-end="4786" data-block-fingerprint="7ead822942162ee67364" data-block-start="4695" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">参数估计把模型预测与观测数据连接起来。若在条件 <span class="arithmatex">\(k\)</span>、时间 <span class="arithmatex">\(t_i\)</span> 观测到 <span class="arithmatex">\(y_{ik}\)</span>，模型给出预测 <span class="arithmatex">\(\hat y_{ik}(\theta)\)</span>，一种常见的加权残差目标为</p>
+<div class="arithmatex" data-block-end="4882" data-block-fingerprint="a9404ddf5e66893c91d0" data-block-start="4788" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">\[
+Q(\theta)
+=\sum_{i,k}\frac{\left[y_{ik}-\hat y_{ik}(\theta)\right]^2}
+{\sigma_{ik}^{2}}.
+\]</div>
+<p data-block-end="5036" data-block-fingerprint="d0a7f26c7bddde0404ad" data-block-start="4884" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">当误差独立且近似正态、<span class="arithmatex">\(\sigma_{ik}\)</span> 已合理描述测量尺度时，最小化 <span class="arithmatex">\(Q\)</span> 对应最大似然估计。计数、比例、删失值、检测下限和随信号增大的误差需要相应的概率模型；把所有读出无条件当成同方差正态数据，会使高强度或低强度区域取得不恰当权重。生物重复、技术重复和同一样本的时间序列也具有不同相关结构。</p>
+<p data-block-end="5264" data-block-fingerprint="de0ac64a4a2de499d3e9" data-block-start="5038" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">多个时间序列和实验条件可以全局拟合：由生物学决定哪些速率在条件间共享，哪些初值、输入强度或观测比例因子允许变化。非线性动力学的目标函数常有多个局部极小值，因而要从多组初值重复优化，并比较所得参数与预测；若各次拟合落在不同参数区，却产生同样输出，这本身就是可辨识性线索。频率学方法可由似然曲率、剖面似然或重采样给出区间，贝叶斯方法则把先验与似然组合为参数后验。先验可以表达已测速率和物理范围，也可能在数据薄弱时主导结论，因此须用先验预测和敏感性分析检查。</p>
+<p data-block-end="5552" data-block-fingerprint="05c8e83dc44f3396f8af" data-block-start="5266" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">观测函数要显式表示实验。免疫印迹常给相对强度而非绝对分子数，荧光报告可能有成熟延迟和饱和，单细胞测量又会混合真实细胞差异与检测噪声。若比例因子、背景和批次偏移未写进观测模型，动力学参数会被迫解释测量过程。参数估计的算法、误差分布、置信区间和贝叶斯计算属于统计实现层，相关基础见<a href="../../biostat/probability/#model-selection">从机制到概率模型</a>与<a href="../../biostat/bayesian_computational/#posterior-predictive">后验预测和模型检查</a>。<sup id="fnref:parameter-estimation"><a class="footnote-ref" href="#fn:parameter-estimation">5</a></sup></p>
+<h2 data-block-end="5584" data-block-fingerprint="da31387ac4fa6eb45afc" data-block-start="5554" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="identifiability">参数可辨识性<a class="headerlink" href="#identifiability" title="Permanent link">&para;</a></h2>
+<p data-block-end="5797" data-block-fingerprint="c89d8fed4bf6e5a4c250" data-block-start="5586" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">结构可辨识性是在模型结构、输入与观测函数已经确定，并假定连续、无噪声且信息无限精确的理想数据时，判断参数能否由输出唯一恢复。若输出只依赖两个参数的乘积 <span class="arithmatex">\(\theta_1\theta_2\)</span>，任何保持乘积不变的参数对都会给出同一输出；单独的 <span class="arithmatex">\(\theta_1\)</span>、<span class="arithmatex">\(\theta_2\)</span> 结构上不可辨识，乘积却是可辨识的参数组合。增加同类重复数据不能解除这种结构退化，需要改变参数化、增加新的观测量或施加能区分两条路径的输入。</p>
+<p data-block-end="5954" data-block-fingerprint="1550e8c757e8fc68aad7" data-block-start="5799" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">实际可辨识性讨论有限时间点、测量误差和实验范围下的不确定性。参数可以在理想条件下唯一，却因为过程过快、采样过稀、输入幅度太小或观测窗口未覆盖恢复阶段而只有单侧界限。更多重复能降低测量噪声，延长时间序列或加入新扰动可激发原先不可见的动力学；选择哪一种改进，应根据不可辨识性来自噪声、时间范围还是缺少独立观测决定。</p>
+<p data-block-end="6231" data-block-fingerprint="9bc57337a58c99a85eeb" data-block-start="5956" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">剖面似然把一个参数固定在一系列数值上，每次重新优化其余参数，再观察最佳目标函数怎样上升。存在明确谷底并在两侧跨过置信阈值时，数据给出有限区间；平坦方向表示其他参数可以补偿该参数变化。Raue 等用这一方法区分结构和实际不可辨识性，并把结果用于模型缩减和后续实验规划。<sup id="fnref:profile-likelihood"><a class="footnote-ref" href="#fn:profile-likelihood">6</a></sup> Fisher 信息矩阵或局部参数相关可以快速提示近退化方向，马尔可夫链蒙特卡洛（Markov chain Monte Carlo，MCMC）后验可以显示非线性相关、多峰和参数组合，但任何一种数值方法都须结合模型结构、参数边界和收敛诊断解释。</p>
+<p data-block-end="6378" data-block-fingerprint="b7c2983b4726000c0977" data-block-start="6233" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">参数不可辨识不等于所有预测都不可用。多个参数集可能给出相同的稳态输出，却对新输入后的瞬态产生不同预测；此时新实验能同时区分参数和机制。反过来，某个目标预测也可能在宽广参数集合上都很稳定，即使单参数区间很宽。研究应同时报告参数不确定性和目标预测的不确定性，避免用一组最佳参数代表所有相容模型。</p>
+<h2 data-block-end="6429" data-block-fingerprint="3b8b90bce7a33e0cee8b" data-block-start="6380" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="model-selection-validation">模型选择、独立条件与残差结构<a class="headerlink" href="#model-selection-validation" title="Permanent link">&para;</a></h2>
+<p data-block-end="6643" data-block-fingerprint="9a5d11aec1554d605717" data-block-start="6431" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">候选模型应先按生物学问题和可观测差异提出，再比较它们对数据的解释。增加反应和参数通常能降低训练残差，却也会扩大可补偿方向。赤池信息准则（Akaike information criterion，AIC）、贝叶斯信息准则（Bayesian information criterion，BIC）、交叉验证或贝叶斯模型比较各有前提，只能在响应、似然和观测集合可比时使用；信息准则差异也不能替代对守恒、时间尺度和参数可辨识性的检查。</p>
+<p data-block-end="6770" data-block-fingerprint="83fddb83c5fc92521b75" data-block-start="6645" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">残差保留了模型遗漏的结构。刺激后所有早期时间点都被低估，可能表示缺少快速支路；误差随信号强度增大，可能需要异方差观测模型；不同批次呈一致偏移，则应建模批次或校准差异。只展示拟合曲线而不展示原始数据、误差和残差，会掩盖模型以错误方式获得相似轨迹的情况。</p>
+<p data-block-end="6923" data-block-fingerprint="508e06976f91dd775a08" data-block-start="6772" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">真正有力的验证来自未参与估计的条件。可以留出整条时间序列、另一种输入波形、不同剂量、另一细胞背景或一个组合扰动。随机留出同一轨迹中的零散时间点主要检验插值，不能代表模型对新实验的外推能力。模型若以多个可行参数集形成集合，应让整个集合对新条件作预测区间，再判断观测是否落入范围以及失败集中在哪个机制分支。</p>
+<h2 data-block-end="6965" data-block-fingerprint="52aae09e147d5248e003" data-block-start="6925" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="omics-constraints">组学数据的约束、先验与观测层<a class="headerlink" href="#omics-constraints" title="Permanent link">&para;</a></h2>
+<p data-block-end="7126" data-block-fingerprint="b5e8f4e595c2f695b112" data-block-start="6967" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">转录组、蛋白质组和代谢组可以缩小模型的候选状态，却不能按一一对应关系直接替换反应速率。转录本丰度影响潜在酶量，蛋白丰度更接近催化容量，磷酸化和复合物装配提示活性状态；真实通量还取决于底物、产物、热力学驱动力、区室、转运和竞争支路。把低表达反应收紧上界是一种模型假设，其阈值与映射规则需要通过已知活性和独立通量数据校准。</p>
+<p data-block-end="7377" data-block-fingerprint="ff9416781c159bbeb0d6" data-block-start="7128" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">代谢物浓度提供池量和热力学约束，却不是通量本身。稳定同位素示踪记录标记碳在代谢物及其同位素体中的重新分配；结合原子映射、摄取与分泌速率和同位素平衡模型，才能估计分支、交换和循环通量。<span class="arithmatex">\(^{13}\)</span>C 代谢通量分析由动态标记模式获得的信息，正是普通浓度快照所缺少的“网络在运动”证据。<sup id="fnref:isotope-flux"><a class="footnote-ref" href="#fn:isotope-flux">7</a></sup> 代谢组数据处理、化合物鉴定、通路映射和多组学矩阵整合见<a href="../../bioinfo/multiomics_metabolomics/#pathway-flux">通路、代谢网络与通量</a>。</p>
+<p data-block-end="7509" data-block-fingerprint="e08d6027627ea2479438" data-block-start="7379" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">组学也可进入统计层：用蛋白丰度为参数建立条件性先验，用单细胞表达区分亚群模型，或把未观测调控活动写成潜变量。这里须保留测量层与机制层的距离。相关的多组学模式可以帮助提出共同调节模块，只有时间顺序、边级扰动、直接结合或代谢示踪等证据加入后，模型才更接近因果机制。</p>
+<h2 data-block-end="7549" data-block-fingerprint="3d9b38b82f7d28ede68f" data-block-start="7511" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="multiscale-modeling">多尺度模型的接口变量<a class="headerlink" href="#multiscale-modeling" title="Permanent link">&para;</a></h2>
+<p data-block-end="7705" data-block-fingerprint="f396c9a387c033774ce8" data-block-start="7551" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">从分子到器官的模型跨越很大的长度与时间尺度。离子通道在毫秒内改变膜电流，细胞兴奋和收缩发生在毫秒到秒，组织灌流与代谢需求又在更长时间和空间上反馈。Physiome 框架把生化、生物物理和解剖信息连接到细胞、组织和器官功能，强调模型必须处理尺度之间的接口，而不是把所有过程塞进同一组方程。<sup id="fnref:physiome"><a class="footnote-ref" href="#fn:physiome">8</a></sup></p>
+<p data-block-end="7884" data-block-fingerprint="91181527ecebf8fc9fa3" data-block-start="7707" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">常见连接方式包括时间尺度分离、模块耦合和混合模型。若快速结合相对于慢速蛋白表达接近准稳态，可以用有效输入—输出函数替代全部快速步骤；细胞模型向组织模型输出耗氧率、收缩力或分泌通量，组织模型再把氧浓度、机械负荷或激素水平反馈给细胞。离散细胞与连续信号场可组成基于个体（agent-based）模型—偏微分方程混合系统，随机分子模块也可嵌入确定性的组织背景。</p>
+<p data-block-end="8067" data-block-fingerprint="4eadf7e51ff48409d7f6" data-block-start="7886" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">接口变量必须有一致的单位、空间支持和守恒关系。单细胞分泌速率乘以细胞密度后才可进入组织体积源项，组织平均氧浓度也未必等于每个细胞周围的局部值。不同尺度上分别拟合出的“有效扩散系数”或“反应速率”不能直接互换；被粗粒化掉的结构会以记忆、延迟、相关噪声或条件依赖参数出现。多尺度模型应先保证每个模块在自身尺度上可检验，再验证模块连接后是否产生新的、可观测的系统行为。</p>
+<h2 data-block-end="8108" data-block-fingerprint="1010a39ffdc46779c9ac" data-block-start="8069" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="experimental-design">候选模型分歧的实验设计<a class="headerlink" href="#experimental-design" title="Permanent link">&para;</a></h2>
+<p data-block-end="8299" data-block-fingerprint="6f47333838a063c59ee4" data-block-start="8110" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">好的实验不只增加数据量，还把系统推入候选模型预测最不同的区域。采样时间应覆盖输入前基线、快速峰值、恢复和新稳态；剂量应跨过线性区、阈值和饱和区；脉冲、阶跃、周期输入与撤除刺激可分别显露时间常数、适应、迟滞和相位响应。基于灵敏度或 Fisher 信息的最优设计可以选择最能缩小目标参数区间的条件，预测差异最大的设计则更适合区分模型结构。<sup id="fnref:experimental-design"><a class="footnote-ref" href="#fn:experimental-design">9</a></sup></p>
+<p data-block-end="8471" data-block-fingerprint="8b539949ca4b06ae49a3" data-block-start="8301" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">扰动也应与网络边相对应。删除整个节点会同时破坏催化、支架、定位和反馈，改变结合位点、催化活性、降解速率或特定调控边能给出更清晰的机制检验。急性、可逆扰动减少长期补偿；恢复野生型或只恢复某一功能的救援实验（rescue experiment）可判断表型来自目标机制还是一般细胞损伤。单扰动用于估计局部作用，组合扰动则揭示冗余、协同和替代通路。</p>
+<p data-block-end="8662" data-block-fingerprint="6a9b3908bf99086b0efb" data-block-start="8473" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">前瞻预测必须在实验开始前固定模型版本、输入条件、观测量和判定标准。若看到结果后不断改动网络和参数，模型可以成为解释工具，却不再构成对原预测的独立检验。失败同样提供信息：时间相位正确但振幅错误，通常指向增益或观测尺度；稳态正确而瞬态错误，提示时间尺度或隐藏中间体；特定背景下整体失败，则可能暴露模型边界外的宿主差异。这样的失败模式决定下一轮应修正结构、参数、观测模型还是实验条件。</p>
+<h2 data-block-end="8705" data-block-fingerprint="b1e843183329449ba196" data-block-start="8664" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="model-reproducibility">可复现模型的完整假设链<a class="headerlink" href="#model-reproducibility" title="Permanent link">&para;</a></h2>
+<p data-block-end="8854" data-block-fingerprint="06e328bf7e0719b7649d" data-block-start="8707" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">模型论文和知识库应让另一位研究者能够从同一输入重现图表与预测。所需信息包括方程或反应规则、状态与参数的生物学含义、单位、初值、边界条件、输入波形、观测函数、误差模型、参数来源、估计方法和模拟条件。只公开一段代码而没有参数表和数据映射，或只给方程而没有事件、归一化与数值设置，都不足以恢复原分析。</p>
+<p data-block-end="9196" data-block-fingerprint="6bc02da2ffdce8ad030a" data-block-start="8856" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">系统生物学标记语言（Systems Biology Markup Language，SBML）、细胞模型语言（CellML）、仿真实验描述标记语言（Simulation Experiment Description Markup Language，SED-ML）和 COMBINE 归档（COMBINE Archive）等标准用于交换模型、模拟任务和关联文件，BioModels 等数据库进一步检查模型编码与论文描述是否一致，并尝试复现实验结果。BioModels 对已发表模型的系统复核显示，缺少参数、初始条件或结构不一致会使相当一部分模型无法直接复现；标准格式服务于假设、实体和计算过程的明确表达，而非仅作为文件扩展名。<sup id="fnref:biomodels-reproducibility"><a class="footnote-ref" href="#fn:biomodels-reproducibility">10</a></sup></p>
+<p data-block-end="9359" data-block-fingerprint="f176b1e3a32323446bf8" data-block-start="9198" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference">从模型建立到知识增长可以形成连续闭环：先界定问题和尺度，写出结构与观测模型；再用灵敏度和可辨识性判断现有数据能够约束什么；随后由参数集合产生带不确定性的预测，选择能最大区分候选机制的扰动；最后把新结果用于保留、修改或舍弃模型。系统生物学的核心不在于让模型永久正确，而在于让模型持续暴露假设，并让实验能够明确地修正这些假设。</p>
+<h2 data-block-end="11799" data-block-fingerprint="bc3874720162662393d5" data-block-start="9361" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-inter-systems-modeling-inference" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:systems-textbooks">
+<p>Alon U. <a href="https://www.routledge.com/An-Introduction-to-Systems-Biology-Design-Principles-of-Biological-Circuits/Alon/p/book/9781439837177"><em>An Introduction to Systems Biology: Design Principles of Biological Circuits</em>, 2nd ed.</a>. Chapman &amp; Hall/CRC, 2020；Klipp E, Liebermeister W, Wierling C, Kowald A, Lehrach H, Herwig R. <a href="https://www.wiley.com/en-us/Systems+Biology%3A+A+Textbook-p-9783527644971"><em>Systems Biology: A Textbook</em></a>. Wiley-Blackwell, 2011.&#160;<a class="footnote-backref" href="#fnref:systems-textbooks" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:fba-primer">
+<p>Orth JD, Thiele I, Palsson BØ. <a href="https://doi.org/10.1038/nbt.1614">What is flux balance analysis?</a>. <em>Nature Biotechnology</em>. 2010;28(3):245–248.&#160;<a class="footnote-backref" href="#fnref:fba-primer" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:mca-review">
+<p>Fell DA. <a href="https://doi.org/10.1042/bj2860313">Metabolic control analysis: a survey of its theoretical and experimental development</a>. <em>Biochemical Journal</em>. 1992;286(Pt 2):313–330.&#160;<a class="footnote-backref" href="#fnref:mca-review" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sloppy-models">
+<p>Gutenkunst RN, Waterfall JJ, Casey FP, Brown KS, Myers CR, Sethna JP. <a href="https://doi.org/10.1371/journal.pcbi.0030189">Universally sloppy parameter sensitivities in systems biology models</a>. <em>PLoS Computational Biology</em>. 2007;3(10):e189.&#160;<a class="footnote-backref" href="#fnref:sloppy-models" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:parameter-estimation">
+<p>Ashyraliyev M, Fomekong-Nanfack Y, Kaandorp JA, Blom JG. <a href="https://doi.org/10.1111/j.1742-4658.2008.06844.x">Systems biology: parameter estimation for biochemical models</a>. <em>The FEBS Journal</em>. 2009;276(4):886–902.&#160;<a class="footnote-backref" href="#fnref:parameter-estimation" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:profile-likelihood">
+<p>Raue A, Kreutz C, Maiwald T, et al. <a href="https://doi.org/10.1093/bioinformatics/btp358">Structural and practical identifiability analysis of partially observed dynamical models by exploiting the profile likelihood</a>. <em>Bioinformatics</em>. 2009;25(15):1923–1929.&#160;<a class="footnote-backref" href="#fnref:profile-likelihood" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:isotope-flux">
+<p>Sauer U. <a href="https://doi.org/10.1038/msb4100109">Metabolic networks in motion: <span class="arithmatex">\(^{13}\)</span>C-based flux analysis</a>. <em>Molecular Systems Biology</em>. 2006;2:62.&#160;<a class="footnote-backref" href="#fnref:isotope-flux" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:physiome">
+<p>Hunter PJ, Borg TK. <a href="https://doi.org/10.1038/nrm1054">Integration from proteins to organs: the Physiome Project</a>. <em>Nature Reviews Molecular Cell Biology</em>. 2003;4(3):237–243.&#160;<a class="footnote-backref" href="#fnref:physiome" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:experimental-design">
+<p>Kreutz C, Timmer J. <a href="https://doi.org/10.1111/j.1742-4658.2008.06843.x">Systems biology: experimental design</a>. <em>The FEBS Journal</em>. 2009;276(4):923–942.&#160;<a class="footnote-backref" href="#fnref:experimental-design" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:biomodels-reproducibility">
+<p>Tiwari K, Kananathan S, Roberts MG, et al. <a href="https://doi.org/10.15252/msb.20209982">Reproducibility in systems biology modelling</a>. <em>Molecular Systems Biology</em>. 2021;17(2):e9982；另见 EMBL-EBI BioModels 的<a href="https://www.ebi.ac.uk/biomodels/reproducibility">模型复现检查说明</a>。&#160;<a class="footnote-backref" href="#fnref:biomodels-reproducibility" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/inter/systems_modeling_inference.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/inter/systems_modeling_inference.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-inter-systems-modeling-inference"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../systems_stochastic_spatial/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 随机动力学、空间模式与群体系统">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                随机动力学、空间模式与群体系统
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../biophysics/" class="md-footer__link md-footer__link--next" aria-label="Next: 生物物理学">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                生物物理学
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

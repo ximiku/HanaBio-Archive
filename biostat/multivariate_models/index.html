@@ -1,0 +1,4247 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/biostat/multivariate_models/">
+      
+      
+        <link rel="prev" href="../generalized_mixed_models/">
+      
+      
+        <link rel="next" href="../survival_longitudinal/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>多元统计、降维与分类 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              多元统计、降维与分类
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  统计
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  统计
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimental_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验设计、效能与可重复统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data_description/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据与概率
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../hypothesis_testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  假设检验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_16_5" id="__nav_16_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  回归与多变量
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_16_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  回归与多变量
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anova_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  方差分析与线性模型
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../correlation_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  相关、回归与模型诊断
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalized_mixed_models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  广义线性模型与混合效应模型
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  多元统计、降维与分类
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  多元统计、降维与分类
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multivariate-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多变量问题与数据矩阵
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多变量问题与数据矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多预测变量、多响应与条件关联
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        行、列与分析单位
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#covariance-and-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        协方差、尺度与预处理
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="协方差、尺度与预处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        协方差矩阵与相关矩阵
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        缺失、组成约束与计数结构
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pca-and-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        主成分分析与潜在因子
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主成分分析与潜在因子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        最大方差的正交方向
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        保留维数与解释边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PCA 与因子分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-and-ordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        距离、相异度与排序
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="距离、相异度与排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        距离选择决定相似性的含义
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        主坐标分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        非度量多维尺度分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        对应分析与约束排序
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        聚类与未知结构
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="聚类与未知结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        层次聚类
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        k-means 与簇数
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervised-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        已知类别的判别与分类
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="已知类别的判别与分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从生成分布到分类边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        无监督降维与标签隔离
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multivariate-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多响应检验与典范关系
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多响应检验与典范关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hotelling-t2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        均值向量与 Hotelling <span class="arithmatex">\(T^2\)</span>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MANOVA 的均值向量检验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permanova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PERMANOVA 与交换性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        典型相关与两组变量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从探索图到可复核结论
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从探索图到可复核结论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        探索、检验与预测的分工
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        报告要素
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survival_longitudinal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生存分析与纵向数据
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bayesian_computational/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  贝叶斯推断与计算统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../causal_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  因果推断
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systematic_review_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统综述与荟萃分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multivariate-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多变量问题与数据矩阵
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多变量问题与数据矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多预测变量、多响应与条件关联
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        行、列与分析单位
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#covariance-and-preprocessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        协方差、尺度与预处理
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="协方差、尺度与预处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        协方差矩阵与相关矩阵
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        缺失、组成约束与计数结构
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pca-and-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        主成分分析与潜在因子
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主成分分析与潜在因子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        最大方差的正交方向
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        保留维数与解释边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PCA 与因子分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-and-ordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        距离、相异度与排序
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="距离、相异度与排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        距离选择决定相似性的含义
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        主坐标分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        非度量多维尺度分析
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        对应分析与约束排序
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        聚类与未知结构
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="聚类与未知结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        层次聚类
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        k-means 与簇数
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervised-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        已知类别的判别与分类
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="已知类别的判别与分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从生成分布到分类边界
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        无监督降维与标签隔离
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multivariate-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        多响应检验与典范关系
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多响应检验与典范关系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hotelling-t2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        均值向量与 Hotelling <span class="arithmatex">\(T^2\)</span>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MANOVA 的均值向量检验
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permanova" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        PERMANOVA 与交换性
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        典型相关与两组变量
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从探索图到可复核结论
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从探索图到可复核结论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        探索、检验与预测的分工
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        报告要素
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+      
+        
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    统计
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-path__item">
+        <a href="../anova_regression/" class="md-path__link">
+          
+  
+  <span class="md-ellipsis">
+    回归与多变量
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="12" data-block-fingerprint="786678f859cb953c4e8c" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_1">多元统计、降维与分类<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="172" data-block-fingerprint="3bb3d6fb8d4aefb8afc5" data-block-start="14" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">一个生物样本往往同时留下许多测量：植物个体有株高、叶面积、花期和多种元素含量，一个样地有数十至数百个物种的丰度，一个细胞则有成千上万个基因的表达量。逐个变量分别分析可以回答每个指标的边际变化，却会丢失变量之间的协同、权衡和冗余；把所有变量直接放进一张图或一个模型，又会遇到尺度不一致、维数过高、共线和多重解释等问题。</p>
+<p data-block-end="329" data-block-fingerprint="67eb6e95f2dc14fb6ef8" data-block-start="174" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">多元统计以“每个观察单位对应一个变量向量”为出发点。它可以压缩相关变量、按样本间差异重建低维结构、寻找未知分组、利用已知类别作预测，也可以联合检验多个响应。方法名称很多，但选择顺序始终应从研究对象开始：哪些行是独立单位，哪些列是响应或特征，距离或协方差表达了什么生物学差异，最终目标是探索、解释、检验还是预测。</p>
+<h2 data-block-end="372" data-block-fingerprint="486cb5fc0ec311fac7e1" data-block-start="331" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="multivariate-questions">多变量问题与数据矩阵<a class="headerlink" href="#multivariate-questions" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="392" data-block-fingerprint="ac41249ec37b42f842a4" data-block-start="374" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_2">多预测变量、多响应与条件关联<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p data-block-end="444" data-block-fingerprint="ea38abc33691bb9120ce" data-block-start="394" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">回归和相关可分为一元回归、多元回归、单相关、复相关与偏相关。“多元”在不同语境中指向不同的数据结构：</p>
+<table data-block-end="1025" data-block-fingerprint="b40a3059980682f1f7fc" data-block-start="446" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">
+<thead>
+<tr>
+<th>数据结构</th>
+<th>典型记号</th>
+<th>核心问题</th>
+<th>常用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一个响应、多个预测变量</td>
+<td><span class="arithmatex">\(\mathbf y,\mathbf X\)</span></td>
+<td>在其他预测变量给定时，某变量与响应怎样关联或怎样预测响应</td>
+<td>多元（多重）回归、GLM、正则化</td>
+</tr>
+<tr>
+<td>两个变量间的条件关联</td>
+<td><span class="arithmatex">\(X,Y\mid\mathbf Z\)</span></td>
+<td>去除 <span class="arithmatex">\(\mathbf Z\)</span> 的线性部分后，<span class="arithmatex">\(X\)</span> 与 <span class="arithmatex">\(Y\)</span> 还剩多少线性关联</td>
+<td>偏相关、部分回归</td>
+</tr>
+<tr>
+<td>一个响应与一组预测变量的总体线性关联</td>
+<td><span class="arithmatex">\(Y,\mathbf X\)</span></td>
+<td><span class="arithmatex">\(Y\)</span> 与全部预测变量最优线性组合的相关有多强</td>
+<td>复相关系数</td>
+</tr>
+<tr>
+<td>同一单位上的多个响应</td>
+<td><span class="arithmatex">\(\mathbf Y\in\mathbb R^{n\times q}\)</span></td>
+<td>处理是否改变整体响应向量，各响应怎样共同变化</td>
+<td>MANOVA、多响应回归、典范分析</td>
+</tr>
+<tr>
+<td>一组多维特征，没有预设响应</td>
+<td><span class="arithmatex">\(\mathbf X\in\mathbb R^{n\times p}\)</span></td>
+<td>样本间的主要变化轴、邻近关系或未知分组是什么</td>
+<td>PCA、排序、聚类</td>
+</tr>
+<tr>
+<td>多维特征与已知类别</td>
+<td><span class="arithmatex">\(\mathbf X,g\)</span></td>
+<td>能否把新样本归入已定义类别</td>
+<td>判别分析及其他监督分类</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="1181" data-block-fingerprint="ca771e5e6ff3679221a9" data-block-start="1027" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">多元回归仍只有一个响应；它已在<a href="../correlation_regression/#multiple-regression">相关、回归与模型诊断</a>中按设计矩阵、条件系数和共线性展开。复相关系数是观测 <span class="arithmatex">\(Y\)</span> 与其多元线性回归拟合值 <span class="arithmatex">\(\widehat Y\)</span> 的相关，在含截距的普通最小二乘模型中满足</p>
+<div class="arithmatex" data-block-end="1256" data-block-fingerprint="6364b8984101f7a6a1cf" data-block-start="1183" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+R_{Y\cdot 1\ldots p}
+=\operatorname{cor}(Y,\widehat Y)
+=\sqrt{R^2}.
+\]</div>
+<p data-block-end="1402" data-block-fingerprint="ec14d13fbab99f8d8863" data-block-start="1258" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">它概括整组预测变量对一个响应的线性拟合程度。各预测变量的增量贡献需要由条件系数或模型比较分析，因果解释则需要设计与识别条件支持。偏相关是两个变量分别对 <span class="arithmatex">\(\mathbf Z\)</span> 线性残差化后的相关，仍属于条件线性关联。“多个预测变量”和“多个响应变量”对应不同的模型、自由度和结论对象。</p>
+<h3 data-block-end="1416" data-block-fingerprint="3f2b1749dcf0cdbe6c60" data-block-start="1404" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_3">行、列与分析单位<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p data-block-end="1423" data-block-fingerprint="d1338af530e9ed8502e6" data-block-start="1418" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">设数据矩阵</p>
+<div class="arithmatex" data-block-end="1539" data-block-fingerprint="76cca138d477f1946924" data-block-start="1425" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf X=
+\begin{pmatrix}
+x_{11}&amp;\cdots&amp;x_{1p}\\
+\vdots&amp;\ddots&amp;\vdots\\
+x_{n1}&amp;\cdots&amp;x_{np}
+\end{pmatrix},
+\]</div>
+<p data-block-end="1638" data-block-fingerprint="796eb99fa7edfc820d69" data-block-start="1541" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">通常每行是一个观察或实验单位，每列是一个变量。若同一受试者贡献多个时间点、多个细胞来自同一组织，行之间共享上层单位；降维图可以显示这些行，检验或验证则应显式保留个体、样地、批次、空间或时间结构。</p>
+<p data-block-end="1837" data-block-fingerprint="f63a3d77fd80c9ce346d" data-block-start="1640" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">多变量资料还要区分测量类型。连续形态量、二元性状、物种计数、比例组成和混合型临床特征具有不同的零值、单位和抽样过程。把它们拼成一个矩阵只是存储形式统一，不意味着欧氏距离或普通协方差对每列都合适。Penn State 的多元统计课程同样以均值向量、协方差矩阵、PCA、典型相关、聚类、判别与 MANOVA 组成方法主线，其共同前提是先识别数据结构和研究目标。<sup id="fnref:psu-multivariate"><a class="footnote-ref" href="#fn:psu-multivariate">1</a></sup></p>
+<h2 data-block-end="1886" data-block-fingerprint="3d1a7c02a0d5c7da96db" data-block-start="1839" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="covariance-and-preprocessing">协方差、尺度与预处理<a class="headerlink" href="#covariance-and-preprocessing" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="1902" data-block-fingerprint="deba8f87a82a46bf0b18" data-block-start="1888" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_4">协方差矩阵与相关矩阵<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p data-block-end="1941" data-block-fingerprint="b0881c15745589a4ec83" data-block-start="1904" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">把每列减去样本均值后记为 <span class="arithmatex">\(\mathbf X_c\)</span>，样本协方差矩阵为</p>
+<div class="arithmatex" data-block-end="2008" data-block-fingerprint="b5dfe6a4c14be0a92ec4" data-block-start="1943" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf S=
+\frac{1}{n-1}\mathbf X_c^{\mathsf T}\mathbf X_c.
+\]</div>
+<p data-block-end="2076" data-block-fingerprint="b30c18aa4d2ba8165c17" data-block-start="2010" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">对角线 <span class="arithmatex">\(s_{jj}\)</span> 是各变量方差，非对角线 <span class="arithmatex">\(s_{jk}\)</span> 是变量对的协方差。若进一步以各列标准差缩放，得到相关矩阵</p>
+<div class="arithmatex" data-block-end="2136" data-block-fingerprint="09981ffbed50a060e4a4" data-block-start="2078" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf R=\mathbf D^{-1/2}\mathbf S\mathbf D^{-1/2},
+\]</div>
+<p data-block-end="2244" data-block-fingerprint="ce7f1e527eb97bc9ed40" data-block-start="2138" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">其中 <span class="arithmatex">\(\mathbf D=\operatorname{diag}(s_{11},\ldots,s_{pp})\)</span>。协方差保留原单位和绝对变异幅度；相关矩阵相当于令每列方差为 1，使不同量纲的变量获得相近起点。</p>
+<p data-block-end="2406" data-block-fingerprint="6df7e44c63949ff94fe5" data-block-start="2246" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">选择哪一个矩阵属于科学决定。若所有基因表达量已经在可比较尺度上，且高变异基因应主导结构，可以使用协方差；若株高以厘米、元素以微克、花期以天记录，未经标准化的 PCA 或聚类会被数值尺度最大的列支配。标准化会使各变量获得单位方差，因此测量噪声很大的变量也会获得与稳定指标相同的权重。中心、缩放、变换及变量权重都应写入方法。</p>
+<p data-block-end="2510" data-block-fingerprint="df46d6631db9bf9f1f94" data-block-start="2408" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">离群样本会同时改变均值、协方差、主轴和距离。先用单变量分布、散点矩阵、样本元数据与质量控制指标区分录入错误、技术失败和真实生物极端，再决定孤立点的处置。变量近乎常量时标准化很不稳定，提供的排序信息也很少。</p>
+<h3 data-block-end="2528" data-block-fingerprint="caa098dceb246e2d2838" data-block-start="2512" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_5">缺失、组成约束与计数结构<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p data-block-end="2717" data-block-fingerprint="9fce2b716c8aedbfd3a7" data-block-start="2530" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">完整案例分析会删掉任一所选变量缺失的整行；变量很多时，保留下来的样本可能很少且组成发生改变。逐对完整观测可以为每一对变量使用不同样本，却可能得到不正半定的相关矩阵，继而使特征分解或距离几何失效。R 的协方差文档也明确提示逐对缺失处理可能产生非正半定矩阵。<sup id="fnref:r-covariance"><a class="footnote-ref" href="#fn:r-covariance">2</a></sup> 缺失机制、插补模型和不确定性应在降维前确定；若分析用于预测，插补参数必须只从训练折估计。</p>
+<p data-block-end="2965" data-block-fingerprint="5a33507fb4ac1d93afc5" data-block-start="2719" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">相对丰度、百分比和测序读数常受总和约束。一个组分上升会迫使其他组分的比例下降，即使其绝对量未变；直接计算普通相关可能制造负相关。严格正的组成数据可在对数比（log-ratio）几何下比较，艾奇逊（Aitchison）距离等于中心化对数比后的欧氏距离；零值需要根据检测、取样和结构性缺失过程作有依据的处理，而统一加常数会隐含特定替代假设。物种计数还具有随均值变化的方差和许多零值，必要时应使用多响应计数模型；距离分析只描述相异度，不显式估计这种均值—方差关系。<sup id="fnref:vegan-distance"><a class="footnote-ref" href="#fn:vegan-distance">3</a></sup></p>
+<h2 data-block-end="3001" data-block-fingerprint="d0b2dcbb312f4b6ab8be" data-block-start="2967" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="pca-and-factors">主成分分析与潜在因子<a class="headerlink" href="#pca-and-factors" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="3016" data-block-fingerprint="cbf54265a36f61b6b295" data-block-start="3003" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_6">最大方差的正交方向<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p data-block-end="3073" data-block-fingerprint="e8ee3e4d5166ce7f11b3" data-block-start="3018" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">主成分分析（principal component analysis，PCA）寻找原变量的线性组合。第一主成分</p>
+<div class="arithmatex" data-block-end="3107" data-block-fingerprint="a1a64ed672fe3ed788b5" data-block-start="3075" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+z_1=\mathbf X_c\mathbf a_1
+\]</div>
+<p data-block-end="3139" data-block-fingerprint="1666b624226f9f472e18" data-block-start="3109" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">选择单位长度方向 <span class="arithmatex">\(\mathbf a_1\)</span>，使投影方差</p>
+<div class="arithmatex" data-block-end="3215" data-block-fingerprint="2561285fbd3475e98bcc" data-block-start="3141" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\operatorname{Var}(z_1)
+=\mathbf a_1^{\mathsf T}\mathbf S\mathbf a_1
+\]</div>
+<p data-block-end="3332" data-block-fingerprint="6b45f4b39e1cdbf3a418" data-block-start="3217" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">最大。后续主成分在与此前方向正交的条件下依次最大化剩余方差。因此 <span class="arithmatex">\(\mathbf a_k\)</span> 是 <span class="arithmatex">\(\mathbf S\)</span> 的特征向量，对应特征值 <span class="arithmatex">\(\lambda_k\)</span> 是第 <span class="arithmatex">\(k\)</span> 个主成分方差；其解释方差比例为</p>
+<div class="arithmatex" data-block-end="3382" data-block-fingerprint="c68bc1d90cee8519c7c1" data-block-start="3334" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\frac{\lambda_k}{\sum_{j=1}^{p}\lambda_j}.
+\]</div>
+<p data-block-end="3408" data-block-fingerprint="a82034d47662c7675c79" data-block-start="3384" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">计算上可对中心化、必要时标准化的矩阵作奇异值分解</p>
+<div class="arithmatex" data-block-end="3468" data-block-fingerprint="c29678b640737c5fe658" data-block-start="3410" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf X_c=\mathbf U\mathbf D\mathbf V^{\mathsf T}.
+\]</div>
+<p data-block-end="3679" data-block-fingerprint="ad59f18a330e632322fc" data-block-start="3470" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models"><span class="arithmatex">\(\mathbf V\)</span> 的列给出载荷方向，<span class="arithmatex">\(\mathbf X_c\mathbf V=\mathbf U\mathbf D\)</span> 给出各样本的主成分得分。R 的 <code>prcomp</code> 正是以奇异值分解计算，并指出这种实现具有较好的数值精度。<sup id="fnref:r-prcomp"><a class="footnote-ref" href="#fn:r-prcomp">4</a></sup> Jolliffe 与 Cadima 的综述则把 PCA 概括为构造依次最大化方差的互不相关新变量，在减少维数的同时尽量保留变异。<sup id="fnref:pca-review"><a class="footnote-ref" href="#fn:pca-review">5</a></sup></p>
+<p data-block-end="3823" data-block-fingerprint="1085192394a728dab6f8" data-block-start="3681" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">载荷描述每个原变量对主轴方向的贡献，得分描述样本在该方向上的位置。载荷整体乘以 <span class="arithmatex">\(-1\)</span> 会同时翻转得分轴，同时保持距离、解释方差和结论不变，因此不同软件可能显示相反符号。双标图把样本和变量投影到同一低维平面，但点间距离、向量长度和夹角的精确含义取决于采用的缩放方式，图注应说明。</p>
+<h3 data-block-end="3838" data-block-fingerprint="48703cd29ffc5eae35bd" data-block-start="3825" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_7">保留维数与解释边界<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p data-block-end="3995" data-block-fingerprint="dc53912727bb1b62120d" data-block-start="3840" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">碎石图显示特征值随成分序号下降，累计解释方差显示保留若干轴可覆盖多少总变异。肘部、预设累计比例、平行分析、交叉验证重构误差和下游预测性能回答不同问题，维数选择应匹配分析目标。用于可视化时可保留两三轴；用于去噪或预测时，维数应在训练数据内选择；用于解释生物过程时，还需检验载荷在重抽样、批次和变量选择下是否稳定。</p>
+<p data-block-end="4123" data-block-fingerprint="bfdc7b382fd90ab80e72" data-block-start="3997" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">“解释方差最多”表示在所用尺度和变量集合中保留平方距离最多。高方差轴可能是批次、测序深度或体型大小，低方差方向也可能承载稳定的分类信号。PCA 不利用类别标签，所得方向用于描述总体变异；PCA 图上的组间分离属于探索性发现，需要预设分析或独立数据确认。</p>
+<p data-block-end="4438" data-block-fingerprint="f3a432960c5075bd19e9" data-block-start="4125" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">PCA 是线性投影。弯曲轨迹、分支发育过程和局部邻域可能需要非线性可视化。t 分布随机邻域嵌入（t-distributed stochastic neighbor embedding，t-SNE）以高、低维邻域相似度的分布差异构造二维或三维图，统一流形近似与投影（uniform manifold approximation and projection，UMAP）从近邻图构造低维嵌入；它们在单细胞等高维资料中常能展开局部结构。<sup id="fnref:nonlinear-embedding"><a class="footnote-ref" href="#fn:nonlinear-embedding">6</a></sup> 低维簇间的空白、簇的面积及远距离通常受超参数、初始化和样本密度影响，其原空间含义需要另行核对。应报告随机种子与参数，用原始特征和独立验证确认所见结构。</p>
+<h3 data-block-end="4453" data-block-fingerprint="8afa4b35987b744f1318" data-block-start="4440" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="pca">PCA 与因子分析<a class="headerlink" href="#pca" title="Permanent link">&para;</a></h3>
+<p data-block-end="4468" data-block-fingerprint="98367e6767abdcabec52" data-block-start="4455" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">探索性因子分析提出生成模型</p>
+<div class="arithmatex" data-block-end="4552" data-block-fingerprint="766c23bccff0246efc71" data-block-start="4470" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf x=\boldsymbol\mu+\boldsymbol\Lambda\mathbf f+\boldsymbol\varepsilon,
+\]</div>
+<p data-block-end="4731" data-block-fingerprint="353a61ed36f8962d064d" data-block-start="4554" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">其中少数公共因子 <span class="arithmatex">\(\mathbf f\)</span> 通过载荷矩阵 <span class="arithmatex">\(\boldsymbol\Lambda\)</span> 产生变量间共同协方差，<span class="arithmatex">\(\boldsymbol\varepsilon\)</span> 表示各变量特有部分。PCA 分解观测变量的总方差，目标是重构和压缩；因子分析区分共同方差与特有方差，目标是用潜在结构解释相关。二者可能产生相似的载荷表，但对应不同模型目标。</p>
+<p data-block-end="4845" data-block-fingerprint="45e9443b280fd253c2af" data-block-start="4733" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">因子轴可作正交或斜交旋转，使载荷模式更易解释；旋转改变单个轴的载荷，却在相应条件下保持共同结构的整体拟合。因子数、旋转、估计方法和项目选择都会影响解释。给因子命名需要结合变量内容、理论和复现证据，几个较大载荷只提供命名线索。</p>
+<h2 data-block-end="4888" data-block-fingerprint="6e49275e312696cf8547" data-block-start="4847" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="distance-and-ordination">距离、相异度与排序<a class="headerlink" href="#distance-and-ordination" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="4906" data-block-fingerprint="d080ae350152ac7162b6" data-block-start="4890" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_8">距离选择决定相似性的含义<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p data-block-end="5012" data-block-fingerprint="64b9a785cb02a609987f" data-block-start="4908" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">给定两个样本向量 <span class="arithmatex">\(\mathbf x_i,\mathbf x_j\)</span>，距离把多列差异压缩为一个数。这个压缩规定了哪些差异重要、共同缺失是否算相似、总丰度是否保留，因此距离矩阵包含由指标选择引入的结构假设。</p>
+<table data-block-end="5402" data-block-fingerprint="bb9286a59062e3364e77" data-block-start="5014" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">
+<thead>
+<tr>
+<th>距离或相异度</th>
+<th>适合的对象</th>
+<th>主要性质与边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>欧氏（Euclidean）</td>
+<td>同尺度连续测量、适当变换后的向量</td>
+<td>保留绝对差值，易被量纲和极端值支配；PCA 的样本几何属于这一类</td>
+</tr>
+<tr>
+<td>曼哈顿（Manhattan）</td>
+<td>连续或稀疏特征</td>
+<td>各维绝对差相加，对单个极端平方差较不敏感</td>
+</tr>
+<tr>
+<td>Gower</td>
+<td>连续、二元和分类变量混合的资料</td>
+<td>按变量范围或类型标准化后取平均，须明确缺失和变量权重</td>
+</tr>
+<tr>
+<td>Jaccard</td>
+<td>物种出现／缺失或集合</td>
+<td>共同出现进入相似度，通常忽略共同缺失</td>
+</tr>
+<tr>
+<td>Bray–Curtis</td>
+<td>非负丰度或计数组成</td>
+<td>关注共享丰度，对共同零不计贡献；通常为半度量</td>
+</tr>
+<tr>
+<td>Aitchison</td>
+<td>严格正的组成数据</td>
+<td>在 log-ratio 空间比较相对关系，零值处理是模型的一部分</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="5661" data-block-fingerprint="010175e1ea315d7a35ec" data-block-start="5404" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">生态群落中两个样地共同缺少一个无法在当地生存的物种，这个“双零”通常提供很少的相似证据，Jaccard 和 Bray–Curtis 因而常比普通欧氏距离自然。连续环境变量若量纲不同，应先标准化；基因表达、代谢物或群落计数则要同时考虑变换、测序深度和均值—方差关系。vegan 的正式文档给出了 Euclidean、Gower、Bray–Curtis、Jaccard、Hellinger 与 Aitchison 等相异度的定义和适用数据，并提示空样地、负值及不恰当标准化会产生误导。<sup id="fnref2:vegan-distance"><a class="footnote-ref" href="#fn:vegan-distance">3</a></sup></p>
+<h3 data-block-end="5672" data-block-fingerprint="6a51cf6b0a0d012075a2" data-block-start="5663" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_9">主坐标分析<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p data-block-end="5763" data-block-fingerprint="0a134c1a74f8e708e072" data-block-start="5674" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">主坐标分析（principal coordinates analysis，PCoA），也称经典度量多维尺度分析，从任意给定的样本间相异度矩阵 <span class="arithmatex">\(\mathbf D\)</span> 出发。令</p>
+<div class="arithmatex" data-block-end="5889" data-block-fingerprint="57c0ccb17446bd770d0c" data-block-start="5765" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf J=\mathbf I-\frac1n\mathbf 1\mathbf 1^{\mathsf T},
+\qquad
+\mathbf B=-\frac12\mathbf J\mathbf D^{(2)}\mathbf J,
+\]</div>
+<p data-block-end="6031" data-block-fingerprint="4893de8ee9614040e35a" data-block-start="5891" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">其中 <span class="arithmatex">\(\mathbf D^{(2)}\)</span> 把每个距离平方。对 <span class="arithmatex">\(\mathbf B\)</span> 作特征分解，正特征值及其特征向量给出低维坐标。若输入是原始变量的欧氏距离，PCoA 与相应 PCA 样本构型等价；PCoA 的优势是可使用为物种组成、遗传差异或混合特征专门定义的相异度。</p>
+<p data-block-end="6192" data-block-fingerprint="24892b70829fefbea127" data-block-start="6033" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">非欧氏相异度可产生负特征值，表示该距离无法无损嵌入普通欧氏空间。少量数值负值可能只是舍入，较大负值则需要报告并评估；加常数或其他 Euclid 化校正会改变距离，应说明方法。R 的 <code>cmdscale</code> 文档明确给出 PCoA 的双中心化距离表示、旋转／反射不确定性及 Cailliez 加常数校正。<sup id="fnref:r-pcoa"><a class="footnote-ref" href="#fn:r-pcoa">7</a></sup></p>
+<h3 data-block-end="6207" data-block-fingerprint="8766d7cafd29b22e107c" data-block-start="6194" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_10">非度量多维尺度分析<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p data-block-end="6343" data-block-fingerprint="6f2448c924a44b0d0716" data-block-start="6209" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">非度量多维尺度分析（non-metric multidimensional scaling，NMDS）主要保存相异度的秩次，算法寻找低维构型，使较小原相异度尽量对应较近点、较大原相异度对应较远点。常见应力值（stress）概括排序距离与拟合距离的不一致，例如一种形式为</p>
+<div class="arithmatex" data-block-end="6464" data-block-fingerprint="a8c76dbd969012982d51" data-block-start="6345" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\operatorname{stress}
+=\sqrt{
+\frac{\sum_{i&lt;j}(d_{ij}^{\ast}-\widehat d_{ij})^2}
+{\sum_{i&lt;j}(d_{ij}^{\ast})^2}
+},
+\]</div>
+<p data-block-end="6616" data-block-fingerprint="9bd4ab0634b9e9fbbcca" data-block-start="6466" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">其中 <span class="arithmatex">\(d_{ij}^{\ast}\)</span> 是低维构型距离，<span class="arithmatex">\(\widehat d_{ij}\)</span> 是由原相异度 <span class="arithmatex">\(\delta_{ij}\)</span> 经单调回归得到的拟合差异值（disparity）。stress 越小，低维距离与原相异度的次序越一致，但其绝对阈值还受样本数、维数、距离并列和所用定义影响。</p>
+<p data-block-end="6817" data-block-fingerprint="5ea2c47f5064f1265d0b" data-block-start="6618" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">NMDS 优化可能停在局部极小值，应从多个随机初值运行并检查最佳解能否重复；维数过低会留下高 stress，维数过高又失去可视化目的。vegan 的 <code>metaMDS</code> 文档说明其用多次随机起点寻找可重复解，并强调轴方向可以任意旋转，构型内的点间距离才是稳定对象。<sup id="fnref:vegan-nmds"><a class="footnote-ref" href="#fn:vegan-nmds">8</a></sup> 除 stress 数值外，还应看 Shepard 图或原相异度与排序距离的关系，辨认少数样本是否主导失配。</p>
+<h3 data-block-end="6832" data-block-fingerprint="aefcf2cffb305b8a7baa" data-block-start="6819" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_11">对应分析与约束排序<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p data-block-end="7045" data-block-fingerprint="4b59062b21cf6c7f4315" data-block-start="6834" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">对应分析（correspondence analysis, CA）适合非负列联表或样本×类别计数表。令总频率矩阵为 <span class="arithmatex">\(\mathbf P\)</span>，行、列边际比例为 <span class="arithmatex">\(\mathbf r,\mathbf c\)</span>，并令 <span class="arithmatex">\(\mathbf D_r=\operatorname{diag}(\mathbf r)\)</span>、<span class="arithmatex">\(\mathbf D_c=\operatorname{diag}(\mathbf c)\)</span>。CA 对标准化偏离</p>
+<div class="arithmatex" data-block-end="7133" data-block-fingerprint="b2f9377258fdb86ac2de" data-block-start="7047" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\mathbf D_r^{-1/2}
+(\mathbf P-\mathbf r\mathbf c^{\mathsf T})
+\mathbf D_c^{-1/2}
+\]</div>
+<p data-block-end="7280" data-block-fingerprint="06449abccf3fba330fbc" data-block-start="7135" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">作奇异值分解。它以 <span class="arithmatex">\(\chi^2\)</span> 距离比较行剖面和列剖面，可在同一图中显示样本与类别的关联。惯量（inertia）对应相对于独立模型的标准化变异。Greenacre 对生态丰度资料的分析详细说明了 CA 的剖面、<span class="arithmatex">\(\chi^2\)</span> 距离和双标图几何。<sup id="fnref:greenacre-ca"><a class="footnote-ref" href="#fn:greenacre-ca">9</a></sup></p>
+<p data-block-end="7411" data-block-fingerprint="7d3d5e063b46b11fb22a" data-block-start="7282" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">稀有类别因边际频率很小可能获得很大权重，少数极端单元会牵动轴；沿单一长梯度的数据还可能出现弯曲的“拱形”构型。解释前应查看边际频率、贡献和原始表。多重对应分析（MCA）把多个分类变量的类别关系投影到低维空间，但类别编码会扩大维数，惯量比例也需按相应定义解释。</p>
+<p data-block-end="7573" data-block-fingerprint="385041a055cddbe18edf" data-block-start="7413" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">PCA、CA 和 PCoA 都属于无约束排序，轴由响应矩阵自身的变异决定。若问题是“群落组成中有多少变化与土壤水分和处理相关”，冗余分析（RDA）、典范对应分析或距离约束排序把环境变量作为约束，形成多响应回归与排序的结合。约束解释量、条件变量和置换方案必须对应设计；在同一数据中先筛选环境变量再检验，会夸大解释与显著性。</p>
+<h2 data-block-end="7601" data-block-fingerprint="f5660e34d55489c9bcd5" data-block-start="7575" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="clustering">聚类与未知结构<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="7611" data-block-fingerprint="1111c44cc69599657664" data-block-start="7603" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_12">层次聚类<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p data-block-end="7703" data-block-fingerprint="9376ee4770227d055bd3" data-block-start="7613" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">聚类在缺少预设类别标签时寻找相对相似的样本组。凝聚型层次聚类从每个样本单独成簇开始，每一步合并两个簇；分裂型方法从一个总簇逐步拆分。树状图的合并高度由样本相异度与簇间链接共同决定：</p>
+<ul data-block-end="7869" data-block-fingerprint="87f775f8774158a8436c" data-block-start="7705" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">
+<li>single linkage 使用两簇中最近样本的距离，容易沿一串中间点形成链；</li>
+<li>complete linkage 使用最远样本距离，倾向产生较紧凑的簇；</li>
+<li>average linkage 使用跨簇样本对的平均距离，在链化与紧凑之间折中；</li>
+<li>Ward 方法每步选择使簇内平方和增加最小的合并，通常与平方欧氏几何配套。</li>
+</ul>
+<p data-block-end="8030" data-block-fingerprint="0c4557989850b2705503" data-block-start="7871" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">同一数据更换标准化、距离或链接后可能得到另一棵树。树状图记录算法的逐步合并历史，分支高度表示所用链接准则下的相异程度，左右排列没有次序含义，也不表示谱系分化时间。Penn State 的聚类课程以生态样地说明了距离、凝聚方法、Ward 法和树状图之间的关系，并指出链接选择需要结合资料结构。<sup id="fnref:psu-cluster"><a class="footnote-ref" href="#fn:psu-cluster">10</a></sup></p>
+<h3 data-block-end="8047" data-block-fingerprint="cf4db429844fde95f2a0" data-block-start="8032" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="k-means">k-means 与簇数<a class="headerlink" href="#k-means" title="Permanent link">&para;</a></h3>
+<p data-block-end="8110" data-block-fingerprint="382bc56b1c149f40a0ec" data-block-start="8049" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">k-means 预先给定簇数 <span class="arithmatex">\(K\)</span>，寻找簇中心 <span class="arithmatex">\(\boldsymbol\mu_k\)</span> 和分配 <span class="arithmatex">\(C_k\)</span>，使</p>
+<div class="arithmatex" data-block-end="8190" data-block-fingerprint="077b305c9629a32a9c52" data-block-start="8112" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\sum_{k=1}^{K}\sum_{i\in C_k}
+\lVert\mathbf x_i-\boldsymbol\mu_k\rVert^2
+\]</div>
+<p data-block-end="8332" data-block-fingerprint="80195656648ffeb163af" data-block-start="8192" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">最小。它偏好近似球形、尺度相近的簇，并由欧氏平方距离决定；初始中心不同可能落入不同局部解，所以需多次初始化。明显弯曲、大小悬殊或密度不同的群体不适合只用 k-means 表达。基于概率混合分布的模型聚类可以容纳不同协方差形状，并以似然描述归属不确定性，但结论仍依赖分布成分的设定。</p>
+<p data-block-end="8463" data-block-fingerprint="9f8c4bc9c997f1629964" data-block-start="8334" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">簇数可参考轮廓宽度、簇内离差、间隙统计量（gap statistic）、稳定性及模型信息准则。它们衡量紧凑、分离、预测或模型拟合的不同方面；连续生态梯度也会被任何指定 <span class="arithmatex">\(K\)</span> 的算法切成若干段。将结果称为类型或亚群，需要外部性状、重复数据和生物机制支持。</p>
+<p data-block-end="8545" data-block-fingerprint="1591193bd35443990d65" data-block-start="8465" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">同一数据中参与聚类的变量用于描述算法形成的差异。更独立的验证来自重抽样稳定性、独立批次复现、未参与聚类的表型或功能变量，以及聚类方案对距离、变换和算法的敏感性。</p>
+<h2 data-block-end="8591" data-block-fingerprint="9a7a64edaa284120d7bf" data-block-start="8547" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="supervised-classification">已知类别的判别与分类<a class="headerlink" href="#supervised-classification" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="8607" data-block-fingerprint="7bf4e335c102919075e7" data-block-start="8593" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_13">从生成分布到分类边界<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p data-block-end="8686" data-block-fingerprint="7869c029f25cd9bce0b0" data-block-start="8609" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">分类数据包含已知标签 <span class="arithmatex">\(G\)</span> 与特征向量 <span class="arithmatex">\(\mathbf x\)</span>，目标是为新样本估计类别或类别概率。Bayes 规则将样本分到后验概率最大的类别：</p>
+<div class="arithmatex" data-block-end="8743" data-block-fingerprint="8bd130ad6f160ce2e369" data-block-start="8688" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+P(G=k\mid\mathbf x)
+\propto
+\pi_k f_k(\mathbf x),
+\]</div>
+<p data-block-end="8876" data-block-fingerprint="86338f4110f44c3322e3" data-block-start="8745" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">其中 <span class="arithmatex">\(\pi_k\)</span> 是先验类别概率，<span class="arithmatex">\(f_k\)</span> 是第 <span class="arithmatex">\(k\)</span> 类的特征分布。线性判别分析（linear discriminant analysis，LDA）假定各类近似多元正态且共享协方差矩阵 <span class="arithmatex">\(\boldsymbol\Sigma\)</span>，判别得分为</p>
+<div class="arithmatex" data-block-end="9052" data-block-fingerprint="9c1671c9a8a9f0b706c8" data-block-start="8878" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\delta_k(\mathbf x)
+=\mathbf x^{\mathsf T}\boldsymbol\Sigma^{-1}\boldsymbol\mu_k
+-\frac12\boldsymbol\mu_k^{\mathsf T}
+\boldsymbol\Sigma^{-1}\boldsymbol\mu_k
++\log\pi_k,
+\]</div>
+<p data-block-end="9231" data-block-fingerprint="2dcb240bfc8d189a2635" data-block-start="9054" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">所以类别边界是线性的。二次判别分析（quadratic discriminant analysis，QDA）允许每类有自己的协方差矩阵，边界为二次曲面，也需要更多样本估计参数。Penn State 的判别分析课程从先验概率、类条件密度和贝叶斯（Bayes）分类建立 LDA／QDA，并把误分类率评估作为分析的一部分。<sup id="fnref:psu-discriminant"><a class="footnote-ref" href="#fn:psu-discriminant">11</a></sup></p>
+<p data-block-end="9450" data-block-fingerprint="ea2fa7d3e7c3a318872f" data-block-start="9233" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">其他分类器改变了边界和假设。多项逻辑斯蒂回归直接建模类别概率；k 近邻（k-nearest neighbours，k-NN）由局部邻居投票，强烈依赖尺度与维数；支持向量机寻找具有最大间隔的边界并可通过核函数弯曲；决策树以变量阈值递归划分，随机森林和提升法（boosting）再集合许多树。算法复杂度应由样本量、预测目标和验证性能支持。相关特征下的单一“变量重要性”也可能在可替代变量之间任意分摊，仍需用机制知识、稳定性和外部数据解释。</p>
+<p data-block-end="9701" data-block-fingerprint="1ea98722d6af4ac8c073" data-block-start="9452" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">类别先验和误判代价会改变决策。稀有疾病筛查中，全部判为阴性可能获得很高准确率，但灵敏度为零；应按使用情境选择灵敏度、特异度、阳性预测值、阴性预测值、平衡准确率（balanced accuracy）、受试者工作特征（receiver operating characteristic，ROC）或精确率—召回率（precision–recall）曲线。概率预测还需检查校准。若 <span class="arithmatex">\(p\)</span> 接近或超过 <span class="arithmatex">\(n\)</span>，类内协方差求逆很不稳定，应降维、正则化或采用适合高维的分类器，并把所有选择放入验证循环。</p>
+<h3 data-block-end="9717" data-block-fingerprint="820dc377656ada665ac9" data-block-start="9703" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_14">无监督降维与标签隔离<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p data-block-end="9921" data-block-fingerprint="6a943a9cc47fe5cacd7b" data-block-start="9719" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">PCA 虽不使用类别标签，但若先在全数据上计算中心、尺度和主成分，再把得分送入交叉验证分类器，测试折已经参与了投影方向估计。变量筛选、缺失插补、批次校正、特征缩放、PCA、选择成分数和调参都必须在每个训练折内完成，再把学得的变换应用到验证折。scikit-learn 的正式指南把这类预处理明确定义为数据泄漏，并专门列出标准化、插补、特征选择和 PCA 的风险。<sup id="fnref:sklearn-validation"><a class="footnote-ref" href="#fn:sklearn-validation">12</a></sup></p>
+<p data-block-end="10071" data-block-fingerprint="f83ae600853d83fcd5fc" data-block-start="9923" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">拆分单位要对应推广对象。同一个体的多个细胞、同一患者的多个切片或同一地点的重复样本若被随机分到训练和测试集，模型可通过个体或批次特征获得虚高性能；预测新个体时应整个人、整地点或整批次留出。官方交叉验证指南也要求依赖样本按组拆分，使测试组与训练折相互隔离。<sup id="fnref2:sklearn-validation"><a class="footnote-ref" href="#fn:sklearn-validation">12</a></sup></p>
+<p data-block-end="10179" data-block-fingerprint="e20307a198215c883582" data-block-start="10073" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">模型开发可用嵌套交叉验证：内层选择特征、维数和超参数，外层估计完整流程的泛化误差。最终报告应给出每折或重抽样分布、类别样本数、阈值选择、混淆矩阵和置信区间；只有一次随机训练／测试划分时，结果会对偶然分割高度敏感。</p>
+<h2 data-block-end="10222" data-block-fingerprint="7775ae06085e65ca59cc" data-block-start="10181" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="multivariate-inference">多响应检验与典范关系<a class="headerlink" href="#multivariate-inference" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="10251" data-block-fingerprint="9731757fdee69fd970a3" data-block-start="10224" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="hotelling-t2">均值向量与 Hotelling <span class="arithmatex">\(T^2\)</span><a class="headerlink" href="#hotelling-t2" title="Permanent link">&para;</a></h3>
+<p data-block-end="10291" data-block-fingerprint="113fac00cc9c2e1550b5" data-block-start="10253" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">多个连续响应的均值形成向量。单样本 Hotelling <span class="arithmatex">\(T^2\)</span> 检验</p>
+<div class="arithmatex" data-block-end="10334" data-block-fingerprint="d25571c162759441d6a2" data-block-start="10293" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+H_0:\boldsymbol\mu=\boldsymbol\mu_0
+\]</div>
+<p data-block-end="10339" data-block-fingerprint="afe760de62b1ade0dd53" data-block-start="10336" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">时使用</p>
+<div class="arithmatex" data-block-end="10450" data-block-fingerprint="4e45978bf105ef1263c4" data-block-start="10341" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+T^2
+=n(\bar{\mathbf x}-\boldsymbol\mu_0)^{\mathsf T}
+\mathbf S^{-1}
+(\bar{\mathbf x}-\boldsymbol\mu_0).
+\]</div>
+<p data-block-end="10515" data-block-fingerprint="7bcf53c8fdb9d7e02d7e" data-block-start="10452" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">它是用变量协方差校正后的均值向量距离：高度相关的两个指标获得与其冗余程度相配的权重。在独立多元正态样本且 <span class="arithmatex">\(p&lt;n\)</span> 时，</p>
+<div class="arithmatex" data-block-end="10559" data-block-fingerprint="56a04030ec42fe3eb458" data-block-start="10517" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+\frac{n-p}{p(n-1)}T^2\sim F_{p,n-p}.
+\]</div>
+<p data-block-end="10740" data-block-fingerprint="8aea8300ecce17072e04" data-block-start="10561" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">两独立样本版本以两组均值向量之差和 pooled 协方差构造；配对多响应资料则先形成每个单位的差值向量。Hotelling <span class="arithmatex">\(T^2\)</span> 是单变量 <em>t</em> 检验的多元延伸，也构成多组 MANOVA 的入口。协方差近奇异、维数接近样本数或存在明显离群时，矩阵求逆和参照分布都会不稳定，需要降维、正则化或与设计相符的重抽样方法。<sup id="fnref:psu-hotelling"><a class="footnote-ref" href="#fn:psu-hotelling">14</a></sup></p>
+<h3 data-block-end="10760" data-block-fingerprint="0ee00b166ef682e021e1" data-block-start="10742" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="manova">MANOVA 的均值向量检验<a class="headerlink" href="#manova" title="Permanent link">&para;</a></h3>
+<p data-block-end="10843" data-block-fingerprint="684f18c074456299d3ae" data-block-start="10762" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">多元方差分析（multivariate analysis of variance，MANOVA）把同一实验单位上的 <span class="arithmatex">\(q\)</span> 个连续响应联合起来。单因素模型检验</p>
+<div class="arithmatex" data-block-end="10914" data-block-fingerprint="3f112e1d514e12032d6f" data-block-start="10845" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+H_0:
+\boldsymbol\mu_1=\boldsymbol\mu_2=\cdots=\boldsymbol\mu_g,
+\]</div>
+<p data-block-end="11028" data-block-fingerprint="05743dd8e4303082152a" data-block-start="10916" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">即各组的响应均值向量相同。它把处理所致的平方和与交叉乘积记为 <span class="arithmatex">\(\mathbf H\)</span>，组内误差记为 <span class="arithmatex">\(\mathbf E\)</span>，再以 <span class="arithmatex">\(\mathbf H\)</span> 相对于 <span class="arithmatex">\(\mathbf E\)</span> 的特征根构造总体检验。</p>
+<table data-block-end="11410" data-block-fingerprint="8bc39afa72c64ac48515" data-block-start="11030" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">
+<thead>
+<tr>
+<th>统计量</th>
+<th>矩阵表达或方向</th>
+<th>读法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wilks’ <span class="arithmatex">\(\Lambda\)</span></td>
+<td>(</td>
+<td>\mathbf E</td>
+</tr>
+<tr>
+<td>Pillai trace</td>
+<td><span class="arithmatex">\(\operatorname{tr}[\mathbf H(\mathbf H+\mathbf E)^{-1}]\)</span></td>
+<td>越大表示处理解释的典范方向越强</td>
+</tr>
+<tr>
+<td>Hotelling–Lawley trace</td>
+<td><span class="arithmatex">\(\operatorname{tr}(\mathbf H\mathbf E^{-1})\)</span></td>
+<td>累加处理相对误差的特征根</td>
+</tr>
+<tr>
+<td>Roy 最大根</td>
+<td><span class="arithmatex">\(\lambda_{\max}(\mathbf H\mathbf E^{-1})\)</span></td>
+<td>只关注最强的一个典范方向</td>
+</tr>
+</tbody>
+</table>
+<p data-block-end="11635" data-block-fingerprint="421d80ac140b33131bc7" data-block-start="11412" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">MANOVA 保留响应间协方差，可以发现多个指标共同移动的处理效应，并为一个预设响应集合提供总体检验。它的零假设仍是均值向量相等；显著结果只说明至少一个线性组合不同，随后应依据预设对比、同时区间或经多重性控制的单响应分析说明差异位于哪些指标和方向。Penn State 的 MANOVA 课程给出 <span class="arithmatex">\(\mathbf H\)</span>、<span class="arithmatex">\(\mathbf E\)</span> 与四类检验统计量，并强调独立、组内多元正态和协方差矩阵同质等条件。<sup id="fnref:psu-manova"><a class="footnote-ref" href="#fn:psu-manova">13</a></sup></p>
+<p data-block-end="11768" data-block-fingerprint="a6d7cb60ea75fcc38f20" data-block-start="11637" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">响应高度冗余会使 <span class="arithmatex">\(\mathbf E\)</span> 近奇异，样本数相对响应数过小时也无法稳定估计协方差。离群值、异协方差和层级依赖会影响参照分布。多个响应若包含计数、二项或强偏斜变量，逐列恰当的广义模型及其多响应扩展往往比强行套用正态 MANOVA 更能反映抽样过程。</p>
+<h3 data-block-end="11788" data-block-fingerprint="90061065f97c44a3a2a5" data-block-start="11770" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="permanova">PERMANOVA 与交换性<a class="headerlink" href="#permanova" title="Permanent link">&para;</a></h3>
+<p data-block-end="11966" data-block-fingerprint="c26d9099ef035566f48a" data-block-start="11790" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">PERMANOVA 从样本间相异度出发，把距离平方和按处理和残差分解，形成 pseudo-<span class="arithmatex">\(F\)</span>，再通过在零假设下可交换的标签或残差排列获得参照分布。它允许使用 Bray–Curtis、Jaccard 等非欧氏相异度，因而常用于群落组成。Anderson 的原始论文把这一方法推广到任意线性模型的距离分解。<sup id="fnref:anderson-permanova"><a class="footnote-ref" href="#fn:anderson-permanova">15</a></sup></p>
+<p data-block-end="12147" data-block-fingerprint="fa1b72fa8a60026d8c84" data-block-start="11968" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">置换检验依赖零假设下的可交换性。区组、配对、重复测量、时间或空间层级会限制哪些观测可以互换；排列方案必须在相应层级内进行。顺序平方和与边际平方和也回答不同问题，尤其在不平衡设计和相关预测变量中应预先确定。vegan 的 <code>adonis2</code> 文档明确支持连续变量、因素、交互、条件变量和受限排列，并区分顺序、边际及总体检验。<sup id="fnref:vegan-permanova"><a class="footnote-ref" href="#fn:vegan-permanova">16</a></sup></p>
+<p data-block-end="12401" data-block-fingerprint="9a16732f26ad002097e7" data-block-start="12149" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">组间位置和组内离散都能改变距离分布。若一组样本围绕同一中心散得更开，PERMANOVA 可能显著，即使质心差异不大；应同时查看排序图、各组到质心的距离并检验多元离散。<code>betadisper</code> 正是距离空间中类似 Levene 检验的离散比较。<sup id="fnref:vegan-dispersion"><a class="footnote-ref" href="#fn:vegan-dispersion">17</a></sup> Warton 等进一步指出，对多物种计数选用与均值—方差关系不匹配的距离，会把位置、离散和高丰度物种的影响混合；距离法和多响应 GLM 对应不同建模对象，应按科学问题与数据生成过程选择。<sup id="fnref:warton-distance"><a class="footnote-ref" href="#fn:warton-distance">18</a></sup></p>
+<h3 data-block-end="12416" data-block-fingerprint="90fccb163dd910b07981" data-block-start="12403" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_15">典型相关与两组变量<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p data-block-end="12509" data-block-fingerprint="d1dfde761a0a6720c249" data-block-start="12418" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">典型相关分析（canonical correlation analysis）研究同一批样本上的两组连续变量 <span class="arithmatex">\(\mathbf X\)</span> 和 <span class="arithmatex">\(\mathbf Y\)</span>。第一对典型变量</p>
+<div class="arithmatex" data-block-end="12574" data-block-fingerprint="3af4e7a08e6f434b1b3c" data-block-start="12511" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">\[
+U_1=\mathbf X\mathbf a_1,
+\qquad
+V_1=\mathbf Y\mathbf b_1
+\]</div>
+<p data-block-end="12772" data-block-fingerprint="7b3eea9e2e2d5d3bad26" data-block-start="12576" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">选择系数使 <span class="arithmatex">\(\operatorname{cor}(U_1,V_1)\)</span> 最大；后续典型变量对在各自组内与前面对不相关的约束下依次提取。它回答“哪两个跨组线性组合共同变化最强”，关系对 <span class="arithmatex">\(\mathbf X\)</span> 与 <span class="arithmatex">\(\mathbf Y\)</span> 是对称的。R 的 <code>cancor</code> 文档保留了 Hotelling 的原始定义，并明确其寻找两组矩阵中相关最大的线性组合。<sup id="fnref:r-cancor"><a class="footnote-ref" href="#fn:r-cancor">19</a></sup></p>
+<p data-block-end="12950" data-block-fingerprint="fb081e49a38eb64bf9d9" data-block-start="12774" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">典型相关系数容易在变量多、样本少时过拟合；同组内强共线会使标准化系数不稳定。解释应同时查看典型相关、每个原变量与本组典型变量的结构相关、交叉载荷和冗余比例，并用重抽样或独立数据验证。若一组明确作为预测、另一组作为响应，冗余分析、偏最小二乘或多响应回归提供方向性更清楚的替代。典型相关研究两组变量的对称线性关系，典范对应分析则以环境变量约束生态响应排序。</p>
+<h2 data-block-end="12993" data-block-fingerprint="0b537479fcf9b883ed06" data-block-start="12952" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="workflow-and-reporting">从探索图到可复核结论<a class="headerlink" href="#workflow-and-reporting" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="13010" data-block-fingerprint="87f34d0f0e62c147ad36" data-block-start="12995" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_16">探索、检验与预测的分工<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p data-block-end="13110" data-block-fingerprint="0a81ec1a7964876cbbb4" data-block-start="13012" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">一张低维图可以揭示批次、梯度、离群点和候选亚群。研究者先尝试多种变换、距离、维数和颜色映射，再选图提出组差异，属于探索性分析；确认性检验应使用预设分析或独立数据，并把探索过的方法空间计入不确定性。</p>
+<p data-block-end="13131" data-block-fingerprint="f87a73c92f0e7bd1aa48" data-block-start="13112" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">一个稳健的多元分析通常按以下顺序推进：</p>
+<ol data-block-end="13378" data-block-fingerprint="20ea292915e65daed79f" data-block-start="13133" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">
+<li>明确行的独立单位、列的测量类型、目标总体，以及探索、检验或预测目标；</li>
+<li>保留原始量纲图和质量控制，预先说明缺失、零值、变换、中心、缩放及变量过滤；</li>
+<li>让协方差、距离或概率分布对应生物学差异，比较少数有明确理由的候选选择；</li>
+<li>用载荷、贡献、原变量分布和样本元数据解释低维结构，使彩色散点图对应回原始测量；</li>
+<li>检验时尊重随机化、交换性和层级，分类时让全部预处理进入按个体或群组划分的验证循环；</li>
+<li>通过重抽样、独立批次、敏感性分析和负对照判断轴、簇、特征与性能是否稳定。</li>
+</ol>
+<p data-block-end="13509" data-block-fingerprint="860eec16a32e267d3694" data-block-start="13380" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">降维之后再检验保留主成分，有时可减少响应维数和共线；然而成分由数据估计，解释对象也从原指标变成线性组合。若保留维数按同一结果数据调到显著，仍会产生选择偏差。聚类后在原聚类变量上检验组间差异主要描述算法怎样切分数据，独立发现证据应来自未参与聚类的变量或新数据。</p>
+<h3 data-block-end="13519" data-block-fingerprint="1b81aed52c162b810c34" data-block-start="13511" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="_17">报告要素<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p data-block-end="13551" data-block-fingerprint="5623d91cc60996dd100c" data-block-start="13521" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">报告应让读者能够恢复从原始矩阵到结论的每个决定。至少应说明：</p>
+<ul data-block-end="13878" data-block-fingerprint="970c5263638c879548e3" data-block-start="13553" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">
+<li>样本数、变量数、行与列的含义、独立或层级单位，以及缺失、零值和质量过滤；</li>
+<li>中心、缩放、变换、组成数据处理、变量权重和批次处理的具体规则；</li>
+<li>PCA／因子分析的输入矩阵、保留维数、载荷缩放和选择依据，或距离／相异度的名称与参数；</li>
+<li>排序维数、解释方差或 stress、随机起点、负特征值及校正，聚类的链接、初始化、簇数和稳定性；</li>
+<li>MANOVA／PERMANOVA 的模型式、响应集合、统计量、排列次数与受限排列结构，及位置—离散诊断；</li>
+<li>分类的类别定义、先验或误判代价、完整预处理流程、训练／验证划分、调参层级、混淆矩阵、校准和不确定性；</li>
+<li>软件与关键版本、随机种子、预设与探索性选择，以及替代尺度、距离、维数或模型下的敏感性结果。</li>
+</ul>
+<p data-block-end="13979" data-block-fingerprint="4ba90eed3ca35c2c64f9" data-block-start="13880" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models">多元方法的结果是对一个高维对象的特定投影、距离表示或概率模型。把这些选择公开，并返回原始变量和生物学单位核对，才能让“主轴”“簇”“典型关系”或“分类准确率”成为可复核知识，而非停留在图形压缩层面。</p>
+<h2 data-block-end="17776" data-block-fingerprint="08845983b772dec9cfa7" data-block-start="13981" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-multivariate-models" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:psu-multivariate">
+<p>Penn State Department of Statistics. <a href="https://online.stat.psu.edu/stat505/">STAT 505: Applied Multivariate Statistical Analysis</a>。&#160;<a class="footnote-backref" href="#fnref:psu-multivariate" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-covariance">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cor.html"><code>cor</code>: Correlation, Variance and Covariance Matrices</a>。&#160;<a class="footnote-backref" href="#fnref:r-covariance" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vegan-distance">
+<p>Oksanen, J. et al. <a href="https://vegandevs.github.io/vegan/reference/vegdist.html"><code>vegdist</code>: Dissimilarity Indices for Community Ecologists</a>, <em>vegan</em> documentation。&#160;<a class="footnote-backref" href="#fnref:vegan-distance" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:vegan-distance" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-prcomp">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/prcomp.html"><code>prcomp</code>: Principal Components Analysis</a>。&#160;<a class="footnote-backref" href="#fnref:r-prcomp" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pca-review">
+<p>Jolliffe, I. T. &amp; Cadima, J. (2016). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4792409/">Principal component analysis: a review and recent developments</a>. <em>Philosophical Transactions of the Royal Society A</em>, 374, 20150202. DOI: <a href="https://doi.org/10.1098/rsta.2015.0202">10.1098/rsta.2015.0202</a>。&#160;<a class="footnote-backref" href="#fnref:pca-review" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nonlinear-embedding">
+<p>van der Maaten, L. &amp; Hinton, G. (2008). <a href="https://www.jmlr.org/papers/v9/vandermaaten08a.html">Visualizing Data using t-SNE</a>. <em>Journal of Machine Learning Research</em>, 9, 2579–2605；McInnes, L. et al. (2018). <a href="https://joss.theoj.org/papers/10.21105/joss.00861">UMAP: Uniform Manifold Approximation and Projection</a>. <em>Journal of Open Source Software</em>, 3(29), 861。&#160;<a class="footnote-backref" href="#fnref:nonlinear-embedding" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-pcoa">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cmdscale.html"><code>cmdscale</code>: Classical Multidimensional Scaling</a>。&#160;<a class="footnote-backref" href="#fnref:r-pcoa" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vegan-nmds">
+<p>Oksanen, J. et al. <a href="https://vegandevs.github.io/vegan/reference/metaMDS.html"><code>metaMDS</code>: Nonmetric Multidimensional Scaling with Stable Solution from Random Starts</a>, <em>vegan</em> documentation。&#160;<a class="footnote-backref" href="#fnref:vegan-nmds" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:greenacre-ca">
+<p>Greenacre, M. (2010). <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/09-0239.1">Correspondence analysis of raw data</a>. <em>Ecology</em>, 91(4), 958–963. DOI: <a href="https://doi.org/10.1890/09-0239.1">10.1890/09-0239.1</a>。&#160;<a class="footnote-backref" href="#fnref:greenacre-ca" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-cluster">
+<p>Penn State Department of Statistics. <a href="https://online.stat.psu.edu/stat505/Lesson14">STAT 505, Lesson 14: Cluster Analysis</a>。&#160;<a class="footnote-backref" href="#fnref:psu-cluster" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-discriminant">
+<p>Penn State Department of Statistics. <a href="https://online.stat.psu.edu/stat505/Lesson10">STAT 505, Lesson 10: Discriminant Analysis</a>。&#160;<a class="footnote-backref" href="#fnref:psu-discriminant" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sklearn-validation">
+<p>scikit-learn developers. <a href="https://scikit-learn.org/stable/common_pitfalls.html">Common pitfalls and recommended practices</a>；<a href="https://scikit-learn.org/stable/modules/cross_validation.html">Cross-validation: evaluating estimator performance</a>。&#160;<a class="footnote-backref" href="#fnref:sklearn-validation" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:sklearn-validation" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-manova">
+<p>Penn State Department of Statistics. <a href="https://online.stat.psu.edu/stat505/Lesson08">STAT 505, Lesson 8: Multivariate Analysis of Variance</a>。&#160;<a class="footnote-backref" href="#fnref:psu-manova" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psu-hotelling">
+<p>Penn State Department of Statistics. <a href="https://online.stat.psu.edu/stat505/Lesson07">STAT 505, Lesson 7: Inferences Regarding Multivariate Population Means</a>。&#160;<a class="footnote-backref" href="#fnref:psu-hotelling" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:anderson-permanova">
+<p>Anderson, M. J. (2001). <a href="https://doi.org/10.1111/j.1442-9993.2001.01070.pp.x">A new method for non-parametric multivariate analysis of variance</a>. <em>Austral Ecology</em>, 26, 32–46。&#160;<a class="footnote-backref" href="#fnref:anderson-permanova" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vegan-permanova">
+<p>Oksanen, J. et al. <a href="https://vegandevs.github.io/vegan/reference/adonis.html"><code>adonis2</code>: Permutational Multivariate Analysis of Variance Using Distance Matrices</a>, <em>vegan</em> documentation。&#160;<a class="footnote-backref" href="#fnref:vegan-permanova" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vegan-dispersion">
+<p>Oksanen, J. et al. <a href="https://vegandevs.github.io/vegan/reference/betadisper.html"><code>betadisper</code>: Multivariate Homogeneity of Group Dispersions</a>, <em>vegan</em> documentation。&#160;<a class="footnote-backref" href="#fnref:vegan-dispersion" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:warton-distance">
+<p>Warton, D. I., Wright, S. T. &amp; Wang, Y. (2012). <a href="https://doi.org/10.1111/j.2041-210X.2011.00127.x">Distance-based multivariate analyses confound location and dispersion effects</a>. <em>Methods in Ecology and Evolution</em>, 3, 89–101。&#160;<a class="footnote-backref" href="#fnref:warton-distance" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:r-cancor">
+<p>R Core Team. <a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/cancor.html"><code>cancor</code>: Canonical Correlations</a>。&#160;<a class="footnote-backref" href="#fnref:r-cancor" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/biostat/multivariate_models.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/biostat/multivariate_models.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-biostat-multivariate-models"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../generalized_mixed_models/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 广义线性模型与混合效应模型">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                广义线性模型与混合效应模型
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../survival_longitudinal/" class="md-footer__link md-footer__link--next" aria-label="Next: 生存分析与纵向数据">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                生存分析与纵向数据
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

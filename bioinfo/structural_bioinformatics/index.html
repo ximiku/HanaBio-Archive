@@ -1,0 +1,3519 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/bioinfo/structural_bioinformatics/">
+      
+      
+        <link rel="prev" href="../multiomics_integration/">
+      
+      
+        <link rel="next" href="../functional_annotation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>结构生物信息学 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              结构生物信息学
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biostat/" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生信
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_15" id="__nav_15_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  生信
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data_databases/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据、计算与工作流
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../sequencing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  测序与序列
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../genome_analysis/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  基因组
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../transcriptomics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子组学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  结构生物信息学
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  结构生物信息学
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构数据、坐标模型与生物学对象
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        实验结构档案与派生数据库
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构质量与方法特异验证
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        面向问题的结构选择
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构比较与远缘关系
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secondary-structure-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        二级结构、溶剂暴露与无序预测
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparative-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        比较建模：模板、比对与局部误差
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fold-recognition-threading" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        折叠识别与穿线法
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-novo-energy-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从头预测、能量函数与构象采样
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        盲测、基准集与无信息泄漏评估
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alphafold-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AlphaFold 类深度学习模型
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AlphaFold 类深度学习模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alphafold-confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        pLDDT、PAE、pTM 与 ipTM
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alphafold-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        覆盖、构象和化学环境
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-integrative-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        复合物与整合结构建模
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-binding-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分子对接与结合位点
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#molecular-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分子动力学与构象集合
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-variant-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构辅助功能与变异解释
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可复现的结构分析与报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../functional_annotation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  功能注释、富集与功能预测
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phylogenetics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子进化与系统发育分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phylogenetics_networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物网络与系统生物学
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biostat/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物统计学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#structure-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构数据、坐标模型与生物学对象
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimental-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        实验结构档案与派生数据库
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构质量与方法特异验证
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        面向问题的结构选择
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构比较与远缘关系
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secondary-structure-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        二级结构、溶剂暴露与无序预测
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparative-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        比较建模：模板、比对与局部误差
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fold-recognition-threading" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        折叠识别与穿线法
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-novo-energy-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从头预测、能量函数与构象采样
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarking" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        盲测、基准集与无信息泄漏评估
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alphafold-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        AlphaFold 类深度学习模型
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AlphaFold 类深度学习模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alphafold-confidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        pLDDT、PAE、pTM 与 ipTM
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alphafold-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        覆盖、构象和化学环境
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-integrative-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        复合物与整合结构建模
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-binding-sites" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分子对接与结合位点
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#molecular-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        分子动力学与构象集合
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-variant-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        结构辅助功能与变异解释
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        可复现的结构分析与报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="9" data-block-fingerprint="c7460e13a50a7a0d0fa5" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="_1">结构生物信息学<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="185" data-block-fingerprint="110bd05356fd03ff7aba" data-block-start="11" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">蛋白质结构把序列中的残基顺序转化为三维空间中的距离、取向和相互作用网络。催化残基能否共同围成活性中心，跨膜螺旋如何组成通道，两个亚基是否形成互补界面，通常都要在这一空间层次上讨论。结构生物信息学由此连接了序列分析、实验结构测定、物理化学建模和功能研究：它整理结构数据，比较已经观察到的折叠，预测尚未测定的构象，并把模型转化为可以接受实验检验的假说。</p>
+<p data-block-end="345" data-block-fingerprint="ac59889f38a2e7a03092" data-block-start="187" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构文件中的坐标是对分子结构的模型化表达。实验结构由衍射、共振或成像数据在模型假设和精修约束下得到；计算预测则由算法根据序列、进化信息、结构模板或能量函数生成。二者都可能十分有用，也都带有适用范围和不确定性。读懂结构的第一步，因而是追问坐标从何而来、对应哪个分子对象、哪些部分有数据支持，以及准备据此作出多强的结论。</p>
+<h2 data-block-end="391" data-block-fingerprint="236d4ea9831eb98faa46" data-block-start="347" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="structure-data-model">结构数据、坐标模型与生物学对象<a class="headerlink" href="#structure-data-model" title="Permanent link">&para;</a></h2>
+<p data-block-end="577" data-block-fingerprint="137272a5823a79e21106" data-block-start="393" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">一条数据库记录首先描述的是实验或计算中使用的<strong>构建体</strong>。它可能只包含天然蛋白的一个结构域，可能删除了柔性末端，也可能带有亲和标签、稳定化突变、融合伙伴或非天然交联。记录里的聚合物实体、实验样品中的分子和参考蛋白序列常有差异；残基编号也可能同时存在作者编号、文件顺序编号和参考序列编号。研究变异、剪接异构体或活性位点时，应先完成序列、构建体、链和编号体系之间的映射。</p>
+<p data-block-end="768" data-block-fingerprint="db354961721e57f94579" data-block-start="579" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">坐标模型以原子位置为主体，还记录化学组分、共价连接、占有率、原子位移参数以及可能的替代构象。残基或侧链原子缺少坐标，常表示相应区域无法由当前数据可靠建模；坐标表中已有的原子也会因分辨率和局部信号而具有不同的位置确定性。PDBx/mmCIF 通过相互关联的数据类别保存这些信息，已经取代字段宽度有限的传统 PDB 格式成为 PDB 档案的标准交换格式。<sup id="fnref:wwpdb-mmcif"><a class="footnote-ref" href="#fn:wwpdb-mmcif">1</a></sup></p>
+<p data-block-end="977" data-block-fingerprint="8169f65d9332ea2c607e" data-block-start="770" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">晶体学记录还要区分<strong>不对称单元</strong>、由晶体对称产生的接触和作者或数据库提出的<strong>生物学组装体</strong>。不对称单元是描述晶体的最小独立部分，细胞中发挥功能的寡聚体则由生物学组装体表示；紧密界面也可能来自晶格接触。冷冻电镜和预测模型虽没有同样的晶格问题，仍可能只覆盖某种化学计量、截短体或稳定状态。组装体的合理性应结合界面面积与化学、同源结构、溶液实验、交联、突变和细胞证据判断。<sup id="fnref:pdb101-assemblies"><a class="footnote-ref" href="#fn:pdb101-assemblies">2</a></sup></p>
+<p data-block-end="1089" data-block-fingerprint="7fec50e4be39baa95317" data-block-start="979" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构所代表的还是特定条件下的构象。温度、pH、离子、膜模拟体系、配体、核苷酸状态、共价修饰和结合伙伴都可能改变局部环区乃至结构域排布。同一蛋白的多个记录可组成带有条件标签的构象集合；其中任一模型都只表达相应状态下的结构。</p>
+<h2 data-block-end="1133" data-block-fingerprint="9be14fbaede6977a0b27" data-block-start="1091" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="experimental-archives">实验结构档案与派生数据库<a class="headerlink" href="#experimental-archives" title="Permanent link">&para;</a></h2>
+<p data-block-end="1363" data-block-fingerprint="a3e7b8ad11c5c202eb5a" data-block-start="1135" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">蛋白质数据银行（Protein Data Bank，PDB）保存生物大分子及其复合物的三维坐标模型，并把模型连接到结构因子、化学位移、约束或电镜图等实验资料。全球蛋白质数据银行（Worldwide Protein Data Bank，wwPDB）伙伴共同维护统一档案，RCSB PDB、PDBe 和 PDBj 提供不同的检索与展示入口。使用记录时，除稳定的 PDB 标识符外，还应记录结构测定方法、发布日期与修订状态、所选链和组装体，以及引用时采用的版本。</p>
+<p data-block-end="1556" data-block-fingerprint="d168bf7276d92825259a" data-block-start="1365" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">对于三维电子显微学，电子显微镜数据库（Electron Microscopy Data Bank，EMDB）保存重建后的三维体数据和断层数据；与之关联的原子模型进入 PDB，较大的原始二维图像、电影和断层序列可存入 EMPIAR。模型、处理后的密度图和原始图像处在不同的数据层，能够回答的问题也不同。坐标与相应密度应结合查看，才能检查局部模型—数据一致性。<sup id="fnref:emdb-about"><a class="footnote-ref" href="#fn:emdb-about">3</a></sup></p>
+<p data-block-end="1728" data-block-fingerprint="ef2c2cb029c82db2a16a" data-block-start="1558" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">核磁共振（nuclear magnetic resonance，NMR）结构的坐标集合则应与生物磁共振数据库（BioMagResBank，BMRB）中的化学位移、耦合常数、弛豫和其他谱学资料联系起来。NMR 常以一组同时满足约束的构象表示结果；构象间分散混合了真实运动、约束不足和建模选择，分子动力学解释还需要相应的动态证据。<sup id="fnref:bmrb"><a class="footnote-ref" href="#fn:bmrb">4</a></sup></p>
+<p data-block-end="2042" data-block-fingerprint="f7283438b4173f7d7df9" data-block-start="1730" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">实验档案之上还有多类派生资源。DSSP 根据主链几何和氢键模式为已有坐标指定二级结构；FSSP 和 DALI 以三维距离模式寻找结构相似关系；SCOP／SCOPe 与 CATH 把结构域组织为层级分类。CATH 的类别、架构、拓扑和同源超家族（class、architecture、topology and homologous superfamily）依次强调二级结构组成、空间排列、拓扑连接和同源关系；SCOPe 延续 SCOP 的人工审校传统，而 SCOP2 采用更能表达多重关系的网络式分类。<sup id="fnref:cath-classification"><a class="footnote-ref" href="#fn:cath-classification">5</a></sup> 这些资源采用各自的分类单元、版本和边界定义，分析结果应保留所用数据库及发布版。</p>
+<p data-block-end="2168" data-block-fingerprint="913c961de7667479c8db" data-block-start="2044" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构分类服务于比较和知识组织，其离散边界是对连续演化关系的特定表达。相似折叠可能源于共同祖先，也可能在物理约束下趋同出现；同一超家族内部也会发生功能分化。结构分类可为远缘同源和功能假说提供强线索，最终仍要与序列、基因组背景、关键残基及实验相互印证。</p>
+<h2 data-block-end="2210" data-block-fingerprint="7eb852ef375217542d60" data-block-start="2170" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="structure-validation">结构质量与方法特异验证<a class="headerlink" href="#structure-validation" title="Permanent link">&para;</a></h2>
+<p data-block-end="2397" data-block-fingerprint="e6864b6e73b248efad54" data-block-start="2212" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构验证同时检查模型几何与实验数据支持。键长、键角、手性、肽键构象、Ramachandran 分布、侧链旋转异构体和原子碰撞属于几何层面的通用检查；模型正确性还需要与测定方法相应的模型—数据指标，因为强约束的错误模型也可能具有理想几何。wwPDB 验证报告把这些指标按同类结构的分布给出，适合在选用结构和解释局部区域前作为统一入口。<sup id="fnref:wwpdb-validation"><a class="footnote-ref" href="#fn:wwpdb-validation">6</a></sup></p>
+<p data-block-end="2560" data-block-fingerprint="3176c11b2cd63a00071a" data-block-start="2399" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">X 射线晶体学中，分辨率描述可辨细节的整体尺度，<code>Rwork</code> 和 <code>Rfree</code> 衡量模型计算的衍射与观测数据的一致程度，其中 <code>Rfree</code> 使用未参与精修的反射监测过拟合。电子密度图能进一步显示某个主链、侧链、配体或水分子是否得到局部支持。整体分辨率和 R 值良好，仍可能伴随柔性环、低占有率配体或替代构象的不确定。</p>
+<p data-block-end="2705" data-block-fingerprint="71569370badd79b46a8a" data-block-start="2562" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">单颗粒冷冻电镜通常报告由两份独立半图估计的傅里叶壳层相关（Fourier shell correlation，FSC），并给出全局和局部分辨率；模型还需检查图—模型拟合、几何和可能的过拟合。核心与外周区域可具有不同的局部分辨率，锐化后醒目的密度也需要局部图和验证指标支持具体的原子解释。</p>
+<p data-block-end="2857" data-block-fingerprint="455870b74a84833cc161" data-block-start="2707" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">NMR 结构应查看距离、二面角、残余偶极耦合等约束的数量、分布和违反情况，同时考察集合几何与无约束区。残基数较多却约束稀疏的片段，常比结构紧密的核心更不确定。对于任何方法，配体的化学组成、质子化状态、键级、金属配位和立体化学也需要独立检查；把不恰当的化学字典精修进密度，同样可以得到表面上连续的模型。</p>
+<h2 data-block-end="2896" data-block-fingerprint="905a2264eb626b14555b" data-block-start="2859" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="structure-selection">面向问题的结构选择<a class="headerlink" href="#structure-selection" title="Permanent link">&para;</a></h2>
+<p data-block-end="3002" data-block-fingerprint="d2a7d5d1290c10d53fd9" data-block-start="2898" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构选择要同时考虑整体分辨率和具体研究问题。合适的记录应覆盖研究所需的异构体、结构域和状态，具有可信的局部数据，使用合理的生物学组装体，并排除会改变问题本身的构建体改造。结构质量由这些面向问题的证据共同决定。</p>
+<h2 data-block-end="3042" data-block-fingerprint="8ca2cb6e25299ba95a4c" data-block-start="3004" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="structure-comparison">结构比较与远缘关系<a class="headerlink" href="#structure-comparison" title="Permanent link">&para;</a></h2>
+<p data-block-end="3242" data-block-fingerprint="c6de0b3cc42c96b80ea6" data-block-start="3044" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">三维结构比对试图建立残基对应关系，并寻找使对应原子在空间上尽可能一致的叠合。若序列对应已经可靠，可以在固定对齐上做刚体最小二乘叠合；远缘蛋白则常需同时搜索残基对应和空间变换。DALI 比较残基间距离矩阵，TM-align 优化对蛋白长度较稳定的模板建模评分（template modeling score，TM-score），这些方法比单纯沿用序列比对更能识别远缘折叠关系。<sup id="fnref:tm-align"><a class="footnote-ref" href="#fn:tm-align">7</a></sup></p>
+<p data-block-end="3420" data-block-fingerprint="68c55df072dc6b6273a2" data-block-start="3244" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">均方根偏差（root-mean-square deviation，RMSD）依赖选入的原子、比对长度、异常点和是否分域叠合。十几个高度保守核心残基上的低 RMSD，与全长数百个残基上的同一数值具有不同含义。报告结构相似性时，应同时给出覆盖范围、残基对应、结构域划分和所用评分；比较多结构域蛋白时，还要区分每个结构域内部是否相似与结构域相对取向是否相同。</p>
+<p data-block-end="3555" data-block-fingerprint="789903467d2fde8bab71" data-block-start="3422" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">柔性铰链、开闭运动和结构域交换会使单一刚体叠合产生较大偏差，但这些差异可能恰是功能信息。柔性结构比对或分别叠合结构域可以揭示运动单元，随后再联系配体状态、晶体环境和样品条件。档案中观察到的两种构象支持这两个状态的存在；其转换路径和细胞内占比需要动力学及细胞证据确定。</p>
+<p data-block-end="3694" data-block-fingerprint="2daebdeacc34c4b29f85" data-block-start="3557" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构相似对远缘同源推断很有价值，因为三维折叠常比序列保守更久。然而小型二级结构组合、重复结构和物理上容易形成的折叠可独立出现。可信的共同祖先判断通常还需要拓扑细节、核心残基对应、序列 profile、结构域架构及物种分布；功能转移还要额外检查催化残基、口袋化学和生物学背景。</p>
+<h2 data-block-end="3749" data-block-fingerprint="212ced7bd92c7a3fc7c4" data-block-start="3696" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="secondary-structure-prediction">二级结构、溶剂暴露与无序预测<a class="headerlink" href="#secondary-structure-prediction" title="Permanent link">&para;</a></h2>
+<p data-block-end="3912" data-block-fingerprint="b7c10d9fb856b5e3851b" data-block-start="3751" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">相对分子质量、理论等电点、氨基酸组成、疏水曲线和消光系数可由序列直接计算或按经验参数估计，是准备结构实验和识别异常区域的常用背景；它们的算法、参数和证据边界已在<a href="../sequence_features/">序列特征、基因识别与功能位点</a>中说明。结构预测在此基础上进一步询问残基如何形成局部构象并通过长程接触组装为三维折叠。</p>
+<p data-block-end="4122" data-block-fingerprint="024cc47798ca3763db2b" data-block-start="3914" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">二级结构预测是结构预测史中最适合观察方法演进的一条线。早期 Chou—Fasman 方法统计氨基酸在 α 螺旋、β 折叠和转角中的出现倾向，用局部窗口寻找可能成核和延伸的片段。谷氨酸、丙氨酸等残基在特定数据集中表现出螺旋倾向，脯氨酸常打断规则主链氢键；这些统计倾向受到局部环境影响，单个残基本身无法决定结构。经典方法揭示了序列中的局部构象偏好，也暴露了小样本统计和忽略长程相互作用的限制。<sup id="fnref:chou-fasman"><a class="footnote-ref" href="#fn:chou-fasman">8</a></sup></p>
+<p data-block-end="4386" data-block-fingerprint="932d2a816ea4aa57d608" data-block-start="4124" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">随后出现的 DMP、DSC、PHDsec、SOPMA、MLRC、JPred 和 PredictProtein 等方法，采用立体化学与疏水模式、最邻近统计、信息论、神经网络、多个序列比对或多个预测器的共识。PSIPRED 把迭代数据库搜索得到的位置特异性打分矩阵输入两级神经网络，展示了进化 profile 如何显著改善三态二级结构预测；JPred 等服务器继续整合 profile 与不同算法。<sup id="fnref:psipred"><a class="footnote-ref" href="#fn:psipred">9</a></sup> 这些名称记录了方法史，但旧服务器能否访问、底层数据库是否更新以及默认参数是否改变，都要在实际使用时重新核对。</p>
+<p data-block-end="4604" data-block-fingerprint="d21f1ebb41367743afbc" data-block-start="4388" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">预测标签还依赖定义。实验结构可由 DSSP 等规则细分为不同类型的螺旋、折叠、转角和无规状态，算法训练和评估时常把它们合并为螺旋、链和无规（helix、strand、coil）三类。三态准确率（Q3 accuracy，Q3）统计逐残基分类是否正确，容易被长而常见的状态主导；片段重叠（segment overlap，SOV）等指标更关心片段边界和连续性。比较算法时必须使用相同的数据集去冗余规则、训练—测试分离、标签映射和评价指标。</p>
+<p data-block-end="4813" data-block-fingerprint="046e8181f77ddfc7218f" data-block-start="4606" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">溶剂可及性、跨膜拓扑、卷曲螺旋和内在无序分别对应不同的序列预测问题。低复杂度、净电荷和疏水性有助于识别无序倾向；跨膜预测依赖膜环境中的疏水和拓扑信号；卷曲螺旋关注周期性残基模式。一个区域可在游离状态下无序、结合后折叠，也可因修饰或环境改变而重排。预测应给出逐残基分数、阈值、模型版本和覆盖，并区分无规状态（coil）、低置信度（low confidence）和生物学无序（biological disorder）。</p>
+<h2 data-block-end="4859" data-block-fingerprint="c188f576533fa302f45a" data-block-start="4815" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="comparative-modeling">比较建模：模板、比对与局部误差<a class="headerlink" href="#comparative-modeling" title="Permanent link">&para;</a></h2>
+<p data-block-end="5044" data-block-fingerprint="40864a52faafdb50cb86" data-block-start="4861" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">比较建模又称同源建模，其出发点是同源蛋白往往保留共同折叠。完整流程包括界定目标序列和结构域、搜索候选模板、判断模板的实验质量与生物状态、建立目标—模板比对、生成骨架、重建插入缺失和侧链、优化模型并作独立验证。MODELLER 用空间约束满足把序列比对转化为三维模型，SWISS-MODEL 则把模板库、自动建模和质量估计组成可复用的服务器流程。<sup id="fnref:modeller"><a class="footnote-ref" href="#fn:modeller">10</a></sup></p>
+<p data-block-end="5205" data-block-fingerprint="71521591b9b2711c1902" data-block-start="5046" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">模型质量由序列一致性和多个结构条件共同决定。模板与目标是否覆盖同一结构域，目标序列是否对应正确异构体，插入缺失是否落在活性环或界面，模板是否处于所需配体和寡聚状态，都可能比全局百分比更重要。较高一致性通常使保守核心可靠；结构域边界、序列错位或模板中的局部建模错误仍需单独检查，多个低一致性模板也可能借互补覆盖改善模型。</p>
+<p data-block-end="5373" data-block-fingerprint="90b5938ab871dbf06ca7" data-block-start="5207" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">序列比对是比较建模中最容易被坐标外观遮蔽的误差来源。若一个空位位置错移，后续主链仍可能形成平滑而看似合理的结构，却把催化残基或结合残基放到错误空间。低一致性区域应结合 profile—profile 比对、二级结构预测、保守基序和结构环境反复审查。模型生成后还需检查几何、异常接触、疏水核心、暴露残基、模板依赖程度和逐残基质量估计。</p>
+<p data-block-end="5491" data-block-fingerprint="eab4f1b1e170836b205c" data-block-start="5375" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">环区、长插入、柔性末端和无模板结构域通常比保守核心更难。侧链构象即使在主链准确时也可能不确定，尤其是口袋中的极性网络、离子和水分子。比较模型适合提出突变位点、结构域边界或可能口袋；立体选择性和结合能的精确解释还要求局部构象经过验证。</p>
+<h2 data-block-end="5536" data-block-fingerprint="db928efb99e3c70813e7" data-block-start="5493" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="fold-recognition-threading">折叠识别与穿线法<a class="headerlink" href="#fold-recognition-threading" title="Permanent link">&para;</a></h2>
+<p data-block-end="5800" data-block-fingerprint="e2b6d7bbb7bac47c67c9" data-block-start="5538" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">当目标与模板的序列关系远到普通相似性搜索难以识别时，折叠识别（fold recognition）仍可询问目标是否适合已知折叠库中的某种骨架。谱—谱（profile—profile）或隐马尔可夫模型—隐马尔可夫模型（hidden Markov model，HMM）比较把一个家族每个位点的替换和插缺模式与另一个家族相比较；穿线法（threading）则把目标序列“穿”到候选骨架上，以环境偏好、接触势、二级结构相容性和空位代价评价匹配。Phyre2 等服务器将远缘同源识别、模板建模和无模板片段处理组合起来。<sup id="fnref:phyre2"><a class="footnote-ref" href="#fn:phyre2">11</a></sup></p>
+<p data-block-end="5974" data-block-fingerprint="33f6013f3c8c82ec8ec0" data-block-start="5802" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">低相似匹配需要区分折叠相似、同源和功能相同这三个证据层级。某个目标可能与模板共享整体拓扑，却缺少支持共同祖先的序列证据；也可能只有一个结构域匹配，而其余部分采用不同架构。结果应同时报告命中覆盖、置信度、候选模板间的一致性、profile 对齐和结构域边界，并将“可能采用此折叠”“可能同源”“可能具有相同功能”视为逐级增强、需要不同证据的命题。</p>
+<p data-block-end="6095" data-block-fingerprint="61b890ef6bd7628b92d1" data-block-start="5976" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">穿线法善于在已有折叠空间中寻找解释，对新颖拓扑的发现能力受模板库限制。若数据库搜索、谱方法和多个折叠识别程序都没有可靠模板，可进入更依赖能量函数、片段组合或学习到的结构先验的无模板建模；“未检出模板”只说明既定方法与数据库未找到可靠匹配。</p>
+<h2 data-block-end="6143" data-block-fingerprint="2f09bf1885bd08b05c2e" data-block-start="6097" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="de-novo-energy-sampling">从头预测、能量函数与构象采样<a class="headerlink" href="#de-novo-energy-sampling" title="Permanent link">&para;</a></h2>
+<p data-block-end="6286" data-block-fingerprint="a8664ac2f78f7b77267c" data-block-start="6145" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">Anfinsen 的核糖核酸酶复性实验表明，在相应条件下，蛋白质一级序列包含形成天然构象所需的信息，由此奠定了从序列预测结构的物理基础。<sup id="fnref:anfinsen"><a class="footnote-ref" href="#fn:anfinsen">12</a></sup> 蛋白质实际经历的能量景观还受膜、配体、金属、共价修饰、分子伴侣、装配伙伴和动力学陷阱影响，天然状态也可能是多个构象的集合。</p>
+<p data-block-end="6536" data-block-fingerprint="4ff6fcea37e115e363f4" data-block-start="6288" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">传统从头（ab initio 或 de novo）建模用能量函数或统计势区分较合理的构象，并用搜索策略在庞大的构象空间中取样；分子动力学则从给定初始状态模拟随时间演变的轨迹。早期 LINUS 以局部构象和简化物理作用探索折叠倾向；Rosetta 的经典路线从短片段库组合主链，通过蒙特卡洛（Monte Carlo）搜索和统计能量筛选低能构象，再作全原子优化。CASP III 中的 Rosetta 结果展示了这种片段组装在小型、无明显同源模板蛋白上的能力。<sup id="fnref:rosetta-ab-initio"><a class="footnote-ref" href="#fn:rosetta-ab-initio">13</a></sup></p>
+<p data-block-end="6667" data-block-fingerprint="7e28c0445d59bd9c4b42" data-block-start="6538" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">能量函数可以显式描述键合项、范德华力、静电、溶剂和氢键，也可从已知结构统计常见接触和构象。近似使大规模搜索成为可能，同时引入偏差；搜索不足则会错过真正的低能区域。低能模型只表示它在特定函数和采样空间下表现较好；热力学全局最低点和真实折叠途径需要额外证据确定。</p>
+<p data-block-end="6795" data-block-fingerprint="16f4ca1254f5ecadb4e2" data-block-start="6669" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">从头建模常输出一组候选构象。模型是否形成稳定簇、不同独立运行是否收敛、局部几何和疏水核心是否合理、与二级结构或低分辨率实验约束是否一致，通常比只查看排名第一的结构更有信息。对于较长、多结构域、跨膜或复合体系统，分域建模、组装约束和实验数据往往不可缺少。</p>
+<h2 data-block-end="6832" data-block-fingerprint="4da250e9762d435cf446" data-block-start="6797" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="benchmarking">盲测、基准集与无信息泄漏评估<a class="headerlink" href="#benchmarking" title="Permanent link">&para;</a></h2>
+<p data-block-end="7206" data-block-fingerprint="a2621819257b0e26939c" data-block-start="6834" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">在已公开或参与训练的结构上演示方法，无法独立评价其泛化能力。蛋白质结构预测关键评估（Critical Assessment of protein Structure Prediction，CASP）在待公开的实验结构上组织盲测：预测者只看到目标信息，独立评估者在结构释放后比较模型。历史上的全自动结构预测关键评估（Critical Assessment of Fully Automated Structure Prediction，CAFASP）强调全自动服务器，LiveBench 和 EVA 进行连续或自动评估；今天的连续自动模型评估（Continuous Automated Model EvaluatiOn，CAMEO）延续对新释放结构的持续盲测。它们共同建立了一条重要规范——评估对象在预测时必须真正未知。<sup id="fnref:casp-cameo"><a class="footnote-ref" href="#fn:casp-cameo">14</a></sup></p>
+<p data-block-end="7453" data-block-fingerprint="f43009b073c01263d399" data-block-start="7208" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">不同指标观察结构的不同层次。全局距离检验总分（Global Distance Test Total Score，GDT_TS）计算若干距离阈值下可叠合残基的比例，TM-score 对蛋白长度作归一化，局部距离差检验（local Distance Difference Test，lDDT）通过局部距离差评价无需全局叠合的准确度。整体折叠正确的模型仍可能在活性环、界面或配体口袋失准；多结构域模型也可能各域准确而相对排布错误。因此基准结果应按结构域和任务拆解，并报告覆盖、局部质量及失败类型。</p>
+<p data-block-end="7597" data-block-fingerprint="c42ab2b6c6e185732460" data-block-start="7455" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">现代模型还面临训练集近邻、模板日期和序列数据库时间造成的信息泄漏。严格评估应按结构发布日期和同源关系隔离训练与测试，记录使用的序列库、模板截止日期和模型权重版本。若为一个具体生物学问题选择工具，除了排行榜平均分，还要查看与目标长度、寡聚状态、无序比例、膜环境和配体类型相似的子集表现。</p>
+<h2 data-block-end="7641" data-block-fingerprint="8097b58dc382ada6129c" data-block-start="7599" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="alphafold-models">AlphaFold 类深度学习模型<a class="headerlink" href="#alphafold-models" title="Permanent link">&para;</a></h2>
+<p data-block-end="7845" data-block-fingerprint="2bf39ebe584a6e5ddc4a" data-block-start="7643" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">AlphaFold2 把多序列比对和可选模板转化为按残基组织的序列表示与按残基对组织的关系表示，通过反复交换信息建立远距离几何约束，再端到端地产生三维坐标。它在 CASP14 的盲测中显著提高了许多单链结构域的准确度，使大规模蛋白结构假说从“逐个建模”转向“可系统检索”。<sup id="fnref:alphafold2"><a class="footnote-ref" href="#fn:alphafold2">15</a></sup> RoseTTAFold 等同时期模型也通过一维序列、二维残基关系和三维坐标之间的信息传递推进了这一方向。</p>
+<p data-block-end="7955" data-block-fingerprint="3fdffa9acd4646bac5cf" data-block-start="7847" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">这类网络学习序列家族、共进化和已知结构中的规律，输出与目标结构相容的坐标模型。模型可能利用同源家族与模板信息，也可能在浅多序列比对下依靠学习到的结构先验；细胞中的折叠机制、速率或伴侣依赖性则需要动力学和细胞实验研究。</p>
+<p data-block-end="8173" data-block-fingerprint="65adbb19ac4423199685" data-block-start="7957" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">AlphaFold 蛋白质结构数据库（AlphaFold Protein Structure Database，AlphaFold DB）为参考蛋白质组提供预计算模型，并保留模型版本、覆盖和置信度。数据库条目与实验 PDB 记录具有不同的证据性质：前者便于规模化提出结构域、位点和远缘关系假说，后者能够连接真实样品、条件和实验数据。研究者应保存所用序列的数据库版本和异构体，区分同一基因的不同蛋白产物。<sup id="fnref:alphafold-db"><a class="footnote-ref" href="#fn:alphafold-db">16</a></sup></p>
+<p data-block-end="8325" data-block-fingerprint="00838fd6e36db750bdab" data-block-start="8175" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">AlphaFold3 将建模对象扩展到蛋白质、核酸、小分子、离子及修饰残基组成的复合物，并以扩散式结构生成模块处理原子坐标。<sup id="fnref:alphafold3"><a class="footnote-ref" href="#fn:alphafold3">17</a></sup> 对象范围扩大并未取消输入假设和验证要求：化学计量、序列组成、配体形式、共价连接和候选伙伴如果输入错误，模型可以为错误问题生成几何上很有说服力的答案。</p>
+<h3 data-block-end="8377" data-block-fingerprint="e7f25700475580d82077" data-block-start="8327" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="alphafold-confidence">pLDDT、PAE、pTM 与 ipTM<a class="headerlink" href="#alphafold-confidence" title="Permanent link">&para;</a></h3>
+<p data-block-end="8567" data-block-fingerprint="ec9f918eba3ebec5dc01" data-block-start="8379" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">预测局部距离差检验（predicted local Distance Difference Test，pLDDT）是模型对每个残基局部原子环境准确度的预测，含义不同于实验分辨率或某个区域在细胞中存在的概率。高 pLDDT 通常支持局部折叠，低 pLDDT 可能来自内在无序、柔性连接、缺乏进化信息、错误边界或模型未能解决的区域；低值片段中也可能包含真实无序和重要的条件性结构。</p>
+<p data-block-end="8769" data-block-fingerprint="6f4dccfca5ba3334dd4d" data-block-start="8569" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">预测对齐误差（Predicted Aligned Error，PAE）估计在以残基 <em>j</em> 所在结构为对齐参照时，残基 <em>i</em> 的位置误差。PAE 图中沿对角线的低误差方块常对应内部可信的结构域；结构域之间 PAE 较高，则表示相对取向不确定。于是一个模型可以在每个结构域内都有高 pLDDT，却对两域之间的距离缺乏可靠支持。读取结构域运动、界面或远距离位点时，PAE 往往比着色后的单一坐标更关键。</p>
+<p data-block-end="9007" data-block-fingerprint="b6426e76930b5414bff9" data-block-start="8771" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">预测模板建模评分（predicted TM-score，pTM）估计整体拓扑的可信程度，界面预测模板建模评分（interface predicted TM-score，ipTM）更着重复合物亚基界面和相对排布。大型高置信单体可能主导总体分数，因此复合物还需查看跨链 PAE、界面残基的 pLDDT、不同随机种子或输入组合是否收敛，以及候选伙伴与化学计量的生物学证据。置信度是模型对自身预期误差的校准结果，实验验证提供独立证据。<sup id="fnref:alphafold-confidence"><a class="footnote-ref" href="#fn:alphafold-confidence">18</a></sup></p>
+<h3 data-block-end="9049" data-block-fingerprint="ba937f190eae50ae258c" data-block-start="9009" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="alphafold-boundaries">覆盖、构象和化学环境<a class="headerlink" href="#alphafold-boundaries" title="Permanent link">&para;</a></h3>
+<p data-block-end="9178" data-block-fingerprint="1f65d86068b9eb2934fb" data-block-start="9051" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">预测前要确认输入是否覆盖信号肽、跨膜区、成熟肽、低复杂度连接区和研究位点。数据库模型常按参考全长序列计算，但实验对象可能经过加工或剪接。超长序列被分段预测时，片段间的相对排布缺少同一模型的约束；多结构域蛋白的高 PAE 也表示展开显示的取向具有不确定性。</p>
+<p data-block-end="9381" data-block-fingerprint="1f38fb302d9d8ffc48bd" data-block-start="9180" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">一个静态模型难以表达配体诱导、膜电位、pH、磷酸化、别构调控和机械力塑造的构象集合。AlphaFold2 的直接建模对象主要是蛋白质结构；后续多聚体模型和 AlphaFold3 扩大到更多复合物、核酸、小分子和修饰，但仍可能选择错误状态、产生不合理局部化学或遗漏水、离子和竞争伙伴。官方训练材料也把构象多样性、点突变、配体和修饰列为解释时必须检查的边界。<sup id="fnref:alphafold-limitations"><a class="footnote-ref" href="#fn:alphafold-limitations">19</a></sup></p>
+<p data-block-end="9495" data-block-fingerprint="8569cbe7d2e48bff289c" data-block-start="9383" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">多序列比对深度和组成也会影响结果。丰富的同源序列可提供残基共变线索，但旁系同源混入、结构域融合、物种配对错误和强烈的家族偏倚会误导复合物接触。孤儿蛋白或快速演化蛋白缺少这类信息，模型置信度和候选构象间一致性应被更谨慎地解释。</p>
+<h2 data-block-end="9544" data-block-fingerprint="2c6b1cf9cf22e7e2fe8a" data-block-start="9497" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="complex-integrative-modeling">复合物与整合结构建模<a class="headerlink" href="#complex-integrative-modeling" title="Permanent link">&para;</a></h2>
+<p data-block-end="9676" data-block-fingerprint="45943b16f21905a2208e" data-block-start="9546" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">复合物预测首先是一个生物学对象定义问题。哪些链在同一细胞区室、何时表达、以何种化学计量结合、是否需要核酸、膜、配体或修饰，决定了值得建模的组合。多聚体模型得到的界面是相互作用假说；大规模筛选尤其要用亚细胞定位、共表达、遗传、亲和纯化或邻近标记证据限制候选空间。</p>
+<p data-block-end="9819" data-block-fingerprint="efe4d9215ed6d8dd82c4" data-block-start="9678" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">计算界面可由跨链 PAE、界面接触、埋藏表面积、静电与疏水互补、保守性以及独立运行的一致性评价。高分模型仍可能把彼此竞争的伙伴同时装入、混淆瞬时碰撞和稳定复合物，或在重复蛋白和卷曲螺旋中选择错误配准。突变破坏结合可以支持某个界面，却还需排除突变使蛋白整体失折叠、表达下降或定位改变。</p>
+<p data-block-end="10123" data-block-fingerprint="bd0330acf3ef5a9a9619" data-block-start="9821" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">整合结构建模把多种分辨率不一的证据写成空间约束。冷冻电镜或断层图提供形状和密度，交联质谱提供带误差的距离上限，NMR、电子顺磁共振（electron paramagnetic resonance，EPR）、Förster 共振能量转移（Förster resonance energy transfer，FRET）、小角 X 射线散射（small-angle X-ray scattering，SAXS）、氢氘交换（hydrogen–deuterium exchange，HDX）和突变数据分别约束局部接触、距离、整体包络、交换保护或功能位点。建模过程在满足约束的候选中搜索，输出常是一组符合数据的模型。</p>
+<p data-block-end="10255" data-block-fingerprint="135b77c5a0e659cfbf86" data-block-start="10125" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">约束的独立性取决于数据来源和误差结构，而非数量。交联可能共享肽段歧义，低分辨率密度可容纳多种排布，先由预测模型解释实验再用同一实验“验证”会形成循环。可靠报告需要给出每项证据的来源、误差模型、未满足约束、抽样收敛性和模型精度，并保留现有数据无法区分的替代构象。</p>
+<h2 data-block-end="10296" data-block-fingerprint="198502f223ae2cf19e17" data-block-start="10257" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="docking-binding-sites">分子对接与结合位点<a class="headerlink" href="#docking-binding-sites" title="Permanent link">&para;</a></h2>
+<p data-block-end="10512" data-block-fingerprint="93918326aa265307b4ab" data-block-start="10298" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">分子对接包含两个核心问题：在受体周围搜索配体或伙伴的可能姿态，以及用评分函数对候选姿态排序。小分子对接通常先确定受体口袋和网格，枚举配体平移、旋转与可旋转键，再用近似的范德华、静电、氢键、疏水和溶剂项评分。AutoDock Vina 以高效随机优化和经验评分成为常用工具；HADDOCK 则可把已知界面残基、交联或其他实验信息作为含歧义的约束，进行数据驱动的生物大分子对接。<sup id="fnref:autodock-vina"><a class="footnote-ref" href="#fn:autodock-vina">20</a></sup> <sup id="fnref:haddock"><a class="footnote-ref" href="#fn:haddock">21</a></sup></p>
+<p data-block-end="10655" data-block-fingerprint="e5af0ae8c3332af553a1" data-block-start="10514" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">输入准备决定了许多结果。蛋白和配体的质子化、互变异构、键级、手性、金属配位和共价状态必须与实验条件相符；缺失侧链、错误组装体或低置信口袋会使后续评分失去意义。水分子有时应移除，有时却构成不可替代的桥接网络。受体刚性近似适合有限形变，明显诱导契合则需要多构象对接、柔性采样或实验约束。</p>
+<p data-block-end="10860" data-block-fingerprint="d51d87d32f9e776b9e2d" data-block-start="10657" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">对接分数主要用于特定设置下的候选排序，与标准结合自由能、解离常数（dissociation constant，<code>Kd</code>）或半数抑制浓度（half maximal inhibitory concentration，<code>IC50</code>）具有不同含义。相近姿态的分数差可能小于评分函数误差；大型疏水分子还可能因接触面积得到虚高分。已知配体重对接、交叉对接、活性与诱饵集合、盲法保留化合物和独立实验是检验流程的不同层次。</p>
+<p data-block-end="10972" data-block-fingerprint="2291a75bcfcaa8e8ac6c" data-block-start="10862" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结合位点预测还可利用凹槽几何、表面电势、残基保守性、同源配体和共现结构域。几何口袋可能只是结构空腔，保守表面也可能承担装配而非小分子结合。结构预测能缩小实验搜索空间；配体身份、亲和力和功能效应仍需生物物理或生化测量确认。</p>
+<h2 data-block-end="11011" data-block-fingerprint="61e1b181132272cf735e" data-block-start="10974" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="molecular-dynamics">分子动力学与构象集合<a class="headerlink" href="#molecular-dynamics" title="Permanent link">&para;</a></h2>
+<p data-block-end="11185" data-block-fingerprint="6b028edda1014b36fb6d" data-block-start="11013" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">分子动力学（molecular dynamics，MD）从给定坐标和速度出发，在力场描述的势能面上数值积分运动方程，产生随时间变化的构象轨迹。它与从头结构预测有交集，却回答不同问题：结构预测寻找与序列相容的模型，MD 研究特定体系、力场和时间尺度下模型如何波动和转换。经典 MD 已成为连接结构与分子运动的重要计算实验。<sup id="fnref:md-review"><a class="footnote-ref" href="#fn:md-review">22</a></sup></p>
+<p data-block-end="11331" data-block-fingerprint="3cbc046f1a686509c2ca" data-block-start="11187" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">一个可解释的模拟必须说明初始结构、缺失区处理、质子化与配体参数、膜和溶剂模型、离子条件、边界、力场、时间步长、能量最小化、平衡过程、生产时长和独立重复。预测模型可作为起点，其低置信环区、界面和未建模辅因子需要在模拟前单独核验；短暂松弛反映力场下的局部调整，初始模型质量仍决定后续解释范围。</p>
+<p data-block-end="11531" data-block-fingerprint="f8f60ea064101c53d1c5" data-block-start="11333" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">RMSD 描述相对参考结构的整体偏离，均方根波动（root-mean-square fluctuation，RMSF）描述原子或残基的波动，主成分、接触占有率、距离分布和自由能面则从不同角度概括轨迹。分析前应选择合适的叠合原子和周期性边界处理，并检查多个独立重复是否给出相容分布。轨迹在数百纳秒内某些指标进入平台，表示相应指标在已采样时间窗内趋于稳定；天然状态、结合稳定性或生物活性需要独立证据。</p>
+<p data-block-end="11665" data-block-fingerprint="0afd7ced28e35e8a63b3" data-block-start="11533" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">稀有事件常超出常规模拟可达的时间尺度。增强采样、粗粒化和自由能计算可以针对特定过程提高效率，但引入额外集体变量、路径和收敛假设。报告结果时应给出不确定度、正反过程或重复的收敛证据，并用 NMR、FRET、HDX、动力学测量或突变结果检验由轨迹提出的关键构象和机制。</p>
+<h2 data-block-end="11718" data-block-fingerprint="67d67667186eec4a5ae4" data-block-start="11667" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="function-variant-interpretation">结构辅助功能与变异解释<a class="headerlink" href="#function-variant-interpretation" title="Permanent link">&para;</a></h2>
+<p data-block-end="11936" data-block-fingerprint="43becebc0fc9bfa18334" data-block-start="11720" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构可把分散在线性序列上的残基组织成口袋、通道、界面和别构网络。功能分析通常综合表面形状与电势、残基保守性、已知配体、催化几何、结构相似蛋白和结构域组合。若干保守残基在空间中形成与已知酶相似的化学环境，便可提出底物或反应类型假说；但整体折叠相似、单个基序命中或口袋几何相似都不足以单独赋予精确功能。GO、通路、基因邻域和功能富集的系统方法在<a href="../functional_annotation/">功能注释、富集与功能预测</a>中继续展开。</p>
+<p data-block-end="12083" data-block-fingerprint="87a53e6fee3c61ac4c2d" data-block-start="11938" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">变异映射可以识别埋藏疏水核心、盐桥、金属配位、催化残基、蛋白界面和无序调控区。由此可形成不同的机制假说：变异可能降低稳定性、改变局部构象、破坏伙伴结合、改变底物选择，或影响翻译后修饰。稳定性变化预测和结构打分对同一变异可能给出不同结果，应保留方法、方向、数值不确定性以及所用野生型结构状态。</p>
+<p data-block-end="12258" data-block-fingerprint="6dc91989f8e28788bcf7" data-block-start="12085" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">致病性判定需要结构解释与人群频率、遗传分离、组织表达、表型特异性和功能实验共同支持。计算工具往往共享序列保守性、结构环境和训练数据，因此多工具一致也可能来自相关证据。变异结论要与群体数据库、家系、功能实验和临床证据框架结合，明确区分“位于重要结构位置”“预测影响分子性质”和“已经证明导致表型”。<sup id="fnref:alphafold-applications"><a class="footnote-ref" href="#fn:alphafold-applications">23</a></sup></p>
+<p data-block-end="12377" data-block-fingerprint="dc777f6f1111624604df" data-block-start="12260" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">设计突变时还应区分功能位点与结构完整性。删除一个界面残基的电荷可能直接削弱结合，也可能通过失折叠间接降低信号。表达量、溶解性、定位、热稳定性和总体结构对照能帮助分离这些解释；对催化机制的主张则需要动力学、结合或结构捕获等更直接的实验。</p>
+<h2 data-block-end="12408" data-block-fingerprint="0bde3ffb77b9ce480389" data-block-start="12379" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="reporting">可复现的结构分析与报告<a class="headerlink" href="#reporting" title="Permanent link">&para;</a></h2>
+<p data-block-end="12572" data-block-fingerprint="352d4ca1a11f751b9a69" data-block-start="12410" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">结构分析以“分子对象—数据或模型—处理步骤—结论”的完整链为最小可追溯单位。实验结构应报告 PDB／EMDB／BMRB 标识符、修订日期、方法、链、构建体、配体、组装体和残基编号体系；预测结构应报告确切输入序列、异构体、模型或服务器版本、数据库与模板截止日期、多序列比对和模板设置、随机种子、模型排名及逐残基和跨区域置信度。</p>
+<p data-block-end="12721" data-block-fingerprint="a6c8fba39578d2a59c73" data-block-start="12574" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">比较建模还需保存目标—模板比对和模板选择理由；结构比对需保存算法、选择的原子、覆盖与评分；对接需记录受体和配体准备、质子化、网格、约束、搜索与评分参数；MD 需保存拓扑、力场、运行参数、平衡和分析脚本。坐标、配置、日志和图形脚本应通过稳定目录或工作流连接，避免只留下无法复现视角与选择集的截图。</p>
+<p data-block-end="12880" data-block-fingerprint="6b207dad620873e6fc31" data-block-start="12723" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics">最终表述应与证据层级相配。实验密度或约束支持的是“在这些样品和条件下，数据与该模型相容”；高置信预测支持的是“该序列很可能采用这一局部折叠”；对接和动力学支持的是“在给定模型与近似下，这一姿态或路径值得检验”。当结构、序列、进化、生化和细胞证据在独立来源中汇合，三维模型才由漂亮坐标转化为可检验、可修正的机制解释。</p>
+<h2 data-block-end="18125" data-block-fingerprint="1c75725f498d44fe226b" data-block-start="12882" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-bioinfo-structural-bioinformatics" id="references">参考资料与延伸阅读<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:wwpdb-mmcif">
+<p>wwPDB, <a href="https://mmcif.wwpdb.org/docs/faqs/pdbx-mmcif-faq-general.html">PDBx/mmCIF General FAQ</a>；PDBx/mmCIF 数据类别和关系见 <a href="https://mmcif.wwpdb.org/docs/user-guide/guide.html">User Guide</a>。&#160;<a class="footnote-backref" href="#fnref:wwpdb-mmcif" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pdb101-assemblies">
+<p>RCSB PDB-101, <a href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/missing-coordinates-and-biological-assemblies">Missing Coordinates and Biological Assemblies</a>。&#160;<a class="footnote-backref" href="#fnref:pdb101-assemblies" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:emdb-about">
+<p>Electron Microscopy Data Bank, <a href="https://www.ebi.ac.uk/emdb/about">About EMDB</a>；验证资料见 <a href="https://www.ebi.ac.uk/emdb/documentation">EMDB Documentation</a>。&#160;<a class="footnote-backref" href="#fnref:emdb-about" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bmrb">
+<p>Biological Magnetic Resonance Bank, <a href="https://bmrb.io/">BMRB</a>。&#160;<a class="footnote-backref" href="#fnref:bmrb" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cath-classification">
+<p>CATH, <a href="https://www.cathdb.info/">CATH Protein Structure Classification Database</a>；SCOPe, <a href="https://scop.berkeley.edu/help/">SCOPe Help</a>。&#160;<a class="footnote-backref" href="#fnref:cath-classification" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:wwpdb-validation">
+<p>wwPDB, <a href="https://www.wwpdb.org/validation/">Validation Reports</a>；报告分别覆盖 X 射线、NMR 与三维电子显微学的模型和实验数据验证。&#160;<a class="footnote-backref" href="#fnref:wwpdb-validation" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:tm-align">
+<p>Zhang Y, Skolnick J. <a href="https://doi.org/10.1093/nar/gki524">TM-align: a protein structure alignment algorithm based on the TM-score</a>. <em>Nucleic Acids Research</em>, 2005, 33(7): 2302–2309.&#160;<a class="footnote-backref" href="#fnref:tm-align" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:chou-fasman">
+<p>Chou PY, Fasman GD. <a href="https://doi.org/10.1021/bi00699a002">Prediction of protein conformation</a>. <em>Biochemistry</em>, 1974, 13(2): 222–245；Kabsch W, Sander C. <a href="https://pubmed.ncbi.nlm.nih.gov/6852232/">How good are predictions of protein secondary structure?</a>. <em>FEBS Letters</em>, 1983, 155(2): 179–182.&#160;<a class="footnote-backref" href="#fnref:chou-fasman" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psipred">
+<p>Jones DT. <a href="https://doi.org/10.1006/jmbi.1999.3091">Protein secondary structure prediction based on position-specific scoring matrices</a>. <em>Journal of Molecular Biology</em>, 1999, 292(2): 195–202；Drozdetskiy A, et al. <a href="https://doi.org/10.1093/nar/gkv332">JPred4: a protein secondary structure prediction server</a>. <em>Nucleic Acids Research</em>, 2015, 43(W1): W389–W394.&#160;<a class="footnote-backref" href="#fnref:psipred" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:modeller">
+<p>Šali A, Blundell TL. <a href="https://doi.org/10.1006/jmbi.1993.1626">Comparative protein modelling by satisfaction of spatial restraints</a>. <em>Journal of Molecular Biology</em>, 1993, 234(3): 779–815；Bordoli L, et al. <a href="https://doi.org/10.1038/nprot.2008.197">Protein structure homology modeling using SWISS-MODEL workspace</a>. <em>Nature Protocols</em>, 2009, 4: 1–13.&#160;<a class="footnote-backref" href="#fnref:modeller" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:phyre2">
+<p>Kelley LA, et al. <a href="https://doi.org/10.1038/nprot.2015.053">The Phyre2 web portal for protein modeling, prediction and analysis</a>. <em>Nature Protocols</em>, 2015, 10: 845–858.&#160;<a class="footnote-backref" href="#fnref:phyre2" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:anfinsen">
+<p>Anfinsen CB. <a href="https://doi.org/10.1126/science.181.4096.223">Principles that govern the folding of protein chains</a>. <em>Science</em>, 1973, 181(4096): 223–230.&#160;<a class="footnote-backref" href="#fnref:anfinsen" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:rosetta-ab-initio">
+<p>Simons KT, et al. <a href="https://pubmed.ncbi.nlm.nih.gov/10526365/">Ab initio protein structure prediction of CASP III targets using ROSETTA</a>. <em>Proteins</em>, 1999, Suppl 3: 171–176.&#160;<a class="footnote-backref" href="#fnref:rosetta-ab-initio" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:casp-cameo">
+<p><a href="https://predictioncenter.org/">CASP Prediction Center</a>；CAMEO, <a href="https://cameo3d.org/">Continuous Automated Model EvaluatiOn</a>。&#160;<a class="footnote-backref" href="#fnref:casp-cameo" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alphafold2">
+<p>Jumper J, et al. <a href="https://doi.org/10.1038/s41586-021-03819-2">Highly accurate protein structure prediction with AlphaFold</a>. <em>Nature</em>, 2021, 596: 583–589.&#160;<a class="footnote-backref" href="#fnref:alphafold2" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alphafold-db">
+<p>Varadi M, et al. <a href="https://doi.org/10.1093/nar/gkab1061">AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models</a>. <em>Nucleic Acids Research</em>, 2022, 50(D1): D439–D444；数据库使用边界见 <a href="https://alphafold.ebi.ac.uk/faq">AlphaFold DB FAQ</a>。&#160;<a class="footnote-backref" href="#fnref:alphafold-db" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alphafold3">
+<p>Abramson J, et al. <a href="https://doi.org/10.1038/s41586-024-07487-w">Accurate structure prediction of biomolecular interactions with AlphaFold 3</a>. <em>Nature</em>, 2024, 630: 493–500.&#160;<a class="footnote-backref" href="#fnref:alphafold3" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alphafold-confidence">
+<p>EMBL—EBI Training, <a href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/alphafold-inputs-and-outputs-recap/">AlphaFold inputs and outputs recap</a> 与 <a href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/confidence-scores-in-alphafold-multimer/">Confidence scores in AlphaFold-Multimer</a>。&#160;<a class="footnote-backref" href="#fnref:alphafold-confidence" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alphafold-limitations">
+<p>EMBL—EBI Training, <a href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/strengths-and-limitations-of-alphafold/">Strengths and limitations of AlphaFold</a> 与 <a href="https://www.ebi.ac.uk/training/online/courses/alphafold-3/what-alphafold-3-struggles-with/">What AlphaFold 3 struggles with</a>。&#160;<a class="footnote-backref" href="#fnref:alphafold-limitations" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:autodock-vina">
+<p>Trott O, Olson AJ. <a href="https://doi.org/10.1002/jcc.21334">AutoDock Vina: improving the speed and accuracy of docking</a>. <em>Journal of Computational Chemistry</em>, 2010, 31(2): 455–461.&#160;<a class="footnote-backref" href="#fnref:autodock-vina" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:haddock">
+<p>de Vries SJ, van Dijk M, Bonvin AMJJ. <a href="https://doi.org/10.1038/nprot.2010.32">The HADDOCK web server for data-driven biomolecular docking</a>. <em>Nature Protocols</em>, 2010, 5: 883–897；Honorato RV, et al. <a href="https://doi.org/10.1038/s41596-024-01011-0">HADDOCK2.4: a web server for integrative modeling of biomolecular complexes</a>. <em>Nature Protocols</em>, 2024.&#160;<a class="footnote-backref" href="#fnref:haddock" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:md-review">
+<p>Karplus M, McCammon JA. <a href="https://doi.org/10.1038/nsb0902-646">Molecular dynamics simulations of biomolecules</a>. <em>Nature Structural Biology</em>, 2002, 9: 646–652.&#160;<a class="footnote-backref" href="#fnref:md-review" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alphafold-applications">
+<p>Akdel M, et al. <a href="https://doi.org/10.1038/s41594-022-00849-w">A structural biology community assessment of AlphaFold2 applications</a>. <em>Nature Structural &amp; Molecular Biology</em>, 2022, 29: 1056–1067.&#160;<a class="footnote-backref" href="#fnref:alphafold-applications" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/bioinfo/structural_bioinformatics.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:31+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/bioinfo/structural_bioinformatics.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-bioinfo-structural-bioinformatics"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../multiomics_integration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 多组学整合">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                多组学整合
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../functional_annotation/" class="md-footer__link md-footer__link--next" aria-label="Next: 功能注释、富集与功能预测">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                功能注释、富集与功能预测
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>

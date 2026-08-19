@@ -1,0 +1,3560 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="花火生物档案：一个高质量的生物学知识库与学习笔记">
+      
+      
+        <meta name="author" content="Ximiku67">
+      
+      
+        <link rel="canonical" href="https://ximiku.github.io/HanaBio-Archive/biostat/bayesian_computational/">
+      
+      
+        <link rel="prev" href="../survival_longitudinal/">
+      
+      
+        <link rel="next" href="../causal_meta_analysis/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.56">
+    
+    
+      
+        <title>贝叶斯推断与计算统计 - HanaBio Archive</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.20815dad.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/active-tab.css">
+    
+      <link rel="stylesheet" href="../../styles/site-history.css">
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="../../styles/comments.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-header__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HanaBio Archive
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              贝叶斯推断与计算统计
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+        <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  简介
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../biochem/" class="md-tabs__link">
+          
+  
+  生化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physiology/" class="md-tabs__link">
+          
+  
+  生理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cell/" class="md-tabs__link">
+          
+  
+  细胞
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../molecular/" class="md-tabs__link">
+          
+  
+  分子
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../genetics/" class="md-tabs__link">
+          
+  
+  遗传
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../micro/" class="md-tabs__link">
+          
+  
+  微生物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../neuro/" class="md-tabs__link">
+          
+  
+  神经
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../immunology/" class="md-tabs__link">
+          
+  
+  免疫
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../development/" class="md-tabs__link">
+          
+  
+  发育
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../botany/" class="md-tabs__link">
+          
+  
+  植物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../zoology/" class="md-tabs__link">
+          
+  
+  动物
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ecology/" class="md-tabs__link">
+          
+  
+  生态
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../evolution/" class="md-tabs__link">
+          
+  
+  进化
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bioinfo/" class="md-tabs__link">
+          
+  
+  生信
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  统计
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exptech/" class="md-tabs__link">
+          
+  
+  实验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../inter/" class="md-tabs__link">
+          
+  
+  跨学科
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://ximiku.github.io/HanaBio-Archive/" title="HanaBio Archive" class="md-nav__button md-logo" aria-label="HanaBio Archive" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 10.3V8H4v13h7v-1.87l8.39-8.39c.18-.18.39-.32.61-.44M15 13H9v-1.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5zm6-6H3V3h18zm1.85 7.19-.98.98-2.04-2.04.98-.98c.19-.2.52-.2.72 0l1.32 1.32c.2.2.2.53 0 .72m-3.72-.36 2.04 2.04L15.04 22H13v-2.04z"/></svg>
+
+    </a>
+    HanaBio Archive
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ximiku/HanaBio-Archive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HanaBio-Archive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../.." class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  简介
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../biochem/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物化学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../physiology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生理学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../cell/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  细胞生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../molecular/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  分子生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../genetics/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  遗传学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../micro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  微生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../neuro/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  神经生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../immunology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  免疫学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../development/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  发育生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../botany/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  植物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../zoology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  动物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../ecology/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生态学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../evolution/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  进化生物学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../bioinfo/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物信息学
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  统计
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+  统计
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimental_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  实验设计、效能与可重复统计
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../data_description/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  数据与概率
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../hypothesis_testing/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  假设检验
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../anova_regression/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  回归与多变量
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survival_longitudinal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生存分析与纵向数据
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  贝叶斯推断与计算统计
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  贝叶斯推断与计算统计
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从事件概率到参数后验
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从事件概率到参数后验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        全概率与事件更新
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        生成模型与条件独立
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beta-binomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        贝塔—二项共轭更新
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        先验分布与先验预测
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posterior-summaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        后验概括与可信区间
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posterior-predictive" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        后验预测与模型检查
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-hierarchical" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        层级模型与部分汇聚
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monte-carlo-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从积分到 Monte Carlo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        马尔可夫链蒙特卡洛
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="马尔可夫链蒙特卡洛">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metropolishastings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Metropolis–Hastings 与吉布斯采样
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        哈密顿蒙特卡洛与 NUTS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcmc-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MCMC 诊断与计算误差
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approximate-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        近似后验计算
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型比较、证据与决策
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computational-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        自助法、置换与模拟研究
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        贝叶斯工作流与完整报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../causal_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  因果推断
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systematic_review_meta_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  系统综述与荟萃分析
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../exptech/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  生物实验技术
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../inter/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  跨学科交叉
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-updating" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从事件概率到参数后验
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="从事件概率到参数后验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        全概率与事件更新
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        生成模型与条件独立
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beta-binomial" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        贝塔—二项共轭更新
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        先验分布与先验预测
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posterior-summaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        后验概括与可信区间
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#posterior-predictive" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        后验预测与模型检查
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-hierarchical" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        层级模型与部分汇聚
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monte-carlo-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        从积分到 Monte Carlo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcmc" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        马尔可夫链蒙特卡洛
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="马尔可夫链蒙特卡洛">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metropolishastings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Metropolis–Hastings 与吉布斯采样
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        哈密顿蒙特卡洛与 NUTS
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcmc-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        MCMC 诊断与计算误差
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approximate-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        近似后验计算
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        模型比较、证据与决策
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#computational-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        自助法、置换与模拟研究
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bayesian-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        贝叶斯工作流与完整报告
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        参考资料与延伸阅读
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+  
+  
+
+
+<h1 data-block-end="12" data-block-fingerprint="4efdc1beb92bd324f450" data-block-start="0" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="_1">贝叶斯推断与计算统计<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p data-block-end="183" data-block-fingerprint="e5bb0129fc606e49b357" data-block-start="14" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">贝叶斯公式最初是条件概率之间的恒等关系：观察到新事件后，原有事件概率怎样更新。统计推断把这条关系用于未知参数、潜在状态和未来观察。模型先用概率分布表达观察怎样产生，再用先验分布表达观察数据之前对未知量的约束；数据进入后，似然与先验共同形成后验分布。后验不只是一个点估计，而是给出在整个模型条件下，各种参数值、预测结果和决策后果的不确定性。</p>
+<p data-block-end="391" data-block-fingerprint="39ffed553603a9d771cb" data-block-start="185" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">实际生命科学模型很少能靠纸笔求出完整后验。层级结构、非线性响应、缺失数据和潜变量会产生高维积分，因此贝叶斯分析与计算统计紧密相连。蒙特卡洛（Monte Carlo）、马尔可夫链蒙特卡洛（Markov chain Monte Carlo，MCMC）和近似推断使复杂后验可计算，同时引入随机计算误差和算法近似。一个完整分析需要同时判断模型能否表达研究对象、计算是否充分探索目标后验，以及结论对先验与模型选择是否稳健。</p>
+<h2 data-block-end="429" data-block-fingerprint="b93840bd857417c38270" data-block-start="393" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="bayesian-updating">从事件概率到参数后验<a class="headerlink" href="#bayesian-updating" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="443" data-block-fingerprint="f0846ecb61302526f955" data-block-start="431" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="_2">全概率与事件更新<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p data-block-end="513" data-block-fingerprint="57c050776c48a9067a6a" data-block-start="445" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若互斥且完备的事件 <span class="arithmatex">\(A_1,\ldots,A_K\)</span> 构成样本空间的划分，观察到事件 <span class="arithmatex">\(B\)</span> 后，属于第 <span class="arithmatex">\(k\)</span> 类的概率为</p>
+<div class="arithmatex" data-block-end="596" data-block-fingerprint="f878502c583e409a2160" data-block-start="515" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+P(A_k\mid B)=
+\frac{P(B\mid A_k)P(A_k)}
+{\sum_{j=1}^{K}P(B\mid A_j)P(A_j)}.
+\]</div>
+<p data-block-end="792" data-block-fingerprint="dcce74cfa0e03c03cda2" data-block-start="598" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">分母是全概率公式给出的 <span class="arithmatex">\(P(B)\)</span>，它把各来源产生 <span class="arithmatex">\(B\)</span> 的概率按来源概率加权。这里的先验概率 <span class="arithmatex">\(P(A_k)\)</span> 与后验概率 <span class="arithmatex">\(P(A_k\mid B)\)</span> 都属于有限事件；诊断试验中从患病率、敏感度和特异度求阳性预测值，就是这一层面的更新。本章的<a href="../probability/#conditional-probability">概率页面</a>已完整保留了这条经典学习路径。</p>
+<p data-block-end="893" data-block-fingerprint="59d5bf2a217f1d3d6b6e" data-block-start="794" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">参数推断把未知参数 <span class="arithmatex">\(\theta\)</span> 视为概率模型中的未知量。设观察数据为 <span class="arithmatex">\(y\)</span>，采样模型给出 <span class="arithmatex">\(p(y\mid\theta)\)</span>，先验分布为 <span class="arithmatex">\(p(\theta)\)</span>。贝叶斯公式写成</p>
+<div class="arithmatex" data-block-end="955" data-block-fingerprint="a985bc0327a74864963c" data-block-start="895" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(\theta\mid y)=
+\frac{p(y\mid\theta)p(\theta)}{p(y)},
+\]</div>
+<p data-block-end="959" data-block-fingerprint="34884b2bfb0f804fc7e4" data-block-start="957" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">其中</p>
+<div class="arithmatex" data-block-end="1017" data-block-fingerprint="a908282a4a83cf884de2" data-block-start="961" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(y)=\int p(y\mid\theta)p(\theta)\,\mathrm d\theta
+\]</div>
+<p data-block-end="1124" data-block-fingerprint="ab73a4aa4e8578fe31ee" data-block-start="1019" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">称为边缘似然或先验预测密度。对离散参数，积分换成求和。似然 <span class="arithmatex">\(p(y\mid\theta)\)</span> 是在已观察到 <span class="arithmatex">\(y\)</span> 后关于 <span class="arithmatex">\(\theta\)</span> 的函数；与先验相乘并归一化后，才得到参数的后验概率分布。</p>
+<p data-block-end="1144" data-block-fingerprint="0b6583cd0af49aeb5dd3" data-block-start="1126" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">许多计算只需要知道后验与什么成比例：</p>
+<div class="arithmatex" data-block-end="1199" data-block-fingerprint="c5d7318bbbb3579a17b6" data-block-start="1146" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(\theta\mid y)\propto p(y\mid\theta)p(\theta).
+\]</div>
+<p data-block-end="1306" data-block-fingerprint="412e91eac4cc0e098f49" data-block-start="1201" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">省略的比例常数与 <span class="arithmatex">\(\theta\)</span> 无关，但贝叶斯因子（Bayes factor）等模型证据和部分预测计算需要这个常数。后验结论始终条件于采样模型、先验、数据处理和观测设计；数据与这些模型结构共同决定后验。</p>
+<h3 data-block-end="1321" data-block-fingerprint="551fe7984805acad044d" data-block-start="1308" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="_3">生成模型与条件独立<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p data-block-end="1371" data-block-fingerprint="ffc66ae6076f41ee0e54" data-block-start="1323" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">贝叶斯模型可以先写成联合分布，再按生成顺序分解。例如参数先由先验产生，观察在给定参数后相互独立：</p>
+<div class="arithmatex" data-block-end="1446" data-block-fingerprint="60dd6c4c33d8d25bf0d5" data-block-start="1373" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(\theta,y_1,\ldots,y_n)
+=p(\theta)\prod_{i=1}^{n}p(y_i\mid\theta).
+\]</div>
+<p data-block-end="1541" data-block-fingerprint="196b055393bc6f10c582" data-block-start="1448" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">这条分解方便计算，也明确了条件独立假设。家系成员、同一培养皿内的孔或同一个体的时间序列共享上层单位，需要在似然中加入层级随机效应、空间或时间过程；测量误差和选择机制也应出现在联合模型里。</p>
+<h2 data-block-end="1574" data-block-fingerprint="4cfa771a177a0ba5fc2a" data-block-start="1543" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="beta-binomial">贝塔—二项共轭更新<a class="headerlink" href="#beta-binomial" title="Permanent link">&para;</a></h2>
+<p data-block-end="1664" data-block-fingerprint="0d0922a5146983597653" data-block-start="1576" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">设 <span class="arithmatex">\(n\)</span> 次条件独立的伯努利（Bernoulli）试验中观察到 <span class="arithmatex">\(x\)</span> 次成功，成功概率为 <span class="arithmatex">\(\theta\)</span>。忽略不依赖 <span class="arithmatex">\(\theta\)</span> 的组合常数，似然为</p>
+<div class="arithmatex" data-block-end="1719" data-block-fingerprint="edd33e4c78e1de601e8d" data-block-start="1666" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(x\mid\theta)\propto
+\theta^x(1-\theta)^{n-x}.
+\]</div>
+<p data-block-end="1725" data-block-fingerprint="891274909bad002c17f0" data-block-start="1721" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若先验为</p>
+<div class="arithmatex" data-block-end="1822" data-block-fingerprint="4f0a099cae3f3fb75336" data-block-start="1727" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\theta\sim\operatorname{Beta}(a,b),
+\qquad
+p(\theta)\propto
+\theta^{a-1}(1-\theta)^{b-1},
+\]</div>
+<p data-block-end="1829" data-block-fingerprint="462a73254342cef1bcb2" data-block-start="1824" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">相乘后得到</p>
+<div class="arithmatex" data-block-end="1887" data-block-fingerprint="ea45fe403c6a0c17cc4b" data-block-start="1831" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\theta\mid x,n
+\sim\operatorname{Beta}(a+x,b+n-x).
+\]</div>
+<p data-block-end="1974" data-block-fingerprint="ade7eec133015ec4518f" data-block-start="1889" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">先验与后验属于同一分布族，这称为共轭。Stan 用户指南也用 Beta 先验与 binomial 采样分布展示这一代数结构。<sup id="fnref:stan-conjugacy"><a class="footnote-ref" href="#fn:stan-conjugacy">1</a></sup> 后验均值为</p>
+<div class="arithmatex" data-block-end="2019" data-block-fingerprint="43a7cb07affc3b8bb1bd" data-block-start="1976" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+E(\theta\mid x,n)=
+\frac{a+x}{a+b+n}.
+\]</div>
+<p data-block-end="2167" data-block-fingerprint="c854665a47953927830c" data-block-start="2021" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">它可写成先验均值 <span class="arithmatex">\(a/(a+b)\)</span> 与样本比例 <span class="arithmatex">\(x/n\)</span> 的加权平均，因此 <span class="arithmatex">\(a+b\)</span> 在这个特定参数化中具有“先验信息量”的直观。不过，<span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 只有在明确的 Bernoulli 交换性模型中才可类比先验成功与失败次数；一般先验的强度不能机械换算成样本量。</p>
+<p data-block-end="2206" data-block-fingerprint="bcf78400e19fb84ace56" data-block-start="2169" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若下一次试验结果为 <span class="arithmatex">\(\widetilde Y\)</span>，则后验预测成功概率为</p>
+<div class="arithmatex" data-block-end="2293" data-block-fingerprint="f953d5101fffd160edc7" data-block-start="2208" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+P(\widetilde Y=1\mid x,n)
+=\int_0^1 \theta\,p(\theta\mid x,n)\,\mathrm d\theta.
+\]</div>
+<p data-block-end="2307" data-block-fingerprint="6265fa2fe471084ad48a" data-block-start="2295" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">代入 Beta 后验可得</p>
+<div class="arithmatex" data-block-end="2359" data-block-fingerprint="8bb0ec4b9d067613fb5c" data-block-start="2309" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+P(\widetilde Y=1\mid x,n)=\frac{a+x}{a+b+n}.
+\]</div>
+<p data-block-end="2472" data-block-fingerprint="26b9d5ba939aecda569d" data-block-start="2361" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">多次未来试验的成功数服从贝塔—二项（Beta–binomial）预测分布，它同时包含未来 Bernoulli 波动和 <span class="arithmatex">\(\theta\)</span> 的后验不确定性。若把后验均值固定为模拟概率，预测只传播前一种波动，所得范围会偏窄。</p>
+<p data-block-end="2593" data-block-fingerprint="c3f7e0fe618a6de77026" data-block-start="2474" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">这套共轭手算展示了“先验×似然→后验”的完整结构，也说明数据可以顺序更新：第一批数据的后验可作为第二批数据的先验。顺序更新等价于一次联合更新的前提，是两批数据在给定参数与模型后具有相应条件独立性，而且结局定义、选择规则和模型空间保持一致。</p>
+<h2 data-block-end="2627" data-block-fingerprint="3b1d620206633d05ec22" data-block-start="2595" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="prior-modeling">先验分布与先验预测<a class="headerlink" href="#prior-modeling" title="Permanent link">&para;</a></h2>
+<p data-block-end="2801" data-block-fingerprint="099dfdcec8c4e1c568a0" data-block-start="2629" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">先验分布描述观察当前数据之前，模型允许参数落在哪些尺度与区域。信息性先验可来自可靠的历史实验、物理界限或明确专家知识；弱信息先验主要排除不合理的极端值，同时让当前数据在合理范围内发挥作用；参考性或形式上“平坦”的先验试图减少主观输入，却不一定在变量变换后仍平坦，也可能是不正规分布。若不正规先验导致后验无法归一化，后验概率和边缘似然都没有定义。</p>
+<p data-block-end="3022" data-block-fingerprint="16afad37f49b6d7f0d6f" data-block-start="2803" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">先验必须在参数和似然共同构成的尺度上理解。回归系数的同一个 <span class="arithmatex">\(N(0,10^2)\)</span> 先验，在标准化连续响应、logit 链接和 log 发生率尺度上允许的预测范围完全不同。方差分量接近零、混合模型相关矩阵、稀有事件回归和高维系数尤其容易受到表面“宽松”先验的隐含约束。Gelman、Simpson 与 Betancourt 强调，先验的实际含义往往只有放回似然和完整模型中才清楚。<sup id="fnref:prior-likelihood-context"><a class="footnote-ref" href="#fn:prior-likelihood-context">2</a></sup></p>
+<p data-block-end="3054" data-block-fingerprint="47d21e91743f4d59e63d" data-block-start="3024" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">在拟合数据之前，可从先验抽取参数，再从采样模型生成复制数据：</p>
+<div class="arithmatex" data-block-end="3157" data-block-fingerprint="0c1361062e10f32ad286" data-block-start="3056" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\theta^{\mathrm{sim}}\sim p(\theta),
+\qquad
+y^{\mathrm{sim}}\sim p(y\mid\theta^{\mathrm{sim}}).
+\]</div>
+<p data-block-end="3191" data-block-fingerprint="fd063ed95da510dc02a5" data-block-start="3159" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">这些 <span class="arithmatex">\(y^{\mathrm{sim}}\)</span> 来自先验预测分布</p>
+<div class="arithmatex" data-block-end="3250" data-block-fingerprint="bff49b325a55f1c8742b" data-block-start="3193" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(y)=\int p(y\mid\theta)p(\theta)\,\mathrm d\theta.
+\]</div>
+<p data-block-end="3380" data-block-fingerprint="377771173698e542c748" data-block-start="3252" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">先验预测检查把抽象参数尺度转回可观察量：如果一个体长模型在拟合前频繁生成负体长或超过物理尺度数百倍的个体，先验与链接函数的组合就需要修改。Stan 的正式指南把先验预测明确为不条件于当前响应数据的生成检查。<sup id="fnref:stan-predictive-checks"><a class="footnote-ref" href="#fn:stan-predictive-checks">3</a></sup></p>
+<p data-block-end="3559" data-block-fingerprint="f634460d95bf71d53134" data-block-start="3382" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">用同一批响应数据反复调先验直至得到希望的后验，会把数据使用两次。经验贝叶斯（empirical Bayes）先由总体数据估计超参数再进行条件推断，是一种有用但不同的程序；其不确定性若被忽略，区间可能过窄。无论先验来自历史数据、专家量化、弱信息约束还是经验估计，都应说明来源，在若干科学上合理的先验下重复关键结论。先验敏感性用于检查数据究竟识别了多少信息。</p>
+<h2 data-block-end="3598" data-block-fingerprint="c0ea06a745a4a0a89931" data-block-start="3561" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="posterior-summaries">后验概括与可信区间<a class="headerlink" href="#posterior-summaries" title="Permanent link">&para;</a></h2>
+<p data-block-end="3870" data-block-fingerprint="b7b3fd5b30532bc8beb2" data-block-start="3600" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">后验均值与后验中位数分别对应平方损失和绝对损失下的贝叶斯估计。最大后验估计（maximum a posteriori estimate，MAP）则是在指定参数化下使后验密度达到全局最大值的位置。连续参数单点的后验概率通常为零，MAP 比较的是密度高度；非线性重参数化会通过雅可比行列式（Jacobian）改变密度及其众数。多峰后验可能含有多个局部众数或并列的全局众数，单次局部优化收敛只说明到达一个驻点。Stan 参考手册同样区分了受约束参数空间与含 Jacobian 的无约束空间中的众数。<sup id="fnref:stan-map-optimization"><a class="footnote-ref" href="#fn:stan-map-optimization">4</a></sup></p>
+<p data-block-end="3960" data-block-fingerprint="9ccb5f581f8f45519c3c" data-block-start="3872" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">对对称单峰分布，后验均值、中位数和众数可能接近；偏斜、多峰或边界后验需要连同分布形状呈现。报告应优先给出后验分布、分位数和科学尺度上的派生量，使中心估计与不确定性结构相互对应。</p>
+<p data-block-end="3981" data-block-fingerprint="59c50ec65bf59095de02" data-block-start="3962" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">后验概率可以直接表达模型内的命题，例如</p>
+<div class="arithmatex" data-block-end="4056" data-block-fingerprint="e7bf4e70b1ae6a4004a8" data-block-start="3983" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+P(\theta&gt;0\mid y)
+=\int_0^{\infty}p(\theta\mid y)\,\mathrm d\theta.
+\]</div>
+<p data-block-end="4161" data-block-fingerprint="0c067d7bc9eab6e68785" data-block-start="4058" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若关心效应是否超过最小生物学重要值 <span class="arithmatex">\(\delta\)</span>，就应计算 <span class="arithmatex">\(P(\theta&gt;\delta\mid y)\)</span> 或给出落在实际等效区间内的概率。阈值概率还应与效应大小、行动代价和决策后果一同报告。</p>
+<p data-block-end="4318" data-block-fingerprint="587a8445479253611b6f" data-block-start="4163" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">一个 <span class="arithmatex">\(100(1-\alpha)\%\)</span> 等尾可信区间截去后验两侧各 <span class="arithmatex">\(\alpha/2\)</span> 的概率；最高密度区间选择具有最高后验密度的区域。多峰后验的最高密度集合可能不连续，强行写成单一区间会把低密度谷地也包含进去。区间还依赖参数化：在风险比和 log 风险比尺度上先概括再变换，中心与对称性可能不同。</p>
+<p data-block-end="4478" data-block-fingerprint="e96ea2e8a6b25e6df4e8" data-block-start="4320" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">在模型、先验和观察数据给定后，95% 可信区间可解释为参数落入该区间的后验概率为 95%。频率学派 95% 置信区间的定义则是：在同一抽样程序反复运行时，所构造区间的长期覆盖率为 95%。二者在大样本正则模型中可能数值相近，但概率对象和校准方式不同。模型本身通常作为可信区间的条件；模型概率需要另设候选模型及其先验。</p>
+<h2 data-block-end="4518" data-block-fingerprint="d56f202206862f5422e8" data-block-start="4480" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="posterior-predictive">后验预测与模型检查<a class="headerlink" href="#posterior-predictive" title="Permanent link">&para;</a></h2>
+<p data-block-end="4553" data-block-fingerprint="0e3868ab80fd0f3d66f1" data-block-start="4520" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">未来或复制观察 <span class="arithmatex">\(\widetilde y\)</span> 的后验预测分布为</p>
+<div class="arithmatex" data-block-end="4648" data-block-fingerprint="745104d3371bc263b270" data-block-start="4555" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+p(\widetilde y\mid y)
+=\int p(\widetilde y\mid\theta)
+p(\theta\mid y)\,\mathrm d\theta.
+\]</div>
+<p data-block-end="4859" data-block-fingerprint="6a9ec5b9610e9a2ed996" data-block-start="4650" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">它把参数后验不确定性传播到新的观察层。Stan 用户指南以这一积分定义预测分布，并用后验抽样近似它。<sup id="fnref:stan-posterior-predictive"><a class="footnote-ref" href="#fn:stan-posterior-predictive">5</a></sup> 若有后验样本 <span class="arithmatex">\(\theta^{(1)},\ldots,\theta^{(M)}\)</span>，可对每个样本生成 <span class="arithmatex">\(\widetilde y^{(m)}\sim p(\widetilde y\mid\theta^{(m)})\)</span>，得到预测区间、事件概率和复杂派生量。</p>
+<p data-block-end="4990" data-block-fingerprint="37abbc5723b2d166c768" data-block-start="4861" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">后验预测检查把实际数据与这些复制数据比较。检查量应针对模型可能失败的方式，例如零值比例、极端尾部、组间差异、最大值、空间聚集或随时间的残差结构。若复制数据无法重现观察数据的关键特征，说明似然、链接、层级或观测过程存在缺口；它不直接告诉研究者应增加哪一个参数。</p>
+<p data-block-end="5131" data-block-fingerprint="9a6995c6e139ae40d9d0" data-block-start="4992" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">复制数据已经条件于观察数据，因此后验预测检验量具有不同于传统零假设 <em>p</em> 值的参照分布。模型若参数众多，也可能很好地重现用于拟合的特征而缺乏外部预测力。Gabry 等把先验预测、后验预测、计算诊断和模型比较组织为连续的可视化工作流。<sup id="fnref:gabry-visualization"><a class="footnote-ref" href="#fn:gabry-visualization">6</a></sup></p>
+<h2 data-block-end="5172" data-block-fingerprint="612bc72184882660ebd6" data-block-start="5133" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="bayesian-hierarchical">层级模型与部分汇聚<a class="headerlink" href="#bayesian-hierarchical" title="Permanent link">&para;</a></h2>
+<p data-block-end="5262" data-block-fingerprint="a04f9fe818ca5ca2a1fa" data-block-start="5174" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若多家医院、多个种群或多个实验批次各有一个效应 <span class="arithmatex">\(\theta_j\)</span>，完全汇聚模型令所有组共享同一效应，无汇聚模型则把各组完全独立估计。层级模型在两者之间建立总体分布，例如</p>
+<div class="arithmatex" data-block-end="5326" data-block-fingerprint="c306325f7e2c47d18cb2" data-block-start="5264" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+y_{ij}\mid\theta_j,\sigma
+\sim N(\theta_j,\sigma^2),
+\]</div>
+<div class="arithmatex" data-block-end="5370" data-block-fingerprint="6e65949b0d64fb18aa54" data-block-start="5327" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\theta_j\mid\mu,\tau
+\sim N(\mu,\tau^2).
+\]</div>
+<p data-block-end="5518" data-block-fingerprint="ed5da9c539477c7fcad3" data-block-start="5372" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">数据丰富的组主要由本组资料决定，数据稀少的组更多向总体均值 <span class="arithmatex">\(\mu\)</span> 收缩，收缩程度由组内不确定性与组间尺度 <span class="arithmatex">\(\tau\)</span> 共同决定。这种部分汇聚共享信息，又保留真实的组间差异；Stan 的层级回归说明明确把它置于完全汇聚和无汇聚之间。<sup id="fnref:stan-partial-pooling"><a class="footnote-ref" href="#fn:stan-partial-pooling">7</a></sup></p>
+<p data-block-end="5710" data-block-fingerprint="b1f0a1ac36b28faf88c4" data-block-start="5520" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">层级分布表达的是组效应在给定超参数后的交换性，允许各组具有生物学差异。若医院类型、物种谱系或处理批次有系统差异，应以预测变量、更高层结构或不同总体表示。组数很少时，<span class="arithmatex">\(\tau\)</span> 的似然信息有限，超先验会明显影响收缩；对方差尺度给任意近零逆伽马（inverse-gamma）先验可能产生不良行为，应在真实响应尺度上检查合理范围。<sup id="fnref:gelman-variance-priors"><a class="footnote-ref" href="#fn:gelman-variance-priors">8</a></sup></p>
+<p data-block-end="5889" data-block-fingerprint="b2b76e7bad53f0df1a32" data-block-start="5712" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">层级贝叶斯模型与<a href="../generalized_mixed_models/#linear-mixed-model">混合效应模型</a>描述同一种嵌套或交叉数据结构，但推断组织不同：后者常以最大似然或 REML 估计固定效应和方差分量，前者为它们指定联合先验并传播到后验预测。随机效应可以表达已观测的层级结构，实验单位错误和超出样本总体的推广仍需由设计证据解决。</p>
+<h2 data-block-end="5939" data-block-fingerprint="1387f96305517a84abfd" data-block-start="5891" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="monte-carlo-integration">从积分到 Monte Carlo<a class="headerlink" href="#monte-carlo-integration" title="Permanent link">&para;</a></h2>
+<p data-block-end="5953" data-block-fingerprint="f73590f956c57acfdf68" data-block-start="5941" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">后验期望通常是高维积分：</p>
+<div class="arithmatex" data-block-end="6030" data-block-fingerprint="774579351cee21108d61" data-block-start="5955" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+E\{g(\theta)\mid y\}
+=\int g(\theta)p(\theta\mid y)\,\mathrm d\theta.
+\]</div>
+<p data-block-end="6054" data-block-fingerprint="257fef734a32f9dc80f1" data-block-start="6032" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若能从后验独立抽取 <span class="arithmatex">\(M\)</span> 个样本，可用</p>
+<div class="arithmatex" data-block-end="6116" data-block-fingerprint="654cb63aa31e70e7ccab" data-block-start="6056" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\widehat E_M=
+\frac{1}{M}\sum_{m=1}^{M}g(\theta^{(m)})
+\]</div>
+<p data-block-end="6233" data-block-fingerprint="a47ec77c069655ad2a6c" data-block-start="6118" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">近似该积分。Monte Carlo 误差来自有限模拟次数；在独立、方差有限的情形下，其标准误大致随 <span class="arithmatex">\(1/\sqrt M\)</span> 缩小。模拟次数增加四倍，随机计算误差约减半。有限生物样本的后验不确定性和模型误差属于另外两类不确定性。</p>
+<p data-block-end="6437" data-block-fingerprint="10d802833fec473983d2" data-block-start="6235" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">低维、结构简单的后验可以用解析共轭、网格积分或数值求积。拒绝采样从易抽样的包络分布筛选样本，维数增大后接受率可能急剧下降。重要性采样从提议分布 <span class="arithmatex">\(q(\theta)\)</span> 抽样，再以 <span class="arithmatex">\(p(\theta\mid y)/q(\theta)\)</span> 加权；若提议分布没有覆盖后验尾部，少数巨大权重会支配结果。直接 Monte Carlo、重要性采样和 MCMC 都是积分方法，但样本独立性、权重和误差诊断不同。</p>
+<h2 data-block-end="6461" data-block-fingerprint="e8ddf101cba42e80a163" data-block-start="6439" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="mcmc">马尔可夫链蒙特卡洛<a class="headerlink" href="#mcmc" title="Permanent link">&para;</a></h2>
+<h3 data-block-end="6493" data-block-fingerprint="572724d583a92b042f3a" data-block-start="6463" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="metropolishastings">Metropolis–Hastings 与吉布斯采样<a class="headerlink" href="#metropolishastings" title="Permanent link">&para;</a></h3>
+<p data-block-end="6662" data-block-fingerprint="dadfb5705d0746c1aa06" data-block-start="6495" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">MCMC 构造一个以目标后验为平稳分布的马尔可夫（Markov）链。时间平均收敛到后验期望还要求链能够到达目标分布的所有相关区域，并具有适当的遍历性质。Metropolis–Hastings 算法从当前位置 <span class="arithmatex">\(\theta\)</span> 按提议分布 <span class="arithmatex">\(q(\theta'\mid\theta)\)</span> 产生候选 <span class="arithmatex">\(\theta'\)</span>，并以概率</p>
+<div class="arithmatex" data-block-end="6781" data-block-fingerprint="d28082ab6e05837ea5c4" data-block-start="6664" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\alpha=\min\left\{1,
+\frac{p(\theta'\mid y)q(\theta\mid\theta')}
+{p(\theta\mid y)q(\theta'\mid\theta)}
+\right\}
+\]</div>
+<p data-block-end="6893" data-block-fingerprint="ca6caca3e5838ab2222c" data-block-start="6783" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">接受候选。后验的归一化常数在比值中抵消，因此只需能计算未归一化密度。Hastings 的论文把早期 Metropolis 方法推广到非对称提议，并讨论了 Monte Carlo 误差评估。<sup id="fnref:hastings-1970"><a class="footnote-ref" href="#fn:hastings-1970">9</a></sup></p>
+<p data-block-end="7042" data-block-fingerprint="952dc305369ae32013d1" data-block-start="6895" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">吉布斯（Gibbs）采样依次从每个参数块的完全条件分布抽样，是 Metropolis–Hastings 的特殊情形。它在共轭或条件分布易抽样时很有效，但强相关参数会使链缓慢移动。数据增强、潜类别和缺失值模型常能写成 Gibbs 步骤；标签交换、近不可识别和高度相关几何仍需要专门约束或重参数化。</p>
+<h3 data-block-end="7061" data-block-fingerprint="d1988c0db47f0d9875f7" data-block-start="7044" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="nuts">哈密顿蒙特卡洛与 NUTS<a class="headerlink" href="#nuts" title="Permanent link">&para;</a></h3>
+<p data-block-end="7191" data-block-fingerprint="e7844e0f3ac1bfbcd48a" data-block-start="7063" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">随机游走提议在高维、强相关后验中会反复拒绝或只作很小移动。哈密顿蒙特卡洛（Hamiltonian Monte Carlo，HMC）引入辅助动量，利用 log 后验的梯度沿近似保持能量的轨迹远距离移动。步长太大会造成数值积分误差，步数太少又会退化为随机游走。</p>
+<p data-block-end="7364" data-block-fingerprint="4b0cf731eef845172a46" data-block-start="7193" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">无掉头采样器（No-U-Turn Sampler，NUTS）在轨迹开始折返时自动停止，并在预热（warmup）中适配步长和质量矩阵，减少人工指定轨迹长度。Hoffman 与 Gelman 的原始论文给出了这一自适应路径构造。<sup id="fnref:nuts-2014"><a class="footnote-ref" href="#fn:nuts-2014">10</a></sup> HMC/NUTS 适合连续可微参数；离散潜变量通常须边缘化，或改用能处理离散状态的采样方法。</p>
+<p data-block-end="7511" data-block-fingerprint="cfab0d5858ada3e5462e" data-block-start="7366" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">预热用于让链离开不合适的初值并适配算法参数，适配阶段的样本通常不进入后验概括。正式抽样应从多个分散初值启动独立链。模型维数、后验几何、自相关和所需尾部精度共同决定链数与迭代数。抽稀（thinning）会减少保存的样本，通常只在存储或后续计算成本确有需要时使用；有效样本量更直接衡量抽样效率。</p>
+<h2 data-block-end="7550" data-block-fingerprint="6e2fbcdbed1d17b00df1" data-block-start="7513" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="mcmc-diagnostics">MCMC 诊断与计算误差<a class="headerlink" href="#mcmc-diagnostics" title="Permanent link">&para;</a></h2>
+<p data-block-end="7793" data-block-fingerprint="13356548dc3a7ac70998" data-block-start="7552" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">轨迹图应显示各链在同一稳定区域内反复往返；持续漂移、长时间停滞或链间分离提示采样问题。秩归一化分裂 <span class="arithmatex">\(\widehat R\)</span> 比较链内与链间变异，并通过分链、秩变换和折叠提高对位置与尺度不收敛的敏感性。<span class="arithmatex">\(\widehat R\)</span> 接近 1 是必要条件之一；遍历多峰结构还需分散初值、轨迹和其他诊断共同支持，因为所有链可能困在同一个局部模式。Vehtari 等给出了现代 <span class="arithmatex">\(\widehat R\)</span> 及 bulk／tail 有效样本量的改进定义。<sup id="fnref:vehtari-rhat"><a class="footnote-ref" href="#fn:vehtari-rhat">11</a></sup></p>
+<p data-block-end="8028" data-block-fingerprint="72e2bcf4ac0b434d636e" data-block-start="7795" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">链内自相关使 <span class="arithmatex">\(M\)</span> 次 MCMC 迭代包含的信息少于 <span class="arithmatex">\(M\)</span> 次独立抽样。有效样本量（effective sample size，ESS）把这种依赖换算为等价独立样本数；bulk ESS 关注分布主体，tail ESS 关注分位数与尾概率。某个后验量 <span class="arithmatex">\(g(\theta)\)</span> 的蒙特卡洛标准误（Monte Carlo standard error，MCSE）应相对于该量的后验标准差和报告精度足够小。诊断必须针对实际报告的派生量，同时覆盖模型原始参数。</p>
+<p data-block-end="8221" data-block-fingerprint="2a61dee70ebc93ea93ad" data-block-start="8030" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">HMC 的 divergent transition 表示数值轨迹未能可靠穿过高曲率区域，常见于层级漏斗、弱识别或不合适参数化；达到最大树深则提示轨迹在停止前已耗尽允许深度。降低步长可能减少部分发散，更根本的处理常是缩放变量、提供合理先验或使用非中心参数化。Stan 参考手册把发散与后验曲率联系起来，并要求在解释样本前解决这些诊断。<sup id="fnref:stan-mcmc-diagnostics"><a class="footnote-ref" href="#fn:stan-mcmc-diagnostics">12</a></sup></p>
+<p data-block-end="8325" data-block-fingerprint="7ec9c65d75d2bcbda3d6" data-block-start="8223" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">计算诊断和模型诊断回答不同问题。链充分混合说明算法较好地抽取了所写模型的后验；似然中的零膨胀、层级或测量误差则由模型诊断评估。后验预测图呈现模型与数据的拟合特征，链是否进入所有高概率区域仍由采样诊断判断。</p>
+<h2 data-block-end="8363" data-block-fingerprint="4d126cf4f4e98e6f8bb6" data-block-start="8327" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="approximate-inference">近似后验计算<a class="headerlink" href="#approximate-inference" title="Permanent link">&para;</a></h2>
+<p data-block-end="8521" data-block-fingerprint="4f215cfb34198798ba74" data-block-start="8365" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">拉普拉斯（Laplace）近似在后验众数附近用二阶曲率构造高斯近似，适合单峰、近对称且局部曲率能代表全局形状的后验。偏斜、重尾、多峰、边界和弱识别问题会使近似失真；在高维中，Hessian 分解也可能昂贵。Stan 的正式实现是在无约束参数空间围绕众数建立近似，再变换回受约束尺度。<sup id="fnref:stan-laplace"><a class="footnote-ref" href="#fn:stan-laplace">13</a></sup></p>
+<p data-block-end="8591" data-block-fingerprint="93f85f481314f6eb258a" data-block-start="8523" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">变分推断选择一个易处理的分布族 <span class="arithmatex">\(q(\theta)\)</span>，通过优化使它接近目标后验。常用目标是最大化证据下界（ELBO），等价于最小化</p>
+<div class="arithmatex" data-block-end="8651" data-block-fingerprint="b461e7d80eaf31441d23" data-block-start="8593" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\operatorname{KL}\{q(\theta)\,\|\,p(\theta\mid y)\}.
+\]</div>
+<p data-block-end="8899" data-block-fingerprint="ff2cbd3c85d0ec42d8ab" data-block-start="8653" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">均值场（mean-field）近似把参数相关性全部断开，全秩高斯（full-rank Gaussian）可保留线性相关，但表达任意偏斜和多峰的能力仍有限。自动微分变分推断（automatic differentiation variational inference，ADVI）用自动微分与随机梯度优化证据下界（evidence lower bound，ELBO），速度通常快于完整 MCMC；其目标倾向避免把质量放到后验低密度处，因而可能漏掉模式或低估尾部不确定性。<sup id="fnref:advi-2017"><a class="footnote-ref" href="#fn:advi-2017">14</a></sup></p>
+<p data-block-end="9043" data-block-fingerprint="79720e4ffbbad24e1d75" data-block-start="8901" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">优化收敛说明近似族中的目标已趋于稳定，<span class="arithmatex">\(q\)</span> 与真实后验的接近程度还应通过模拟资料、少量可承受的高质量 MCMC、重要性修正、预测检查或基于模拟的校准来检验。算法选择是精度、计算量与研究目的之间的权衡；用于探索候选模型的近似若要支持尾概率、极端风险或高代价决策，需要相应精度验证。</p>
+<h2 data-block-end="9089" data-block-fingerprint="43a6f1ff7d1f5697e3b4" data-block-start="9045" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="bayesian-model-comparison">模型比较、证据与决策<a class="headerlink" href="#bayesian-model-comparison" title="Permanent link">&para;</a></h2>
+<p data-block-end="9137" data-block-fingerprint="43bc303c960d1994b5e2" data-block-start="9091" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">两个模型 <span class="arithmatex">\(M_1\)</span> 与 <span class="arithmatex">\(M_0\)</span> 的 Bayes factor 是边缘似然之比：</p>
+<div class="arithmatex" data-block-end="9187" data-block-fingerprint="05c81ed9792460925f01" data-block-start="9139" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+BF_{10}=\frac{p(y\mid M_1)}{p(y\mid M_0)}.
+\]</div>
+<p data-block-end="9389" data-block-fingerprint="3ae80da3c6e9a8d1e229" data-block-start="9189" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">它把先验模型优势更新为后验模型优势。边缘似然会对每个模型的整个参数先验空间积分，因此 Bayes factor 对备择模型下参数先验的尺度和尾部十分敏感；不正规先验还会使它未定义。Kass 与 Raftery 的综述在介绍 Bayes factor 的同时明确要求评估先验敏感性。<sup id="fnref:kass-raftery-1995"><a class="footnote-ref" href="#fn:kass-raftery-1995">15</a></sup> 后验模型概率以列入比较的候选集合与模型先验为条件，表示候选集合内部的相对支持。</p>
+<p data-block-end="9740" data-block-fingerprint="82bed4d51e889975c883" data-block-start="9391" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若目标是预测新数据，可比较留出数据上的后验预测密度。留一交叉验证（leave-one-out cross-validation，LOO）逐个留下独立信息单位，Pareto 平滑重要性抽样留一法（Pareto-smoothed importance sampling LOO，PSIS-LOO）用平滑重要性权重近似重复拟合，并以 Pareto <span class="arithmatex">\(k\)</span> 诊断识别不可靠的近似和高影响观察。Vehtari、Gelman 与 Gabry 系统比较了 LOO、广泛适用信息准则（widely applicable information criterion，WAIC）与有限样本稳定性。<sup id="fnref:psis-loo"><a class="footnote-ref" href="#fn:psis-loo">16</a></sup> 时间、空间、家系和重复测量资料应按未来应用场景留组、留时间段或留个体，以保持相关记录的整体性。</p>
+<p data-block-end="9889" data-block-fingerprint="4cfafb4cf3295acf72ac" data-block-start="9742" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">若多个模型代表不同但合理的机制，可报告关键结论在模型间的变化，或按外部预测表现进行模型平均与堆叠（stacking）。决策还需指定可选行动 <span class="arithmatex">\(a\)</span> 与损失 <span class="arithmatex">\(L(a,\theta)\)</span>，选择使后验期望损失最小的行动。不同漏诊与误诊代价、保护性管理和资源约束，可能让同一个后验支持不同决策。</p>
+<h2 data-block-end="9935" data-block-fingerprint="6c4512061552044e36c8" data-block-start="9891" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="computational-statistics">自助法、置换与模拟研究<a class="headerlink" href="#computational-statistics" title="Permanent link">&para;</a></h2>
+<p data-block-end="9962" data-block-fingerprint="5d8a1a03f06f486363d1" data-block-start="9937" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">计算统计的多个方法都使用重复抽样，但抽样对象不同。</p>
+<ul data-block-end="10332" data-block-fingerprint="36ec27cd4215533de41b" data-block-start="9964" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">
+<li>非参数自助法（bootstrap）从原样本的经验分布有放回重抽，近似估计量在重复抽样下的分布；参数 bootstrap 从拟合模型生成资料。重抽样单位必须与独立信息单位一致，区块、整群和配对结构需要作为整体抽取。本章的<a href="../sampling_estimation/#bootstrap">抽样与估计页面</a>已讲解区间类型与重抽样层级。</li>
+<li>置换检验在零假设和研究设计允许的可交换标签中重排，构造检验统计量的参照分布。随机分派、配对、区组与时间结构决定允许怎样重排，详见<a href="../categorical_nonparametric/#permutation-tests">置换检验</a>。</li>
+<li>普通 Monte Carlo 从指定概率模型独立模拟，近似积分、概率或方法表现；MCMC 则用相关的 Markov 链样本近似难以直接抽样的目标分布。</li>
+</ul>
+<p data-block-end="10459" data-block-fingerprint="91cac118f10299c52323" data-block-start="10334" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">这些模拟利用既有样本或指定模型，不会扩大原样本覆盖的物种、批次或环境范围。增加 bootstrap 重复次数会减小区间端点的计算波动，增加 MCMC 迭代会减小后验概括的计算误差；抽样不确定性、模型不确定性和 Monte Carlo 误差应分别呈现。</p>
+<p data-block-end="10612" data-block-fingerprint="f94e37fb797716822f72" data-block-start="10461" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">模拟研究可在已知参数 <span class="arithmatex">\(\theta_0\)</span> 下反复生成数据、拟合完整流程，再检查偏差、区间覆盖率、预测校准、错误率和失败率。参数恢复先回答“在这个模型生成的数据上，方法能否找回已知值”，再去解释真实数据。若只模拟容易收敛的参数区、丢弃拟合失败的重复或用生成模型本身作为唯一分析模型，结果会过度乐观。</p>
+<p data-block-end="10793" data-block-fingerprint="50fd93d0192c2bfa1ec4" data-block-start="10614" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">基于模拟的校准（simulation-based calibration，SBC）进一步从先验抽取参数并生成数据，对每个模拟数据集计算后验，再检查真实模拟参数在后验样本中的秩是否符合校准分布。它能发现推断算法和模型实现错误；模型对现实数据的适合程度仍需后验预测和外部证据检验。Talts 等将 SBC 发展为验证贝叶斯计算的通用程序。<sup id="fnref:talts-sbc"><a class="footnote-ref" href="#fn:talts-sbc">17</a></sup></p>
+<p data-block-end="10853" data-block-fingerprint="c0135d7c1f392e54c2f9" data-block-start="10795" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">有限模拟次数也有可量化误差。例如以 <span class="arithmatex">\(B\)</span> 次独立模拟估计概率 <span class="arithmatex">\(p\)</span>，Monte Carlo 标准误近似为</p>
+<div class="arithmatex" data-block-end="10942" data-block-fingerprint="4dfa6d9d1afa56c16491" data-block-start="10855" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">\[
+\operatorname{MCSE}(\widehat p)
+\approx\sqrt{\frac{\widehat p(1-\widehat p)}{B}}.
+\]</div>
+<p data-block-end="11016" data-block-fingerprint="8e3260e38e5b4b1e4d7e" data-block-start="10944" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">应根据所需精度选择 <span class="arithmatex">\(B\)</span>，报告随机种子、伪随机数生成器或软件版本、失败重复及其处理，并为模拟频率给出相应的 Monte Carlo 误差。</p>
+<h2 data-block-end="11055" data-block-fingerprint="cb8f6adb3256b7c2b030" data-block-start="11018" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="bayesian-workflow">贝叶斯工作流与完整报告<a class="headerlink" href="#bayesian-workflow" title="Permanent link">&para;</a></h2>
+<p data-block-end="11174" data-block-fingerprint="1fee500b8b700229b525" data-block-start="11057" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">一项贝叶斯分析从研究问题和待估量开始。先用生成过程明确观察单位、条件独立、测量误差、缺失与选择机制；再为每个参数指定有尺度含义的先验，运行先验预测检查。复杂模型应先在模拟数据上做参数恢复，确认实现、识别性和计算流程，然后拟合真实数据。</p>
+<p data-block-end="11421" data-block-fingerprint="3992c00b853f2ce4cbec" data-block-start="11176" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">拟合后先处理计算诊断：多链轨迹、rank-normalized <span class="arithmatex">\(\widehat R\)</span>、bulk／tail ESS、MCSE，以及 HMC 的发散、树深和能量诊断。随后进行后验预测检查，比较关键生物学特征；对结论重要的先验、似然、链接、缺失机制和模型结构进行敏感性分析。需要外部预测或模型比较时，再采用符合推广单位的留出验证或 LOO。Bayesian workflow 文献把模型构造、计算诊断、检查、理解与比较视为反复迭代而非一次线性拟合。<sup id="fnref:bayesian-workflow"><a class="footnote-ref" href="#fn:bayesian-workflow">18</a></sup></p>
+<p data-block-end="11640" data-block-fingerprint="0a1d51ca3bf7a25d9548" data-block-start="11423" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational">报告至少应包括采样模型与层级、参数化、先验及其来源、先验预测检查、软件和算法、链数、warmup 与正式抽样、诊断结果、后验效应与可信区间、科学阈值概率、后验预测检查和敏感性分析。若使用近似推断、Bayes factor、LOO、SBC 或模拟研究，应另报近似族、模型先验、留出单位、Pareto 诊断、模拟生成机制与 Monte Carlo 误差。代码、数据处理和随机种子使计算可重现，但科学结论的重复仍需独立数据和新的生物学研究。</p>
+<h2 data-block-end="15172" data-block-fingerprint="2f4fcc71c3e9a7db28ff" data-block-start="11642" data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425" data-hanabio-comments="block" data-hanabio-page-id="hb-biostat-bayesian-computational" id="_4">参考资料与延伸阅读<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:stan-conjugacy">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/2_28/stan-users-guide/exploiting-conjugacy.html">Exploiting conjugacy</a>. <em>Stan User’s Guide</em>.&#160;<a class="footnote-backref" href="#fnref:stan-conjugacy" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:prior-likelihood-context">
+<p>Gelman, A., Simpson, D. &amp; Betancourt, M. (2017). <a href="https://doi.org/10.3390/e19100555">The Prior Can Often Only Be Understood in the Context of the Likelihood</a>. <em>Entropy</em>, 19, 555.&#160;<a class="footnote-backref" href="#fnref:prior-likelihood-context" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stan-predictive-checks">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/stan-users-guide/posterior-predictive-checks.html">Posterior and Prior Predictive Checks</a>. <em>Stan User’s Guide</em>.&#160;<a class="footnote-backref" href="#fnref:stan-predictive-checks" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stan-map-optimization">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/reference-manual/optimization.html">Optimization</a>. <em>Stan Reference Manual</em>.&#160;<a class="footnote-backref" href="#fnref:stan-map-optimization" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stan-posterior-predictive">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/stan-users-guide/posterior-prediction.html">Posterior Predictive Sampling</a>. <em>Stan User’s Guide</em>.&#160;<a class="footnote-backref" href="#fnref:stan-posterior-predictive" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gabry-visualization">
+<p>Gabry, J., Simpson, D., Vehtari, A., Betancourt, M. &amp; Gelman, A. (2019). <a href="https://doi.org/10.1111/rssa.12378">Visualization in Bayesian workflow</a>. <em>Journal of the Royal Statistical Society: Series A</em>, 182, 389–402.&#160;<a class="footnote-backref" href="#fnref:gabry-visualization" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stan-partial-pooling">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/2_26/stan-users-guide/hierarchical-logistic-regression.html">Hierarchical logistic regression</a>. <em>Stan User’s Guide</em>.&#160;<a class="footnote-backref" href="#fnref:stan-partial-pooling" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gelman-variance-priors">
+<p>Gelman, A. (2006). <a href="https://doi.org/10.1214/06-BA117A">Prior distributions for variance parameters in hierarchical models</a>. <em>Bayesian Analysis</em>, 1, 515–534.&#160;<a class="footnote-backref" href="#fnref:gelman-variance-priors" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:hastings-1970">
+<p>Hastings, W. K. (1970). <a href="https://doi.org/10.1093/biomet/57.1.97">Monte Carlo sampling methods using Markov chains and their applications</a>. <em>Biometrika</em>, 57, 97–109.&#160;<a class="footnote-backref" href="#fnref:hastings-1970" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nuts-2014">
+<p>Hoffman, M. D. &amp; Gelman, A. (2014). <a href="https://www.jmlr.org/papers/v15/hoffman14a.html">The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo</a>. <em>Journal of Machine Learning Research</em>, 15, 1593–1623.&#160;<a class="footnote-backref" href="#fnref:nuts-2014" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:vehtari-rhat">
+<p>Vehtari, A., Gelman, A., Simpson, D., Carpenter, B. &amp; Bürkner, P.-C. (2021). <a href="https://doi.org/10.1214/20-BA1221">Rank-Normalization, Folding, and Localization: An Improved <span class="arithmatex">\(\widehat R\)</span> for Assessing Convergence of MCMC</a>. <em>Bayesian Analysis</em>, 16, 667–718.&#160;<a class="footnote-backref" href="#fnref:vehtari-rhat" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stan-mcmc-diagnostics">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/reference-manual/mcmc.html">MCMC Sampling</a>. <em>Stan Reference Manual</em>.&#160;<a class="footnote-backref" href="#fnref:stan-mcmc-diagnostics" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:stan-laplace">
+<p>Stan Development Team. <a href="https://mc-stan.org/docs/reference-manual/laplace.html">Laplace Approximation</a>. <em>Stan Reference Manual</em>.&#160;<a class="footnote-backref" href="#fnref:stan-laplace" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:advi-2017">
+<p>Kucukelbir, A., Tran, D., Ranganath, R., Gelman, A. &amp; Blei, D. M. (2017). <a href="https://www.jmlr.org/papers/v18/16-107.html">Automatic Differentiation Variational Inference</a>. <em>Journal of Machine Learning Research</em>, 18, 1–45.&#160;<a class="footnote-backref" href="#fnref:advi-2017" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:kass-raftery-1995">
+<p>Kass, R. E. &amp; Raftery, A. E. (1995). <a href="https://doi.org/10.1080/01621459.1995.10476572">Bayes Factors</a>. <em>Journal of the American Statistical Association</em>, 90, 773–795.&#160;<a class="footnote-backref" href="#fnref:kass-raftery-1995" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:psis-loo">
+<p>Vehtari, A., Gelman, A. &amp; Gabry, J. (2017). <a href="https://doi.org/10.1007/s11222-016-9696-4">Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC</a>. <em>Statistics and Computing</em>, 27, 1413–1432.&#160;<a class="footnote-backref" href="#fnref:psis-loo" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:talts-sbc">
+<p>Talts, S., Betancourt, M., Simpson, D., Vehtari, A. &amp; Gelman, A. (2020). <a href="https://proceedings.mlr.press/v108/talts20a.html">Validating Bayesian Inference Algorithms with Simulation-Based Calibration</a>. <em>Proceedings of AISTATS 2020</em>, 108, 2636–2646.&#160;<a class="footnote-backref" href="#fnref:talts-sbc" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:bayesian-workflow">
+<p>Gelman, A. et al. (2020). <a href="https://arxiv.org/abs/2011.01808">Bayesian Workflow</a>. arXiv:2011.01808.&#160;<a class="footnote-backref" href="#fnref:bayesian-workflow" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+    
+    <aside
+      class="md-source-file hb-page-revision"
+      data-source-path="docs/biostat/bayesian_computational.md"
+      data-revision-date="2026-08-17"
+    >
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="页面最近修订时间">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+        </span>
+        
+          最后修订于
+          <time datetime="2026-08-17T17:46:30+08:00">2026-08-17</time>
+          
+            <span aria-hidden="true">·</span>
+            <a href="https://github.com/ximiku/HanaBio-Archive/commits/main/docs/biostat/bayesian_computational.md">查看历史</a>
+          
+        
+      </span>
+    </aside>
+  
+  
+    
+    <div
+      class="hb-comments-root"
+      data-hanabio-page-id="hb-biostat-bayesian-computational"
+      data-build-revision="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+      data-paragraph-enabled="false"
+      data-comment-api-url=""
+      data-turnstile-site-key=""
+      data-giscus-enabled="false"
+      data-giscus-repo="ximiku&#x2f;HanaBio-Archive"
+      data-giscus-repo-id=""
+      data-giscus-category=""
+      data-giscus-category-id=""
+    >
+      
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../survival_longitudinal/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 生存分析与纵向数据">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                生存分析与纵向数据
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../causal_meta_analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: 因果推断">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                因果推断
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 by Ximiku67
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+  
+    
+    <div
+      class="hb-site-revision"
+      data-mode="public"
+      data-commit="5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"
+    >
+      
+        最近更新：<a href="https://github.com/ximiku/HanaBio-Archive/commit/5d4d2747cfc79f92dd3a9ccdf4789acb40f43425"><code>5d4d274</code></a>
+        <span aria-hidden="true">·</span>
+      
+      <time datetime="2026-08-19T11:06:35+08:00">2026-08-19 11:06</time>
+    </div>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/30710225" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.zhihu.com/people/jia-jia-77-45-25" target="_blank" rel="noopener" title="www.zhihu.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Zhihu</title><path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0zm1.964 4.078q-.408 1.096-.68 2.11h4.587c.545-.006.445 1.168.445 1.171H9.384a58 58 0 0 1-.112 3.797h2.712c.388.023.393 1.251.393 1.266H9.183a9.2 9.2 0 0 1-.408 2.102l.757-.604c.452.456 1.512 1.712 1.906 2.177.473.681.063 2.081.063 2.081l-2.794-3.382c-.653 2.518-1.845 3.607-1.845 3.607-.523.468-1.58.82-2.64.516 2.218-1.73 3.44-3.917 3.667-6.497H4.491c0-.015.197-1.243.806-1.266h2.71c.024-.32.086-3.254.086-3.797H6.598c-.136.406-.158.447-.268.753-.594 1.095-1.603 1.122-1.907 1.155.906-1.821 1.416-3.6 1.591-4.064.425-1.124 1.671-1.125 1.671-1.125M13.078 6h6.377v11.33h-2.573l-2.184 1.373-.401-1.373h-1.219zm1.313 1.219v8.86h.623l.263.937 1.455-.938h1.456v-8.86z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["navigation.tabs","navigation.path","navigation.prune","navigation.indexes","navigation.instant","navigation.instant.progress","navigation.top","navigation.footer","search.suggest","search.highlight","header.autohide","content.footnote.tooltips","content.code.copy","content.code.select","content.code.annotate"],"search":"../../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e886cdf1.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../js/tablesort.js"></script>
+      
+        <script src="../../js/comments.js"></script>
+      
+    
+  </body>
+</html>
