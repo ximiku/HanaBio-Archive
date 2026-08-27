@@ -24,6 +24,7 @@ def call(method: str, path: str, payload: bytes | None = None) -> dict:
         headers={
             "Authorization": f"Bearer {secret}",
             "Accept": "application/json",
+            "User-Agent": "HanaBio-Deploy/1.0 (+https://github.com/ximiku/HanaBio-Archive)",
             **({"Content-Type": "application/json"} if payload is not None else {}),
         },
     )
