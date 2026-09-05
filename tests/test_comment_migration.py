@@ -17,6 +17,31 @@ SPEC.loader.exec_module(MODULE)
 
 
 class CommentMigrationTests(unittest.TestCase):
+    def test_fetches_missing_deployed_commit_without_changing_checkout(self) -> None:
+        sha = "a" * 40
+        with patch.object(MODULE, "git", side_effect=[None, "", ""]) as git_call, \
+                patch.object(MODULE, "registry_for", return_value={"docs/index.md": "hb-home"}):
+            MODULE.ensure_published_revision(sha)
+        self.assertEqual(git_call.call_args_list[1].args,
+                         ("fetch", "--no-tags", "origin", sha))
+
+    def test_existing_revision_needs_no_fetch_and_invalid_ref_is_rejected(self) -> None:
+        with patch.object(MODULE, "git", return_value="") as git_call, \
+                patch.object(MODULE, "registry_for", return_value={"docs/index.md": "hb-home"}):
+            MODULE.ensure_published_revision("a" * 40)
+            self.assertFalse(any(call.args[0] == "fetch" for call in git_call.call_args_list))
+        with patch.object(MODULE, "git") as git_call:
+            with self.assertRaisesRegex(RuntimeError, "full 40-character"):
+                MODULE.ensure_published_revision("--upload-pack=bad")
+            git_call.assert_not_called()
+
+    def test_missing_registered_old_page_fails_closed(self) -> None:
+        registry = {"docs/index.md": "hb-home"}
+        with patch.object(MODULE, "registry_for", return_value=registry), \
+                patch.object(MODULE, "read_ref", side_effect=["# Home", None]):
+            with self.assertRaisesRegex(RuntimeError, "published page source is unavailable"):
+                MODULE.build_payload("a" * 40, "WORKTREE", "b" * 40)
+
     def test_unchanged_and_small_edits_are_reattached(self) -> None:
         old_source = "# Title\n\nA paragraph about ATP production.\n"
         new_source = "# Title\n\nA paragraph about cellular ATP production.\n"

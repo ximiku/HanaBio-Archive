@@ -553,6 +553,9 @@ theme:
     - content.code.select
     - content.code.annotate
 
+hooks:
+  - hanabio_site/mkdocs_comments.py
+
 plugins:
   - meta
   - search

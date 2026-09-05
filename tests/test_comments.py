@@ -3,6 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import patch
 
 import markdown
 
@@ -49,6 +51,22 @@ class CommentOffsetsTests(unittest.TestCase):
 
 
 class CommentRegistryTests(unittest.TestCase):
+    def test_mkdocs_pages_receive_distinct_registered_identities(self) -> None:
+        from hanabio_site.mkdocs_comments import on_page_markdown
+        from hanabio_site.metadata import ROOT
+
+        config = {"mdx_configs": {}}
+        with patch("hanabio_site.mkdocs_comments.is_public_build", return_value=False):
+            for path, expected in [("docs/index.md", "hb-home"),
+                                   ("docs/biochem/index.md", "hb-biochem")]:
+                page = SimpleNamespace(file=SimpleNamespace(abs_src_path=str(ROOT / path)), meta={})
+                source = "# Test\n\nParagraph."
+                self.assertEqual(on_page_markdown(source, page=page, config=config, files=None), source)
+                html = markdown.markdown(source, extensions=["hanabio_site.comments"],
+                                         extension_configs=config["mdx_configs"])
+                self.assertIn(f'data-hanabio-page-id="{expected}"', html)
+                self.assertEqual(page.meta["hanabio_comments"]["page_id"], expected)
+
     def test_rejects_duplicate_page_ids(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "comments.yml"

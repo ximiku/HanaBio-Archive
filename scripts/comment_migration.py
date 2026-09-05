@@ -184,6 +184,20 @@ def registry_for(ref: str) -> dict[str, str]:
     return dict(parsed.get("pages", {}))
 
 
+def ensure_published_revision(revision: str) -> None:
+    """Recover a deployed commit that an amend removed from branch history."""
+    if not revision:
+        return
+    if not re.fullmatch(r"[0-9a-f]{40}", revision):
+        raise RuntimeError("published revision must be a full 40-character commit SHA")
+    if git("cat-file", "-e", f"{revision}^{{commit}}", allow_failure=True) is None:
+        print(f"Fetching published comment revision {revision}")
+        git("fetch", "--no-tags", "origin", revision)
+    git("cat-file", "-e", f"{revision}^{{commit}}")
+    if not registry_for(revision):
+        raise RuntimeError("published revision has no comment registry; refusing an unsafe migration")
+
+
 def route_for(source_path: str) -> str:
     relative = source_path.removeprefix("docs/").removesuffix(".md")
     if relative == "index":
@@ -229,6 +243,8 @@ def build_payload(from_ref: str, to_ref: str, revision: str) -> dict[str, Any]:
             continue
         old_path = old_path_by_id.get(page_id, source_path)
         previous_source = read_ref(from_ref, old_path)
+        if previous_source is None and page_id in old_path_by_id:
+            raise RuntimeError(f"published page source is unavailable: {old_path}")
         if previous_source is None or previous_source == current_source:
             continue
         old_anchors = extract_anchors(previous_source, page_id, from_ref)
@@ -258,8 +274,12 @@ def main() -> None:
     parser.add_argument("--from-ref", default="")
     parser.add_argument("--to-ref", default="WORKTREE")
     parser.add_argument("--revision", help="Published 40-character revision; defaults to to-ref")
+    parser.add_argument("--fetch-missing-from-ref", action="store_true",
+                        help="Fetch the exact deployed SHA from origin if absent locally")
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
+    if args.fetch_missing_from_ref:
+        ensure_published_revision(args.from_ref)
     revision = args.revision or resolve_revision(args.to_ref)
     payload = build_payload(args.from_ref, args.to_ref, revision)
     args.output.write_text(
