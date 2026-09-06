@@ -10,10 +10,11 @@ permissions:
 
 concurrency:
   group: deploy-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-deploy:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       HANABIO_COMMENT_API_URL: ${{ vars.HANABIO_COMMENT_API_URL }}

@@ -54,6 +54,10 @@ export function safeReturnTo(value, env) {
   try {
     const url = new URL(value || env.SITE_URL);
     if (!allowedOrigins(env).has(url.origin)) return null;
+    if (url.username || url.password) return null;
+    const site = new URL(env.SITE_URL);
+    const base = site.pathname.replace(/\/$/, "");
+    if (url.origin === site.origin && url.pathname !== base && !url.pathname.startsWith(`${base}/`)) return null;
     if (url.protocol !== "https:" && !["localhost", "127.0.0.1"].includes(url.hostname)) return null;
     url.hash = "";
     return url.toString();

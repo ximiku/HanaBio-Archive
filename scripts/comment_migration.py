@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass
+from collections import Counter
 from difflib import SequenceMatcher
 from html.parser import HTMLParser
 import json
@@ -103,7 +104,15 @@ def map_anchors(old: list[Anchor], new: list[Anchor]) -> list[dict[str, Any]]:
         new_by_fingerprint.setdefault(anchor.fingerprint, []).append(anchor)
     used: set[tuple[int, int, str]] = set()
     mappings: list[dict[str, Any]] = []
+    old_counts = Counter(anchor.fingerprint for anchor in old)
+    processed: set[str] = set()
     for previous in old:
+        if previous.fingerprint in processed:
+            continue
+        processed.add(previous.fingerprint)
+        if old_counts[previous.fingerprint] > 1 or len(new_by_fingerprint.get(previous.fingerprint, [])) > 1:
+            mappings.append({"from_fingerprint": previous.fingerprint, "status": "orphaned", "to": None})
+            continue
         selected: Anchor | None = None
         exact = [
             anchor
@@ -250,6 +259,16 @@ def build_payload(from_ref: str, to_ref: str, revision: str) -> dict[str, Any]:
         old_anchors = extract_anchors(previous_source, page_id, from_ref)
         new_anchors = extract_anchors(current_source, page_id, revision)
         for mapping in map_anchors(old_anchors, new_anchors):
+            mappings.append({"page_id": page_id, **mapping})
+
+    current_ids = set(current_registry.values())
+    for page_id, old_path in old_path_by_id.items():
+        if page_id in current_ids:
+            continue
+        source = read_ref(from_ref, old_path)
+        if source is None:
+            raise RuntimeError(f"published page source is unavailable: {old_path}")
+        for mapping in map_anchors(extract_anchors(source, page_id, from_ref), []):
             mappings.append({"page_id": page_id, **mapping})
 
     return {

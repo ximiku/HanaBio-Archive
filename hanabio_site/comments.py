@@ -365,7 +365,7 @@ class CommentOffsetsBlockProcessor(BlockProcessor):
         offset_start = self.state.original_offsets[restored_start][1]
         offset_end = self.state.original_offsets[restored_end - 1][2]
 
-        if previous_len == parsed_len and parent:
+        if previous_len == parsed_len and len(parent):
             child = parent[-1]
             existing_start = child.get("data-block-start")
             if existing_start is None:

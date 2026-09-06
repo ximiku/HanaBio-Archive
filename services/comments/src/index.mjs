@@ -1,4 +1,4 @@
-import { bearerToken, hashRateKey, signToken, verifyToken } from "./security.mjs";
+import { bearerToken, hashRateKey, proofChallenge, signToken, verifyToken } from "./security.mjs";
 import {
   allowedOrigins,
   cleanBody,
@@ -36,8 +36,28 @@ function errorResponse(status, error) {
 async function requestJson(request) {
   const length = Number(request.headers.get("Content-Length") || 0);
   if (length > 1000000) throw Object.assign(new Error("请求体过大"), { status: 413 });
+  if (!(request.headers.get("Content-Type") || "").toLowerCase().startsWith("application/json")) {
+    throw Object.assign(new Error("请求体必须是 JSON"), { status: 415 });
+  }
+  const reader = request.body?.getReader();
+  const chunks = [];
+  let size = 0;
+  if (reader) {
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > 1000000) {
+        await reader.cancel();
+        throw Object.assign(new Error("请求体过大"), { status: 413 });
+      }
+      chunks.push(value);
+    }
+  }
   try {
-    return await request.json();
+    const value = JSON.parse(await new Blob(chunks).text());
+    if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("Invalid object");
+    return value;
   } catch (_error) {
     throw Object.assign(new Error("请求体必须是 JSON"), { status: 400 });
   }
@@ -50,6 +70,10 @@ function corsOrigin(request, env) {
 }
 
 function addCors(response, request, env) {
+  // Redirect responses have immutable headers in the Fetch runtime.
+  response = new Response(response.body, response);
+  response.headers.set("Vary", "Origin");
+  response.headers.set("Cache-Control", "no-store");
   const origin = corsOrigin(request, env);
   if (origin) {
     response.headers.set("Access-Control-Allow-Origin", origin);
@@ -68,7 +92,7 @@ function clientIp(request) {
 }
 
 async function rateKey(request, env) {
-  return hashRateKey(env.JWT_SECRET, `rate:${clientIp(request)}`);
+  return hashRateKey(env.JWT_SECRET, `rate:${nowIso().slice(0, 10)}:${clientIp(request)}`);
 }
 
 async function enforceRateLimit(request, env, action, limit, windowSeconds) {
@@ -92,7 +116,7 @@ async function enforceRateLimit(request, env, action, limit, windowSeconds) {
 }
 
 async function verifyTurnstile(request, env, token) {
-  if (typeof token !== "string" || !token) {
+  if (typeof token !== "string" || !token || token.length > 2048) {
     throw Object.assign(new Error("请完成人机验证"), { status: 400 });
   }
   const form = new FormData();
@@ -102,9 +126,11 @@ async function verifyTurnstile(request, env, token) {
   const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
     method: "POST",
     body: form,
+    signal: AbortSignal.timeout(10000),
   });
   const payload = await response.json();
-  if (!response.ok || !payload.success) {
+  const hostnames = new Set([...allowedOrigins(env)].map((origin) => new URL(origin).hostname));
+  if (!response.ok || !payload.success || !hostnames.has(payload.hostname)) {
     throw Object.assign(new Error("人机验证失败或已过期，请重试"), { status: 400 });
   }
 }
@@ -146,11 +172,16 @@ async function requireSession(request, env, { optional = false } = {}) {
   const token = bearerToken(request);
   if (!token && optional) return null;
   if (!token) throw Object.assign(new Error("请先选择访客或 GitHub 身份"), { status: 401 });
+  let session;
   try {
-    return await verifyToken(env.JWT_SECRET, token, { scope: "session" });
+    session = await verifyToken(env.JWT_SECRET, token, { scope: "session" });
   } catch (_error) {
     throw Object.assign(new Error("评论身份已失效，请重新验证"), { status: 401 });
   }
+  const commenter = await env.DB.prepare("SELECT * FROM commenters WHERE id = ?").bind(session.sub).first();
+  if (!commenter) throw Object.assign(new Error("评论身份已失效，请重新验证"), { status: 401 });
+  session.is_admin = commenter.kind === "github" && adminGithubIds(env).has(commenter.external_id);
+  return session;
 }
 
 async function requireAdmin(request, env) {
@@ -201,6 +232,11 @@ function adminGithubIds(env) {
 }
 
 async function githubStart(request, env) {
+  await enforceRateLimit(request, env, "github-start", 20, 600);
+  const challenge = new URL(request.url).searchParams.get("challenge");
+  if (!/^[A-Za-z0-9_-]{43}$/.test(challenge || "")) {
+    throw Object.assign(new Error("请从网站重新发起 GitHub 登录"), { status: 400 });
+  }
   const returnTo = safeReturnTo(new URL(request.url).searchParams.get("return_to"), env);
   if (!returnTo) throw Object.assign(new Error("登录返回地址不被允许"), { status: 400 });
   const state = crypto.randomUUID();
@@ -208,6 +244,8 @@ async function githubStart(request, env) {
   await env.DB.prepare(
     "INSERT INTO oauth_states(state, return_to, created_at, expires_at) VALUES (?, ?, ?, ?)",
   ).bind(state, returnTo, createdAt, futureIso(600)).run();
+  await env.DB.prepare("INSERT INTO oauth_proofs(state, challenge, expires_at) VALUES (?, ?, ?)")
+    .bind(state, challenge, futureIso(600)).run();
   const callback = new URL("/v1/auth/github/callback", request.url).toString();
   const authorize = new URL("https://github.com/login/oauth/authorize");
   authorize.searchParams.set("client_id", env.GITHUB_CLIENT_ID);
@@ -222,12 +260,12 @@ async function githubCallback(request, env) {
   const stateValue = url.searchParams.get("state") || "";
   const code = url.searchParams.get("code") || "";
   const state = await env.DB.prepare(
-    "SELECT * FROM oauth_states WHERE state = ? AND expires_at > ?",
+    "DELETE FROM oauth_states WHERE state = ? AND expires_at > ? RETURNING *",
   ).bind(stateValue, nowIso()).first();
   if (!state || !code) throw Object.assign(new Error("GitHub 登录状态无效或已过期"), { status: 400 });
-  await env.DB.prepare("DELETE FROM oauth_states WHERE state = ?").bind(stateValue).run();
 
   const tokenResponse = await fetch("https://github.com/login/oauth/access_token", {
+    signal: AbortSignal.timeout(10000),
     method: "POST",
     headers: { "Accept": "application/json", "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -241,6 +279,7 @@ async function githubCallback(request, env) {
     throw Object.assign(new Error("GitHub 授权交换失败"), { status: 502 });
   }
   const userResponse = await fetch("https://api.github.com/user", {
+    signal: AbortSignal.timeout(10000),
     headers: {
       "Accept": "application/vnd.github+json",
       "Authorization": `Bearer ${tokenPayload.access_token}`,
@@ -276,6 +315,8 @@ async function githubCallback(request, env) {
   await env.DB.prepare(
     "INSERT INTO auth_exchanges(code, session_json, created_at, expires_at) VALUES (?, ?, ?, ?)",
   ).bind(exchangeCode, JSON.stringify(session), timestamp, futureIso(60)).run();
+  await env.DB.prepare("UPDATE oauth_proofs SET exchange_code = ?, expires_at = ? WHERE state = ?")
+    .bind(exchangeCode, futureIso(60), stateValue).run();
   const returnUrl = new URL(state.return_to);
   returnUrl.hash = `comment-auth=${encodeURIComponent(exchangeCode)}`;
   return Response.redirect(returnUrl.toString(), 302);
@@ -283,11 +324,17 @@ async function githubCallback(request, env) {
 
 async function githubExchange(request, env) {
   const body = await requestJson(request);
+  let challenge;
+  try { challenge = await proofChallenge(body.verifier); } catch (_error) {
+    throw Object.assign(new Error("登录浏览器验证失败，请重新登录"), { status: 400 });
+  }
   const row = await env.DB.prepare(
-    "SELECT * FROM auth_exchanges WHERE code = ? AND expires_at > ?",
-  ).bind(body.code || "", nowIso()).first();
+    `DELETE FROM auth_exchanges WHERE code = ? AND expires_at > ?
+     AND EXISTS (SELECT 1 FROM oauth_proofs WHERE exchange_code = auth_exchanges.code AND challenge = ? AND expires_at > ?)
+     RETURNING *`,
+  ).bind(body.code || "", nowIso(), challenge, nowIso()).first();
   if (!row) throw Object.assign(new Error("GitHub 登录交换码无效或已过期"), { status: 400 });
-  await env.DB.prepare("DELETE FROM auth_exchanges WHERE code = ?").bind(body.code).run();
+  await env.DB.prepare("DELETE FROM oauth_proofs WHERE exchange_code = ?").bind(body.code).run();
   return responseJson({ session: JSON.parse(row.session_json) });
 }
 
@@ -301,13 +348,12 @@ async function listComments(request, env, pageId) {
   ).bind(pageId).all();
   const rows = threadsResult.results || [];
   if (!rows.length) return responseJson({ page_id: pageId, threads: [] });
-  const placeholders = rows.map(() => "?").join(",");
   const commentsResult = await env.DB.prepare(
     `SELECT c.*, u.id AS author_id, u.display_name, u.avatar_url, u.profile_url, u.verified, u.is_admin
-     FROM comments c JOIN commenters u ON u.id = c.commenter_id
-     WHERE c.thread_id IN (${placeholders}) AND (c.status != 'hidden' OR ? = 1)
+     FROM comments c JOIN commenters u ON u.id = c.commenter_id JOIN threads t ON t.id = c.thread_id
+     WHERE t.page_id = ? AND (c.status != 'hidden' OR ? = 1)
      ORDER BY c.created_at ASC`,
-  ).bind(...rows.map((row) => row.id), session?.is_admin ? 1 : 0).all();
+  ).bind(pageId, session?.is_admin ? 1 : 0).all();
   const byThread = new Map(rows.map((row) => [row.id, []]));
   for (const row of commentsResult.results || []) {
     byThread.get(row.thread_id)?.push({
@@ -402,11 +448,24 @@ async function createComment(request, env) {
   }
   const commentBody = cleanBody(body.body);
   if (!commentBody) throw Object.assign(new Error("评论需为 1–2000 字纯文本，且最多包含 5 个链接"), { status: 400 });
+  if (body.request_id !== undefined && !/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/.test(body.request_id)) {
+    throw Object.assign(new Error("提交标识非法"), { status: 400 });
+  }
+  const commentId = body.request_id || crypto.randomUUID();
+  const previous = await env.DB.prepare(
+    "SELECT c.commenter_id, c.body, t.page_id FROM comments c JOIN threads t ON t.id = c.thread_id WHERE c.id = ?",
+  ).bind(commentId).first();
+  if (previous) {
+    if (previous.commenter_id !== session.sub || previous.body !== commentBody || previous.page_id !== body.page_id) {
+      throw Object.assign(new Error("提交标识已使用，请重新撰写评论"), { status: 409 });
+    }
+    return responseJson({ status: "created", id: commentId }, 201);
+  }
   await enforceRateLimit(request, env, "comment", 30, 86400);
-  await consumeWriteGrant(request, env, session, body.write_grant);
   const page = await env.DB.prepare("SELECT page_id FROM pages WHERE page_id = ?").bind(body.page_id).first();
   if (!page) throw Object.assign(new Error("评论服务中尚未登记此页面"), { status: 409 });
   const resolved = await resolveAnchor(env, body.page_id, body.build_revision, body.anchor);
+  await consumeWriteGrant(request, env, session, body.write_grant);
   const timestamp = nowIso();
   let thread = await env.DB.prepare(
     "SELECT id FROM threads WHERE page_id = ? AND anchor_fingerprint = ? AND status = ?",
@@ -429,10 +488,14 @@ async function createComment(request, env) {
   }
   if (!thread?.id) throw new Error("无法创建评论线程");
   await env.DB.prepare(
-    `INSERT INTO comments(id, thread_id, commenter_id, body, status, version, created_at)
+    `INSERT OR IGNORE INTO comments(id, thread_id, commenter_id, body, status, version, created_at)
      VALUES (?, ?, ?, ?, 'published', 1, ?)`,
-  ).bind(crypto.randomUUID(), thread.id, session.sub, commentBody, timestamp).run();
-  return responseJson({ status: "created" }, 201);
+  ).bind(commentId, thread.id, session.sub, commentBody, timestamp).run();
+  const inserted = await env.DB.prepare("SELECT commenter_id, body, thread_id FROM comments WHERE id = ?").bind(commentId).first();
+  if (inserted?.commenter_id !== session.sub || inserted.body !== commentBody || inserted.thread_id !== thread.id) {
+    throw Object.assign(new Error("提交标识已使用，请重新撰写评论"), { status: 409 });
+  }
+  return responseJson({ status: "created", id: commentId }, 201);
 }
 
 async function commentRecord(env, id) {
@@ -530,15 +593,19 @@ function validateDeployPayload(body) {
   if (!Array.isArray(body.pages) || body.pages.length > 2000) return false;
   if (!Array.isArray(body.mappings) || body.mappings.length > 10000) return false;
   for (const page of body.pages) {
+    if (!page || typeof page !== "object") return false;
     if (!validatePageId(page.page_id) || typeof page.path !== "string" || !page.path || page.path.length > 500 ||
         typeof page.title !== "string" || !page.title || page.title.length > 300) return false;
   }
   for (const mapping of body.mappings) {
+    if (!mapping || typeof mapping !== "object") return false;
     if (!validatePageId(mapping.page_id) || !FINGERPRINT_PATTERN.test(mapping.from_fingerprint || "") ||
         !["active", "orphaned"].includes(mapping.status)) return false;
     if (mapping.status === "active" && !validateAnchor(mapping.to)) return false;
     if (mapping.status === "orphaned" && mapping.to != null) return false;
   }
+  if (new Set(body.pages.map((page) => page.page_id)).size !== body.pages.length) return false;
+  if (new Set(body.mappings.map((mapping) => `${mapping.page_id}:${mapping.from_fingerprint}`)).size !== body.mappings.length) return false;
   return true;
 }
 
@@ -576,15 +643,24 @@ async function activateDeploy(request, env) {
   if (!(await verifyDeploySecret(request, env))) throw Object.assign(new Error("部署认证失败"), { status: 401 });
   const body = await requestJson(request);
   if (!validateRevision(body.revision)) throw Object.assign(new Error("部署版本非法"), { status: 400 });
+  const current = await env.DB.prepare("SELECT current_revision FROM site_state WHERE id = 1").first();
+  if (current?.current_revision === body.revision) return responseJson({ status: "activated", revision: body.revision });
   const pending = await env.DB.prepare(
     "SELECT * FROM pending_deploys WHERE revision = ? AND expires_at > ?",
   ).bind(body.revision, nowIso()).first();
   if (!pending) throw Object.assign(new Error("找不到待激活迁移或迁移已过期"), { status: 404 });
   const payload = JSON.parse(pending.payload_json);
+  if ((current?.current_revision || "") !== (payload.from_revision || "")) {
+    throw Object.assign(new Error("站点版本已变化，请重新准备迁移"), { status: 409 });
+  }
   const pagesJson = JSON.stringify(payload.pages);
   const mappingsJson = JSON.stringify(payload.mappings);
   const timestamp = nowIso();
   await env.DB.batch([
+    // The existing id=1 CHECK makes this a transaction-local compare-and-swap.
+    // A concurrent activation rolls the entire batch back rather than overwriting it.
+    env.DB.prepare("UPDATE site_state SET id = CASE WHEN current_revision IS ? THEN 1 ELSE 0 END WHERE id = 1")
+      .bind(current?.current_revision || null),
     env.DB.prepare(
       `INSERT INTO pages(page_id, path, title, created_at, updated_at)
        SELECT json_extract(value, '$.page_id'), json_extract(value, '$.path'),
@@ -622,18 +698,18 @@ async function activateDeploy(request, env) {
              AND json_extract(value, '$.from_fingerprint') = threads.anchor_fingerprint
              AND json_extract(value, '$.status') = 'active'),
          updated_revision = ?, updated_at = ?
-       WHERE EXISTS (SELECT 1 FROM json_each(?)
+       WHERE status = 'active' AND EXISTS (SELECT 1 FROM json_each(?)
          WHERE json_extract(value, '$.page_id') = threads.page_id
            AND json_extract(value, '$.from_fingerprint') = threads.anchor_fingerprint
            AND json_extract(value, '$.status') = 'active')`,
     ).bind(mappingsJson, mappingsJson, mappingsJson, mappingsJson, payload.revision, timestamp, mappingsJson),
     env.DB.prepare(
       `UPDATE threads SET status = 'orphaned', updated_revision = ?, updated_at = ?
-       WHERE EXISTS (SELECT 1 FROM json_each(?)
+       WHERE status = 'active' AND updated_revision != ? AND EXISTS (SELECT 1 FROM json_each(?)
          WHERE json_extract(value, '$.page_id') = threads.page_id
            AND json_extract(value, '$.from_fingerprint') = threads.anchor_fingerprint
            AND json_extract(value, '$.status') = 'orphaned')`,
-    ).bind(payload.revision, timestamp, mappingsJson),
+    ).bind(payload.revision, timestamp, payload.revision, mappingsJson),
     env.DB.prepare(
       `UPDATE site_state SET previous_revision = current_revision, current_revision = ?,
        transition_until = ?, updated_at = ? WHERE id = 1`,
@@ -681,6 +757,7 @@ async function cleanup(env) {
   const grantCutoff = new Date(Date.now() - 7 * 86400000).toISOString();
   await env.DB.batch([
     env.DB.prepare("DELETE FROM oauth_states WHERE expires_at <= ?").bind(now),
+    env.DB.prepare("DELETE FROM oauth_proofs WHERE expires_at <= ?").bind(now),
     env.DB.prepare("DELETE FROM auth_exchanges WHERE expires_at <= ?").bind(now),
     env.DB.prepare("DELETE FROM pending_deploys WHERE expires_at <= ?").bind(now),
     env.DB.prepare("DELETE FROM rate_limits WHERE expires_at <= ?").bind(now),

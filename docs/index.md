@@ -55,7 +55,7 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 **HanaBio Archive** | 花火生物档案，**Hanabi** 是日语“花火”的罗马音，后加 o 构成 **Bio**，**Archive** 则参考了*蔚蓝档案*的名字（~~Bio Archive也是BA~~）。
 
-本站现在还在初始搭建阶段，如果你对本站有任何问题或建议，非常欢迎提交 [issue](https://github.com/ximiku/HanaBio-Archive/issues) 进行讨论；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系我的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。（不久后可能会上线 giscus 评论系统，敬请期待喵～）
+本站现在还在初始搭建阶段，如果你对本站有任何问题或建议，非常欢迎在页尾或右侧的评论区交流，也可以提交 [issue](https://github.com/ximiku/HanaBio-Archive/issues)；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系我的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。
 
 如果你认为本站对你有帮助，可以给[仓库](https://github.com/ximiku/HanaBio-Archive)点个 star，或者在 [Discussions](https://github.com/ximiku/HanaBio-Archive/discussions) 留下你的足迹~
 

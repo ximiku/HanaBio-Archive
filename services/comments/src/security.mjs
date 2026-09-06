@@ -41,7 +41,7 @@ export async function signToken(secret, claims, ttlSeconds, nowSeconds = Math.fl
 }
 
 export async function verifyToken(secret, token, options = {}, nowSeconds = Math.floor(Date.now() / 1000)) {
-  if (typeof token !== "string") throw new Error("Invalid token");
+  if (!secret || typeof token !== "string" || token.length > 8192) throw new Error("Invalid token");
   const parts = token.split(".");
   if (parts.length !== 3) throw new Error("Invalid token");
   const expected = await hmac(secret, `${parts[0]}.${parts[1]}`);
@@ -59,14 +59,21 @@ export async function verifyToken(secret, token, options = {}, nowSeconds = Math
   if (mismatch) throw new Error("Invalid token");
   let payload;
   try {
+    const header = JSON.parse(base64UrlToText(parts[0]));
+    if (header.alg !== "HS256" || header.typ !== "JWT") throw new Error("Invalid token");
     payload = JSON.parse(base64UrlToText(parts[1]));
   } catch (_error) {
     throw new Error("Invalid token");
   }
-  if (!Number.isInteger(payload.exp) || payload.exp <= nowSeconds) throw new Error("Expired token");
-  if (payload.iat > nowSeconds + 60) throw new Error("Invalid token time");
+  if (!payload || !Number.isInteger(payload.exp) || payload.exp <= nowSeconds) throw new Error("Expired token");
+  if (!Number.isInteger(payload.iat) || payload.iat > nowSeconds + 60 || payload.iat >= payload.exp) throw new Error("Invalid token time");
   if (options.scope && payload.scope !== options.scope) throw new Error("Invalid token scope");
   return payload;
+}
+
+export async function proofChallenge(verifier) {
+  if (typeof verifier !== "string" || !/^[A-Za-z0-9_-]{43,128}$/.test(verifier)) throw new Error("Invalid login proof");
+  return bytesToBase64Url(new Uint8Array(await crypto.subtle.digest("SHA-256", encoder.encode(verifier))));
 }
 
 export async function hashRateKey(secret, value) {

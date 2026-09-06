@@ -45,6 +45,7 @@
         <section class="hb-giscus" aria-labelledby="hb-giscus-title" data-no-instant>
           <h2 id="hb-giscus-title">页面讨论</h2>
           <p class="hb-giscus__notice">使用 GitHub 登录后可参与整页讨论；评论独立保存在 GitHub Discussions 中。</p>
+          <p class="hb-giscus__notice">若讨论区未能加载，可<a href="https://github.com/{{ comments.giscus_repo | e }}/discussions" target="_blank" rel="noopener noreferrer">前往 GitHub Discussions</a>查看；引用本页时请保留页面 ID：<code>{{ comments.page_id | e }}</code>。</p>
           <div class="hb-giscus__mount" aria-live="polite"></div>
         </section>
       {% endif %}

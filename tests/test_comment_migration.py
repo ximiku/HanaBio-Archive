@@ -17,6 +17,23 @@ SPEC.loader.exec_module(MODULE)
 
 
 class CommentMigrationTests(unittest.TestCase):
+    def test_duplicate_fingerprints_are_one_historical_mapping(self) -> None:
+        anchors = [MODULE.Anchor("p", 0, 15, "a" * 20, "Same paragraph."),
+                   MODULE.Anchor("p", 20, 35, "a" * 20, "Same paragraph.")]
+        mappings = MODULE.map_anchors(anchors, anchors)
+        self.assertEqual(len(mappings), len({item["from_fingerprint"] for item in mappings}))
+        duplicate = next(item for item in mappings if item["from_fingerprint"] == anchors[1].fingerprint)
+        self.assertEqual(duplicate["status"], "orphaned")
+
+    def test_retired_pages_preserve_their_threads_as_history(self) -> None:
+        with patch.object(MODULE, "registry_for", side_effect=[
+            {"docs/index.md": "hb-home"},
+            {"docs/index.md": "hb-home", "docs/old.md": "hb-old"},
+        ]), patch.object(MODULE, "read_ref", side_effect=["# Home", "# Home", "# Old\n\nRetired paragraph."]):
+            payload = MODULE.build_payload("a" * 40, "WORKTREE", "b" * 40)
+        self.assertTrue(payload["mappings"])
+        self.assertTrue(all(item["page_id"] == "hb-old" and item["status"] == "orphaned" for item in payload["mappings"]))
+
     def test_fetches_missing_deployed_commit_without_changing_checkout(self) -> None:
         sha = "a" * 40
         with patch.object(MODULE, "git", side_effect=[None, "", ""]) as git_call, \

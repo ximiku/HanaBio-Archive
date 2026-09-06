@@ -125,6 +125,14 @@ CREATE TABLE IF NOT EXISTS auth_exchanges (
   expires_at TEXT NOT NULL
 );
 
+-- Bind the one-time exchange to the browser that initiated login, without cookies.
+CREATE TABLE IF NOT EXISTS oauth_proofs (
+  state TEXT PRIMARY KEY,
+  challenge TEXT NOT NULL,
+  exchange_code TEXT UNIQUE,
+  expires_at TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS used_write_grants (
   jti TEXT PRIMARY KEY,
   commenter_id TEXT NOT NULL,
