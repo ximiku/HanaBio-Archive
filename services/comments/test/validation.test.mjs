@@ -26,6 +26,14 @@ test("keeps comments plain-text and bounded", () => {
   assert.equal(cleanNickname("<admin>"), null);
 });
 
+test("accepts long comments through 65535 characters after normalizing whitespace", () => {
+  const body = "评".repeat(65535);
+  assert.equal(cleanBody(body), body);
+  assert.equal(cleanBody(`  ${body}\r\n`), body);
+  assert.equal(cleanBody(`${body}论`), null);
+  assert.equal(cleanBody("\u0000comment"), null);
+});
+
 test("return URLs are restricted to configured site origins", () => {
   const env = { SITE_URL: "https://example.test/docs/", ALLOWED_ORIGINS: "https://example.test,http://localhost:8000" };
   assert.equal(safeReturnTo("https://example.test/docs/page/#old", env), "https://example.test/docs/page/");

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from html.parser import HTMLParser
 from pathlib import Path
 import tempfile
 import unittest
@@ -7,13 +8,73 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 import markdown
+from jinja2 import ChoiceLoader, DictLoader, Environment, FileSystemLoader, StrictUndefined
 
 from hanabio_site.comments import (
     CommentOffsetsExtension,
     SiteMetadataError,
+    comment_runtime_config,
     load_comment_registry,
     validate_comment_registry,
 )
+
+
+class CommentTemplateTests(unittest.TestCase):
+    def test_giscus_keeps_its_accessible_mount_without_visible_intro(self) -> None:
+        class Markup(HTMLParser):
+            def __init__(self) -> None:
+                super().__init__()
+                self.elements: list[tuple[str, dict[str, str | None]]] = []
+                self.text: list[str] = []
+
+            def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+                self.elements.append((tag, dict(attrs)))
+
+            def handle_data(self, data: str) -> None:
+                self.text.append(data)
+
+            def by_class(self, name: str) -> list[dict[str, str | None]]:
+                return [attrs for _, attrs in self.elements if name in (attrs.get("class") or "").split()]
+
+        environment = Environment(
+            loader=ChoiceLoader([
+                FileSystemLoader(Path(__file__).resolve().parents[1] / "overrides"),
+                DictLoader({
+                    "base.html": "{% block content %}{% endblock %}",
+                    "partials/content.html": "",
+                }),
+            ]),
+            autoescape=True,
+            undefined=StrictUndefined,
+        )
+        template = environment.get_template("main.html")
+        for enabled in (True, False):
+            with self.subTest(giscus_enabled=enabled):
+                comments = {
+                    **comment_runtime_config({}),
+                    "page_id": "hb-test-page",
+                    "build_revision": "a" * 40,
+                    "giscus_enabled": enabled,
+                }
+                rendered = template.render(page=SimpleNamespace(meta={
+                    "hanabio_revision": None,
+                    "hanabio_comments": comments,
+                }))
+                markup = Markup()
+                markup.feed(rendered)
+                roots = markup.by_class("hb-comments-root")
+                self.assertEqual(len(roots), 1)
+                self.assertEqual(roots[0]["data-hanabio-page-id"], "hb-test-page")
+                self.assertEqual(roots[0]["data-giscus-enabled"], str(enabled).lower())
+                sections = markup.by_class("hb-giscus")
+                mounts = markup.by_class("hb-giscus__mount")
+                self.assertEqual(len(sections), int(enabled))
+                self.assertEqual(len(mounts), int(enabled))
+                if enabled:
+                    self.assertEqual(sections[0]["aria-label"], "页面讨论")
+                    self.assertEqual(mounts[0]["aria-live"], "polite")
+                self.assertFalse(any(tag in {"h2", "p", "hr"} for tag, _ in markup.elements))
+                self.assertEqual("".join(markup.text).strip(), "")
 
 
 class CommentOffsetsTests(unittest.TestCase):

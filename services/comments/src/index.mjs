@@ -4,6 +4,7 @@ import {
   cleanBody,
   cleanNickname,
   FINGERPRINT_PATTERN,
+  MAX_COMMENT_LENGTH,
   safeReturnTo,
   validateAnchor,
   validatePageId,
@@ -351,14 +352,14 @@ async function listComments(request, env, pageId) {
   const commentsResult = await env.DB.prepare(
     `SELECT c.*, u.id AS author_id, u.display_name, u.avatar_url, u.profile_url, u.verified, u.is_admin
      FROM comments c JOIN commenters u ON u.id = c.commenter_id JOIN threads t ON t.id = c.thread_id
-     WHERE t.page_id = ? AND (c.status != 'hidden' OR ? = 1)
+     WHERE t.page_id = ? AND (c.status = 'published' OR (c.status = 'hidden' AND ? = 1))
      ORDER BY c.created_at ASC`,
   ).bind(pageId, session?.is_admin ? 1 : 0).all();
   const byThread = new Map(rows.map((row) => [row.id, []]));
   for (const row of commentsResult.results || []) {
     byThread.get(row.thread_id)?.push({
       id: row.id,
-      body: row.status === "deleted" ? "" : row.body,
+      body: row.body,
       status: row.status,
       version: row.version,
       created_at: row.created_at,
@@ -375,7 +376,7 @@ async function listComments(request, env, pageId) {
   }
   return responseJson({
     page_id: pageId,
-    threads: rows.map((row) => ({
+    threads: rows.filter((row) => byThread.get(row.id)?.length).map((row) => ({
       id: row.id,
       status: row.status,
       anchor: {
@@ -447,7 +448,7 @@ async function createComment(request, env) {
     throw Object.assign(new Error("页面或段落锚点非法"), { status: 400 });
   }
   const commentBody = cleanBody(body.body);
-  if (!commentBody) throw Object.assign(new Error("评论需为 1–2000 字纯文本，且最多包含 5 个链接"), { status: 400 });
+  if (!commentBody) throw Object.assign(new Error(`评论需为 1–${MAX_COMMENT_LENGTH} 字纯文本，且最多包含 5 个链接`), { status: 400 });
   if (body.request_id !== undefined && !/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/.test(body.request_id)) {
     throw Object.assign(new Error("提交标识非法"), { status: 400 });
   }

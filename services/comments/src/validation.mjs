@@ -1,6 +1,7 @@
 export const PAGE_ID_PATTERN = /^hb-[a-z0-9]+(?:-[a-z0-9]+)*$/;
 export const FINGERPRINT_PATTERN = /^[a-f0-9]{20}$/;
 export const REVISION_PATTERN = /^[a-f0-9]{40}$/;
+export const MAX_COMMENT_LENGTH = 65535;
 
 export function validatePageId(value) {
   return typeof value === "string" && PAGE_ID_PATTERN.test(value);
@@ -28,7 +29,7 @@ export function validateAnchor(value) {
 export function cleanBody(value) {
   if (typeof value !== "string") return null;
   const body = value.replaceAll("\r\n", "\n").trim();
-  if (!body || body.length > 2000 || /[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(body)) return null;
+  if (!body || body.length > MAX_COMMENT_LENGTH || /[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(body)) return null;
   const links = body.match(/https?:\/\//gi) || [];
   return links.length <= 5 ? body : null;
 }

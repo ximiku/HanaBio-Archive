@@ -3,13 +3,22 @@
 
   const SESSION_KEY = "hanabio-comment-session-v1";
   const LOGIN_KEY = "hanabio-comment-login-v1";
+  const MAX_BODY_LENGTH = 65535;
   const TURNSTILE_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
   const GISCUS_SRC = "https://giscus.app/client.js";
-  const svg = {
-    comment: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4Zm2 2v9.17L7.17 14H18V6H6Z"/></svg>',
-    close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5Z"/></svg>',
+  const paths = {
+    comment: "M4 4h16v12H8l-4 4V4Zm2 2v9.17L7.17 14H18V6H6Z",
+    add: "M4 4h16v12H8l-4 4V4Zm2 2v9.17L7.17 14H18V6H6Zm5 1h2v2h2v2h-2v2h-2v-2H9V9h2V7Z",
+    close: "m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5Z",
+    link: "M10 7H7a5 5 0 0 0 0 10h3v-2H7a3 3 0 0 1 0-6h3V7Zm4 0v2h3a3 3 0 0 1 0 6h-3v2h3a5 5 0 0 0 0-10h-3Zm-6 4h8v2H8v-2Z",
+    edit: "m17.7 3.3 3 3a1 1 0 0 1 0 1.4L8 20.4 3 21l.6-5L16.3 3.3a1 1 0 0 1 1.4 0ZM5.5 16.9l-.2 1.8 1.8-.2L17 8.6 15.4 7 5.5 16.9Z",
+    remove: "M9 3h6l1 2h4v2H4V5h4l1-2Zm-3 6h12l-1 12H7L6 9Zm3 2 .6 8h1V11H9Zm4.4 0v8h1l.6-8h-1.6Z",
+    report: "M5 3h2v2h12l-2 4 2 4H7v8H5V3Zm2 4v4h9l-1-2 1-2H7Z",
+    info: "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-1 6h2v7h-2v-7Zm0-4h2v2h-2V6Z",
   };
-
+  const svg = Object.fromEntries(Object.entries(paths).map(([name, path]) =>
+    [name, `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"/></svg>`]));
+  const anchors = new WeakMap();
   let active = null;
   let turnstilePromise = null;
   let themeObserver = null;
@@ -25,6 +34,7 @@
     const node = element("button", className);
     node.type = "button";
     node.setAttribute("aria-label", label);
+    node.title = label;
     if (icon) node.innerHTML = icon;
     return node;
   }
@@ -76,255 +86,381 @@
     return payload;
   }
 
+
   function getBlockAnchor(block) {
-    return {
+    if (!block) return null;
+    if (!anchors.has(block)) anchors.set(block, {
       start: Number(block.dataset.blockStart),
       end: Number(block.dataset.blockEnd),
       fingerprint: block.dataset.blockFingerprint,
-      quote: (block.innerText.trim().replace(/\s*¶$/, "") || Array.from(block.querySelectorAll("img[alt]"), (image) => image.alt).join(" ")).slice(0, 1000),
-    };
-  }
-
-  function sameAnchor(left, right) {
-    if (!left || !right) return false;
-    return left.fingerprint === right.fingerprint;
+      quote: (block.innerText.trim().replace(/\s*¶$/, "") || Array.from(block.querySelectorAll("img[alt]"), image => image.alt).join(" ")).slice(0, 1000),
+    });
+    return anchors.get(block);
   }
 
   function findBlock(state, anchor) {
-    const matches = state.blocks.filter((block) => sameAnchor(getBlockAnchor(block), anchor));
-    return matches.length === 1 ? matches[0] : null;
+    return state.blocks.find(block => getBlockAnchor(block).fingerprint === anchor?.fingerprint) || null;
   }
 
-  function threadForAnchor(state, anchor) {
-    return state.threads.find((thread) => thread.status === "active" && sameAnchor(thread.anchor, anchor));
-  }
-
-  function commentsForAnchor(state, anchor) {
-    return threadForAnchor(state, anchor)?.comments?.filter((comment) => comment.status !== "hidden").length || 0;
+  function threadForBlock(state, block) {
+    return state.threads.find(thread => thread.status === "active" &&
+      thread.anchor.fingerprint === getBlockAnchor(block)?.fingerprint);
   }
 
   function updateBlocks(state) {
     for (const block of state.blocks) {
-      const count = commentsForAnchor(state, getBlockAnchor(block));
+      const count = threadForBlock(state, block)?.comments.length || 0;
       block.dataset.hanabioCommentCount = String(count);
       block.classList.toggle("hb-commented-block", count > 0);
+      const marker = state.markers.get(block);
+      marker.dataset.count = String(count);
+      const label = count ? `查看本段的 ${count} 条评论` : "为本段添加评论";
+      marker.setAttribute("aria-label", label);
+      marker.title = label;
+      marker.innerHTML = count ? svg.comment : svg.add;
+      marker.append(element("span", "", count > 99 ? "99+" : count ? String(count) : ""));
     }
-    const total = state.threads.reduce(
-      (sum, thread) => sum + (thread.comments || []).filter((comment) => comment.status !== "hidden").length,
-      0,
-    );
+    const total = state.threads.reduce((sum, thread) => sum + thread.comments.length, 0);
     state.openButton.querySelector("span").textContent = total ? `本页评论 ${total}` : "本页评论";
-    if (state.blockButtonTarget) updateBlockButton(state, state.blockButtonTarget);
+    queueLayout(state);
   }
 
-  function updateBlockButton(state, block) {
-    const count = commentsForAnchor(state, getBlockAnchor(block));
-    const label = count ? `${count} 条评论` : "评论此处";
-    state.blockButton.querySelector("span").textContent = label;
-    state.blockButton.setAttribute("aria-label", label);
+  function reducedMotion() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
-  function showBlockButton(state, block) {
-    window.clearTimeout(state.blockButtonTimer);
-    state.blockButtonTarget = block;
-    updateBlockButton(state, block);
+  function scrollBodyTo(state, block) {
+    if (!block) return;
+    const header = document.querySelector(".md-header")?.getBoundingClientRect().bottom || 48;
+    const bottom = state.mobile.matches && state.isOpen ? state.drawer.getBoundingClientRect().top : window.innerHeight;
     const rect = block.getBoundingClientRect();
-    state.blockButton.style.top = `${Math.max(52, Math.min(window.innerHeight - 44, rect.top + 6))}px`;
-    state.blockButton.style.left = `${Math.max(8, Math.min(window.innerWidth - 104, rect.right + 8))}px`;
-    state.blockButton.hidden = false;
+    const offset = Math.min(rect.height / 2, Math.max(0, (bottom - header) / 2 - 24));
+    window.scrollBy({ top: rect.top + offset - (header + bottom) / 2,
+      behavior: reducedMotion() ? "instant" : "smooth" });
   }
 
-  function hideBlockButton(state) {
-    window.clearTimeout(state.blockButtonTimer);
-    state.blockButtonTimer = window.setTimeout(() => {
-      state.blockButton.hidden = true;
-      state.blockButtonTarget = null;
-    }, 100);
+  function scrollCardTo(state, card, target = card) {
+    if (!card || !state.isOpen) return;
+    const main = state.main;
+    const rect = target.getBoundingClientRect();
+    const top = main.getBoundingClientRect().top;
+    main.scrollTo({ top: main.scrollTop + rect.top - top - 12,
+      behavior: reducedMotion() ? "instant" : "smooth" });
   }
 
-  function setSelected(state, block, { scroll = false } = {}) {
+  function selectBlock(state, block, { body = false, compose = false, threadId = null } = {}) {
+    const nextId = threadId || threadForBlock(state, block)?.id || null;
+    const changed = state.selectedBlock !== block || state.selectedThreadId !== nextId;
     state.selectedBlock?.classList.remove("hb-comment-block--selected");
-    state.selectedBlock = block || null;
-    if (block) {
-      block.classList.add("hb-comment-block--selected");
-      if (scroll) block.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-    renderDrawer(state);
+    state.selectedBlock = block;
+    state.selectedThreadId = nextId;
+    block?.classList.add("hb-comment-block--selected");
+    const wasOpen = state.isOpen;
+    openDrawer(state);
+    if (wasOpen && changed) renderDrawer(state);
+    requestAnimationFrame(() => {
+      if (state.abort.signal.aborted) return;
+      const card = state.main.querySelector('[data-selected="true"]');
+      if (body) scrollBodyTo(state, block);
+      scrollCardTo(state, card);
+      if (compose) {
+        const input = card?.querySelector("textarea");
+        input?.focus({ preventScroll: true });
+        if (input) scrollCardTo(state, card, input);
+      }
+    });
   }
 
   function openDrawer(state) {
-    if (state.abort.signal.aborted) return;
+    if (state.abort.signal.aborted || state.isOpen) return;
     window.clearTimeout(state.closeTimer);
     state.returnFocus = document.activeElement;
+    state.isOpen = true;
     state.drawer.hidden = false;
-    state.backdrop.hidden = false;
-    if (!state.inertNodes?.length) {
-      state.inertNodes = [];
-      let branch = state.drawer;
-      while (branch.parentElement && branch.parentElement !== document.documentElement) {
-        for (const sibling of branch.parentElement.children) {
-          if (sibling !== branch && sibling !== state.backdrop && !sibling.inert) {
-            sibling.inert = true;
-            state.inertNodes.push(sibling);
-          }
-        }
-        branch = branch.parentElement;
-      }
-    }
-    requestAnimationFrame(() => {
-      state.drawer.classList.add("hb-comment-drawer--open");
-      state.backdrop.classList.add("hb-comment-backdrop--open");
-    });
     state.openButton.setAttribute("aria-expanded", "true");
     document.body.classList.add("hb-comments-open");
-    state.closeButton.focus({ preventScroll: true });
+    state.selectedBlock?.classList.add("hb-comment-block--selected");
+    updateLayout(state);
+    renderDrawer(state);
+    requestAnimationFrame(() => {
+      if (state.isOpen) state.drawer.classList.add("hb-comment-drawer--open");
+    });
+  }
+
+  function clearWidgets(state) {
+    for (const widget of state.widgets.splice(0)) window.turnstile?.remove(widget);
+    state.challengeSize = null;
   }
 
   function closeDrawer(state) {
-    for (const node of state.inertNodes || []) node.inert = false;
-    state.inertNodes = [];
+    if (!state.isOpen) return;
+    const restoreFocus = state.drawer.contains(document.activeElement);
+    state.isOpen = false;
     state.drawer.classList.remove("hb-comment-drawer--open");
-    state.backdrop.classList.remove("hb-comment-backdrop--open");
     state.openButton.setAttribute("aria-expanded", "false");
+    state.selectedBlock?.classList.remove("hb-comment-block--selected");
     document.body.classList.remove("hb-comments-open");
+    state.content.style.removeProperty("--hb-comment-reserve");
+    state.reserve = 0;
+    clearWidgets(state);
+    queueLayout(state);
     state.closeTimer = window.setTimeout(() => {
-      if (state.abort.signal.aborted) return;
-      if (!state.drawer.classList.contains("hb-comment-drawer--open")) {
-        state.drawer.hidden = true;
-        state.backdrop.hidden = true;
-        const target = state.returnFocus?.isConnected && state.returnFocus !== document.body
-          ? state.returnFocus
-          : state.openButton;
-        target.focus({ preventScroll: true });
-      }
+      if (state.abort.signal.aborted || state.isOpen) return;
+      state.drawer.hidden = true;
+      if (restoreFocus) (state.returnFocus?.isConnected ? state.returnFocus : state.openButton)?.focus({ preventScroll: true });
     }, 220);
   }
 
-  function formatTime(value) {
-    try {
-      return new Intl.DateTimeFormat("zh-CN", {
-        dateStyle: "medium",
-        timeStyle: "short",
-      }).format(new Date(value));
-    } catch (_error) {
-      return value;
+  function queueLayout(state) {
+    if (state.layoutFrame || state.abort.signal.aborted) return;
+    state.layoutFrame = requestAnimationFrame(() => {
+      state.layoutFrame = 0;
+      if (!state.abort.signal.aborted) updateLayout(state);
+    });
+  }
+
+  function updateLayout(state) {
+    const viewport = window.visualViewport;
+    const height = viewport?.height || window.innerHeight;
+    const bottom = Math.max(0, window.innerHeight - height - (viewport?.offsetTop || 0));
+    document.body.style.setProperty("--hb-comment-visible-height", `${height}px`);
+    document.body.style.setProperty("--hb-comment-bottom", `${bottom}px`);
+    if (state.isOpen && !state.mobile.matches) {
+      const originalRight = state.article.getBoundingClientRect().right + state.reserve;
+      const reserve = Math.max(0, originalRight - (window.innerWidth - 350 - 36));
+      if (Math.abs(reserve - state.reserve) > 0.5) {
+        state.reserve = reserve;
+        state.content.style.setProperty("--hb-comment-reserve", `${reserve}px`);
+      }
+    } else {
+      state.reserve = 0;
+      state.content.style.removeProperty("--hb-comment-reserve");
+    }
+    const header = document.querySelector(".md-header")?.getBoundingClientRect().bottom || 48;
+    const visibleBottom = state.mobile.matches && state.isOpen ? height / 2 + (viewport?.offsetTop || 0) : window.innerHeight;
+    const rightEdge = state.isOpen && !state.mobile.matches ? window.innerWidth - 350 : window.innerWidth;
+    for (const [block, marker] of state.markers) {
+      const rect = block.getBoundingClientRect();
+      marker.hidden = !rect.width || rect.bottom < header || rect.top > visibleBottom - 28;
+      if (marker.hidden) continue;
+      marker.style.top = `${Math.max(header + 4, rect.top + 2)}px`;
+      marker.style.left = `${Math.min(rightEdge - 32, rect.right + 4)}px`;
+    }
+    const challenge = state.main.querySelector(".hb-turnstile");
+    if (state.widgets.length && challenge) {
+      const size = state.mobile.matches && challenge.getBoundingClientRect().width < 300 ? "compact" : "flexible";
+      if (size !== state.challengeSize) renderDrawer(state);
     }
   }
 
-  function renderAuthor(comment) {
-    const row = element("div", "hb-comment__author");
-    if (comment.author?.avatar_url) {
-      const image = document.createElement("img");
-      image.src = comment.author.avatar_url;
-      image.alt = "";
-      image.loading = "lazy";
-      image.referrerPolicy = "no-referrer";
-      row.append(image);
-    }
-    const name = element("strong", "", comment.author?.display_name || "访客");
-    row.append(name);
-    row.append(element(
-      "span",
-      comment.author?.verified ? "hb-comment-badge hb-comment-badge--verified" : "hb-comment-badge",
-      comment.author?.verified ? "GitHub 已验证" : "访客",
-    ));
-    row.append(element("time", "", formatTime(comment.created_at)));
-    return row;
+  function formatTime(value) {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return value;
+    return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+  }
+
+  function profileUrl(author) {
+    if (!author?.verified || !author.profile_url) return null;
+    try {
+      const url = new URL(author.profile_url);
+      return url.protocol === "https:" && url.hostname === "github.com" && !url.username && !url.password &&
+        /^\/[a-zA-Z0-9-]+\/?$/.test(url.pathname) ? url.href : null;
+    } catch (_error) { return null; }
+  }
+
+  function authorLink(author, className) {
+    const url = profileUrl(author);
+    const link = element(url ? "a" : "span", className);
+    if (url) { link.href = url; link.target = "_blank"; link.rel = "noopener noreferrer"; }
+    return link;
   }
 
   function canEdit(state, comment) {
-    return Boolean(
-      state.session?.commenter?.id &&
-      (state.session.commenter.id === comment.author?.id || state.session.commenter.is_admin),
-    );
+    return Boolean(state.session?.commenter?.id &&
+      (state.session.commenter.id === comment.author?.id || state.session.commenter.is_admin));
+  }
+
+  function sizeTextarea(textarea) {
+    textarea.style.height = "auto";
+    textarea.style.height = `${Math.min(240, Math.max(66, textarea.scrollHeight))}px`;
+    textarea.style.overflowY = textarea.scrollHeight > 240 ? "auto" : "hidden";
+    textarea.setCustomValidity(textarea.value.length > MAX_BODY_LENGTH ? "评论不能超过 65535 个字符" : "");
   }
 
   function renderComment(state, thread, comment) {
     const article = element("article", "hb-comment");
     article.id = `comment-${comment.id}`;
     article.tabIndex = -1;
-    article.append(renderAuthor(comment));
-    const body = element("p", "hb-comment__body", comment.status === "deleted" ? "此评论已由作者删除。" : comment.body);
-    article.append(body);
-    const actions = element("div", "hb-comment__actions");
-    const link = element("a", "", "复制链接");
-    link.href = `#comment-${comment.id}`;
-    link.addEventListener("click", async (event) => {
-      event.preventDefault();
-      const url = new URL(window.location.href);
-      url.hash = `comment-${comment.id}`;
-      try {
-        if (!navigator.clipboard) throw new Error("Clipboard unavailable");
-        await navigator.clipboard.writeText(url.toString());
-        showStatus(state, "评论链接已复制。", false);
-      } catch (_error) {
-        history.replaceState(null, "", url);
-        showStatus(state, "无法访问剪贴板，请复制地址栏中的评论链接。", true);
-      }
-    }, { signal: state.abort.signal });
-    actions.append(link);
-    if (comment.status === "published" && canEdit(state, comment)) {
-      const edit = button("hb-text-button", "编辑评论");
-      edit.textContent = "编辑";
-      edit.addEventListener("click", () => beginEdit(state, thread, comment, article), { signal: state.abort.signal });
-      const remove = button("hb-text-button hb-text-button--danger", "删除评论");
-      remove.textContent = "删除";
-      remove.addEventListener("click", () => deleteComment(state, comment), { signal: state.abort.signal });
-      actions.append(edit, remove);
-    } else if (comment.status === "published") {
-      const report = button("hb-text-button", "举报评论");
-      report.textContent = "举报";
-      report.addEventListener("click", () => reportComment(state, comment), { signal: state.abort.signal });
-      actions.append(report);
+    const avatar = authorLink(comment.author, "hb-comment__avatar");
+    if (comment.author?.avatar_url) {
+      const image = document.createElement("img");
+      image.src = comment.author.avatar_url;
+      image.alt = `${comment.author.display_name || "访客"}的头像`;
+      image.loading = "lazy";
+      image.referrerPolicy = "no-referrer";
+      avatar.append(image);
+    } else avatar.textContent = (comment.author?.display_name || "访客").slice(0, 1);
+    const content = element("div", "hb-comment__content");
+    const author = element("div", "hb-comment__author");
+    const name = authorLink(comment.author, "hb-comment__name");
+    name.textContent = comment.author?.display_name || "访客";
+    name.title = name.textContent;
+    author.append(name);
+    if (!comment.author?.verified) author.append(element("span", "hb-comment-badge", "访客"));
+    const time = element("time", "", formatTime(comment.created_at));
+    time.dateTime = comment.created_at;
+    time.title = comment.edited_at ? `${formatTime(comment.edited_at)} 编辑` : formatTime(comment.created_at);
+    author.append(time, renderActions(state, thread, comment));
+    content.append(author);
+    if (state.edits.has(comment.id)) content.append(renderEdit(state, comment));
+    else {
+      const wrap = element("div", "hb-comment__body-wrap");
+      const body = element("p", "hb-comment__body", comment.body);
+      const expand = button("hb-comment__expand", "展开完整评论");
+      expand.textContent = "展开";
+      expand.hidden = true;
+      expand.addEventListener("click", () => {
+        const expanded = state.expanded.has(comment.id);
+        if (expanded) state.expanded.delete(comment.id); else state.expanded.add(comment.id);
+        wrap.dataset.collapsed = String(expanded);
+        expand.textContent = expanded ? "展开" : "收起";
+        expand.setAttribute("aria-expanded", String(!expanded));
+      }, { signal: state.abort.signal });
+      wrap.append(body, expand);
+      content.append(wrap);
+      requestAnimationFrame(() => {
+        if (!body.isConnected) return;
+        const long = body.scrollHeight > 250;
+        wrap.dataset.collapsed = String(long && !state.expanded.has(comment.id));
+        expand.hidden = !long;
+        expand.textContent = state.expanded.has(comment.id) ? "收起" : "展开";
+        expand.setAttribute("aria-expanded", String(state.expanded.has(comment.id)));
+      });
     }
-    article.append(actions);
+    article.append(avatar, content);
     return article;
   }
 
-  function beginEdit(state, thread, comment, article) {
-    article.querySelector(".hb-comment__body").hidden = true;
-    article.querySelector(".hb-comment__actions").hidden = true;
-    const form = element("form", "hb-comment-edit");
-    const textarea = document.createElement("textarea");
-    textarea.maxLength = 2000;
-    textarea.required = true;
-    textarea.setAttribute("aria-label", "编辑评论正文");
-    textarea.value = comment.body;
-    const save = element("button", "md-button md-button--primary", "保存");
-    save.type = "submit";
-    const cancel = element("button", "md-button", "取消");
-    cancel.type = "button";
-    form.append(textarea, save, cancel);
-    cancel.addEventListener("click", () => renderDrawer(state), { signal: state.abort.signal });
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      save.disabled = true;
+  function renderActions(state, thread, comment) {
+    const actions = element("div", "hb-comment__actions");
+    const copy = button("hb-text-button", "复制评论链接", svg.link);
+    copy.addEventListener("click", async () => {
+      const url = new URL(window.location.href);
+      url.hash = `comment-${comment.id}`;
       try {
-        await fetchJson(state, `/v1/comments/${encodeURIComponent(comment.id)}`, {
-          method: "PATCH",
-          body: JSON.stringify({ body: textarea.value, version: comment.version }),
-        });
-        await loadComments(state);
-      } catch (error) {
-        showStatus(state, error.message, true);
-        save.disabled = false;
+        await navigator.clipboard.writeText(url.href);
+        showStatus(state, "评论链接已复制。", false);
+      } catch (_error) {
+        history.replaceState(null, "", url);
+        showStatus(state, "请复制地址栏中的评论链接。", false);
       }
     }, { signal: state.abort.signal });
-    article.append(form);
-    textarea.focus();
+    actions.append(copy);
+    if (canEdit(state, comment)) {
+      const edit = button("hb-text-button", "编辑评论", svg.edit);
+      edit.disabled = state.edits.has(comment.id);
+      edit.addEventListener("click", () => {
+        state.edits.set(comment.id, { body: comment.body, version: comment.version });
+        renderDrawer(state);
+        document.getElementById(`comment-${comment.id}`)?.querySelector("textarea")?.focus({ preventScroll: true });
+      }, { signal: state.abort.signal });
+      const remove = button("hb-text-button hb-text-button--danger", "删除评论", svg.remove);
+      remove.addEventListener("click", () => confirmDelete(state, comment), { signal: state.abort.signal });
+      actions.append(edit, remove);
+    } else {
+      const report = button("hb-text-button", "举报评论", svg.report);
+      report.addEventListener("click", () => reportComment(state, comment), { signal: state.abort.signal });
+      actions.append(report);
+    }
+    return actions;
+  }
+
+  function renderEdit(state, comment) {
+    const form = element("form", "hb-comment-edit");
+    const draft = state.edits.get(comment.id);
+    const textarea = document.createElement("textarea");
+    textarea.required = true;
+    textarea.rows = 3;
+    textarea.setAttribute("aria-label", "编辑评论正文");
+    textarea.value = draft.body;
+    textarea.readOnly = Boolean(draft.saving);
+    textarea.addEventListener("input", () => { draft.body = textarea.value; sizeTextarea(textarea); });
+    const controls = element("div", "hb-comment-compose__submit");
+    const save = element("button", "md-button md-button--primary", "保存");
+    save.type = "submit";
+    save.disabled = Boolean(draft.saving);
+    const cancel = button("md-button", "取消编辑");
+    cancel.textContent = "取消";
+    cancel.disabled = Boolean(draft.saving);
+    cancel.addEventListener("click", () => { state.edits.delete(comment.id); renderDrawer(state); });
+    controls.append(cancel, save);
+    form.append(textarea, controls);
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      if (!validateBody(textarea)) return;
+      save.disabled = true;
+      draft.saving = true;
+      textarea.readOnly = true;
+      cancel.disabled = true;
+      try {
+        await fetchJson(state, `/v1/comments/${encodeURIComponent(comment.id)}`, {
+          method: "PATCH", body: JSON.stringify({ body: textarea.value, version: draft.version }),
+        });
+        state.edits.delete(comment.id);
+        await loadComments(state);
+      } catch (error) {
+        draft.saving = false;
+        textarea.readOnly = false;
+        cancel.disabled = false;
+        showStatus(state, error.message, true);
+        save.disabled = false;
+        if (!form.isConnected) renderDrawer(state);
+      }
+    }, { signal: state.abort.signal });
+    requestAnimationFrame(() => { if (textarea.isConnected) sizeTextarea(textarea); });
+    return form;
+  }
+
+  function confirmDelete(state, comment) {
+    const content = document.getElementById(`comment-${comment.id}`)?.querySelector(".hb-comment__content");
+    if (!content || content.querySelector(".hb-comment-delete-confirm")) return;
+    const row = element("div", "hb-comment-delete-confirm");
+    row.setAttribute("role", "group");
+    row.setAttribute("aria-label", "确认删除评论");
+    const confirm = button("hb-text-button hb-text-button--danger", "确认删除评论");
+    confirm.textContent = "删除";
+    const cancel = button("hb-text-button", "取消删除"); cancel.textContent = "取消";
+    cancel.addEventListener("click", () => row.remove());
+    confirm.addEventListener("click", async () => {
+      confirm.disabled = true; cancel.disabled = true;
+      await deleteComment(state, comment);
+      row.remove();
+    });
+    row.append(element("span", "", "删除这条评论？"), cancel, confirm);
+    content.append(row);
+    cancel.focus({ preventScroll: true });
   }
 
   async function deleteComment(state, comment) {
-    if (!window.confirm("确定删除这条评论吗？评论位置会保留为删除标记。")) return;
     try {
       await fetchJson(state, `/v1/comments/${encodeURIComponent(comment.id)}`, {
-        method: "DELETE",
-        body: JSON.stringify({ version: comment.version }),
+        method: "DELETE", body: JSON.stringify({ version: comment.version }),
       });
+      ++state.loadGeneration;
+      state.loading = false;
+      state.threads = state.threads.map(thread => ({ ...thread, comments: thread.comments.filter(item => item.id !== comment.id) }))
+        .filter(thread => thread.comments.length);
+      state.edits.delete(comment.id);
+      if (state.selectedThreadId && !state.threads.some(thread => thread.id === state.selectedThreadId)) {
+        state.selectedBlock?.classList.remove("hb-comment-block--selected");
+        state.selectedBlock = null;
+        state.selectedThreadId = null;
+      }
+      updateBlocks(state);
+      renderDrawer(state);
+      if (window.location.hash === `#comment-${comment.id}`) history.replaceState(null, "", `${location.pathname}${location.search}`);
       await loadComments(state);
-    } catch (error) {
-      showStatus(state, error.message, true);
-    }
+    } catch (error) { showStatus(state, error.message, true); }
   }
 
   async function reportComment(state, comment) {
@@ -332,32 +468,39 @@
     if (!reason) return;
     try {
       await fetchJson(state, `/v1/comments/${encodeURIComponent(comment.id)}/reports`, {
-        method: "POST",
-        body: JSON.stringify({ reason: reason.slice(0, 300) }),
+        method: "POST", body: JSON.stringify({ reason: reason.slice(0, 300) }),
       });
       showStatus(state, "举报已提交，感谢反馈。", false);
-    } catch (error) {
-      showStatus(state, error.message, true);
-    }
+    } catch (error) { showStatus(state, error.message, true); }
   }
 
-  function renderThread(state, thread) {
-    const card = element("section", `hb-comment-thread hb-comment-thread--${thread.status}`);
-    const header = element("button", "hb-comment-thread__quote");
-    header.type = "button";
-    header.textContent = thread.status === "orphaned"
-      ? `历史原文：${thread.anchor.quote || "原段落已变更"}`
-      : thread.anchor.quote || "查看对应段落";
-    header.addEventListener("click", () => {
-      const block = thread.status === "active" ? findBlock(state, thread.anchor) : null;
-      if (block) setSelected(state, block, { scroll: true });
-    }, { signal: state.abort.signal });
-    header.disabled = thread.status !== "active" || !findBlock(state, thread.anchor);
-    card.append(header);
+  function hasSelection() {
+    return Boolean(window.getSelection()?.toString().trim());
+  }
+
+  function renderThread(state, thread, selected) {
+    const block = thread.status === "active" ? findBlock(state, thread.anchor) : null;
+    const historical = !block;
+    const card = element("section", `hb-comment-thread${historical ? " hb-comment-thread--orphaned" : ""}`);
+    card.dataset.threadId = thread.id || "draft";
+    card.dataset.selected = String(selected);
+    const quote = button("hb-comment-thread__quote", "定位评论段落");
+    quote.textContent = `${historical ? "历史原文 · " : ""}${thread.anchor.quote || "原段落已变更"}`;
+    quote.title = quote.textContent;
+    quote.addEventListener("click", () => selectBlock(state, block, { body: true, threadId: thread.id }));
+    card.append(quote);
     const comments = element("div", "hb-comment-thread__comments");
-    for (const comment of thread.comments || []) comments.append(renderComment(state, thread, comment));
-    if (!(thread.comments || []).length) comments.append(element("p", "hb-comments-empty", "还没有评论。"));
+    for (const comment of [...thread.comments].sort((a, b) => a.created_at.localeCompare(b.created_at))) {
+      comments.append(renderComment(state, thread, comment));
+    }
     card.append(comments);
+    if (selected && block) card.append(renderCommentForm(state, block));
+    card.addEventListener("click", event => {
+      if (event.target.closest("a,button,input,textarea,select,form") || hasSelection()) return;
+      selectBlock(state, block, { body: true, threadId: thread.id });
+    });
+    card.addEventListener("pointerenter", () => block?.classList.add("hb-comment-block--hovered"));
+    card.addEventListener("pointerleave", () => block?.classList.remove("hb-comment-block--hovered"));
     return card;
   }
 
@@ -388,11 +531,19 @@
   async function mountTurnstile(state, container, onToken) {
     try {
       const turnstile = await loadTurnstile();
+      await new Promise(requestAnimationFrame);
       if (!container.isConnected || state.abort.signal.aborted) return;
+      const size = state.mobile.matches && container.getBoundingClientRect().width < 300 ? "compact" : "flexible";
+      state.challengeSize = size;
+      container.dataset.size = size;
       const widget = turnstile.render(container, {
         sitekey: state.siteKey,
+        size,
         theme: currentTheme() === "dark" ? "dark" : "light",
-        callback: onToken,
+        callback: token => {
+          onToken(token);
+          if (token && state.status.textContent.startsWith("人机验证失败")) state.status.hidden = true;
+        },
         "expired-callback": () => onToken(""),
         "error-callback": () => { onToken(""); showStatus(state, "人机验证失败，请稍候重试或重新打开表单。", true); },
       });
@@ -412,277 +563,262 @@
     }
   }
 
-  function authSummary(state) {
-    const row = element("div", "hb-comment-auth");
+
+  function validateBody(textarea) {
+    textarea.setCustomValidity(!textarea.value.trim() ? "请写下你的评论" :
+      textarea.value.length > MAX_BODY_LENGTH ? "评论不能超过 65535 个字符" : "");
+    return textarea.reportValidity();
+  }
+
+  async function startGitHubLogin(state, block) {
+    try {
+      const verifier = Array.from(crypto.getRandomValues(new Uint8Array(32)), byte => byte.toString(16).padStart(2, "0")).join("");
+      const hash = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
+      const challenge = btoa(String.fromCharCode(...hash)).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
+      sessionStorage.setItem(LOGIN_KEY, JSON.stringify({ verifier, pageId: state.pageId,
+        anchor: getBlockAnchor(block), drafts: Array.from(state.drafts), created: Date.now() }));
+      window.location.assign(`${state.api}/v1/auth/github/start?return_to=${encodeURIComponent(location.href)}&challenge=${encodeURIComponent(challenge)}`);
+    } catch (_error) { showStatus(state, "无法保存登录信息和草稿，请允许本站使用会话存储后重试。", true); }
+  }
+
+  function renderCommentForm(state, block) {
+    const form = element("form", "hb-comment-form hb-comment-compose");
+    const anchor = getBlockAnchor(block);
+    const draftKey = anchor.fingerprint;
+    const auth = element("div", "hb-comment-auth");
     const commenter = state.session?.commenter;
-    if (!commenter) return row;
-    row.append(element(
-      "span",
-      "",
-      commenter.verified ? `${commenter.display_name} · GitHub 已验证` : `${commenter.display_name} · 访客`,
-    ));
-    const logout = button("hb-text-button", "退出评论身份");
-    logout.textContent = "退出";
-    logout.addEventListener("click", () => {
-      saveSession(null);
-      state.session = null;
-      state.writeGrant = "";
-      loadComments(state);
-    }, { signal: state.abort.signal });
-    row.append(logout);
-    return row;
-  }
-
-  function renderGuestLogin(state, parent) {
-    const form = element("form", "hb-comment-login");
-    const label = element("label", "", "访客昵称");
-    const nickname = document.createElement("input");
-    nickname.name = "nickname";
-    nickname.required = true;
-    nickname.minLength = 2;
-    nickname.value = state.nickname || "";
-    nickname.addEventListener("input", () => { state.nickname = nickname.value; });
-    nickname.maxLength = 40;
-    nickname.autocomplete = "nickname";
-    label.append(nickname);
-    const challenge = element("div", "hb-turnstile");
-    let turnstileToken = "";
-    const submit = element("button", "md-button md-button--primary", "以访客身份继续");
-    submit.type = "submit";
-    submit.disabled = true;
-    const github = element("a", "md-button", "使用 GitHub 登录");
-    github.href = `${state.api}/v1/auth/github/start?return_to=${encodeURIComponent(window.location.href)}`;
-    github.addEventListener("click", async (event) => {
-      event.preventDefault();
-      try {
-        const verifier = Array.from(crypto.getRandomValues(new Uint8Array(32)), (byte) => byte.toString(16).padStart(2, "0")).join("");
-        const hash = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
-        const challenge = btoa(String.fromCharCode(...hash)).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
-        sessionStorage.setItem(LOGIN_KEY, JSON.stringify({ verifier, pageId: state.pageId, anchor: getBlockAnchor(state.selectedBlock), created: Date.now() }));
-        window.location.assign(`${github.href}&challenge=${encodeURIComponent(challenge)}`);
-      } catch (_error) {
-        showStatus(state, "无法保存登录验证信息。请允许本网站使用会话存储后重试。", true);
-      }
-    }, { signal: state.abort.signal });
-    form.append(label, challenge, submit, github);
-    mountTurnstile(state, challenge, (token) => {
-      turnstileToken = token;
-      submit.disabled = !token;
-    });
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      submit.disabled = true;
-      try {
-        const payload = await fetchJson(state, "/v1/sessions/guest", {
-          method: "POST",
-          body: JSON.stringify({ nickname: nickname.value, turnstile_token: turnstileToken }),
-        });
-        state.session = payload.session;
-        state.writeGrant = payload.write_grant;
-        state.grantExpires = Date.now() + 240000;
-        saveSession(state.session);
-        renderDrawer(state);
-      } catch (error) {
-        showStatus(state, error.message, true);
-        challenge.resetChallenge?.();
-      }
-    }, { signal: state.abort.signal });
-    parent.append(form);
-  }
-
-  function renderCommentForm(state, parent) {
-    if (!state.selectedBlock) return;
-    const section = element("section", "hb-comment-form");
-    section.append(element("h3", "", "评论所选内容"));
-    section.append(element("blockquote", "", getBlockAnchor(state.selectedBlock).quote));
-    if (!state.session) {
-      section.append(element("p", "hb-comment-form__hint", "无需邮箱。访客评论会标注为“访客”，也可选择 GitHub 已验证身份。"));
-      renderGuestLogin(state, section);
-      parent.append(section);
-      return;
+    if (commenter) {
+      auth.append(element("span", "", `作为 ${commenter.display_name} 发表评论`));
+      const logout = button("hb-text-button", "退出评论身份");
+      logout.textContent = "退出";
+      logout.addEventListener("click", () => {
+        saveSession(null); state.session = null; state.writeGrant = ""; renderDrawer(state);
+      });
+      auth.append(logout);
     }
-    section.append(authSummary(state));
-    const form = element("form", "hb-comment-compose");
+    form.append(auth);
     const textarea = document.createElement("textarea");
-    textarea.required = true;
-    textarea.maxLength = 2000;
-    textarea.placeholder = "写下具体、友善且与本段内容有关的评论……";
-    textarea.setAttribute("aria-label", "评论正文，最多 2000 字");
-    const selectedAnchor = getBlockAnchor(state.selectedBlock);
-    const draftKey = selectedAnchor.fingerprint;
+    textarea.rows = 3;
+    textarea.placeholder = "写下你的评论";
+    textarea.setAttribute("aria-label", "评论正文");
     textarea.value = state.drafts.get(draftKey) || "";
-    const count = element("span", "hb-comment-compose__count", `${textarea.value.length} / 2000`);
+    textarea.readOnly = state.pending.has(draftKey);
     textarea.addEventListener("input", () => {
-      count.textContent = `${textarea.value.length} / 2000`;
       state.drafts.set(draftKey, textarea.value);
       state.submissions.delete(draftKey);
-    }, { signal: state.abort.signal });
-    const challenge = element("div", "hb-turnstile");
-    let turnstileToken = "";
-    if (Date.now() >= state.grantExpires) state.writeGrant = "";
-    if (!state.writeGrant) {
-      mountTurnstile(state, challenge, (token) => { turnstileToken = token; });
-    } else {
-      challenge.hidden = true;
+      sizeTextarea(textarea);
+    });
+    form.append(textarea);
+    let nickname = null;
+    if (!commenter) {
+      const fields = element("div", "hb-comment-guest-fields");
+      const label = element("label", "", "访客昵称");
+      nickname = document.createElement("input");
+      nickname.required = true;
+      nickname.minLength = 2;
+      nickname.maxLength = 40;
+      nickname.autocomplete = "nickname";
+      nickname.value = state.nickname || "";
+      nickname.addEventListener("input", () => { state.nickname = nickname.value; });
+      label.append(nickname); fields.append(label); form.append(fields);
     }
-    const submit = element("button", "md-button md-button--primary", "发表评论");
+    const challenge = element("div", "hb-turnstile");
+    const errorMessage = element("p", "hb-comment-form__error");
+    errorMessage.setAttribute("role", "alert");
+    errorMessage.hidden = true;
+    form.append(challenge, errorMessage);
+    let token = "";
+    if (Date.now() >= state.grantExpires) state.writeGrant = "";
+    const controls = element("div", commenter ? "hb-comment-compose__submit" : "hb-comment-login-options");
+    const submit = element("button", "md-button md-button--primary", commenter ? "发表评论" : "访客登录");
     submit.type = "submit";
-    form.append(textarea, count, challenge, submit);
-    form.addEventListener("submit", async (event) => {
+    submit.disabled = state.pending.has(draftKey);
+    controls.append(submit);
+    if (!commenter) {
+      const github = element("a", "md-button", "GitHub 登录");
+      github.href = `${state.api}/v1/auth/github/start?return_to=${encodeURIComponent(location.href)}`;
+      github.addEventListener("click", event => { event.preventDefault(); startGitHubLogin(state, block); });
+      controls.append(github);
+    }
+    form.append(controls);
+    if (state.writeGrant && commenter) challenge.hidden = true;
+    else if (state.isOpen) {
+      submit.disabled = true;
+      mountTurnstile(state, challenge, value => { token = value; submit.disabled = !value || state.pending.has(draftKey); });
+    }
+    form.addEventListener("submit", async event => {
       event.preventDefault();
+      if (commenter && !validateBody(textarea)) return;
+      if (state.pending.has(draftKey)) return;
+      state.pending.add(draftKey);
       submit.disabled = true;
       textarea.readOnly = true;
-      const submittedBody = textarea.value;
-      if (!state.submissions.has(draftKey)) state.submissions.set(draftKey, crypto.randomUUID());
-      const submissionId = state.submissions.get(draftKey);
+      errorMessage.hidden = true;
       try {
-        let grant = state.writeGrant;
+        if (!commenter) {
+          if (!token) throw new Error("请先完成人机验证");
+          const payload = await fetchJson(state, "/v1/sessions/guest", {
+            method: "POST", body: JSON.stringify({ nickname: nickname.value, turnstile_token: token }),
+          });
+          state.session = payload.session;
+          state.writeGrant = payload.write_grant;
+          state.grantExpires = Date.now() + 240000;
+          saveSession(state.session);
+          state.pending.delete(draftKey);
+          renderDrawer(state);
+          return;
+        }
+        let grant = Date.now() < state.grantExpires ? state.writeGrant : "";
         if (!grant) {
-          if (!turnstileToken) throw new Error("请先完成人机验证");
+          if (!token) throw new Error("请先完成人机验证");
           const payload = await fetchJson(state, "/v1/write-grants", {
-            method: "POST",
-            body: JSON.stringify({ turnstile_token: turnstileToken }),
+            method: "POST", body: JSON.stringify({ turnstile_token: token }),
           });
           grant = payload.write_grant;
         }
+        if (!state.submissions.has(draftKey)) state.submissions.set(draftKey, crypto.randomUUID());
         await fetchJson(state, "/v1/comments", {
-          method: "POST",
-          body: JSON.stringify({
-            page_id: state.pageId,
-            build_revision: state.revision,
-            anchor: selectedAnchor,
-            body: submittedBody,
-            write_grant: grant,
-            request_id: submissionId,
-          }),
+          method: "POST", body: JSON.stringify({ page_id: state.pageId, build_revision: state.revision,
+            anchor, body: textarea.value, write_grant: grant, request_id: state.submissions.get(draftKey) }),
         });
         state.writeGrant = "";
+        state.pending.delete(draftKey);
         state.drafts.delete(draftKey);
         state.submissions.delete(draftKey);
         await loadComments(state);
         showStatus(state, "评论已发表。", false);
       } catch (error) {
+        state.pending.delete(draftKey);
         if (state.abort.signal.aborted) return;
         state.writeGrant = "";
-        if (error.status === 401) { state.session = null; saveSession(null); }
-        renderDrawer(state);
+        if (error.status === 401) { state.session = null; saveSession(null); renderDrawer(state); }
+        else {
+          errorMessage.textContent = error.message;
+          errorMessage.hidden = false;
+          textarea.readOnly = false;
+          challenge.hidden = false;
+          if (challenge.resetChallenge) challenge.resetChallenge();
+          else mountTurnstile(state, challenge, value => { token = value; submit.disabled = !value; });
+        }
         showStatus(state, error.message, true);
+        if (!form.isConnected) renderDrawer(state);
       }
     }, { signal: state.abort.signal });
-    section.append(form);
-    parent.append(section);
+    requestAnimationFrame(() => { if (textarea.isConnected) sizeTextarea(textarea); });
+    return form;
   }
 
   function renderDrawer(state) {
-    for (const widget of state.widgets.splice(0)) window.turnstile?.remove(widget);
-    const main = state.drawer.querySelector(".hb-comment-drawer__main");
+    const main = state.main;
+    const scrollTop = main.scrollTop;
+    clearWidgets(state);
+    for (const block of state.blocks) block.classList.remove("hb-comment-block--hovered");
     main.replaceChildren();
-    if (state.loading) {
+    if (state.loading && !state.loaded) {
       main.append(element("p", "hb-comments-empty", "正在读取本页评论……"));
       return;
     }
     if (state.error) {
-      main.append(element("p", "hb-comment-form__error", state.error));
-      const retry = element("button", "md-button", "重试");
-      retry.type = "button";
-      retry.addEventListener("click", () => loadComments(state), { signal: state.abort.signal });
-      main.append(retry);
+      const error = element("p", "hb-comment-form__error", state.error);
+      const retry = button("md-button", "重试读取评论"); retry.textContent = "重试";
+      retry.addEventListener("click", () => loadComments(state));
+      main.append(error, retry);
     }
-
-    const selectedAnchor = state.selectedBlock ? getBlockAnchor(state.selectedBlock) : null;
-    const selectedThread = selectedAnchor ? threadForAnchor(state, selectedAnchor) : null;
-    if (selectedThread) main.append(renderThread(state, selectedThread));
-    renderCommentForm(state, main);
-    const chooseLabel = element("label", "hb-comment-picker", "选择要评论的正文");
-    const choose = document.createElement("select");
-    choose.append(new Option("请选择段落、标题或其他内容", ""));
-    state.blocks.forEach((block, index) => choose.append(new Option(getBlockAnchor(block).quote.slice(0, 90), String(index))));
-    choose.value = state.selectedBlock ? String(state.blocks.indexOf(state.selectedBlock)) : "";
-    choose.addEventListener("change", () => {
-      const block = choose.value === "" ? null : state.blocks[Number(choose.value)];
-      setSelected(state, block);
-      state.drawer.querySelector("textarea, input, select")?.focus();
-    }, { signal: state.abort.signal });
-    chooseLabel.append(choose);
-    main.append(chooseLabel);
-
-    const activeThreads = state.threads.filter(
-      (thread) => thread.status === "active" && thread !== selectedThread,
-    );
-    const historical = state.threads.filter((thread) => thread.status === "orphaned");
-    if (activeThreads.length) {
-      main.append(element("h3", "hb-comment-drawer__section-title", "本页其他评论"));
-      for (const thread of activeThreads) main.append(renderThread(state, thread));
+    const threads = [...state.threads];
+    const selectedThread = threadForBlock(state, state.selectedBlock);
+    if (selectedThread) state.selectedThreadId = selectedThread.id;
+    if (state.selectedBlock && !selectedThread) threads.push({ id: null, status: "active",
+      anchor: getBlockAnchor(state.selectedBlock), comments: [] });
+    threads.sort((left, right) => {
+      const a = left.status === "active" ? state.blocks.indexOf(findBlock(state, left.anchor)) : -1;
+      const b = right.status === "active" ? state.blocks.indexOf(findBlock(state, right.anchor)) : -1;
+      return (a < 0 ? Infinity : a) - (b < 0 ? Infinity : b) || (left.anchor.start - right.anchor.start);
+    });
+    for (const thread of threads) {
+      const selected = state.selectedBlock ? thread.status === "active" && thread.anchor.fingerprint === getBlockAnchor(state.selectedBlock).fingerprint :
+        Boolean(state.selectedThreadId && state.selectedThreadId === thread.id);
+      main.append(renderThread(state, thread, selected));
     }
-    if (historical.length) {
-      main.append(element("h3", "hb-comment-drawer__section-title", "历史评论（原内容已变更）"));
-      for (const thread of historical) main.append(renderThread(state, thread));
+    if (!threads.length && !state.error) {
+      const empty = element("div", "hb-comments-empty");
+      const icon = element("span", ""); icon.innerHTML = svg.info;
+      empty.append(icon, element("p", "", "本页暂无评论，点击段落右侧的评论按钮以添加评论"));
+      main.append(empty);
     }
-    if (!state.threads.length && !state.selectedBlock && !state.error) {
-      main.append(element("p", "hb-comments-empty", "本页还没有段落评论。点选正文中的评论按钮即可开始。"));
-    }
+    main.scrollTop = scrollTop;
   }
 
   function showStatus(state, message, error) {
+    if (state.abort.signal.aborted) return;
     state.status.textContent = message;
     state.status.classList.toggle("hb-comment-status--error", Boolean(error));
     state.status.hidden = false;
     window.clearTimeout(state.statusTimer);
-    if (!error) state.statusTimer = window.setTimeout(() => { state.status.hidden = true; }, 5000);
+    if (!error) state.statusTimer = window.setTimeout(() => { state.status.hidden = true; }, 4000);
   }
 
   async function loadComments(state) {
+    const generation = ++state.loadGeneration;
     state.loading = true;
     state.error = "";
-    renderDrawer(state);
+    if (!state.loaded) renderDrawer(state);
     try {
       const payload = await fetchJson(state, `/v1/pages/${encodeURIComponent(state.pageId)}/comments`);
-      state.threads = payload.threads || [];
+      if (generation !== state.loadGeneration || state.abort.signal.aborted) return;
+      // Older Workers may still return deleted/hidden rows. Neither belongs in the public UI or counts.
+      state.threads = (payload.threads || []).map(thread => ({ ...thread,
+        comments: (thread.comments || []).filter(comment => comment.status === "published"),
+      })).filter(thread => thread.comments.length);
+      state.loaded = true;
     } catch (error) {
-      state.error = `${error.message}。正文与页尾讨论不受影响。`;
+      if (generation === state.loadGeneration) state.error = `${error.message}，请稍后重试。`;
     } finally {
-      if (state.abort.signal.aborted) return;
-      state.loading = false;
-      updateBlocks(state);
-      renderDrawer(state);
-      handleCommentHash(state);
+      if (generation === state.loadGeneration && !state.abort.signal.aborted) {
+        state.loading = false;
+        updateBlocks(state);
+        renderDrawer(state);
+      }
     }
   }
 
   function handleCommentHash(state) {
     const match = window.location.hash.match(/^#comment-(.+)$/);
-    if (!match) return;
+    if (!match || !state.loaded) return;
     const commentId = match[1];
-    const thread = state.threads.find((item) => item.comments?.some((comment) => String(comment.id) === commentId));
-    if (!thread) return;
+    const thread = state.threads.find(item => item.comments.some(comment => String(comment.id) === commentId));
+    if (!thread) { openDrawer(state); showStatus(state, "这条评论已删除或不可用。", true); return; }
     const block = thread.status === "active" ? findBlock(state, thread.anchor) : null;
-    if (block) setSelected(state, block, { scroll: true });
-    openDrawer(state);
-    window.setTimeout(() => document.getElementById(`comment-${commentId}`)?.focus(), 250);
+    selectBlock(state, block, { body: true, threadId: thread.id });
+    requestAnimationFrame(() => {
+      const comment = document.getElementById(`comment-${commentId}`);
+      if (!comment) return;
+      scrollCardTo(state, comment.closest(".hb-comment-thread"), comment);
+      comment.focus({ preventScroll: true });
+      comment.classList.add("hb-comment--highlighted");
+      window.setTimeout(() => comment.classList.remove("hb-comment--highlighted"), 1600);
+    });
   }
 
   async function exchangeGitHubCode(state) {
-    const params = new URLSearchParams(window.location.hash.slice(1));
-    const code = params.get("comment-auth");
+    const code = new URLSearchParams(window.location.hash.slice(1)).get("comment-auth");
     if (!code) return;
     history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     try {
       const login = JSON.parse(sessionStorage.getItem(LOGIN_KEY) || "null");
       sessionStorage.removeItem(LOGIN_KEY);
       if (!login?.verifier || Date.now() - login.created > 600000) throw new Error("登录验证信息已过期，请重新发起登录。");
+      if (login.pageId === state.pageId) {
+        state.drafts = new Map(login.drafts || []);
+        state.selectedBlock = findBlock(state, login.anchor);
+      }
       const payload = await fetchJson(state, "/v1/auth/github/exchange", {
-        method: "POST",
-        body: JSON.stringify({ code, verifier: login.verifier }),
+        method: "POST", body: JSON.stringify({ code, verifier: login.verifier }),
       });
       state.session = payload.session;
       saveSession(state.session);
-      if (login.pageId === state.pageId) setSelected(state, findBlock(state, login.anchor));
       openDrawer(state);
       showStatus(state, "GitHub 身份验证成功。", false);
-    } catch (error) {
-      openDrawer(state);
-      showStatus(state, error.message, true);
-    }
+    } catch (error) { openDrawer(state); showStatus(state, error.message, true); }
   }
 
   function currentTheme() {
@@ -732,147 +868,129 @@
     initThemeObserver();
   }
 
+
   function createDrawer(state) {
-    const openButton = button("hb-comments-button", "打开本页评论", svg.comment);
-    openButton.setAttribute("aria-expanded", "false");
-    const openLabel = element("span", "", "本页评论");
-    openButton.append(openLabel);
-    const blockButton = button("hb-comment-block-button", "评论此处", svg.comment);
-    blockButton.hidden = true;
-    blockButton.append(element("span", "", "评论此处"));
-    const backdrop = element("div", "hb-comment-backdrop");
-    backdrop.hidden = true;
+    const open = button("hb-comments-button", "打开本页评论", svg.comment);
+    open.setAttribute("aria-expanded", "false");
+    open.setAttribute("aria-controls", "hb-comment-drawer");
+    open.append(element("span", "", "本页评论"));
     const drawer = element("aside", "hb-comment-drawer");
+    drawer.id = "hb-comment-drawer";
     drawer.hidden = true;
-    drawer.setAttribute("role", "dialog");
-    drawer.setAttribute("aria-modal", "true");
+    drawer.setAttribute("role", "region");
     drawer.setAttribute("aria-labelledby", "hb-comment-drawer-title");
     const header = element("header", "hb-comment-drawer__header");
-    const title = element("h2", "", "本页评论");
-    title.id = "hb-comment-drawer-title";
+    const title = element("h2", "", "本页评论"); title.id = "hb-comment-drawer-title";
     const close = button("hb-comment-close", "关闭本页评论", svg.close);
     header.append(title, close);
     const status = element("p", "hb-comment-status");
-    status.setAttribute("role", "status");
-    status.setAttribute("aria-live", "polite");
-    status.hidden = true;
+    status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite"); status.hidden = true;
     const main = element("div", "hb-comment-drawer__main");
-    const footer = element("footer", "hb-comment-drawer__footer", "段落评论由 HanaBio 自托管；访客无需邮箱。 ");
-    const source = element("a", "", "设计参考 OI Wiki Feedback System");
-    source.href = "https://github.com/OI-wiki/feedback-sys";
-    source.target = "_blank";
-    source.rel = "noopener";
-    footer.append(source);
-    drawer.append(header, status, main, footer);
-    state.root.append(openButton, blockButton, backdrop, drawer);
-    state.openButton = openButton;
-    state.blockButton = blockButton;
-    state.backdrop = backdrop;
-    state.drawer = drawer;
-    state.closeButton = close;
-    state.status = status;
-    openButton.addEventListener("click", () => openDrawer(state), { signal: state.abort.signal });
-    close.addEventListener("click", () => closeDrawer(state), { signal: state.abort.signal });
-    backdrop.addEventListener("click", () => closeDrawer(state), { signal: state.abort.signal });
-    blockButton.addEventListener("pointerenter", () => window.clearTimeout(state.blockButtonTimer), { signal: state.abort.signal });
-    blockButton.addEventListener("pointerleave", () => hideBlockButton(state), { signal: state.abort.signal });
-    blockButton.addEventListener("click", () => {
-      if (!state.blockButtonTarget) return;
-      setSelected(state, state.blockButtonTarget);
-      openDrawer(state);
-    }, { signal: state.abort.signal });
-    document.addEventListener("keydown", (event) => {
-      if (!drawer.classList.contains("hb-comment-drawer--open")) return;
-      if (event.key === "Escape") {
-        closeDrawer(state);
-        return;
-      }
-      if (event.key !== "Tab") return;
-      const focusable = Array.from(drawer.querySelectorAll(
-        'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
-      )).filter((node) => !node.hidden && node.getClientRects().length);
-      if (!focusable.length) {
-        event.preventDefault();
-        close.focus();
-        return;
-      }
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
-        event.preventDefault();
-        last.focus();
-      } else if (!event.shiftKey && document.activeElement === last) {
-        event.preventDefault();
-        first.focus();
-      }
+    const markers = element("div", "hb-comment-markers");
+    drawer.append(header, status, main);
+    state.root.append(open, markers, drawer);
+    Object.assign(state, { openButton: open, drawer, closeButton: close, main, status, markerLayer: markers });
+    open.addEventListener("click", () => { openDrawer(state); close.focus({ preventScroll: true }); });
+    close.addEventListener("click", () => closeDrawer(state));
+    document.addEventListener("keydown", event => {
+      if (state.isOpen && event.key === "Escape" && !event.isComposing) closeDrawer(state);
     }, { signal: state.abort.signal });
   }
 
   function bindBlocks(state) {
+    const show = block => {
+      window.clearTimeout(state.markerTimer);
+      for (const [other, marker] of state.markers) marker.classList.toggle("hb-comment-block-button--visible", other === block);
+    };
+    const hide = block => {
+      window.clearTimeout(state.markerTimer);
+      state.markerTimer = window.setTimeout(() => state.markers.get(block)?.classList.remove("hb-comment-block-button--visible"), 140);
+    };
     for (const block of state.blocks) {
       block.dataset.hanabioReviewEnabled = "true";
-      block.addEventListener("pointerenter", () => showBlockButton(state, block), { signal: state.abort.signal });
-      block.addEventListener("pointerleave", () => hideBlockButton(state), { signal: state.abort.signal });
-      block.addEventListener("focusin", () => showBlockButton(state, block), { signal: state.abort.signal });
-      block.addEventListener("click", (event) => {
-        // Reading, selecting text, and tapping media must not open a modal.
-        if (event.target.closest("a, button, input, textarea, select, summary")) return;
-        showBlockButton(state, block);
+      const marker = button("hb-comment-block-button", "为本段添加评论", svg.add);
+      marker.dataset.count = "0";
+      marker.append(element("span", ""));
+      state.markers.set(block, marker);
+      state.markerLayer.append(marker);
+      marker.addEventListener("pointerenter", () => show(block));
+      marker.addEventListener("pointerleave", () => hide(block));
+      marker.addEventListener("focus", () => show(block));
+      marker.addEventListener("blur", () => hide(block));
+      marker.addEventListener("click", () => selectBlock(state, block, { compose: true }));
+      block.addEventListener("pointerenter", () => show(block), { signal: state.abort.signal });
+      block.addEventListener("pointerleave", () => hide(block), { signal: state.abort.signal });
+      block.addEventListener("focusin", () => show(block), { signal: state.abort.signal });
+      block.addEventListener("click", event => {
+        if (event.target.closest("a,button,input,textarea,select,summary,img,video,audio,iframe") || hasSelection()) return;
+        if (threadForBlock(state, block)?.comments.length) selectBlock(state, block);
       }, { signal: state.abort.signal });
     }
+    const schedule = () => queueLayout(state);
+    window.addEventListener("resize", schedule, { signal: state.abort.signal });
+    window.addEventListener("scroll", schedule, { passive: true, signal: state.abort.signal });
+    window.visualViewport?.addEventListener("resize", schedule, { signal: state.abort.signal });
+    window.visualViewport?.addEventListener("scroll", schedule, { signal: state.abort.signal });
+    state.mobile.addEventListener("change", () => {
+      state.content.style.removeProperty("--hb-comment-reserve"); state.reserve = 0; queueLayout(state);
+    }, { signal: state.abort.signal });
+    state.resizeObserver = new ResizeObserver(schedule);
+    state.resizeObserver.observe(state.article);
+    window.addEventListener("hashchange", () => handleCommentHash(state), { signal: state.abort.signal });
+    document.body.classList.add("hb-has-paragraph-comments");
+    queueLayout(state);
+  }
+
+  function cleanup(state) {
+    if (!state) return;
+    state.abort.abort();
+    state.resizeObserver?.disconnect();
+    clearWidgets(state);
+    for (const timer of [state.closeTimer, state.statusTimer, state.markerTimer]) window.clearTimeout(timer);
+    cancelAnimationFrame(state.layoutFrame);
+    state.content.style.removeProperty("--hb-comment-reserve");
+    for (const block of state.blocks) {
+      block.classList.remove("hb-comment-block--selected", "hb-comment-block--hovered", "hb-commented-block");
+      delete block.dataset.hanabioReviewEnabled;
+    }
+    state.markerLayer.remove(); state.drawer.remove(); state.openButton.remove();
+    document.body.classList.remove("hb-comments-open", "hb-has-paragraph-comments");
+    document.body.style.removeProperty("--hb-comment-visible-height");
+    document.body.style.removeProperty("--hb-comment-bottom");
   }
 
   async function initPage() {
-    if (active?.root === document.querySelector(".hb-comments-root") && active.root.isConnected) return;
-    if (active) for (const widget of active.widgets) window.turnstile?.remove(widget);
-    if (active) for (const node of active.inertNodes || []) node.inert = false;
-    active?.abort.abort();
-    document.body.classList.remove("hb-comments-open");
     const root = document.querySelector(".hb-comments-root");
+    if (active?.root === root && root?.isConnected) return;
+    cleanup(active); active = null;
     if (!root) return;
     mountGiscus(root);
     if (root.dataset.paragraphEnabled !== "true") return;
     const article = document.querySelector("article.md-content__inner") || document.querySelector(".md-content__inner");
     const candidates = article ? Array.from(article.querySelectorAll('[data-hanabio-comments="block"]')) : [];
-    // Ambiguous/empty generated fragments cannot identify a unique source block.
     const frequencies = new Map();
-    candidates.forEach((block) => frequencies.set(block.dataset.blockFingerprint, (frequencies.get(block.dataset.blockFingerprint) || 0) + 1));
-    const blocks = candidates.filter((block) => /[\p{L}\p{N}]/u.test(getBlockAnchor(block).quote) && frequencies.get(block.dataset.blockFingerprint) === 1);
+    for (const block of candidates) frequencies.set(block.dataset.blockFingerprint, (frequencies.get(block.dataset.blockFingerprint) || 0) + 1);
+    const blocks = candidates.filter(block => /[\p{L}\p{N}]/u.test(getBlockAnchor(block).quote) && frequencies.get(block.dataset.blockFingerprint) === 1);
     if (!blocks.length) return;
     const state = {
-      root,
-      api: root.dataset.commentApiUrl,
-      siteKey: root.dataset.turnstileSiteKey,
-      pageId: root.dataset.hanabioPageId,
-      revision: root.dataset.buildRevision,
-      blocks,
-      threads: [],
-      selectedBlock: null,
-      session: loadSession(),
-      writeGrant: "",
-      grantExpires: 0,
-      drafts: new Map(),
-      submissions: new Map(),
-      widgets: [],
-      abort: new AbortController(),
-      loading: false,
-      error: "",
-      blockButtonTarget: null,
-      blockButtonTimer: 0,
-      returnFocus: null,
+      root, article, content: article.closest(".md-content") || article,
+      api: root.dataset.commentApiUrl, siteKey: root.dataset.turnstileSiteKey,
+      pageId: root.dataset.hanabioPageId, revision: root.dataset.buildRevision, blocks,
+      threads: [], selectedBlock: null, selectedThreadId: null, session: loadSession(),
+      writeGrant: "", grantExpires: 0, drafts: new Map(), edits: new Map(), expanded: new Set(),
+      submissions: new Map(), pending: new Set(), widgets: [], markers: new Map(), abort: new AbortController(),
+      mobile: window.matchMedia("(max-width: 960px)"), reserve: 0, layoutFrame: 0,
+      loading: false, loaded: false, loadGeneration: 0, error: "", isOpen: false,
     };
     active = state;
-    createDrawer(state);
-    bindBlocks(state);
+    createDrawer(state); bindBlocks(state);
     await exchangeGitHubCode(state);
+    if (state.abort.signal.aborted) return;
     await loadComments(state);
+    if (!state.abort.signal.aborted) handleCommentHash(state);
   }
 
-  if (typeof document$ !== "undefined" && document$?.subscribe) {
-    document$.subscribe(initPage);
-  } else if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initPage, { once: true });
-  } else {
-    initPage();
-  }
+  if (typeof document$ !== "undefined" && document$?.subscribe) document$.subscribe(initPage);
+  else if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initPage, { once: true });
+  else initPage();
 })();

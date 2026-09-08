@@ -71,7 +71,9 @@ test("OAuth redirect works and binds one-time exchange to the initiating browser
   const state = new URL(start.headers.get("Location")).searchParams.get("state");
   const originalFetch = globalThis.fetch;
   t.after(() => { globalThis.fetch = originalFetch; });
-  globalThis.fetch = async (url) => Response.json(String(url).includes("access_token") ? { access_token: "test-token" } : { id: 42, login: "tester" });
+  globalThis.fetch = async (url) => Response.json(String(url).includes("access_token") ? { access_token: "test-token" } : {
+    id: 42, login: "tester", avatar_url: "https://avatars.githubusercontent.com/u/42", html_url: "https://github.com/tester",
+  });
   assert.equal((await f.request("/v1/auth/github/callback?state=wrong&code=test")).status, 400);
   const callback = await f.request(`/v1/auth/github/callback?state=${state}&code=test`);
   assert.equal(callback.status, 302);
@@ -83,6 +85,13 @@ test("OAuth redirect works and binds one-time exchange to the initiating browser
   assert.deepEqual(results.map((response) => response.status).sort(), [200, 400]);
   const payload = await results.find((response) => response.status === 200).json();
   assert.equal(payload.session.commenter.verified, true);
+  assert.equal(payload.session.commenter.avatar_url, "https://avatars.githubusercontent.com/u/42");
+  assert.equal(payload.session.commenter.profile_url, "https://github.com/tester");
+  const commenterId = payload.session.commenter.id;
+  assert.equal((await f.post(payload.session.token, { write_grant: await f.grant(commenterId) })).status, 201);
+  const page = await (await f.request("/v1/pages/hb-test/comments")).json();
+  assert.equal(page.threads[0].comments[0].author.profile_url, "https://github.com/tester");
+  assert.equal(page.threads[0].comments[0].author.avatar_url, "https://avatars.githubusercontent.com/u/42");
 });
 
 test("Turnstile checks server-side hostname and refuses failed or replayed verification", async (t) => {
@@ -97,7 +106,7 @@ test("Turnstile checks server-side hostname and refuses failed or replayed verif
   assert.equal((await f.request("/v1/sessions/guest", { method: "POST", body: { nickname: "访客测试", turnstile_token: "test" } })).status, 201);
 });
 
-test("guest ownership, plain text, version conflicts, grant replay and deletion tombstones", async (t) => {
+test("guest ownership, version conflicts and grant replay remain enforced when deleting the last comment", async (t) => {
   const f = fixture(t);
   const token = await f.identity();
   const stranger = await f.identity("stranger");
@@ -111,9 +120,67 @@ test("guest ownership, plain text, version conflicts, grant replay and deletion 
   assert.equal((await change(stranger, "DELETE", { version: 1 })).status, 403);
   assert.equal((await change(token, "PATCH", { body: "edited", version: 1 })).status, 200);
   assert.equal((await change(token, "PATCH", { body: "race", version: 1 })).status, 409);
+  assert.equal((await change(token, "DELETE", { version: 1 })).status, 409);
   assert.equal((await change(token, "DELETE", { version: 2 })).status, 200);
-  assert.equal(f.sqlite.prepare("SELECT body FROM comments").get().body, "");
+  const deleted = f.sqlite.prepare("SELECT body, status FROM comments").get();
+  assert.equal(deleted.body, "");
+  assert.equal(deleted.status, "deleted");
   assert.equal(f.sqlite.prepare("SELECT count(*) AS n FROM comments").get().n, 1);
+  assert.deepEqual((await (await f.request("/v1/pages/hb-test/comments")).json()).threads, []);
+  assert.equal((await change(token, "PATCH", { body: "restore", version: 3 })).status, 409);
+  assert.equal((await change(token, "DELETE", { version: 3 })).status, 409);
+});
+
+test("historical deletion records and empty threads stay absent while administrators retain hidden comments", async (t) => {
+  const f = fixture(t);
+  const token = await f.identity();
+  const admin = await f.identity("admin", "github", "42", true);
+  await f.post(token);
+  const mixedThread = f.sqlite.prepare("SELECT id FROM threads").get().id;
+  const addComment = (id, threadId, status, body = "") => f.sqlite.prepare(
+    "INSERT INTO comments(id, thread_id, commenter_id, body, status, created_at) VALUES (?, ?, 'guest', ?, ?, 'now')",
+  ).run(id, threadId, body, status);
+  addComment("mixed-deleted", mixedThread, "deleted");
+  addComment("mixed-hidden", mixedThread, "hidden", "Hidden comment");
+  const cases = [
+    ["deleted-only", "active", "c", "deleted"],
+    ["old-deleted-only", "orphaned", "d", "deleted"],
+    ["empty", "active", "e", null],
+    ["hidden-only", "active", "f", "hidden"],
+  ];
+  for (const [id, status, fingerprint, commentStatus] of cases) {
+    f.sqlite.prepare("INSERT INTO threads VALUES (?, 'hb-test', 0, 1, ?, 'quote', ?, ?, ?, 'now', 'now')")
+      .run(id, fingerprint.repeat(20), status, f.revision, f.revision);
+    if (commentStatus) addComment(`${id}-comment`, id, commentStatus, commentStatus === "hidden" ? "Hidden comment" : "");
+  }
+  const publicPage = await (await f.request("/v1/pages/hb-test/comments")).json();
+  assert.equal(publicPage.threads.length, 1);
+  assert.equal(publicPage.threads[0].id, mixedThread);
+  assert.deepEqual(publicPage.threads[0].comments.map((comment) => comment.status), ["published"]);
+  const adminPage = await (await f.request("/v1/pages/hb-test/comments", { token: admin })).json();
+  assert.deepEqual(new Set(adminPage.threads.map((thread) => thread.id)), new Set([mixedThread, "hidden-only"]));
+  assert.equal(adminPage.threads.flatMap((thread) => thread.comments).filter((comment) => comment.status === "hidden").length, 2);
+  assert.ok(adminPage.threads.every((thread) => thread.comments.every((comment) => comment.status !== "deleted")));
+  assert.equal(f.sqlite.prepare("SELECT count(*) AS n FROM comments WHERE status = 'deleted'").get().n, 3);
+});
+
+test("create and edit accept 65535 characters and reject oversized or empty bodies without changing stored content", async (t) => {
+  const f = fixture(t);
+  const token = await f.identity();
+  const body = "评".repeat(65535);
+  const write_grant = await f.grant();
+  assert.equal((await f.post(token, { body: `${body}论`, write_grant })).status, 400);
+  assert.equal((await f.post(token, { body: "", write_grant })).status, 400);
+  assert.equal((await f.post(token, { body, write_grant })).status, 201);
+  const id = f.sqlite.prepare("SELECT id FROM comments").get().id;
+  const edit = (value) => f.request(`/v1/comments/${id}`, { method: "PATCH", token, body: { body: value, version: 1 } });
+  assert.equal((await edit(`${body}论`)).status, 400);
+  assert.equal((await edit("  ")).status, 400);
+  const editedBody = "改".repeat(65535);
+  assert.equal((await edit(editedBody)).status, 200);
+  const stored = f.sqlite.prepare("SELECT body, version FROM comments WHERE id = ?").get(id);
+  assert.equal(stored.body, editedBody);
+  assert.equal(stored.version, 2);
 });
 
 test("revoked admin tokens lose moderation and hidden-read access immediately", async (t) => {
@@ -124,15 +191,23 @@ test("revoked admin tokens lose moderation and hidden-read access immediately", 
   const id = f.sqlite.prepare("SELECT id FROM comments").get().id;
   const moderate = () => f.request(`/v1/admin/comments/${id}`, { method: "PATCH", token: admin, body: { status: "hidden" } });
   assert.equal((await moderate()).status, 200);
-  assert.equal((await (await f.request("/v1/pages/hb-test/comments")).json()).threads[0].comments.length, 0);
+  assert.deepEqual((await (await f.request("/v1/pages/hb-test/comments")).json()).threads, []);
+  const adminPage = await (await f.request("/v1/pages/hb-test/comments", { token: admin })).json();
+  assert.equal(adminPage.threads[0].comments[0].status, "hidden");
   f.env.ADMIN_GITHUB_IDS = "";
   assert.equal((await moderate()).status, 403);
-  assert.equal((await (await f.request("/v1/pages/hb-test/comments", { token: admin })).json()).threads[0].comments.length, 0);
+  assert.deepEqual((await (await f.request("/v1/pages/hb-test/comments", { token: admin })).json()).threads, []);
 });
 
 test("pages with over 100 threads do not exceed the D1 bind limit", async (t) => {
   const f = fixture(t);
-  for (let i = 0; i < 120; i++) f.sqlite.prepare("INSERT INTO threads VALUES (?, 'hb-test', 0, 1, ?, 'quote', 'active', ?, ?, 'now', 'now')").run(String(i), i.toString(16).padStart(20, "0"), f.revision, f.revision);
+  await f.identity();
+  for (let i = 0; i < 120; i++) {
+    f.sqlite.prepare("INSERT INTO threads VALUES (?, 'hb-test', 0, 1, ?, 'quote', 'active', ?, ?, 'now', 'now')")
+      .run(String(i), i.toString(16).padStart(20, "0"), f.revision, f.revision);
+    f.sqlite.prepare("INSERT INTO comments(id, thread_id, commenter_id, body, created_at) VALUES (?, ?, 'guest', 'Comment', 'now')")
+      .run(`comment-${i}`, String(i));
+  }
   const response = await f.request("/v1/pages/hb-test/comments");
   assert.equal(response.status, 200);
   assert.equal((await response.json()).threads.length, 120);
@@ -204,4 +279,8 @@ test("retrying a lost successful response cannot duplicate a comment", async (t)
   assert.equal((await f.post(token, { request_id, body: "different content" })).status, 409);
   const stranger = await f.identity("stranger");
   assert.equal((await f.post(stranger, { request_id })).status, 409);
+  assert.equal((await f.request(`/v1/comments/${request_id}`, { method: "DELETE", token, body: { version: 1 } })).status, 200);
+  assert.equal((await f.post(token, { request_id, write_grant })).status, 409);
+  assert.equal(f.sqlite.prepare("SELECT count(*) AS n FROM comments").get().n, 1);
+  assert.deepEqual((await (await f.request("/v1/pages/hb-test/comments")).json()).threads, []);
 });
