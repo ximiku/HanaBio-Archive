@@ -6,7 +6,6 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 # Welcome to 花火生物档案！
 
-<!--备用名：BioNotes, BioCodex-->
 
 > パッと光って咲いた 
 >
@@ -23,7 +22,7 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 [[site-events:latest]]
 
-这里是 **Ximiku67 的个人生物学笔记**，汇集了生物化学、细胞生物学、动植物学等生物学微观到宏观层面的知识内容。这里会尽可能完整地整理我在两年半的高中生物竞赛生涯中学习到的理论和实验知识，以之前的生物竞赛笔记为底稿，并持续融入北大生科的课程笔记、前沿论文与资料等，希望把这个网站逐渐建成一个**生物学知识库**，在讲解生物学基础知识的同时，也链接相关的前沿内容。
+这里是 **Ximiku67 的个人生物学笔记**，汇集了生物化学、细胞生物学、动植物学等生物学微观到宏观层面的知识内容。这里会尽可能完整地整理我在两年半的高中生物竞赛生涯中学习到的理论和实验知识，以之前的生物竞赛笔记为底稿，并持续融入北大生科的课程笔记、前沿论文与资料等，希望把这个网站逐渐建成一个**生物学知识库**，在讲解生物学基础知识的同时，也链接相关的前沿内容，并记录一些生物相关的趣事。
 
 ## 这份笔记的起源
 
@@ -55,7 +54,7 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 
 **HanaBio Archive** | 花火生物档案，**Hanabi** 是日语“花火”的罗马音，后加 o 构成 **Bio**，**Archive** 则参考了*蔚蓝档案*的名字（~~Bio Archive也是BA~~）。
 
-本站现在还在初始搭建阶段，如果你对本站有任何问题或建议，非常欢迎在页尾或右侧的评论区交流，也可以提交 [issue](https://github.com/ximiku/HanaBio-Archive/issues)；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系我的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。
+本站现在还在初始搭建阶段，如果你对本站有任何问题或建议，非常欢迎在页尾或右侧的评论区交流，也可以提交 [issue](https://github.com/ximiku/HanaBio-Archive/issues)进行讨论；如果你愿意，也欢迎一同完善本站：提交 [Pull Request](https://github.com/ximiku/HanaBio-Archive/pulls)，或直接联系我的邮箱[jiaxi_liu@stu.pku.edu.cn](mailto:jiaxi_liu@stu.pku.edu.cn)。
 
 如果你认为本站对你有帮助，可以给[仓库](https://github.com/ximiku/HanaBio-Archive)点个 star，或者在 [Discussions](https://github.com/ximiku/HanaBio-Archive/discussions) 留下你的足迹~
 
@@ -70,22 +69,3 @@ description: 花火生物档案——从基础到前沿的生物学知识库与�
 ## 站点纪事 { #site-events }
 
 [[site-events:all]]
-
-<!--初音未来开始-->
-<style>
-.cywl {
-    position: fixed!important;
-    position: absolute;
-    width: 70px;
-    height: 75px;
-    z-index: 9;
-    right: 0;
-    bottom: 0;
-    top: expression(offsetParent.scrollTop+offsetParent.clientHeight-150);
-    cursor: pointer;
-}
-</style>
-<div id="audio" class="cywl">
-<img src="https://external-30160.picsz.qpic.cn/39ff4096c204652d7c7b56418fb37631" width="65px" height="65px" id="d" onclick="c();">
-</div>
-<!--初音未来结束-->
