@@ -35,6 +35,7 @@
       data-paragraph-enabled="{{ 'true' if comments.paragraph_enabled else 'false' }}"
       data-comment-api-url="{{ comments.api_url | e }}"
       data-turnstile-site-key="{{ comments.turnstile_site_key | e }}"
+      data-giscus-shared-login="{{ 'false' if config is defined and config.extra.giscus_shared_login is defined and config.extra.giscus_shared_login == false else 'true' }}"
       data-giscus-enabled="{{ 'true' if comments.giscus_enabled else 'false' }}"
       data-giscus-repo="{{ comments.giscus_repo | e }}"
       data-giscus-repo-id="{{ comments.giscus_repo_id | e }}"

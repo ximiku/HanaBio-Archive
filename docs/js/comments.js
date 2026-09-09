@@ -5,7 +5,6 @@
   const LOGIN_KEY = "hanabio-comment-login-v1";
   const MAX_BODY_LENGTH = 65535;
   const TURNSTILE_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-  const GISCUS_SRC = "https://giscus.app/client.js";
   const paths = {
     comment: "M4 4h16v12H8l-4 4V4Zm2 2v9.17L7.17 14H18V6H6Z",
     add: "M4 4h16v12H8l-4 4V4Zm2 2v9.17L7.17 14H18V6H6Zm5 1h2v2h2v2h-2v2h-2v-2H9V9h2V7Z",
@@ -20,6 +19,7 @@
     [name, `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${path}"/></svg>`]));
   const anchors = new WeakMap();
   let active = null;
+  let sharedAuth = null;
   let turnstilePromise = null;
   let themeObserver = null;
 
@@ -55,7 +55,10 @@
 
   function saveSession(value) {
     try {
-      if (value) localStorage.setItem(SESSION_KEY, JSON.stringify(value));
+      if (value) {
+        localStorage.setItem(SESSION_KEY, JSON.stringify(value));
+        if (!value.commenter?.verified) localStorage.setItem("hanabio-comment-guest-v1", JSON.stringify(value));
+      }
       else localStorage.removeItem(SESSION_KEY);
     } catch (_error) {
       if (active) showStatus(active, "浏览器不允许保存身份；关闭本页后可能失去访客评论编辑权。", true);
@@ -570,7 +573,8 @@
     return textarea.reportValidity();
   }
 
-  async function startGitHubLogin(state, block) {
+  async function startGitHubLogin(state, block, independent = false) {
+    if (sharedAuth?.enabled && !independent) { sharedAuth.start(); return; }
     try {
       const verifier = Array.from(crypto.getRandomValues(new Uint8Array(32)), byte => byte.toString(16).padStart(2, "0")).join("");
       const hash = new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(verifier)));
@@ -592,7 +596,8 @@
       const logout = button("hb-text-button", "退出评论身份");
       logout.textContent = "退出";
       logout.addEventListener("click", () => {
-        saveSession(null); state.session = null; state.writeGrant = ""; renderDrawer(state);
+        if (sharedAuth) sharedAuth.logout();
+        else { saveSession(null); state.session = null; state.writeGrant = ""; renderDrawer(state); }
       });
       auth.append(logout);
     }
@@ -605,6 +610,7 @@
     textarea.readOnly = state.pending.has(draftKey);
     textarea.addEventListener("input", () => {
       state.drafts.set(draftKey, textarea.value);
+      sharedAuth?.remember();
       state.submissions.delete(draftKey);
       sizeTextarea(textarea);
     });
@@ -636,9 +642,25 @@
     controls.append(submit);
     if (!commenter) {
       const github = element("a", "md-button", "GitHub 登录");
-      github.href = `${state.api}/v1/auth/github/start?return_to=${encodeURIComponent(location.href)}`;
+      github.href = sharedAuth?.enabled && sharedAuth.returnUrl
+        ? `https://giscus.app/api/oauth/authorize?redirect_uri=${encodeURIComponent(sharedAuth.returnUrl)}`
+        : "#";
       github.addEventListener("click", event => { event.preventDefault(); startGitHubLogin(state, block); });
       controls.append(github);
+      if (sharedAuth?.failed) {
+        const fallback = button("hb-text-button", "GitHub 独立登录");
+        fallback.textContent = "独立登录";
+        fallback.addEventListener("click", () => startGitHubLogin(state, block, true));
+        controls.append(fallback);
+      }
+      let previousGuest = null;
+      try { previousGuest = JSON.parse(localStorage.getItem("hanabio-comment-guest-v1") || "null"); } catch {}
+      if (previousGuest?.token && Date.parse(previousGuest.expires_at) > Date.now()) {
+        const restore = button("hb-text-button", "恢复之前的访客身份");
+        restore.textContent = "恢复访客身份";
+        restore.addEventListener("click", () => sharedAuth?.restoreGuest());
+        controls.append(restore);
+      }
     }
     form.append(controls);
     if (state.writeGrant && commenter) challenge.hidden = true;
@@ -842,33 +864,6 @@
     themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-color-scheme"] });
   }
 
-  function mountGiscus(root) {
-    if (root.dataset.giscusEnabled !== "true") return;
-    const mount = root.querySelector(".hb-giscus__mount");
-    if (!mount) return;
-    mount.replaceChildren();
-    const script = document.createElement("script");
-    script.src = GISCUS_SRC;
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    script.dataset.repo = root.dataset.giscusRepo;
-    script.dataset.repoId = root.dataset.giscusRepoId;
-    script.dataset.category = root.dataset.giscusCategory;
-    script.dataset.categoryId = root.dataset.giscusCategoryId;
-    script.dataset.mapping = "specific";
-    script.dataset.term = root.dataset.hanabioPageId;
-    script.dataset.strict = "1";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = currentTheme();
-    script.dataset.lang = "zh-CN";
-    script.dataset.loading = "lazy";
-    mount.append(script);
-    initThemeObserver();
-  }
-
-
   function createDrawer(state) {
     const open = button("hb-comments-button", "打开本页评论", svg.comment);
     open.setAttribute("aria-expanded", "false");
@@ -959,19 +954,30 @@
     document.body.style.removeProperty("--hb-comment-bottom");
   }
 
+  async function mountStandaloneAuth(root) {
+    const notice = element("p", "hb-comment-status");
+    notice.setAttribute("role", "status"); notice.hidden = true;
+    root.prepend(notice);
+    sharedAuth = new window.HanaBioCommentAuth({ root, api: root.dataset.commentApiUrl, theme: currentTheme,
+      snapshot: () => ({}), restore: () => {}, changed: () => {},
+      status: message => { notice.textContent = message; notice.hidden = false; },
+    });
+    await sharedAuth.init(); initThemeObserver();
+  }
+
   async function initPage() {
     const root = document.querySelector(".hb-comments-root");
     if (active?.root === root && root?.isConnected) return;
+    sharedAuth?.destroy(); sharedAuth = null;
     cleanup(active); active = null;
     if (!root) return;
-    mountGiscus(root);
-    if (root.dataset.paragraphEnabled !== "true") return;
+    if (root.dataset.paragraphEnabled !== "true") { await mountStandaloneAuth(root); return; }
     const article = document.querySelector("article.md-content__inner") || document.querySelector(".md-content__inner");
     const candidates = article ? Array.from(article.querySelectorAll('[data-hanabio-comments="block"]')) : [];
     const frequencies = new Map();
     for (const block of candidates) frequencies.set(block.dataset.blockFingerprint, (frequencies.get(block.dataset.blockFingerprint) || 0) + 1);
     const blocks = candidates.filter(block => /[\p{L}\p{N}]/u.test(getBlockAnchor(block).quote) && frequencies.get(block.dataset.blockFingerprint) === 1);
-    if (!blocks.length) return;
+    if (!blocks.length) { await mountStandaloneAuth(root); return; }
     const state = {
       root, article, content: article.closest(".md-content") || article,
       api: root.dataset.commentApiUrl, siteKey: root.dataset.turnstileSiteKey,
@@ -984,6 +990,18 @@
     };
     active = state;
     createDrawer(state); bindBlocks(state);
+    {
+      sharedAuth = new window.HanaBioCommentAuth({ root, api: state.api, theme: currentTheme,
+        snapshot: () => ({ pageId: state.pageId, anchor: getBlockAnchor(state.selectedBlock), drafts: Array.from(state.drafts), open: state.isOpen }),
+        restore: saved => { if (saved?.pageId === state.pageId) {
+          state.drafts = new Map(saved.drafts || []); state.selectedBlock = findBlock(state, saved.anchor);
+          if (saved.open) openDrawer(state);
+        } },
+        changed: session => { state.session = session; state.writeGrant = ""; if (state.isOpen) renderDrawer(state); if (state.loaded) loadComments(state); },
+        status: (message, error) => { openDrawer(state); showStatus(state, message, error); if (error) renderDrawer(state); },
+      });
+      await sharedAuth.init(); initThemeObserver();
+    }
     await exchangeGitHubCode(state);
     if (state.abort.signal.aborted) return;
     await loadComments(state);

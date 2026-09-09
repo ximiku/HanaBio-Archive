@@ -568,6 +568,7 @@ plugins:
       minify_html: true
 
 extra:
+  giscus_shared_login: true #关闭可恢复两套独立 GitHub 登录
   homepage: https://ximiku.github.io/HanaBio-Archive/
   social:
     - icon: fontawesome/brands/bilibili 
@@ -580,6 +581,7 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js #数学公式
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js #表格排序
   - js/tablesort.js #表格排序
+  - js/comment-auth.js #共享 GitHub 评论身份
   - js/comments.js #页面与段落评论
 
 extra_css:

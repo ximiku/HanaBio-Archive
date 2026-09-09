@@ -22,6 +22,7 @@ database_name = "hanabio-comments"
 database_id = ${quote(process.env.HANABIO_D1_DATABASE_ID)}
 
 [vars]
+GISCUS_SHARED_LOGIN = ${quote(process.env.HANABIO_GISCUS_SHARED_LOGIN !== "false")}
 SITE_URL = "https://ximiku.github.io/HanaBio-Archive/"
 ALLOWED_ORIGINS = "https://ximiku.github.io,http://127.0.0.1:8000,http://localhost:8000"
 GITHUB_CLIENT_ID = ${quote(process.env.HANABIO_GITHUB_CLIENT_ID)}

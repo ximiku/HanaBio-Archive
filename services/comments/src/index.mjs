@@ -256,6 +256,74 @@ async function githubStart(request, env) {
   return Response.redirect(authorize.toString(), 302);
 }
 
+async function githubCommenter(env, user) {
+  const externalId = String(user.id);
+  const timestamp = nowIso();
+  const isAdmin = adminGithubIds(env).has(externalId) ? 1 : 0;
+  await env.DB.prepare(
+    `INSERT INTO commenters(id, kind, external_id, display_name, avatar_url, profile_url, verified, is_admin, created_at, updated_at)
+     VALUES (?, 'github', ?, ?, ?, ?, 1, ?, ?, ?)
+     ON CONFLICT(kind, external_id) DO UPDATE SET
+       display_name = excluded.display_name,
+       avatar_url = excluded.avatar_url,
+       profile_url = excluded.profile_url,
+       is_admin = excluded.is_admin,
+       updated_at = excluded.updated_at`,
+  ).bind(
+    crypto.randomUUID(), externalId, user.login, user.avatar_url || "", user.html_url || "",
+    isAdmin, timestamp, timestamp,
+  ).run();
+  const commenter = await env.DB.prepare(
+    "SELECT * FROM commenters WHERE kind = 'github' AND external_id = ?",
+  ).bind(externalId).first();
+  return commenter;
+}
+
+// giscus.app does not publish a stable SSO contract. Keep the upstream adapter
+// isolated and never persist or expose the GitHub access token it returns.
+async function giscusExchange(request, env) {
+  if (env.GISCUS_SHARED_LOGIN === "false") return errorResponse(503, "共享登录暂不可用，请使用独立登录");
+  await enforceRateLimit(request, env, "giscus-exchange", 20, 600);
+  const body = await requestJson(request);
+  if (typeof body.session !== "string" || body.session.length < 20 || body.session.length > 8192) {
+    return errorResponse(400, "共享登录凭据无效，请重新登录");
+  }
+  const previous = await requireSession(request, env, { optional: true });
+  let user;
+  try {
+    const response = await fetch("https://giscus.app/api/oauth/token", {
+      method: "POST", redirect: "error", signal: AbortSignal.timeout(8000),
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ session: body.session }),
+    });
+    if (response.status === 400 || response.status === 401) return errorResponse(401, "GitHub 登录已失效，请重新登录");
+    if (!response.ok) throw new Error("Upstream unavailable");
+    const payload = await response.json();
+    if (typeof payload.token !== "string" || !payload.token || payload.token.length > 4096) throw new Error("Invalid upstream response");
+    const identity = await fetch("https://api.github.com/user", {
+      redirect: "error", signal: AbortSignal.timeout(8000),
+      headers: { "Accept": "application/vnd.github+json", "Authorization": `Bearer ${payload.token}`,
+        "User-Agent": "HanaBio-Comments", "X-GitHub-Api-Version": "2022-11-28" },
+    });
+    if (identity.status === 401) return errorResponse(401, "GitHub 授权已失效，请重新登录");
+    if (!identity.ok) throw new Error("Identity unavailable");
+    user = await identity.json();
+    if (!Number.isSafeInteger(user.id) || user.id <= 0 || typeof user.login !== "string" || !/^[a-zA-Z0-9-]{1,39}$/.test(user.login)) throw new Error("Invalid identity");
+  } catch (_error) {
+    return errorResponse(502, "共享登录暂不可用，请重试或使用独立登录");
+  }
+  if (previous) {
+    const old = await env.DB.prepare("SELECT * FROM commenters WHERE id = ?").bind(previous.sub).first();
+    if (old?.kind === "github" && old.external_id !== String(user.id)) {
+      return errorResponse(409, "两处 GitHub 账号不同，请先退出当前评论身份，再选择要使用的账号");
+    }
+  }
+  user.html_url = `https://github.com/${user.login}`;
+  user.avatar_url = `https://avatars.githubusercontent.com/u/${user.id}`;
+  const commenter = await githubCommenter(env, user);
+  return responseJson({ session: await createSession(env, commenter) });
+}
+
 async function githubCallback(request, env) {
   const url = new URL(request.url);
   const stateValue = url.searchParams.get("state") || "";
@@ -292,25 +360,8 @@ async function githubCallback(request, env) {
   if (!userResponse.ok || !user.id || !user.login) {
     throw Object.assign(new Error("无法读取 GitHub 用户身份"), { status: 502 });
   }
-  const externalId = String(user.id);
+  const commenter = await githubCommenter(env, user);
   const timestamp = nowIso();
-  const isAdmin = adminGithubIds(env).has(externalId) ? 1 : 0;
-  await env.DB.prepare(
-    `INSERT INTO commenters(id, kind, external_id, display_name, avatar_url, profile_url, verified, is_admin, created_at, updated_at)
-     VALUES (?, 'github', ?, ?, ?, ?, 1, ?, ?, ?)
-     ON CONFLICT(kind, external_id) DO UPDATE SET
-       display_name = excluded.display_name,
-       avatar_url = excluded.avatar_url,
-       profile_url = excluded.profile_url,
-       is_admin = excluded.is_admin,
-       updated_at = excluded.updated_at`,
-  ).bind(
-    crypto.randomUUID(), externalId, user.login, user.avatar_url || "", user.html_url || "",
-    isAdmin, timestamp, timestamp,
-  ).run();
-  const commenter = await env.DB.prepare(
-    "SELECT * FROM commenters WHERE kind = 'github' AND external_id = ?",
-  ).bind(externalId).first();
   const session = await createSession(env, commenter);
   const exchangeCode = crypto.randomUUID();
   await env.DB.prepare(
@@ -733,6 +784,7 @@ async function route(request, env) {
   if (request.method === "POST" && path === "/v1/write-grants") return writeGrant(request, env);
   if (request.method === "GET" && path === "/v1/auth/github/start") return githubStart(request, env);
   if (request.method === "GET" && path === "/v1/auth/github/callback") return githubCallback(request, env);
+  if (request.method === "POST" && path === "/v1/auth/giscus/exchange") return giscusExchange(request, env);
   if (request.method === "POST" && path === "/v1/auth/github/exchange") return githubExchange(request, env);
   if (request.method === "POST" && path === "/v1/comments") return createComment(request, env);
   if (request.method === "GET" && path === "/v1/deploy/state") return deployState(request, env);

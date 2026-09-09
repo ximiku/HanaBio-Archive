@@ -284,3 +284,49 @@ test("retrying a lost successful response cannot duplicate a comment", async (t)
   assert.equal(f.sqlite.prepare("SELECT count(*) AS n FROM comments").get().n, 1);
   assert.deepEqual((await (await f.request("/v1/pages/hb-test/comments")).json()).threads, []);
 });
+
+test("giscus bridge verifies GitHub identity and preserves existing ownership without leaking upstream tokens", async t => {
+  const f = fixture(t);
+  const previous = await f.identity("existing", "github", "42");
+  const original = globalThis.fetch;
+  t.after(() => { globalThis.fetch = original; });
+  const calls = [];
+  globalThis.fetch = async (url, options) => {
+    calls.push(String(url));
+    if (String(url) === "https://giscus.app/api/oauth/token") return Response.json({ token: "private-upstream-token" });
+    assert.equal(options.headers.Authorization, "Bearer private-upstream-token");
+    return Response.json({ id: 42, login: "tester", html_url: "https://evil.test/" });
+  };
+  const response = await f.request("/v1/auth/giscus/exchange", { method: "POST", token: previous, body: { session: "s".repeat(100) } });
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("Cache-Control"), "no-store");
+  const payload = await response.json();
+  assert.equal(payload.session.commenter.id, "existing");
+  assert.equal(payload.session.commenter.profile_url, "https://github.com/tester");
+  assert.equal(JSON.stringify(payload).includes("private-upstream-token"), false);
+  assert.equal(f.sqlite.prepare("SELECT count(*) n FROM commenters").get().n, 1);
+  assert.deepEqual(calls, ["https://giscus.app/api/oauth/token", "https://api.github.com/user"]);
+  assert.equal((await f.post(payload.session.token, { write_grant: await f.grant("existing") })).status, 201);
+});
+
+test("giscus bridge refuses mismatched accounts, invalid credentials, upstream failures and disabled integration", async t => {
+  const f = fixture(t);
+  const token = await f.identity("existing", "github", "99");
+  const original = globalThis.fetch;
+  t.after(() => { globalThis.fetch = original; });
+  const exchange = body => f.request("/v1/auth/giscus/exchange", { method: "POST", token, body });
+  globalThis.fetch = async url => Response.json(String(url).includes("oauth/token") ? { token: "test" } : { id: 42, login: "tester" });
+  assert.equal((await exchange({ session: "s".repeat(100) })).status, 409);
+  assert.equal(f.sqlite.prepare("SELECT count(*) n FROM commenters").get().n, 1);
+  for (const session of [null, "short", "s".repeat(8193)]) assert.equal((await exchange({ session })).status, 400);
+  globalThis.fetch = async () => Response.json({ error: "private error" }, { status: 400 });
+  assert.equal((await exchange({ session: "s".repeat(100) })).status, 401);
+  for (const upstream of [async () => { throw new Error("secret upstream details"); }, async () => new Response("invalid json"), async () => Response.json({ token: 42 })]) {
+    globalThis.fetch = upstream;
+    const response = await exchange({ session: "s".repeat(100) });
+    assert.equal(response.status, 502);
+    assert.equal((await response.text()).includes("secret"), false);
+  }
+  f.env.GISCUS_SHARED_LOGIN = "false";
+  assert.equal((await exchange({ session: "s".repeat(100) })).status, 503);
+});
