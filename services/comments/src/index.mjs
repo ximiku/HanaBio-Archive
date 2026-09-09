@@ -293,18 +293,19 @@ async function giscusExchange(request, env) {
   let stage = "giscus";
   try {
     const response = await fetch("https://giscus.app/api/oauth/token", {
-      method: "POST", redirect: "error", signal: AbortSignal.timeout(8000),
+      method: "POST", redirect: "manual", signal: AbortSignal.timeout(8000),
       headers: { "Content-Type": "application/json", "Accept": "application/json",
         "Origin": request.headers.get("Origin") || new URL(env.SITE_URL).origin },
       body: JSON.stringify({ session: body.session }),
     });
     if (response.status === 400 || response.status === 401) return errorResponse(401, "GitHub 登录已失效，请重新登录");
     if (!response.ok) return responseJson({ error: "共享登录暂不可用，请重试或使用独立登录", code: `giscus_http_${response.status}` }, 502);
+    stage = "giscus_decode";
     const payload = await response.json();
     if (typeof payload.token !== "string" || !payload.token || payload.token.length > 4096) throw new Error("Invalid upstream response");
     stage = "github";
     const identity = await fetch("https://api.github.com/user", {
-      redirect: "error", signal: AbortSignal.timeout(8000),
+      redirect: "manual", signal: AbortSignal.timeout(8000),
       headers: { "Accept": "application/vnd.github+json", "Authorization": `Bearer ${payload.token}`,
         "User-Agent": "HanaBio-Comments", "X-GitHub-Api-Version": "2022-11-28" },
     });
@@ -313,7 +314,7 @@ async function giscusExchange(request, env) {
     user = await identity.json();
     if (!Number.isSafeInteger(user.id) || user.id <= 0 || typeof user.login !== "string" || !/^[a-zA-Z0-9-]{1,39}$/.test(user.login)) throw new Error("Invalid identity");
   } catch (_error) {
-    return responseJson({ error: "共享登录暂不可用，请重试或使用独立登录", code: `${stage}_unavailable` }, 502);
+    return responseJson({ error: "共享登录暂不可用，请重试或使用独立登录", code: `${stage}_${_error?.name === "TimeoutError" ? "timeout" : "unavailable"}` }, 502);
   }
   if (previous) {
     const old = await env.DB.prepare("SELECT * FROM commenters WHERE id = ?").bind(previous.sub).first();

@@ -293,6 +293,7 @@ test("giscus bridge verifies GitHub identity and preserves existing ownership wi
   const calls = [];
   globalThis.fetch = async (url, options) => {
     calls.push(String(url));
+    assert.equal(options.redirect, "manual");
     if (String(url) === "https://giscus.app/api/oauth/token") return Response.json({ token: "private-upstream-token" });
     assert.equal(options.headers.Authorization, "Bearer private-upstream-token");
     return Response.json({ id: 42, login: "tester", html_url: "https://evil.test/" });
