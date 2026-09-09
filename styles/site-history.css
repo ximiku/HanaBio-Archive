@@ -1,0 +1,114 @@
+.hb-page-revision {
+  margin-top: 2.4rem;
+  padding-top: 0.8rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.hb-page-revision a,
+.hb-site-revision a,
+.hb-milestone a,
+.hb-timeline a {
+  color: inherit;
+  text-decoration-color: var(--md-default-fg-color--lighter);
+  text-underline-offset: 0.14em;
+}
+
+.hb-page-revision a:hover,
+.hb-site-revision a:hover,
+.hb-milestone a:hover,
+.hb-timeline a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.hb-site-revision {
+  margin-top: 0.25rem;
+  color: var(--md-footer-fg-color--lighter);
+  font-size: 0.64rem;
+}
+
+.hb-site-revision code {
+  padding: 0;
+  color: inherit;
+  background: none;
+  font-size: inherit;
+}
+
+.hb-milestone {
+  margin: 0.9rem 0 1.8rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.hb-milestone a {
+  text-decoration: none;
+}
+
+.hb-timeline {
+  margin: 0.8rem 0 1.4rem;
+}
+
+.hb-timeline__item {
+  display: grid;
+  grid-template-columns: 5.6rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.hb-timeline__item > time {
+  padding-top: 0.04rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.68rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.hb-timeline__body {
+  position: relative;
+  min-width: 0;
+  min-height: 1.7rem;
+  padding: 0 0 0.72rem 0.85rem;
+  border-left: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.hb-timeline__body::before {
+  position: absolute;
+  top: 0.25rem;
+  left: -0.16rem;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: var(--md-default-fg-color--lighter);
+  content: "";
+}
+
+.hb-timeline__item:last-child .hb-timeline__body {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.hb-timeline__body h2 {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.hb-timeline__summary {
+  margin: 0.18rem 0 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}
+
+@media screen and (max-width: 44.9844em) {
+  .hb-site-revision {
+    width: calc(100% - 4rem);
+  }
+
+  .hb-timeline__item {
+    grid-template-columns: 1fr;
+    gap: 0.12rem;
+  }
+
+  .hb-timeline__body {
+    margin-left: 0.15rem;
+  }
+}

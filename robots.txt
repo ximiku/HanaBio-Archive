@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ximiku.github.io/HanaBio-Archive/sitemap.xml

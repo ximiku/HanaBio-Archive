@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1120" viewBox="0 0 720 1120" role="img" aria-labelledby="title desc">
+  <title id="title">无可电离侧链的 α-氨基酸随 pH 升高逐级去质子化</title>
+  <desc id="desc">纵向排列低 pH、中间 pH 和高 pH 三种主要形式。低 pH 为阳离子，中间为净电荷为零的两性离子，高 pH 为阴离子。</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#f7faf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#16324f" flood-opacity="0.11"/>
+    </filter>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#50708f"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="1120" rx="28" fill="url(#background)"/>
+  <text x="360" y="52" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="25" font-weight="650" fill="#17324d">主要质子化状态随 pH 连续改变</text>
+  <text x="360" y="84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="18" fill="#5c6f7f">图示对象：无可电离侧链的 α-氨基酸</text>
+
+  <g filter="url(#shadow)">
+    <rect x="50" y="115" width="620" height="250" rx="24" fill="#fff7f2" stroke="#d9855f" stroke-width="2.5"/>
+  </g>
+  <rect x="76" y="140" width="130" height="42" rx="21" fill="#b95f3d"/>
+  <text x="141" y="168" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="650" fill="#ffffff">低 pH</text>
+  <text x="360" y="235" text-anchor="middle" font-family="'SFMono-Regular', Menlo, 'Noto Sans Mono CJK SC', monospace" font-size="34" font-weight="650" fill="#6c2f1e">H₃N⁺—CH(R)—COOH</text>
+  <text x="360" y="286" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="25" font-weight="600" fill="#633d31">阳离子主要形式</text>
+  <text x="360" y="326" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="21" fill="#76594f">共同骨架的净电荷：+1</text>
+
+  <line x1="360" y1="387" x2="360" y2="444" stroke="#50708f" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <text x="388" y="415" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="19" fill="#47647f">pH 升高</text>
+  <text x="388" y="440" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="18" fill="#6b7d8c">α-羧基先去质子化</text>
+
+  <g filter="url(#shadow)">
+    <rect x="50" y="465" width="620" height="250" rx="24" fill="#f1f9ff" stroke="#4c83b3" stroke-width="2.5"/>
+  </g>
+  <rect x="76" y="490" width="164" height="42" rx="21" fill="#3e78a8"/>
+  <text x="158" y="518" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="650" fill="#ffffff">中间 pH</text>
+  <text x="360" y="585" text-anchor="middle" font-family="'SFMono-Regular', Menlo, 'Noto Sans Mono CJK SC', monospace" font-size="34" font-weight="650" fill="#174f7a">H₃N⁺—CH(R)—COO⁻</text>
+  <text x="360" y="636" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="25" font-weight="600" fill="#244c69">两性离子主要形式</text>
+  <text x="360" y="676" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="21" fill="#526d80">共同骨架的净电荷：0</text>
+
+  <line x1="360" y1="737" x2="360" y2="794" stroke="#50708f" stroke-width="4" marker-end="url(#arrowhead)"/>
+  <text x="388" y="765" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="19" fill="#47647f">pH 继续升高</text>
+  <text x="388" y="790" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="18" fill="#6b7d8c">α-铵基再去质子化</text>
+
+  <g filter="url(#shadow)">
+    <rect x="50" y="815" width="620" height="250" rx="24" fill="#f2fbf6" stroke="#4a9872" stroke-width="2.5"/>
+  </g>
+  <rect x="76" y="840" width="130" height="42" rx="21" fill="#38815e"/>
+  <text x="141" y="868" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="22" font-weight="650" fill="#ffffff">高 pH</text>
+  <text x="360" y="935" text-anchor="middle" font-family="'SFMono-Regular', Menlo, 'Noto Sans Mono CJK SC', monospace" font-size="34" font-weight="650" fill="#216245">H₂N—CH(R)—COO⁻</text>
+  <text x="360" y="986" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="25" font-weight="600" fill="#315d49">阴离子主要形式</text>
+  <text x="360" y="1026" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="21" fill="#587568">共同骨架的净电荷：−1</text>
+
+  <text x="360" y="1094" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Noto Sans CJK SC', sans-serif" font-size="17" fill="#6a7882">实际溶液中各状态共存，比例由 pH 与各步 pKa 决定</text>
+</svg>
