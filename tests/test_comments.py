@@ -40,13 +40,14 @@ class CommentTemplateTests(unittest.TestCase):
             loader=ChoiceLoader([
                 FileSystemLoader(Path(__file__).resolve().parents[1] / "overrides"),
                 DictLoader({
-                    "base.html": "{% block content %}{% endblock %}",
+                    "base.html": "<head>{% block extrahead %}{% endblock %}</head>{% block content %}{% endblock %}",
                     "partials/content.html": "",
                 }),
             ]),
             autoescape=True,
             undefined=StrictUndefined,
         )
+        environment.filters["url"] = lambda value: value
         template = environment.get_template("main.html")
         for enabled in (True, False):
             with self.subTest(giscus_enabled=enabled):
@@ -60,6 +61,7 @@ class CommentTemplateTests(unittest.TestCase):
                     "hanabio_revision": None,
                     "hanabio_comments": comments,
                 }))
+                self.assertLess(rendered.index("js/comment-auth.js"), rendered.index("</head>"))
                 markup = Markup()
                 markup.feed(rendered)
                 roots = markup.by_class("hb-comments-root")

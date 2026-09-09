@@ -87,6 +87,7 @@
           signal: AbortSignal.any([this.abort.signal, AbortSignal.timeout(20000)]),
         });
         const payload = await response.json();
+        this.root.dataset.authError = payload.code || "";
         if (!response.ok) throw Object.assign(new Error(payload.error || "共享登录暂不可用"), { status: response.status });
         if (!payload.session?.token || !payload.session?.commenter?.verified) throw new Error("共享登录响应无效");
         const fingerprint = await digest(credential);

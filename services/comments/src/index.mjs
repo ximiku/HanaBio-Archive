@@ -290,16 +290,19 @@ async function giscusExchange(request, env) {
   }
   const previous = await requireSession(request, env, { optional: true });
   let user;
+  let stage = "giscus";
   try {
     const response = await fetch("https://giscus.app/api/oauth/token", {
       method: "POST", redirect: "error", signal: AbortSignal.timeout(8000),
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      headers: { "Content-Type": "application/json", "Accept": "application/json",
+        "Origin": request.headers.get("Origin") || new URL(env.SITE_URL).origin },
       body: JSON.stringify({ session: body.session }),
     });
     if (response.status === 400 || response.status === 401) return errorResponse(401, "GitHub 登录已失效，请重新登录");
-    if (!response.ok) throw new Error("Upstream unavailable");
+    if (!response.ok) return responseJson({ error: "共享登录暂不可用，请重试或使用独立登录", code: `giscus_http_${response.status}` }, 502);
     const payload = await response.json();
     if (typeof payload.token !== "string" || !payload.token || payload.token.length > 4096) throw new Error("Invalid upstream response");
+    stage = "github";
     const identity = await fetch("https://api.github.com/user", {
       redirect: "error", signal: AbortSignal.timeout(8000),
       headers: { "Accept": "application/vnd.github+json", "Authorization": `Bearer ${payload.token}`,
@@ -310,7 +313,7 @@ async function giscusExchange(request, env) {
     user = await identity.json();
     if (!Number.isSafeInteger(user.id) || user.id <= 0 || typeof user.login !== "string" || !/^[a-zA-Z0-9-]{1,39}$/.test(user.login)) throw new Error("Invalid identity");
   } catch (_error) {
-    return errorResponse(502, "共享登录暂不可用，请重试或使用独立登录");
+    return responseJson({ error: "共享登录暂不可用，请重试或使用独立登录", code: `${stage}_unavailable` }, 502);
   }
   if (previous) {
     const old = await env.DB.prepare("SELECT * FROM commenters WHERE id = ?").bind(previous.sub).first();

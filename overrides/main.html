@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  <script src="{{ 'js/comment-auth.js' | url }}"></script>
+{% endblock %}
+
 {% block content %}
   {% include "partials/content.html" %}
   {% if page.meta and page.meta.hanabio_revision and not page.meta.git_revision_date_localized and not page.meta.revision_date %}
