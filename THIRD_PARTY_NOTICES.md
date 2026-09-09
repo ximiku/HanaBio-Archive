@@ -2,7 +2,7 @@
 
 ## OI Wiki Feedback System
 
-The Markdown source-offset injection approach in `hanabio_site/comments.py` is
+The Markdown source-offset injection approach in `src/hanabio_site/comments.py` is
 derived from the OI Wiki Feedback System, copyright OI Wiki contributors,
 licensed under the Apache License 2.0.
 

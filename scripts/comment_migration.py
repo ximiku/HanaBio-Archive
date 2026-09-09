@@ -20,10 +20,11 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parent.parent
-REGISTRY_PATH = "includes/hanabio_site/comment-pages.yml"
-sys.path.insert(0, str(ROOT))
+REGISTRY_PATH = "data/comment-pages.yml"
+LEGACY_REGISTRY_PATH = "includes/hanabio_site/comment-pages.yml"
+sys.path.insert(0, str(ROOT / "src"))
 
-from hanabio_site.comments import CommentOffsetsExtension  # noqa: E402
+from hanabio_site.comments import CommentOffsetsExtension, parse_comment_registry  # noqa: E402
 
 
 @dataclass(frozen=True)
@@ -187,10 +188,12 @@ def read_ref(ref: str, source_path: str) -> str | None:
 
 def registry_for(ref: str) -> dict[str, str]:
     raw = read_ref(ref, REGISTRY_PATH)
+    if raw is None and ref and ref != "WORKTREE":
+        raw = read_ref(ref, LEGACY_REGISTRY_PATH)
     if raw is None:
         return {}
     parsed = yaml.safe_load(raw)
-    return dict(parsed.get("pages", {}))
+    return parse_comment_registry(parsed).pages
 
 
 def ensure_published_revision(revision: str) -> None:

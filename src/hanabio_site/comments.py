@@ -26,7 +26,7 @@ from markdown.preprocessors import Preprocessor
 from .metadata import CACHE, ROOT, SiteMetadataError, is_public_build
 
 
-REGISTRY_PATH = ROOT / "includes" / "hanabio_site" / "comment-pages.yml"
+REGISTRY_PATH = ROOT / "data" / "comment-pages.yml"
 PAGE_ID_PATTERN = re.compile(r"hb-[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 ELIGIBLE_TAGS = {
     "h1",
@@ -69,6 +69,11 @@ def load_comment_registry(path: Path = REGISTRY_PATH) -> CommentPageRegistry:
     except yaml.YAMLError as exc:
         raise SiteMetadataError(f"评论页面注册表无法解析：{exc}") from exc
 
+    return parse_comment_registry(raw)
+
+
+def parse_comment_registry(raw: Any) -> CommentPageRegistry:
+    """Validate registry data from either the working tree or Git history."""
     if not isinstance(raw, dict) or raw.get("version") != 1:
         raise SiteMetadataError("评论页面注册表 version 必须为 1")
     if set(raw) - {"version", "pages", "tombstones"}:

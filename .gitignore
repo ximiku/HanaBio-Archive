@@ -1,20 +1,24 @@
+# Local-only material and helpers
+/local/
+/AGENTS.md
+/preview
+/tmp/
+/.vscode/
+
+# Generated site and Python environment/build artifacts
+/site/
+/.cache/
 /.venv/
 /.venv-zensical/
-/includes/
-!/includes/
-/includes/*
-!/includes/hanabio_site/
-/includes/hanabio_site/*
-!/includes/hanabio_site/comment-pages.yml
-/AGENTS.md
-/tmp/
-site/
-services/comments/wrangler.toml
-services/comments/node_modules/
-services/comments/.dev.vars
-services/comments/.wrangler/
+/build/
+/dist/
+*.egg-info/
 __pycache__/
+*.py[cod]
 .DS_Store
-writing_standard.md
-.vscode
-preview
+
+# Comment Worker local configuration and runtime artifacts
+/services/comments/wrangler.toml
+/services/comments/node_modules/
+/services/comments/.dev.vars
+/services/comments/.wrangler/

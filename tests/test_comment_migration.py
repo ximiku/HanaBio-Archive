@@ -17,6 +17,40 @@ SPEC.loader.exec_module(MODULE)
 
 
 class CommentMigrationTests(unittest.TestCase):
+    def test_registry_uses_new_path_before_legacy_history(self) -> None:
+        raw = "version: 1\npages:\n  docs/index.md: hb-home\ntombstones: []\n"
+        for ref in ("WORKTREE", "a" * 40):
+            with self.subTest(ref=ref), patch.object(MODULE, "read_ref", return_value=raw) as read:
+                self.assertEqual(MODULE.registry_for(ref), {"docs/index.md": "hb-home"})
+                read.assert_called_once_with(ref, MODULE.REGISTRY_PATH)
+
+    def test_historical_registry_falls_back_only_when_new_path_is_absent(self) -> None:
+        raw = "version: 1\npages:\n  docs/index.md: hb-home\ntombstones: []\n"
+        ref = "a" * 40
+        with patch.object(MODULE, "read_ref", side_effect=[None, raw]) as read:
+            self.assertEqual(MODULE.registry_for(ref), {"docs/index.md": "hb-home"})
+            self.assertEqual([call.args for call in read.call_args_list],
+                             [(ref, MODULE.REGISTRY_PATH), (ref, MODULE.LEGACY_REGISTRY_PATH)])
+
+    def test_worktree_never_uses_legacy_registry(self) -> None:
+        with patch.object(MODULE, "read_ref", return_value=None) as read:
+            self.assertEqual(MODULE.registry_for("WORKTREE"), {})
+            read.assert_called_once_with("WORKTREE", MODULE.REGISTRY_PATH)
+
+    def test_missing_historical_registry_remains_missing(self) -> None:
+        with patch.object(MODULE, "read_ref", return_value=None) as read:
+            self.assertEqual(MODULE.registry_for("a" * 40), {})
+            self.assertEqual(read.call_count, 2)
+
+    def test_invalid_new_registry_never_falls_back(self) -> None:
+        invalid = ("[", "", "[]", "version: 2\npages: {}",
+                   "version: 1\npages:\n  docs/index.md: hb-home\ntombstones: [hb-home]")
+        for raw in invalid:
+            with self.subTest(raw=raw), patch.object(MODULE, "read_ref", return_value=raw) as read:
+                with self.assertRaises((RuntimeError, MODULE.yaml.YAMLError)):
+                    MODULE.registry_for("a" * 40)
+                read.assert_called_once()
+
     def test_duplicate_fingerprints_are_one_historical_mapping(self) -> None:
         anchors = [MODULE.Anchor("p", 0, 15, "a" * 20, "Same paragraph."),
                    MODULE.Anchor("p", 20, 35, "a" * 20, "Same paragraph.")]

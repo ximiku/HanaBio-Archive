@@ -554,7 +554,7 @@ theme:
     - content.code.annotate
 
 hooks:
-  - hanabio_site/mkdocs_comments.py
+  - src/hanabio_site/mkdocs_comments.py
 
 plugins:
   - meta
@@ -636,8 +636,7 @@ markdown_extensions:
 
 
 watch:
-  - includes
-  - hanabio_site
+  - data
+  - src
   - overrides
-  - site-events.yml
   - .git/logs/HEAD

@@ -363,7 +363,7 @@ class BuildMetadataCache:
             return self._page_revisions.get(source_path)
 
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 CACHE = BuildMetadataCache(ROOT)
 
 
@@ -436,7 +436,7 @@ class SiteMetadataPreprocessor(Preprocessor):
                 output.append(line)
                 continue
             if events is None:
-                events = load_events(ROOT / "site-events.yml")
+                events = load_events(ROOT / "data" / "site-events.yml")
             rendered = (
                 render_latest_event(events[0])
                 if marker == self.LATEST_MARKER

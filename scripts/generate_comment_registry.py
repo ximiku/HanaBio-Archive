@@ -14,7 +14,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-REGISTRY = ROOT / "includes" / "hanabio_site" / "comment-pages.yml"
+REGISTRY = ROOT / "data" / "comment-pages.yml"
 
 
 def page_id_for(source_path: str, used: set[str]) -> str:
@@ -87,7 +87,7 @@ def retire(source_path: str) -> None:
 
 
 def check() -> None:
-    sys.path.insert(0, str(ROOT))
+    sys.path.insert(0, str(ROOT / "src"))
     from hanabio_site.comments import load_comment_registry, validate_comment_registry
 
     registry = load_comment_registry()

@@ -83,7 +83,7 @@ def preflight() -> None:
     check_template_contract()
     validate_comment_registry(load_comment_registry())
     comment_runtime_config()
-    events = load_events(ROOT / "site-events.yml")
+    events = load_events(ROOT / "data" / "site-events.yml")
     repository = GitRepository(ROOT)
     public = is_public_build()
     if public:
@@ -119,7 +119,7 @@ def audit_site(site_dir: Path) -> None:
     repository = GitRepository(ROOT)
     public = is_public_build()
     head = repository.validate_public_head() if public else repository.head()
-    events = load_events(ROOT / "site-events.yml")
+    events = load_events(ROOT / "data" / "site-events.yml")
     comments_config = comment_runtime_config()
     comment_registry = load_comment_registry()
     markdown_count = len(list((ROOT / "docs").rglob("*.md")))
