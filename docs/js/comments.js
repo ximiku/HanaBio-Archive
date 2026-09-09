@@ -967,7 +967,7 @@
 
   async function initPage() {
     const root = document.querySelector(".hb-comments-root");
-    if (active?.root === root && root?.isConnected) return;
+    if ((active?.root === root || sharedAuth?.root === root) && root?.isConnected) return;
     sharedAuth?.destroy(); sharedAuth = null;
     cleanup(active); active = null;
     if (!root) return;

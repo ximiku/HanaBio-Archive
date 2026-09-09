@@ -30,7 +30,7 @@ function setup({ url = "https://site.test/docs/", pending = null, stored = {}, f
   const auth = new window.HanaBioCommentAuth({ root, api: "https://api.test", theme: () => "light",
     snapshot: () => ({ text: "draft" }), restore: saved => drafts.push(saved), changed: saved => changes.push(saved), status: (...args) => statuses.push(args),
   });
-  return { auth, root, localStorage, sessionStorage, location, frames, changes, statuses, drafts, calls };
+  return { auth, root, window, localStorage, sessionStorage, location, frames, changes, statuses, drafts, calls };
 }
 const pending = () => ({ nonce: "browser-proof", path: "/docs/", created: Date.now(), draft: { text: "retained" } });
 const returnedUrl = "https://site.test/docs/?hb-login=browser-proof&giscus=credential-from-giscus";
@@ -103,4 +103,24 @@ test("feature switch preserves ordinary giscus OAuth without using the bridge", 
   await f.auth.init(); assert.equal(f.calls.length, 0);
   assert.equal(JSON.parse(f.localStorage.getItem(keys.giscus)), "credential-from-giscus");
   f.auth.destroy();
+});
+
+
+test("storage events synchronize identity and logout across tabs without duplicate widgets", async () => {
+  const f = setup();
+  await f.auth.init();
+  const notify = () => {
+    const event = new Event("storage");
+    Object.defineProperty(event, "key", { value: keys.session });
+    f.window.dispatchEvent(event);
+  };
+  f.localStorage.setItem(keys.session, JSON.stringify(identity())); notify();
+  assert.equal(f.changes.at(-1).commenter.id, "github");
+  assert.equal(f.frames.length, 1);
+  f.localStorage.removeItem(keys.session); notify();
+  assert.equal(f.changes.at(-1), null);
+  assert.equal(f.frames.length, 1);
+  f.auth.destroy();
+  const count = f.changes.length; notify();
+  assert.equal(f.changes.length, count);
 });
