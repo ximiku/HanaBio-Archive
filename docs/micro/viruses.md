@@ -24,7 +24,7 @@
 | 正链 RNA 逆转录病毒 | RNA 先逆转录为 DNA，整合或维持后由细胞转录产生 RNA | 逆转录酶、RNase H、整合相关蛋白 |
 | 双链 DNA 逆转录病毒 | DNA 先转录出 RNA 中间体，再在装配中的颗粒内逆转录回 DNA | 具有逆转录活性的病毒聚合酶 |
 
-无论路线怎样变化，已知病毒都依赖细胞核糖体合成蛋白质。病毒也会主动提供关键酶：负链 RNA 和双链 RNA 病毒必须编码 RdRP，许多大型 DNA 病毒编码自己的转录与复制装置，另一些小型病毒则把更多步骤交给宿主。正链 RNA、负链 RNA、双链 RNA 与逆转录的反应化学见[转录与 RNA 生物合成](../molecular/transcription.md#rna-dependent-rna-synthesis)和[DNA 复制与逆转录](../molecular/dna_replication.md#reverse-transcription)；这些路线在感染周期中还要与进入、装配和释放相衔接。
+无论路线怎样变化，已知病毒都依赖细胞核糖体合成蛋白质。病毒也会主动提供关键酶：负链 RNA 和双链 RNA 病毒必须编码 RdRP，许多大型 DNA 病毒编码自己的转录与复制装置，另一些小型病毒则把更多步骤交给宿主。正链 RNA、负链 RNA、双链 RNA 与逆转录的反应化学见[转录与 RNA 生物合成](../molecular/transcription.md#rna-dependent-rna-synthesis)和[逆转录](../molecular/dna_replication/reverse_transcription.md#reverse-transcription)；这些路线在感染周期中还要与进入、装配和释放相衔接。
 
 ## 宿主可感性与感染许可 { #infection-cycle }
 

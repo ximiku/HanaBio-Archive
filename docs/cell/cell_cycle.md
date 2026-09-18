@@ -41,7 +41,7 @@
 
 每条染色体含许多潜在复制起点；保证每段 DNA 每轮只复制一次的关键，是把解旋酶装载与复制起始放在不同 CDK 状态中。低 CDK 活性的晚 M／G$_1$ 期，起点识别复合体（origin recognition complex，ORC）、CDC6 与 CDT1 把 MCM2–7 双六聚体装到起点 DNA，形成复制前复合体（pre-replicative complex，pre-RC）。进入 S 期后，S-CDK 与 Dbf4 依赖性激酶（Dbf4-dependent kinase，DDK）促进 Cdc45、GINS 等组分同 MCM 组装成活性 Cdc45–MCM–GINS（CMG）解旋酶并启动复制叉。此时较高 CDK 活性、CDT1 的降解或定位变化，以及后生动物 geminin 对 CDT1 的抑制共同阻止新的 MCM 装载；直到 M-CDK 下降，许可窗口才重新开放。[^replication-licensing]
 
-被许可的潜在起点多于正常条件下实际启动的起点，其中一部分可在邻近复制叉受阻时作为备用起点。所有复制叉的推进与终止共同决定复制是否完成，单一 S 期促进因子浓度只能反映其中一部分控制。起点选择、复制叉组成、领先链／后随链合成及终止机制见[DNA复制与逆转录](../molecular/dna_replication.md)。
+被许可的潜在起点多于正常条件下实际启动的起点，其中一部分可在邻近复制叉受阻时作为备用起点。所有复制叉的推进与终止共同决定复制是否完成，单一 S 期促进因子浓度只能反映其中一部分控制。起点选择、复制叉组成、领先链／后随链合成及终止机制见[DNA 复制](../molecular/dna_replication/index.md)。
 
 ## 检查点网络延缓危险转换 { #cell-cycle-checkpoints }
 

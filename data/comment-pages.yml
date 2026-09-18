@@ -276,7 +276,8 @@ pages:
   docs/micro/viruses.md: hb-micro-viruses
   docs/molecular/dna_recombination.md: hb-molecular-dna-recombination
   docs/molecular/dna_repair.md: hb-molecular-dna-repair
-  docs/molecular/dna_replication.md: hb-molecular-dna-replication
+  docs/molecular/dna_replication/index.md: hb-molecular-dna-replication
+  docs/molecular/dna_replication/reverse_transcription.md: hb-molecular-dna-replication-reverse-transcription
   docs/molecular/gene_regulation.md: hb-molecular-gene-regulation
   docs/molecular/genetic_material.md: hb-molecular-genetic-material
   docs/molecular/index.md: hb-molecular

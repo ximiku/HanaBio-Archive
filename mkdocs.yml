@@ -122,7 +122,9 @@ nav:
     - 分子生物学: molecular/index.md
     - 遗传物质、基因与基因组: molecular/genetic_material.md
     - DNA 复制与维护:
-      - DNA复制与逆转录: molecular/dna_replication.md
+      - DNA 复制:
+        - molecular/dna_replication/index.md
+        - 逆转录: molecular/dna_replication/reverse_transcription.md
       - DNA损伤、修复与突变: molecular/dna_repair.md
       - DNA重组与转座: molecular/dna_recombination.md
     - RNA 生物合成:

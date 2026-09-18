@@ -58,7 +58,7 @@ retrotransposon 的原位 DNA 先被转录，RNA 再逆转录为可插入的新 
 
 non-LTR retrotransposon 不先生成游离的完整双链 cDNA。以哺乳动物 LINE-1 为例，ORF1p 结合 RNA，ORF2p 同时具有 endonuclease 和 reverse transcriptase 活性；内切酶在靶 DNA 上产生 3′-OH，直接引发 target-primed reverse transcription（TPRT）。新插入常带 3′ poly(A)、可变长度 TSD 和不完整的 5′ 端。LINE 蛋白偏向动员产生它们的同一条 RNA，也能以较低效率动员 Alu 等 SINE、SVA RNA 及细胞 mRNA，后者可形成加工型假基因；转录越过 LINE-1 终止位点还可能把邻近序列一并 3′ transduction 到新位置。
 
-SINE 通常没有蛋白质编码能力，SVA 是由 SINE-R、VNTR 和 Alu-derived 区段组成的灵长类复合非自主元件；二者都不能与自主 LINE 并列为自足的逆转座机器。细菌和细胞器中的部分 group II intron 则先把内含子 RNA reverse-splice 到靶 DNA，再由 intron-encoded protein 完成 target-primed reverse transcription，形成与 LINE 不同的 retrohoming 路线。逆转录反应本身及端粒酶、retron 的边界见[DNA复制与逆转录](dna_replication.md#reverse-transcriptase-diversity)。
+SINE 通常没有蛋白质编码能力，SVA 是由 SINE-R、VNTR 和 Alu-derived 区段组成的灵长类复合非自主元件；二者都不能与自主 LINE 并列为自足的逆转座机器。细菌和细胞器中的部分 group II intron 则先把内含子 RNA reverse-splice 到靶 DNA，再由 intron-encoded protein 完成 target-primed reverse transcription，形成与 LINE 不同的 retrohoming 路线。逆转录反应本身及端粒酶、retron 的边界见[逆转录](dna_replication/reverse_transcription.md#reverse-transcriptase-diversity)。
 
 ### 逆转录病毒整合与 LTR 逆转座共享化学而非完整生活史 { #retroviral-integration }
 

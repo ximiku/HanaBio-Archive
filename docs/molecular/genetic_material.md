@@ -67,7 +67,7 @@ Fraenkel-Conrat 和 Singer 用不同株系的烟草花叶病毒 RNA 与外壳蛋
 
 ### 病毒基因组展现核酸载体的最大多样性 { #viral-genomes }
 
-病毒基因组可以是 DNA 或 RNA、单链或双链、线形或环状、单分子或分节段，并可采用正义、负义或双义编码。部分病毒使用非标准碱基、共价末端蛋白、重复末端或部分双链结构。基因组构型决定复制时需要哪些聚合酶、是否必须随病毒颗粒携带转录酶，以及怎样产生可供宿主核糖体读取的 mRNA；相关机制见[DNA复制与逆转录](dna_replication.md)、[转录与RNA生物合成](transcription.md)和[病毒与亚病毒因子](../micro/viruses.md)。[^viral-genome-diversity]
+病毒基因组可以是 DNA 或 RNA、单链或双链、线形或环状、单分子或分节段，并可采用正义、负义或双义编码。部分病毒使用非标准碱基、共价末端蛋白、重复末端或部分双链结构。基因组构型决定复制时需要哪些聚合酶、是否必须随病毒颗粒携带转录酶，以及怎样产生可供宿主核糖体读取的 mRNA；相关机制见[DNA 复制](dna_replication/index.md)、[逆转录](dna_replication/reverse_transcription.md)、[转录与RNA生物合成](transcription.md)和[病毒与亚病毒因子](../micro/viruses.md)。[^viral-genome-diversity]
 
 病毒基因组常表现出高编码密度，可通过重叠基因、分段、亚基因组 RNA、RNA 剪接、核糖体移框和通读等方式从有限序列产生多种产物。RNA 病毒普遍较小不能只归因于“突变率高”：聚合酶保真度、校对能力、基因组分节、选择压力、衣壳与复制机制共同约束其大小。某些冠状病毒具有校对相关外切核酸酶，说明 RNA 基因组的保真度也不是单一固定值。
 
