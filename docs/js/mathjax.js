@@ -1,5 +1,26 @@
+// Both the document and search previews use this queue. Failed work must not
+// block later navigation, and no conversion may race a document reset.
+(() => {
+  let start;
+  let pending = new Promise(resolve => { start = resolve; });
+  window.hbMath = {
+    start,
+    enqueue(work) {
+      const result = pending.then(work);
+      pending = result.catch(error => console.error("MathJax typesetting failed", error));
+      return result;
+    }
+  };
+})();
+
 window.MathJax = {
+  // Search lives in a ShadowRoot. A complete, stable stylesheet can be shared
+  // there without missing glyphs first encountered after document typesetting.
+  chtml: { adaptiveCSS: false },
   tex: {
+    // Surface unsupported commands as parse errors so search can retain the
+    // original TeX instead of presenting a silently altered expression.
+    packages: { "[-]": ["noundefined"] },
     inlineMath: [["\\(", "\\)"]],
     displayMath: [["\\[", "\\]"]],
     processEscapes: true,
@@ -14,17 +35,21 @@ window.MathJax = {
     typeset: false,
     ready() {
       MathJax.startup.defaultReady();
-      let pending = MathJax.startup.promise;
+      MathJax.startup.promise.then(window.hbMath.start);
       let revision = 0;
       document$.subscribe(() => {
         const current = ++revision;
-        pending = pending.then(() => {
+        window.hbMath.enqueue(async () => {
           if (current !== revision) return;
-          MathJax.startup.output.clearCache();
+          // Keep generated glyph CSS: search previews live in a ShadowRoot and
+          // can remain mounted across page changes.
           MathJax.typesetClear();
           MathJax.texReset();
-          return MathJax.typesetPromise();
-        }).catch(error => console.error("MathJax typesetting failed", error));
+          await MathJax.typesetPromise();
+          if (typeof document !== "undefined") {
+            document.dispatchEvent(new Event("hb:math-ready"));
+          }
+        }).catch(() => {});
       });
     }
   }

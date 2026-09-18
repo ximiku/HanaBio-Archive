@@ -1,0 +1,148 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>HanaBio reading enhancements regression tests</title>
+<style>
+  body { font: 16px sans-serif; margin: 24px; }
+  #results .pass { color: #087b38; } #results .fail { color: #b00020; }
+</style>
+<h1>Reading enhancements regression tests</h1>
+<p>Serve this file with the current docs/js and docs/styles directories, then open it in a browser.</p>
+<button id="run">Run tests</button>
+<ol id="results"></ol>
+<script>
+  window.document$ = {
+    listeners: [], subscribe(fn) { this.listeners.push(fn); fn(); },
+    next() { this.listeners.forEach(fn => fn()); }
+  };
+</script>
+<script src="/js/mathjax.js"></script>
+<script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="/js/search-math.js"></script>
+<script>
+  const results = document.querySelector('#results');
+  const assert = (condition, message) => { if (!condition) throw new Error(message); };
+  const frame = () => new Promise(resolve => requestAnimationFrame(resolve));
+  async function until(check) {
+    const start = performance.now();
+    while (!check()) {
+      if (performance.now() - start > 10000) throw new Error('Timed out waiting for rendered state');
+      await frame();
+    }
+  }
+  async function check(name, fn) {
+    const li = document.createElement('li'); results.append(li);
+    try { await fn(); li.className = 'pass'; li.textContent = 'PASS: ' + name; }
+    catch (error) { li.className = 'fail'; li.textContent = 'FAIL: ' + name + ': ' + error.message; }
+  }
+  document.querySelector('#run').onclick = async function () {
+    this.disabled = true;
+    await until(() => Boolean(window.MathJax?.tex2chtmlPromise));
+    const host = document.createElement('div');
+    const root = host.attachShadow({mode:'open'}); document.body.append(host);
+    await frame(); await frame();
+    host.style.width = '650px';
+    root.innerHTML = `<style>
+      ol { margin:0; padding:0; list-style:none; } a { color:inherit; text-decoration:none; }
+      .excerpt { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2;
+        line-height:1.5; overflow:hidden; font-size:12px; }
+    </style><input role="combobox"><ol><li><a href="#fixture"><div><div>path</div><h2>Title</h2><div class="excerpt"></div></div></a></li></ol>`;
+    const source = root.querySelector('.excerpt');
+    const heading = root.querySelector('h2');
+    const copy = () => root.querySelector('.excerpt[data-hb-math-rendered]');
+    const fits = () => {
+      const bounds = copy().getBoundingClientRect();
+      assert(getComputedStyle(copy()).webkitLineClamp === 'none', 'WebKit line clamp still active');
+      for (const math of copy().querySelectorAll('.hb-search-math')) {
+        const box = math.getBoundingClientRect();
+        assert(box.top >= bounds.top - 1 && box.bottom <= bounds.bottom + 1, 'formula exceeds vertical bounds');
+        assert(box.left >= bounds.left - 1 && box.right <= bounds.right + 1, 'formula exceeds horizontal bounds');
+        const content = math.querySelector('mjx-math').getBoundingClientRect();
+        assert(content.top >= bounds.top - 1 && content.bottom <= bounds.bottom + 1, 'formula glyphs clipped');
+        assert(content.left >= bounds.left - 1 && content.right <= bounds.right + 1, 'formula glyphs overflow');
+      }
+    };
+    await check('late-mounted search shell renders new glyphs and preserves original nodes', async () => {
+      source.innerHTML = String.raw`Text <mark>word</mark> \(N\) and \[\frac{x}{\sqrt{2}}\]`;
+      const original = source.innerHTML;
+      await until(() => copy()?.querySelectorAll('mjx-container').length === 2);
+      await frame();
+      assert(source.innerHTML === original && root.querySelector('.excerpt') === source, 'source nodes changed');
+      assert(copy().querySelector('mark').textContent === 'word', 'plain highlight lost');
+      assert(copy().querySelector('mjx-container').getBoundingClientRect().width > 0, 'invisible glyph');
+      assert(getComputedStyle(copy().querySelector('mjx-c'), '::before').content !== 'none', 'missing glyph CSS');
+    });
+    await check('highlight splitting a TeX command still renders and stays highlighted', async () => {
+      source.innerHTML = String.raw`\(\fr<mark>ac</mark>{1}{2}\)`;
+      await until(() => copy()?.querySelector('mark.hb-search-math mjx-mfrac'));
+    });
+    await check('rapid replacements use newest text and exactly one preview', async () => {
+      source.textContent = String.raw`old \(x\)`;
+      source.textContent = String.raw`middle \(y\)`;
+      source.textContent = String.raw`latest \(z^2\)`;
+      await until(() => copy()?.textContent.includes('latest'));
+      assert(root.querySelectorAll('.excerpt[data-hb-math-rendered]').length === 1, 'duplicate preview');
+      assert(!copy().textContent.includes('old'), 'stale preview');
+    });
+    await check('title formulas and mixed valid/invalid/incomplete formulas', async () => {
+      heading.textContent = String.raw`Heading \(R^2\)`;
+      source.textContent = String.raw`ok \(x\), bad \(\badunknowncommand{x}\), incomplete \(y`;
+      await until(() => root.querySelector('h2[data-hb-math-rendered] mjx-container') && copy()?.textContent.includes('incomplete'));
+      assert(copy().querySelectorAll('mjx-container').length === 1, 'bad TeX was rendered');
+      assert(copy().textContent.includes('badunknowncommand') && copy().textContent.includes('\\(y'), 'fallback changed source');
+    });
+    await check('switching to plain text restores the original result', async () => {
+      source.textContent = 'plain result'; await until(() => !copy());
+      assert(!source.hasAttribute('data-hb-math-source') && !source.hasAttribute('aria-hidden'), 'source still hidden');
+    });
+    await check('instant navigation keeps search math and glyph styles', async () => {
+      source.textContent = String.raw`retained \(\sum_{i=1}^{n} x_i\)`;
+      await until(() => copy()?.querySelector('mjx-munderover, mjx-msubsup'));
+      document$.next(); await hbMath.enqueue(() => {}); await frame();
+      assert(copy().querySelector('mjx-container').getBoundingClientRect().width > 0, 'navigation erased preview');
+      assert(root.querySelectorAll('[data-hb-math-style]').length === 1, 'duplicate styles');
+    });
+    await check('two-line excerpts retain complete fractions, sums, and adjacent text in WebKit', async () => {
+      host.style.width = '390px';
+      source.innerHTML = String.raw`Pearson <mark>统计量</mark>为 \(X^2=\sum_{i=1}^{k}\frac{(O_i-E_i)^2}{E_i}\)。` + '检验统计量与理论分布比较。'.repeat(12);
+      const original = source.innerHTML;
+      await until(() => copy()?.querySelector('mjx-mfrac') && copy().textContent.endsWith('…'));
+      fits();
+      assert(copy().querySelector('mark').textContent === '统计量', 'plain keyword highlight lost');
+      assert(source.innerHTML === original, 'engine-owned excerpt was shortened');
+      assert(copy().getBoundingClientRect().height < 90, 'more than two complete lines');
+    });
+    await check('resizing reflows the full cached excerpt without duplicate previews', async () => {
+      const before = copy().textContent;
+      host.style.width = '650px';
+      await until(() => copy().textContent.length > before.length);
+      fits();
+      host.style.width = '260px';
+      await until(() => copy().textContent.length < before.length);
+      fits();
+      assert(root.querySelectorAll('.excerpt[data-hb-math-rendered]').length === 1, 'duplicate after resize');
+    });
+    await check('oversized equations scale as a complete unit in narrow results', async () => {
+      source.textContent = String.raw`Long \(\displaystyle\frac{(a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p+q+r+s+t+u+v+w+x+y+z)^2}{(a+b)(c+d)(e+f)(g+h)}\) end`;
+      await until(() => copy()?.textContent.startsWith('Long') && copy().querySelector('.hb-search-math')?.style.fontSize);
+      fits();
+      assert(copy().querySelectorAll('mjx-mfrac').length === 1, 'fraction was split or removed');
+    });
+    await check('aligned multi-line formulas stay whole within a compact excerpt', async () => {
+      source.textContent = String.raw`ATE \[\begin{aligned}w_i&=\frac{A_i}{e(X_i)}\\v_i&=\frac{1-A_i}{1-e(X_i)}\end{aligned}\] ` + '倾向评分与加权估计。'.repeat(20);
+      await until(() => copy()?.querySelector('mjx-mtable') && copy().textContent.endsWith('…'));
+      fits();
+      assert(copy().querySelectorAll('mjx-mtr').length === 2, 'aligned rows truncated');
+    });
+    await check('closing and reopening search recalculates a previously hidden preview', async () => {
+      host.style.display = 'none'; await frame(); await frame();
+      host.style.width = '390px'; host.style.display = '';
+      await until(() => copy().getBoundingClientRect().width === 390);
+      await new Promise(resolve => setTimeout(resolve, 150));
+      fits();
+    });
+    host.remove();
+    const summary = document.createElement('p'); summary.id = 'summary';
+    summary.textContent = `${results.querySelectorAll('.pass').length} passed, ${results.querySelectorAll('.fail').length} failed`;
+    results.after(summary);
+  };
+</script>

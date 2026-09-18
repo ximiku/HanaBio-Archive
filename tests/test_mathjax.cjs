@@ -22,7 +22,7 @@ function configure() {
   vm.runInNewContext(source, context);
   // Loading only the configuration must not touch the not-yet-loaded library.
   assert.equal(navigate, undefined);
-  return { math: context.MathJax, navigate: () => navigate(), errors };
+  return { math: context.MathJax, queue: context.hbMath, navigate: () => navigate(), errors };
 }
 
 test("waits for startup and serializes rapid page changes", async () => {
@@ -86,4 +86,28 @@ test("a failed page does not prevent the next page from typesetting", async () =
   state.navigate();
   await flush();
   assert.equal(calls, 2);
+});
+
+test("search conversions share the page queue, and failures release it", async () => {
+  const state = configure();
+  const gate = deferred();
+  const order = [];
+  Object.assign(state.math, {
+    typesetClear() { order.push("clear"); }, texReset() {},
+    typesetPromise() { order.push("page"); return Promise.resolve(); }
+  });
+  state.math.startup.defaultReady = () => { state.math.startup.promise = Promise.resolve(); };
+  state.math.startup.ready();
+  await flush();
+  const search = state.queue.enqueue(async () => {
+    order.push("search-start"); await gate.promise; order.push("search-end");
+  });
+  state.navigate();
+  await flush();
+  assert.deepEqual(order, ["clear", "page", "search-start"]);
+  gate.resolve(); await search; await flush();
+  assert.deepEqual(order, ["clear", "page", "search-start", "search-end", "clear", "page"]);
+  await assert.rejects(state.queue.enqueue(() => { throw new Error("bad preview"); }));
+  state.navigate(); await flush();
+  assert.equal(order.at(-1), "page");
 });
