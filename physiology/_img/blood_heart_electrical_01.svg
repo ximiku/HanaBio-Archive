@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">工作心肌与窦房结起搏细胞动作电位比较</title>
+  <desc id="desc">左侧显示工作心肌稳定静息电位、快速去极化、平台和复极，右侧显示窦房结细胞舒张期自动去极化、钙依赖上升支和复极。</desc>
+  <rect width="900" height="540" rx="18" fill="#f8fafc"/>
+  <style>
+    .axis { stroke: #64748b; stroke-width: 2; fill: none; }
+    .grid { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 5 6; }
+    .fast { stroke: #2563eb; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .slow { stroke: #dc2626; stroke-width: 5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .label { font: 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .small { font: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #334155; }
+    .phase { font: 700 21px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .current { font: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+  </style>
+  <text x="40" y="42" class="label">跨膜电位</text>
+  <text x="430" y="520" class="small">时间</text>
+
+  <g aria-label="工作心肌动作电位">
+    <text x="120" y="78" class="label">工作心肌</text>
+    <line x1="70" y1="100" x2="70" y2="445" class="axis"/>
+    <line x1="70" y1="445" x2="420" y2="445" class="axis"/>
+    <line x1="70" y1="355" x2="420" y2="355" class="grid"/>
+    <path d="M82 355 L125 355 C135 355 139 342 143 270 C146 185 150 118 164 105 C176 96 184 123 194 142 C210 158 228 150 248 147 C292 141 326 145 344 167 C362 195 369 271 374 323 C378 347 388 355 410 355" class="fast"/>
+    <text x="144" y="250" class="phase">0</text>
+    <text x="184" y="125" class="phase">1</text>
+    <text x="265" y="128" class="phase">2</text>
+    <text x="360" y="245" class="phase">3</text>
+    <text x="101" y="382" class="phase">4</text>
+    <text x="115" y="423" class="current">I<tspan baseline-shift="sub" font-size="12">K1</tspan></text>
+    <text x="126" y="215" class="current">I<tspan baseline-shift="sub" font-size="12">Na</tspan></text>
+    <text x="183" y="102" class="current">I<tspan baseline-shift="sub" font-size="12">to</tspan></text>
+    <text x="228" y="190" class="current">I<tspan baseline-shift="sub" font-size="12">Ca,L</tspan> ↔ I<tspan baseline-shift="sub" font-size="12">K</tspan></text>
+    <text x="336" y="300" class="current">I<tspan baseline-shift="sub" font-size="12">Kr</tspan> / I<tspan baseline-shift="sub" font-size="12">Ks</tspan></text>
+    <text x="142" y="476" class="small">稳定 4 期 · 快速 0 期 · 平台</text>
+  </g>
+
+  <g aria-label="窦房结起搏细胞动作电位">
+    <text x="590" y="78" class="label">窦房结起搏细胞</text>
+    <line x1="490" y1="100" x2="490" y2="445" class="axis"/>
+    <line x1="490" y1="445" x2="850" y2="445" class="axis"/>
+    <line x1="490" y1="250" x2="850" y2="250" class="grid"/>
+    <text x="505" y="238" class="small">阈值</text>
+    <path d="M505 365 C555 362 600 325 630 260 C638 242 646 190 661 155 C671 132 688 128 701 145 C719 170 725 252 733 305 C740 347 753 365 775 365 C800 365 820 349 842 318" class="slow"/>
+    <text x="565" y="334" class="phase">4</text>
+    <text x="650" y="205" class="phase">0</text>
+    <text x="718" y="270" class="phase">3</text>
+    <text x="530" y="400" class="current">I<tspan baseline-shift="sub" font-size="12">f</tspan> + I<tspan baseline-shift="sub" font-size="12">Ca</tspan> + I<tspan baseline-shift="sub" font-size="12">NCX</tspan></text>
+    <text x="664" y="113" class="current">I<tspan baseline-shift="sub" font-size="12">Ca,L</tspan></text>
+    <text x="739" y="286" class="current">I<tspan baseline-shift="sub" font-size="12">K</tspan></text>
+    <text x="552" y="476" class="small">自动 4 期 · Ca²⁺ 依赖 0 期 · 无稳定静息电位</text>
+  </g>
+</svg>
