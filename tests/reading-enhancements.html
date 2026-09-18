@@ -1,14 +1,21 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>HanaBio reading enhancements regression tests</title>
+<link rel="stylesheet" href="/styles/footnotes.css">
 <style>
+  :root { --md-accent-fg-color: #ff4081; --md-default-fg-color--light: #666; --md-default-fg-color--lightest: #ddd; }
   body { font: 16px sans-serif; margin: 24px; }
+  .md-content { width: 650px; }
+  .footnote ol { margin: 0; padding-left: 32px; }
+  .footnote li { margin: 0; box-sizing: border-box; }
+  .footnote li p { margin: 0; }
   #results .pass { color: #087b38; } #results .fail { color: #b00020; }
 </style>
 <h1>Reading enhancements regression tests</h1>
 <p>Serve this file with the current docs/js and docs/styles directories, then open it in a browser.</p>
 <button id="run">Run tests</button>
 <ol id="results"></ol>
+<main class="md-content md-typeset"></main>
 <script>
   window.document$ = {
     listeners: [], subscribe(fn) { this.listeners.push(fn); fn(); },
@@ -18,6 +25,7 @@
 <script src="/js/mathjax.js"></script>
 <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="/js/search-math.js"></script>
+<script src="/js/footnotes.js"></script>
 <script>
   const results = document.querySelector('#results');
   const assert = (condition, message) => { if (!condition) throw new Error(message); };
@@ -34,9 +42,65 @@
     try { await fn(); li.className = 'pass'; li.textContent = 'PASS: ' + name; }
     catch (error) { li.className = 'fail'; li.textContent = 'FAIL: ' + name + ': ' + error.message; }
   }
+  function notes(heights) {
+    document.querySelector('main').innerHTML = '<a class="ref" href="#fn:n11">Hidden note</a><div class="footnote"><hr><ol>' +
+      heights.map((height, i) => `<li id="fn:n${i + 1}" style="height:${height}px"><p>Note ${i + 1} <a href="#">return</a></p></li>`).join('') + '</ol></div>';
+    document$.next();
+  }
+  const visibleNotes = () => document.querySelectorAll('.footnote li:not(.hb-footnote-hidden)').length;
+  const toggle = () => document.querySelector('.hb-footnotes-toggle');
   document.querySelector('#run').onclick = async function () {
     this.disabled = true;
     await until(() => Boolean(window.MathJax?.tex2chtmlPromise));
+    await check('3 short notes need no button', async () => {
+      notes([40,40,40]); assert(visibleNotes() === 3 && toggle().hidden, 'short list collapsed');
+    });
+    await check('exactly 10 short notes remain visible', async () => {
+      notes(Array(10).fill(20)); assert(visibleNotes() === 10 && toggle().hidden, '10-note boundary');
+    });
+    await check('11 short notes show 10 and expand/collapse with one button', async () => {
+      notes(Array(11).fill(20)); assert(visibleNotes() === 10 && !toggle().hidden, 'count threshold');
+      toggle().click(); assert(visibleNotes() === 11, 'expand');
+      toggle().click(); assert(visibleNotes() === 10, 'collapse');
+      assert(document.querySelectorAll('.hb-footnotes-toggle').length === 1, 'duplicate control');
+    });
+    await check('height budget ends at a complete note', async () => {
+      notes([160,160,160,160]); assert(visibleNotes() === 2, 'height boundary');
+    });
+    await check('one oversized note is never truncated', async () => {
+      notes([500]); assert(visibleNotes() === 1 && toggle().hidden, 'single oversized note');
+      notes([500,20]); assert(visibleNotes() === 1 && !toggle().hidden, 'oversized first note');
+    });
+    await check('expanded list survives remeasurement', async () => {
+      notes(Array(12).fill(50)); toggle().click();
+      document.dispatchEvent(new Event('hb:math-ready')); await frame(); await frame();
+      assert(visibleNotes() === 12, 're-collapsed expanded list');
+    });
+    await check('hidden target expands on click and direct hash navigation', async () => {
+      notes(Array(12).fill(50)); document.querySelector('.ref').click(); await frame();
+      assert(visibleNotes() === 12 && !document.getElementById('fn:n11').classList.contains('hb-footnote-hidden'), 'hidden target');
+      notes(Array(12).fill(50)); await frame();
+      assert(visibleNotes() === 12, 'initial hash not revealed');
+      history.replaceState(null, '', location.pathname);
+    });
+    await check('navigation disposes old controls and listeners', async () => {
+      document.querySelector('main').innerHTML = '<p>No notes</p>'; document$.next();
+      assert(!toggle(), 'orphan control');
+      notes([40,40]); assert(toggle().hidden, 'new short page');
+    });
+    await check('a visible anchor remains available after fonts or math change note heights', async () => {
+      notes(Array(4).fill(40));
+      document.querySelector('.ref').href = '#fn:n3';
+      document.querySelector('.ref').click(); await frame();
+      document.querySelectorAll('.footnote li').forEach(li => li.style.height = '200px');
+      document.dispatchEvent(new Event('hb:math-ready')); await frame(); await frame();
+      assert(visibleNotes() === 4, 'remeasurement hid the reading target');
+      toggle().click();
+      document.dispatchEvent(new Event('hb:math-ready')); await frame(); await frame();
+      assert(visibleNotes() === 1, 'explicit collapse was overridden');
+      history.replaceState(null, '', location.pathname);
+    });
+
     const host = document.createElement('div');
     const root = host.attachShadow({mode:'open'}); document.body.append(host);
     await frame(); await frame();

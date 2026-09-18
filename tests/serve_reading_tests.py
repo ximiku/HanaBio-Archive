@@ -13,8 +13,9 @@ FILES = {
     "/": (ROOT / "tests/reading-enhancements.html", "text/html"),
     **{
         f"/js/{name}.js": (ROOT / f"docs/js/{name}.js", "text/javascript")
-        for name in ("mathjax", "search-math")
+        for name in ("mathjax", "search-math", "footnotes")
     },
+    "/styles/footnotes.css": (ROOT / "docs/styles/footnotes.css", "text/css"),
 }
 
 
