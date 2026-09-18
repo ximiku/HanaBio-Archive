@@ -1,8 +1,16 @@
 {% extends "base.html" %}
 
+{# Analytics must run after comment-auth has consumed login callback parameters. #}
+{% block analytics %}{% endblock %}
+
 {% block extrahead %}
   {{ super() }}
   <script src="{{ 'js/comment-auth.js' | url }}"></script>
+  {% if config is defined and config.extra is defined and config.extra.analytics and config.extra.analytics.provider == "google" %}
+    <script src="{{ 'js/analytics.js' | url }}"
+      data-property="{{ config.extra.analytics.property | e }}"
+      data-site-url="{{ config.site_url | e }}"></script>
+  {% endif %}
 {% endblock %}
 
 {% block content %}

@@ -570,6 +570,9 @@ plugins:
       minify_html: true
 
 extra:
+  analytics:
+    provider: google
+    property: G-X7H5VXYFTC
   giscus_shared_login: true #关闭可恢复两套独立 GitHub 登录
   homepage: https://ximiku.github.io/HanaBio-Archive/
   social:
