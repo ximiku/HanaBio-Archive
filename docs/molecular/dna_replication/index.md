@@ -51,6 +51,8 @@ DNA 聚合酶需要一个**引物—模板接头（primer–template junction）
 
 沿反应图看，引物末端的 3′-OH 进攻来袭 dNTP 的 α 磷酸，形成新的磷酸二酯键。β、γ 两个磷酸一起以焦磷酸的形式离开，后续焦磷酸水解有利于合成方向的净推进。来袭核苷酸的糖上又留下一个新的 3′-OH，于是同样的反应可以再做一次。
 
+活性位点中的 Mg²⁺ 等二价金属离子帮助定位底物、促进 3′-OH 参与反应，并稳定反应中的电荷。聚合本身存在逆反应：在适当的焦磷酸条件下，末端核苷酸可以通过**焦磷酸解**被移走。细胞持续供应 dNTP、移除和水解焦磷酸，使净反应倾向于链的合成。[^polymerase-catalysis]
+
 [![引物 3′-OH 与来袭 dNTP 反应，释放焦磷酸并延长新链](../_img/dna_replication/polymerization-chemistry.jpg){ width="680" height="431" loading="lazy" }](../_img/dna_replication/polymerization-chemistry.jpg)
 /// caption
 先找上图引物的 3′-OH，再在下图找到接入后新的 3′-OH。模板碱基决定配对选择，红箭头所指的是化学反应位置。[^fig-gene-9-2]
@@ -78,9 +80,46 @@ a 中错配末端难以继续延长；b 中新链 3′ 端进入外切位点；c
 
 dNTP 的浓度与比例也影响反应速度和误配机会。引发酶以及真核起始用的 Pol α 没有复制型聚合酶那样的完整校对能力，后来将引物区段移除、重新合成，因而也有利于提高最终产物质量。损伤跨越、复制叉重启与修复性合成的取舍，见[DNA 损伤、修复与突变](../dna_repair.md)。
 
+### 聚合酶的分工 { #polymerase-families }
+
+同一个细胞可以有多种 DNA 聚合酶。大肠杆菌的 Pol I 是最早被发现的一种，却不是承担大部分染色体延伸的主力：后来分离到的 Pol III 才适合与滑动钳等组分一起长距离复制。Pol I 更擅长在已有 DNA 接头附近处理引物、补缺口。发现顺序留在了编号里，工作量可没有按编号排队。[^polymerase-repertoire]
+
+| 大肠杆菌聚合酶 | 主要用途 | 与本页机制有关的活性 |
+| --- | --- | --- |
+| Pol I（A 家族） | 引物处理、缺口填补与修复 | 5′→3′ 聚合、3′→5′ 校对、5′ 核酸酶活性 |
+| Pol II（B 家族） | 修复性合成及部分复制重启 | 有聚合与校对能力 |
+| Pol III（C 家族） | 染色体的主要延伸 | 核心酶分担聚合与校对，全酶借助钳和装载器高效复制 |
+| Pol IV、Pol V（Y 家族） | 损伤跨越等反应；Pol V 的诱导和激活与 [SOS 应答](../dna_repair.md#dna-damage-response)有关 | 通常缺乏复制酶式校对；准确性取决于底物损伤与酶的组合 |
+
+Pol I 的三个活性还能通过蛋白质片段分开研究。温和蛋白酶处理得到的较大 **Klenow 片段**保留聚合与 3′→5′ 校对，5′ 核酸酶活性位于分离出去的较小片段。实验室还使用经过改造、缺少校对的 Klenow 变体，名称相近时要看清酶的具体构成。[^polymerase-repertoire]
+
+真核核基因组的主要复制酶来自 B 家族。Pol α–primase 是四亚基复合体：两个亚基组成引发酶部分，另外两个组成 Pol α 部分。先做 RNA、再接短 DNA，随后把接头交给长距离延伸的聚合酶。RPA 保护暴露模板并参与蛋白之间的交接；它对合成与保真度的影响取决于具体反应条件。
+
+| 真核聚合酶 | 主要位置与工作 | 校对及辅助功能 |
+| --- | --- | --- |
+| Pol α | 核复制的 RNA–DNA 引物合成 | 缺少 3′→5′ 校对，随后发生聚合酶交接 |
+| Pol δ | 主要延伸后随链，也参与起始、修复和填补 | 具有校对；PCNA 提高其在 DNA 上持续工作的能力 |
+| Pol ε | 通常承担多数前导链延伸，与 CMG 联系紧密 | 具有校对，复制体中的连接也有助于持续合成 |
+| Pol β（X 家族） | 核内碱基切除修复 | 缺少校对；5′-脱氧核糖磷酸裂解酶活性处理部分修复中间体 |
+| Pol γ（A 家族） | 动物线粒体 DNA 的复制与修复 | 具有校对；人 Pol γ 由一个催化亚基与辅助亚基二聚体组成 |
+
+在体外重构的线粒体短片段碱基切除修复中，Pol γ 还表现出 **5′-dRP lyase 活性**。无碱基（AP）位点经切开后，可留下一个 5′ 脱氧核糖磷酸残基；Pol γ 能去除这个残基，并参与缺口填补。损伤的识别与前期切割则由其他酶完成。[^pol-gamma-ber]
+
+家族描述结构与演化关系，也帮助我们比较功能。A、B 家族横跨多类生物，例如 T7 DNA 聚合酶也属于 A 家族。C 家族包括细菌 Pol III，古菌的 PolD 属于 D 家族。X 家族还包括 Pol λ、Pol μ 等修复酶，Y 家族包括 Pol η 等[损伤跨越酶](../dna_repair.md#replication-stress-tolerance)；逆转录酶另属 RT 类群。古菌与真核的复制装置有许多同源成分，具体聚合酶仍要按谱系辨认。[^polymerase-families]
+
+!!! note "从复制酶到 PCR 用酶"
+
+    Taq 属于 A 家族，具有 5′ 核酸酶活性，通常缺少 3′→5′ 校对；来自古菌的 Pfu 属于 B 家族，具有校对活性。耐热性让它们适合反复经历 PCR 的高温步骤，酶的校对和末端处理能力则影响产物。商品“高保真”酶可能经过工程改造，也可能含混合组分，应按具体酶及缓冲体系判断。[^pcr-polymerases]
+
+    聚合酶抑制也与反应化学相连：双脱氧核苷酸若被接入，就不能提供下一轮需要的 3′-OH；阿非迪霉素则能抑制若干真核复制型聚合酶。不同酶对类似物的接受程度和抑制剂敏感性不同，实验比较需要给定底物与药物条件。实际选酶与扩增用途见[PCR 的反应与用酶](../../exptech/biochem_molecular/amplification_cloning.md#pcr-chemistry-cycling)。
+
+    阿糖胞苷的活性形式 **ara-CTP** 则保留 3′-OH，但糖环构型与正常脱氧胞苷不同。它被聚合酶接入后，可以使后续延伸变慢；校对酶能否移除它、其他聚合酶能否继续延伸，又会影响最终效果。人 Pol ε 的体外研究把“接入类似物”和“从这个末端继续合成”分别测量，观察到接入后的延伸受阻，也检测了校对活性对类似物移除的贡献。[^ara-ctp]
+
 ### 滑动钳 { #_1 }
 
 一个聚合酶每秒能接入多少核苷酸，与它一次结合能连续合成多长，是两个问题。即使单步反应很快，如果动不动就从 DNA 上掉下来，长链复制仍会受到影响。环抱 DNA 的**滑动钳（sliding clamp）**为聚合酶提供了可随 DNA 移动的连接点。
+
+一次结合、尚未解离时平均能接入多少核苷酸，称为**过程性或进行性（processivity）**。这是把酶“留住”的能力，与每秒反应多少次的催化速率分别测量。
 
 [![滑动钳环抱双链 DNA 的结构模型及其与聚合酶的连接示意](../_img/dna_replication/sliding-clamp.jpg){ width="680" height="408" loading="lazy" }](../_img/dna_replication/sliding-clamp.jpg)
 /// caption
@@ -88,6 +127,19 @@ dNTP 的浓度与比例也影响反应速度和误配机会。引发酶以及真
 ///
 
 细菌常用 β 钳，古菌和真核常用 PCNA。钳装载复合物在 ATP 结合与水解循环中打开钳、识别合适的引物—模板接头、将钳留在 DNA 上并释放。不同生物的钳和装载器有各自的结构组成：细菌使用细菌型钳装载复合物，古菌与真核则使用 RFC 类装载器。
+
+大肠杆菌 β 钳由两个相同亚基成环，每个亚基有三个相似结构域；真核 PCNA 通常由三个亚基成环，每个亚基有两个相似结构域，两者因此都形成近似六域的环。PCNA 表面的结合位置还供核酸酶、连接酶、修复因子和染色质装配因子使用，复制后的处理也由此接到新生 DNA 上。[^clamp-architecture]
+
+### Pol III 全酶 { #pol-iii-holoenzyme }
+
+大肠杆菌 Pol III 的一个核心酶由 α、ε、θ 三种亚基组成：α 催化聚合，ε 提供 3′→5′ 校对，θ 与 ε 相联系并帮助稳定核心。加上滑动钳、装载器以及它们的连接关系，才构成能高效工作的全酶。
+
+[![Pol III 核心酶通过柔性连接区与钳装载器相连的结构组织模型](../_img/dna_replication/pol-iii-holoenzyme.jpg){ width="560" height="391" loading="lazy" }](../_img/dna_replication/pol-iii-holoenzyme.jpg)
+/// caption
+绿色部分代表 Pol III 核心酶，蓝色部分连接多个核心与钳装载器。柔性连接让各聚合酶在保持联系的同时，能分别接近自己的引物末端。[^fig-gene-9-22]
+///
+
+装载器含 DnaX 蛋白产物 τ／γ、δ、δ′ 等组分，并有 χ、ψ 等辅助成分。τ 的额外结构域可以连接 Pol III 核心和 DnaB 解旋酶；γ 保留装载相关部分，却没有同样的末端连接区。教材图用三个核心酶展示一条前导链、两个后随链聚合酶之间的组织，为后面的长号模型作准备。活细胞中的组分交换与占据数会变化，图中展示的是一种经过研究的组织模型。[^pol-iii-assembly]
 
 ## 复制叉 { #replication-fork }
 
@@ -106,6 +158,8 @@ dNTP 的浓度与比例也影响反应速度和误配机会。引发酶以及真
 
 “半不连续”说的是这种合成组织；“半保留”说的是旧链进入哪个子代双链。它们回答的问题不同，可以同时成立。正常复制叉的前导链较连续，遇到损伤、障碍或重启时也可出现间隙；这些情况要放回相应反应中看。
 
+细菌与真核细胞的冈崎片段，长度通常也不同：在常见教材所讨论的生长条件下，大肠杆菌冈崎片段约为 1–2 kb，真核核基因组的片段常约 100–200 nt，接近核小体组织的尺度。大肠杆菌复制叉每秒可推进数百至约千个碱基对，真核核复制叉通常是每秒数十个碱基对。营养、温度、染色质与复制压力都会改变这些数值；真核依靠多个起点共同工作，完成较大的基因组。[^replication-scales]
+
 ### 解链与模板保护 { #_3 }
 
 解旋酶利用 ATP 反应沿 DNA 移动，推动双链打开。许多复制型解旋酶是环形复合体，单链穿过中央孔道。下图展示乳头瘤病毒 E1 解旋酶的一个结构实例；单链 DNA 穿过它的中央孔道，内侧的蛋白环依次与 DNA 接触。细菌 DnaB 与真核 CMG 也采用环状结构，但亚基组成和运动方向有所不同。
@@ -115,7 +169,11 @@ dNTP 的浓度与比例也影响反应速度和误配机会。引发酶以及真
 上排从侧面和孔口看六聚体；下排比较不同核苷酸状态中接触单链 DNA 的蛋白环。下排根据不同核苷酸状态的结构，推测蛋白环如何依次牵引 DNA。[^fig-gene-9-15]
 ///
 
+复制叉还会遇到结合在 DNA 上的蛋白质。大肠杆菌的辅助解旋酶 Rep 可与 DnaB 相联系，帮助复制叉越过这类障碍；UvrD 也能在一定条件下承担辅助作用，并参与多种 DNA 修复过程。[^accessory-helicases]
+
 暴露的单链很容易局部重新配对，或折成影响复制的二级结构。细菌的 SSB、真核的 RPA，以及古菌中的 SSB/RPA 类蛋白覆盖单链，帮助维持可供复制的模板状态，也减少单链被核酸酶降解的机会。
+
+大肠杆菌 DnaB 沿后随链模板按 5′→3′ 方向移动，真核 CMG 则环抱前导链模板，沿它按 3′→5′ 方向推进。所跟随的模板不同，它们都能位于相应复制叉的前沿。SSB 与 RPA 本身不负责催化解链，结合后还要能动态重排、向聚合酶或修复因子让出模板。SSB 的相邻结合可表现出协同性；盐浓度、结合模式及蛋白种类会影响这种协同程度。[^helicase-ssb-details]
 
 双螺旋被打开时，拓扑问题会传到前方：如果 DNA 不能自由转动，未复制部分会积累额外扭转；叉本身的旋转又可能把缠绕转移到后方的子代分子之间。解旋酶忙着拆开碱基对，拓扑异构酶则通过受控的切割与重接来改变链的缠绕关系。
 
@@ -124,11 +182,24 @@ dNTP 的浓度与比例也影响反应速度和误配机会。引发酶以及真
 沿图看叉前方怎样积累扭转，再看暂时切开一段双链、让另一段穿过并重新连接的过程。图以细菌旋转酶相关的拓扑变化说明原理。[^fig-gene-9-17]
 ///
 
-细菌 DNA 旋转酶可以引入负超螺旋，I 型或 II 型拓扑异构酶参与解除不同形式的应力；II 型酶还能解开复制产物之间的互锁。连接数和酶类别见[DNA 拓扑与超螺旋](../../biochem/nucleic_acid.md#dna-topology-supercoiling)。
+细菌 DNA 旋转酶可以引入负超螺旋，I 型或 II 型拓扑异构酶参与解除不同形式的应力；II 型酶还能解开复制产物之间的互锁。连接数的含义见[DNA 拓扑与超螺旋](../../biochem/nucleic_acid.md#dna-topology-supercoiling)。
+
+切开 DNA 时，拓扑异构酶的酪氨酸与一个断端形成暂时的磷酸酪氨酸键，保留随后重接所需的化学连接。断端由酶控制着，待链穿越或旋转完成后再封口。常见类别可以这样比较：[^topoisomerase-classes]
+
+| 类别 | 暂时切开的链与共价连接 | 改变拓扑的主要动作 | 能量与金属离子 |
+| --- | --- | --- | --- |
+| IA | 一条链；酶连到 5′ 磷酸端 | 让另一条单链穿过缺口，单次穿越使连接数改变 1 | 典型松弛酶不直接耗 ATP，通常需要 Mg²⁺ |
+| IB | 一条链；酶连到 3′ 磷酸端 | 受控旋转，一次切开期间可松开多圈 | 通常不直接耗 ATP，切割—重接不依赖二价金属催化 |
+| IIA | 两条链；酶连到 5′ 磷酸端 | 让另一段双链穿过，单次穿越使连接数改变 2 | ATP 与 Mg²⁺ 参与循环；包括细菌旋转酶、Topo IV 和真核 Topo II |
+| IIB | 两条链；酶连到 5′ 磷酸端 | 双链穿越，单次改变连接数 2 | ATP 与 Mg²⁺ 参与；代表为 Topo VI |
+
+这里的计量指一次链穿越，IB 的受控旋转则可以连续释放多圈。逆旋转酶把 IA 型拓扑酶与 ATP 依赖的解旋酶样部分结合，因此整条蛋白的工作仍涉及 ATP 消耗。喜树碱能稳定真核 Topo I 的切割复合物，妨碍正常重接；这一点也说明，酶原本短暂保留的断口如何成为损伤来源。[^topoisomerase-classes]
+
+DNA 旋转酶在 ATP 驱动下可引入负超螺旋；在无 ATP 的特定体外条件下，也能较慢地松弛已有的负超螺旋。是否消耗 ATP，要连同所测的反应方向一起说明。[^gyrase-relaxation]
 
 ### 冈崎片段与长号模型 { #leading-lagging-coordination }
 
-**引发酶（primase）**能够从头合成一段短核酸，为 DNA 聚合酶准备配对好的 3′-OH。大肠杆菌 DnaG 合成短 RNA，并与 DnaB 解旋酶动态配合；许多古菌使用 PriS–PriL 类引发酶；真核 Pol α–primase 则先合成 RNA，再接上一小段 DNA。
+**引发酶（primase）**能够从头合成一段短核酸，为 DNA 聚合酶准备配对好的 3′-OH。大肠杆菌 DnaG 合成短 RNA，并与 DnaB 解旋酶动态配合。它对模板序列有偏好，体外测量中常从含 5′-CTG-3′ 的位点引发；这种偏好及周围蛋白会影响哪些位置真正启动合成。[^dnag-sequence] 许多古菌使用 PriS–PriL 类引发酶；真核 Pol α–primase 则先合成 RNA，再接上一小段 DNA。
 
 前导链建立起始接头后，可以较长时间连续延伸；后随链必须反复引发。后随链聚合酶又与整个复制体保持联系，于是模板在它附近形成一个动态的环。环的长度随片段合成而改变，因此得名**长号模型（trombone model）**。长号演奏时，伸缩管来回移动；这里随合成伸长、又在片段完成后释放的，是后随链模板形成的环。
 
@@ -177,7 +248,11 @@ d：另一后随链聚合酶接到新装载的钳上；e：前一个片段完成
 
 等聚合酶填满缺口后，剩下的是相邻的 3′-OH 与 5′-磷酸之间尚未连接的一处切口。DNA 连接酶在这里形成最后一个磷酸二酯键，两个片段便接成连续的链。
 
-真核细胞主要由 Pol δ 延伸并推开前方片段的 5′ 端，形成小瓣状结构（flap），再由 FEN1 切除。较长的 flap 可需要 Dna2 与 FEN1 协作，RNase H2 参与 RNA 的清除，最终由 DNA ligase I 封口。古菌常见 RNase H、Fen1、PCNA 和连接酶等组合，具体成员依谱系而变。[^lagging-strand-maturation]
+封口需要先活化这个 5′-磷酸。连接酶先取得 AMP，形成酶—AMP 中间体，再把 AMP 转到 DNA 的 5′-磷酸上；相邻 3′-OH 进攻后，磷酸二酯键形成，AMP 离开。ATP 依赖的连接酶从 ATP 取得 AMP，并释放焦磷酸；大肠杆菌 LigA 则使用 NAD⁺，同时释放 NMN。细菌中也有 ATP 依赖的连接酶，因此辅因子应按具体酶说明。[^dna-ligases]
+
+真核细胞主要由 Pol δ 延伸并推开前方片段的 5′ 端，形成小瓣状结构（flap），再由 FEN1 切除。FEN1 对不同底物有不同的切割方式：除了切下 flap，还能在切口或缺口底物上表现出 5′→3′ 外切活性；它也参与[长片段碱基切除修复](../dna_repair.md#base-excision-repair)。[^fen1-activities]处理较长的 flap 时，可能还需要 Dna2 与 FEN1 协作，RNase H2 参与 RNA 的清除，最终由 DNA ligase I 封口。古菌常见 RNase H、Fen1、PCNA 和连接酶等组合，具体成员依谱系而变。[^lagging-strand-maturation]
+
+在哺乳动物中，连接酶 I 主要参与复制及部分修复，连接酶 III 参与单链断裂修复等过程，并在线粒体 DNA 维护中发挥重要作用；连接酶 IV 与 XRCC4 等参与非同源末端连接。它们共同使用封口化学，结合伙伴和作用场景不同。相关修复路线见[单链断裂与双链断裂修复](../dna_repair.md#break-crosslink-repair)。[^dna-ligases]
 
 ???+ abstract "冈崎片段：短 DNA 为什么会先出现，再消失"
 
@@ -188,7 +263,11 @@ d：另一后随链聚合酶接到新装载的钳上；e：前一个片段完成
     横轴是距离心管顶部的相对距离，纵轴是放射性读数。左图中的长 DNA 随时间增多，右图的连接酶缺陷使短片段难以并成长链。这里按沉降行为分离大小，与前面的 CsCl 平衡密度实验不同。[^fig-weaver-20-6]
     ///
 
+    另一个常用设计是**脉冲—追踪**：先短时间加入标记前体，再以大量未标记前体继续培养。若先出现的标记短片段随后进入高分子量 DNA，就支持它们是可被连接的中间产物；这与比较不同持续标记时间的样品，是两种相互补充的观察方式。
+
     这组证据把短产物接到了长链形成过程中，支持至少一条新链分段合成。早期某些实验中，前导链也呈现许多短片段，曾使解释更加复杂。后来在大肠杆菌中结合链特异检测与切除修复通路干预，发现新合成前导链可以长得多；误掺核糖核苷酸后的切除，是造成许多前导链断片的原因。因此，实验中提取到的短 DNA，有些是在复制时分段合成的，有些则来自后续切除；区分这两种来源，才能判断新链最初怎样形成。[^okazaki-fragments]
+
+    还有一条较早的线索涉及尿嘧啶。大肠杆菌若把 dUTP 掺入新 DNA，尿嘧啶-DNA 糖基化酶会切除尿嘧啶碱基，后续碱基切除修复再在骨架上产生切口。1977 年的研究利用相关突变体，表明这条途径也能造成短 DNA 的积累。这里误掺的是带脱氧核糖的尿嘧啶核苷酸；它与核糖核苷酸误掺后的切除是两条不同线索，都提醒我们注意取样前发生的加工。[^uracil-fragments]
 
 ## 复制起点与许可 { #replication-origins }
 
@@ -203,12 +282,40 @@ d：另一后随链聚合酶接到新装载的钳上；e：前一个片段完成
 
 大肠杆菌常用一个 oriC 起点启动一轮染色体复制。ATP 结合状态的 DnaA 在起点的多个识别位点协同装配，使 DNA 解链元件打开；随后 DnaB 解旋酶被装载，引发酶与 Pol III 等合成装置加入，两个复制叉向相反方向出发。
 
+oriC 中的 DnaA 结合位点负责招募与组织起始蛋白，邻近富含 A–T、较易打开的 DNA 解链元件则提供最先分开的区域。IHF、HU 等核质蛋白会影响 DNA 的弯曲，改变起始复合体的组装环境。DnaC 在大肠杆菌中帮助装载 DnaB；DnaB 暴露出的单链随后供 DnaG 引发。DnaG 的局部序列偏好与 oriC 的 DnaA 识别元件属于不同步骤。[^oric-control]
+
 [![大肠杆菌起点识别、局部解链、解旋酶装载和双向复制叉建立的示意](../_img/dna_replication/bacterial-initiation.jpg){ width="460" height="1155" loading="lazy" }](../_img/dna_replication/bacterial-initiation.jpg)
 /// caption
 从 DnaA 结合开始，依次找 DnaB、引发酶和两套合成装置。图中的 9-mer、13-mer 概括经典起点元件，具体 oriC 位点排列比这幅组装示意更细致。[^fig-gene-9-27]
 ///
 
 复制起始以后，起点还会经历一段暂时难以再次启动的时期。DnaA 的 ATP/ADP 状态、合成与结合位点滴定，以及起始后的失活过程，都会影响下一次启动。在大肠杆菌中，Dam 甲基化与 SeqA 对新复制、半甲基化 oriC 的结合，还能暂时限制再起始。
+
+Dam 修饰的是 GATC 序列中的腺嘌呤。原来的 GATC 位点经复制后，一条链保留甲基化，另一条新链尚未完成相应修饰。SeqA 偏好结合这种半甲基化区域，使新复制的起点暂时受到隔离；Dam 随后补上新链的甲基化。与此同时，滑动钳相关的 Hda 促进 DnaA 上 ATP 的水解，降低活性 DnaA-ATP 的比例。甲基化状态、SeqA 占据和 DnaA 核苷酸状态共同影响起始时机。[^oric-control]
+
+???+ abstract "两个复制叉都在前进吗？"
+
+    一个 θ 形中间体有两个分叉，但仅凭静态外形，还不能测出两处是否都在合成。Prescott 与 Kuempel 先让大肠杆菌利用中等比放射性的氚标记前体，再换成更高比放射性的前体。较晚合成的区域留下更密的银粒轨迹；轨迹两端都变密，支持两处复制叉同时向外推进。[^bidirectional-label]
+
+    [![双向复制的放射自显影与先低后高放射性脉冲的解释图](../_img/dna_replication/bidirectional-pulse.jpg){ width="760" height="463" loading="lazy" }](../_img/dna_replication/bidirectional-pulse.jpg)
+    /// caption
+    这张教材图展示采用相似思路的另一项实验，材料为枯草芽孢杆菌。左图的密集银粒靠近两处分叉，右图解释低标记后接高标记怎样形成这一分布。图中只显出带标记的复制区域。[^fig-weaver-20-10]
+    ///
+
+    读这种图要把“位置”接到“先后”：原点附近的 DNA 较早合成，两个分叉附近的区域较晚合成。后一次标记在两端出现，才给出了两个叉都在移动的时间信息。
+
+### ColE1 的 RNA 调控 { #cole1-replication }
+
+质粒 ColE1 用一段 RNA 来控制复制起步。宿主 RNA 聚合酶转录出的 **RNA II**，在起点附近与 DNA 形成稳定杂交；RNase H 处理这段 RNA 后留下可延长的 3′-OH，Pol I 从这里开始合成 DNA，后续再组装复制叉。ColE1 型复制通常沿一个方向推进。[^cole1-control]
+
+较短的反义 **RNA I** 与 RNA II 的一部分互补。它们先通过局部环区接触，再形成更稳定配对，改变 RNA II 的折叠，使其难以形成正常引发所需的 RNA–DNA 杂交。Rom／Rop 蛋白可稳定两段 RNA 的相互作用。质粒多时 RNA I 也增多，下一轮引发受到更强抑制，于是复制频率与拷贝数联系起来。
+
+[![ColE1 型质粒中 RNA I、RNA II 与 Rom 调节复制引发的示意](../_img/dna_replication/cole1-rna-control.jpg){ width="700" height="395" loading="lazy" }](../_img/dna_replication/cole1-rna-control.jpg)
+/// caption
+沿 RNA II 找到能形成引物的路线，再看 RNA I 的配对怎样妨碍这一步。图比较原始 pMB1 型起点与 pUC19 衍生起点；后者的序列与 Rom 状态不同，不能把它们当作完全相同的拷贝数调控系统。[^fig-cole1-control]
+///
+
+ColE1 衍生载体常通过改变 RNA 配对或 Rom 调节来改变拷贝数。
 
 !!! tip "快速生长时的多轮复制"
 
@@ -236,6 +343,8 @@ d：另一后随链聚合酶接到新装载的钳上；e：前一个片段完成
 出芽酵母起点有较明显的序列约束；后生动物常表现为范围较宽、使用概率不同的起始区，受到序列性质、核小体、转录、核内环境和发育状态影响。在动物中寻找复制起点，通常需要把序列特征与细胞内的实际起始位置、染色质状态结合起来判断。[^origin-selection]
 
 许多古菌用 Orc1/Cdc6 类蛋白识别起点、招募 MCM，滑动钳和多种复制叉蛋白也与真核同源；染色体可能有一个或多个起点。一些古菌在实验中删除全部已知起点后，仍能依赖重组相关方式起始复制。许多含 PolD 的古菌以 D 家族聚合酶完成主要染色体复制，另一些谱系主要使用 PolB；这些聚合酶与古菌的解旋酶、滑动钳等共同组成其复制装置。[^archaeal-replication]
+
+古菌引发酶的底物选择也有实验条件之分。例如，*Pyrococcus furiosus* 的小亚基 p41 单独测定时偏好 dNTP；与 p46 组成复合体后，体外反应中可以合成 RNA 引物。亚基组合因而也会改变引发酶的底物选择与合成产物。[^archaeal-primase]
 
 | 工作 | 细菌代表系统 | 古菌常见系统 | 真核核基因组 |
 | --- | --- | --- | --- |
@@ -284,7 +393,25 @@ G 链延长后，互补 C 链仍要合成。CST（CTC1–STN1–TEN1）与 Pol �
 
     Greider 与 Blackburn 在四膜虫提取物中检测到一种活性：它能向合适的端粒引物添加特定重复序列。这个实验把“末端需要额外合成”接到了可以在试管中测量的酶反应上。随后对其 RNA 组分与催化蛋白的研究，才逐步建立了今天的端粒酶机制。[^telomerase-discovery]
 
+    [![四膜虫提取物延长端粒引物的放射性标记凝胶结果](../_img/dna_replication/telomerase-discovery-gel.jpg){ width="330" height="756" loading="lazy" }](../_img/dna_replication/telomerase-discovery-gel.jpg)
+    /// caption
+    各泳道上方列出加入的提取物或酶、引物和核苷酸。第 3 泳道的周期性条带组对应端粒重复的添加；9–12 泳道改用 Klenow 片段，13–16 泳道不加端粒引物。[^fig-telomerase-discovery]
+    ///
+
+    四膜虫的这条端粒链重复序列为 TTGGGG。第 3 泳道用标记的 dGTP 显示新产物，条带组以约 6 个核苷酸为周期。第 7 泳道只提供标记 dGTP 和未标记 dTTP，也出现重复延长。第 4 泳道的标记 dTTP 当时浓度不足，没有给出同样的信号；后续提高浓度后可以检测到 T 的掺入。
+
 富 G 序列形成的二级结构、端粒结合蛋白和复制压力，也会影响复制叉通过。端粒酶活性、末端切除与填补、端粒修剪，以及某些细胞中的重组型端粒替代延长（ALT），共同影响长度稳态。不同细胞及生理状态下，端粒长度的变化可以相差很大。末端保护与染色质结构见[染色体的末端组织](../../cell/nucleus_chromatin.md#chromosome-architecture)。
+
+!!! info "t 环与 D 环"
+
+    染色体天然末端需要与 DNA 断裂区别开来。在哺乳动物端粒，shelterin 蛋白结合端粒双链与单链部分，调节损伤识别和末端加工。3′ 富 G 突出端还可回折、侵入前面的端粒双链，使整段 DNA 形成较大的 **t 环（telomeric loop）**；侵入处原有的一条链被局部挤开，这个小范围的三链接头称为 **D 环（displacement loop）**。一个名称指较大的回环，一个名称指局部置换结构。[^telomere-loops]
+
+    [![人端粒 t 环电镜与末端入侵形成局部 D 环的模型](../_img/dna_replication/telomere-t-loop.jpg){ width="730" height="334" loading="lazy" }](../_img/dna_replication/telomere-t-loop.jpg)
+    /// caption
+    左图是人端粒的电镜观察；右图依次表示末端回折和链入侵。最下方的大回环是 t 环，灰色 3′ 端插入双链、将原链挤开的局部是 D 环。[^fig-telomere-loop]
+    ///
+
+    t 环的形成与展开受到蛋白质调节，复制时也需要协调处理。线粒体非编码区也使用“D 环”这个名称，描述的是短 DNA 与原双链形成的局部置换结构，后面会讲到它的来源。
 
 ## 染色质重建 { #chromatin-replication }
 
@@ -314,9 +441,35 @@ MCM2、Pol α 相关转移途径及 Pol ε 辅助亚基等，分别参与不同�
 
 不同系统会在不同阶段切割、闭合或合成互补链，产物可以是单体，也可以先形成串联多聚体，再加工成单位基因组。多种质粒、单链 DNA 噬菌体和某些真核病毒使用滚环或相关机制。[^rolling-circle]
 
+例如 φX174、M13 的单链 DNA 进入宿主后，需要先形成双链复制型，随后才进行后续的基因组复制。被切开链的原有 3′ 端与新合成部分共价相连，旧的 5′ 端则逐步被置换出去。不同系统的切割、互补链合成与包装安排不尽相同。某些 RNA 病毒或类病毒也采用称为“滚环”的复制方式，其模板、聚合酶和产物是 RNA，属于相似几何组织下的另一类反应。[^alternative-replication-details]
+
+???+ abstract "滚环与局部扩增的证据"
+
+    在小质粒 pIM13 的研究中，研究者检测到具有链特异性、对单链核酸酶 S1 敏感的 DNA 中间体。这支持了不对称复制；仅凭这一结果，尚不能把滚环与其他可能产生单链的置换过程完全区分开来。[^rolling-circle-examples]
+
+    真核细胞也有特殊的滚环扩增实例。Hourcade 等在爪蟾卵母细胞的核糖体 RNA 基因扩增阶段，用电镜观察到滚环样中间体，支持这种方式参与局部基因扩增。这里的材料和生理阶段很具体，常规核染色体复制仍以前面讲的多个起点、双向复制叉为主。[^rolling-circle-examples]
+
+    <div class="grid" markdown>
+
+    [![爪蟾卵母细胞扩增阶段分离出的环状核糖体 DNA 电镜](../_img/dna_replication/rdna-circle-em.png){ width="340" height="264" loading="lazy" }](../_img/dna_replication/rdna-circle-em.png)
+    /// caption
+    独立的环状分子；原研究按分子轮廓长度判断，这个环约含 4 个 rRNA 基因单位。[^fig-rdna-rolling]
+    ///
+
+    [![爪蟾卵母细胞中带有伸出尾部的环状核糖体 DNA 电镜](../_img/dna_replication/rdna-rolling-em.png){ width="340" height="267" loading="lazy" }](../_img/dna_replication/rdna-rolling-em.png)
+    /// caption
+    与左图比较，环外多出一条长尾。这类“环＋尾”的复制中间体支持滚环模型；原文估计环约为 3 个基因单位、尾约为 3.4 个。[^fig-rdna-rolling]
+    ///
+
+    </div>
+
+    基因拷贝数增加还可以由其他途径产生。例如，哺乳动物培养细胞的 **DHFR 基因扩增**研究发现了染色体断裂及断裂—融合—桥循环等过程。扩增描述的是拷贝数结果，实际怎样增加，还要看分子中间体和染色体结构。[^dhfr-amplification]
+
 ### 线粒体复制 { #_7 }
 
 动物线粒体 DNA 常以重链与轻链命名互补的两条链。哺乳动物主要由 Pol γ、Twinkle 解旋酶和线粒体单链结合蛋白 mtSSB 组织复制，RNA 聚合酶还参与提供引物。经典链置换模型中，一条新链先开始合成，逐步暴露另一条模板上的起始区域，再启动互补链合成，因而两条链的合成不同步。
+
+重、轻指两条链因碱基组成不同而表现出的密度差别；常用哺乳动物命名中，H 链相对富含鸟嘌呤，互补的 L 链则相对富含胞嘧啶。以经典哺乳动物链置换模型为例，新的 H 链从 $O_H$ 附近开始，以旧 L 链为模板；原有 H 链被逐步置换。当 $O_L$ 区域暴露并形成适合引发的结构后，再以旧 H 链为模板合成新 L 链。POLRMT 产生的 RNA 参与形成引物，DNA 聚合酶接着延长；RNA 是起始链的一部分，序列模板仍来自 DNA。[^mitochondrial-replication]
 
 [![脊椎动物线粒体 D 环区域及链置换、RITOLS、链耦联三种复制模型](../_img/dna_replication/mitochondrial-models.jpg){ width="760" height="547" loading="lazy" }](../_img/dna_replication/mitochondrial-models.jpg)
 /// caption
@@ -324,6 +477,28 @@ A 标出非编码区中的 D 环和相关位点；B 从左到右比较三种模�
 ///
 
 一些实验观察到后随链模板上广泛结合 RNA，形成称为 **RITOLS** 的模型；另一些中间体支持更为耦联的双链合成。细胞类型、复制阶段和样品处理，都可能影响检测到的结构。这些模型主要用于讨论动物线粒体。其他物种的线粒体以及叶绿体，在基因组结构、复制酶、引发与终止方式上都有差异，需要各自的实验依据。[^mitochondrial-replication]
+
+图 A 的局部 D 环含短的 **7S DNA**：它与一条原有链配对，并置换出另一条链，形成三链区域。生成这种短产物与持续进行整圈基因组复制，需要分别观察。经典链置换图中两条链先后开始、各自较连续地合成，也不等于细胞中检出的每一种中间体都按同一途径形成。
+
+???+ note "叶绿体与腺病毒：不同的引发办法"
+
+    早期叶绿体研究提出过两个局部置换区起始、随后扩展会合的“双 D 环”模型。后来对植物细胞器 DNA 的观察还发现线性、分支和重组相关中间体，复制路线随物种与发育状态变化。植物细胞器使用自身的核编码聚合酶系统；动物线粒体则主要使用 Pol γ。[^plastid-replication]
+
+    [![叶绿体双 D 环从两个起始区扩展、会合并形成子代 DNA 的历史模型](../_img/dna_replication/chloroplast-double-d-loop.png){ width="420" height="426" loading="lazy" }](../_img/dna_replication/chloroplast-double-d-loop.png)
+    /// caption
+    B 中两个小 D 环向彼此扩展，C 中会合为较大的复制泡，随后生成 D 所示的子代分子。这是结合早期豌豆叶绿体研究整理的模型；图中解旋酶的位置和作用属于当时的机制推断。[^fig-chloroplast-double-d-loop]
+    ///
+
+    烟草叶绿体曾鉴定出 **oriA、oriB** 两类候选起点。后来删除或强烈改变这些位点的实验中，质体 DNA 仍能复制，部分材料的 DNA 拷贝数与生长受到影响。这提示烟草还存在额外起点或其他复制途径。[^plastid-origins]
+
+    另一些早期实验发现，豌豆、菠菜、莴苣的闭合环状叶绿体 DNA 经碱或 RNase 处理后出现单链断口，支持 DNA 中含有共价连接的核糖核苷酸。这些实验检出的是 DNA 内的核糖组分；它们究竟来自引发、合成时误掺还是其他过程，还需额外证据。[^plastid-ribonucleotides]
+
+    腺病毒的线性双链 DNA 则有另一种引发端：病毒 DNA 聚合酶把最初的核苷酸接到前体末端蛋白的丝氨酸羟基上，随后进行链置换合成。DNA 两端的倒置重复又参与被置换链后续的复制。它展示了蛋白质引发的 DNA 复制，与下一页 HBV 逆转录中的蛋白质引发可作比较，但所用模板与具体残基不同。[^adenovirus-replication]
+
+    [![蛋白质羟基连接首个核苷酸并启动 DNA 合成的通用模型](../_img/dna_replication/protein-priming.jpg){ width="490" height="326" loading="lazy" }](../_img/dna_replication/protein-priming.jpg)
+    /// caption
+    蓝色小球是引发蛋白，绿色是聚合酶。蛋白质提供起步的羟基，红色新链随后延长，蛋白保留在其 5′ 端。本图概括蛋白质引发；本段腺病毒的具体羟基来自丝氨酸。[^fig-protein-priming]
+    ///
 
 ## 逆转录 { #reverse-transcription }
 
@@ -388,3 +563,46 @@ HBV、逆转座元件、group II intron 和 retron 使用的引物与生成的�
 [^mitochondrial-replication]: 链置换、RITOLS 和链耦联模型及物种差异见 Ciesielski GL、Oliveira MT、Kaguni LS 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4964852/)（2016）；哺乳动物复制装置与链置换过程另见 Falkenberg 的[机制概述](https://pmc.ncbi.nlm.nih.gov/articles/PMC6056714/)（2018）。
 
 [^fig-single-molecule-replication]: Graham JE, Marians KJ, Kowalczykowski SC. [Independent and Stochastic Action of DNA Polymerases in the Replisome](https://doi.org/10.1016/j.cell.2017.05.041). *Cell*. 2017;169:1201–1213，图 1C、1D–G，印刷页 1203（[作者公开 PDF](https://kowalczykowskilab.ucdavis.edu/PDF_files/Graham%20et%20al.%20%282017%29%20Cell%20169%2C%201201-1213.pdf)第 4 页）。本站分别截取装配示意及完整的观察与测量面板，保留图中配色、标记、坐标轴与比例尺，配中文说明，未重绘。数值来自文中的体外大肠杆菌蛋白重构体系。
+
+[^polymerase-catalysis]: Watson 等，*Molecular Biology of the Gene*（MBotG），第 7 版第 9 章，聚合反应、二价金属离子、焦磷酸释放与校对；Weaver 第 5 版第 20 章补充聚合与核酸酶活性的实验分离。
+[^polymerase-repertoire]: MBotG 第 7 版第 9 章，表 9–2 及相邻正文；Weaver 第 5 版第 20、21 章，Pol I 的三种活性、Klenow 片段及细菌／真核复制酶。表中列主要分工，不能据此作跨酶、跨条件的速度或忠实性排名。
+[^polymerase-families]: 聚合酶的序列／结构家族与细胞内功能是不同分类维度。MBotG 第 7 版第 9 章及 Weaver 第 5 版第 20、21 章所述酶按家族对照；Pfu 的原始鉴定见 [Uemori 等，1993](https://pubmed.ncbi.nlm.nih.gov/8441634/)。古菌的复制聚合酶还包括 D 家族，不能笼统全部列为 B 家族。
+[^pcr-polymerases]: Pfu 的校对活性与耐热性参见 [Lundberg 等的原始研究](https://pubmed.ncbi.nlm.nih.gov/1761218/)；Taq、ddNTP 与 aphidicolin 的作用结合 Weaver 第 5 版复制章节和本站扩增技术专节。PCR 的产物准确性还受模板、条件与后处理影响。
+[^clamp-architecture]: MBotG 第 7 版第 9 章，图 9–19、9–20 及滑动钳与装载器正文；大肠杆菌 β 钳为二聚体，每亚基三个重复结构域；真核 PCNA 为三聚体，每亚基两个结构域。
+[^fig-gene-9-22]: Watson 等，*Molecular Biology of the Gene*，第 7 版，图 9–22，印刷页 284。截取 Pol III 全酶组织模型，保留核心、τ、柔性连接区与钳装载器标记。教材据 O'Donnell M, et al. *Curr Biol*. 2001;11:R935–R946，图 6 改编；未重绘。此图重点为亚复合物之间的连接，不是比例精确的原子结构。
+[^pol-iii-assembly]: MBotG 第 7 版第 9 章，图 9–22、9–23；Weaver 第 5 版第 20 章的大肠杆菌 Pol III 核心与全酶。α、ε、θ 的核心分工与 τ／γ 装载复合体应分别描述；不同实验复合体的核心数及亚基组成不必完全相同。
+[^replication-scales]: 代表性数量级综合 MBotG 第 7 版第 9 章及 MBoC 第 7 版第 5 章；真核冈崎片段与核小体尺度的直接测量可参见 [Smith 与 Whitehouse，2012](https://www.nature.com/articles/nature10895)。正文给常见生长条件下的数量级，并非每种生物的固定常数。
+[^helicase-ssb-details]: MBotG 第 7 版第 9 章，DnaB 沿后随链模板 5′→3′ 运动，真核 CMG 沿前导链模板 3′→5′ 运动；单链结合蛋白 SSB／RPA 的覆盖、保护和蛋白交接作用需结合具体体系与结合模式理解。
+[^topoisomerase-classes]: MBotG 第 7 版第 6、9 章及 Weaver 第 5 版第 20 章的拓扑酶反应。喜树碱稳定 Topo I–DNA 切割复合物见 [Hsiang 等，1985](https://pubmed.ncbi.nlm.nih.gov/2997227/)。表中连接数变化针对单次穿越的常见反应；整体蛋白的能量需求还取决于耦联结构域和所讨论的反应方向。
+[^dna-ligases]: Weaver 第 5 版第 20 章与 MBotG 第 7 版第 9 章：连接酶先腺苷酸化，再活化 DNA 的 5′ 磷酸，最后由相邻 3′-OH 完成封口；细菌 NAD⁺ 型与 ATP 型连接酶、真核连接酶 I／III／IV 按具体用途区分。NAD⁺ 型反应释放 NMN，ATP 型第一步释放焦磷酸。
+[^uracil-fragments]: Tye BK, et al. [Transient accumulation of Okazaki fragments as a result of uracil incorporation into nascent DNA](https://pmc.ncbi.nlm.nih.gov/articles/PMC411220/). *PNAS*. 1977。该工作检验 dUTP 掺入和尿嘧啶切除怎样增加短片段；与前面关于 DNA 中核糖核苷酸及 RNase H2 的现代实验，底物和修复路径不同。
+[^oric-control]: MBotG 第 7 版第 9 章，细菌复制起始、DnaA／DnaB／DnaC／DnaG，以及 Dam、SeqA 与重新起始的调控。DnaA box 与富含 A–T 的解链元件承担不同作用；半甲基化后的 SeqA 占据不能写成 DnaA 完全无法识别任何半甲基化 DNA。
+[^bidirectional-label]: Prescott DM, Kuempel PL. [Bidirectional replication of the chromosome in Escherichia coli](https://pmc.ncbi.nlm.nih.gov/articles/PMC389658/). *PNAS*. 1972;69:2842–2845。氨基酸饥饿后恢复复制，以先中等、后高比放射性的氚标记前体作放射自显影；较密标记位于轨迹两端，支持双向复制。
+[^fig-weaver-20-10]: Weaver RF. *Molecular Biology*. 第 5 版，图 20.10，印刷页 643。截取 A 放射自显影和 B 脉冲标记模型，保留箭头与标记顺序。A 的实验材料为枯草芽孢杆菌，原出处 Gyurasits EB, Wake RG. *J Mol Biol*. 1973;73:55–63（教材注明图取自第 58 页）。本图与正文 Prescott–Kuempel 的大肠杆菌实验采用相近推理，但不是同一实验照片。
+[^cole1-control]: RNA II 经 RNase H 处理形成引物及 RNA I 反义调控见 [Standley 等研究的图 1 与原始文献索引](https://pmc.ncbi.nlm.nih.gov/articles/PMC6309527/)；其图区分 pMB1 与缺少 Rom 且 RNA II 序列改变的 pUC19 起点。正文描述常规 ColE1 型起始路线。
+[^fig-cole1-control]: Standley M, et al. [Genetic control of ColE1 plasmid stability that is independent of plasmid copy number regulation](https://doi.org/10.1007/s00294-018-0858-0). *Curr Genet*. 2019;65:179–192（2018 在线发表），图 1。采用出版方完整图版，保留 A、B 条件、RNA 与 DNA 标记，转为 JPEG，未改绘。
+[^telomere-loops]: Griffith JD, et al. [Mammalian telomeres end in a large duplex loop](https://pubmed.ncbi.nlm.nih.gov/10338214/). *Cell*. 1999;97:503–514。人和小鼠来源端粒 DNA 的电镜与 TRF2 体外实验支持大 t 环及末端侵入模型；结合 MBoC 第 7 版端粒保护与 shelterin 的说明。
+[^alternative-replication-details]: Weaver 第 5 版第 20 章与 MBotG 第 7 版第 9 章的滚环复制：φX174、M13 可经双链复制型中间体产生单链产物。DNA 滚环的 DNA 引发与类病毒的 RNA 滚环反应需按模板和聚合酶区分。
+[^plastid-replication]: 早期双 D 环模型来自叶绿体 DNA 电镜；后续物理结构证据见 Oldenburg DJ, Bendich AJ. [Most chloroplast DNA of maize seedlings in linear molecules with defined ends and branched forms](https://pubmed.ncbi.nlm.nih.gov/14698291/). *J Mol Biol*. 2004;335:953–970。该研究对象为玉米幼苗，不能将其分子形态比例推广到所有植物与发育阶段。
+[^adenovirus-replication]: MBotG 第 7 版第 9 章末端复制的蛋白质引发，与 Weaver 第 5 版病毒复制相关内容。腺病毒末端蛋白前体提供 Ser 羟基，病毒 DNA 聚合酶催化起步；倒置末端重复及链置换支持另一链形成复制模板，与 HBV 在 RNA 上的 Tyr 引发不同。
+
+[^pol-gamma-ber]: [Identification of 5′-deoxyribose phosphate lyase activity in human DNA polymerase gamma and its role in mitochondrial base excision repair in vitro](https://pubmed.ncbi.nlm.nih.gov/9770471/). *PNAS*. 1998；本页保留体外重构与短片段修复的适用条件。
+[^gyrase-relaxation]: [DNA gyrase 的正、负超螺旋松弛研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC26147/)，比较不同拓扑底物与 ATP 条件；无 ATP 松弛负超螺旋不能等同于 ATP 驱动的负超螺旋引入。
+[^archaeal-primase]: [Biochemical characterization of the p41–p46 complex of DNA primase from Pyrococcus furiosus](https://pubmed.ncbi.nlm.nih.gov/11584001/). *J Biol Chem*. 2001；小亚基和异二聚体的体外产物不同。
+
+[^ara-ctp]: [The dominant role of proofreading exonuclease activity of replicative polymerase ε in cellular tolerance to cytarabine (Ara-C)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5464882/)，人 Pol ε 的酶学测量及细胞遗传实验；糖环与延伸构象另见 [Sugar ring alignment and dynamics underline cytarabine and gemcitabine inhibition on Pol η catalyzed DNA synthesis](https://pmc.ncbi.nlm.nih.gov/articles/PMC11176770/)。底物接受、延伸和校对是分别测量的步骤，未恢复无条件的聚合酶敏感性排名。
+
+[^rolling-circle-examples]: pIM13 单链中间体见 Projan SJ, et al. [pIM13 与 pE5 的复制性质研究](https://pubmed.ncbi.nlm.nih.gov/2822666/)，1987；此研究以单链中间体支持不对称复制，保留对具体方式的讨论。卵母细胞实验见 Hourcade D, Dressler D, Wolfson J. [The amplification of ribosomal RNA genes involves a rolling circle intermediate](https://pmc.ncbi.nlm.nih.gov/articles/PMC427140/). *PNAS*. 1973。
+[^dhfr-amplification]: Singer MJ, et al. [DHFR 基因扩增中的早期染色体事件研究](https://pubmed.ncbi.nlm.nih.gov/10859355/)，2000。这里用于说明培养细胞基因扩增的结构途径，不把 DHFR 扩增统一归为滚环复制。
+[^plastid-origins]: Scharff LB, Koop HU. [Targeted inactivation of the tobacco plastome origins of replication A and B](https://pubmed.ncbi.nlm.nih.gov/17470061/). *Plant J*. 2007;50:782–794。实验包括删除、强突变及不同起点拷贝的组合，结果支持额外复制机制或起点。
+[^plastid-ribonucleotides]: Kolodner R, Warner RC, Tewari KK. [叶绿体 DNA 中共价连接核糖核苷酸的研究](https://pubmed.ncbi.nlm.nih.gov/1158895/)，1975；材料为豌豆、菠菜、莴苣。这里保留处理后单链断口的观察及其支持范围，不直接指定核糖核苷酸的来源。
+
+[^accessory-helicases]: Guy CP, et al. [Rep Provides a Second Motor at the Replisome to Promote Duplication of Protein-Bound DNA](https://pmc.ncbi.nlm.nih.gov/articles/PMC2807033/). *Molecular Cell*. 2009。
+[^dnag-sequence]: DnaG 模板识别的具体系统比较见 [Structural Insight into the Specific DNA Template Binding to DnaG primase in Bacteria](https://pmc.ncbi.nlm.nih.gov/articles/PMC5429622/)，2017，及其引用的大肠杆菌原始酶学研究。
+
+[^fig-telomerase-discovery]: Weaver，*Molecular Biology*，第 5 版，图 21.24，印刷页 696；原图来自 Greider CW、Blackburn EH，1985，*Cell* 43:405–413，图 1A、原论文页 406。裁出完整 16 泳道图版，保留引物、核苷酸与酶的条件标记。
+[^fig-telomere-loop]: MBotG 第 7 版，图 9–42，印刷页 310；左侧原始电镜来自 Griffith JD, et al. [Mammalian telomeres end in a large duplex loop](https://doi.org/10.1016/S0092-8674(00)80713-9). *Cell*. 1999;97:503–514，图 3f；右侧为教材机制模型。裁出整组图版。
+[^fig-rdna-rolling]: Hourcade D, Dressler D, Wolfson J. [The amplification of ribosomal RNA genes involves a rolling circle intermediate](https://pmc.ncbi.nlm.nih.gov/articles/PMC427140/). *PNAS*. 1973;70:2926–2930，图 2A、2B，印刷页 2927。分别裁出原始电镜面板；两图不用于直接比较绝对尺寸，长度估计引自原图注。
+[^fig-protein-priming]: MBotG 第 7 版，图 9–37，印刷页 304；裁出蛋白质引发的通用图解，未将教材示意当作腺病毒实验照片。
+[^fen1-activities]: [Processing of branched DNA intermediates by a complex of human FEN-1 and PCNA](https://pubmed.ncbi.nlm.nih.gov/8668533/)，1996；比较分支底物内切与切口／缺口底物外切，并检验 PCNA 对两类活性的促进。
+[^fig-chloroplast-double-d-loop]: Tuteja N. [Plant DNA helicases: the long unwinding road](https://doi.org/10.1093/jxb/erg246). *J Exp Bot*. 2003;54:2201–2214，图 3；采用出版方提供的完整图，未裁切或改绘。原图概括双 D 环及后续滚环的可能途径，不能据此把所有植物叶绿体复制归为这一模式。
