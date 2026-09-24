@@ -277,11 +277,11 @@ H$^+$ 泵把胞质与腔内的 pH 分开。图中的尺寸与 pH 是典型示意
 
 ### 自噬与细胞器更新 { #autophagy-pathways }
 
-胞外和质膜货物可由内吞进入溶酶体，胞质里的整块材料则可由**自噬**送来。宏自噬开始时，一片隔离膜逐渐延伸，包围部分胞质、蛋白聚集体或细胞器；开口封闭后，形成双层膜的**自噬体**。外膜与晚期内体或溶酶体融合，内膜连同所包货物被送入腔内降解。
+胞外和质膜货物可由内吞进入溶酶体，胞质里的整块材料则可由**自噬**送来。巨自噬（macroautophagy，也称宏自噬）开始时，一片隔离膜逐渐延伸，包围部分胞质、蛋白聚集体或细胞器；开口封闭后，形成双层膜的**自噬体**。外膜与晚期内体或溶酶体融合，内膜连同所包货物被送入腔内降解。
 
 ![隔离膜包围胞质，闭合成双层膜自噬体并与溶酶体融合](_img/endomembrane/autophagy.jpg){ width="760" height="339" loading=lazy }
 /// caption
-由左向右追踪两层膜：闭合前围住胞质，闭合后形成自噬体；融合时外膜接入溶酶体膜，内膜和里面的材料则一起被消化。图为宏自噬的简化过程。[^fig-autophagy]
+由左向右追踪两层膜：闭合前围住胞质，闭合后形成自噬体；融合时外膜接入溶酶体膜，内膜和里面的材料则一起被消化。图为巨自噬的简化过程。[^fig-autophagy]
 ///
 
 ATG8／LC3 家族与膜脂结合，参与隔离膜生长及货物受体的连接。营养不足时，自噬可加强较广泛的物质回收；选择性自噬则借助专门受体，把受损线粒体、过氧化物酶体、内质网片段、聚集蛋白或病原体送入隔离膜。**微自噬**通过内体／溶酶体膜的内陷或其他重塑直接摄入货物；**伴侣介导自噬**则识别特定可溶蛋白，经展开后逐个转运过溶酶体膜。[^autophagy]
@@ -416,7 +416,7 @@ NSF 的 ATP 水解主要用于复合体重置，直接拉近膜面的能量则�
 [^lysosomal-sorting]: M6P 形成、M6P 受体循环及膜蛋白的替代分选路线，见 Alberts 等的[TGN 至溶酶体运输章节](https://www.ncbi.nlm.nih.gov/books/NBK26844/)。
 [^endosome-maturation]: 早期内体的回收分流、Rab 转换、多泡体形成和内溶酶体循环，见 Huotari 与 Helenius 的[内体成熟综述](https://pubmed.ncbi.nlm.nih.gov/21878991/)及 Alberts 等的[内吞章节](https://www.ncbi.nlm.nih.gov/books/NBK26870/)。
 [^lysosome-homeostasis]: 溶酶体水解、膜转运、营养感知和器官生理的整合，见 Settembre 与 Perera 的[溶酶体综述](https://pubmed.ncbi.nlm.nih.gov/38001393/)。
-[^autophagy]: 宏自噬的双层膜路线、选择性货物和代谢回收意义，见 Mizushima 与 Komatsu 的[自噬综述](https://pubmed.ncbi.nlm.nih.gov/22078875/)。
+[^autophagy]: 巨自噬的双层膜路线、选择性货物和代谢回收意义，见 Mizushima 与 Komatsu 的[自噬综述](https://pubmed.ncbi.nlm.nih.gov/22078875/)。
 [^vesicle-budding-fusion]: COPI、COPII、clathrin 包被及 Rab—SNARE 融合装置的共同机制，见 Bonifacino 与 Glick 的[膜泡出芽与融合综述](https://pubmed.ncbi.nlm.nih.gov/14744428/)。
 [^secretory-evidence]: 脉冲—追踪、细胞分级和电镜如何共同建立 ER—Golgi—分泌颗粒时序，见 [The secretory pathway at 50](https://pmc.ncbi.nlm.nih.gov/articles/PMC5231891/)。
 [^vesicle-history]: 酵母 *sec* 遗传筛选、VSV-G 无细胞重构及 NSF／SNAP／SNARE 发现史，见 Nobel Assembly 的[2013 年科学背景](https://www.nobelprize.org/prizes/medicine/2013/advanced-information/)。
@@ -441,7 +441,7 @@ NSF 的 ATP 水解主要用于复合体重置，直接拉近膜面的能量则�
 [^fig-intralumenal-sorting]: MBoC 第 7 版图 13–59，p.796；裁取受体向内出芽及降解示意。ESCRT 与膜颈方向另见同书图 13–60、13–61。
 [^fig-lysosomal-ph]: MBoC 第 7 版图 13–62，p.799；裁取质子泵与酸性水解酶示意。
 [^lysosome-diversity]: 溶酶体形态与酸性磷酸酶显示见 MBoC 第 7 版图 13–63，p.799；植物液泡见 pp.800–801。分泌性溶酶体、膜修复与分解产物转运的整合见本页所列 Settembre 与 Perera 的溶酶体综述。
-[^fig-autophagy]: MBoC 第 7 版图 13–71，p.805；裁取宏自噬的双层膜、融合与消化过程示意。
+[^fig-autophagy]: MBoC 第 7 版图 13–71，p.805；裁取巨自噬的双层膜、融合与消化过程示意。
 [^fig-snare]: MBoC 第 7 版图 13–20，p.763；裁取从膜靠近到融合孔形成的连续模型，保留 10 nm 示意比例尺；并非逐帧实测图像。
 [^fig-snare-recycling]: MBoC 第 7 版图 13–21，p.763；裁取融合后 NSF 利用 ATP 拆解 SNARE 的示意图。
 [^palade-pulse]: Jamieson 与 Palade（1967），[Intracellular transport of secretory proteins in the pancreatic exocrine cell. II. Transport to condensing vacuoles and zymogen granules](https://doi.org/10.1083/jcb.34.2.597)，图 10—13，pp.604–608；从[斯坦福课程保存的论文 PDF](https://web.stanford.edu/~mariamo/articles/Time/Jamieson%26Palade.1967.pdf)分别裁取显微图，保留原图号码和结构标签。本文此组电镜放射自显影使用 $^3$H-亮氨酸，区别于同文另一些分级计数实验的 $^{14}$C 标记；图 10、11 原标放大率为 17,000 倍，图 12、13 为 13,000 倍，网页缩放后不能直接沿用这些放大率测量。

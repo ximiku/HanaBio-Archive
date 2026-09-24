@@ -2,7 +2,7 @@
 
 先看下面这张红细胞膜的电镜照片：沿着细胞边缘，可以辨认出两道相邻的暗线。右侧的模型放大了这层边界，显示其中的脂双层和膜蛋白。脂双层厚约 5 nm，普通光学显微镜已经分辨不出它的两面。细胞靠这样一层薄膜留住代谢物、控制离子的进出。营养物进入和许多信号的接收也在这里发生；细胞伸展、收缩时，膜还得随之变形。[^membrane-structure]
 
-[![人红细胞质膜的截面电镜与脂双层、膜蛋白的结构示意](_img/membrane_transport/membrane-overview.jpg){ width="680" height="287" }](_img/membrane_transport/membrane-overview.jpg)
+![人红细胞质膜的截面电镜与脂双层、膜蛋白的结构示意](_img/membrane_transport/membrane-overview.jpg){ width="680" height="287" }
 /// caption
 左侧是实际膜截面，右侧是帮助理解组成的模型。电镜的明暗来自样品处理与成像对比，不能把每条暗线直接当作一排磷脂头部。注意左图的 100 nm 比例尺与右图标出的双层厚度。[^fig-mboc-10-1]
 ///
@@ -15,7 +15,7 @@
 
 在能够看清膜蛋白以前，人们先从脂质的面积猜到了双层。1925 年，Gorter 与 Grendel 提取红细胞脂质，把它们铺在水面上成为单分子层，再比较铺开面积与红细胞总表面积。他们得到接近 2∶1 的关系，于是提出细胞表面有两层脂质。红细胞很适合这个问题：成熟哺乳动物红细胞没有内质网、线粒体等内部膜，提取物主要来自质膜。实验中的提取回收、细胞面积估算和单层压缩程度都会影响比例，但用面积推断层数的思路相当巧妙。[^membrane-model-history]
 
-[![提取红细胞脂质、铺成单分子层并比较面积的实验思路](_img/membrane_transport/gorter-grendel-area.jpg){ width="650" height="308" loading="lazy" }](_img/membrane_transport/gorter-grendel-area.jpg)
+![提取红细胞脂质、铺成单分子层并比较面积的实验思路](_img/membrane_transport/gorter-grendel-area.jpg){ width="650" height="308" loading="lazy" }
 /// caption
 图中依次是脂质提取、水面铺展和面积比较。水面上铺的是单层；把它的面积与原细胞表面积相比，才得到关于膜层数的推断。这是后人整理的实验示意。[^fig-gorter-area]
 ///
@@ -34,12 +34,12 @@
 
 <div class="grid" markdown>
 
-[![开放的脂双层片层弯曲并闭合为囊泡的示意](_img/membrane_transport/bilayer-closure.jpg){ width="390" height="515" loading="lazy" }](_img/membrane_transport/bilayer-closure.jpg)
+![开放的脂双层片层弯曲并闭合为囊泡的示意](_img/membrane_transport/bilayer-closure.jpg){ width="390" height="515" loading="lazy" }
 /// caption
 沿边缘看：开放片层使疏水部分接触水，闭合后这圈暴露的边缘消失。[^fig-mboc-10-8]
 ///
 
-[![脂质体的截面模型与冷冻电镜照片](_img/membrane_transport/liposome.jpg){ width="470" height="290" loading="lazy" }](_img/membrane_transport/liposome.jpg)
+![脂质体的截面模型与冷冻电镜照片](_img/membrane_transport/liposome.jpg){ width="470" height="290" loading="lazy" }
 /// caption
 模型中的内部装着水；真实脂质体也确实形成了封闭边界。两幅图采用不同的尺度，囊泡直径应参照各自的比例尺。[^fig-mboc-10-9]
 ///
@@ -88,7 +88,7 @@
 
 教科书常把磷脂画得整整齐齐，像两排站军姿的小人。那是为了让我们看懂双层，分子本身并没有这么守纪律。它们会侧向移动、绕长轴旋转，烃链也不断弯折。下面左图是分子模拟，更接近这种热运动下的杂乱状态；右图才把几种运动分开表示。
 
-[![脂双层的分子模拟与磷脂侧向扩散、旋转、摆动和翻转示意](_img/membrane_transport/lipid-motion.jpg){ width="650" height="291" loading="lazy" }](_img/membrane_transport/lipid-motion.jpg)
+![脂双层的分子模拟与磷脂侧向扩散、旋转、摆动和翻转示意](_img/membrane_transport/lipid-motion.jpg){ width="650" height="291" loading="lazy" }
 /// caption
 同一叶片中的侧向扩散很快；从一个叶片翻到另一个叶片，需要亲水头部穿过疏水核心，普通磷脂的自发翻转因此慢得多。左图为模拟，并非显微照片。[^fig-mboc-10-10]
 ///
@@ -99,7 +99,7 @@
 
 烃链之间接触得越充分，越容易形成紧密、有序的排列。较长的饱和链有较多相互接触的部位，降温时也更容易排成较有序的状态；短链或带顺式双键的链则不容易如此紧密堆积。顺式双键处的弯折很直观：一排笔直的链中塞进几条带弯的，邻居们就很难再贴得严丝合缝。
 
-[![带顺式双键的不饱和烃链与饱和烃链的堆积比较](_img/membrane_transport/chain-packing.jpg){ width="410" height="281" loading="lazy" }](_img/membrane_transport/chain-packing.jpg)
+![带顺式双键的不饱和烃链与饱和烃链的堆积比较](_img/membrane_transport/chain-packing.jpg){ width="410" height="281" loading="lazy" }
 /// caption
 看双键造成的弯折怎样妨碍相邻链靠拢。图示比较的是堆积倾向，真实膜还含多种脂质和大量蛋白质。[^fig-mboc-10-11]
 ///
@@ -114,7 +114,7 @@
 
 ???+ abstract "把两种细胞的表面拼在一起"
 
-    [![融合细胞表面的人和小鼠蛋白荧光标记由分离走向混合](_img/membrane_transport/cell-fusion.jpg){ width="610" height="296" loading="lazy" }](_img/membrane_transport/cell-fusion.jpg)
+    ![融合细胞表面的人和小鼠蛋白荧光标记由分离走向混合](_img/membrane_transport/cell-fusion.jpg){ width="610" height="296" loading="lazy" }
     /// caption
     图中展示融合后的标记分布及后续混合。它支持表面蛋白能够侧向再分布；不同蛋白的速度、限制范围，还需要其他实验测量。[^fig-mboc-10-32]
     ///
@@ -123,7 +123,7 @@
 
 **荧光漂白恢复（fluorescence recovery after photobleaching，FRAP）**提供了另一种办法。先让目标膜分子带上荧光，再用一束强光把局部的荧光团漂白。这个小区域突然暗下去，周围却仍然发亮。如果带标记的分子能移动，未漂白的分子就会进入这里，局部亮度逐渐恢复。
 
-[![FRAP 的漂白、分子交换与荧光恢复曲线](_img/membrane_transport/frap.jpg){ width="650" height="390" loading="lazy" }](_img/membrane_transport/frap.jpg)
+![FRAP 的漂白、分子交换与荧光恢复曲线](_img/membrane_transport/frap.jpg){ width="650" height="390" loading="lazy" }
 /// caption
 沿左侧三步看局部标记怎样变化，再读右侧曲线：漂白时骤降，之后恢复。恢复的是观测区域的亮度，不是原来被漂白的荧光团重新发光。[^fig-mboc-10-33]
 ///
@@ -144,14 +144,14 @@
 
     因此，荧光抗体既是观察工具，也可能成为扰动。比较单价 Fab、能够交联的抗体，以及不同温度下的分布，有助于分清标记前的组织和标记造成的变化。破坏肌动蛋白会改变部分受体的运动或成帽过程，其结果要随细胞和受体分别测量。
 
-    [![低温下淋巴细胞表面免疫球蛋白呈环状、升温后集中成帽的荧光照片](_img/membrane_transport/antibody-capping.jpg){ width="600" height="118" loading="lazy" }](_img/membrane_transport/antibody-capping.jpg)
+    ![低温下淋巴细胞表面免疫球蛋白呈环状、升温后集中成帽的荧光照片](_img/membrane_transport/antibody-capping.jpg){ width="600" height="118" loading="lazy" }
     /// caption
     同样用抗免疫球蛋白抗体标记，左图在 0°C 下呈环状荧光，右图回到室温后集中到细胞一侧。这里显示的是标记后受体分布的变化。[^fig-antibody-capping]
     ///
 
 如果只看融合实验，很容易把膜想成一片可以任意游动的海面。把时间和空间分辨率再提高，情况就有趣了：一个分子可能先在很小的范围内兜圈子，过一阵才进入旁边的区域。
 
-[![皮层骨架限制膜蛋白运动的模型及单分子轨迹](_img/membrane_transport/hop-diffusion.jpg){ width="650" height="313" loading="lazy" }](_img/membrane_transport/hop-diffusion.jpg)
+![皮层骨架限制膜蛋白运动的模型及单分子轨迹](_img/membrane_transport/hop-diffusion.jpg){ width="650" height="313" loading="lazy" }
 /// caption
 左图表示膜下骨架及其相连蛋白可能构成的围栏；右图为单分子轨迹，颜色帮助区分不同停留区。先看分子在哪里反复折返，再看它如何跨到相邻区域。[^fig-mboc-10-39]
 ///
@@ -166,7 +166,7 @@
 
     下图用 K562 细胞比较热处理前后的膜状态。5-SASL 的自由基靠近脂质头基，16-SASL 的自由基更靠近双层中心；它们测的是不同深度的局部环境。
 
-    [![K562 细胞热处理前、中、后的两种自旋标记 EPR 谱与峰高统计](_img/membrane_transport/epr-heat-response.png){ width="740" height="607" loading="lazy" }](_img/membrane_transport/epr-heat-response.png)
+    ![K562 细胞热处理前、中、后的两种自旋标记 EPR 谱与峰高统计](_img/membrane_transport/epr-heat-response.png){ width="740" height="607" loading="lazy" }
     /// caption
     蓝线为 37°C 对照，黑线为 42°C 热处理期间，红线为热处理 1 h 后回到 37°C。左边是归一化谱线，右边是中央峰振幅统计（均值±SD，3 次独立制样）；星号为与对照比较 p<0.05。[^fig-epr-heat]
     ///
@@ -183,7 +183,7 @@
 
 既然磷脂很少自行翻到另一面，细胞就能让两个叶片保有不同配方。以人红细胞质膜为例，磷脂酰胆碱（PC）和鞘磷脂较多分布在外侧，磷脂酰乙醇胺（PE）与磷脂酰丝氨酸（PS）较多分布在胞质侧；糖脂的糖链伸向细胞外。看图时可以逐一认出同一种头部，比较它在两层中的数量。
 
-[![人红细胞质膜两个叶片的脂质不对称分布示意](_img/membrane_transport/leaflet-asymmetry.jpg){ width="650" height="218" loading="lazy" }](_img/membrane_transport/leaflet-asymmetry.jpg)
+![人红细胞质膜两个叶片的脂质不对称分布示意](_img/membrane_transport/leaflet-asymmetry.jpg){ width="650" height="218" loading="lazy" }
 /// caption
 上方为细胞外侧，下方为胞质侧。图表示人红细胞中的典型分布，不能作为所有细胞膜通用的固定配方。[^fig-mboc-10-15]
 ///
@@ -199,7 +199,7 @@
 
 不容易自行跨层，对维持不对称很有利，却给膜生长出了道难题。新磷脂主要在内质网膜的胞质侧合成；如果它们全留在这里，两层就不能一起扩展。细胞因此需要帮助脂质跨层的蛋白质。
 
-[![内质网扰乱酶使新合成脂质进入两层，翻转酶建立叶片不对称的示意](_img/membrane_transport/lipid-translocases.jpg){ width="660" height="663" loading="lazy" }](_img/membrane_transport/lipid-translocases.jpg)
+![内质网扰乱酶使新合成脂质进入两层，翻转酶建立叶片不对称的示意](_img/membrane_transport/lipid-translocases.jpg){ width="660" height="663" loading="lazy" }
 /// caption
 左图从“新脂质只加到胞质侧”开始，观察扰乱酶怎样让两层一起增长；右图显示定向转位如何改变组成。[^fig-mboc-12-39]
 ///
@@ -218,7 +218,7 @@
 
 蛋白质要留在双层内部，其接触烃链的表面也需要与这个环境相容。常见跨膜 $\alpha$ 螺旋把疏水侧链朝向外侧，肽链骨架上的 C=O 和 N–H 则在螺旋内部形成氢键。一段约 20 个残基长的疏水 α 螺旋，通常足以跨过膜的疏水核心，具体跨度还受膜厚度与螺旋倾角影响。多条这样的螺旋可以围成有水的通路，或者形成能够结合底物的腔室。细菌、线粒体和叶绿体的外膜中还常见 $\beta$ 桶，桶壁外侧接触脂质，内侧形成不同性质的孔道。
 
-[![跨膜、单叶片嵌入、脂锚和外周结合等膜蛋白关联方式](_img/membrane_transport/membrane-proteins.jpg){ width="760" height="258" loading="lazy" }](_img/membrane_transport/membrane-proteins.jpg)
+![跨膜、单叶片嵌入、脂锚和外周结合等膜蛋白关联方式](_img/membrane_transport/membrane-proteins.jpg){ width="760" height="258" loading="lazy" }
 /// caption
 先找真正穿过双层的部分，再看只停在一侧的蛋白。末端标签和锚定位置帮助判断蛋白的哪一部分暴露于胞质。[^fig-mboc-10-17]
 ///
@@ -229,9 +229,9 @@
 
 Src 的 N 端甘氨酸可接上肉豆蔻酰基，Ras 或 Rab 的 C 端区域半胱氨酸可接上异戊二烯基团，这是胞质侧脂锚的代表；不同成员还可能需要额外脂化或带电区域才能稳定定位。GPI 锚则在内质网腔侧接到蛋白质的 C 端加工位点，因此蛋白到达质膜后朝向胞外。红细胞表面的补体调节蛋白 CD59 就使用 GPI 锚，把发挥作用的蛋白部分留在胞外侧。合适的磷脂酶可以切开部分 GPI 锚，从而释放相连的蛋白质；锚的具体结构也会影响这种酶切的敏感性。[^membrane-materials][^gpi-cd59]
 
-[![肉豆蔻酰化、棕榈酰化和异戊二烯化的连接位置与化学结构](_img/membrane_transport/lipid-anchors.jpg){ width="740" height="374" loading="lazy" }](_img/membrane_transport/lipid-anchors.jpg)
+![肉豆蔻酰化、棕榈酰化和异戊二烯化的连接位置与化学结构](_img/membrane_transport/lipid-anchors.jpg){ width="740" height="374" loading="lazy" }
 /// caption
-A–C 标出脂质接在蛋白质的哪里；D–F 展开相应的化学连接。肉豆蔻酰基接到 N 端甘氨酸，后两类连接涉及半胱氨酸；脂质链伸入膜中，蛋白质主体可留在膜表面。[^fig-lipid-anchors]
+A–C 显示脂质与蛋白质的连接方式；D–F 比较三类脂质锚的骨架。肉豆蔻酰基接到 N 端甘氨酸，后两类连接涉及半胱氨酸；脂质链伸入膜中，蛋白质主体可留在膜表面。[^fig-lipid-anchors]
 ///
 
 这些蛋白的朝向在合成和插膜时建立，并在后续膜泡运输中保持。受体在外侧结合配体，胞质结构域接着改变酶活性或招募其他蛋白；黏附蛋白连接邻近细胞或细胞外基质；运输体则必须从规定的一面结合并释放底物。拓扑朝向本身就是机制的一部分。
@@ -248,12 +248,12 @@ A–C 标出脂质接在蛋白质的哪里；D–F 展开相应的化学连接�
 
     <div class="grid" markdown>
 
-    [![细胞外 APEX2 催化表面标记、终止反应并富集分析的图解](_img/membrane_transport/surface-labeling-workflow.png){ width="390" height="373" loading="lazy" }](_img/membrane_transport/surface-labeling-workflow.png)
+    ![细胞外 APEX2 催化表面标记、终止反应并富集分析的图解](_img/membrane_transport/surface-labeling-workflow.png){ width="390" height="373" loading="lazy" }
     /// caption
     a 是实验思路：黄色小块代表加入细胞外的酶，红色边界表示被标记的表面。随后终止反应，分析带标签的蛋白。[^fig-surface-labeling]
     ///
 
-    [![U2OS 细胞用不同方法标记后可溶与膜组分的蛋白印迹](_img/membrane_transport/surface-labeling-blot.png){ width="390" height="463" loading="lazy" }](_img/membrane_transport/surface-labeling-blot.png)
+    ![U2OS 细胞用不同方法标记后可溶与膜组分的蛋白印迹](_img/membrane_transport/surface-labeling-blot.png){ width="390" height="463" loading="lazy" }
     /// caption
     b 来自 U2OS 细胞。每组 S、P 分别为可溶组分与含膜的沉淀；APEX2 两组的标记信号主要在 P 中。底部 TMEM16F 与 GAPDH 分别帮助辨认膜和胞质组分。[^fig-surface-labeling]
     ///
@@ -268,7 +268,7 @@ A–C 标出脂质接在蛋白质的哪里；D–F 展开相应的化学连接�
 
 主要网线是**血影蛋白（spectrin）**。一条 α 链与一条 β 链组成细长异二聚体，两个二聚体端对端结合成四聚体；许多四聚体再通过含短肌动蛋白丝、蛋白 4.1R 和内收蛋白等的连接复合体，组织成网。
 
-[![红细胞膜骨架中的血影蛋白、肌动蛋白连接点和跨膜锚定结构](_img/membrane_transport/erythrocyte-skeleton.jpg){ width="760" height="295" loading="lazy" }](_img/membrane_transport/erythrocyte-skeleton.jpg)
+![红细胞膜骨架中的血影蛋白、肌动蛋白连接点和跨膜锚定结构](_img/membrane_transport/erythrocyte-skeleton.jpg){ width="760" height="295" loading="lazy" }
 /// caption
 沿一根血影蛋白找到两端的连接点，再看网络怎样接到膜上。放大的 α、β 链组成异二聚体，两个二聚体相接成四聚体；这是依据蛋白相互作用建立的结构模型。[^fig-mboc-10-38]
 ///
@@ -287,7 +287,7 @@ A–C 标出脂质接在蛋白质的哪里；D–F 展开相应的化学连接�
 
 先比较下面两种通路。通道开放时，膜两侧之间形成可供特定物质通过的含水通路；载体则先结合底物，再改变构象，把同一结合部位先后暴露给两侧。可以把后者想成两边轮流开门的小隔间：底物进入后，蛋白关上这一侧的入口，再打开另一侧。这个过程中，底物结合、释放与蛋白构象变化相互联系。[^osm-carriers-channels]
 
-[![载体通过构象变化运输溶质与开放通道形成连续通路的比较](_img/membrane_transport/channel-carrier.jpg){ width="650" height="210" loading="lazy" }](_img/membrane_transport/channel-carrier.jpg)
+![载体通过构象变化运输溶质与开放通道形成连续通路的比较](_img/membrane_transport/channel-carrier.jpg){ width="650" height="210" loading="lazy" }
 /// caption
 左侧载体把结合部位交替暴露给两面，右侧通道在开放时提供贯通路径。图中的绿色结构只表示工作原理，不对应统一的真实蛋白外形。[^fig-mboc-11-3]
 ///
@@ -296,12 +296,12 @@ A–C 标出脂质接在蛋白质的哪里；D–F 展开相应的化学连接�
 
 K$^+$ 通道提供了一个很好的反直觉例子：Na$^+$ 更小，为什么反而常被挡在外面？关键在于离子与周围分子的相互作用。水中的离子周围有水合层；进入狭窄滤器时，它必须失去部分水分子，而通道内的氧原子需要提供足够有利的相互作用来补偿。
 
-[![细菌钾通道的结构模型、中央孔道和选择性滤器](_img/membrane_transport/potassium-channel.jpg){ width="750" height="307" loading="lazy" }](_img/membrane_transport/potassium-channel.jpg)
+![细菌钾通道的结构模型、中央孔道和选择性滤器](_img/membrane_transport/potassium-channel.jpg){ width="750" height="333" loading="lazy" }
 /// caption
-图 A 为了看清内部只显示部分亚基，图 B 放大滤器。沿离子的路线找到胞质侧入口、腔室和最狭窄的滤器。[^fig-mboc-11-24]
+A 只显示部分亚基，便于看清中央孔道和选择性滤器；B 显示肽键偶极沿 α 螺旋叠加，形成带部分负电的 C 端。A 中孔螺旋的负端朝向孔腔，有助于稳定其中的阳离子。[^fig-mboc-11-24]
 ///
 
-[![水合钾钠离子与钾通道滤器中配位关系的比较](_img/membrane_transport/potassium-selectivity.jpg){ width="470" height="326" loading="lazy" }](_img/membrane_transport/potassium-selectivity.jpg)
+![水合钾钠离子与钾通道滤器中配位关系的比较](_img/membrane_transport/potassium-selectivity.jpg){ width="470" height="326" loading="lazy" }
 /// caption
 上排是水合离子，下排是进入滤器后的配位示意。滤器羰基氧的排列能较好补偿 K⁺ 失水的代价；更小的 Na⁺ 在这个位置反而不能获得同样的补偿。[^fig-mboc-11-25]
 ///
@@ -312,7 +312,7 @@ K$^+$ 通道提供了一个很好的反直觉例子：Na$^+$ 更小，为什么�
 
 每个典型 AQP 单体含六条贯穿膜的 α 螺旋，还有从两侧折入膜内的短螺旋，在孔道中部相遇。能通透甘油的成员常归入 aquaglyceroporin；部分成员还允许尿素等通过。植物和动物都有多种 AQP，其定位与选择性各不相同。早期实验常用汞化合物抑制某些水通道，但敏感性取决于成员及可反应位点，实验还需排除其他膜损伤。[^aquaporin-family]
 
-[![水通道单体结构、孔道中的水分子及水链取向模型](_img/membrane_transport/aquaporin.jpg){ width="650" height="512" loading="lazy" }](_img/membrane_transport/aquaporin.jpg)
+![水通道单体结构、孔道中的水分子及水链取向模型](_img/membrane_transport/aquaporin.jpg){ width="650" height="512" loading="lazy" }
 /// caption
 A、B 沿单体看水通路；C、D 比较连续水链与孔道约束下的取向。后两幅帮助理解质子通透问题，图示的氢键安排是简化机制模型。[^fig-mboc-11-20]
 ///
@@ -321,7 +321,7 @@ A、B 沿单体看水通路；C、D 比较连续水链与孔道约束下的取�
 
     电压和配体都能调节通道，膜本身受到的拉力也可以。Piezo1 就是一种机械敏感的阳离子通道。它的结构很抢眼：三个相同的亚基各伸出一条弯曲的“叶片”，围着中央孔道展开，整体颇像一架三叶风车。
 
-    [![从胞质侧观察 Piezo1 三聚体的 Goodsell 结构插画](_img/membrane_transport/piezo1-goodsell.jpg){ width="470" height="496" loading="lazy" }](_img/membrane_transport/piezo1-goodsell.jpg)
+    ![从胞质侧观察 Piezo1 三聚体的 Goodsell 结构插画](_img/membrane_transport/piezo1-goodsell.jpg){ width="470" height="496" loading="lazy" }
     /// caption
     从胞质侧看 Piezo1：三条弯曲叶片向外延伸，离子通路位于中央。这是依据 PDB 6B3R 绘制的结构插画，颜色帮助区分亚基；图中未画出周围脂质。[^fig-piezo1-goodsell]
     ///
@@ -336,12 +336,12 @@ A、B 沿单体看水通路；C、D 比较连续水链与孔道约束下的取�
 
 <div class="grid" markdown>
 
-[![载体从外向开放经闭塞态到内向开放的构象变化](_img/membrane_transport/alternating-access.jpg){ width="510" height="236" loading="lazy" }](_img/membrane_transport/alternating-access.jpg)
+![载体从外向开放经闭塞态到内向开放的构象变化](_img/membrane_transport/alternating-access.jpg){ width="510" height="200" loading="lazy" }
 /// caption
 逐一找出底物结合部位与开放的一侧。闭塞态把两侧通路隔开，避免形成持续漏通的孔。[^fig-mboc-11-5]
 ///
 
-[![载体运输速率随底物浓度增加而趋于饱和的示意曲线](_img/membrane_transport/carrier-saturation.jpg){ width="360" height="266" loading="lazy" }](_img/membrane_transport/carrier-saturation.jpg)
+![载体运输速率随底物浓度增加而趋于饱和的示意曲线](_img/membrane_transport/carrier-saturation.jpg){ width="360" height="266" loading="lazy" }
 /// caption
 载体数量和周转能力有限，速率逐渐接近上限。图中曲线用于比较变化趋势，不宜把不同通路的绝对速度直接读成同一量级。[^fig-mboc-11-6]
 ///
@@ -358,7 +358,7 @@ GLUT 的这个循环可以反向进行。外侧葡萄糖较多时，外侧结合
 
 有了通路，还得知道物质往哪边走。对不带电的葡萄糖，在其他条件相同的简化情形下，浓度差就给出了净扩散方向。对离子，还要看电位：假设外侧 Na$^+$ 较多、胞内又相对带负电，浓度差和电作用都支持 Na$^+$ 内流；对胞内浓度较高的 K$^+$，浓度差倾向于让它流出，负的胞内电位却倾向于把它留住。两项作用可以同向，也可以相互抵消。
 
-[![被动与主动运输路径，以及浓度梯度和电化学梯度的区别](_img/membrane_transport/transport-driving-force.jpg){ width="650" height="562" loading="lazy" }](_img/membrane_transport/transport-driving-force.jpg)
+![被动与主动运输路径，以及浓度梯度和电化学梯度的区别](_img/membrane_transport/transport-driving-force.jpg){ width="650" height="562" loading="lazy" }
 /// caption
 先比较上排箭头与浓度分布，再看下排带电溶质：出现膜电位后，浓度差不再单独决定净流向。[^fig-mboc-11-4]
 ///
@@ -388,7 +388,7 @@ $R$ 是气体常数，$T$ 是绝对温度，$z$ 是离子的带符号价数，$F
 
 实验中还可以用较小的分子给膜增加离子通路。这些**离子载体（ionophore）**有的来自微生物代谢产物，有的是人工合成物。缬氨霉素在内部以氧原子配位 K⁺，外表面较疏水，能把结合的离子带过膜后释放；短杆菌肽 A 则由两侧叶片中各一个单体相接，形成单价阳离子通道。前者来回携带，后者形成贯通的孔。
 
-[![可移动离子载体与成孔离子载体的运输方式比较](_img/membrane_transport/ionophore-pathways.jpg){ width="350" height="353" loading="lazy" }](_img/membrane_transport/ionophore-pathways.jpg)
+![可移动离子载体与成孔离子载体的运输方式比较](_img/membrane_transport/ionophore-pathways.jpg){ width="350" height="353" loading="lazy" }
 /// caption
 比较离子与载体是否一起穿膜，以及膜两面是否同时连通。两类通路都能加快相应离子沿电化学梯度的流动。[^fig-ionophores]
 ///
@@ -410,7 +410,7 @@ $R$ 是气体常数，$T$ 是绝对温度，$z$ 是离子的带符号价数，$F
 
 它的 α 亚基承担离子结合、ATP 反应和构象变化，β 亚基帮助折叠、稳定及膜上表达；许多组织还用 FXYD 蛋白调节泵的性质。通常用 αβ 作为基本结构单元来理解，具体组织中的装配与调节可以更复杂。[^nak-structure]
 
-[![钠钾泵利用 ATP 维持钠钾梯度的方向与化学计量示意](_img/membrane_transport/sodium-potassium-pump.jpg){ width="620" height="332" loading="lazy" }](_img/membrane_transport/sodium-potassium-pump.jpg)
+![钠钾泵利用 ATP 维持钠钾梯度的方向与化学计量示意](_img/membrane_transport/sodium-potassium-pump.jpg){ width="620" height="332" loading="lazy" }
 /// caption
 先数离子，再看方向：每循环 3 Na⁺ 出、2 K⁺ 入，净移出一个正电荷。这张图概括收支，构象变化见相邻正文。[^fig-mboc-11-15]
 ///
@@ -427,9 +427,9 @@ $R$ 是气体常数，$T$ 是绝对温度，$z$ 是离子的带符号价数，$F
 
 一次 Ca²⁺ 信号之后，细胞需要降低胞质游离 Ca²⁺。这里有两个去向：送回内质网／肌质网，或者排到细胞外。**SERCA** 负责前一种路线；其跨膜螺旋之间有两个 Ca²⁺ 结合位点，胞质侧则有核苷酸结合、磷酸化和致动结构域。ATP 反应改变这些结构域的相对位置，再带动跨膜螺旋重排，使 Ca²⁺ 结合位点从面向胞质转为面向网腔。[^calcium-pumps]
 
-[![SERCA 的胞质结构域、跨膜螺旋与钙离子结合腔](_img/membrane_transport/serca-structure.jpg){ width="650" height="344" loading="lazy" }](_img/membrane_transport/serca-structure.jpg)
+![SERCA 的胞质结构域、跨膜螺旋与钙离子结合腔](_img/membrane_transport/serca-structure.jpg){ width="650" height="344" loading="lazy" }
 /// caption
-ATP 反应发生在膜的胞质侧，Ca²⁺ 结合腔位于跨膜区。结构域之间的运动把化学反应接到跨膜通路的开闭上。[^fig-mboc-11-13]
+结构模型与结构域示意并列，标出胞质侧的 ATP 反应位置和跨膜区的 Ca²⁺ 结合腔。结构域之间的运动把化学反应接到跨膜通路的开闭上。[^fig-mboc-11-13]
 ///
 
 经典 SERCA 循环每水解一个 ATP 转运两个 Ca²⁺，并伴随质子的反向转移。质膜 **PMCA** 的通常计量则是一个 Ca²⁺／ATP；它的胞质尾部可产生自抑制，Ca²⁺—钙调蛋白结合后解除一部分抑制，使排钙随胞质 Ca²⁺ 上升而增强。在心肌中，未磷酸化的受磷蛋白（phospholamban，PLN）会抑制 SERCA2a；PLN 被磷酸化后，这种抑制减弱，Ca²⁺ 回收加快。[^calcium-pumps]
@@ -444,7 +444,7 @@ ATP 反应发生在膜的胞质侧，Ca²⁺ 结合腔位于跨膜区。结构�
 
 钠钾泵建立了 Na$^+$ 向内流动的强烈倾向，其他载体可以利用这份梯度。SLC5 家族的 Na$^+$—葡萄糖同向转运体 SGLT 就是一个例子。外侧 Na$^+$ 结合后，有利于载体结合糖；结合齐全的载体较容易完成向内转换，两者随后在胞质侧释放。蛋白结构让这些步骤相互依赖，糖的运输因此与 Na$^+$ 的运输发生耦联。
 
-[![钠和葡萄糖共同结合、闭塞、向内释放以及空载体返回的示意](_img/membrane_transport/sodium-glucose-cycle.jpg){ width="760" height="261" loading="lazy" }](_img/membrane_transport/sodium-glucose-cycle.jpg)
+![钠和葡萄糖共同结合、闭塞、向内释放以及空载体返回的示意](_img/membrane_transport/sodium-glucose-cycle.jpg){ width="760" height="261" loading="lazy" }
 /// caption
 从左向右跟随结合位点，看 Na⁺ 与糖在哪一面结合、在哪一面释放。图用单个 Na⁺ 图标表达原理，不表示所有 SGLT 亚型都是 1∶1 计量。[^fig-mboc-11-9]
 ///
@@ -453,7 +453,7 @@ ATP 反应发生在膜的胞质侧，Ca²⁺ 结合腔位于跨膜区。结构�
 
 现在把几种机器放回肠上皮细胞。顶端膜面向肠腔，SGLT1 利用 Na$^+$ 梯度把葡萄糖收入；基底外侧膜的 GLUT 让胞内葡萄糖向间质释放；同侧的 Na$^+$/K$^+$ 泵再将进入的 Na$^+$ 排出，维持下一轮吸收所需的梯度。一个葡萄糖跨过整个细胞的过程，便由两种不同载体接力完成。
 
-[![肠上皮顶端摄取、基底外侧释放葡萄糖与钠钾泵维持梯度的示意及电镜](_img/membrane_transport/epithelial-glucose.jpg){ width="760" height="501" loading="lazy" }](_img/membrane_transport/epithelial-glucose.jpg)
+![肠上皮顶端摄取、基底外侧释放葡萄糖与钠钾泵维持梯度的示意及电镜](_img/membrane_transport/epithelial-glucose.jpg){ width="760" height="501" loading="lazy" }
 /// caption
 沿肠腔→细胞→细胞外液追踪葡萄糖，再单独追踪 Na⁺。图突出跨细胞运输；紧密连接具有选择性旁细胞通透性，不是对一切溶质绝对密封。[^fig-mboc-11-11]
 ///
@@ -472,7 +472,7 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
 典型 **ABC 转运体**包含两个胞质侧核苷酸结合结构域和两个跨膜结构域；这些部分可以在一条多肽中，也可以由多条链组装。ATP 结合促进核苷酸结构域靠合，构象变化传到跨膜区，使底物结合处转向另一面；水解和产物释放帮助完成下一轮循环。[^membrane-pump-families]
 
-[![细菌 ABC 摄取体和真核 ABC 外排体的 ATP 耦联构象循环](_img/membrane_transport/abc-cycle.jpg){ width="560" height="559" loading="lazy" }](_img/membrane_transport/abc-cycle.jpg)
+![细菌 ABC 摄取体和真核 ABC 外排体的 ATP 耦联构象循环](_img/membrane_transport/abc-cycle.jpg){ width="560" height="559" loading="lazy" }
 /// caption
 两排分别以一种摄取体和一种外排体说明原理。每排先找胞质侧的 ATP 结合结构域，再追踪底物结合位点转向哪一面。[^fig-mboc-11-16]
 ///
@@ -503,7 +503,7 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
 蛋白质复合体、细菌或一整滴胞外液，显然不能靠 GLUT 这样的结合口袋逐个搬进来。内吞用的是另一种办法：质膜包围货物，向内出芽，再分离成囊泡。货物进入了细胞内部的空间，却仍在囊泡腔中，与胞质之间隔着膜。
 
-[![囊泡出芽与融合时两个膜面和腔内货物朝向的保持](_img/membrane_transport/membrane-topology.jpg){ width="430" height="362" loading="lazy" }](_img/membrane_transport/membrane-topology.jpg)
+![囊泡出芽与融合时两个膜面和腔内货物朝向的保持](_img/membrane_transport/membrane-topology.jpg){ width="430" height="362" loading="lazy" }
 /// caption
 橙色表示区室腔内，灰绿色表示周围胞质，蓝色三角是货物。沿出芽与融合追踪：膜没有翻面，货物也没有直接穿过脂双层。[^fig-mboc-12-4]
 ///
@@ -516,7 +516,7 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
 网格蛋白的基本装配单元是三脚形的 triskelion，含三条重链和相联的轻链；许多单元组成多边形网格，为膜弯曲提供支架。[^membrane-endocytosis-details]
 
-[![鸡卵母细胞质膜上网格蛋白包被小窝及包被小泡的电镜图](_img/membrane_transport/clathrin-electron-micrographs.jpg){ width="760" height="299" loading="lazy" }](_img/membrane_transport/clathrin-electron-micrographs.jpg)
+![鸡卵母细胞质膜上网格蛋白包被小窝及包被小泡的电镜图](_img/membrane_transport/clathrin-electron-micrographs.jpg){ width="760" height="299" loading="lazy" }
 /// caption
 看胞质侧毛茸茸的包被和逐渐收窄的膜颈。腔面另一层致密物质是被摄取的脂蛋白颗粒。四幅来自不同结构的截面，并非同一小泡的延时录像；右下角比例尺为 0.1 μm。[^fig-mboc-13-51]
 ///
@@ -539,7 +539,7 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
 膜窖（caveola）则有很有辨识度的瓶形外观，常由 caveolin 与 cavin 蛋白系统组织，在脂肪、内皮和肌细胞等处较常见。
 
-[![成纤维细胞膜窖的薄切片电镜与快速冷冻深蚀图](_img/membrane_transport/caveolae.jpg){ width="560" height="410" loading="lazy" }](_img/membrane_transport/caveolae.jpg)
+![成纤维细胞膜窖的薄切片电镜与快速冷冻深蚀图](_img/membrane_transport/caveolae.jpg){ width="560" height="410" loading="lazy" }
 /// caption
 上图看质膜下的一排内陷，下图从胞质侧看膜窖表面的组织。瓶形外观标识一种膜结构，单凭一张静态图不能判断它是否正在内吞。[^fig-mboc-13-52]
 ///
@@ -552,12 +552,12 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
     <div class="grid" markdown>
 
-    [![低渗处理前后小鼠肺内皮细胞膜窖的截面电镜](_img/membrane_transport/caveolae-hypotonic-em.jpg){ width="390" height="247" loading="lazy" }](_img/membrane_transport/caveolae-hypotonic-em.jpg)
+    ![低渗处理前后小鼠肺内皮细胞膜窖的截面电镜](_img/membrane_transport/caveolae-hypotonic-em.jpg){ width="390" height="247" loading="lazy" }
     /// caption
     原图 2 A。Iso 为等渗条件，Hypo 为低渗处理 5 分钟；箭头指向膜窖，比例尺 150 nm。[^fig-caveolae-em]
     ///
 
-    [![低渗处理前后每微米质膜中的膜窖数量](_img/membrane_transport/caveolae-hypotonic-count.jpg){ width="310" height="247" loading="lazy" }](_img/membrane_transport/caveolae-hypotonic-count.jpg)
+    ![低渗处理前后每微米质膜中的膜窖数量](_img/membrane_transport/caveolae-hypotonic-count.jpg){ width="310" height="247" loading="lazy" }
     /// caption
     原图 2 B。柱图统计每微米质膜中的膜窖数，误差线为标准差，差异的 $p=0.047$。[^fig-caveolae-em]
     ///
@@ -568,7 +568,7 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
     展平能否帮助细胞承受拉力？他们用光镊控制一颗黏在膜上的小珠，从细胞表面拉出细长的膜管，并记录维持膜管所需的力。低渗处理后，野生型细胞的拉管力变化很小；缺少 caveolin-1、因而缺乏膜窖的细胞，拉管力则明显升高。补回 caveolin-1 后，拉管力又能保持平稳。
 
-    [![野生型、caveolin-1 缺失和干预细胞的膜拉管力曲线及不同细胞的测量比较](_img/membrane_transport/caveolae-tether-force.jpg){ width="760" height="337" loading="lazy" }](_img/membrane_transport/caveolae-tether-force.jpg)
+    ![野生型、caveolin-1 缺失和干预细胞的膜拉管力曲线及不同细胞的测量比较](_img/membrane_transport/caveolae-tether-force.jpg){ width="760" height="337" loading="lazy" }
     /// caption
     原图 4 A–B。A 中箭头表示换入 150 mOsm 低渗液，横轴在换液处有间断。黑线为野生型，蓝线为 Cav1 缺失，绿线为缺失细胞补回 Cav1-EGFP；红线为用甲基-β-环糊精耗减胆固醇的野生型。B 比较低渗 5 分钟后肺内皮细胞（MLEC）、胚胎成纤维细胞（MEF）及表达 Cav1-EGFP 的 HeLa 的相对拉管力变化，误差线为标准误。[^fig-caveolae-force]
     ///
@@ -591,17 +591,17 @@ V 型 ATPase 通过 ATP 水解驱动旋转，将 H$^+$ 泵入内体、溶酶体�
 
 整合膜蛋白的疏水表面离开双层后容易聚集，去垢剂能以亲水端朝水、疏水端接触脂质或蛋白的方式，将它们容纳在混合胶束中。**临界胶束浓度（CMC）**描述在给定条件下大量胶束开始形成的浓度范围；盐、温度及去垢剂种类都会影响它。SDS 常使蛋白质展开，非离子型 Triton X-100、NP-40、Tween 20 或某些糖苷类去垢剂可较温和，但保持活性仍需逐个蛋白检验。去除去垢剂后，脂质重新形成双层，蛋白才有机会被包入其中。[^membrane-materials]
 
-[![几种去垢剂的分子结构、临界胶束浓度和胶束模型](_img/membrane_transport/detergent-micelles.jpg){ width="740" height="522" loading="lazy" }](_img/membrane_transport/detergent-micelles.jpg)
+![几种去垢剂的分子结构、临界胶束浓度和胶束模型](_img/membrane_transport/detergent-micelles.jpg){ width="740" height="522" loading="lazy" }
 /// caption
 A 比较不同去垢剂的亲水与疏水部分；B 显示超过 CMC 后，新增去垢剂主要进入胶束；C、D 分别是胶束示意与分子模型。胶束的疏水部分集中在内部。[^fig-detergent-micelles]
 ///
 
-[![去垢剂把膜拆成含膜蛋白或脂质的复合物](_img/membrane_transport/detergent-solubilization.jpg){ width="740" height="191" loading="lazy" }](_img/membrane_transport/detergent-solubilization.jpg)
+![去垢剂把膜拆成含膜蛋白或脂质的复合物](_img/membrane_transport/detergent-solubilization.jpg){ width="740" height="191" loading="lazy" }
 /// caption
 沿左到右看：膜被逐步溶解，膜蛋白周围由去垢剂遮住疏水表面，脂质也进入较小的复合物。这样才便于在水溶液中分离蛋白，再接入下面的重构实验。[^fig-detergent-solubilization]
 ///
 
-[![从膜中分离钠钾泵并重构进脂质体的实验流程](_img/membrane_transport/proteoliposome-reconstitution.jpg){ width="530" height="766" loading="lazy" }](_img/membrane_transport/proteoliposome-reconstitution.jpg)
+![从膜中分离钠钾泵并重构进脂质体的实验流程](_img/membrane_transport/proteoliposome-reconstitution.jpg){ width="530" height="766" loading="lazy" }
 /// caption
 沿去垢剂溶解、蛋白与脂质重新混合、去除去垢剂的过程看。最后得到的膜同时包含已知脂质与目标蛋白，可以单独检验运输功能。[^fig-mboc-10-28]
 ///
@@ -682,7 +682,7 @@ A 比较不同去垢剂的亲水与疏水部分；B 显示超过 CMC 后，新�
 [^fig-ionophores]: Kaushik V, et al. [Ionophores: Potential Use as Anticancer Drugs and Chemosensitizers](https://doi.org/10.3390/cancers10100360). *Cancers*. 2018;10:360，图 1A、B。截取作者绘制的移动载体和成孔通路模型，保留面板字母，未改绘；这里用于比较运输方式，不据此推断抗肿瘤效果。
 [^nak-structure]: Morth JP, et al. [Crystal structure of the sodium–potassium pump](https://www.nature.com/articles/nature06419). *Nature*. 2007;450:1043–1049；结合 MBoC 第 7 版第 11 章的钠钾泵循环与强心苷作用。
 [^calcium-pumps]: SERCA 结构与经典计量见 MBoC 第 7 版第 11 章。PMCA 的 1 Ca²⁺／ATP 耦联见[猪脑质膜 Ca²⁺-ATPase 的重构测量](https://pubmed.ncbi.nlm.nih.gov/9660785/)；受磷蛋白调节见 [The Structural Basis for Phospholamban Inhibition of the Calcium Pump in Sarcoplasmic Reticulum](https://pmc.ncbi.nlm.nih.gov/articles/PMC3798486/)。计量描述耦联循环，不保证所有实验条件下都无漏流或解耦。
-[^fig-mboc-11-13]: MBoC 第 7 版，图 11–13，印刷页 647。截取 SERCA 结构与结构域模型，保留 Ca²⁺、ATP 及胞质／腔面标记；原结构据 PDB 3B9B，所示为磷酸化、ATP 结合状态。未重绘。
+[^fig-mboc-11-13]: MBoC 第 7 版，图 11–13，印刷页 647。截取 SERCA 结构与结构域模型，保留 Ca²⁺、ATP 及胞质／腔面标记；教材给出的结构依据为 [PDB 3B9B](https://www.rcsb.org/structure/3B9B)。该条目实际是用氟化铍稳定的 E2 磷酸化类似物复合物，未解析出 ATP 配体；图中的 ATP 标记用于说明核苷酸结合位置，不是该条目的实测配体。未重绘。
 [^membrane-pump-families]: MBoC 第 7 版第 11 章的 P 型 ATPase、ABC 运输体、离子梯度耦联，以及第 14 章的质子梯度与 ATP 合酶。ABC 运输体的两组跨膜结构域与核苷酸结合结构域可由一个或多个多肽组成；表格以常见运输功能归类。
 [^fig-mboc-11-16]: MBoC 第 7 版，图 11–16A、B，印刷页 649。上方画细菌输入型 ABC 运输体，下方画真核输出型实例；保留 ATP、水解步骤与胞质方向。截取图版，配中文解释，未重绘。
 [^membrane-light-pump]: MBoC 第 7 版第 10 章，细菌视紫红质（bacteriorhodopsin）的七条跨膜螺旋、视黄醛与光驱动质子运输。名称中的 bacterio 沿用历史命名，经典材料来自嗜盐古菌。
