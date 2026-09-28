@@ -12,7 +12,7 @@
 
 [![Baltimore 实验中不同 RNase 处理条件下 DNA 合成产物的放射性变化](../_img/dna_replication/reverse-transcriptase-discovery.jpg){ width="500" height="519" }](../_img/dna_replication/reverse-transcriptase-discovery.jpg)
 /// caption
-横轴为反应时间，纵轴为进入酸不溶性产物的标记 dTMP。比较未额外处理、水预孵育、反应中加 RNase 和先用 RNase 预处理四条曲线；预处理 RNA 对后续合成的影响尤其明显。[^fig-weaver-23-20]
+横轴为反应时间，纵轴为进入酸不溶性产物的标记 dTMP。比较未额外处理、水预孵育、反应中加 RNase 和先用 RNase 预处理四条曲线；预先用 RNase 处理后，后续合成受到明显抑制。[^fig-weaver-23-20]
 ///
 
 实验给病毒颗粒提供四种 dNTP，其中 dTTP 带有放射性标记，再检测进入酸不溶性产物的放射性。未作 RNase 处理时，信号随时间上升；在反应中加入 RNase，合成受到抑制；若先用 RNase 处理，再开始反应，抑制更明显。水预孵育则帮助分辨预处理操作本身的影响。
@@ -33,7 +33,7 @@
 
 HIV-1 的包膜来自宿主细胞膜，表面的 Env 糖蛋白由 gp120 和 gp41 组成：gp120 位于膜外，参与识别细胞受体；gp41 跨膜，并参与膜融合。包膜内侧衬着基质蛋白 MA，内部的成熟衣壳 CA 则组成特征性的锥形结构。核衣壳蛋白 NC 与 RNA 结合，RT、整合酶等病毒酶也随颗粒一起进入细胞。[^hiv-particle]
 
-颗粒装有**两份正链 RNA**，两者在靠近 5′ 端的区域通过 RNA 相互作用形成二聚体；这里的“双份”并不是双链 RNA。每份 RNA 都带有 5′ 帽和 3′ poly(A) 尾，除编码区外，还有引发、剪接和包装所需的序列。进入新细胞后，基因组 RNA 在衣壳及相关核蛋白复合体中充当逆转录模板；形成原病毒以后，宿主转录产生的新 RNA 用于后续基因表达，也为新颗粒提供基因组。[^hiv-particle]
+颗粒装有**两份正链 RNA**，两者在靠近 5′ 端的区域通过 RNA 相互作用形成二聚体；这里的“双份”并不是双链 RNA。每份 RNA 都带有 5′ 帽和 3′ poly(A) 尾，除编码区外，还有引发、剪接和包装所需的序列。进入新细胞后，基因组 RNA 在衣壳及相关核蛋白复合体中充当逆转录模板；形成前病毒以后，宿主转录产生的新 RNA 用于后续基因表达，也为新颗粒提供基因组。[^hiv-particle]
 
 HIV-1 RT 是 **p66/p51 异二聚体**。p66 带有聚合酶和 RNase H 两处催化中心；p51 由同一前体经蛋白酶加工而来，缺少完整的 RNase H 结构域，主要维持复合体结构。两者虽然共享相当一部分氨基酸序列，折叠方式和实际承担的工作却不同。
 
@@ -118,7 +118,7 @@ tRNA 和正链 RNA 引物被处理后，互补的 PBS 区域可以彼此退火�
 
 整合酶（integrase，IN）把病毒 DNA 两端组织成整合复合体，处理末端并催化它们与宿主 DNA 的链转移；宿主酶随后完成缺口修补。两个末端在复合体中相互靠近，病毒 DNA 本身仍是线性底物。整合位点分散在基因组中，并具有染色质及转录活性相关的偏好。末端加工与连接的化学过程见[逆转录病毒整合](../dna_recombination.md#retroviral-integration)。
 
-整合后的 **原病毒（provirus）**由宿主 RNA 聚合酶 II 转录。部分 RNA 经剪接后表达病毒蛋白，完整长度的 RNA 则可用于翻译或成为新颗粒的基因组。病毒组分在细胞膜附近装配并出芽，病毒蛋白酶切开 Gag、Gag–Pol 等多聚蛋白前体，使成熟结构蛋白与酶得以形成，衣壳也随之重新组织。抑制蛋白酶时，颗粒仍可能释放，却难以正常成熟。[^hiv-particle]
+整合后的 **前病毒（provirus，也称原病毒）**由宿主 RNA 聚合酶 II 转录。部分 RNA 经剪接后表达病毒蛋白，完整长度的 RNA 则可用于翻译或成为新颗粒的基因组。病毒组分在细胞膜附近装配并出芽，病毒蛋白酶切开 Gag、Gag–Pol 等多聚蛋白前体，使成熟结构蛋白与酶得以形成，衣壳也随之重新组织。抑制蛋白酶时，颗粒仍可能释放，却难以正常成熟。[^hiv-particle]
 
 ## 其他逆转录系统 { #reverse-transcriptase-diversity }
 
@@ -154,7 +154,7 @@ LTR 逆转座元件的若干步骤与逆转录病毒相似：先产生 RNA，再
 上图为 Ty1 过表达条件下的电子致密颗粒；下图为带截短 Gag 的颗粒壳重建，T=3、T=4 表示壳体对称组织。两部分的材料和成像含义不同。[^fig-gene-12-30]
 ///
 
-非 LTR 元件如 LINE，采用的典型办法是**靶位点引发逆转录（target-primed reverse transcription）**。元件编码的核酸内切活性在靶 DNA 上产生切口，切口的 3′-OH 与元件 RNA 配对，RT 就在这个靶位点开始合成 DNA。插入位置的 DNA 因而同时提供了逆转录起步所需的末端。
+非 LTR 元件如 LINE，采用的典型办法是**靶位点引发逆转录（target-primed reverse transcription）**。元件编码的核酸内切活性在靶 DNA 上产生切口。靶 DNA 的 3′ 末端与元件 RNA 配对，RT 再从这个末端的 3′-OH 开始合成 DNA。插入位置的 DNA 因而同时提供了逆转录起步所需的末端。
 
 [![LINE RNA 与编码蛋白形成复合体，在靶 DNA 切口处启动逆转录并完成插入的示意](../_img/dna_replication/line-target-priming.jpg){ width="520" height="1122" loading="lazy" }](../_img/dna_replication/line-target-priming.jpg)
 /// caption

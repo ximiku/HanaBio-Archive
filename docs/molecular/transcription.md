@@ -96,7 +96,7 @@ $$
 
 ![细菌启动子可组合负35负10元件、UP元件、扩展负10元件和判别区](_img/transcription/bacterial-promoters.jpg){ width="450" loading=lazy }
 /// caption
-σ⁷⁰类启动子的几种构成。不同启动子可依靠不同接触组合，图中并非四个都必须具备。Watson等，图13–5。[^watson-transcription]
+σ⁷⁰类启动子的几种构成。不同启动子可依靠不同接触组合，图中的各类元件不必同时出现于同一启动子。Watson等，图13–5。[^watson-transcription]
 ///
 
 </div>
@@ -269,7 +269,7 @@ Rho的开环结构，每种颜色表示一个亚基；此结构图没有显示RN
 
 snRNA、snoRNA、miRNA、piRNA、lncRNA、tmRNA、gRNA和端粒酶RNA等名称，有的依功能命名，有的依长度或位置命名；有些来自更长前体的加工。它们的成熟路线见[RNA转录后加工](rna_processing.md)。
 
-**布氏锥虫提供了一个很醒目的例外**：Pol I除了转录rRNA，还转录VSG表达位点和procyclin基因，参与生成编码表面蛋白的RNA。它们后来通过转剪接等加工获得成熟mRNA的结构。这也提醒我们，编号说明的是酶的亲缘与构架，分工仍要在具体生物中验证。[^trypanosome-pol-i]
+**布氏锥虫提供了一个很醒目的例外**：Pol I除了转录rRNA，还转录VSG表达位点和procyclin基因，参与生成编码表面蛋白的RNA。它们后来通过反式剪接等加工获得成熟mRNA的结构。这也提醒我们，编号说明的是酶的亲缘与构架，分工仍要在具体生物中验证。[^trypanosome-pol-i]
 
 ???+ abstract "怎样把Pol III与tRNA、5S rRNA联系起来"
 
