@@ -375,7 +375,7 @@ TFIIH中有两项需要分开的活动。**XPB**利用ATP水解驱动下游DNA�
 Mediator、染色质重塑因子与HAT参与起始的示意关系，DNA弯曲使远近因子可以接触。Watson等，图13–19。[^watson-transcription]
 ///
 
-这样的接触可以提高复合物形成或进入后续步骤的概率。它们如何解释细胞类型差异和信号应答，见[转录因子的组合占位](gene_regulation.md#transcription-factor-combinations)与[增强子–启动子通信](gene_regulation.md#enhancer-promoter-communication)。
+这样的接触可以提高复合物形成或进入后续步骤的概率。它们如何解释细胞类型差异和信号应答，见[转录因子的组合占位](gene_regulation/eukaryotic.md#transcription-factor-combinations)与[增强子–启动子通信](gene_regulation/eukaryotic.md#enhancer-promoter-communication)。
 
 ## Pol II延伸与RNA加工 { #pol-ii-elongation }
 

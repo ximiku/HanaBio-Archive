@@ -96,7 +96,7 @@ NLR 激活会增强 Ca²⁺、ROS、防御转录和抗菌代谢，部分组合�
 
 ## RNA 沉默是抗病毒防线 {#antiviral-rna-silencing}
 
-许多植物病毒在复制时产生双链 RNA，Dicer 样（Dicer-like）蛋白将其切成小干扰 RNA（small interfering RNA，siRNA），Argonaute 蛋白据此寻找互补的病毒 RNA 并切割或抑制翻译；RNA 依赖 RNA 聚合酶可放大次级小 RNA，沉默信号还能经胞间连丝和维管组织向邻近或远端组织传播。DNA 病毒也可受到小 RNA 引导的 DNA 甲基化与转录沉默。详细的 Argonaute 配对逻辑见[小 RNA 沉默](../../molecular/gene_regulation.md#small-rna-silencing)。
+许多植物病毒在复制时产生双链 RNA，Dicer 样（Dicer-like）蛋白将其切成小干扰 RNA（small interfering RNA，siRNA），Argonaute 蛋白据此寻找互补的病毒 RNA 并切割或抑制翻译；RNA 依赖 RNA 聚合酶可放大次级小 RNA，沉默信号还能经胞间连丝和维管组织向邻近或远端组织传播。DNA 病毒也可受到小 RNA 引导的 DNA 甲基化与转录沉默。详细的 Argonaute 配对逻辑见[小 RNA 沉默](../../molecular/gene_regulation/eukaryotic.md#small-rna-silencing)。
 
 病毒编码的沉默抑制蛋白会结合小 RNA、干扰 Argonaute 或抑制信号传播，宿主 NLR、激素和蛋白降解网络又能识别或限制其中一部分作用。RNA 沉默与表面免疫、NLR 和生长调控相互交叉，共同构成抗病毒网络。病毒基因组复制策略、卫星因子和类病毒见[病毒及亚病毒因子](../../micro/viruses.md#genome-expression-strategies)。[^antiviral-silencing]
 

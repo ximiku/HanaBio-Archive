@@ -649,7 +649,7 @@ siRNA通常来自较长双链RNA，Dicer或Dicer样酶把它切成短双链，�
 | siRNA | 较长双链RNA，经Dicer/DCL加工；部分生物有RdRP扩增 | AGO |
 | piRNA | 单链前体，不依赖Dicer；部分系统有ping-pong | PIWI |
 
-小RNA后续怎样招募RNA降解或染色质调控装置，以及为何同一个miRNA可调节多个靶标，见[小RNA介导的表达调控](gene_regulation.md#small-rna-silencing)。
+小RNA后续怎样招募RNA降解或染色质调控装置，以及为何同一个miRNA可调节多个靶标，见[小RNA介导的表达调控](gene_regulation/eukaryotic.md#small-rna-silencing)。
 
 ## 怎样验证一个加工事件 { #rna-processing-evidence }
 
