@@ -129,7 +129,22 @@ APC/C 负责底物选择和泛素转移的组织，真正将蛋白降解的是�
 
     这先证明胞质中有一种可转移、随周期变化的促成熟活性，研究者称它为 **成熟促进因子（MPF）**。纯化和分子鉴定随后才把它落实到 CDK1–cyclin B。与此同时，酵母的 `cdc` 突变提供了遗传学入口；Evans、Hunt 等在海胆等动物卵中观察到，某些新合成蛋白在每轮卵裂时被快速降解，因而得名 cyclin。三条线索后来接到了一起。[^cell-cycle-history]
 
-    哺乳动物细胞融合实验也显示，M 期胞质可使间期细胞核发生**早熟染色体凝缩（PCC）**。G$_1$ 核常呈单染色单体形态，G$_2$ 核呈双染色单体，正在复制的 S 期核则表现为不均匀、碎片样的凝缩。形态反映了原先的复制状态；强迫凝缩本身不等于已经完成一次正常分裂。[^premature-condensation]
+???+ abstract "间期核进入M期胞质之后"
+
+    另一个入口是把 M 期细胞与间期细胞融合。融合后，间期核暴露于 M 期细胞提供的胞质环境，也可发生**早熟染色体凝缩（premature chromosome condensation，PCC）**。分别选 G$_1$、S、G$_2$ 期受体，就能比较复制前、复制中和复制后对强迫凝缩的反应。[^premature-condensation]
+
+    | 分别进行的融合 | 间期核中 DNA 的起始状态 | 下图中的凝缩形态 |
+    | --- | --- | --- |
+    | M 期 HeLa ＋ G$_1$ 期 PtK2 | 尚未复制 | a：较长的单染色单体形态 |
+    | M 期 HeLa ＋ S 期 PtK2 | 正在复制 | b：细碎、不均匀的凝缩 |
+    | M 期 HeLa ＋ G$_2$ 期 PtK2 | 已完成复制 | c：可分辨成对的姐妹染色单体 |
+
+    ![M期HeLa与G1、S或G2期PtK2分别融合后的早熟染色体凝缩](_img/cycle/pcc-g1-s-g2.png){ width="1560" height="764" loading=lazy }
+    /// caption
+    a、b、c 分别对应 G$_1$、S、G$_2$ 受体。较短而深染的一组来自 M 期 HeLa，较长或碎片样的一组来自被诱导的 PtK2 核；教材转引 Sperling 与 Rao 的显微图。[^fig-pcc-phases]
+    ///
+
+    M 期胞质对三个时期的核都能施加凝缩信号，但所得到的形态受原先复制状态影响。S 期的碎片样外观在这里是凝缩形态的读数，不能仅凭照片认定每一处都发生了 DNA 双链断裂。这个实验显示胞质周期状态可以改变核的行为，强迫凝缩本身并不等于完成一次正常分裂。
 
 ## G$_1$ 中的增殖承诺与复制许可 { #g1-s-commitment }
 
@@ -645,3 +660,5 @@ A 为设计原理，B 为每隔 1 小时拍摄的 30 小时序列；第 16—17 
 [^fig-flow]: Alberts、Heald 等，*Molecular Biology of the Cell*，第 7 版（2022），图 17-7，p.1031。从原书裁取，保留原标注。
 [^fig-fucci]: Alberts、Heald 等，*Molecular Biology of the Cell*，第 7 版（2022），图 17-6，p.1031。从原书裁取，保留原标注。 原显微序列来自 Sakaue-Sawano 等（2008），[Cell 132:487–498](https://pubmed.ncbi.nlm.nih.gov/18267078/)。
 [^fig-mpf-transfer]: Alberts、Hopkin 等，*Essential Cell Biology*，第 5 版（2019），图 18-7，p.616；裁取 MPF 胞质转移实验的教材示意。
+
+[^fig-pcc-phases]: Karp 等，*Karp’s Cell and Molecular Biology* 第 9 版（2020），图 14.3，p.640。图版转引 Sperling K、Rao PN. [The phenomenon of premature chromosome condensation: its relevance to basic and applied research](https://pubmed.ncbi.nlm.nih.gov/4138742/). *Humangenetik* 23:235–258 (1974)，doi:10.1007/BF00272508；保留 a–c，原图未给比例尺。

@@ -58,7 +58,20 @@ A 比较先前状态不同、后来信号相同的细胞；B 比较同时接收�
 
 **细胞记忆**可以由多种机制维持。一个转录因子启动自身或合作因子的表达，就能在最初刺激撤去后继续维持网络；两个命运程序之间的相互抑制，可使细胞偏向其中一个状态。复制后的 DNA 甲基化维护、染色质修饰与调控蛋白重新占位，则帮助子细胞恢复原有表达格局。不同机制的稳定度不同，损伤、再生或人为干预也可能使状态改变。[^cellular-memory]
 
-果蝇成虫盘的连续移植提供过很直观的证据：盘组织可以在宿主体内增殖许多代，随后仍形成与来源相符的翅或足等结构。它还没有长成翅，却已经把相当稳定的身份传给了后代。少数组织在特定再生条件下又会发生转决定；实验及其边界见[命运的记忆与可塑性](../development/cell_fate_models.md#cell-memory)。
+果蝇成虫盘的连续移植提供过很直观的证据：盘组织可以在宿主体内增殖许多代，随后仍形成与来源相符的翅或足等结构。它还没有长成翅，却已经把相当稳定的身份传给了后代。这里的“增殖许多代”和“形成成虫结构”，是在两类宿主中分别检验的。
+
+???+ abstract "先长期培养，再检验成虫盘的身份"
+
+    从三龄幼虫取出成虫盘并切分。一部分作为图中的 **stem fragment**，移入已交配成年雌蝇的腹腔；盘细胞在这里保持未分化状态，继续增殖并再生。过几天取出组织，再切分、移入另一只成年雌蝇，就能一轮轮延续培养。图的上排沿着这条路线前进。[^imaginal-disc-transplantation]
+
+    ![成虫盘组织在成年雌蝇中连续培养，并在幼虫宿主中检验分化能力](_img/life/imaginal-disc-serial-transplant.png){ width="660" loading=lazy }
+    /// caption
+    McClure 与 Schubiger 图 1b，据 Hadorn（1965）改编。上排的 stem fragment 留作连续培养，下排的 test fragment 用于分化检验；黄色形状表示分化所得的成虫角质结构。[^imaginal-disc-transplantation]
+    ///
+
+    要知道培养后的组织还“记不记得”自己的来源，则从中取一块 **test fragment**，放入能够继续发育的幼虫宿主。它随宿主经历变态，才进入成虫结构的分化环境。图的下排把这一步单独画出：检查移植物最终形成的结构，才能判断培养过程中保留了哪一种发育能力。
+
+    经过长期培养，多数组织仍形成与原来盘类型相符的结构，说明决定状态能在增殖过程中维持。少数组织在再生条件下也会发生转决定，例如原本形成足的组织出现翅的结构。这组实验同时揭示身份的稳定性与可塑性；维持它们的具体分子机制，还需另用基因表达和染色质实验检验。[命运的记忆与可塑性](../development/cell_fate_models.md#cell-memory)把这一结果接到其他命运维持机制。
 
 !!! info "从胞质差异到器官图式"
 
@@ -432,7 +445,16 @@ ULK1 复合物参与起始，III 类 PI3K 复合物 I 产生的 PI3P 有助于�
 
     自噬体的数目同时取决于生成和清除。生成加快会让它变多，融合或溶酶体降解受阻也会。因而研究**自噬通量（autophagic flux）**时，常比较加入与不加入溶酶体抑制剂后的 LC3-II 周转，并结合 p62／SQSTM1 等货物受体的变化；p62 自身的合成变化也要纳入解释。[^autophagy-guidelines]
 
-    串联 mRFP–GFP–LC3 报告器利用两种荧光对酸性的耐受差异：尚未进入酸性区室的斑点通常同时发红、绿光，进入溶酶体后 GFP 较易淬灭，红色仍可保留。因此可以追踪从自噬体到酸性降解区室的变化；若处理本身改变溶酶体 pH，这个判读也会受到影响。[^tandem-lc3]
+    串联 mRFP–GFP–LC3 报告器利用两种荧光对酸性的耐受差异：同一分子同时带红、绿两个标签，尚未进入酸性区室的斑点通常在两通道都可见，合并后呈黄；进入酸性降解区室后，GFP 较易淬灭，mRFP 红光仍可保留。[^tandem-lc3]
+
+    ![HeLa细胞在对照、EBSS饥饿、氯喹和bafilomycin处理下的串联LC3绿色、红色与合并荧光](_img/life/tandem-lc3-treatments.png){ width="1685" height="1293" loading=lazy }
+    /// caption
+    Ni 等的图 4A：HeLa 细胞表达 mRFP–GFP–LC3 后，分别在所列条件下处理 6 小时，再固定成像。列为 GFP、mRFP 和合并图，右侧放大白框内区域；保留原图比例尺，但原图注未标其物理长度。[^tandem-lc3-treatments]
+    ///
+
+    先读 EBSS 饥饿这一行：合并图及其放大区同时有黄色和红色斑点；回到前两列，可分辨哪些位置仍有 GFP，哪些主要剩下 mRFP。再看最下方 **50 nM bafilomycin A₁（BAF）**：黄色斑点积累，说明报告器仍保留两种荧光。BAF 抑制 V-ATPase，影响溶酶体酸化，也可能影响自噬体成熟；这里斑点多并不能直接换算为清除快。中间的 **10 μM 氯喹（CQ）**组仍有红色斑点，药物效应要连同剂量、时长与细胞条件解释。[^tandem-lc3-treatments]
+
+    红色斑点支持报告器经历了酸性区室的成熟过程，却不直接给出单位时间内降解了多少货物。完整的通量判断仍需上面的抑制剂比较、LC3-II 周转和货物测量；处理若改变 pH 或蛋白水解，荧光颜色与清除速率之间的对应也会改变。
 
 自噬多数时候有助于细胞存活，在某些发育或损伤条件下也参与死亡和组织清除。果蝇变态时的唾液腺降解是经典例子：抑制自噬会妨碍组织按时消失，自噬与 caspase 途径均参与这一过程。要进一步称作**自噬依赖性细胞死亡**，还需证明自噬机器对死亡本身不可缺少，并区分“细胞未死”与“已死但尸体没有被降解”。[^salivary-autophagy][^autophagy-guidelines]
 
@@ -474,7 +496,7 @@ DNA 损伤、端粒异常、缺氧和异常增殖信号均可接入 p53。下游
 
 </div>
 
-### 一种蓝色染色能告诉我们多少
+### SA-β-gal与衰老检测 { #_9 }
 
 1995 年，Dimri 等报告了一种方便的组织化学检测：在 **pH 6** 条件下检测 $\beta$-半乳糖苷酶。常规溶酶体 $\beta$-半乳糖苷酶在更酸的条件下即可检测，许多衰老细胞的溶酶体区室和酶量增加，使较不适合该酶的 pH 6 条件下也能出现明显信号，后来称为 **SA-$\beta$-gal**。[^sagal-original]
 
@@ -499,7 +521,7 @@ A、B 是 WI-38 细胞在 pH 4 下的早期与衰老培养，均可着色；C、
 
     经典研究发现，染色体外 rDNA 环可在母细胞中不对称积累并影响复制寿命。这提示 DNA 重组产物及其分配能够影响衰老；不同菌株和条件还有其他限制因素，不能把 rDNA 环概括为所有单细胞生物的共同老化原因。[^yeast-aging]
 
-细胞衰老是机体衰老的一项机制。干细胞耗竭、细胞间通信、免疫与神经内分泌变化，以及器官储备减少，还发生在不同尺度，见[生长、发育与衰老](../physiology/growth_development.md#aging-resilience)。干细胞移植能否重建特定功能，需由具体细胞产品和实验支持，不能从“具有干性”直接推出普适抗衰老效果；相关功能判据见[再生的图式、尺度与功能](../development/stem_cells_regeneration.md#regeneration-pattern-function)。
+细胞衰老是机体衰老的一项机制。干细胞耗竭、细胞间通信、免疫与神经内分泌变化，以及器官储备减少，还发生在不同尺度，见[生长、发育与衰老](../physiology/growth_development.md#aging-resilience)。组织的再生能力还取决于干细胞状态、生态位和器官图式能否共同恢复，相关功能判据见[再生的图式、尺度与功能](../development/stem_cells_regeneration.md#regeneration-pattern-function)。
 
 ## 命运转换的实验证据 { #fate-evidence }
 
@@ -594,3 +616,7 @@ A、B 是 WI-38 细胞在 pH 4 下的早期与衰老培养，均可着色；C、
 [^fig-survival-competition]: Alberts、Heald 等，*Molecular Biology of the Cell*，第 7 版（2022），图 18–12，p.1099。从原书裁取，保留原标注。
 [^fig-ps-exposure]: Alberts、Heald 等，*Molecular Biology of the Cell*，第 7 版（2022），图 18–14，p.1101。从原书裁取，保留原标注。
 [^fig-p53-fates]: Alberts、Heald 等，*Molecular Biology of the Cell*，第 7 版（2022），图 20–31，p.1190。从原书裁取，保留原标注。
+
+[^imaginal-disc-transplantation]: McClure KD、Schubiger G，[Transdetermination: Drosophila imaginal disc cells exhibit stem cell-like potency](https://pmc.ncbi.nlm.nih.gov/articles/PMC2000801/)，Int J Biochem Cell Biol 39:1105–1118（2007），图1b及连续培养、转决定相关正文。所用流程图由该综述据Hadorn（1965）改编，本文取图1b；成体培养与幼虫变态检验是分开的步骤。
+
+[^tandem-lc3-treatments]: Ni HM 等. [Dissecting the dynamic turnover of GFP-LC3 in the autolysosome](https://pmc.ncbi.nlm.nih.gov/articles/PMC3039769/). *Autophagy* 7:188–204 (2011)，doi:10.4161/auto.7.2.14181，图 4A。转染 24 小时后处理 6 小时，4% 多聚甲醛固定、共聚焦成像；完整保留四组、三通道及放大图。原图注对空心／实心箭头的释义与部分可见颜色不一致，此处按通道与颜色读图，不采用该箭头分类。

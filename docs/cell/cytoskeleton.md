@@ -176,7 +176,28 @@ myosin V 可携带囊泡、细胞器或 RNA；myosin I 常把膜与皮层联系�
 
 在二维基质上爬行的许多动物细胞，前缘把 actin 正端朝向质膜。丝端与膜的热涨落会短暂腾出空间，新亚基插入后使膜难以退回原位，许多丝一起延长便能推动片状伪足。Arp2/3 提供分支网，formin、Ena/VASP 和 fascin 等则参与组织细长的丝状伪足。单靠前缘伸出去，细胞体还未必跟得上。[^actin-motility]
 
-新突起接触基质后，整合素（integrin）的胞外部分结合基质，胞内侧经 talin、kindlin、vinculin 等装置接入 actin。骨架的后向流动由此可以向基质传力，基质的反作用又帮助细胞体前移。中后部 myosin II 提高皮层和应力纤维张力，后缘黏附逐步拆解，膜与受体回收；前面拉、后面松，才形成连续位移。黏附过弱会打滑，过强又可能使后缘难以脱离，具体平衡取决于细胞与环境。
+![二维迁移细胞中前缘肌动蛋白网、后部收缩束和基质黏附的位置](_img/cytoskeleton/migrating-cell-actin.png){ width="988" height="366" loading=lazy }
+/// caption
+细胞向右移动。左侧俯视图和右侧侧视图对应同一套空间关系：前缘的 actin 网推动膜，较后方的 actin–myosin II 束产生张力，右图底部的绿色黏附点把骨架接到基质。[^fig-migrating-cell]
+///
+
+前缘的丝一面延长，已有的 actin 网络又可相对基质向后移动，称为**后向流（retrograde flow）**。其中既有聚合推膜的反作用，也有 myosin II 收缩的贡献。下图 a 先画出正端加亚基；b 中的黄色 myosin 与聚合作用共同使网络向左流动。若骨架与基质之间传力很弱，聚合时网络更多向后退，前缘向前突出的幅度就较小。[^actin-adhesion-flow]
+
+![肌动蛋白聚合、后向流及黏附耦联后向基质传力的三个模型](_img/cytoskeleton/actin-flow-adhesion.jpg){ width="400" height="684" loading=lazy }
+/// caption
+a：前缘正端聚合；b：actin 后向流；c：骨架与基质耦联后，细胞向右突出，向基质施加的牵引力朝左。红、绿块泛指黏附连接中的组分，并非 talin 的结构图；三幅比较机械关系，不是时间序列照片。[^actin-adhesion-flow]
+///
+
+新突起接触基质后，整合素（integrin）的胞外部分结合基质，胞内尾部与 talin 等蛋白相连，talin 又接触 actin；kindlin、vinculin 等进一步参与连接和调节。这样，向后的骨架运动可以牵拉基质，基质对细胞的反作用力则朝前。图 c 中后向流减慢，聚合便更有效地推动前缘前伸；这种耦联可以持续滑移，并不要求 actin 完全固定。talin 如何受力展开并招募 vinculin，见[黏着斑的承力实验](cell_interactions.md#focal-adhesions)。
+
+中后部 myosin II 使相互连接的 actin 丝滑动，提高皮层与应力纤维的张力，帮助细胞体向前移动。随后，后缘旧黏附必须拆卸，部分整合素随膜内吞并循环利用，细胞尾部才能脱离原来的位置。下图把这一步放回完整周期：先突出、再建立前部黏附，细胞体前移后释放后部连接。黏附过弱容易滑移，过强则可能妨碍后缘脱离，合适的平衡随细胞与环境改变。
+
+??? info "把后缘拆卸接回迁移周期"
+
+    ![突出、前部黏附、细胞体前移以及后部黏附拆卸和整合素循环](_img/cytoskeleton/migration-adhesion-cycle.png){ loading=lazy }
+    /// caption
+    从上到下为二维迁移的四个环节；末幅标出后缘脱附、内吞和受体循环。图中细胞体向右的箭头表示整体前移，actin 的后向流方向见上一图。[^fig-migration-cycle]
+    ///
 
 三维组织中的路线更丰富。有的细胞保持较强黏附，有的利用皮层收缩、局部压力和膜泡状突起（bleb），在狭窄空间中以较低黏附前进；集体迁移还要经细胞连接协调邻细胞的拉力。这里所讲的二维“突出—黏附—牵引—回收”是一个具体方案。黏附的分子结构及基质力学见[细胞外基质、黏附与连接](cell_interactions.md)。
 
@@ -297,9 +318,9 @@ kinesin 是一个超家族，不能都画成同一台运输机器。许多 N 端
 A：冷冻电镜重建，比例尺 25 nm；B：结构示意；C：一条重链上的尾部、linker、AAA 环与微管结合 stalk。[^fig-dynein-structure]
 ///
 
-在哺乳动物等研究体系中，游离 dynein-1 可以处于自抑制或低过程性状态。**dynactin** 提供连接平台，**激活适配体**将马达尾部组织到平台上，并联系特定货物；三者组装后，dynein 才更适于持续行走。dynactin 内含一段以 Arp1 为主的短 actin 样丝，不能把它与前面成核分支网的 Arp2/3 混同。Rab、膜脂、货物受体和适配体的组合，决定马达何时上车、带哪一种货物。[^dynein-transport]
+在哺乳动物等研究体系中，游离 dynein-1 可以处于自抑制或低过程性状态。**dynactin** 提供连接平台，**激活适配体**将马达尾部组织到平台上，并联系特定货物；三者组装后，dynein 才更适于持续行走。dynactin 内含一段以 Arp1 为主的短 actin 样丝，不能把它与前面成核分支网的 Arp2/3 混同。Rab、膜脂、货物受体和适配体的组合，调节马达与货物的结合及马达的活化。[^dynein-transport]
 
-同一囊泡可携带正端和负端马达。它的实际运动取决于马达数目与激活状态、承受多大负荷、轨道怎样布置及货物怎样连接；轨道修饰和局部 Ca$^{2+}$ 信号还可改变特定运输装置的活动。不必把每次换向都解释成两边同时使劲拔河。长程微管运输抵达皮层后，货物还常交给 actin—myosin 作短程定位、捕获或胞吐；包被、Rab 身份与 SNARE 融合见[载体出芽、识别与膜融合](endomembrane.md#vesicle-machinery)。[^motor-proteins]
+同一囊泡可携带正端和负端马达。它的实际运动取决于马达数目与激活状态、承受多大负荷、轨道怎样布置及货物怎样连接；轨道修饰和局部 Ca$^{2+}$ 信号还可改变特定运输装置的活动。长程微管运输抵达皮层后，货物还常交给 actin—myosin 作短程定位、捕获或胞吐；包被、Rab 身份与 SNARE 融合见[载体出芽、识别与膜融合](endomembrane.md#vesicle-machinery)。[^motor-proteins]
 
 另一个胞质动力蛋白分支 dynein-2 主要承担纤毛内逆向运输，所用运输装置不同于 dynein-1—dynactin。轴丝 dynein 又组成专门的马达阵列，使相邻微管滑动，从而驱动下面的纤毛拍动。
 
@@ -552,3 +573,9 @@ A：质粒—ParR—ParM 的分配模型；B：质粒标红、ParM 标绿，分�
 [^fig-parm-segregation]: Alberts 等，*Molecular Biology of the Cell* 第 7 版（2022），图 16–73，p.1015；从教材 PDF 裁取。A 改自 Garner 等，Science 306:1021–1025 (2004)；B 来自 Møller-Jensen 等，Mol Cell 12:1477–1487 (2003)。图是带特定耐药质粒的细菌体系，不代表全部细菌染色体的分配方式。
 
 [^fig-cellulose-orientation]: Alberts 等，*Molecular Biology of the Cell* 第 7 版（2022），图 19–65A，p.1158；从教材 PDF 裁取。仅 A，图由 Brian Wells 与 Keith Roberts 提供；胡萝卜伸长细胞初生壁的快速冷冻、深蚀刻复型，保留 200 nm 比例尺。
+
+[^fig-migrating-cell]: Alberts 等，*Molecular Biology of the Cell* 第 7 版（2022），图 16–19A，p.973；裁取完整俯视及侧视示意。
+
+[^actin-adhesion-flow]: Gardel ML 等. [Mechanical Integration of Actin and Adhesion Dynamics in Cell Migration](https://pmc.ncbi.nlm.nih.gov/articles/PMC4437624/). *Annu Rev Cell Dev Biol* 26:315–333 (2010)，doi:10.1146/annurev.cellbio.011209.122036，图 3，保留 a–c 和全部方向箭头。
+
+[^fig-migration-cycle]: Lodish 等，*Molecular Cell Biology* 第 8 版（2016），图 17–39，p.812；完整保留四阶段及整合素回收路径。

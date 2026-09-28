@@ -80,7 +80,7 @@ SV40 大 T 抗原给出了一个很直观的实验。正常蛋白主要积累在
 
     mRNA 在转录时就不断结合蛋白，随加帽、剪接和 3′ 端加工逐渐换上适于输出的组分。大部分成熟 mRNA 主要通过 NXF1–NXT1 通路输出，胞质侧的 DDX19／酵母 Dbp5 等 ATP 依赖因子重塑 mRNP、移走部分核内蛋白，帮助防止颗粒倒退。它与上面的 Ran 依赖蛋白运输不是同一条能量路线；tRNA、前核糖体亚基等则可利用 Ran 依赖输出受体。[^mrna-export-route]
 
-    下图来自摇蚊 Balbiani ring 大型转录本的研究：新生 RNA 被包装成颗粒，出核时又展开、重排。这个体系中可观察到 5′ 端先进入核孔，但不能据此给所有 RNA 规定统一朝向。5′ 帽参与招募蛋白与加工协调，也不是单独一顶帽子就足以决定一条 RNA 能否出核。
+    下图来自摇蚊 Balbiani ring 大型转录本的研究：新生 RNA 被包装成颗粒，出核时又展开、重排。这个体系中可观察到 5′ 端先进入核孔，但不能据此给所有 RNA 规定统一朝向。5′ 帽及其结合蛋白参与加工协调，剪接与 3′ 端加工又使更多输出因子装配到 mRNP 上。
 
     ![大型Balbiani ring mRNP的形成、重排与通过核孔](_img/nucleus/mrna-export.webp){ width="680" height="220" loading=lazy }
     /// caption
@@ -214,7 +214,7 @@ A 中 reader 识别已有标记，writer 修饰邻近核小体，直到受到边
     图中染色体倒位改变了基因邻域；眼部为表型示意。红白斑块记录的是不同细胞谱系的表达状态，不要求每块组织再发生一次基因突变。[^fig-position-effect]
     ///
 
-    有趣的地方就在这里：基因仍在，改变的是它所处的染色质环境。边界元件可限制沉默扩展；某些绝缘子还影响增强子与启动子的接触。两种功能可能重叠，但也不能把所有边界都想成同一种永久路障。
+    有趣的地方就在这里：基因仍在，改变的是它所处的染色质环境。边界元件可限制沉默扩展；某些绝缘子还影响增强子与启动子的接触。两种功能可能重叠，作用范围和强弱则随所结合的蛋白、细胞状态与染色质环境改变。
 
 X 染色体失活把这种状态调节扩展到染色体尺度：*XIST*／*Xist* RNA 及其招募的蛋白帮助建立抑制环境，部分基因仍可逃逸。小鼠早期胚胎存在父源 X 的印记性失活、内细胞团中的再激活及其后随机失活的转换，胚外谱系则另有维持规律；人类的时序与谱系关系不能照搬。[^x-reactivation]具体机制见[剂量补偿](../genetics/sex_cytoplasmic.md#dosage-compensation)，DNA 甲基化、基因组印记及跨代边界见[基因组学与表观遗传学](../genetics/genomics_epigenetics.md#dna-methylation)。
 
@@ -235,13 +235,33 @@ X 染色体失活把这种状态调节扩展到染色体尺度：*XIST*／*Xist*
 
 核仁组织区（NOR）含串联 rDNA，活跃 NOR 可参与组织核仁，常与某些染色体的次缢痕相联系。次缢痕外侧的小段染色体称为随体；并非每条次缢痕都属于 NOR。“随体”这一形态名称和“卫星 DNA”这一重复序列名称，也不是同一个概念。
 
-??? note "核型、带型与额外的染色体"
+??? note "核型与染色体带型"
 
-    核型描述一组染色体的数目和形态；带型进一步提供沿染色体定位的标记。G 带经适当处理后用 Giemsa 染色，深带通常较富 AT、基因较少；Q 带的荧光亮带与许多 G 深带对应，R 带大体呈相反模式。C 带突出部分组成型异染色质，T 带突出染色体末端的一部分 R 带区域，Ag-NOR 银染则主要显示活跃 NOR 相关的嗜银蛋白。各种带型的分辨率和可见范围不同。[^chromosome-banding]
+    核型描述一组染色体的数目和形态；带型进一步提供沿染色体定位的标记。下面先看两张中期分裂相：a 的 Q 带用荧光亮暗显示差异，b 的 G 带用深浅显示差异。c 把 b 中的染色体按大小、着丝粒位置和带序列配对排列，于是散在细胞中的结构变得便于比较。[^fig-chromosome-bands]
+
+    ![同一男性个体的Q带和G带中期分裂相，以及由G带分裂相排列的核型](_img/nucleus/human-g-q-bands.png){ width="1242" height="729" loading=lazy }
+    /// caption
+    a：Q 带；b：G 带；c：由 b 排列的核型。a、b 来自同一个体，原研究并未把它们描述为同一细胞的先后染色。[^fig-chromosome-bands]
+    ///
+
+    许多 Q 亮带与 G 深带对应，但各方法突出的是不同的染色性质。下表可与核型图对照阅读。[^chromosome-banding]
+
+    | 带型 | 主要观察特点 |
+    | --- | --- |
+    | G 带 | 适当处理后用 Giemsa 染色；深带通常较富 AT、基因较少 |
+    | Q 带 | 荧光带型；许多亮带对应 G 深带 |
+    | R 带 | 带型大体与 G 带相反 |
+    | C 带 | 突出部分组成型异染色质 |
+    | T 带 | 突出染色体末端的一部分 R 带区域 |
+    | Ag-NOR | 银染显示活跃 NOR 相关的嗜银蛋白，读数并非 rDNA 序列本身 |
+
+    各种带型的分辨率和可见范围不同，识别一个区域还需结合整条染色体上的位置。
 
     无着丝粒片段或分离滞后的染色体可能未进入主核而形成微核，随后发生丢失或进一步损伤。结构重排也可产生可辨认的标记染色体，例如费城染色体所涉及的易位，具体见[染色体结构变异](../genetics/chromosome_variation.md#structural-variant-formation)。
 
-    有些物种还存在基本 A 染色体组之外的 B 染色体。它们在个体间的有无、数目、基因含量和传递方式可以不同；某些 B 染色体通过偏向性的分配提高传递率。黑麦 B 染色体就含有可转录基因，不能统一称为“没有活性的多余碎片”。它对生长和育性的影响需要连同物种、剂量和遗传背景讨论。[^b-chromosome]
+??? note "基本染色体组之外的B染色体"
+
+    有些物种还存在基本 A 染色体组之外的 B 染色体。它们在个体间的有无、数目、基因含量和传递方式可以不同；某些 B 染色体通过偏向性的分配提高传递率。黑麦 B 染色体含有可转录基因，其对生长和育性的影响要连同物种、剂量和遗传背景讨论。[^b-chromosome]
 
 ### 被放大的染色体组织 { #giant-chromosomes }
 
@@ -290,7 +310,27 @@ X 染色体失活把这种状态调节扩展到染色体尺度：*XIST*／*Xist*
 
 新合成的核糖体蛋白从胞质输入，和加工中的 rRNA 一同装配。早期修饰与加工较多位于 DFC，后续装配颗粒较多出现在 GC；这是相互衔接、部分重叠的过程。前 40S、前 60S 颗粒随后分别经核孔输出，还要在胞质完成末端加工、装配因子释放和功能检查，才能投入翻译。核仁体积常随核糖体生产需求变化；不同细胞、物种和生长状态下，亚区的数量与排列也会不同。[^ribosome-biogenesis]
 
-开放式有丝分裂时，Pol I 转录受到抑制，核仁组分重新分布。退出分裂后，部分加工因子先聚成前核仁体（PNB），再同活跃 NOR 汇合，恢复核仁。经典 PtK2 细胞抗体微注射实验中，干扰 Pol I 没有阻止细胞完成分裂和形成 PNB，却阻碍了 PNB 在末期汇入 NOR 并建立新核仁；这把早期聚集与后续重建区分开来。[^nucleolus-reassembly]
+开放式有丝分裂时，Pol I 转录受到抑制，核仁组分重新分布。退出分裂后，部分加工因子先聚成前核仁体（PNB），再同活跃 NOR 汇合，恢复核仁。下面的实验把“先聚成小体”和“重新建立核仁”区分开来。[^nucleolus-reassembly]
+
+???+ abstract "在分裂期干扰Pol I，核仁还能重建吗"
+
+    Benavente 等在 PtK2 细胞的前中期或中期微注射抗 Pol I 抗体，让抗体在核被膜重建前接触目标。对照注射的是不识别 PtK2 组分的抗体。细胞仍能完成分裂，随后在不同时间固定，用核仁蛋白抗体检查子核中的组装情况。[^nucleolus-reassembly]
+
+    ![对照注射后60、90和180分钟的核仁组分重建](_img/nucleus/pol-i-injection-control.png){ width="360" loading=lazy }
+    /// caption
+    对照图 1：左列显示注入的抗体，右列检测核仁蛋白。a、b、c 分别为注射后 60、90、180 分钟的不同细胞；a′、b′ 用 Scl C，c′ 用抗 Pol I 的 S18 检测。比例尺 50 μm。[^nucleolus-reassembly]
+    ///
+
+    对照中，60 分钟时子核内可见多个小体，90 分钟时已形成较集中的核仁；180 分钟的 Pol I 分布接近未注射邻细胞。时间点来自不同的固定样本，显示的是重建进程的比较。
+
+    ![抗Pol I注射后3小时及20小时核仁蛋白分布与相差图](_img/nucleus/pol-i-injection-pnb.png){ width="680" loading=lazy }
+    /// caption
+    处理图 3：左列为注入的抗体，中列为所标记的核仁组分，右列为相差像。a–c 为 3 小时，d 为 20 小时；各行使用的检测抗体不同，比例尺均为 50 μm。[^nucleolus-reassembly]
+    ///
+
+    在处理组，先把目光放到 **b′**：检测 DFC 相关蛋白的 72B9 抗体仍能标出散在子核中的 PNB。到 **d′**，Scl C 标记的小体在 20 小时后仍未汇成正常核仁。a′ 检测 Pol I，c′ 检测核糖体蛋白 S1，二者分布并不相同；左列大量胞质或核周的抗体聚集，也不能都认作 PNB。
+
+    因而，Pol I 受干扰时，核仁组分仍能形成早期小体，后续在 NOR 周围的重建却受阻。这支持正常 Pol I 功能是重建所需的条件；rRNA 怎样参与各组分的连接，还需要进一步的分子实验。
 
 ### 没有膜，亚区如何保持不同？ { #nucleolar-phases }
 
@@ -446,7 +486,7 @@ ATAC-seq 用 Tn5 在较可及的 DNA 上进行转座插入，Hi-C 则富集近�
 
 [^rrna-precursor]: 哺乳动物 47S／45S 前体与加工位点见 Tafforeau 等，[The complexity of human ribosome biogenesis revealed by systematic nucleolar screening of pre-rRNA processing factors](https://pubmed.ncbi.nlm.nih.gov/23973377/)，Molecular Cell 51:539–551 (2013)。47S 至 45S 的早期切割还见[人细胞前体加工研究图 1](https://pmc.ncbi.nlm.nih.gov/articles/PMC6239190/)；核内外加工衔接亦可参照本站 [rRNA 加工](../molecular/rna_processing.md#rrna-processing)。
 
-[^nucleolus-reassembly]: Benavente 等，[Inhibition of nucleolar reformation after microinjection of antibodies to RNA polymerase I into mitotic cells](https://pubmed.ncbi.nlm.nih.gov/3312231/)，J Cell Biol 105:1483–1491 (1987)。实验对象为分裂中的 PtK2 培养细胞；抗体没有阻止正常分裂进程与前核仁体形成，主要阻碍后续与 NOR 的汇合。
+[^nucleolus-reassembly]: Benavente 等，[Inhibition of nucleolar reformation after microinjection of antibodies to RNA polymerase I into mitotic cells](https://pubmed.ncbi.nlm.nih.gov/3312231/)，J Cell Biol 105:1483–1491 (1987)。实验对象为分裂中的 PtK2 培养细胞；抗体没有阻止正常分裂进程与前核仁体形成，主要阻碍后续与 NOR 的汇合。 图取自该研究图 1、3，保留面板与 50 μm 比例尺；对照抗体 L046F7 识别两栖类 lamin，在 PtK2 中无相应反应。图 3 a、d 注射兔抗 Pol I，b、c 注射人抗 Pol I S18；中列依次用 S18、72B9、RSI105 和 Scl C 检测。
 
 [^feric-reconstitution]: Feric 等（2016），[公开全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC5127388/)，图 4A–D 及体外相分离方法；体系含 rRNA，蛋白浓度见图注。体外重构支持多相分配的物理机制，不能单凭融合图推断核仁的全部功能。
 
@@ -524,3 +564,5 @@ ATAC-seq 用 Tn5 在较可及的 DNA 上进行转座插入，Hi-C 则富集近�
 [^fig-nucleolus-fusion]: Feric 等，Cell 165:1686–1697 (2016)，[原文](<https://pmc.ncbi.nlm.nih.gov/articles/PMC5127388/>), 图 1D–G。裁取 D–G；Lat-A 处理后的融合时间序列，保留全部时刻与 20 μm 比例尺。
 
 [^fig-nucleolus-in-vitro]: Feric 等，Cell 165:1686–1697 (2016)，[原文](<https://pmc.ncbi.nlm.nih.gov/articles/PMC5127388/>), 图 4A–D。裁取 A–D；保留三个浓度条件下的显微图和相图坐标、图例，各显微图比例尺 10 μm。
+
+[^fig-chromosome-bands]: Tanabe H. [Studies on karyotype evolution in higher primates in relation to human chromosome 14 and 9 by comparative mapping of immunoglobulin Cε genes with fluorescence in situ hybridization](https://www.nihs.go.jp/library/eikenhoukoku/1999/077-090.pdf). *Bull Natl Health Sci* 117:77–90 (1999)，图 1，p.78；保留 a–c 面板、染色体编号和性染色体标记。

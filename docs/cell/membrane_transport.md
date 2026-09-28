@@ -314,8 +314,12 @@ A 只显示部分亚基，便于看清中央孔道和选择性滤器；B 显示�
 
 ![水通道单体结构、孔道中的水分子及水链取向模型](_img/membrane_transport/aquaporin.jpg){ width="650" height="512" loading="lazy" }
 /// caption
-A、B 沿单体看水通路；C、D 比较连续水链与孔道约束下的取向。后两幅帮助理解质子通透问题，图示的氢键安排是简化机制模型。[^fig-mboc-11-20]
+A、B 显示单体与水通路；C 用连续水链示意质子接力，D 显示蛋白质怎样改变中央水分子的氢键伙伴和取向。红色短线表示氢键，黄色 Asn 为天冬酰胺。C、D 是简化机制模型。[^fig-mboc-11-20]
 ///
+
+C 中，质子的净转移可以通过相邻水分子之间接连形成、断开 O—H 键来完成，水分子本身不必跟着穿过整条水链。这种沿氢键网络的接力与一个水分子从孔道一端走到另一端，是两种不同的运动。D 中，孔道两侧的羰基氧与中央两个 Asn 侧链提供氢键伙伴，使中央附近的水改变取向，打断了 C 所画的连续接力安排；水仍可逐个通过。
+
+中央 Asn 属于保守的**NPA 基序**，即 Asn–Pro–Ala。真正的质子排斥还涉及孔道电场、进入孔道的能量代价，以及更靠近孔口的**芳香族／精氨酸（ar/R）选择性滤器**。AQP1 的定点突变实验表明，NPA 区域与 ar/R 狭窄处共同维持阳离子屏障；改变后者，即使保留 NPA，也可能出现质子泄漏。因此，图 D 说明了一项结构安排，完整的选择性还需结合这些部位的作用来理解。[^aquaporin-proton-filter]
 
 ???+ note "Piezo1：膜受到拉力，通道怎样响应？"
 
@@ -707,3 +711,5 @@ A 比较不同去垢剂的亲水与疏水部分；B 显示超过 CMC 后，新�
 [^fig-detergent-micelles]: MBoC 第 7 版，图 10–26，印刷页 623；裁出 A–D 图版，保留坐标、CMC 和分子结构。
 [^fig-detergent-solubilization]: MBoC 第 7 版，图 10–27，印刷页 624；裁出完整溶解过程图。
 [^fig-surface-labeling]: Tuomivaara ST, Teo CF, et al. [SLAPSHOT reveals rapid dynamics of extracellularly exposed proteome in response to calcium-activated plasma membrane phospholipid scrambling](https://doi.org/10.1038/s42003-024-06729-x). *Communications Biology*. 2024;7:1060，图 1a、1b。按原图面板边界分开显示，保留全部泳道、组分标识和对照；未改绘。
+
+[^aquaporin-proton-filter]: Beitz等，[Point mutations in the aromatic/arginine region in aquaporin 1 allow passage of urea, glycerol, ammonia, and protons](https://pubmed.ncbi.nlm.nih.gov/16407156/)，PNAS 103:269–274（2006）；Wu等，[Concerted action of two cation filters in the aquaporin water channel](https://pubmed.ncbi.nlm.nih.gov/19574955/)，EMBO J 28:2188–2194（2009）。后者比较大鼠AQP1 的NPA及ar/R区域突变，测试水、质子和碱金属离子通透性；本文不把单一水链取向模型当作全部选择性的解释。
