@@ -26,7 +26,7 @@
 
 不同细菌使用的装置不完全相同。大肠杆菌的**RNase E**既能切RNA，又可作为RNA降解复合体的支架，连接解旋酶RhlB、PNPase和烯醇化酶；RNase III则偏好双链RNA区域。RNase G、RNase J、RNase Y等在不同谱系中分担加工与周转，不能把一套酶名排列当作所有细菌的固定流程。
 
-### rRNA怎样从同一条RNA中分出来
+### rRNA怎样从同一条RNA中分出来 { #rrnarna }
 
 大肠杆菌的rRNA操纵子通常把16S、23S、5S rRNA与部分tRNA一起转录。下图选用的是**rrnD操纵子**，其中有三个tRNA区域。前体中的间隔序列可相互配对，形成包围rRNA区域的双链茎；RNase III切开这些茎，先把长RNA分成较小前体。随后，RNase E/G、RNase T等内切或外切酶进一步修整，具体分工随RNA种类而异。[^weaver-processing]
 
@@ -136,7 +136,7 @@ RNA切下与聚合酶终止是两个相连的事件：下游RNA仍可留在Pol I
 
 </div>
 
-同一基因往往有多个可用切割位点。**可变加尾（alternative polyadenylation，APA）**若发生在3′ UTR中，会增减miRNA或RNA结合蛋白的作用位点；若选择内含子或编码区内的位点，还可能改变蛋白质C端。位点使用受到顺式序列、加工因子浓度、RNA结合蛋白、转录速度和染色质状态影响。短3′ UTR减少了哪些调控元件，比“短转录本是否更容易翻译”这个笼统比较更有解释力。[^alternative-polyadenylation]
+同一基因往往有多个可用切割位点。**可变加尾（alternative polyadenylation，APA）**若发生在3′ UTR中，会增减miRNA或RNA结合蛋白的作用位点；若选择内含子或编码区内的位点，还可能改变蛋白质C端。位点使用受到顺式序列、加工因子浓度、RNA结合蛋白、转录速度和染色质状态影响。缩短3′ UTR可能移除特定miRNA或蛋白质的结合位点，进而改变该转录本的稳定性、定位或翻译；结果取决于实际保留和失去的元件。[^alternative-polyadenylation]
 
 !!! info "不加poly(A)尾的组蛋白mRNA"
 
@@ -144,7 +144,7 @@ RNA切下与聚合酶终止是两个相连的事件：下游RNA仍可留在Pol I
 
 ## 剪接体怎样连接外显子 { #spliceosomal-splicing }
 
-### 从不连续杂交看见分裂基因
+### 从不连续杂交看见分裂基因 { #_1 }
 
 1977年，腺病毒晚期mRNA与病毒DNA的杂交实验揭示：成熟RNA的各段，可以对应DNA上彼此分隔的区域。实验者把纯化mRNA与适当DNA片段退火，再用电镜观察RNA—DNA杂合分子。RNA配上互补DNA链，会置换另一条DNA链，形成**R-loop**。[^split-gene-experiments]
 
@@ -155,7 +155,7 @@ a为杂交原理；b为hexon mRNA的杂合体，RNA两端伸出；c为fiber mRNA
 
 读这组图时，要把三种结构分开：被RNA置换出来的是**DNA单链**；RNA的3′ poly(A)尾本来就不由DNA直接编码；而一些5′端RNA可与基因组的另一处DNA配对，说明成熟mRNA把相隔的序列接到了一起。正是杂交位置和序列的对应，支持分裂基因与剪接的解释，不能把电镜中任意一个环都称为内含子。
 
-### 两次转酯化与套索
+### 两次转酯化与套索 { #_2 }
 
 内含子的两端不是随意切开。主要剪接体识别**5′剪接位点、分支点、聚嘧啶区和3′剪接位点**等信号。多数U2型内含子以GU开始、以AG结束；分支点附近有一个参与催化的腺苷A。下图中的序列是人类共识，不表示每个内含子逐字相同。[^watson-processing][^spliceosome]
 
@@ -192,7 +192,7 @@ a为杂交原理；b为hexon mRNA的杂合体，RNA两端伸出；c为fiber mRNA
 
 这两步**转酯化**以旧键交换新键，不需要每形成一个连接就直接水解一分子ATP。不过，细胞内剪接还包含装配、RNA解旋、错误底物淘汰和复合物拆卸，这些步骤要消耗ATP。反应式中的能量平衡与整个机器的能量需求，是两个尺度的问题。
 
-### snRNA轮流接触同一段底物
+### snRNA轮流接触同一段底物 { #snrna }
 
 剪接体由小核RNA及其结合蛋白组成的**snRNP**和许多辅助蛋白动态装配。RNA之间的配对不仅用于识别底物，也参与搭建催化中心。U1首先与5′位点配对；U2随后占据分支区，使分支A从双链中凸出，暴露可反应的2′-OH。[^spliceosome]
 
@@ -218,7 +218,7 @@ a：U6接替U1接触5′位点；b：U2配对后分支A凸出；c：U2与U6配�
 
 U4起初与U6配对，使U6保持未激活状态。后续重排解除这组配对，U1与U4退出相应接触；U6接触5′位点并与U2共同形成RNA催化核心，**U5帮助两侧外显子对齐**。Prp8等蛋白提供结构支撑，ATP依赖的重排酶控制这些转换。
 
-完成两次反应后，mRNA释放，套索与剪接体被拆解，各snRNP得以再次使用。因此，剪接体并不是一把沿RNA滑动的固定“剪刀”，其活性中心是在正确底物上逐步建立的。
+完成两次反应后，mRNA释放，套索与剪接体被拆解，各snRNP得以再次使用。下一轮剪接时，RNA与蛋白质接触重新组合，在新的底物上建立活性中心。
 
 </div>
 
@@ -242,7 +242,7 @@ U4起初与U6配对，使U6保持未激活状态。后续重排解除这组配�
 
     再看**6→7道**：13S位点的另一种突变即使恢复了与U1的配对，也没有恢复剪接。底物还要通过其他识别和催化步骤，U1配对只是其中一环。原实验因而同时给出了支持证据和适用边界。
 
-### 外显子选择与不同的剪接装置
+### 外显子选择与不同的剪接装置 { #_3 }
 
 真核内含子可很长，仅靠短GU/AG信号难以可靠选点。SR蛋白可结合**外显子剪接增强子（ESE）**，帮助两侧招募U1、U2AF等，让一个外显子的边界先被识别；随后，相邻外显子上的机器再跨内含子组织起来。不同hnRNP和其他调控蛋白则可遮蔽位点、改变RNA构象或影响因子招募。[^watson-processing]
 
@@ -349,7 +349,7 @@ SR蛋白位于外显子内部，U2AF靠近上游3′位点，U1靠近下游5′�
 
 </div>
 
-## rRNA：切割与核糖体装配交错进行 { #rrna-processing }
+## rRNA成熟与核糖体装配 { #rrna-processing }
 
 哺乳动物Pol I合成的**47S前体rRNA**含18S、5.8S和28S rRNA，以及外部与内部转录间隔区（ETS、ITS）。早期修剪产生45S等中间体；接下来的切割逐步分出小亚基和大亚基的RNA路线。Pol III单独转录5S rRNA，后者再进入大亚基装配。[^rrna-processing]
 
@@ -376,7 +376,7 @@ U3等核仁小RNP、核酸酶、RNA解旋酶和装配因子在核仁中持续重
 
 </div>
 
-### 引导RNA怎样把修饰酶带到一个核苷酸上
+### snoRNA引导的修饰 { #rna_1 }
 
 许多rRNA修饰由**小核仁RNA（snoRNA）**定位。snoRNA既可来自独立或多顺反子转录本，许多也从宿主基因的内含子中加工而来。snoRNA与目标附近序列配对，把某个核苷酸放到复合体中的催化蛋白旁；引导RNA提供位置，蛋白质完成相应化学反应。[^rrna-processing]
 
@@ -411,13 +411,13 @@ box C/D snoRNA的引导区与靶RNA配对，Me标出甲基化位置。Krebs等�
 a：核糖2′-O-甲基化；b：尿苷转为假尿苷Ψ，N1–C1′连接变为C5–C1′。两种化学反应也存在于真核rRNA中。Yip等，图3。[^archaeal-rna-processing]
 ///
 
-修饰常集中在核糖体功能中心附近，能影响局部折叠、稳定性和相互作用；另一些snoRNA主要帮助前体折叠或切割。要判定某个位点的作用，需要把修饰检测与酶活、装配和核糖体功能联系起来。它们并不是一组用来标记“这一段保留、那一段剪掉”的通用记号。
+修饰常集中在核糖体功能中心附近，能影响局部折叠、稳定性和相互作用；另一些snoRNA主要帮助前体折叠或切割。要判定某个位点的作用，需要把修饰检测与酶活、装配和核糖体功能联系起来。
 
 ## tRNA：准确的末端与成熟构象 { #trna-processing }
 
 成熟tRNA必须把反密码子和携带氨基酸的受体端放到正确空间位置。前导/拖尾序列的移除、CCA添加、内含子剪接及多种修饰，都围绕这一共同结构展开，但不同谱系可以使用不同装置到达它。[^trna-maturation]
 
-### RNase P切出5′端
+### RNase P切出5′端 { #rnase-p5 }
 
 RNase P通常在成熟tRNA第一个核苷酸之前切开，去掉5′前导序列。细菌、古菌以及许多真核核内系统中的RNase P是RNA—蛋白复合物；植物细胞核与若干细胞器等则使用**纯蛋白型RNase P（PRORP）**承担相同切割。
 
@@ -439,13 +439,13 @@ RNase P通常在成熟tRNA第一个核苷酸之前切开，去掉5′前导序�
 
     其余泳道还改变了蛋白比例和PEG条件，不能合在一起归纳成“加蛋白总会更快”。尤其这里的高Mg²⁺条件不是细胞内条件；细胞中的C5有助于底物识别与高效催化，RNA可独立反应并不意味着蛋白无用。
 
-### 3′端、CCA与少见的逆向添加
+### 3′端、CCA与少见的逆向添加 { #3cca }
 
 tRNA的3′拖尾可由tRNase Z或外切酶去除。随后，**CCA添加酶**利用tRNA的结构和自身活性中心，按次序选择C、C、A，无需一条互补核酸模板；末端A为后续氨酰化提供受体。已有基因编码CCA的tRNA，也可能通过同类酶修复受损末端。[^trna-maturation]
 
 另一个特别的末端是组氨酸tRNA的**G−1**。在酵母等系统中，Thg1把G加在tRNA的5′端，形成少见的3′→5′核苷酸添加；细菌的这一G常由基因编码。不同生物的HisRS识别规则有差异，并非所有真核胞质tRNA^His^都必须保有G−1。[^thg1]
 
-### tRNA内含子的切除与连接
+### tRNA内含子的切除与连接 { #trna }
 
 细菌某些tRNA的I类内含子可以自剪接；古菌与真核的许多tRNA内含子则由**剪接内切酶**先切开两侧边界，再由连接酶接合半分子。典型真核tRNA内含子靠近反密码子环，酶同时读取成熟tRNA结构和局部构象；古菌的BHB识别允许更灵活的位置。[^trna-maturation]
 
@@ -473,24 +473,38 @@ tRNA还带有假尿苷、二氢尿苷、肌苷及多种碱基/核糖修饰。它
 
 !!! info "CCA也能变成降解标记"
 
-    CCA添加酶还能参与结构检查。对于部分结构不稳定、具有相应受体茎及5′端GG等条件的tRNA或tRNA样RNA，酶可再次加入CCA，留下**CCACCA**尾，将其引向降解。稳定tRNA与这些底物在酶上的折叠行为不同，使同一装置既能完成成熟，又能标记不合适的结构。[^ccacca]
+    CCA 添加酶还能参与结构检查。某些具有 5′ 端 GG、受体茎又不稳定的 tRNA 或 tRNA 样 RNA，加完第一套 CCA 后会在酶上重新配对，再接受第二套 CCA。留下的 **CCACCA** 尾可使这些底物更易被降解。[^ccacca]
+
+    ![MENβ的tRNA样RNA先加CCA，受体茎重新配对后再加第二套CCA](_img/rna_processing/ccacca-repairing.png){ width="825" loading=lazy }
+    /// caption
+    Wilusz 等图 2E 的模型，底物是小鼠 MENβ 来源的 tRNA 样小 RNA。蓝色为第一次加入的 CCA，红色标出原先受体茎中不稳定的区域；从左向右看四个状态。[^ccacca]
+    ///
+
+    第一次加尾后，新加入的两个 C 可与 5′ 端的两个 G 配对，原来的部分茎结构则鼓出。这样，第一次加入的 A 成为新的**辨别碱基**，其 3′-OH 又处在可以接受加尾的位置，酶便继续加入 C、C、A。稳定的受体茎不容易作这种重排，所以同一酶可以在正常底物上完成 CCA，在特定不稳定底物上留下更长的尾。
+
+    ![人源CCA添加酶对mascRNA及不同结构区域嵌合变体的加尾反应](_img/rna_processing/ccacca-addition-gel.png){ width="420" loading=lazy }
+    /// caption
+    原研究图 2B：WT 为 mascRNA，Mut1 将其受体茎换成 MENβ 的相应片段；Mut2–4 替换其他臂，作为结构区域对照。上排底物尚无 CCA，下排预先已有 CCA；分别用标记 CTP 或 ATP 检测新加入的核苷酸。[^ccacca]
+    ///
+
+    上排 WT 获得第一套 CCA，替换其他臂的 Mut2–4 也主要停在这一长度；换掉受体茎的 Mut1 则出现较慢迁移的长尾产物。下排更容易看出差别：WT 已有 CCA，基本不再掺入标记；Mut1 仍可继续加尾。**WT 不显带是未掺入新的标记，并非没有加入 RNA 或 RNA 已被降解。** 这些结果将受体茎结构接到了加尾次数；随后降解实验检验带长尾底物的周转。结构与 5′ 端序列共同限制了这一路径的适用范围，并不是所有异常 tRNA 都接受第二套 CCA。
 
 ## RNA编辑与化学修饰 { #rna-editing-modification }
 
-### 脱氨怎样改变RNA读法
+### 脱氨怎样改变RNA读法 { #rna_2 }
 
 **RNA编辑（RNA editing）**使RNA在特定位点与DNA模板给出的序列不同。动物ADAR1/ADAR2可在双链RNA中把腺苷A脱氨为**肌苷I**；I的配对性质接近G，因此逆转录和翻译常把该位置读作G。少数事件改变编码信息，大量A→I编辑则位于重复序列形成的非编码双链区，帮助减少内源双链RNA被误当作异常输入而触发先天免疫。[^adar-editing]
 
 ![胞苷脱氨变成尿苷，腺苷经ADAR脱氨变成肌苷](_img/rna_processing/editing-deamination.jpg){ width="420" loading=lazy }
 /// caption
-两种反应都移除碱基上的氨基，却改变不同碱基。A→I的化学产物是肌苷，不能直接写成把A变成G。Watson等，图14–31。[^watson-processing]
+两种反应都移除碱基上的氨基，却改变不同碱基。A→I产生肌苷，其碱基在后续配对和翻译中常按G读取。Watson等，图14–31。[^watson-processing]
 ///
 
 **APOBEC1复合体**提供了清楚的C→U实例。在人小肠中，apoB mRNA的一个CAA谷氨酰胺密码子被编辑成UAA终止密码子，产生较短的apoB48；人肝脏中相应位点通常不这样编辑，产生apoB100。一个核苷酸的改变，便把同一基因的产物接到不同脂蛋白代谢任务上。这种组织分工不能原样推广到所有哺乳动物。[^watson-processing]
 
 陆生植物线粒体和质体中的编辑以C→U为主，部分谱系还有U→C。PPR蛋白等识别特定位点，编辑可恢复保守氨基酸、补出起始或终止密码子，也可作用于非编码RNA。具体位点的功能，需要结合编辑缺失后的分子和生理表型判断。[^organelle-rna-editing]
 
-### gRNA引导U的插入与删除
+### gRNA引导U的插入与删除 { #grnau }
 
 锥虫等动基体生物的线粒体采用另一种大规模改写方式：**引导RNA（gRNA）**与待编辑mRNA配对，编辑复合体切开不匹配区域，再加入或去掉U，最后连接断口。常见gRNA多数由线粒体小环DNA编码，但也有大环编码的gRNA以及COII等顺式引导例外。[^organelle-rna-editing]
 
@@ -513,17 +527,46 @@ gRNA的5′锚定区先配到待编辑区的下游。局部配对关系把需要
 - **删除**时，U特异性外切酶去掉多余的末端U。
 - 配对合适后，RNA连接酶封合两个mRNA片段。
 
-连续编辑可逐步建立下一条gRNA的锚定位点，整体常沿mRNA的3′→5′方向推进。gRNA并不把自身的U剪下来“赠给”mRNA；插入原料与引导信息来自不同分子。
+连续编辑可逐步建立下一条gRNA的锚定位点，整体常沿mRNA的3′→5′方向推进。gRNA通过配对提供位置信息，插入的U则来自TUTase使用的UTP。
 
 </div>
 
 </div>
 
-### m⁶A等修饰怎样影响RNA的命运
+### m⁶A等修饰怎样影响RNA的命运 { #m6arna }
 
 化学修饰还包括m⁶A、m⁵C、假尿苷和2′-O-甲基化等。以哺乳动物mRNA的**N⁶-甲基腺苷（m⁶A）**为例，METTL3–METTL14复合体在适当序列与结构环境中催化甲基化，偏好DRACH相关位点；其中D为A/G/U，R为A/G，H为A/C/U，中间A是候选修饰位。[^rna-modifications]
 
-含YTH结构域的蛋白等识别因子结合部分修饰位点后，可影响剪接、输出、翻译或降解；去甲基化酶则受底物与区室限制。“写入者—读取者—擦除者”有助于整理分工，但一个DRACH序列不等于一个真实m⁶A位点，一个富集峰也不能独自说明该位点怎样改变表达。
+修饰的作用要经具体结合关系传递。一个较清楚的例子是 **YTHDF2 促进部分含 m⁶A 转录本的降解**：它的 C 端 YTH 结构域识别修饰位点，N 端则结合 CCR4–NOT 复合物的支架 CNOT1，把去腺苷酸化装置带到同一条 RNA 上。CNOT1 组织复合物，其中 CAF1／POP2、CCR4A／B 等催化亚基缩短 poly(A) 尾，使转录本更容易进入后续降解。[^ythdf2-ccr4-not]
+
+![YTHDF2识别m6A并经CNOT1招募CCR4NOT去腺苷酸化酶](_img/rna_processing/ythdf2-ccr4-not.png){ width="480" loading=lazy }
+/// caption
+Du 等图 5d 的机制模型：蓝色 YTHDF2 一端接 m⁶A，另一端接橙色 CNOT1；绿色与紫色组分承担去腺苷酸化。该模型整合了结合与功能实验。[^ythdf2-ccr4-not]
+///
+
+???+ abstract "先让报告RNA出现，再看poly(A)尾怎样缩短"
+
+    Du 等在 HeLa-tTA 细胞中使用 β-globin 报告基因，在其 3′ UTR 接入 PLAC2 的一段序列，其中含两个 m⁶A 基序。对照构建改变这两个候选 A；图 a 画的是 DNA，因此显示 A→T，转录出的 RNA 相应为 A→U。研究者短时诱导报告基因，再加回 tetracycline 关闭新转录，按时间取样。[^ythdf2-ccr4-not]
+
+    ![带PLAC2修饰基序或基序突变的报告构建及polyA缩短时间过程](_img/rna_processing/ythdf2-reporter-tail.png){ width="575" loading=lazy }
+    /// caption
+    原研究图 1a、d：关停转录后的 0、2.5、5、7.5 小时。提取 RNA 后，在固定位置用 RNase H 分出 3′、5′ 片段，再用 Northern 检测；A₁₆₀ 与 A₀ 标示长尾及无尾位置。[^ythdf2-ccr4-not]
+    ///
+
+    左组 3′ 片段随时间更快地向下方 A₀ 位置移动，说明 poly(A) 尾缩短较快；右侧基序突变组移动较慢。下方 5′ 片段长度保持稳定，因此上方的迁移变化可以集中解释为尾长变化。这里的 RNase H 切割是取样后的分析步骤，细胞内发生的是逐步去腺苷酸化。
+
+    这组比较把候选修饰基序与尾长变化联系起来。为检验其中的蛋白质连接，原研究进一步检测修饰富集和 YTHDF2 结合，用纯化蛋白确认 YTHDF2 与 CNOT1 的直接接触，再通过去腺苷酸化组分的失活或敲低把结合关系接到尾长和周转。几类证据合在一起，才支持上面的机制。
+
+其他修饰作用仍要按位置、读取蛋白与底物区分。[^rna-modifications]
+
+| 作用环节 | 可能涉及的分子过程 |
+| --- | --- |
+| 剪接与输出 | 核内识别因子改变 RNA 加工或输出复合物的装配 |
+| 翻译 | 修饰及结合蛋白影响核糖体招募或读取 |
+| 降解 | 读取蛋白招募去腺苷酸化、去帽或核酸酶装置；YTHDF2 是其中一个实例 |
+| 去甲基化 | 相应酶在所在区室接触并处理 RNA 底物 |
+
+因此，DRACH 提供候选序列，富集峰提供定位线索；要判断某个位点的作用，还需测定修饰、结合伙伴及其扰动后果。不同的 m⁶A 位点并不一律使 RNA 降解。
 
 ## 加工、输出与RNA质量控制 { #rna-quality-control }
 
@@ -538,7 +581,7 @@ mRNP经核孔后继续重塑，为翻译建立新的结合状态。图中为概�
 
 核内外切体需要辅助因子解开RNA结构并投递底物。MTR4及TRAMP、NEXT、PAXT等不同适配系统参与这些过程，把间隔区碎片、异常前体、装配失败的mRNP和许多短寿命转录本交给降解装置；这些辅助系统的分布与主要底物因谱系而异。[^rna-exosome]
 
-### 翻译还能暴露RNA上的问题
+### 翻译还能暴露RNA上的问题 { #rna_3 }
 
 核糖体是否正常延伸和终止，给质量控制提供了另一组线索。三类常见通路可按触发情景比较。[^translation-coupled-surveillance]
 
@@ -561,7 +604,7 @@ mRNP经核孔后继续重塑，为翻译建立新的结合状态。图中为概�
 
 miRNA、siRNA和piRNA将短RNA序列装载到Argonaute家族蛋白中，使其按配对关系寻找靶标。它们的前体来源和成熟路线不同，长度虽有典型范围，却不能单独作为分类依据。[^mirna-biogenesis][^rnai-mechanism]
 
-### 动物miRNA：从发夹到引导链
+### 动物miRNA：从发夹到引导链 { #mirna }
 
 <div class="grid" markdown>
 
@@ -597,7 +640,7 @@ Exportin-5帮助前体输出；胞质Dicer再切开近环端，形成约22 nt的
 
     **mirtron**先由剪接与去分支产生发夹前体，可绕过Drosha。**miR-451**的短发夹则可绕过Dicer，由AGO2切割后再修剪。共同终点是形成可工作的引导RNA—AGO复合物，不能要求每一个miRNA都走齐图中所有步骤。[^mirna-biogenesis]
 
-### siRNA：长双链RNA怎样成为短引导片段
+### siRNA：长双链RNA怎样成为短引导片段 { #sirnarna }
 
 siRNA通常来自较长双链RNA，Dicer或Dicer样酶把它切成短双链，再装入AGO。**Dicer切前体，具有切割活性的AGO切靶RNA**；两种切割发生在不同阶段。[^rnai-mechanism]
 
@@ -637,7 +680,7 @@ siRNA通常来自较长双链RNA，Dicer或Dicer样酶把它切成短双链，�
 
     后续的引导链装载和靶切割需要另外检验。这张胶说明短RNA的来源与长度，不能单独判定哪条链最终进入AGO。
 
-### 植物小RNA与动物piRNA
+### 植物小RNA与动物piRNA { #rnapirna }
 
 植物miRNA主要由核内DCL1加工；DCL2/3/4与RDR家族则参与形成不同siRNA群，再交给有不同偏好的AGO。其中，**24 nt siRNA**可进入RNA引导的DNA甲基化，另一些小RNA通过切割RNA、抑制翻译或特定组织间移动发挥作用。[^rnai-mechanism]
 
@@ -754,3 +797,5 @@ RNA加工同时改变长度、末端、序列和结合状态，一种检测通�
 [^rnai-short-products]: Zamore PD, Tuschl T, Sharp PA, Bartel DP. [RNAi: double-stranded RNA directs the ATP-dependent cleavage of mRNA at 21 to 23 nucleotide intervals](https://doi.org/10.1016/S0092-8674(00)80620-0). *Cell*. 2000;101:25–33。图3经Weaver图16.26转引；本页解读前体生成短RNA的反应，不把提取物体系的ATP需求推广为所有Dicer的固有要求。
 
 [^pirna-biogenesis]: Hen1家族的piRNA末端甲基化见[小鼠研究](https://pubmed.ncbi.nlm.nih.gov/17652135/)与[果蝇Pimet研究](https://pubmed.ncbi.nlm.nih.gov/17606638/)；哺乳动物初级piRNA加工、PIWI装载和部分系统中的ping-pong扩增 见 Fu 与 Wang 的[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC4114582/)。
+
+[^ythdf2-ccr4-not]: Du H 等. [YTHDF2 destabilizes m⁶A-containing RNA through direct recruitment of the CCR4–NOT deadenylase complex](https://www.nature.com/articles/ncomms12626). *Nat Commun* 7:12626 (2016)，doi:10.1038/ncomms12626；[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC5007331/)。采用图 5d 与图 1a、d，保留构建、时间和片段标记。报告先诱导 3 小时，再加回 1 μg/mL tetracycline；RNase H 分割后用变性 PAGE／Northern 解析尾长。直接结合及功能干预另见图 4e/f、3g、5a。

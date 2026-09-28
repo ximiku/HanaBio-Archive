@@ -241,7 +241,7 @@ SRP的信号结合端位于肽链出口附近。图B的红色螺旋代表疏水�
 
     GET系统的前靶向复合物先接住疏水段，再交给ATP酶Get3；膜上的Get1/Get2接受货物并协助插入，随后Get3返回胞质。哺乳动物的相应因子包括TRC40。部分尾锚定底物使用内质网膜蛋白复合体EMC等其他路线，选择与疏水性、末端长度和细胞条件有关。部分短分泌前体也可经Sec62/Sec63辅助的Sec61途径在翻译后入腔，由BiP等提供帮助。[^er-insertion-modern]
 
-进入内质网只确定了初步拓扑，驻留、回收和输出还要读取后续信号。膜泡出芽、融合并不使货物重新穿过脂双层，因此原来朝内质网腔的结构域，沿高尔基体和分泌囊泡运输后，抵达质膜时仍朝非胞质侧。分泌通路的后续路线见[内膜系统与囊泡运输](../cell/endomembrane.md#er-protein-entry)。
+进入内质网只确定了初步拓扑，驻留、回收和输出还要读取后续信号。膜泡出芽、融合并不使货物重新穿过脂双层，因此原来朝内质网腔的结构域，沿高尔基体和分泌囊泡运输后，抵达质膜时仍朝非胞质侧。分泌通路的后续路线见[内膜系统与囊泡运输](../cell/endomembrane.md#er-golgi-traffic)。
 
 ### 核、线粒体、质体与过氧化物酶体 { #organelle-protein-import }
 
@@ -328,15 +328,38 @@ A为前体加工，B为胰岛素原结构模型，C把成熟与分泌路径相�
 
 ??? info "几种改变残基本身的成熟反应"
 
-    - **羟化与羧化。** 胶原的Pro、Lys羟化影响三股螺旋稳定及后续修饰，分泌后的交联又增强纤维性质。凝血因子中维生素K依赖的γ-谷氨酰羧化形成γ-羧基谷氨酸，有利于结合Ca$^{2+}$和相应膜表面。
+    - **羟化与羧化。** 胶原的Pro、Lys羟化影响三股螺旋稳定及后续修饰，分泌后的交联又增强纤维性质。凝血因子中维生素K依赖的γ-谷氨酰羧化形成γ-羧基谷氨酸，有利于结合Ca$^{2+}$和相应膜表面。[^residue-conversions]
     - **酪氨酸硫酸化。** 高尔基体腔内的酶以PAPS为硫酰基供体，在Tyr酚羟基上建立硫酸酯，可改变分泌蛋白和受体的结合性质。
-    - **瓜氨酸化。** 肽基精氨酸脱亚氨酶使蛋白质中的Arg转成瓜氨酸，改变侧链电荷。这是通常视为不可逆的残基转化，并非在Arg上加一分子游离瓜氨酸。
-    - **C端酰胺化。** 许多肽类激素的前体末端带有额外Gly。肽酰甘氨酸α-酰胺化单加氧酶系统先羟化该Gly，再裂解中间体；Gly的氮留作前一个残基末端的酰胺氮，其碳骨架作为乙醛酸离去。例如促甲状腺激素释放激素（TRH）的成熟C端是Pro–NH$_2$。
-    - **羟腐胺赖氨酸修饰。** eIF5A特定位点的Lys接受来自亚精胺的氨基丁基，经脱氧羟腐胺赖氨酸中间体和后续羟化形成hypusine。这是eIF5A发挥翻译功能的重要条件。
+    - **瓜氨酸化。** 肽基精氨酸脱亚氨酶使蛋白质中的Arg转成瓜氨酸，改变侧链电荷。这一脱亚氨反应通常视为不可逆。
     - **载体蛋白的辅基臂。** 酰基载体蛋白ACP从CoA取得4′-磷酸泛酰巯基乙胺基，连接到特定Ser上；末端巯基可携带酰基，随柔性臂在不同活性部位间移动，见[脂肪酸合酶](../biochem/lipid_synthesis.md#fatty-acid-synthase)。[^phosphopantetheinylation]
     - **碘化与构型转换。** 甲状腺球蛋白上的特定Tyr先被碘化、偶联，蛋白水解后释放甲状腺激素，见[氨基酸衍生的激素](../biochem/aa_synthesis.md#neurotransmitters-hormones-pigments)。一些核糖体合成的肽也会在成熟中把特定L型残基转为D型，例如芋螺毒肽contryphan中的D-Trp。部分羊毛硫抗生素中的D-Ala则来自另一种反应，例如羊毛硫抗生素lacticin 3147先把Ser脱水为脱氢丙氨酸（Dha），再立体专一地还原为D-Ala；这些例子都不是翻译时普遍使用D-氨基酸。[^peptide-stereochemistry]
 
-    这些反应的供体、区室和酶系各不相同，可逆性及作用也随具体反应而变。[^residue-conversions]
+
+??? info "C端酰胺的氮从哪里来"
+
+    许多肽类激素的前体在将来的成熟末端之后，还带有一个 Gly。例如 TRH 的成熟 C 端是 Pro–NH$_2$，前体却先提供 Pro–Gly。末端 Gly 既是反应底物，也贡献最后保留的酰胺氮。[^residue-conversions]
+
+    ![PHM羟化末端Gly后，PAL裂解生成酰胺化肽和乙醛酸](_img/protein_processing/peptide-amidation.jpg){ width="1050" loading=lazy }
+    /// caption
+    Chufán 等图 1：PHM 先生成 α-羟基甘氨酸中间体，PAL 再裂解；跟随图中的 N、中央 C 及 COO⁻，可分别找到酰胺肽和乙醛酸中的对应原子。[^peptide-amidation-reaction]
+    ///
+
+    完整末端可写成 **肽–CO–NH–CH₂–COO⁻**。PHM 在铜、O₂ 与还原当量参与下羟化 Gly 的 α 碳，得到 –NH–CH(OH)–COO⁻；随后，含 Zn 的 PAL 切开该 Gly 的 N–Cα 键。氮留在原来的肽键一侧，成为 **肽–CO–NH₂**；Gly 的 α 碳和羧基碳则一起作为**乙醛酸**离去。Gly 前一个残基原有的羰基保留在酰胺产物中。
+
+    哺乳动物的 PHM 与 PAL 通常来自同一个双功能 PAM 前体；某些其他物种由不同基因提供这两种活性。酰胺化需要前体末端、两步催化及相应辅因子共同配合。[^peptide-amidation-reaction]
+
+??? info "从赖氨酸到hypusine"
+
+    eIF5A 的特定 Lys 可通过两步修饰成为**羟腐胺赖氨酸（hypusine）**。在人 eIF5A 中，底物位置为 Lys50；反应直接发生在已经合成的蛋白上。[^hypusine-reaction]
+
+    ![亚精胺提供氨基丁基，DHPS和DOHH依次将eIF5A赖氨酸转成hypusine](_img/protein_processing/hypusine-synthesis.png){ width="760" loading=lazy }
+    /// caption
+    Park 等综述图 1：a 显示 hypusine 的结构，b 显示多胺，c 显示 eIF5A 上的两步转换；从 b 的亚精胺沿黑箭头接入 c。[^hypusine-reaction]
+    ///
+
+    **DHPS**在 NAD 参与下处理亚精胺，将其四碳的氨基丁基部分转移到 Lys 侧链的 ε 氨基上，形成 deoxyhypusine；亚精胺的另一段释放为 1,3-二氨基丙烷。**DOHH**随后利用 O₂，在新侧链上引入羟基，得到 hypusine。图 a 把赖氨酸骨架、接入的四碳部分及新羟基分别画出，便于与 c 的产物对应。
+
+    这一修饰帮助 eIF5A 参与翻译延伸与终止，尤其影响某些难以顺利延伸的肽段。图中末产物标作活性形式，脱氧中间体在一些体系中仍可保留部分功能，DOHH 的必需性也随生物而异。[^hypusine-reaction]
 
 ### 糖链、二硫键与折叠检查 { #glycosylation-disulfides }
 
@@ -549,7 +572,7 @@ ERAD复合物中的E3在胞质侧建立泛素标记，p97/VCP等AAA$^+$ ATP酶�
 
     Ser→Ala可以阻止该位点磷酸化，同时也改变氢键与侧链性质。Asp/Glu在部分背景下能够模拟负电荷，却不具备磷酸基团相同的体积、价态和可逆读取方式。
 
-    更完整的证据链会把加修饰酶、去修饰酶、读取蛋白、内源位点占据以及定位或活性变化接起来，再用恢复实验检验因果关系。描述实验对象时，明确序列边界、区室、修饰组合、装配状态与时间条件，往往比只报一个蛋白名称更有用。
+    更完整的证据链会把加修饰酶、去修饰酶、读取蛋白、内源位点占据以及定位或活性变化接起来，再用恢复实验检验因果关系。描述实验对象时，还应交代序列边界、区室、修饰组合、装配状态与时间条件，以便比较不同实验中的同一蛋白。
 
 ## 参考资料与延伸阅读 { #references }
 
@@ -675,3 +698,7 @@ ERAD复合物中的E3在胞质侧建立泛素标记，p97/VCP等AAA$^+$ ATP酶�
 [^peptide-stereochemistry]: Jimenez EC等的[Contryphan is a D-tryptophan-containing Conus peptide](https://pubmed.ncbi.nlm.nih.gov/8910408/)，*Journal of Biological Chemistry*. 1996;271:28002–28005，通过肽分析及化学合成核实contryphan中的D-Trp。部分羊毛硫抗生素的D-Ala经Ser脱水为Dha后再还原生成，见[LtnJ功能研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC3264081/)与[NpnJ原研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC4599312/)；这些路线通过脱水与还原建立D构型。
 
 [^propeptide-folding]: Ohta Y等的[Pro-peptide as an intramolecular chaperone: renaturation of denatured subtilisin E with a synthetic pro-peptide](https://pubmed.ncbi.nlm.nih.gov/1686294/)，以合成前肽恢复变性subtilisin E活性，区分前肽的辅助折叠作用与成熟酶本身的催化作用。
+
+[^peptide-amidation-reaction]: Chufán EE 等. [Amidation of Bioactive Peptides: The Structure of the Lyase Domain of the Amidating Enzyme](https://pmc.ncbi.nlm.nih.gov/articles/PMC2993158/). *Structure* 17:965–973 (2009)，doi:10.1016/j.str.2009.05.008，图 1；完整保留 PHM／PAL 两步结构与辅因子。Gly 羟化中间体的氧来源另见原有同位素示踪研究。
+
+[^hypusine-reaction]: Park MH 等. [Post-translational formation of hypusine in eIF5A: implications in human neurodevelopment](https://pmc.ncbi.nlm.nih.gov/articles/PMC9117371/). *Amino Acids* 54:485–499 (2022)，doi:10.1007/s00726-021-03023-6，图 1a–c。DHPS 转移中间体的原始实验见 [Wolff 等，1997](https://pubmed.ncbi.nlm.nih.gov/9188485/)，DOHH 鉴定见 [Park 等，2006](https://pubmed.ncbi.nlm.nih.gov/16371467/)。

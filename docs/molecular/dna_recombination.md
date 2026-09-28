@@ -269,7 +269,7 @@ a为DNA转座子，b为LTR类，c为LINE型。注意元件边界与两侧宿主�
 灰、蓝分别为原供体与靶分子；底部大环含二者及两个绿色元件。图止于共整合体，未画后续位点特异性拆分。Watson等，图12–22。[^gene-book]
 ///
 
-噬菌体Mu在裂解性增殖时也利用复制型转座扩增DNA。MuA识别末端，MuB等因子参与靶DNA选择；已有Mu末端附近还可出现靶免疫，降低重复插入邻近区域的机会。其整合分布有偏好，不能由“转座”推成完全随机。
+噬菌体Mu在裂解性增殖时也利用复制型转座扩增DNA。MuA识别末端，MuB等因子参与靶DNA选择；已有Mu末端附近还可出现靶免疫，降低重复插入邻近区域的机会。这些相互作用共同影响Mu的整合分布。
 
 还有一些元件主要处理单链DNA，采用**HUH核酸酶**。这里的HUH表示催化基序，活性酪氨酸可形成蛋白质—DNA共价中间体；它们的末端和TSD规律不同于上面的典型DDE路线。[^huh-transposition]
 
@@ -279,7 +279,31 @@ a为DNA转座子，b为LTR类，c为LINE型。注意元件边界与两侧宿主�
 | IS91家族 | HUH–Y2，滚环相关的复制型转座 | 起止端不对称，可在终止识别改变时携带邻近序列 |
 | Helitron | RepHel兼有HUH–Y2核酸酶与解旋酶功能，复制与转移相联系 | 经典成员以5′-TC开始、以CTRR-3′结束（R为嘌呤），3′端附近有发卡，通常不形成TSD |
 
-在重建的**Helraiser**实验系统中，研究者用环状中间体和催化突变等证据检验了Helitron的复制、切出与再插入；其中两个催化Tyr和解旋酶功能都重要。3′端附近的发卡参与终止；转座酶若越过正常3′终止端，就可能把下游侧翼DNA一并携带到新位置。[^helitron]
+**Helraiser**是依据蝙蝠 Helitron 序列重建的实验系统，可用来沿末端追踪这类反应。它的 RepHel 蛋白兼有 HUH 核酸酶与解旋酶功能，两个催化 Tyr 均对转座重要；DNA 的新合成仍由宿主复制机制完成。[^helitron]
+
+![Helraiser两端序列、单链切口、复制置换、成环和靶位点插入的模型](_img/dna_recombination/helraiser-replication-cycle.png){ width="800" loading=lazy }
+/// caption
+Kosek 等图 1A、B：蓝色为左端 LTS，黄色为右端 RTS；B 的黄色小圆表示酶与 DNA 的共价连接，红箭头表示切割或链转移。沿上排到中央环，再看右侧靶 DNA。[^helraiser-mechanism]
+///
+
+先看供体左端。催化 Tyr 的羟基攻击一条链在 LTS 边界的磷酸二酯键，切开后，元件的 **5′磷酸端与 Tyr 共价相连**，留在供体侧的 **3′-OH**则可供宿主复制延伸。随着新链合成，原来含元件的一条链被置换出来，供体的双链结构得到补回。
+
+到达 RTS 后，末端识别与再次切割产生元件的 3′-OH；这个羟基攻击先前保存在 Tyr 上的 5′磷酸端，把 **RTS 接回 LTS**，释放首尾相连的单链环。单链环可被补成双链，随后再产生可转移的单链中间体。图中央与左侧的环画出这一扩增路线。
+
+图右侧把转移接到新的 A／T 靶位点：靶链被切开，链转移反应将元件与靶链相接，宿主再补齐缺链，形成双链插入产物。酶—DNA 共价端使切割后的磷酸基团保留在可继续转移的状态；核心化学关系因而是 **Tyr 接住 5′端，再由 3′-OH 接替 Tyr**。这套模型由末端切割、共价复合体结构、圆环回收和转座实验共同支持，并非一次成像直接追踪了全部箭头。[^helraiser-mechanism]
+
+??? abstract "首尾接起来的圆环还能转座吗"
+
+    Grabundzija 等把带细菌复制起点与抗性标记的供体导入 HeLa 细胞，并同时提供转座酶。随后回收低分子量 DNA，转入细菌筛选，获得了 RTS–LTS 精确连接的圆环 pHelRC。再把这个圆环作为供体，就能检验它是否仍可进入转座过程。[^helraiser-circle]
+
+    ![Helraiser圆环供体的构建关系及加转座酶后的抗性细胞克隆比较](_img/dna_recombination/helraiser-circle-assay.png){ width="500" loading=lazy }
+    /// caption
+    原研究图 4a、b：a 比较 pHelRCD 与首尾相接的 pHelRC；b 中绿色为供体加转座酶，紫色为供体加对照质粒。纵轴为哺乳动物抗性细胞克隆数，均值±SEM，3 个生物学重复。[^helraiser-circle]
+    ///
+
+    圆环供体加转座酶时，抗性细胞克隆数明显高于相应背景，支持这个回收产物能继续参与转座。抗性细胞克隆形成是活性的代理读数，需要结合接头鉴定；它并未单独测出每一个化学步骤的速度。
+
+3′ 端附近的发卡帮助正常终止。识别改变时，转座酶可能越过原终点，将下游侧翼一起携带到新位置；但删除发卡并不必然阻止成环，预先接好的圆环供体对这一结构的需求也不同。发卡的作用因此要连同反应阶段来理解。[^helitron]
 
 部分移动系统使用丝氨酸或酪氨酸重组酶；整合接合元件（ICE）又能切出成环、经细胞间接合转移并重新整合。这些机制使转座与位点特异性重组、水平转移相互连接，但不宜仅按“移动”二字把它们当成同一种反应。
 
@@ -317,7 +341,7 @@ McClintock从玉米染色体断裂、基因定位和籽粒斑驳的遗传行为�
 
 **逆转座元件（retrotransposon）**先从原位DNA转录出RNA，再逆转录生成能进入新位置的DNA。典型结果是供体仍在，新位点增加一个拷贝。LTR类两端具有**长末端重复（long terminal repeat，LTR）**，常编码Gag和Pol；RNA与蛋白可在病毒样颗粒中完成逆转录，生成带有完整LTR的线性DNA，再由整合酶插入。酵母Ty、果蝇copia和许多植物LTR元件都采用这一基本逻辑。[^retrotransposons]
 
-逆转座并不等于随机插入。酵母不同Ty家族有不同偏好：Ty1、Ty2、Ty3、Ty4的许多插入靠近RNA聚合酶III转录的基因，Ty5则偏好沉默染色质。整合酶与宿主蛋白的相互作用、局部染色质状态，可以把插入引向特定环境。
+酵母不同Ty家族有不同的插入偏好：Ty1、Ty2、Ty3、Ty4的许多插入靠近RNA聚合酶III转录的基因，Ty5则偏好沉默染色质。整合酶与宿主蛋白的相互作用、局部染色质状态，可以把插入引向特定环境。
 
 ![酵母不同Ty家族在染色体上的插入位置与tRNA基因关系](_img/dna_recombination/ty-insertion-sites.jpg){ width="740" height="212" loading="lazy" }
 /// caption
@@ -376,7 +400,22 @@ a显示相反方向的转录，b、c比较不同拷贝数下配对与核糖体�
 
 动物的**PIWI相互作用RNA（PIWI-interacting RNA，piRNA）**通常长约21–35 nt，3′末端核糖常有2′-O-甲基化。piRNA与PIWI蛋白结合，通过序列互补找到目标RNA；一些核内PIWI还可引导转录沉默。piRNA簇中保存的转座元件片段，为这套系统提供了部分识别信息。[^pirna-control]
 
-果蝇生殖系的**乒乓循环（ping-pong amplification）**把靶RNA切割与小RNA扩增接在一起。Aub携带的反义piRNA引导切割转座子正义RNA，形成可进入Ago3的正义piRNA前体；Ago3再切割相应反义前体，补充Aub所需的piRNA。切割位置使两组piRNA的5′端常具有10 nt重叠，反义1U和正义10A也可形成序列偏好。片段还需修剪和末端成熟，不能把任何一次RNA切割都等同于立即生成完整piRNA。不同动物与细胞的路线并不相同，核内Piwi的作用也不能直接并入Aub–Ago3循环。[^ping-pong]
+果蝇生殖系的**乒乓循环（ping-pong amplification）**把靶 RNA 切割与小 RNA 扩增接在一起。下面固定方向：**蓝色正义 RNA 从左向右为 5′→3′，红色反义 RNA 从右向左为 5′→3′**，两条链始终反向平行。[^ping-pong]
+
+![Aub和Ago3依次切割相反方向RNA，生成新5端及10nt序列重叠的关系示意](_img/dna_recombination/ping-pong-ends.png){ width="800" loading=lazy }
+/// caption
+依据切割与 piRNA 测序研究绘制的链端示意；数字从各引导 RNA 的 5′端起算，圆点示意映射位置，不表示酶内必然形成连续碱基配对。紫色区域为两条成熟引导 RNA 共同覆盖的 10 nt。[^ping-pong-ends]
+///
+
+**第一步，Aub 产生 Ago3 的前体。** Aub 携带反义 piRNA，识别转座子正义转录本。切点位于与引导链第 10、11 位对应的靶核苷酸之间；因此，图中正义 RNA 的**右侧片段**获得一个新的 5′端。这个片段可装入 Ago3，经过 3′端加工和末端成熟，成为正义 piRNA。切点确定新 5′端，后续加工才确定另一端，切割产物并非只有 10 nt 长。
+
+**第二步，Ago3 补充 Aub 的前体。** Ago3 上的正义 piRNA 再识别反义前体，并在同样相对的 10／11 位切开。这次获得新 5′端的是图中**左侧反义片段**，它可经装载与成熟补充 Aub。两次切割都使靶 RNA 被破坏，又为另一种 PIWI 蛋白提供新的引导 RNA。
+
+把成熟产物映射回同一段序列，就得到图中第三行：Ago3 的第 1 位对应 Aub 的第 10 位，Ago3 的第 10 位对应 Aub 的第 1 位，两个 5′区域因此覆盖同一段 **10 nt**。后面的测序图统计的正是这种相反方向、相同坐标区段的重叠，而不是两个蛋白之间的空间距离。
+
+Aub 所结合反义 piRNA 常有 **1U**偏好，Ago3 所结合正义 piRNA 常有 **10A**偏好。这些是装载与靶识别选择造成的统计倾向，不能只用“首位 U 与 A 配对”解释：引导链第 1 位通常容纳在蛋白的 5′端口袋中，研究还发现 Aub／Siwi 对相应靶 A 的独立偏好。[^ping-pong-ends]
+
+片段的修剪、末端甲基化与装载仍是成熟所需环节，不同动物和细胞的路线也有差别。核内 Piwi 可经另一分支参与转录沉默，其作用与这里的 Aub–Ago3 胞质切割循环相互联系。[^pirna-control]
 
 ???+ abstract "同一个父本，不同母本带来的小RNA"
 
@@ -391,7 +430,7 @@ a显示相反方向的转录，b、c比较不同拷贝数下配对与核糖体�
 
     右侧还保留了一个序列线索：NA携带的P片段在5′端截短，母源及子代piRNA的分布与这个缺失边界有关。图把小RNA来源、后代小RNA状态和生殖组织表型接在一起；卵巢照片本身并不是新转座接头的直接检测，也不是“单独补入piRNA就足够”的实验。
 
-piRNA并非只针对逆转座子，DNA转座子也是重要目标；部分piRNA还调节宿主RNA。因此，P元件杂交中母源保护说明的是特定小RNA信息怎样先到达胚胎，而不是一个适用于所有转座元件的单一遗传开关。
+piRNA并非只针对逆转座子，DNA转座子也是重要目标；部分piRNA还调节宿主RNA。P元件杂交中的母源保护，展示了特定小RNA信息在胚胎早期传递并影响后代沉默的过程。
 
 ## 移动元件留下什么 { #transposon-consequences }
 
@@ -446,3 +485,9 @@ piRNA并非只针对逆转座子，DNA转座子也是重要目标；部分piRNA�
 [^sva-transduction]: Damert A, Raiz J, Horn AV, et al. [5′-Transducing SVA retrotransposon groups spread efficiently throughout the human genome](https://pmc.ncbi.nlm.nih.gov/articles/PMC2775593/). *Genome Research*. 2009;19:1992–2008。文中区分5′转导、3′转导及两端携带，并讨论转录起始与剪接捕获的贡献。
 [^ping-pong]: Gunawardane LS, Saito K, Nishida KM, et al. [A slicer-mediated mechanism for repeat-associated siRNA 5′ end formation in Drosophila](https://pubmed.ncbi.nlm.nih.gov/17322028/). *Science*. 2007;315:1587–1590。Aub/Ago3切割与5′端10-nt重叠的证据需结合piRNA成熟步骤理解；跨动物差异见Ozata等2019综述。
 [^maternal-pirna-experiment]: Brennecke J, Malone CD, Aravin AA, Sachidanandam R, Stark A, Hannon GJ. [An epigenetic role for maternally inherited piRNAs in transposon silencing](https://pmc.ncbi.nlm.nih.gov/articles/PMC2805124/). *Science*. 2008;322:1387–1392；DOI 10.1126/science.1165171，图4。A的黑/橙条分别是亲代卵巢/0–2 h胚胎；B均以Harwich为父本，分别比较Lk、NA、w¹¹¹⁸母本。保留全部面板、坐标和NA的截短边界。
+
+[^helraiser-mechanism]: Kosek D 等. [The large bat Helitron DNA transposase forms a compact monomeric assembly that buries and protects its covalently bound 5′-transposon end](https://pmc.ncbi.nlm.nih.gov/articles/PMC9364955/). *Mol Cell* (2021)，doi:10.1016/j.molcel.2021.07.028，图 1A、B。结构捕获了催化 Tyr 与 LTS 5′端的共价连接；图 B 为综合反应模型，复制需要宿主机制。
+
+[^helraiser-circle]: Grabundzija I 等. [A Helitron transposon reconstructed from bats reveals a novel mechanism of genome shuffling in eukaryotes](https://www.nature.com/articles/ncomms10716). *Nat Commun* 7:10716 (2016)，doi:10.1038/ncomms10716，图 4a、b；[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC4778049/)。发卡删除、末端连接与圆环供体实验另见图 4c、d。
+
+[^ping-pong-ends]: 链端图由本站依据 Gunawardane 等（2007）与 Wang W 等的[The Initial Uridine of Primary piRNAs Does not Create the Tenth Adenine That Is the Hallmark of Secondary piRNAs](https://pmc.ncbi.nlm.nih.gov/articles/PMC4337030/)绘制，*Mol Cell* 56:708–716 (2014)，doi:10.1016/j.molcel.2014.10.016。后者图 1 比较首位配对模型，并以果蝇卵巢 Aub／Ago3 piRNA 测序及 Siwi 生化实验研究偏好；图示只追踪切点、方向与映射坐标，不表示具体 piRNA 序列或蛋白结构。

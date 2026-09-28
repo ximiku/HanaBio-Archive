@@ -1,4 +1,4 @@
-# 原核基因表达调控
+# 原核基因表达调控 { #_1 }
 
 大肠杆菌换一种糖来吃，并不需要先换一套基因组。它已有利用多种碳源的酶，却会随环境改变这些酶的合成量：乳糖出现时增加乳糖通透酶和β-半乳糖苷酶，氨基酸短缺时重新分配转录与翻译资源。DNA上的调控序列、能感受代谢物的蛋白质，以及正在形成的RNA结构，把环境变化接到一个个具体反应上。[^regulatory-layers]
 
@@ -54,7 +54,7 @@ DNA模板数目同样会影响输出。质粒拷贝数、染色体复制状态�
 
 ## 乳糖操纵子：两个输入怎样汇合 { #lac-operon }
 
-### LacI读取诱导物
+### LacI读取诱导物 { #laci }
 
 大肠杆菌的 *lacZ* 编码β-半乳糖苷酶，*lacY* 编码乳糖通透酶，*lacA* 编码硫代半乳糖苷转乙酰酶。前两者分别帮助分解和摄入乳糖；LacA则催化另一类反应，将乙酰基从乙酰CoA转给某些β-半乳糖苷。三个基因共同转录，*lacI* 由自己的启动子表达，产生LacI阻遏蛋白。[^lac-operon]
 
@@ -69,7 +69,7 @@ DNA模板数目同样会影响输出。质粒拷贝数、染色体复制状态�
 
 实验中常用IPTG诱导，因为它能结合LacI，却不被LacZ作为正常底物水解。X-gal的用途不同：它被β-半乳糖苷酶作用后形成蓝色产物，主要用来报告酶活。蓝白斑实验常把二者放在同一培养基里，一个负责诱导表达，一个负责把酶活显示出来。
 
-### CRP–cAMP读取碳源状态
+### CRP–cAMP读取碳源状态 { #crpcamp }
 
 LacI离开以后，*lac* 启动子仍不一定达到高表达。cAMP与**CRP（又称CAP）**结合，改变其DNA结合结构域的取向；CRP–cAMP占据启动子上游位点，接触RNA聚合酶α亚基的C端结构域（αCTD），帮助招募聚合酶。
 
@@ -86,7 +86,11 @@ LacI离开以后，*lac* 启动子仍不一定达到高表达。cAMP与**CRP（�
 
 <div markdown>
 
-葡萄糖通过磷酸转移酶系统摄入时，会改变相关蛋白的磷酸化状态，进而影响腺苷酸环化酶与cAMP水平。未磷酸化的EIIA$^{\mathrm{Glc}}$还能抑制LacY，减少乳糖进入，这称为**诱导物排阻**。[^catabolite-control]
+在常用的大肠杆菌培养条件下，葡萄糖经磷酸转移酶系统（PTS）大量摄入时，磷酰基从磷酸烯醇式丙酮酸经 EI、HPr、EIIA$^{\mathrm{Glc}}$ 等逐级传给糖。EIIA 的未磷酸化比例因而增加，磷酸化 EIIA 对腺苷酸环化酶的刺激随之减弱，cAMP 水平降低，CRP 对 *lac* 启动子的激活减弱。[^catabolite-control][^pts-adenylate-cyclase]
+
+葡萄糖供应下降、经 PTS 的摄取减慢时，磷酸化 EIIA 的比例通常回升，更有利于腺苷酸环化酶生成 cAMP，CRP–cAMP 的激活随之增强。这条关系把糖摄取的状态接到了转录起始。
+
+EIIA 还有另一条支路：**未磷酸化的 EIIA 可结合并抑制 LacY**，减少乳糖进入，称为**诱导物排阻**。磷酸化比例上升时，这一抑制减轻，乳糖进入后，由其生成的异乳糖更容易积累并降低 LacI 的占据。[^catabolite-control]
 
 因此，分解代谢物阻遏同时涉及启动子激活与糖转运。同一种糖的摄取状态，可以一边改变新酶的合成，一边限制已有通透酶的活动。
 
@@ -96,13 +100,14 @@ LacI离开以后，*lac* 启动子仍不一定达到高表达。cAMP与**CRP（�
 
 </div>
 
-| 环境与调节状态 | 典型表达结果 |
-| --- | --- |
-| 没有足够诱导物，LacI保持高占据 | 很低的基础表达 |
-| 诱导物足够，但CRP激活较弱 | LacI阻遏可解除，表达仍因激活不足而有限 |
-| 有诱导物，且CRP–cAMP能充分激活 | 较高表达 |
+| 葡萄糖／乳糖条件 | EIIA 与 CRP 支路 | LacY 与 LacI 支路 | 典型 *lac* 表达 |
+| --- | --- | --- | --- |
+| 葡萄糖充足，无乳糖 | 未磷酸化 EIIA 较多，cAMP 较低、CRP 激活弱 | LacI 保持阻遏 | 很低 |
+| 葡萄糖充足，有乳糖 | CRP 激活仍较弱 | LacY 还受诱导物排阻；LacI 解除程度取决于实际进入的诱导物 | 通常较低 |
+| 葡萄糖少，无乳糖 | 磷酸化 EIIA 较多，cAMP–CRP 激活较强 | 缺少诱导物，LacI 仍阻遏 | 仍很低 |
+| 葡萄糖少，有乳糖 | cAMP–CRP 激活较强 | LacY 抑制减轻；诱导物积累后 LacI 占据下降 | 较高 |
 
-这是常用条件下的定性比较。实际水平还会随糖浓度、菌株、培养历史和摄取速率改变。
+这里比较的是具有相应 PTS、LacY 和调控元件的大肠杆菌。实际水平还随糖浓度、菌株、培养历史、摄取速率及其他碳源改变；表中“有乳糖”也需要经过摄取，才能成为 LacI 所读取的细胞内信号。
 
 ### 顺反实验怎样分开“位点”和“产物” { #lac-cis-trans-test }
 
@@ -136,7 +141,7 @@ Jacob、Monod等利用部分二倍体，让同一个细胞同时带有正常与�
 
 这组遗传分析在分子结构完全清楚之前，就把“调节基因产生可扩散产物”和“DNA带有局部控制位点”分开了。上面的图是后来的机制示意，不是当年的酶活原始记录。
 
-## 从其他操纵子看控制方式
+## 从其他操纵子看控制方式 { #_2 }
 
 ### AraC在成环与激活之间转换 { #arac-control }
 
@@ -161,7 +166,7 @@ AraC还能结合 *araO1*，压低自身启动子的转录，限制继续积累�
 
 从P1或P2起始，都可以产生覆盖操纵子多个基因的RNA，最终各蛋白量还受后续转录、加工与翻译影响。双启动子使碳源分解和细胞组分合成容易兼顾，具体输出还随GalR占据、DNA超螺旋和代谢状态变化。
 
-### 已经结合的聚合酶，还可以继续受控 { #ntrc-merr }
+### NtrC与MerR { #ntrc-merr }
 
 有些启动子已经结合聚合酶，却停在闭合复合物状态。**NtrC**响应氮代谢信号：NtrB介导的磷酸化促进NtrC形成活跃的高阶ATP酶复合物。远处DNA上的NtrC借DNA弯曲接近含σ$^{54}$的聚合酶，再利用ATP水解促进开放复合物形成。聚合酶已经到位，NtrC帮助它继续完成构象转换。[^gene-regulation-book]
 
@@ -225,7 +230,7 @@ TrpR与前导区读取的是相关但不同的变量：前者主要响应游离T
 
 β-内酰胺酶基因 *ampC* 的前导区提供另一种衰减输入。大肠杆菌中的遗传分析支持：在生长较快的条件下，前导区翻译起始复合物更容易形成，阻碍衰减终止结构建立，使更多转录读通。它读取翻译起始与生长状态，不依赖一串特定氨基酸密码子。[^ampc-attenuation]
 
-### 核糖开关把配体结合接到不同输出
+### 核糖开关把配体结合接到不同输出 { #_3 }
 
 **核糖开关（riboswitch）**通常含两个相接部分：适配体结构域负责识别配体，表达平台改变终止、核糖体结合或RNA加工。小分子与RNA接触后稳定一种折叠，使另一种相互排斥的配对不易发生。
 
@@ -252,7 +257,7 @@ RNA折叠也受到形成顺序影响。转录中的RNA只有已经合成的部�
 
 </div>
 
-### 小RNA与蛋白质也能改变翻译入口
+### 小RNA与蛋白质也能改变翻译入口 { #rna }
 
 一条小调控RNA（sRNA）与mRNA短程配对，既可以盖住RBS，也可以拆开原来盖住RBS的发夹。前一种抑制起始，后一种反而激活；Hfq、ProQ等RNA结合蛋白可在特定系统中帮助RNA稳定、相遇或重排。[^srna-control]
 
@@ -324,9 +329,30 @@ SPO1感染枯草杆菌后，先借宿主σ因子转录早期基因，gp28接管�
 | crRNA形成 | 阵列被转录，长前体经类型特异的加工产生引导RNA；有些系统用Cas6，典型Ⅱ型系统则涉及tracrRNA、RNase III和Cas9 | 引导RNA含间隔来源序列及必要重复来源结构 |
 | 干扰 | 引导RNA与效应复合物识别匹配的DNA或RNA，再由相应核酸酶执行切割 | 靶类型、原间隔序列邻近基序（PAM）或其他上下文要求取决于系统 |
 
-不同Cas蛋白分担这些反应。例如，Ⅰ型系统的Cas3具有解旋—核酸酶活动，可在靶标识别后参与DNA降解；某些适应模块还使用Cas4处理待整合片段，控制PAM相关选择及整合方向。[^cas-processing]
+以**大肠杆菌Ⅰ-E 型系统**为例，先沿一条成熟 crRNA 看后续过程。阵列转录出的长 RNA 含交替的重复区和间隔区，**Cas6e**在重复区切开前体，保留必要的重复来源末端。成熟 crRNA 与多亚基 **Cascade** 复合物结合，间隔来源部分提供识别外源序列的互补性。这里不需要Ⅱ型系统的 tracrRNA–RNase III 加工路线。[^type-ie-crispr]
 
-自身阵列也含相同间隔序列，系统还需要识别靶序列周围的信息，才能区分自身与入侵者。PAM、重复来源序列的识别和转录依赖性等分别用于不同类型，因此适用于一种效应器的靶标规则，未必适用于另一种。
+![前体crRNA加工后装入Cascade，再招募Cas3切割靶DNA](../_img/regulation/crispr-ie-overview.png){ width="450" loading=lazy }
+/// caption
+从上向下读：pre-crRNA、装载 crRNA 的 Cascade、Cas3 介入及靶 DNA 降解。绿色发夹来自重复区；本图为教材对Ⅰ型过程的概括，具体识别步骤见下图。[^fig-crispr-ie-overview]
+///
+
+Cascade 接触双链 DNA 后，先检查原间隔序列旁是否有合适的 **PAM**。识别使局部双链更容易打开，crRNA 从 PAM 附近开始与互补的**靶链**配对；随着配对延伸，另一条**非靶链**被置换，形成 R-loop。充分配对会使复合物转入较稳定的锁定构象，为 Cas3 的招募创造条件。
+
+![大肠杆菌Cascade依次结合DNA、识别PAM、形成R-loop并招募Cas3降解DNA](../_img/regulation/crispr-ie-targeting.jpg){ width="630" loading=lazy }
+/// caption
+沿 A→G 读：游离 Cascade、DNA 接触、PAM 扫描、R-loop 延伸、锁定、Cas3 招募与降解。绿色为 DNA，红色为 crRNA；回收箭头带问号，表示作者模型中尚未解决的环节。[^type-ie-targeting]
+///
+
+**Cas3**兼有核酸酶和解旋酶活动。它先在暴露的非靶链上形成切口，再利用 ATP 支持易位、解开 DNA 和持续降解，最终破坏靶 DNA。这与前面 Cas6e 的工作分属两步：Cas6e 加工引导 RNA，Cas3 处理被引导复合物认出的 DNA。[^type-ie-crispr]
+
+自身阵列也含匹配的间隔序列，却在旁边接着 CRISPR **重复序列**。大肠杆菌Ⅰ-E 型的这一局部上下文不提供有效的干扰 PAM，因而不利于启动 R-loop。是否有互补序列与能否进入破坏步骤，由此被分开。[^type-ie-crispr]
+
+| DNA 上的排列 | Cascade 的识别结果 |
+| --- | --- |
+| 合适的 PAM ＋ 外源原间隔序列 | PAM 识别与 crRNA 配对共同促进 R-loop、锁定及 Cas3 招募 |
+| 重复序列 ＋ 自身间隔序列 ＋ 重复序列 | 间隔虽可互补，邻接重复却不提供有效干扰 PAM，正常阵列受到保护 |
+
+其他系统使用不同的核酸与上下文。例如Ⅰ型常由 Cas3 执行后续降解，某些适应模块还使用 Cas4 处理待整合片段、影响 PAM 选择及整合方向；RNA 靶向系统又有不同规则。PAM、重复来源结构和转录依赖性分别服务于特定系统，不能共用一套靶标判据。[^cas-processing]
 
 ## λ噬菌体：把控制接成时序与记忆 { #lambda-switch }
 
@@ -454,3 +480,11 @@ DNA损伤时，活化的RecA可促进CI自切，解除对裂解程序的抑制�
 [^cas-processing]: Ⅰ型Cascade与Cas3见[Host nucleases generate prespacers for primed adaptation in the E. coli type I-E CRISPR-Cas system](https://pmc.ncbi.nlm.nih.gov/articles/PMC9699676/)；Cas4处理及定向获取见[Mechanism for Cas4-assisted directional spacer acquisition in CRISPR-Cas](https://pmc.ncbi.nlm.nih.gov/articles/PMC9164213/)，2021。
 
 [^archaeal-riboswitch]: Speed MC等。[An Archaeal Fluoride-Responsive Riboswitch Provides an Inducible Expression System for Hyperthermophiles](https://doi.org/10.1128/AEM.02306-17). 2018；该物种的氟响应RNA调控。
+
+[^pts-adenylate-cyclase]: Park YH 等. [In vitro reconstitution of catabolite repression in Escherichia coli](https://pubmed.ncbi.nlm.nih.gov/16407219/). *J Biol Chem* (2006)，doi:10.1074/jbc.M512672200。EIIA 与腺苷酸环化酶的结合不完全依赖磷酸化；在所用重构条件及细胞提取物支持下，磷酸化 EIIA 才刺激酶活性。
+
+[^fig-crispr-ie-overview]: Watson 等，*Molecular Biology of the Gene* 第 7 版（2014），图 20–9a，p.711；只裁取Ⅰ型加工与干扰路线，保留两端标记及 Cas3。
+
+[^type-ie-targeting]: van Erp PBG 等. [Mechanism of CRISPR-RNA guided recognition of DNA targets in Escherichia coli](https://pmc.ncbi.nlm.nih.gov/articles/PMC4787809/). *Nucleic Acids Res* (2015)，doi:10.1093/nar/gkv793，图 4；完整保留 A–G 模型。
+
+[^type-ie-crispr]: Hayes RP 等. [Structural basis for promiscuous PAM recognition in type I-E Cascade from E. coli](https://pmc.ncbi.nlm.nih.gov/articles/PMC5134256/). *Nature* 530:499–503 (2016)，doi:10.1038/nature16995。结构与生化实验支持 PAM 识别、局部解链及非靶链暴露；文中还比较自身重复旁的非许可上下文，并以不同核苷酸条件区分 Cas3 切口与后续降解。

@@ -210,14 +210,18 @@ AlkB家族走的是另一条化学路线：以Fe(II)和2-氧代戊二酸依赖�
 
 ??? note "G-四链体多出一条G轨，会怎样影响损伤暴露？"
 
-    连续G序列可以折成G-四链体（G4），但位于四联体核心的损伤未必容易被糖基化酶接近。Fleming等研究含五条G轨的VEGF启动子序列时，提出多出的第五条轨可替换含损伤的一条，使受损碱基暴露在外侧。[^g4-spare-track]
+    一条富 G 序列中，每一段连续的 G 可称为一条 **G 轨**。四条轨各提供 G，层层组成 G 四联体，轨之间由环区连接。核心中的氧化损伤会影响折叠，也可能难以被糖基化酶接近。Fleming 等研究具有第五条 G 轨的 VEGF 启动子片段，检验这条额外序列能否替换原来带损伤的一轨。[^g4-spare-track]
 
     ![VEGF五G轨寡核苷酸的折叠模型，以及不同氧化位点下的DMS足迹曲线](_img/dna_repair/g4-spare-track.jpg){ width="625" loading=lazy }
     /// caption
-    A为结构模型，B为DMS足迹；WT、环位置OG12和核心位置OG14来自不同体外寡核苷酸。第五轨的保护及损伤附近的变化支持重新折叠。原研究图4。[^g4-spare-track]
+    原研究图 4。A 为折叠模型，深蓝色是第五轨；B 为 WT、OG12（环位置）与 OG14（核心位置）的 DMS 足迹扫描曲线，三条曲线纵向错开。横轴是片段迁移距离，底部序列按 3′→5′ 排列。[^g4-spare-track]
     ///
 
-    图中的“spare tire”确实是作者所说的“备胎”，但证据的范围很具体：这些是体外序列的折叠和酶反应。论文还观察到外露的部分进一步氧化产物可被NEIL糖基化酶切除，支持BER启动；它没有证明所有G4都靠第五条轨完成修复，也没有直接证明这一结构在细胞中普遍防止突变。
+    **DMS 足迹读的是 G 是否容易被化学试剂接近。** DMS 可甲基化 G 的 N7；N7 参与四联体配对时较受保护。随后用热哌啶在已修饰位置造成断裂，再将带末端标记的片段电泳分离。某位置的条带及对应峰较弱，支持那里较受保护；峰较强则支持暴露。图 B 的纵轴是条带扫描强度，不是修复率。
+
+    先看黑色 WT：第五轨所指区段没有明显保护，作者将这种结果解释为多种折叠状态的混合。蓝色 **OG12** 将 8-oxoG 放在原模型的环位置，曲线整体与 WT 相近。红色 **OG14** 则不同：标作 “Spare Tire” 的第五轨区段受到明显保护，损伤所在原轨的其他 G 却出现较强信号。两处变化一起支持第五轨进入核心、原受损轨外翻为较大环的模型。图 A 上支的问号也保留下来，提醒环位置损伤并未确定出唯一重排路线。
+
+    这里的“spare tire”是作者给额外 G 轨取的“备胎”名字。图 4 提供体外折叠证据；论文图 5 另用 NEIL 糖基化酶检验某些进一步氧化产物，主要是胍基乙内酰脲（Gh）的切除，显示不同损伤位置的反应性不同。这支持部分外露损伤进入 BER 的起始步骤，并未测定整条 DNA 完成修复的比例，也没有证明全部 G4 在细胞中都采用这一机制。
 
 ### 核苷酸切除修复 { #nucleotide-excision-repair }
 
@@ -350,7 +354,7 @@ HR若使用其他相似序列作为模板，可能复制进不同的信息；重
 复制耦联ICL处理的三种情境。B强调顺铂交联的FA通路；C为NEIL3参与的AP／补骨脂素交联处理；D为乙醛交联。综述原图保留了当时尚不清楚环节的问号。[^crosslink-figure]
 ///
 
-读B列时，可以先追踪两个复制叉会合后的解旋酶CMG：TRAIP相关泛素化促进其卸载，随后才能充分处理堵在交联附近的DNA。图中的“FA pathway”概括了前面介绍的识别、切割和后续配合步骤。C列则显示另一种化学解决方式：NEIL3可处理某些交联中的糖苷键，避免照搬B列的切开骨架路线。交联的化学结构不同，细胞实际动用的步骤也会改变。
+读B列时，可以先追踪两个复制叉会合后的解旋酶CMG：TRAIP相关泛素化促进其卸载，随后才能充分处理堵在交联附近的DNA。图中的“FA pathway”概括了前面介绍的识别、切割和后续配合步骤。C列则显示另一种化学解决方式：NEIL3先切开某些交联中碱基与糖之间的糖苷键，后续再处理留下的中间体。交联的化学结构不同，细胞实际动用的步骤也会改变。
 
 DNA—蛋白质交联常先由SPRTN蛋白酶或蛋白酶体等缩小蛋白部分，再由磷酸二酯酶、NER或复制耦联机制清除残基。Fanconi贫血细胞对交联剂敏感，体现了这些处理步骤失去协调的后果。
 
@@ -458,6 +462,15 @@ TLS有时会增加局部碱基置换，却也能减少持续停顿、复制叉�
 
 如果把许多突变按类型和序列环境统计，就能得到**突变特征（mutational signature）**。例如同为C→T，还可以按两侧碱基分别归类；相邻双碱基置换、小插入／缺失、结构变异，以及转录链偏向，也各自提供过程线索。UV相关光产物、烟草相关加合物、APOBEC脱氨及MMR、HR或复制校对缺陷，都可能留下可重复的模式。[^mutational-signatures]
 
+下图给出一个紫外相关的实例。Lindberg 等从黑色素瘤数据中，选取突变负荷高、且紫外光产物相关模式占比较高的 130 个样本，统计了约 1970 万个单核苷酸变异。它展示的是一个经过筛选的肿瘤集合，适合用来读谱的形状。[^uv-spectrum]
+
+![紫外相关黑色素瘤集合的六类置换和96种三核苷酸环境突变谱](_img/dna_repair/uv-context-spectrum.png){ width="758" loading=lazy }
+/// caption
+Lindberg 等图 1B、C。B 左侧饼图按原始计数显示 C→T 占 87%；中间按六类置换及两侧碱基分成 96 类，C 展开其中 C→T 的 16 类。柱图另按基因组三核苷酸出现次数校正并归一化，纵轴与饼图定义不同。[^uv-spectrum]
+///
+
+横轴的每个三核苷酸按 5′→3′ 读取，**发生置换的是中间一位**。例如 TCG 这一柱表示 TCG→TTG；相同的 C→T，放在 ACA 或 TCC 中就成为不同类别。右图中 TCG、TCC 等背景的柱较高，说明邻接碱基明显改变了谱的分布，与双嘧啶光产物的形成及处理相联系。纵轴是校正后的相对权重，不能把 0.3 读作一个碱基接受某次照射后有 30% 的突变概率。
+
 一个样本通常叠加了多个过程。损伤能否被修好、由哪种聚合酶跨越、哪些细胞存活并扩增，都会影响最后的突变目录。同一种损伤在不同修复背景下也可留下不同谱，因此识别特征是一种有条件的过程推断；暴露时间、剂量、测序误差与克隆选择都需要纳入解释。
 
 ## 遗传缺陷与诱变试验 { #repair-evidence }
@@ -474,6 +487,13 @@ TLS有时会增加局部碱基置换，却也能减少持续停顿、复制叉�
 | Bloom综合征 | BLM参与重组中间体和复制结构处理；其缺陷细胞的姐妹染色单体交换增多，体现重组调控失常 |
 
 **Ames试验**把另一类问题变成可计数的结果：一个化合物能否增加细菌的回复突变？试验使用组氨酸营养缺陷型鼠伤寒沙门菌或相应的大肠杆菌试验株；发生适当回复或抑制突变的细胞，可以在选择条件下形成菌落。不同菌株分别敏感于某些碱基置换或移码，少量必需氨基酸支持早期有限分裂，之后由能恢复合成功能的细胞继续生长。[^ames-test]
+
+![TA100在水对照和叠氮化钠处理平板上的回复菌落](_img/dna_repair/ames-control-treatment.jpg){ width="666" loading=lazy }
+/// caption
+Rodríguez 等教学实验图 1：TA100，左为水对照，右为叠氮化钠，溶液加在中央滤纸片上；37℃ 培养 48–72 小时，所列程序未加 S9。原文未报告叠氮化钠浓度。[^ames-plates]
+///
+
+中央大圆是滤纸片，周围分散、可计数的斑点才是回复菌落。原文这组水对照与处理板分别计得 78、211 个菌落，展示的是与自发背景的比较。早期有限生长还会形成密集微菌落构成的**背景菌苔**，它与单个大回复菌落是不同观察对象；这张照片没有给菌苔定量，不能直接把琼脂的灰色反光当作这一读数。[^ames-plates]
 
 一些前体化合物需要代谢活化，因此常比较加入与不加入肝S9活化体系的条件。S9是肝匀浆离心后的后线粒体上清，含微粒体和可溶性成分，并配合相应辅因子使用。解释结果时要同时看剂量、自发回复背景、阳性及溶剂对照和细胞毒性；把大量细胞杀死，同样可能让菌落减少。试验阳性说明该条件下存在致突变活性，不能直接换算成哺乳动物体内的剂量或组织效应。培养与判读细节见[Ames试验与代谢活化](../exptech/microbiology/culture_identification.md#ames-test)。
 
@@ -505,7 +525,7 @@ TLS有时会增加局部碱基置换，却也能减少持续停顿、复制叉�
 [^ada-response]: Ada两个结构域的修复与转录功能见Yi与He2013年[综述](https://pmc.ncbi.nlm.nih.gov/articles/PMC3579392/)；N端甲基受体Cys38的结构证据见He等2005年[研究](https://pubmed.ncbi.nlm.nih.gov/16209950/)。
 [^base-excision-repair]: Bauer NC, Corbett AH, Doetsch PW. [The Current State of Eukaryotic DNA Base Damage and Repair](https://pmc.ncbi.nlm.nih.gov/articles/PMC4666366/). *Nucleic Acids Res*. 2015;43:10083–10101。
 [^glycosylase-structure]: Bruner SD, Norman DPG, Verdine GL. [Structural Basis for Recognition and Repair of the Endogenous Mutagen 8-Oxoguanine in DNA](https://doi.org/10.1038/35002510). *Nature*. 2000;403:859–866。结构图取自Watson等第7版图10–14，教材以MolScript、BobScript、Raster3D绘制，图像不等同于直接拍摄的分子照片。
-[^g4-spare-track]: Fleming AM, Zhou J, Wallace SS, Burrows CJ. [A Role for the Fifth G-Track in G-Quadruplex Forming Oncogene Promoter Sequences during Oxidative Stress: Do These “Spare Tires” Have an Evolved Function?](https://doi.org/10.1021/acscentsci.5b00202). *ACS Central Science*. 2015;1:226–233。取完整图4，未裁切；[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC4858307/)。图4支持体外重新折叠模型，糖基化酶处理证据另见原文图5，主要体现修复的启动。
+[^g4-spare-track]: Fleming AM, Zhou J, Wallace SS, Burrows CJ. [A Role for the Fifth G-Track in G-Quadruplex Forming Oncogene Promoter Sequences during Oxidative Stress: Do These “Spare Tires” Have an Evolved Function?](https://doi.org/10.1021/acscentsci.5b00202). *ACS Central Science*. 2015;1:226–233。取完整图4，未裁切；[开放全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC4571166/)。图4支持体外重新折叠模型，糖基化酶处理证据另见原文图5，主要体现修复的启动。
 [^nucleotide-excision-repair]: Schärer OD. [Nucleotide Excision Repair in Eukaryotes](https://pmc.ncbi.nlm.nih.gov/articles/PMC3783044/). *Cold Spring Harbor Perspectives in Biology*. 2013;5:a012609；Marteijn JA等，[Understanding Nucleotide Excision Repair and Its Roles in Cancer and Ageing](https://pubmed.ncbi.nlm.nih.gov/24954209/). *Nat Rev Mol Cell Biol*. 2014;15:465–481。
 [^mismatch-repair]: Putnam CD. [Strand Discrimination in DNA Mismatch Repair](https://pmc.ncbi.nlm.nih.gov/articles/PMC8785607/). *DNA Repair*. 2021;105:103161。比较大肠杆菌、其他细菌与真核的链选择机制。
 [^modrich-reconstitution]: Modrich P，[Mechanisms in E. coli and Human Mismatch Repair，2015年诺贝尔讲座](https://www.nobelprize.org/uploads/2018/06/modrich-lecture.pdf)，图5（印刷105页／PDF第7页）和图15（116页／PDF第18页），裁取完整图区。图5原为Lahue RS, Au KG, Modrich P. [DNA Mismatch Correction in a Defined System](https://doi.org/10.1126/science.2665076). *Science*. 1989;245:160–164。讲座印刷106页还说明，早期Pol III制剂混有ExoVII；正文的组分名单不代表每种切口方向都由同一套严格最小组分完成。图15为真核链定向机制模型。
@@ -528,3 +548,7 @@ TLS有时会增加局部碱基置换，却也能减少持续停顿、复制叉�
 [^ames-test]: OECD [Test No. 471: Bacterial Reverse Mutation Test](https://doi.org/10.1787/9789264071247-en)。试验菌株、代谢活化、对照及判读另见站内[Ames试验小节](../exptech/microbiology/culture_identification.md#ames-test)。
 
 [^dimer-glycosylases]: 黄色微球菌UV内切酶的糖基化酶／AP裂解酶活性及与T4酶的关系见[原研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC19558/)；旧名称“内切酶”不完整反映其两步反应化学。
+
+[^uv-spectrum]: Lindberg M 等. [Intragenomic variability and extended sequence patterns in the mutational signature of ultraviolet light](https://pmc.ncbi.nlm.nih.gov/articles/PMC6789905/). *PNAS* (2019)，doi:10.1073/pnas.1909021116，图 1B、C。由 221 个黑色素瘤样本中选择变异数≥10,000 且≥80% 为所定义 UV 相关模式者；柱图按三核苷酸机会数校正并归一化，不代表实验照射后的绝对发生概率。
+
+[^ames-plates]: Rodríguez E 等. [The Use of the Ames Test as a Tool for Addressing Problem-Based Learning in the Microbiology Lab](https://pmc.ncbi.nlm.nih.gov/articles/PMC3577329/). *J Microbiol Biol Educ* 13:175–176 (2012)，doi:10.1128/jmbe.v13i2.421，图 1、表 1。采用滤纸片扩散教学形式，每片加 70 μL 溶液；菌落数用于说明该实验的比较，不作为其他试验的固定背景或判断阈值。
