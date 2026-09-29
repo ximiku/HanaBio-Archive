@@ -2,7 +2,7 @@
 
 合成基因线路把感知、信息处理和细胞输出连接起来。外界小分子、光、温度、细胞内代谢物或另一种调节因子先被传感模块读取，信号随后经过转录、翻译、核糖核酸（ribonucleic acid，RNA）配对、蛋白互作或脱氧核糖核酸（deoxyribonucleic acid，DNA）重排，最终改变报告基因、效应蛋白或细胞状态。线路图上的启动子、抑制蛋白、RNA 调节因子和报告器看似是可分离的元件，实际行为却由它们的剂量—响应关系、反应时间、分子噪声以及所在宿主共同决定。
 
-下文从元件的可测功能描述出发，依次讨论组合逻辑、反馈、开关、振荡、脉冲、计数和记忆。天然启动子、增强子、操纵子、RNA 加工和翻译调节的分子机制见[原核与真核基因表达调控](../molecular/gene_regulation.md)；反馈、双稳态、极限环和分岔的通用动力学见[反馈、开关与振荡](systems_dynamics.md)。重点在于这些机制经过选择和重组后，如何形成具有指定输入—输出行为的人工线路。[^circuit-design-principles]
+下文从元件的可测功能描述出发，依次讨论组合逻辑、反馈、开关、振荡、脉冲、计数和记忆。天然启动子、增强子、操纵子、RNA 加工和翻译调节的分子机制见[原核基因表达调控](../molecular/gene_regulation/index.md)与[真核基因表达调控](../molecular/gene_regulation/eukaryotic.md)；反馈、双稳态、极限环和分岔的通用动力学见[反馈、开关与振荡](systems_dynamics.md)。重点在于这些机制经过选择和重组后，如何形成具有指定输入—输出行为的人工线路。[^circuit-design-principles]
 
 ## 线路元件的功能表征 { #parts-as-measured-functions }
 
@@ -153,7 +153,7 @@ Bonnet 等利用整合酶与重组方向性因子控制 DNA 片段在两个方�
 
 ## 与相邻页面的接口 { #disciplinary-interfaces }
 
-[原核与真核基因表达调控](../molecular/gene_regulation.md)解释启动子、增强子、操纵序列、RNA 加工与翻译调控的天然机制；[反馈、开关与振荡](systems_dynamics.md)提供稳态、双稳态、滞后、极限环和分岔的通用分析。线路输出若进一步调节酶丰度、前体供应与通路流量，就进入[基因组设计、代谢工程与生物制造](synthetic_genome_metabolic.md)；表达反应离开完整细胞后由[无细胞系统、最小细胞与人工细胞](synthetic_cell_free.md)承接，细胞间信号、劳动分工与空间图案则由[多细胞合成系统与空间模式](synthetic_multicellular.md)展开。
+[原核基因表达调控](../molecular/gene_regulation/index.md)与[真核基因表达调控](../molecular/gene_regulation/eukaryotic.md)解释启动子、增强子、操纵序列、RNA 加工与翻译调控的天然机制；[反馈、开关与振荡](systems_dynamics.md)提供稳态、双稳态、滞后、极限环和分岔的通用分析。线路输出若进一步调节酶丰度、前体供应与通路流量，就进入[基因组设计、代谢工程与生物制造](synthetic_genome_metabolic.md)；表达反应离开完整细胞后由[无细胞系统、最小细胞与人工细胞](synthetic_cell_free.md)承接，细胞间信号、劳动分工与空间图案则由[多细胞合成系统与空间模式](synthetic_multicellular.md)展开。
 
 ## 参考资料与延伸阅读 { #references }
 

@@ -12,10 +12,10 @@
 
 [![Baltimore 实验中不同 RNase 处理条件下 DNA 合成产物的放射性变化](../_img/dna_replication/reverse-transcriptase-discovery.jpg){ width="500" height="519" }](../_img/dna_replication/reverse-transcriptase-discovery.jpg)
 /// caption
-横轴为反应时间，纵轴为进入酸不溶性产物的标记 dTMP。比较未额外处理、水预孵育、反应中加 RNase 和先用 RNase 预处理四条曲线；预处理 RNA 对后续合成的影响尤其明显。[^fig-weaver-23-20]
+横轴为反应时间，纵轴为进入酸不溶性产物的标记 dTMP。比较未额外处理、水预孵育、反应中加 RNase 和先用 RNase 预处理四条曲线；预先用 RNase 处理后，后续合成受到明显抑制。[^fig-weaver-23-20]
 ///
 
-实验给病毒颗粒提供四种 dNTP，其中 dTTP 带有放射性标记，再检测进入酸不溶性产物的放射性。未作 RNase 处理时，信号随时间上升；在反应中加入 RNase，合成受到抑制；若先用 RNase 处理，再开始反应，抑制更明显。水预孵育则帮助分辨预处理操作本身的影响。
+实验给病毒颗粒提供四种 dNTP，其中 dTTP 带有放射性标记，再检测进入酸不溶性产物的放射性。加酸使较长的核酸聚合物沉淀，洗涤则去除未掺入的游离标记核苷酸；因而保留下来的信号可反映标记底物进入聚合产物的量。未作 RNase 处理时，信号随时间上升；在反应中加入 RNase，合成受到抑制；若先用 RNase 处理，再开始反应，抑制更明显。水预孵育则帮助分辨预处理操作本身的影响。
 
 这表明，合成过程依赖可被 RNase 破坏的 RNA 组分。再结合对产物为 DNA 的鉴定，研究者确认了这里发生的是依赖 RNA 的 DNA 合成。
 
@@ -33,7 +33,7 @@
 
 HIV-1 的包膜来自宿主细胞膜，表面的 Env 糖蛋白由 gp120 和 gp41 组成：gp120 位于膜外，参与识别细胞受体；gp41 跨膜，并参与膜融合。包膜内侧衬着基质蛋白 MA，内部的成熟衣壳 CA 则组成特征性的锥形结构。核衣壳蛋白 NC 与 RNA 结合，RT、整合酶等病毒酶也随颗粒一起进入细胞。[^hiv-particle]
 
-颗粒装有**两份正链 RNA**，两者在靠近 5′ 端的区域通过 RNA 相互作用形成二聚体；这里的“双份”并不是双链 RNA。每份 RNA 都带有 5′ 帽和 3′ poly(A) 尾，除编码区外，还有引发、剪接和包装所需的序列。进入新细胞后，基因组 RNA 在衣壳及相关核蛋白复合体中充当逆转录模板；形成原病毒以后，宿主转录产生的新 RNA 用于后续基因表达，也为新颗粒提供基因组。[^hiv-particle]
+颗粒装有**两份正链 RNA**，两者在靠近 5′ 端的区域通过 RNA 相互作用形成二聚体；这里的“双份”并不是双链 RNA。每份 RNA 都带有 5′ 帽和 3′ poly(A) 尾，除编码区外，还有引发、剪接和包装所需的序列。进入新细胞后，基因组 RNA 在衣壳及相关核蛋白复合体中充当逆转录模板；形成前病毒以后，宿主转录产生的新 RNA 用于后续基因表达，也为新颗粒提供基因组。[^hiv-particle]
 
 HIV-1 RT 是 **p66/p51 异二聚体**。p66 带有聚合酶和 RNase H 两处催化中心；p51 由同一前体经蛋白酶加工而来，缺少完整的 RNase H 结构域，主要维持复合体结构。两者虽然共享相当一部分氨基酸序列，折叠方式和实际承担的工作却不同。
 
@@ -118,7 +118,7 @@ tRNA 和正链 RNA 引物被处理后，互补的 PBS 区域可以彼此退火�
 
 整合酶（integrase，IN）把病毒 DNA 两端组织成整合复合体，处理末端并催化它们与宿主 DNA 的链转移；宿主酶随后完成缺口修补。两个末端在复合体中相互靠近，病毒 DNA 本身仍是线性底物。整合位点分散在基因组中，并具有染色质及转录活性相关的偏好。末端加工与连接的化学过程见[逆转录病毒整合](../dna_recombination.md#retroviral-integration)。
 
-整合后的 **原病毒（provirus）**由宿主 RNA 聚合酶 II 转录。部分 RNA 经剪接后表达病毒蛋白，完整长度的 RNA 则可用于翻译或成为新颗粒的基因组。病毒组分在细胞膜附近装配并出芽，病毒蛋白酶切开 Gag、Gag–Pol 等多聚蛋白前体，使成熟结构蛋白与酶得以形成，衣壳也随之重新组织。抑制蛋白酶时，颗粒仍可能释放，却难以正常成熟。[^hiv-particle]
+整合后的 **前病毒（provirus，也称原病毒）**由宿主 RNA 聚合酶 II 转录。部分 RNA 经剪接后表达病毒蛋白，完整长度的 RNA 则可用于翻译或成为新颗粒的基因组。病毒组分在细胞膜附近装配并出芽，病毒蛋白酶切开 Gag、Gag–Pol 等多聚蛋白前体，使成熟结构蛋白与酶得以形成，衣壳也随之重新组织。抑制蛋白酶时，颗粒仍可能释放，却难以正常成熟。[^hiv-particle]
 
 ## 其他逆转录系统 { #reverse-transcriptase-diversity }
 
@@ -143,7 +143,19 @@ tRNA 和正链 RNA 引物被处理后，互补的 PBS 区域可以彼此退火�
 
 脉孢菌线粒体中的 **Mauriceville、Varkud** 质粒，是在细胞器内部通过 RNA 中间体延续的逆转录质粒。Mauriceville 的转录本在 3′ 端折叠成 tRNA 样结构，末端带有 CCA；这里像 tRNA 的部分属于**模板本身**。
 
-Mauriceville RT 可以识别这个末端并从头开始 DNA 合成，无需先接上一条 tRNA 引物。原始生化研究还显示，这种酶能以某些 tRNA 为模板，生成相应 cDNA。于是，同样出现“tRNA”这个词，在 HIV 中指引物，在这里却可以指模板或模板末端的形状。Varkud 是相关的逆转录质粒；上面关于从头引发及底物识别的具体实验结论，针对的是 Mauriceville 酶。[^mitochondrial-retroplasmids]
+[![Mauriceville 质粒 RNA 的 3′ 端 tRNA 样二级结构及 CCA 末端](../_img/dna_replication/mauriceville-template-end.png){ width="560" height="488" loading="lazy" }](../_img/dna_replication/mauriceville-template-end.png)
+/// caption
+A：沿 RNA 找到上方标有 3′-OH 的末端；从链内向这个末端读，最后三个核苷酸为 CCA。tRNA 样结构与左侧更长的 RNA 连成同一条链。[^fig-retroviruses-8-12]
+///
+
+Mauriceville RT 可以识别这个末端并从头开始 DNA 合成，无需先接上一条 tRNA 引物。下图 B 将模板画成左侧为 5′ 端、右侧为 3′ 端的橙色 RNA。起始时，RT 以末端 5′-CCA-3′ 中的第二个 C（整个 RNA 的倒数第二个核苷酸）为模板，放入第一个 G，再以相邻的另一个 C 为模板接上第二个 G。随后，红色 DNA 沿图中箭头向左延长：酶读取 RNA 的方向是 3′→5′，新 DNA 的合成方向仍为 5′→3′。[^fig-retroviruses-8-12]
+
+[![Mauriceville RT 在 RNA 的 CCA 末端从头起始，红色新生 DNA 向模板 5′ 端延长的示意](../_img/dna_replication/mauriceville-de-novo-initiation.png){ width="640" height="443" loading="lazy" }](../_img/dna_replication/mauriceville-de-novo-initiation.png)
+/// caption
+B：橙色为 RNA 模板，红色为新生 DNA；右端的 GG 是新 DNA 最先合成的两个核苷酸，左向箭头指示其延伸方向。图示为不依赖预先存在的核酸引物的起始方式。[^fig-retroviruses-8-12]
+///
+
+原始生化研究还显示，这种酶能以某些 tRNA 为模板，生成相应 cDNA。于是，同样出现“tRNA”这个词，在 HIV 中指引物，在这里却可以指模板或模板末端的形状。Varkud 是相关的逆转录质粒；上面关于从头引发及底物识别的具体实验结论，针对的是 Mauriceville 酶。[^mitochondrial-retroplasmids]
 
 ### 逆转座 { #rna_1 }
 
@@ -154,7 +166,7 @@ LTR 逆转座元件的若干步骤与逆转录病毒相似：先产生 RNA，再
 上图为 Ty1 过表达条件下的电子致密颗粒；下图为带截短 Gag 的颗粒壳重建，T=3、T=4 表示壳体对称组织。两部分的材料和成像含义不同。[^fig-gene-12-30]
 ///
 
-非 LTR 元件如 LINE，采用的典型办法是**靶位点引发逆转录（target-primed reverse transcription）**。元件编码的核酸内切活性在靶 DNA 上产生切口，切口的 3′-OH 与元件 RNA 配对，RT 就在这个靶位点开始合成 DNA。插入位置的 DNA 因而同时提供了逆转录起步所需的末端。
+非 LTR 元件如 LINE，采用的典型办法是**靶位点引发逆转录（target-primed reverse transcription）**。元件编码的核酸内切活性在靶 DNA 上产生切口。靶 DNA 的 3′ 末端与元件 RNA 配对，RT 再从这个末端的 3′-OH 开始合成 DNA。插入位置的 DNA 因而同时提供了逆转录起步所需的末端。
 
 [![LINE RNA 与编码蛋白形成复合体，在靶 DNA 切口处启动逆转录并完成插入的示意](../_img/dna_replication/line-target-priming.jpg){ width="520" height="1122" loading="lazy" }](../_img/dna_replication/line-target-priming.jpg)
 /// caption
@@ -292,6 +304,7 @@ RT 也是常用实验工具。通过 oligo(dT)、随机引物或特异引物，�
 [^camv-cycle]: Teycheney PY, et al. [ICTV Report：Caulimoviridae](https://ictv.global/report/chapter/caulimoviridae/caulimoviridae)，Genome organization and replication；另见 [Caulimovirus 属条目](https://ictv.global/report/chapter/caulimoviridae/caulimoviridae/caulimovirus)。CaMV 的 DNA 不连续区、35S RNA、Met-tRNA 引发与非必需整合均依此区分。
 [^fig-camv-genome]: [ICTV Caulimoviridae 报告](https://ictv.global/report/chapter/caulimoviridae/caulimoviridae)，图 2，CaMV 基因组图（同属报告图 1）。采用官方 PNG 原图，未裁切或重绘；保留转录起点、引物结合处、坐标和结构域颜色。
 [^mitochondrial-retroplasmids]: Chiang CC, Lambowitz AM. [The Mauriceville retroplasmid reverse transcriptase initiates cDNA synthesis de novo at the 3′ end of tRNAs](https://pmc.ncbi.nlm.nih.gov/articles/PMC232306/). *Mol Cell Biol*. 1997;17:4526–4535。结合文中引用的 Varkud 质粒序列研究与 Mauriceville 转录本末端研究；tRNA 样结构属于 RNA 模板，其结构识别与从头引发并非 tRNA 引物延伸。
+[^fig-retroviruses-8-12]: Boeke JD, Stoye JP. Retrotransposons, Endogenous Retroviruses, and the Evolution of Retroelements. In: Coffin JM, Hughes SH, Varmus HE, eds. *Retroviruses*. Cold Spring Harbor Laboratory Press; 1997，第 8 章图 12（图 8–12），[原图注与所在小节](https://www.ncbi.nlm.nih.gov/books/NBK19412/?report=printable)。原图据 Wang 与 Lambowitz（1993）改编。本站采用所提供图版的 A、B 面板截图，保留原序列、链端和箭头，配中文说明，未重绘。
 [^group-ii-mobility]: Zimmerly S, et al. [A group II intron RNA is a catalytic component of a DNA endonuclease involved in intron mobility](https://pubmed.ncbi.nlm.nih.gov/7585955/). *Cell*. 1995;83:529–538；反向剪接的结构证据见 [Cryo-EM Structures of a Group II Intron Reverse Splicing into DNA](https://pmc.ncbi.nlm.nih.gov/articles/PMC6662634/)。不同 group II intron 的蛋白组成与移动能力存在差异，本页过程以保留内切酶活性的可移动系统为例。
 [^rt-inhibitors]: AZT 的磷酸化与活性形式见 Furman PA, et al. [Phosphorylation of 3′-azido-3′-deoxythymidine and selective interaction of the 5′-triphosphate with human immunodeficiency virus reverse transcriptase](https://pubmed.ncbi.nlm.nih.gov/2430286/). *PNAS*. 1986；阿德福韦的活化与 HBV 聚合酶底物竞争参见 [Sun 等，2007](https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/j.1365-2125.2006.02728.x)。酶靶点比较结合 Weaver 第 5 版病毒复制章节及 [PDB-101 的结构说明](https://pdb101.rcsb.org/motm/33)。不同类似物与 Pol γ 的相互作用见 [Lim 等的结构位点与酶学实验](https://pubmed.ncbi.nlm.nih.gov/12742017/)，及 [AZT 掺入的动力学研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC2175305/)；此处未按体外抑制强弱推定临床毒性次序。
 

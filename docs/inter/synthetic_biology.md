@@ -144,7 +144,7 @@ Noireaux 和 Libchaber 把 *E. coli* 无细胞转录–翻译系统封装在磷�
 
 ## 与相邻学科的接口 { #disciplinary-interfaces }
 
-[原核与真核基因表达调控](../molecular/gene_regulation.md)说明启动子、操纵序列、增强子、RNA 加工和翻译在天然系统中的机制，合成线路页研究这些机制经过重组后怎样实现指定动态。[代谢总论](../biochem/metabolism.md)与具体代谢页面提供热力学、流量、辅因子、区室和调控的生化基础，代谢工程页聚焦如何重定向这些量并评价整体制造性能。
+[原核基因表达调控](../molecular/gene_regulation/index.md)与[真核基因表达调控](../molecular/gene_regulation/eukaryotic.md)说明启动子、操纵序列、增强子、RNA 加工和翻译在天然系统中的机制，合成线路页研究这些机制经过重组后怎样实现指定动态。[代谢总论](../biochem/metabolism.md)与具体代谢页面提供热力学、流量、辅因子、区室和调控的生化基础，代谢工程页聚焦如何重定向这些量并评价整体制造性能。
 
 [系统生物学](systems_biology.md)由观测与扰动建立天然系统的可检验解释，合成生物学把候选原理转成新构建，并由构建成败反过来检验模型。[生物物理学](biophysics.md)提供能量、扩散、力、噪声和尺度约束，[化学生物学](chemical_synthetic_biology.md)提供可选择测量和急性扰动的分子工具。实验技术与生物信息学则负责构建、测量、序列验证和多组学数据处理。
 

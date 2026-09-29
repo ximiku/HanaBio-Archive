@@ -278,7 +278,8 @@ pages:
   docs/molecular/dna_repair.md: hb-molecular-dna-repair
   docs/molecular/dna_replication/index.md: hb-molecular-dna-replication
   docs/molecular/dna_replication/reverse_transcription.md: hb-molecular-dna-replication-reverse-transcription
-  docs/molecular/gene_regulation.md: hb-molecular-gene-regulation
+  docs/molecular/gene_regulation/eukaryotic.md: hb-molecular-gene-regulation-eukaryotic
+  docs/molecular/gene_regulation/index.md: hb-molecular-gene-regulation
   docs/molecular/genetic_material.md: hb-molecular-genetic-material
   docs/molecular/index.md: hb-molecular
   docs/molecular/protein_processing.md: hb-molecular-protein-processing

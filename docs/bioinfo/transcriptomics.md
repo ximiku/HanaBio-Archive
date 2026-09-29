@@ -8,7 +8,7 @@
 
 广义转录组包括蛋白质编码 RNA、长链非编码 RNA、核糖体 RNA（ribosomal RNA，rRNA）、转运 RNA（transfer RNA，tRNA）、小 RNA、未完成加工的前体和降解中间体；许多常规文库主要富集带多聚腺苷酸尾（polyadenylate tail，poly(A) tail）的真核 RNA，或先去除 rRNA 后测量其余 RNA。3′ 端标签文库主要回答每个基因捕获到多少分子，全长或长读长文库更适合连接远距离外显子、转录起止位点和 poly(A) 位点。小 RNA、环状 RNA、新生 RNA、核糖体保护片段和 RNA—蛋白结合片段还需要各自的选择或富集步骤。分析开始前必须明确分母里有哪些 RNA，以及一个特征（feature）究竟是基因、转录本、外显子、剪接连接、峰还是细胞。
 
-稳态 RNA 丰度是合成与清除的合成结果。一个信使 RNA（messenger RNA，mRNA）增多，可能来自转录起始增强、延伸更充分、剪接或 3′ 端加工改变，也可能来自降解减慢。常规 RNA-seq 测量这些过程共同形成的稳态丰度；代谢标记、全局活跃转录测序（global run-on sequencing，GRO-seq）／精确活跃转录测序（precision run-on sequencing，PRO-seq）等新生 RNA 测量、转录抑制后的衰减曲线和 RNA 半衰期实验提供过程层面的互补信息。蛋白质产量还取决于翻译效率、蛋白降解和亚细胞定位。相应的分子机制见[转录](../molecular/transcription.md)、[RNA 加工](../molecular/rna_processing.md)和[基因表达调控](../molecular/gene_regulation.md)。
+稳态 RNA 丰度是合成与清除的合成结果。一个信使 RNA（messenger RNA，mRNA）增多，可能来自转录起始增强、延伸更充分、剪接或 3′ 端加工改变，也可能来自降解减慢。常规 RNA-seq 测量这些过程共同形成的稳态丰度；代谢标记、全局活跃转录测序（global run-on sequencing，GRO-seq）／精确活跃转录测序（precision run-on sequencing，PRO-seq）等新生 RNA 测量、转录抑制后的衰减曲线和 RNA 半衰期实验提供过程层面的互补信息。蛋白质产量还取决于翻译效率、蛋白降解和亚细胞定位。相应的分子机制见[转录](../molecular/transcription.md)、[RNA 加工](../molecular/rna_processing.md)和[基因表达调控](../molecular/gene_regulation/eukaryotic.md)。
 
 样本设计决定了统计分析能回答什么问题。独立个体、独立培养物或独立组织制备是估计生物变异的实验单位；同一 RNA 被分到多个孔、多个测序泳道（lane）或多次测序形成的是技术重复。技术重复可评估测量稳定性，合并后仍只有一个生物学样本。处理与批次完全重合时，例如全部对照先建库、全部处理后建库，设计矩阵无法把处理效应与批次效应分开。随机化、平衡建库、配对设计和预先记录性别、年龄、组织区域、细胞组成、处理时间与操作者，比分析末端再选择一个“去批次”算法更能保护可辨识性。
 
