@@ -143,11 +143,19 @@ tRNA 和正链 RNA 引物被处理后，互补的 PBS 区域可以彼此退火�
 
 脉孢菌线粒体中的 **Mauriceville、Varkud** 质粒，是在细胞器内部通过 RNA 中间体延续的逆转录质粒。Mauriceville 的转录本在 3′ 端折叠成 tRNA 样结构，末端带有 CCA；这里像 tRNA 的部分属于**模板本身**。
 
-Mauriceville RT 可以识别这个末端并从头开始 DNA 合成，无需先接上一条 tRNA 引物。原始生化研究还显示，这种酶能以某些 tRNA 为模板，生成相应 cDNA。于是，同样出现“tRNA”这个词，在 HIV 中指引物，在这里却可以指模板或模板末端的形状。Varkud 是相关的逆转录质粒；上面关于从头引发及底物识别的具体实验结论，针对的是 Mauriceville 酶。[^mitochondrial-retroplasmids]
+[![Mauriceville 质粒 RNA 的 3′ 端 tRNA 样二级结构及 CCA 末端](../_img/dna_replication/mauriceville-template-end.png){ width="560" height="488" loading="lazy" }](../_img/dna_replication/mauriceville-template-end.png)
+/// caption
+A：沿 RNA 找到上方标有 3′-OH 的末端；从链内向这个末端读，最后三个核苷酸为 CCA。tRNA 样结构与左侧更长的 RNA 连成同一条链。[^fig-retroviruses-8-12]
+///
 
-!!! note "待补图：Mauriceville的模板末端与从头起始"
+Mauriceville RT 可以识别这个末端并从头开始 DNA 合成，无需先接上一条 tRNA 引物。下图 B 将模板画成左侧为 5′ 端、右侧为 3′ 端的橙色 RNA。起始时，RT 以末端 5′-CCA-3′ 中的第二个 C（整个 RNA 的倒数第二个核苷酸）为模板，放入第一个 G，再以相邻的另一个 C 为模板接上第二个 G。随后，红色 DNA 沿图中箭头向左延长：酶读取 RNA 的方向是 3′→5′，新 DNA 的合成方向仍为 5′→3′。[^fig-retroviruses-8-12]
 
-    拟补 *Retroviruses*（1997）第 8 章图 12（书内图 8–12）：A 显示 RNA 模板的 3′ tRNA 样结构，B 显示无需预先连接引物的起始方式，用来对照上文 HIV 的 tRNA 引物。现已核对[章节与图注](https://www.ncbi.nlm.nih.gov/books/NBK19412/?report=printable)，但原图入口仍获取失败；所查公开全文资源也未提供该图的可用副本，待取得图版后补入。
+[![Mauriceville RT 在 RNA 的 CCA 末端从头起始，红色新生 DNA 向模板 5′ 端延长的示意](../_img/dna_replication/mauriceville-de-novo-initiation.png){ width="640" height="443" loading="lazy" }](../_img/dna_replication/mauriceville-de-novo-initiation.png)
+/// caption
+B：橙色为 RNA 模板，红色为新生 DNA；右端的 GG 是新 DNA 最先合成的两个核苷酸，左向箭头指示其延伸方向。图示为不依赖预先存在的核酸引物的起始方式。[^fig-retroviruses-8-12]
+///
+
+原始生化研究还显示，这种酶能以某些 tRNA 为模板，生成相应 cDNA。于是，同样出现“tRNA”这个词，在 HIV 中指引物，在这里却可以指模板或模板末端的形状。Varkud 是相关的逆转录质粒；上面关于从头引发及底物识别的具体实验结论，针对的是 Mauriceville 酶。[^mitochondrial-retroplasmids]
 
 ### 逆转座 { #rna_1 }
 
@@ -296,6 +304,7 @@ RT 也是常用实验工具。通过 oligo(dT)、随机引物或特异引物，�
 [^camv-cycle]: Teycheney PY, et al. [ICTV Report：Caulimoviridae](https://ictv.global/report/chapter/caulimoviridae/caulimoviridae)，Genome organization and replication；另见 [Caulimovirus 属条目](https://ictv.global/report/chapter/caulimoviridae/caulimoviridae/caulimovirus)。CaMV 的 DNA 不连续区、35S RNA、Met-tRNA 引发与非必需整合均依此区分。
 [^fig-camv-genome]: [ICTV Caulimoviridae 报告](https://ictv.global/report/chapter/caulimoviridae/caulimoviridae)，图 2，CaMV 基因组图（同属报告图 1）。采用官方 PNG 原图，未裁切或重绘；保留转录起点、引物结合处、坐标和结构域颜色。
 [^mitochondrial-retroplasmids]: Chiang CC, Lambowitz AM. [The Mauriceville retroplasmid reverse transcriptase initiates cDNA synthesis de novo at the 3′ end of tRNAs](https://pmc.ncbi.nlm.nih.gov/articles/PMC232306/). *Mol Cell Biol*. 1997;17:4526–4535。结合文中引用的 Varkud 质粒序列研究与 Mauriceville 转录本末端研究；tRNA 样结构属于 RNA 模板，其结构识别与从头引发并非 tRNA 引物延伸。
+[^fig-retroviruses-8-12]: Boeke JD, Stoye JP. Retrotransposons, Endogenous Retroviruses, and the Evolution of Retroelements. In: Coffin JM, Hughes SH, Varmus HE, eds. *Retroviruses*. Cold Spring Harbor Laboratory Press; 1997，第 8 章图 12（图 8–12），[原图注与所在小节](https://www.ncbi.nlm.nih.gov/books/NBK19412/?report=printable)。原图据 Wang 与 Lambowitz（1993）改编。本站采用所提供图版的 A、B 面板截图，保留原序列、链端和箭头，配中文说明，未重绘。
 [^group-ii-mobility]: Zimmerly S, et al. [A group II intron RNA is a catalytic component of a DNA endonuclease involved in intron mobility](https://pubmed.ncbi.nlm.nih.gov/7585955/). *Cell*. 1995;83:529–538；反向剪接的结构证据见 [Cryo-EM Structures of a Group II Intron Reverse Splicing into DNA](https://pmc.ncbi.nlm.nih.gov/articles/PMC6662634/)。不同 group II intron 的蛋白组成与移动能力存在差异，本页过程以保留内切酶活性的可移动系统为例。
 [^rt-inhibitors]: AZT 的磷酸化与活性形式见 Furman PA, et al. [Phosphorylation of 3′-azido-3′-deoxythymidine and selective interaction of the 5′-triphosphate with human immunodeficiency virus reverse transcriptase](https://pubmed.ncbi.nlm.nih.gov/2430286/). *PNAS*. 1986；阿德福韦的活化与 HBV 聚合酶底物竞争参见 [Sun 等，2007](https://bpspubs.onlinelibrary.wiley.com/doi/10.1111/j.1365-2125.2006.02728.x)。酶靶点比较结合 Weaver 第 5 版病毒复制章节及 [PDB-101 的结构说明](https://pdb101.rcsb.org/motm/33)。不同类似物与 Pol γ 的相互作用见 [Lim 等的结构位点与酶学实验](https://pubmed.ncbi.nlm.nih.gov/12742017/)，及 [AZT 掺入的动力学研究](https://pmc.ncbi.nlm.nih.gov/articles/PMC2175305/)；此处未按体外抑制强弱推定临床毒性次序。
 
