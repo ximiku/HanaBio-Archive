@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 900" role="img" aria-labelledby="title desc">
+  <title id="title">蛋白质研究的证据链</title>
+  <desc id="desc">从定义目标状态、提取稳定、粗分级、正交分离，到身份、结构、功能证据与交叉核验的纵向流程；旁侧提示每一步记录定量指标。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#516a74"/>
+    </marker>
+    <style>
+      .box { fill: #eef5f2; stroke: #50756b; stroke-width: 2; rx: 16; }
+      .evidence { fill: #f3f1f8; stroke: #70658a; stroke-width: 2; rx: 16; }
+      .result { fill: #f9f0e4; stroke: #9a7245; stroke-width: 2.4; rx: 16; }
+      .note { fill: #f4f7f8; stroke: #80939b; stroke-width: 1.8; stroke-dasharray: 7 6; rx: 14; }
+      .flow { fill: none; stroke: #516a74; stroke-width: 2.5; marker-end: url(#arrow); }
+      .guide { fill: none; stroke: #80939b; stroke-width: 2; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+      text { font-family: -apple-system, BlinkMacSystemFont, "Noto Sans SC", "PingFang SC", sans-serif; fill: #24343a; text-anchor: middle; }
+      .label { font-size: 22px; font-weight: 650; }
+      .small { font-size: 18px; }
+    </style>
+  </defs>
+
+  <rect class="box" x="80" y="30" width="360" height="82"/>
+  <text class="label" x="260" y="64">定义目标状态</text>
+  <text class="small" x="260" y="91">蛋白质形式、装配与活性</text>
+
+  <path class="flow" d="M260 112 V152"/>
+  <rect class="box" x="80" y="154" width="360" height="76"/>
+  <text class="label" x="260" y="201">提取并稳定样品</text>
+
+  <path class="flow" d="M260 230 V270"/>
+  <rect class="box" x="80" y="272" width="360" height="76"/>
+  <text class="label" x="260" y="319">粗分级与浓缩</text>
+
+  <path class="flow" d="M260 348 V388"/>
+  <rect class="box" x="80" y="390" width="360" height="76"/>
+  <text class="label" x="260" y="437">正交色谱或电泳分离</text>
+
+  <path class="flow" d="M260 466 V505"/>
+  <path class="flow" d="M260 505 H95 V540"/>
+  <path class="flow" d="M260 505 V540"/>
+  <path class="flow" d="M260 505 H425 V540"/>
+
+  <rect class="evidence" x="20" y="542" width="150" height="92"/>
+  <text class="label" x="95" y="578">身份</text>
+  <text class="small" x="95" y="608">序列证据</text>
+  <rect class="evidence" x="185" y="542" width="150" height="92"/>
+  <text class="label" x="260" y="578">结构</text>
+  <text class="small" x="260" y="608">构象证据</text>
+  <rect class="evidence" x="350" y="542" width="150" height="92"/>
+  <text class="label" x="425" y="578">功能</text>
+  <text class="small" x="425" y="608">活性证据</text>
+
+  <path class="flow" d="M95 634 V680 H260 V713"/>
+  <path class="flow" d="M260 634 V713"/>
+  <path class="flow" d="M425 634 V680 H260 V713"/>
+  <rect class="result" x="80" y="716" width="360" height="82"/>
+  <text class="label" x="260" y="750">交叉核验结论</text>
+  <text class="small" x="260" y="777">排除具有不同误差结构的替代解释</text>
+
+  <path class="guide" d="M80 192 H45 V830 H80"/>
+  <rect class="note" x="80" y="817" width="360" height="58"/>
+  <text class="small" x="260" y="852">每一步记录总量・回收率・比活力・纯度</text>
+</svg>

@@ -1,0 +1,71 @@
+.md-typeset .footnote {
+  --hb-footnote-budget: 360px;
+}
+
+.md-typeset .footnote .hb-footnote-hidden {
+  display: none;
+}
+
+.hb-footnotes-toggle {
+  align-items: center;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: .45em;
+  justify-content: center;
+  margin-top: .9em;
+  min-height: 44px;
+  padding: .6em 1em;
+  width: 100%;
+}
+
+.hb-footnotes-toggle::after {
+  border-bottom: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+  content: "";
+  height: .4em;
+  transform: translateY(-.15em) rotate(45deg);
+  width: .4em;
+}
+
+.hb-footnotes-toggle[aria-expanded="true"]::after {
+  transform: translateY(.1em) rotate(225deg);
+}
+
+.hb-footnotes-toggle:hover,
+.hb-footnotes-toggle:focus-visible {
+  color: var(--md-accent-fg-color);
+}
+
+.hb-footnotes-toggle:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.hb-footnotes-toggle[hidden] {
+  display: none;
+}
+
+.md-typeset .footnote > ol > li {
+  scroll-margin-top: 5rem;
+}
+
+.hb-footnote-target {
+  animation: hb-footnote-target 2s ease-out;
+  border-radius: .15rem;
+}
+
+@keyframes hb-footnote-target {
+  from { background: color-mix(in srgb, var(--md-accent-fg-color) 14%, transparent); }
+  to { background: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hb-footnote-target { animation: none; }
+}
+
+@media print {
+  .md-typeset .footnote .hb-footnote-hidden { display: list-item !important; }
+  .hb-footnotes-toggle { display: none !important; }
+}
